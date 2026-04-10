@@ -2,7 +2,7 @@ Welcome to Dizzy Dog Studio.  View our official legal & support documentation fo
 
 ****
 
-**English
+**English**
 
 * [Node Expense - Privacy Policy](./NodeExpense-Privacy.md)
 * [Node Expense - Terms of Service](./NodeExpense-Terms.md)
@@ -10,18 +10,18 @@ Welcome to Dizzy Dog Studio.  View our official legal & support documentation fo
 
 ****
 
-** Simplified Chinese
+**Simplified Chinese / 简体中文**
 
-* [Node Expense - Privacy Policy](./NodeExpense-Privacy-S-Chinese.md)
-* [Node Expense - Terms of Service](./NodeExpense-Terms-S-Chinese.md)
-* [Node Expense - Support](./NodeExpense-Support-S-Chinese.md)
+* [Node Expense - 隐私政策](./NodeExpense-Privacy-S-Chinese.md)
+* [Node Expense - 服务条款](./NodeExpense-Terms-S-Chinese.md)
+* [Node Expense - 支持](./NodeExpense-Support-S-Chinese.md)
   
 ****
 
-** Traditional Chinese
+**Traditional Chinese / 繁體中文**
 
-* [Node Expense - Privacy Policy](./NodeExpense-Privacy-T-Chinese.md)
-* [Node Expense - Terms of Service](./NodeExpense-Terms-T-Chinese.md)
-* [Node Expense - Support](./NodeExpense-Support-T-Chinese.md)
+* [Node Expense - 隱私權政策](./NodeExpense-Privacy-T-Chinese.md)
+* [Node Expense - 服務條款](./NodeExpense-Terms-T-Chinese.md)
+* [Node Expense - 支援](./NodeExpense-Support-T-Chinese.md)
 
 ****
