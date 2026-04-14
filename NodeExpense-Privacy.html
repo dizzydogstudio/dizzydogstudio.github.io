@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Node Expense: Track Together — Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1a1a18;
+    --ink-muted: #6b6860;
+    --accent: #2d6a4f;
+    --accent-light: #e8f4ef;
+    --border: #e2dfd8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+  }
+
+  .header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .app-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .lang-tabs {
+    display: flex;
+    gap: 4px;
+  }
+
+  .lang-tab {
+    padding: 8px 18px;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid transparent;
+    border-bottom: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.18s ease;
+    background: #ede9e2;
+    color: #6b6860;
+    position: relative;
+    bottom: -1px;
+  }
+
+  .lang-tab.active {
+    background: var(--surface);
+    color: var(--accent);
+    border-color: var(--border);
+    border-bottom-color: var(--surface);
+    font-weight: 600;
+  }
+
+  .lang-tab:hover:not(.active) { background: #e2dfd8; color: var(--ink); }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+
+  .meta {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 36px;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  .meta strong { color: var(--accent); }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    color: var(--ink);
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 20px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  p { margin-bottom: 14px; color: #3a3a36; }
+
+  ul {
+    margin: 8px 0 16px 0;
+    padding-left: 20px;
+  }
+
+  ul li { margin-bottom: 6px; color: #3a3a36; }
+
+  strong { color: var(--ink); font-weight: 600; }
+
+  .section-number {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+
+  .data-card .card-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .data-card ul { margin: 0; padding-left: 16px; }
+  .data-card ul li { font-size: 13px; margin-bottom: 4px; }
+
+  @media (max-width: 560px) { .data-grid { grid-template-columns: 1fr; } }
+
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+
+  .service-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .service-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: #3a3a36;
+    vertical-align: top;
+  }
+
+  .service-table tr:last-child td { border-bottom: none; }
+  .service-table tr:nth-child(even) td { background: #faf9f6; }
+
+  .highlight-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: #3a3a36;
+  }
+
+  .contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 16px;
+  }
+
+  .contact-box a { color: var(--accent); text-decoration: none; font-weight: 500; }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--ink-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="app-name">Node Expense: Track Together</div>
+    <div class="page-title" id="header-title">Privacy Policy</div>
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="switchLang('en', this)">English</button>
+      <button class="lang-tab" onclick="switchLang('zh-hans', this)">简体中文</button>
+      <button class="lang-tab" onclick="switchLang('zh-hant', this)">繁體中文</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== ENGLISH ========== -->
+<div class="lang-content active" id="lang-en">
+  <div class="meta"><strong>Last Updated:</strong> 2026-03-17 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+
+  <h2><span class="section-number">1</span>Overview</h2>
+  <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
+
+  <h2><span class="section-number">2</span>Data We Collect</h2>
+  <div class="data-grid">
+    <div class="data-card">
+      <div class="card-label">You Provide</div>
+      <ul>
+        <li>Expense records (amounts, notes, categories)</li>
+        <li>Group data (name, members, settings)</li>
+        <li>Group expenses and settlements</li>
+        <li>Display name</li>
+        <li>Optional location data</li>
+        <li>Selected calendar access</li>
+      </ul>
+    </div>
+    <div class="data-card">
+      <div class="card-label">Automatically Collected</div>
+      <ul>
+        <li>Anonymous usage analytics (Firebase)</li>
+        <li>Anonymous device identifier</li>
+        <li>Crash logs and diagnostics</li>
+        <li>Device & app performance info</li>
+        <li>Push notification tokens (when enabled)</li>
+      </ul>
+    </div>
+  </div>
+  <p>Automatically collected data is used only to improve stability, performance, and user experience.</p>
+
+  <h3>Subscriptions &amp; Payments</h3>
+  <p>Purchases and subscriptions are processed by Apple and RevenueCat. We do not receive your credit card or payment details. RevenueCat stores anonymous subscriber identifiers to manage your subscription status, "Lifetime" access, and free trial period. This data is retained as long as necessary to verify PRO feature access across device reinstalls and is processed independently of your Group Expense cloud data.</p>
+
+  <h2><span class="section-number">3</span>Third-Party Services</h2>
+  <table class="service-table">
+    <thead><tr><th>Service</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><strong>RevenueCat</strong></td><td>Subscription &amp; in-app purchase management, free trial tracking</td></tr>
+      <tr><td><strong>Google AdMob</strong></td><td>Banner, rewarded, and interstitial advertisements</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>Anonymous usage analytics</td></tr>
+      <tr><td><strong>Firebase Firestore</strong></td><td>Group data syncing (expenses, members, settlements, deletion requests)</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Anonymous user identification for subscription continuity</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Background tasks including group deletion and push notification delivery</td></tr>
+      <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push notifications for group activity</td></tr>
+    </tbody>
+  </table>
+  <div class="highlight-box">Firebase is used as a sync layer for group-related features only. Personal (non-group) expense data is <strong>never</strong> uploaded to cloud services.</div>
+
+  <h2><span class="section-number">4</span>Ads</h2>
+  <p>Node Expense is supported by advertisements for users on the free tier. These may include banners, interstitial ads when reaching monthly limits, or optional rewarded ads to unlock additional expense slots.</p>
+  <p>To provide a more personalized experience, we may ask for your permission to track your activity. If you choose not to be tracked, you will still see the same number of ads, but they may be less relevant. Your financial data remains private and is <strong>never</strong> shared with advertisers.</p>
+
+  <h2><span class="section-number">5</span>Location Data</h2>
+  <p>Location data is optional and only collected if you explicitly enable it in Settings. When enabled, your location is recorded with new expenses. Location data is stored locally on your device and is not uploaded to cloud services. You can disable location access at any time in iOS Settings.</p>
+
+  <h2><span class="section-number">6</span>Calendar Access</h2>
+  <p>Node Expense only accesses the calendars you select. Calendar access is used solely to display and sync expense entries as calendar events. Calendar data is never shared with third parties.</p>
+
+  <h2><span class="section-number">7</span>Data Storage, Retention &amp; Encryption</h2>
+  <h3>7.1 On-Device Storage</h3>
+  <p>The following data is stored locally using SwiftData (Apple's secure local storage framework):</p>
+  <ul>
+    <li>Personal (non-group) expense records</li>
+    <li>App settings and preferences</li>
+    <li>Local copies of group data for offline access</li>
+    <li>Cached group expenses for offline viewing</li>
+  </ul>
+  <p>Personal expense data never leaves your device unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker.</p>
+
+  <h3>7.2 Cloud Storage for Group Features</h3>
+  <p>For group features, selected data is synced to Firebase Firestore:</p>
+  <ul>
+    <li>Group documents (name, description, icon, members, permissions, share code)</li>
+    <li>Group expenses (amount, category, note, date, location if enabled, payer identity)</li>
+    <li>Group settlements (payment records between members)</li>
+    <li>Group deletion requests and member votes</li>
+    <li>Trial start dates (for reinstall recovery)</li>
+    <li>Push notification tokens (FCM)</li>
+  </ul>
+
+  <h3>7.3 Encryption &amp; Backups</h3>
+  <ul>
+    <li>Users with feature access may enable encrypted backups using AES-256-GCM encryption</li>
+    <li>You control how long expense records are retained (all time or a limited number of years)</li>
+    <li>Backup files are exported to a location you choose (iCloud Drive, On My Device, or other iOS Files locations)</li>
+    <li>Backup encryption keys are stored exclusively in your iCloud Keychain, never transmitted to our servers, and are not accessible to us as developers</li>
+  </ul>
+
+  <h2><span class="section-number">8</span>Data Migration</h2>
+  <p>Users with feature access (PRO subscription or active free trial) may export and import their data in JSON format. Node Expense does not have access to your exported files. Exported files are saved to a location you choose.</p>
+
+  <h2><span class="section-number">9</span>Data Deletion</h2>
+  <ul>
+    <li>Delete individual or all personal expenses from within Node Expense</li>
+    <li>Leave or request deletion of a group — group data is removed from Firebase when all members agree</li>
+    <li>Group expenses marked as 'keep on deletion' remain on your device locally; they are not re-uploaded</li>
+    <li>Uninstalling Node Expense removes all locally stored data from your device</li>
+  </ul>
+  <p>Note: Firebase group data may persist until the group is formally deleted through the in-app deletion flow.</p>
+
+  <h2><span class="section-number">10</span>Children's Privacy</h2>
+  <p>Node Expense is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you believe a child has provided personal information, please contact us.</p>
+
+  <h2><span class="section-number">11</span>Your Rights</h2>
+  <ul>
+    <li>Disable location access in iOS Settings</li>
+    <li>Revoke calendar access in iOS Settings</li>
+    <li>Delete your local expense data within Node Expense</li>
+    <li>Export your data before deleting</li>
+    <li>Request group deletion (removes group data from Firebase for all members)</li>
+    <li>Cancel your subscription at any time through Apple App Store settings</li>
+    <li>Stop using backups or encrypted exports at any time</li>
+  </ul>
+
+  <h2><span class="section-number">12</span>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be reflected by the "Last Updated" date at the top of this document. Continued use of Node Expense after changes constitutes acceptance of the updated policy.</p>
+
+  <h2><span class="section-number">13</span>Contact</h2>
+  <div class="contact-box">
+    <p style="margin:0">For questions about this Privacy Policy or your data:<br>
+    <strong>Email:</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- ========== SIMPLIFIED CHINESE ========== -->
+<div class="lang-content" id="lang-zh-hans">
+  <div class="meta"><strong>最后更新日期：</strong>2026-03-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+
+  <h2><span class="section-number">1</span>概述</h2>
+  <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
+
+  <h2><span class="section-number">2</span>我们收集的数据</h2>
+  <div class="data-grid">
+    <div class="data-card">
+      <div class="card-label">您提供的信息</div>
+      <ul>
+        <li>支出记录（金额、备注、分类）</li>
+        <li>群组数据（名称、成员、设置）</li>
+        <li>群组支出与结算</li>
+        <li>显示名称</li>
+        <li>可选的位置数据</li>
+        <li>所选日历访问权限</li>
+      </ul>
+    </div>
+    <div class="data-card">
+      <div class="card-label">自动收集的数据</div>
+      <ul>
+        <li>匿名使用分析（Firebase）</li>
+        <li>匿名设备标识符</li>
+        <li>崩溃日志与诊断信息</li>
+        <li>设备与应用性能信息</li>
+        <li>推送通知令牌（启用时）</li>
+      </ul>
+    </div>
+  </div>
+  <p>自动收集的数据仅用于提高 Node Expense 的稳定性、性能和用户体验。</p>
+
+  <h3>订阅与付款</h3>
+  <p>购买和订阅由 Apple 和 RevenueCat 处理。我们不会收到您的信用卡或付款详情。RevenueCat 存储匿名订阅者标识符，以管理您的订阅状态、"终身"访问权限和免费试用期。这些数据将根据需要保留，以便在重新安装设备时验证您的专业版功能访问权限，并独立于您的群组支出云端数据进行处理。</p>
+
+  <h2><span class="section-number">3</span>第三方服务</h2>
+  <table class="service-table">
+    <thead><tr><th>服务</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td><strong>RevenueCat</strong></td><td>订阅和应用内购买管理，包括免费试用跟踪</td></tr>
+      <tr><td><strong>Google AdMob</strong></td><td>横幅广告、激励广告和插屏广告</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
+      <tr><td><strong>Firebase Firestore</strong></td><td>群组数据同步（支出、成员、结算、删除申请）</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>用于维护订阅连续性的匿名用户识别</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>后台任务，包括群组删除和推送通知发送</td></tr>
+      <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群组活动的推送通知</td></tr>
+    </tbody>
+  </table>
+  <div class="highlight-box">Firebase 仅用作群组相关功能的同步层。个人（非群组）支出数据<strong>绝不会</strong>上传到云端服务。</div>
+
+  <h2><span class="section-number">4</span>广告</h2>
+  <p>Node Expense 为免费层级的用户提供广告支持。这些可能包括横幅广告、达到每月限制时的插屏广告，或用于解锁额外支出名额的可选激励广告。</p>
+  <p>为了提供更加个性化的体验，我们可能会请求您的跟踪许可。如果您选择不被跟踪，您仍会看到相同数量的广告，但相关性可能会降低。您的财务数据保持私密，<strong>绝不会</strong>与广告商共享。</p>
+
+  <h2><span class="section-number">5</span>位置数据</h2>
+  <p>位置数据是可选的，仅在您在"设置"中明确启用支出追踪时才会收集。启用后，您的位置将随新支出一起记录。位置数据存储在您的设备本地，不会上传到云端服务。您可以随时在 iOS 设置中禁用位置访问权限。</p>
+
+  <h2><span class="section-number">6</span>日历访问权限</h2>
+  <p>Node Expense 仅访问您选择的日历。日历访问权限仅用于将支出条目显示并同步为日历事件。日历数据绝不会与第三方共享。</p>
+
+  <h2><span class="section-number">7</span>数据存储、保留与加密</h2>
+  <h3>7.1 设备端存储</h3>
+  <p>以下数据使用 SwiftData（Apple 的安全本地存储框架）存储在您的设备本地：</p>
+  <ul>
+    <li>个人（非群组）支出记录</li>
+    <li>应用设置与偏好</li>
+    <li>用于离线访问的群组数据本地副本</li>
+    <li>用于离线查看的缓存群组支出</li>
+  </ul>
+  <p>除非您明确导出或备份，否则个人支出数据绝不会离开您的设备。已删除群组的支出将保留在您的设备本地并带有"已删除群组"标记。</p>
+
+  <h3>7.2 群组功能的云存储</h3>
+  <p>对于群组功能，选定的数据将同步到 Firebase Firestore：</p>
+  <ul>
+    <li>群组文档（名称、描述、图标、成员、权限、共享代码）</li>
+    <li>群组支出（金额、分类、备注、日期、位置（若启用）、付款人身份）</li>
+    <li>群组结算（成员间的付款记录）</li>
+    <li>群组删除申请和成员投票</li>
+    <li>试用开始日期（用于重新安装恢复）</li>
+    <li>推送通知令牌（FCM）</li>
+  </ul>
+
+  <h3>7.3 加密与备份</h3>
+  <ul>
+    <li>拥有功能访问权限的用户可以启用使用 AES-256-GCM 加密的加密备份</li>
+    <li>您可以控制支出记录的保留时长（永久或有限年限）</li>
+    <li>备份文件会导出到您选择的位置（iCloud 云盘、我的 iPhone 或其他 iOS 文件位置）</li>
+    <li>备份加密密钥仅存储在您的 iCloud 钥匙串中，绝不会传输到我们的服务器，开发者也无法访问</li>
+  </ul>
+
+  <h2><span class="section-number">8</span>数据迁移</h2>
+  <p>拥有功能访问权限的用户（专业版订阅或处于有效免费试用期）可以以 JSON 格式导出和导入数据。Node Expense 无法访问您导出的文件。导出文件将保存到您选择的位置。</p>
+
+  <h2><span class="section-number">9</span>数据删除</h2>
+  <ul>
+    <li>在 Node Expense 内删除单个或所有个人支出</li>
+    <li>退出或申请删除群组——当所有成员同意时，群组数据将从 Firebase 中移除</li>
+    <li>标记为"删除时保留"的群组支出将保留在您的设备本地；它们不会被重新上传</li>
+    <li>卸载 Node Expense 将删除设备上存储的所有本地数据</li>
+  </ul>
+  <p>注意：Firebase 群组数据可能会保留，直到通过应用内删除流程正式删除群组。</p>
+
+  <h2><span class="section-number">10</span>儿童隐私</h2>
+  <p>Node Expense 不适用于 13 岁以下的儿童。我们不会故意收集 13 岁以下儿童的个人数据。如果您认为儿童提供了个人信息，请联系我们。</p>
+
+  <h2><span class="section-number">11</span>您的权利</h2>
+  <ul>
+    <li>在 iOS 设置中禁用位置访问权限</li>
+    <li>在 iOS 设置中撤销日历访问权限</li>
+    <li>在 Node Expense 内删除您的本地支出数据</li>
+    <li>在删除前导出您的数据</li>
+    <li>申请删除群组（为所有成员从 Firebase 中移除群组数据）</li>
+    <li>随时通过 Apple App Store 设置取消订阅</li>
+    <li>随时停止使用备份或加密导出</li>
+  </ul>
+
+  <h2><span class="section-number">12</span>本政策的变更</h2>
+  <p>我们可能会不时更新本隐私政策。变更将通过本文档顶部的"最后更新日期"反映。变更发布后继续使用 Node Expense 即表示接受更新后的政策。</p>
+
+  <h2><span class="section-number">13</span>联系方式</h2>
+  <div class="contact-box">
+    <p style="margin:0">如果您对本隐私政策或您的数据有疑问，请联系：<br>
+    <strong>电子邮件：</strong><a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- ========== TRADITIONAL CHINESE ========== -->
+<div class="lang-content" id="lang-zh-hant">
+  <div class="meta"><strong>最後更新：</strong>2026-03-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+
+  <h2><span class="section-number">1</span>概覽</h2>
+  <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
+
+  <h2><span class="section-number">2</span>我們收集的資料</h2>
+  <div class="data-grid">
+    <div class="data-card">
+      <div class="card-label">您提供的資訊</div>
+      <ul>
+        <li>費用記錄（金額、備註、類別）</li>
+        <li>群組資料（名稱、成員、設定）</li>
+        <li>群組費用與結算</li>
+        <li>顯示名稱</li>
+        <li>選填的位置資料</li>
+        <li>所選行事曆存取</li>
+      </ul>
+    </div>
+    <div class="data-card">
+      <div class="card-label">自動收集的資料</div>
+      <ul>
+        <li>匿名使用分析（Firebase）</li>
+        <li>匿名裝置識別碼</li>
+        <li>當機記錄與診斷資訊</li>
+        <li>裝置與應用程式效能資訊</li>
+        <li>推播通知權杖（啟用時）</li>
+      </ul>
+    </div>
+  </div>
+  <p>自動收集的資料僅用於改善 Node Expense 的穩定性、效能及使用者體驗。</p>
+
+  <h3>訂閱與付款</h3>
+  <p>購買及訂閱由 Apple 與 RevenueCat 處理。我們不會收到您的信用卡或付款詳細資訊。RevenueCat 儲存匿名訂閱者識別碼，以管理您的訂閱狀態、「終身」使用權及免費試用期。此資料的保存期限以驗證您在重新安裝後存取 PRO 功能所需為限，並與您的群組費用雲端資料分開處理。</p>
+
+  <h2><span class="section-number">3</span>第三方服務</h2>
+  <table class="service-table">
+    <thead><tr><th>服務</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td><strong>RevenueCat</strong></td><td>訂閱與應用程式內購管理，包括免費試用追蹤</td></tr>
+      <tr><td><strong>Google AdMob</strong></td><td>橫幅、獎勵及插頁式廣告</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
+      <tr><td><strong>Firebase Firestore</strong></td><td>群組資料同步（費用、成員、結算、刪除請求）</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>用於訂閱連續性的匿名使用者識別</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>背景工作，包括群組刪除及推播通知傳送</td></tr>
+      <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群組活動的推播通知</td></tr>
+    </tbody>
+  </table>
+  <div class="highlight-box">Firebase 僅作為群組相關功能的同步層。個人（非群組）費用資料<strong>絕不會</strong>上傳至雲端服務。</div>
+
+  <h2><span class="section-number">4</span>廣告</h2>
+  <p>免費方案的使用者將在 Node Expense 中看到廣告支援。這些廣告可能包含橫幅廣告、達到每月上限時的插頁式廣告，或用於解鎖額外費用記錄槽位的選填獎勵廣告。</p>
+  <p>為提供更個人化的體驗，我們可能會請求您的許可來追蹤您的活動。若您選擇不被追蹤，您仍會看到相同數量的廣告，但廣告的相關性可能較低。您的財務資料將保持私密，<strong>絕不會</strong>與廣告商共享。</p>
+
+  <h2><span class="section-number">5</span>位置資料</h2>
+  <p>位置資料為選填，僅在您在「設定」中明確啟用以進行費用追蹤時才會收集。啟用後，您的位置將隨新費用一同記錄。位置資料儲存於您的裝置本機，不會上傳至雲端服務。您可以隨時在 iOS 設定中停用位置存取。</p>
+
+  <h2><span class="section-number">6</span>行事曆存取</h2>
+  <p>Node Expense 僅存取您所選擇的行事曆。行事曆存取僅用於以行事曆事件的形式顯示及同步費用項目。行事曆資料絕不會與第三方共享。</p>
+
+  <h2><span class="section-number">7</span>資料儲存、保留與加密</h2>
+  <h3>7.1 裝置本機儲存</h3>
+  <p>以下資料使用 SwiftData（Apple 的安全本機儲存框架）儲存於您的裝置本機：</p>
+  <ul>
+    <li>個人（非群組）費用記錄</li>
+    <li>應用程式設定與偏好設定</li>
+    <li>群組資料的本機副本（供離線存取）</li>
+    <li>群組費用的快取（供離線檢視）</li>
+  </ul>
+  <p>個人費用資料不會離開您的裝置，除非您明確匯出或備份。已刪除群組的費用將在您的裝置本機保留，並標示為「已刪除群組」。</p>
+
+  <h3>7.2 群組功能的雲端儲存</h3>
+  <p>針對群組功能，所選資料將同步至 Firebase Firestore：</p>
+  <ul>
+    <li>群組文件（名稱、說明、圖示、成員、權限、分享碼）</li>
+    <li>群組費用（金額、類別、備註、日期、位置（若已啟用）、付款人身份）</li>
+    <li>群組結算（成員之間的付款記錄）</li>
+    <li>群組刪除請求及成員投票</li>
+    <li>試用開始日期（用於重新安裝後的復原）</li>
+    <li>推播通知權杖（FCM）</li>
+  </ul>
+
+  <h3>7.3 加密與備份</h3>
+  <ul>
+    <li>具有功能存取權限的使用者可啟用使用 AES-256-GCM 加密的加密備份</li>
+    <li>您可控制費用記錄的保留時間（全部時間或指定年數）</li>
+    <li>備份檔案會匯出至您所選擇的位置（iCloud 雲碟、本機裝置或其他 iOS 檔案位置）</li>
+    <li>備份加密金鑰僅儲存於您的 iCloud 鑰匙圈中，絕不會傳輸至我們的伺服器，也不會被我們開發者存取</li>
+  </ul>
+
+  <h2><span class="section-number">8</span>資料遷移</h2>
+  <p>具有功能存取權限的使用者（PRO 訂閱或有效免費試用）可以 JSON 格式匯出及匯入其資料。Node Expense 無法存取您的匯出檔案。匯出檔案會儲存至您所選擇的位置。</p>
+
+  <h2><span class="section-number">9</span>資料刪除</h2>
+  <ul>
+    <li>在 Node Expense 中刪除個別或全部個人費用</li>
+    <li>離開或請求刪除群組 — 當所有成員同意後，群組資料將從 Firebase 移除</li>
+    <li>標示為「刪除時保留」的群組費用將保留於您的裝置本機；這些資料不會被重新上傳</li>
+    <li>解除安裝 Node Expense 將移除您裝置上所有本機儲存的資料</li>
+  </ul>
+  <p>注意：Firebase 群組資料可能在群組透過應用程式內的刪除流程正式刪除之前持續存在。</p>
+
+  <h2><span class="section-number">10</span>兒童隱私</h2>
+  <p>Node Expense 不適用於 13 歲以下兒童。我們不會在知情的情況下收集 13 歲以下兒童的個人資料。若您認為兒童已提供個人資訊，請與我們聯絡。</p>
+
+  <h2><span class="section-number">11</span>您的權利</h2>
+  <ul>
+    <li>在 iOS 設定中停用位置存取</li>
+    <li>在 iOS 設定中撤銷行事曆存取</li>
+    <li>在 Node Expense 中刪除您的本機費用資料</li>
+    <li>在刪除前匯出您的資料</li>
+    <li>請求刪除群組（將為所有成員從 Firebase 移除群組資料）</li>
+    <li>隨時透過 Apple App Store 設定取消您的訂閱</li>
+    <li>隨時停止使用備份或加密匯出功能</li>
+  </ul>
+
+  <h2><span class="section-number">12</span>本政策的變更</h2>
+  <p>我們可能會不定期更新本隱私權政策。變更將反映於本文件頂部的「最後更新」日期。在變更後繼續使用 Node Expense，即表示您接受更新後的政策。</p>
+
+  <h2><span class="section-number">13</span>聯絡方式</h2>
+  <div class="contact-box">
+    <p style="margin:0">若您對本隱私權政策或您的資料有任何疑問，請聯絡：<br>
+    <strong>電子郵件：</strong><a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  © 2026 Dizzy Dog Studio · Node Expense: Track Together
+</footer>
+
+<script>
+  const titles = { en: 'Privacy Policy', 'zh-hans': '隐私政策', 'zh-hant': '隱私權政策' };
+
+  function switchLang(lang, btn) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    btn.classList.add('active');
+    document.getElementById('header-title').textContent = titles[lang];
+    document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'zh-hans' ? 'zh-Hans' : 'zh-Hant');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const browserLang = navigator.language || navigator.userLanguage || 'en';
+  if (browserLang.toLowerCase().includes('zh-hant') || browserLang.toLowerCase().includes('zh-tw') || browserLang.toLowerCase().includes('zh-hk')) {
+    document.querySelector('[onclick*="zh-hant"]').click();
+  } else if (browserLang.toLowerCase().includes('zh')) {
+    document.querySelector('[onclick*="zh-hans"]').click();
+  }
+</script>
+</body>
+</html>

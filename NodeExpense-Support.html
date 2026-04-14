@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Node Expense: Track Together — Support</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1a1a18;
+    --ink-muted: #6b6860;
+    --accent: #2d6a4f;
+    --accent-light: #e8f4ef;
+    --border: #e2dfd8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+  }
+
+  .header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .app-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .lang-tabs {
+    display: flex;
+    gap: 4px;
+  }
+
+  .lang-tab {
+    padding: 8px 18px;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid transparent;
+    border-bottom: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.18s ease;
+    background: #ede9e2;
+    color: #6b6860;
+    position: relative;
+    bottom: -1px;
+  }
+
+  .lang-tab.active {
+    background: var(--surface);
+    color: var(--accent);
+    border-color: var(--border);
+    border-bottom-color: var(--surface);
+    font-weight: 600;
+  }
+
+  .lang-tab:hover:not(.active) {
+    background: #e2dfd8;
+    color: var(--ink);
+  }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+
+  .meta {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 32px;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  .meta strong { color: var(--accent); }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 22px;
+  }
+
+  .contact-card h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    margin-bottom: 4px;
+    border: none;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .contact-card p { margin: 0; font-size: 14px; color: var(--ink-muted); }
+
+  .contact-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    color: var(--ink);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 16px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.15s;
+  }
+
+  .faq-question:hover { background: #faf9f6; }
+
+  .faq-chevron {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  .faq-answer {
+    display: none;
+    padding: 0 20px 16px;
+    font-size: 14px;
+    color: #3a3a36;
+    line-height: 1.7;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+
+  .faq-item.open .faq-answer { display: block; }
+
+  .faq-answer .step {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 3px 0;
+  }
+
+  .arrow { color: var(--accent); font-weight: 600; }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--ink-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="app-name">Node Expense: Track Together</div>
+    <div class="page-title" id="header-title">Support</div>
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="switchLang('en', this)">English</button>
+      <button class="lang-tab" onclick="switchLang('zh-hans', this)">简体中文</button>
+      <button class="lang-tab" onclick="switchLang('zh-hant', this)">繁體中文</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== ENGLISH ========== -->
+<div class="lang-content active" id="lang-en">
+  <div class="meta"><strong>Last Updated:</strong> 2026-03-03 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>Get in Touch</h2>
+      <p>For help, questions, or feedback, email us at<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      We typically respond within 1–2 business days.</p>
+    </div>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I create a group?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tap the <strong>Groups</strong> tab <span class="arrow">→</span> tap the <strong>+</strong> button in the top right corner <span class="arrow">→</span> tap <strong>Create Group</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I invite friends to a group?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Open the group <span class="arrow">→</span> tap the <strong>Members</strong> tab <span class="arrow">→</span> tap <strong>Share Invite Link</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I record a payment?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Open the group <span class="arrow">→</span> tap the <strong>Expenses</strong> tab <span class="arrow">→</span> tap <strong>Record a Payment</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I delete a group?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Open the group <span class="arrow">→</span> tap the <strong>Settings</strong> tab <span class="arrow">→</span> tap <strong>Delete Group</strong> (admin only).
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I edit or delete an expense?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tap the expense you want to edit or delete <span class="arrow">→</span> swipe left to reveal the <strong>Edit</strong> and <strong>Delete</strong> options.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SIMPLIFIED CHINESE ========== -->
+<div class="lang-content" id="lang-zh-hans">
+  <div class="meta"><strong>最后更新日期：</strong>2026-03-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>联系我们</h2>
+      <p>如需帮助、疑问或反馈，请发送电子邮件至<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      我们通常会在 1-2 个工作日内回复。</p>
+    </div>
+  </div>
+
+  <h2>常见问题（FAQ）</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何创建群组？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>群组</strong>标签页 <span class="arrow">→</span> 轻点右上角的 <strong>+</strong> 按钮 <span class="arrow">→</span> 轻点<strong>创建群组</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何邀请朋友加入群组？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> 轻点<strong>成员</strong>标签页 <span class="arrow">→</span> 轻点<strong>分享邀请链接</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何记录付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 轻点<strong>记录付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何删除群组？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> 轻点<strong>删除群组</strong>（仅限管理员）。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何编辑或删除支出？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点您想要编辑／删除的支出 <span class="arrow">→</span> 向左滑动即可看到<strong>编辑</strong>和<strong>删除</strong>选项。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== TRADITIONAL CHINESE ========== -->
+<div class="lang-content" id="lang-zh-hant">
+  <div class="meta"><strong>最後更新：</strong>2026-03-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>聯絡我們</h2>
+      <p>如需協助、有任何疑問或意見回饋，請發送電子郵件至<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      我們通常會在 1-2 個工作日內回覆。</p>
+    </div>
+  </div>
+
+  <h2>常見問題</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何建立群組？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>群組</strong>分頁 <span class="arrow">→</span> 點選右上角的 <strong>+</strong> 按鈕 <span class="arrow">→</span> 點選<strong>建立群組</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何邀請朋友加入群組？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> 點選<strong>成員</strong>分頁 <span class="arrow">→</span> 點選<strong>分享邀請連結</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何記錄付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> 點選<strong>費用</strong>分頁 <span class="arrow">→</span> 點選<strong>記錄付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何刪除群組？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>刪除群組</strong>（僅限管理員）。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何編輯或刪除費用？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選您想要編輯／刪除的費用 <span class="arrow">→</span> 向左滑動以查看<strong>編輯</strong>和<strong>刪除</strong>選項。
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  © 2026 Dizzy Dog Studio · Node Expense: Track Together
+</footer>
+
+<script>
+  const titles = { en: 'Support', 'zh-hans': '支持', 'zh-hant': '支援' };
+
+  function switchLang(lang, btn) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    btn.classList.add('active');
+    document.getElementById('header-title').textContent = titles[lang];
+    document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'zh-hans' ? 'zh-Hans' : 'zh-Hant');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+
+  const browserLang = navigator.language || navigator.userLanguage || 'en';
+  if (browserLang.toLowerCase().includes('zh-hant') || browserLang.toLowerCase().includes('zh-tw') || browserLang.toLowerCase().includes('zh-hk')) {
+    document.querySelector('[onclick*="zh-hant"]').click();
+  } else if (browserLang.toLowerCase().includes('zh')) {
+    document.querySelector('[onclick*="zh-hans"]').click();
+  }
+</script>
+</body>
+</html>
