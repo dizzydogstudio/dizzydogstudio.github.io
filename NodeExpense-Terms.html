@@ -212,6 +212,7 @@
       <button class="lang-tab active" onclick="switchLang('en')">English</button>
       <button class="lang-tab" onclick="switchLang('zh-hans')">简体中文</button>
       <button class="lang-tab" onclick="switchLang('zh-hant')">繁體中文</button>
+      <button class="lang-tab" onclick="switchLang('ja')">日本語</button>
     </div>
   </div>
 </header>
@@ -587,6 +588,130 @@
   </div>
 </div>
 
+
+<!-- ========== JAPANESE ========== -->
+<div class="lang-content" id="lang-ja">
+  <div class="meta"><strong>最終更新日：</strong>2026-04-15 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+
+  <h2><span class="section-number">1</span>利用規約への同意</h2>
+  <p>Node Expense: Track Together をダウンロード、インストール、または使用することにより、本利用規約に同意したものとみなされます。同意されない場合は、本アプリをご使用にならないでください。</p>
+
+  <h2><span class="section-number">2</span>サービスの説明</h2>
+  <p>Node Expense: Track Together は、以下の機能を提供する支出管理アプリです：</p>
+  <ul>
+    <li>個人の支出を記録・管理</li>
+    <li>グループメンバーとリアルタイムでグループ支出を追跡・割り勘</li>
+    <li>支出に位置情報を記録（任意）</li>
+    <li>選択した iOS カレンダーと支出を同期</li>
+    <li>データのバックアップおよび暗号化（PRO サブスクリプション機能）</li>
+    <li>支出データを JSON、CSV、PDF 形式でエクスポート、および JSON 形式でインポート（PRO サブスクリプション機能）</li>
+    <li>デバイスのカメラでレシートをスキャンして支出情報を自動入力</li>
+    <li>カスタム支出カテゴリの作成・管理と月次予算の設定</li>
+  </ul>
+  <p>グループ関連のデータは Firebase に同期され、すべてのグループメンバーがリアルタイムで同じ情報を確認できます。個人の支出データは、エクスポートまたはバックアップを選択しない限り、デバイス上に保存されます。</p>
+
+  <h2><span class="section-number">3</span>無料・有料機能</h2>
+  <h3>無料プラン</h3>
+  <ul>
+    <li>月15件の個人支出スロット</li>
+    <li>リワード広告視聴で月最大5件の追加スロット</li>
+    <li>過去7日間の手動カレンダー同期</li>
+  </ul>
+  <h3>無料トライアル</h3>
+  <ul>
+    <li>14日間の無料トライアルで、グループ支出・データ保持・データ移行の全機能を利用可能</li>
+    <li>トライアルの利用は Apple ID ごとに管理され、期限終了後は再開できません</li>
+  </ul>
+  <h3>PRO サブスクリプション</h3>
+  <p>PRO 登録者は以下の機能に無制限でアクセスできます：</p>
+  <ul>
+    <li>個人支出の無制限追跡（月次上限なし）</li>
+    <li>グループ支出 — グループの作成・参加、割り勘、精算の記録</li>
+    <li>データ保持 — AES-256-GCM 暗号化バックアップを含む自動保持ポリシー</li>
+    <li>データ移行 — JSON、CSV、PDF 形式でのエクスポート、および JSON 形式でのインポート</li>
+    <li>カテゴリ予算 — カスタムカテゴリごとの月次上限設定と超過アラート</li>
+    <li>バナー広告・リワード広告・インタースティシャル広告なし</li>
+  </ul>
+  <p>現在の請求期間終了の少なくとも 24 時間前に Apple App Store 設定からキャンセルしない限り、サブスクリプションは自動的に更新されます。</p>
+  <h3>ライフタイムサブスクリプション</h3>
+  <p>「ライフタイム」パスは、開発者がアプリを積極的にサポート・配布している期間中、PRO 機能へのアクセスを提供します。アプリまたはそのクラウド同期サービス（Firebase、RevenueCat など）が無期限に利用可能であることを保証するものではありません。アプリが廃止、App Store から削除、または開発者が運営を終了した場合、「ライフタイム」期間は終了します。</p>
+  <p><strong>返金と最終性：</strong>ライフタイム購入は一回限りの支払いです。アプリが廃止された場合、またはプラットフォームの変更により一部のサードパーティ連携が利用不可になった場合、按分返金は行われません。</p>
+
+  <h2><span class="section-number">4</span>グループ機能と削除</h2>
+  <p>グループ支出は Firebase を通じてすべてのメンバーのデバイス間でリアルタイムに同期されます。グループに参加することで、以下の事項に同意したものとみなされます：</p>
+  <ul>
+    <li>あなたの表示名と支出データはグループの全メンバーに表示されます</li>
+    <li>どのメンバーもグループに支出を追加できます（グループ管理者が設定した権限に従います）</li>
+    <li>グループの削除には、7日間の投票期間内にすべてのメンバーの同意が必要です</li>
+    <li>3ヶ月以上非アクティブなグループは、削除リクエストが提出され、7日以内にメンバーから拒否されない場合、自動的に削除される場合があります</li>
+    <li>グループ管理者はいつでもメンバーを削除したりデータを移行したりできます</li>
+    <li>グループ削除後に保持を選択した支出は、デバイスのローカルに「削除済みグループ」のマーク付きで残ります</li>
+  </ul>
+
+  <h2><span class="section-number">5</span>広告</h2>
+  <p>アプリの無料プランでは以下の広告が表示される場合があります：</p>
+  <ul>
+    <li><strong>バナー広告</strong> — 画面下部に表示される静止または動画の矩形広告</li>
+    <li><strong>リワード広告</strong> — 任意。視聴すると月最大5件の追加支出スロットがアンロック</li>
+    <li><strong>インタースティシャル広告</strong> — 月次支出上限に達したときに表示（アプリセッションごとに1回）</li>
+  </ul>
+  <p>リワード広告の視聴は常に任意です。広告プロバイダーは、プライバシーポリシーに記載の通り、匿名の識別子を収集する場合があります。</p>
+
+  <h2><span class="section-number">6</span>ユーザーの責任</h2>
+  <p>以下の事項についてはお客様の責任となります：</p>
+  <ul>
+    <li>支出データの正確性</li>
+    <li>表示名および他のグループメンバーへの表示方法</li>
+    <li>デバイスとアプリへのアクセスの保護</li>
+    <li>招待するグループメンバーが、プライバシーポリシーに従ったデータ処理に同意していることの確認</li>
+    <li>Apple ID にリンクされた iCloud キーチェーンへのアクセスの維持 — iCloud キーチェーンへのアクセスを失った場合、暗号化バックアップは復元できません</li>
+  </ul>
+  <p>デバイスの紛失、誤削除、暗号化キーの紛失、またはユーザーエラーによるデータ損失については、当社は責任を負いません。</p>
+
+  <h2><span class="section-number">7</span>データの所有権</h2>
+  <p>お客様は支出データの完全な所有権を保持します。当社は、お客様の個人支出記録、グループデータ、またはエクスポートされたファイルの所有権を主張しません。グループ機能を使用することにより、他のグループメンバーがアプリ内で共有支出データを閲覧できる権限を付与するものとします。</p>
+
+  <h2><span class="section-number">8</span>可用性</h2>
+  <p>アプリおよびクラウドサービスの可用性を維持するよう努めますが、中断のないサービスを保証するものではありません。Firebase および RevenueCat の可用性は、当社の管理外にあるサードパーティの障害によって影響を受ける場合があります。グループ同期機能には有効なインターネット接続が必要です。</p>
+  <h3>サービスライフサイクル</h3>
+  <p>当社は、通知の有無にかかわらず、アプリまたはその機能を一時的または永続的に変更または廃止する権利を留保します。永続的なサービス終了の場合、開発者は独自の裁量で最終的な「ローカルのみ」アップデートを提供する場合がありますが、クラウドサーバーやリアルタイム同期を無期限に維持する義務はありません。</p>
+
+  <h2><span class="section-number">9</span>責任の制限</h2>
+  <p>本アプリは「現状のまま」提供され、いかなる種類の保証も行いません。法律で許容される最大限の範囲において、当社は以下について責任を負いません：</p>
+  <ul>
+    <li>金銭的損失、支出の記録漏れ、またはデータの不正確さ</li>
+    <li>暗号化キーの紛失またはアクセス不能による暗号化バックアップデータの損失</li>
+    <li>サードパーティサービスの障害（Firebase、RevenueCat、AdMob）によるデータ損失</li>
+    <li>不正確なデータ入力によるグループ精算計算の誤り</li>
+    <li>ライフタイムアクセスについて：開発者の総責任は、ユーザーが当該サブスクリプションに実際に支払った金額を超えないものとします</li>
+  </ul>
+
+  <h2><span class="section-number">10</span>終了</h2>
+  <p>不正アクセス試行、グループメンバーへのスパム行為、サブスクリプションや広告システムの回避など、不正使用が検出された場合、当社はアプリまたはそのクラウド同期機能へのアクセスを停止または終了する権利を留保します。</p>
+
+  <h2><span class="section-number">11</span>規約の変更</h2>
+  <p>本規約は随時更新される場合があります。「最終更新日」に変更内容が反映されます。変更が公開された後もアプリを継続して使用した場合、更新された規約に同意したものとみなされます。</p>
+
+  <h2><span class="section-number">12</span>準拠法</h2>
+  <p>本規約は、米国ニューヨーク州の法律に準拠します。紛争はニューヨーク州の裁判所で解決されます。</p>
+
+  <h2><span class="section-number">13</span>サービス終了ポリシー</h2>
+  <p>当社はいつでもアプリを廃止する権利を留保します。永続的なサービス終了の場合：</p>
+  <ul>
+    <li><strong>通知：</strong>アプリ内通知で少なくとも30日前に通知</li>
+    <li><strong>ライフタイムアクセス：</strong>「ライフタイム」購入は、アプリが App Store で提供されている期間のみアクセスを付与</li>
+    <li><strong>データの可搬性：</strong>Firebase が無効化される前に、JSON、CSV、または PDF でエクスポートする期間が設けられます</li>
+    <li><strong>返金なし：</strong>サービス終了時に按分返金は行われません</li>
+    <li><strong>最終アップデート：</strong>当社の裁量で「ローカルのみ」アップデートをリリースする場合があります</li>
+  </ul>
+
+  <h2><span class="section-number">14</span>お問い合わせ</h2>
+  <div class="contact-box">
+    <p style="margin:0">サポートや法的なご質問は：<br>
+    <strong>メール：</strong><a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -597,7 +722,8 @@
   const titles = {
     en: 'Terms of Service',
     'zh-hans': '服务条款',
-    'zh-hant': '服務條款'
+    'zh-hant': '服務條款',
+    ja: '利用規約'
   };
 
   function switchLang(lang) {
@@ -606,7 +732,8 @@
     document.getElementById('lang-' + lang).classList.add('active');
     event.target.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'zh-hans' ? 'zh-Hans' : 'zh-Hant');
+    const htmlLang = lang === 'en' ? 'en' : lang === 'zh-hans' ? 'zh-Hans' : lang === 'zh-hant' ? 'zh-Hant' : 'ja';
+    document.documentElement.lang = htmlLang;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -616,6 +743,8 @@
     document.querySelector('[onclick="switchLang(\'zh-hant\')"]').click();
   } else if (browserLang.toLowerCase().includes('zh')) {
     document.querySelector('[onclick="switchLang(\'zh-hans\')"]').click();
+  } else if (browserLang.toLowerCase().startsWith('ja')) {
+    document.querySelector('[onclick="switchLang(\'ja\')"]').click();
   }
 </script>
 </body>

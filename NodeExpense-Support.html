@@ -243,6 +243,7 @@
       <button class="lang-tab active" onclick="switchLang('en', this)">English</button>
       <button class="lang-tab" onclick="switchLang('zh-hans', this)">简体中文</button>
       <button class="lang-tab" onclick="switchLang('zh-hant', this)">繁體中文</button>
+      <button class="lang-tab" onclick="switchLang('ja', this)">日本語</button>
     </div>
   </div>
 </header>
@@ -576,6 +577,116 @@
   </div>
 </div>
 
+
+<!-- ========== JAPANESE ========== -->
+<div class="lang-content" id="lang-ja">
+  <div class="meta"><strong>最終更新日：</strong>2026-04-15 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>お問い合わせ</h2>
+      <p>サポート、ご質問、またはフィードバックは以下のメールアドレスまでご連絡ください<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      通常、1〜2営業日以内にご返信いたします。</p>
+    </div>
+  </div>
+
+  <h2>よくある質問</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        グループの作成方法は？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>グループ</strong>タブをタップ <span class="arrow">→</span> 右上の <strong>+</strong> ボタンをタップ <span class="arrow">→</span> <strong>グループを作成</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        友達をグループに招待するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>メンバー</strong>タブをタップ <span class="arrow">→</span> <strong>招待リンクを共有</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支払いを記録するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> <strong>支払いを記録</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        グループを削除するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>グループを削除</strong>をタップ（管理者のみ）。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支出を編集または削除するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        編集または削除したい支出をタップ <span class="arrow">→</span> 左にスワイプして<strong>編集</strong>と<strong>削除</strong>オプションを表示。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        デフォルト通貨を変更するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>外観</strong> <span class="arrow">→</span> <strong>デフォルト通貨</strong>。選択した通貨は新しい支出を追加する際のデフォルトとして使用されます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        カスタムカテゴリを作成するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>カテゴリを管理</strong> <span class="arrow">→</span> <strong>+</strong> ボタンをタップ。新しいカテゴリの名前、アイコン、カラー、絵文字を選択できます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        カテゴリの月次予算を設定するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>カテゴリを管理</strong> <span class="arrow">→</span> 任意のカテゴリ横の<strong>グラフアイコン</strong>をタップ。<strong>月次予算を設定</strong>をオンにして上限金額を入力。予算は常にデフォルト通貨が使用されます。設定後、月次グラフビューに進捗バーが表示され、上限に近づくか超えた場合に通知が届きます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        レシートをスキャンするには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>+</strong> ボタンをタップして新しい支出を追加 <span class="arrow">→</span> 金額フィールド横の<strong>カメラアイコン</strong>をタップ <span class="arrow">→</span> カメラをレシートに向ける。検出された金額が下部に表示されます — タップすると金額フィールドに自動入力されます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支出データをエクスポートするには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>データをエクスポート</strong>。<strong>JSON</strong>（再インポート用）、<strong>CSV</strong>（スプレッドシート用）、または <strong>PDF</strong>（印刷や共有用）から選択。エクスポートには PRO サブスクリプションまたは有効な無料トライアルが必要です。
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -583,7 +694,7 @@
 </footer>
 
 <script>
-  const titles = { en: 'Support', 'zh-hans': '支持', 'zh-hant': '支援' };
+  const titles = { en: 'Support', 'zh-hans': '支持', 'zh-hant': '支援', ja: 'サポート' };
 
   function switchLang(lang, btn) {
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
@@ -591,7 +702,8 @@
     document.getElementById('lang-' + lang).classList.add('active');
     btn.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'zh-hans' ? 'zh-Hans' : 'zh-Hant');
+    const htmlLang = lang === 'en' ? 'en' : lang === 'zh-hans' ? 'zh-Hans' : lang === 'zh-hant' ? 'zh-Hant' : 'ja';
+    document.documentElement.lang = htmlLang;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -605,6 +717,8 @@
     document.querySelector('[onclick*="zh-hant"]').click();
   } else if (browserLang.toLowerCase().includes('zh')) {
     document.querySelector('[onclick*="zh-hans"]').click();
+  } else if (browserLang.toLowerCase().startsWith('ja')) {
+    document.querySelector('[onclick*="\'ja\'"]').click();
   }
 </script>
 </body>

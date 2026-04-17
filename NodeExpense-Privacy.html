@@ -255,6 +255,7 @@
       <button class="lang-tab active" onclick="switchLang('en', this)">English</button>
       <button class="lang-tab" onclick="switchLang('zh-hans', this)">简体中文</button>
       <button class="lang-tab" onclick="switchLang('zh-hant', this)">繁體中文</button>
+      <button class="lang-tab" onclick="switchLang('ja', this)">日本語</button>
     </div>
   </div>
 </header>
@@ -642,6 +643,134 @@
   </div>
 </div>
 
+
+<!-- ========== JAPANESE ========== -->
+<div class="lang-content" id="lang-ja">
+  <div class="meta"><strong>最終更新日：</strong>2026-04-15 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+
+  <h2><span class="section-number">1</span>概要</h2>
+  <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
+
+  <h2><span class="section-number">2</span>収集するデータ</h2>
+  <div class="data-grid">
+    <div class="data-card">
+      <div class="card-label">お客様が提供する情報</div>
+      <ul>
+        <li>支出記録（金額、メモ、カテゴリ）</li>
+        <li>グループデータ（名前、メンバー、設定）</li>
+        <li>グループ支出と精算</li>
+        <li>表示名</li>
+        <li>任意の位置情報</li>
+        <li>選択したカレンダーへのアクセス</li>
+      </ul>
+    </div>
+    <div class="data-card">
+      <div class="card-label">自動収集されるデータ</div>
+      <ul>
+        <li>匿名の利用分析（Firebase）</li>
+        <li>匿名のデバイス識別子</li>
+        <li>クラッシュログと診断情報</li>
+        <li>デバイスとアプリのパフォーマンス情報</li>
+        <li>プッシュ通知トークン（有効時）</li>
+      </ul>
+    </div>
+  </div>
+  <p>自動収集されるデータは、Node Expense の安定性、パフォーマンス、およびユーザー体験の向上にのみ使用されます。</p>
+
+  <h3>サブスクリプションと支払い</h3>
+  <p>購入とサブスクリプションは Apple と RevenueCat によって処理されます。当社はお客様のクレジットカードや支払い情報を受け取りません。RevenueCat は、サブスクリプションステータス、「ライフタイム」アクセス、および無料トライアル期間を管理するために匿名のサブスクライバー識別子を保存します。このデータは、デバイスの再インストール後も PRO 機能へのアクセスを確認するために必要な期間保持され、グループ支出のクラウドデータとは独立して処理されます。</p>
+
+  <h2><span class="section-number">3</span>サードパーティサービス</h2>
+  <table class="service-table">
+    <thead><tr><th>サービス</th><th>目的</th></tr></thead>
+    <tbody>
+      <tr><td><strong>RevenueCat</strong></td><td>サブスクリプションとアプリ内購入の管理、無料トライアルの追跡</td></tr>
+      <tr><td><strong>Google AdMob</strong></td><td>バナー広告、リワード広告、インタースティシャル広告</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>匿名の利用分析</td></tr>
+      <tr><td><strong>Firebase Firestore</strong></td><td>グループデータの同期（支出、メンバー、精算、削除リクエスト）</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>サブスクリプション継続性のための匿名ユーザー識別</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>グループ削除やプッシュ通知配信を含むバックグラウンドタスク</td></tr>
+      <tr><td><strong>Firebase Cloud Messaging</strong></td><td>グループアクティビティのプッシュ通知</td></tr>
+    </tbody>
+  </table>
+  <div class="highlight-box">Firebase はグループ関連機能の同期レイヤーとしてのみ使用されます。個人（非グループ）の支出データはクラウドサービスに<strong>一切</strong>アップロードされません。</div>
+
+  <h2><span class="section-number">4</span>広告</h2>
+  <p>Node Expense は、無料プランのユーザー向けに広告によるサポートを受けています。バナー広告、月次上限に達したときのインタースティシャル広告、または追加の支出スロットをアンロックするための任意のリワード広告が含まれる場合があります。</p>
+  <p>よりパーソナライズされた体験を提供するために、アクティビティの追跡許可を求める場合があります。追跡を希望しない場合でも、同じ数の広告が表示されますが、関連性が低くなる場合があります。お客様の財務データはプライベートに保たれ、広告主と<strong>共有されることはありません</strong>。</p>
+
+  <h2><span class="section-number">5</span>位置情報</h2>
+  <p>位置情報の収集は任意であり、設定で明示的に有効にした場合のみ収集されます。有効にすると、新しい支出に位置情報が記録されます。位置情報はデバイスにローカル保存され、クラウドサービスにアップロードされることはありません。iOS の設定からいつでも位置情報へのアクセスを無効にできます。</p>
+
+  <h2><span class="section-number">6</span>カレンダーへのアクセス</h2>
+  <p>Node Expense はお客様が選択したカレンダーのみにアクセスします。カレンダーへのアクセスは、支出をカレンダーイベントとして表示・同期する目的のみに使用されます。カレンダーデータがサードパーティと共有されることはありません。</p>
+
+  <h2><span class="section-number">7</span>データの保存、保持、および暗号化</h2>
+  <h3>7.1 デバイス上のストレージ</h3>
+  <p>以下のデータは SwiftData（Apple のセキュアなローカルストレージフレームワーク）を使用してデバイスにローカル保存されます：</p>
+  <ul>
+    <li>個人（非グループ）の支出記録</li>
+    <li>アプリの設定と環境設定</li>
+    <li>オフラインアクセス用のグループデータのローカルコピー</li>
+    <li>オフライン表示用のグループ支出のキャッシュ</li>
+  </ul>
+  <p>個人の支出データは、明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。削除されたグループからの支出は、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。</p>
+
+  <h3>7.2 グループ機能のクラウドストレージ</h3>
+  <p>グループ機能では、選択されたデータが Firebase Firestore に同期されます：</p>
+  <ul>
+    <li>グループドキュメント（名前、説明、アイコン、メンバー、権限、招待コード）</li>
+    <li>グループ支出（金額、カテゴリ、メモ、日付、位置情報（有効時）、支払者の情報）</li>
+    <li>グループ精算（メンバー間の支払い記録）</li>
+    <li>グループ削除リクエストとメンバーの投票</li>
+    <li>トライアル開始日（再インストール後の復元用）</li>
+    <li>プッシュ通知トークン（FCM）</li>
+  </ul>
+
+  <h3>7.3 暗号化とバックアップ</h3>
+  <ul>
+    <li>機能へのアクセス権を持つユーザーは、AES-256-GCM 暗号化を使用した暗号化バックアップを有効にできます</li>
+    <li>支出記録の保持期間を制御できます（全期間または指定した年数）</li>
+    <li>バックアップファイルはお客様が選択した場所（iCloud Drive、このデバイス上、またはその他の iOS ファイルの場所）にエクスポートされます</li>
+    <li>バックアップ暗号化キーはお客様の iCloud キーチェーンにのみ保存され、当社のサーバーに送信されることはなく、開発者もアクセスできません</li>
+  </ul>
+
+  <h2><span class="section-number">8</span>データの移行</h2>
+  <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。</p>
+
+  <h2><span class="section-number">9</span>データの削除</h2>
+  <ul>
+    <li>Node Expense 内で個別または全ての個人支出を削除</li>
+    <li>グループを退出または削除リクエスト — 全メンバーが同意した場合、グループデータは Firebase から削除</li>
+    <li>「削除時に保持」としてマークされたグループ支出はデバイスのローカルに残ります。再アップロードされることはありません</li>
+    <li>Node Expense をアンインストールすると、デバイスに保存されているすべてのローカルデータが削除されます</li>
+  </ul>
+  <p>注意：Firebase のグループデータは、アプリ内の削除フローを通じてグループが正式に削除されるまで残る場合があります。</p>
+
+  <h2><span class="section-number">10</span>子どものプライバシー</h2>
+  <p>Node Expense は 13 歳未満の子どもを対象としていません。当社は 13 歳未満の子どもから意図的に個人データを収集しません。子どもが個人情報を提供したと思われる場合は、ご連絡ください。</p>
+
+  <h2><span class="section-number">11</span>お客様の権利</h2>
+  <ul>
+    <li>iOS の設定で位置情報へのアクセスを無効にする</li>
+    <li>iOS の設定でカレンダーへのアクセスを取り消す</li>
+    <li>Node Expense 内でローカルの支出データを削除する</li>
+    <li>削除前にデータをエクスポートする</li>
+    <li>グループの削除をリクエストする（全メンバーの Firebase からグループデータを削除）</li>
+    <li>Apple App Store の設定からいつでもサブスクリプションをキャンセルする</li>
+    <li>バックアップや暗号化エクスポートの使用をいつでも停止する</li>
+  </ul>
+
+  <h2><span class="section-number">12</span>本ポリシーの変更</h2>
+  <p>本プライバシーポリシーは随時更新される場合があります。変更は本文書上部の「最終更新日」に反映されます。変更後も Node Expense を継続して使用した場合、更新されたポリシーに同意したものとみなされます。</p>
+
+  <h2><span class="section-number">13</span>お問い合わせ</h2>
+  <div class="contact-box">
+    <p style="margin:0">本プライバシーポリシーまたはお客様のデータについてご質問がある場合は：<br>
+    <strong>メール：</strong><a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -649,7 +778,7 @@
 </footer>
 
 <script>
-  const titles = { en: 'Privacy Policy', 'zh-hans': '隐私政策', 'zh-hant': '隱私權政策' };
+  const titles = { en: 'Privacy Policy', 'zh-hans': '隐私政策', 'zh-hant': '隱私權政策', ja: 'プライバシーポリシー' };
 
   function switchLang(lang, btn) {
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
@@ -657,7 +786,8 @@
     document.getElementById('lang-' + lang).classList.add('active');
     btn.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'zh-hans' ? 'zh-Hans' : 'zh-Hant');
+    const htmlLang = lang === 'en' ? 'en' : lang === 'zh-hans' ? 'zh-Hans' : lang === 'zh-hant' ? 'zh-Hant' : 'ja';
+    document.documentElement.lang = htmlLang;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -666,6 +796,8 @@
     document.querySelector('[onclick*="zh-hant"]').click();
   } else if (browserLang.toLowerCase().includes('zh')) {
     document.querySelector('[onclick*="zh-hans"]').click();
+  } else if (browserLang.toLowerCase().startsWith('ja')) {
+    document.querySelector('[onclick*="\'ja\'"]').click();
   }
 </script>
 </body>
