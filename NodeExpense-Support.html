@@ -252,7 +252,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-04-15 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -291,6 +291,31 @@
       </button>
       <div class="faq-answer">
         Open the group <span class="arrow">→</span> tap the <strong>Expenses</strong> tab <span class="arrow">→</span> tap <strong>Record a Payment</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I set up Venmo, Cash App, or PayPal.Me for Settle Up?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tap <strong>Settings</strong> <span class="arrow">→</span> scroll to <strong>Payment Handles</strong>. Enter just your username (no leading <code>@</code> or <code>$</code>):
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — your username (e.g. <code>alice</code>). US accounts only.</li>
+          <li><strong>Cash App</strong> — your $cashtag (e.g. <code>bob</code>). US accounts only.</li>
+          <li><strong>PayPal.Me</strong> — your PayPal.Me link name (e.g. <code>alice</code>). Works globally.</li>
+        </ul>
+        Leave any field blank to skip that method. Your handles are shared privately with members of your groups so they can pay you back in one tap — they are never shared publicly or with advertisers.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I pay someone back with Venmo, Cash App, or PayPal?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Open the group <span class="arrow">→</span> <strong>Balances</strong> tab <span class="arrow">→</span> tap the <strong>Pay</strong> button on any debt you owe <span class="arrow">→</span> choose <strong>Venmo</strong>, <strong>Cash App</strong>, or <strong>PayPal.Me</strong>. The selected app opens with the amount and note prefilled — confirm and send the payment inside that app. Then return to Node Expense and tap <strong>Record a Payment</strong> to log the settlement so both sides can mark it confirmed.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">The <strong>Pay</strong> button only appears when the recipient has registered at least one payment handle. Amounts never transfer automatically — all payments happen inside the third-party app.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -361,7 +386,7 @@
 
 <!-- ========== SIMPLIFIED CHINESE ========== -->
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-04-15 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-04-19 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -400,6 +425,31 @@
       </button>
       <div class="faq-answer">
         打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 轻点<strong>记录付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何设置 Venmo、Cash App 或 PayPal.Me 以便一键结算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>设置</strong> <span class="arrow">→</span> 滚动至<strong>付款账号</strong>。只需输入用户名（无需 <code>@</code> 或 <code>$</code> 前缀）：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — 您的用户名（例如 <code>alice</code>）。仅限美国账户。</li>
+          <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。仅限美国账户。</li>
+          <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 链接名称（例如 <code>alice</code>）。全球可用。</li>
+        </ul>
+        留空任意字段即可跳过该方式。您的账号仅在您所在群组的成员之间私密共享，方便他们一键向您付款——绝不会公开或与广告商共享。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何通过 Venmo、Cash App 或 PayPal 向他人付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> <strong>余额</strong>标签页 <span class="arrow">→</span> 轻点您所欠款项旁的<strong>付款</strong>按钮 <span class="arrow">→</span> 选择 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所选应用会打开，并自动填入金额和备注——在该应用中确认并发送付款。随后返回 Node Expense 并轻点<strong>记录付款</strong>以登记此笔结算，双方即可将其标记为已确认。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">仅当收款人至少注册了一个付款账号时，<strong>付款</strong>按钮才会显示。金额绝不会自动转账——所有付款均在第三方应用中完成。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -470,7 +520,7 @@
 
 <!-- ========== TRADITIONAL CHINESE ========== -->
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-04-15 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-04-19 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -509,6 +559,31 @@
       </button>
       <div class="faq-answer">
         開啟群組 <span class="arrow">→</span> 點選<strong>費用</strong>分頁 <span class="arrow">→</span> 點選<strong>記錄付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何設定 Venmo、Cash App 或 PayPal.Me 以一鍵結算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>設定</strong> <span class="arrow">→</span> 捲動至<strong>付款帳號</strong>。只需輸入使用者名稱（無需 <code>@</code> 或 <code>$</code> 前綴）：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — 您的使用者名稱（例如 <code>alice</code>）。僅限美國帳戶。</li>
+          <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。僅限美國帳戶。</li>
+          <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 連結名稱（例如 <code>alice</code>）。全球適用。</li>
+        </ul>
+        留空任意欄位即可跳過該方式。您的帳號僅會私下分享給您所在群組的成員，方便他們一鍵向您付款——絕不會公開或與廣告商共享。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何透過 Venmo、Cash App 或 PayPal 向他人付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> <strong>餘額</strong>分頁 <span class="arrow">→</span> 點選您所欠款項旁的<strong>付款</strong>按鈕 <span class="arrow">→</span> 選擇 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所選應用程式將開啟，並自動帶入金額與備註——在該應用程式中確認並傳送付款。隨後返回 Node Expense 並點選<strong>記錄付款</strong>以登記此筆結算，雙方即可將其標示為已確認。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">僅當收款人已註冊至少一個付款帳號時，<strong>付款</strong>按鈕才會顯示。金額絕不會自動轉帳——所有付款皆在第三方應用程式中完成。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -580,7 +655,7 @@
 
 <!-- ========== JAPANESE ========== -->
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-04-15 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-04-19 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -619,6 +694,31 @@
       </button>
       <div class="faq-answer">
         グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> <strong>支払いを記録</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo、Cash App、PayPal.Me を設定してワンタップで精算するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>支払いハンドル</strong>までスクロール。ユーザー名のみを入力します（先頭の <code>@</code> や <code>$</code> は不要）：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — ユーザー名（例：<code>alice</code>）。米国アカウントのみ対応。</li>
+          <li><strong>Cash App</strong> — $cashtag（例：<code>bob</code>）。米国アカウントのみ対応。</li>
+          <li><strong>PayPal.Me</strong> — PayPal.Me のリンク名（例：<code>alice</code>）。全世界で利用可能。</li>
+        </ul>
+        いずれかの欄を空欄にすると、その方法はスキップされます。入力したハンドルは、ご所属のグループのメンバーにのみ非公開で共有され、ワンタップで送金を受け取れます。公開されたり広告主と共有されたりすることはありません。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo、Cash App、PayPal で相手に送金するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>残高</strong>タブ <span class="arrow">→</span> 支払うべき債務の横にある<strong>支払う</strong>ボタンをタップ <span class="arrow">→</span> <strong>Venmo</strong>、<strong>Cash App</strong>、または <strong>PayPal.Me</strong> を選択します。選択したアプリが金額とメモが自動入力された状態で開くので、そのアプリ内で確認し送金を実行してください。その後 Node Expense に戻り<strong>支払いを記録</strong>をタップして精算を記録すると、双方が確認済みとしてマークできます。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>支払う</strong>ボタンは、受取人が少なくとも 1 つの支払いハンドルを登録している場合にのみ表示されます。金額が自動で送金されることはなく、すべての支払いは第三者アプリ内で完結します。</div>
       </div>
     </div>
     <div class="faq-item">
