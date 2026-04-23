@@ -2,8 +2,8 @@ Welcome to Dizzy Dog Studio.  View our official legal & support documentation fo
 
 ****
 
-* [Node Expense - Privacy Policy / 隐私政策 / 隱私權政策 / プライバシーポリシー](./NodeExpense-Privacy.html)
-* [Node Expense - Terms of Service / 服务条款 / 服務條款 / 利用規約](./NodeExpense-Terms.html)
-* [Node Expense - Support / 支持 / 支援 / サポート](./NodeExpense-Support.html)
+* [Node Expense - Privacy Policy / 隐私政策 / 隱私權政策 / プライバシーポリシー / Datenschutzerklärung / Política de Privacidad](./NodeExpense-Privacy.html)
+* [Node Expense - Terms of Service / 服务条款 / 服務條款 / 利用規約 / Nutzungsbedingungen / Términos y Condiciones](./NodeExpense-Terms.html)
+* [Node Expense - Support / 支持 / 支援 / サポート / Support / Soporte](./NodeExpense-Support.html)
 
 ****
