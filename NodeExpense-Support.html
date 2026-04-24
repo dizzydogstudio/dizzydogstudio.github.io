@@ -241,6 +241,8 @@
     <div class="page-title" id="header-title">Support</div>
     <div class="lang-tabs">
       <button class="lang-tab active" onclick="switchLang('en', this)">English</button>
+      <button class="lang-tab" onclick="switchLang('de', this)">Deutsch</button>
+      <button class="lang-tab" onclick="switchLang('es', this)">Español</button>
       <button class="lang-tab" onclick="switchLang('zh-hans', this)">简体中文</button>
       <button class="lang-tab" onclick="switchLang('zh-hant', this)">繁體中文</button>
       <button class="lang-tab" onclick="switchLang('ja', this)">日本語</button>
@@ -399,6 +401,308 @@
     </div>
   </div>
 </div>
+
+<!-- ========== GERMAN ========== -->
+<div class="lang-content" id="lang-de">
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>Kontakt aufnehmen</h2>
+      <p>Für Hilfe, Fragen oder Feedback schreiben Sie uns eine E-Mail an<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      Wir antworten in der Regel innerhalb von 1–2 Werktagen.</p>
+    </div>
+  </div>
+
+  <h2>Häufig gestellte Fragen</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie erstelle ich eine Gruppe?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf den Tab <strong>Gruppen</strong> <span class="arrow">→</span> tippen Sie auf die Schaltfläche <strong>+</strong> oben rechts <span class="arrow">→</span> tippen Sie auf <strong>Gruppe erstellen</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie lade ich Freunde in eine Gruppe ein?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Mitglieder</strong> <span class="arrow">→</span> tippen Sie auf <strong>Einladungslink teilen</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie erfasse ich eine Zahlung?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Ausgaben</strong> <span class="arrow">→</span> tippen Sie auf <strong>Zahlung erfassen</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie richte ich Venmo, Cash App oder PayPal.Me für die Abrechnung ein?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> scrollen Sie zu <strong>Zahlungskonten</strong>. Geben Sie nur Ihren Benutzernamen ein (ohne führendes <code>@</code> oder <code>$</code>):
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — Ihr Benutzername (z. B. <code>alice</code>). Nur US-Konten.</li>
+          <li><strong>Cash App</strong> — Ihr $Cashtag (z. B. <code>bob</code>). Nur US-Konten.</li>
+          <li><strong>PayPal.Me</strong> — Ihr PayPal.Me-Linkname (z. B. <code>alice</code>). Weltweit verfügbar.</li>
+        </ul>
+        Lassen Sie ein Feld leer, um diese Methode zu überspringen. Ihre Konten werden nur privat mit Mitgliedern Ihrer Gruppen geteilt, damit diese Sie mit einem Tipp bezahlen können – sie werden niemals öffentlich oder mit Werbepartnern geteilt.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie bezahle ich jemanden über Venmo, Cash App oder PayPal zurück?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Öffnen Sie die Gruppe <span class="arrow">→</span> Tab <strong>Salden</strong> <span class="arrow">→</span> tippen Sie auf die Schaltfläche <strong>Bezahlen</strong> neben einer Schuld <span class="arrow">→</span> wählen Sie <strong>Venmo</strong>, <strong>Cash App</strong> oder <strong>PayPal.Me</strong>. Die ausgewählte App öffnet sich mit vorausgefülltem Betrag und Hinweis – bestätigen und senden Sie die Zahlung in dieser App. Kehren Sie dann zu Node Expense zurück und tippen Sie auf <strong>Zahlung erfassen</strong>, um die Abrechnung zu protokollieren, sodass beide Seiten sie als bestätigt markieren können.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Die Schaltfläche <strong>Bezahlen</strong> erscheint nur, wenn der Empfänger mindestens ein Zahlungskonto registriert hat. Beträge werden niemals automatisch überwiesen – alle Zahlungen finden in der Drittanbieter-App statt.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Die Venmo-, Cash App- oder PayPal-Schaltfläche funktioniert nicht – was kann ich tun?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Node Expense öffnet Venmo, Cash App und PayPal per Deeplink direkt in diesen Apps. Wenn die Schaltfläche nichts tut oder einen Fehler anzeigt, ist die häufigste Ursache, dass die App auf Ihrem iPhone <strong>ausgeblendet</strong> ist. So beheben Sie das Problem:
+        <ol style="margin:8px 0 8px 18px; padding:0;">
+          <li>Öffnen Sie die iPhone-App <strong>Einstellungen</strong> <span class="arrow">→</span> tippen Sie auf <strong>Bildschirmzeit</strong> <span class="arrow">→</span> <strong>Inhalts- &amp; Datenschutzbeschränkungen</strong> <span class="arrow">→</span> <strong>Erlaubte Apps</strong>.</li>
+          <li>Stellen Sie sicher, dass die Zahlungs-App (Venmo, Cash App oder PayPal) eingeschaltet ist.</li>
+          <li>Falls Sie die App über die App-Mediathek vom Home-Bildschirm ausgeblendet haben, öffnen Sie die App-Mediathek, halten Sie das App-Symbol gedrückt und wählen Sie <strong>Zum Home-Bildschirm hinzufügen</strong>.</li>
+        </ol>
+        Sobald die App sichtbar und erlaubt ist, kehren Sie zu Node Expense zurück und versuchen Sie die Zahlungsschaltfläche erneut.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense überweist selbst kein Geld – es öffnet lediglich die Zahlungs-App mit vorausgefülltem Betrag. Die App muss installiert <em>und</em> auf Ihrem Gerät zugänglich sein, damit der Deeplink funktioniert.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie lösche ich eine Gruppe?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Einstellungen</strong> <span class="arrow">→</span> tippen Sie auf <strong>Gruppe löschen</strong> (nur Administratoren).
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie bearbeite oder lösche ich eine Ausgabe?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf die Ausgabe, die Sie bearbeiten oder löschen möchten <span class="arrow">→</span> wischen Sie nach links, um die Optionen <strong>Bearbeiten</strong> und <strong>Löschen</strong> anzuzeigen.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie ändere ich die Standardwährung?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Darstellung</strong> <span class="arrow">→</span> <strong>Standardwährung</strong>. Die gewählte Währung wird beim Hinzufügen neuer Ausgaben als Standard verwendet.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie erstelle ich eine benutzerdefinierte Kategorie?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Kategorien verwalten</strong> <span class="arrow">→</span> tippen Sie auf die Schaltfläche <strong>+</strong>. Sie können einen Namen, ein Symbol, eine Farbe und ein Emoji für Ihre neue Kategorie auswählen.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie lege ich ein monatliches Budget für eine Kategorie fest?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Kategorien verwalten</strong> <span class="arrow">→</span> tippen Sie auf das <strong>Diagrammsymbol</strong> neben einer beliebigen Kategorie. Aktivieren Sie <strong>Monatsbudget festlegen</strong> und geben Sie Ihr Ausgabenlimit ein. Das Budget verwendet immer Ihre Standardwährung. Nach der Einrichtung erscheint in der monatlichen Diagrammansicht ein Fortschrittsbalken, und Sie werden benachrichtigt, wenn Sie sich dem Limit nähern oder es überschreiten.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie scanne ich einen Kassenbon?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf die Schaltfläche <strong>+</strong>, um eine neue Ausgabe hinzuzufügen <span class="arrow">→</span> tippen Sie auf das <strong>Kamerasymbol</strong> neben dem Betragsfeld <span class="arrow">→</span> richten Sie Ihre Kamera auf den Kassenbon. Erkannte Beträge erscheinen unten – tippen Sie auf einen, um das Betragsfeld automatisch auszufüllen.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie exportiere ich meine Ausgaben?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Daten exportieren</strong>. Wählen Sie zwischen <strong>JSON</strong> (zum Reimportieren), <strong>CSV</strong> (für Tabellenkalkulationen) oder <strong>PDF</strong> (zum Drucken oder Teilen). Der Export erfordert ein PRO-Abonnement oder eine aktive kostenlose Testversion.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== SPANISH ========== -->
+<div class="lang-content" id="lang-es">
+  <div class="meta"><strong>Última actualización:</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>Contáctenos</h2>
+      <p>Para ayuda, preguntas o comentarios, envíenos un correo electrónico a<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      Normalmente respondemos en 1–2 días hábiles.</p>
+    </div>
+  </div>
+
+  <h2>Preguntas Frecuentes</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo creo un grupo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque la pestaña <strong>Grupos</strong> <span class="arrow">→</span> toque el botón <strong>+</strong> en la esquina superior derecha <span class="arrow">→</span> toque <strong>Crear grupo</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo invito a amigos a un grupo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Miembros</strong> <span class="arrow">→</span> toque <strong>Compartir enlace de invitación</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo registro un pago?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Gastos</strong> <span class="arrow">→</span> toque <strong>Registrar un pago</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo configuro Venmo, Cash App o PayPal.Me para liquidar cuentas?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> desplácese hasta <strong>Cuentas de pago</strong>. Ingrese solo su nombre de usuario (sin <code>@</code> ni <code>$</code> al inicio):
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — su nombre de usuario (p. ej. <code>alice</code>). Solo cuentas de EE. UU.</li>
+          <li><strong>Cash App</strong> — su $cashtag (p. ej. <code>bob</code>). Solo cuentas de EE. UU.</li>
+          <li><strong>PayPal.Me</strong> — el nombre de su enlace PayPal.Me (p. ej. <code>alice</code>). Disponible globalmente.</li>
+        </ul>
+        Deje cualquier campo en blanco para omitir ese método. Sus cuentas se comparten de forma privada solo con los miembros de sus grupos para que puedan pagarle con un toque — nunca se comparten públicamente ni con anunciantes.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo le pago a alguien con Venmo, Cash App o PayPal?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Abra el grupo <span class="arrow">→</span> pestaña <strong>Saldos</strong> <span class="arrow">→</span> toque el botón <strong>Pagar</strong> junto a cualquier deuda que deba <span class="arrow">→</span> elija <strong>Venmo</strong>, <strong>Cash App</strong> o <strong>PayPal.Me</strong>. La aplicación seleccionada se abre con el monto y la nota ya completados — confirme y envíe el pago dentro de esa aplicación. Luego regrese a Node Expense y toque <strong>Registrar un pago</strong> para registrar la liquidación y que ambas partes puedan marcarla como confirmada.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">El botón <strong>Pagar</strong> solo aparece cuando el destinatario ha registrado al menos una cuenta de pago. Los montos nunca se transfieren automáticamente — todos los pagos ocurren dentro de la aplicación de terceros.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        El botón de Venmo, Cash App o PayPal no funciona — ¿qué debo revisar?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Node Expense abre Venmo, Cash App y PayPal mediante enlaces profundos directamente en esas aplicaciones. Si el botón no hace nada o muestra un error, la causa más común es que la aplicación esté <strong>oculta en su iPhone</strong>. Para solucionarlo:
+        <ol style="margin:8px 0 8px 18px; padding:0;">
+          <li>Abra la aplicación <strong>Ajustes</strong> del iPhone <span class="arrow">→</span> toque <strong>Tiempo de uso</strong> <span class="arrow">→</span> <strong>Restricciones de contenido y privacidad</strong> <span class="arrow">→</span> <strong>Aplicaciones permitidas</strong>.</li>
+          <li>Asegúrese de que la aplicación de pago (Venmo, Cash App o PayPal) esté activada.</li>
+          <li>Si usó la Biblioteca de apps para ocultar la aplicación de la pantalla de inicio, abra la Biblioteca de apps, mantenga presionado el ícono de la app y elija <strong>Agregar a la pantalla de inicio</strong>.</li>
+        </ol>
+        Una vez que la aplicación esté visible y permitida, regrese a Node Expense e intente el botón de pago de nuevo.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense no mueve dinero por sí mismo — simplemente abre la aplicación de pago con el monto ya completado. La aplicación debe estar instalada <em>y</em> accesible en su dispositivo para que el enlace profundo funcione.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo elimino un grupo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Ajustes</strong> <span class="arrow">→</span> toque <strong>Eliminar grupo</strong> (solo administradores).
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo edito o elimino un gasto?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque el gasto que desea editar o eliminar <span class="arrow">→</span> deslice hacia la izquierda para ver las opciones <strong>Editar</strong> y <strong>Eliminar</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo cambio la moneda predeterminada?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Apariencia</strong> <span class="arrow">→</span> <strong>Moneda predeterminada</strong>. La moneda seleccionada se usará como predeterminada al agregar nuevos gastos.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo creo una categoría personalizada?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Administrar categorías</strong> <span class="arrow">→</span> toque el botón <strong>+</strong>. Puede elegir un nombre, ícono, color y emoji para su nueva categoría.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo establezco un presupuesto mensual para una categoría?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Administrar categorías</strong> <span class="arrow">→</span> toque el <strong>ícono de gráfico</strong> junto a cualquier categoría. Active <strong>Establecer presupuesto mensual</strong> e ingrese su límite de gasto. El presupuesto siempre usa su moneda predeterminada. Una vez configurado, aparece una barra de progreso en la vista de gráfico mensual y recibirá una notificación cuando se acerque o supere el límite.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo escaneo un recibo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque el botón <strong>+</strong> para agregar un nuevo gasto <span class="arrow">→</span> toque el <strong>ícono de cámara</strong> junto al campo de monto <span class="arrow">→</span> apunte su cámara al recibo. Los montos detectados aparecerán en la parte inferior — toque uno para completar el campo de monto automáticamente.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo exporto mis gastos?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Exportar datos</strong>. Elija entre <strong>JSON</strong> (para reimportar), <strong>CSV</strong> (para hojas de cálculo) o <strong>PDF</strong> (para imprimir o compartir). La exportación requiere una suscripción PRO o una prueba gratuita activa.
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- ========== SIMPLIFIED CHINESE ========== -->
 <div class="lang-content" id="lang-zh-hans">
@@ -858,7 +1162,7 @@
 </footer>
 
 <script>
-  const titles = { en: 'Support', 'zh-hans': '支持', 'zh-hant': '支援', ja: 'サポート' };
+  const titles = { en: 'Support', de: 'Support', es: 'Soporte', 'zh-hans': '支持', 'zh-hant': '支援', ja: 'サポート' };
 
   function switchLang(lang, btn) {
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
@@ -866,8 +1170,8 @@
     document.getElementById('lang-' + lang).classList.add('active');
     btn.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    const htmlLang = lang === 'en' ? 'en' : lang === 'zh-hans' ? 'zh-Hans' : lang === 'zh-hant' ? 'zh-Hant' : 'ja';
-    document.documentElement.lang = htmlLang;
+    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja' };
+    document.documentElement.lang = htmlLangMap[lang] || 'en';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -883,6 +1187,10 @@
     document.querySelector('[onclick*="zh-hans"]').click();
   } else if (browserLang.toLowerCase().startsWith('ja')) {
     document.querySelector('[onclick*="\'ja\'"]').click();
+  } else if (browserLang.toLowerCase().startsWith('de')) {
+    document.querySelector('[onclick*="\'de\'"]').click();
+  } else if (browserLang.toLowerCase().startsWith('es')) {
+    document.querySelector('[onclick*="\'es\'"]').click();
   }
 </script>
 </body>
