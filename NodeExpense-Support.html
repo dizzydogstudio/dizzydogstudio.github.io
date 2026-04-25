@@ -347,11 +347,21 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        How do I edit or delete an expense?
+        How do I edit, delete, or refund an expense?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tap the expense you want to edit or delete <span class="arrow">→</span> swipe left to reveal the <strong>Edit</strong> and <strong>Delete</strong> options.
+        On any expense row in the list:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Swipe right</strong> to reveal <strong>Edit</strong> (blue) and, when the expense is refundable, <strong>Refund</strong> (green).</li>
+          <li><strong>Swipe left</strong> to reveal <strong>Delete</strong> (red).</li>
+        </ul>
+        Who is eligible:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Personal expense</strong> — you can edit, delete, and refund any expense in your own list.</li>
+          <li><strong>Group expense</strong> — only the <strong>group admin</strong> or the member who <strong>originally recorded</strong> the expense can edit, delete, or refund it. Other members can view the row but won't see the swipe options.</li>
+        </ul>
+        The <strong>Refund</strong> action is hidden on refunds themselves and on expenses that are already fully refunded.
       </div>
     </div>
     <div class="faq-item">
@@ -360,7 +370,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tap the expense to open it <span class="arrow">→</span> scroll down and tap <strong>Record Refund</strong> <span class="arrow">→</span> enter the refund amount (it defaults to the full remaining refundable) <span class="arrow">→</span> optionally adjust the date and add a note <span class="arrow">→</span> tap <strong>Record Refund</strong> again to confirm. The refund inherits the original expense's split, participants, currency, and category, and is credited back to whoever paid the original. You can record multiple partial refunds as long as the total doesn't exceed the original amount. Refunds appear in your expense list with a green <strong>Refund</strong> badge and subtract from your monthly chart and daily calendar totals. Deleting the original expense also removes its linked refunds.
+        <strong>Swipe right</strong> on the expense row and tap <strong>Refund</strong> (fastest), or tap the expense to open it and scroll down to <strong>Record Refund</strong> <span class="arrow">→</span> enter the refund amount (it defaults to the full remaining refundable) <span class="arrow">→</span> optionally adjust the date and add a note <span class="arrow">→</span> tap <strong>Record Refund</strong> to confirm. The refund inherits the original expense's split, participants, currency, and category, and is credited back to whoever paid the original. You can record multiple partial refunds as long as the total doesn't exceed the original amount. Refunds appear in your expense list with a green <strong>Refund</strong> badge and subtract from your monthly chart and daily calendar totals. Deleting the original expense also removes its linked refunds. For group expenses, only the <strong>group admin</strong> or the <strong>original recorder</strong> may issue a refund.
       </div>
     </div>
     <div class="faq-item">
@@ -520,11 +530,21 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        Wie bearbeite oder lösche ich eine Ausgabe?
+        Wie bearbeite, lösche oder erstatte ich eine Ausgabe?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tippen Sie auf die Ausgabe, die Sie bearbeiten oder löschen möchten <span class="arrow">→</span> wischen Sie nach links, um die Optionen <strong>Bearbeiten</strong> und <strong>Löschen</strong> anzuzeigen.
+        Bei jeder Ausgabe in der Liste:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Nach rechts wischen</strong>, um <strong>Bearbeiten</strong> (blau) und – sofern die Ausgabe erstattungsfähig ist – <strong>Erstatten</strong> (grün) anzuzeigen.</li>
+          <li><strong>Nach links wischen</strong>, um <strong>Löschen</strong> (rot) anzuzeigen.</li>
+        </ul>
+        Wer ist berechtigt:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Persönliche Ausgabe</strong> — Sie können jede Ausgabe in Ihrer eigenen Liste bearbeiten, löschen und erstatten.</li>
+          <li><strong>Gruppenausgabe</strong> — nur der <strong>Gruppen-Administrator</strong> oder das Mitglied, das die Ausgabe <strong>ursprünglich erfasst</strong> hat, kann sie bearbeiten, löschen oder erstatten. Andere Mitglieder sehen die Zeile, aber keine Wisch-Optionen.</li>
+        </ul>
+        Die Aktion <strong>Erstatten</strong> wird bei Erstattungen selbst sowie bei bereits vollständig erstatteten Ausgaben ausgeblendet.
       </div>
     </div>
     <div class="faq-item">
@@ -533,7 +553,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tippen Sie auf die Ausgabe, um sie zu öffnen <span class="arrow">→</span> scrollen Sie nach unten und tippen Sie auf <strong>Erstattung erfassen</strong> <span class="arrow">→</span> geben Sie den Erstattungsbetrag ein (voreingestellt ist der vollständig erstattbare Restbetrag) <span class="arrow">→</span> passen Sie optional das Datum an und fügen Sie eine Notiz hinzu <span class="arrow">→</span> tippen Sie erneut auf <strong>Erstattung erfassen</strong>, um zu bestätigen. Die Erstattung übernimmt die Aufteilung, Teilnehmer, Währung und Kategorie der ursprünglichen Ausgabe und wird der Person gutgeschrieben, die die ursprüngliche Ausgabe bezahlt hat. Sie können mehrere Teilerstattungen erfassen, solange der Gesamtbetrag den ursprünglichen Betrag nicht überschreitet. Erstattungen erscheinen in Ihrer Ausgabenliste mit einem grünen <strong>Erstattung</strong>-Abzeichen und werden von den monatlichen Diagramm- und täglichen Kalendersummen abgezogen. Beim Löschen der ursprünglichen Ausgabe werden auch die zugehörigen Erstattungen entfernt.
+        <strong>Wischen Sie nach rechts</strong> auf der Ausgabezeile und tippen Sie auf <strong>Erstatten</strong> (am schnellsten), oder tippen Sie auf die Ausgabe, um sie zu öffnen, und scrollen Sie nach unten zu <strong>Erstattung erfassen</strong> <span class="arrow">→</span> geben Sie den Erstattungsbetrag ein (voreingestellt ist der vollständig erstattbare Restbetrag) <span class="arrow">→</span> passen Sie optional das Datum an und fügen Sie eine Notiz hinzu <span class="arrow">→</span> tippen Sie auf <strong>Erstattung erfassen</strong>, um zu bestätigen. Die Erstattung übernimmt die Aufteilung, Teilnehmer, Währung und Kategorie der ursprünglichen Ausgabe und wird der Person gutgeschrieben, die die ursprüngliche Ausgabe bezahlt hat. Sie können mehrere Teilerstattungen erfassen, solange der Gesamtbetrag den ursprünglichen Betrag nicht überschreitet. Erstattungen erscheinen in Ihrer Ausgabenliste mit einem grünen <strong>Erstattung</strong>-Abzeichen und werden von den monatlichen Diagramm- und täglichen Kalendersummen abgezogen. Beim Löschen der ursprünglichen Ausgabe werden auch die zugehörigen Erstattungen entfernt. Bei Gruppenausgaben können nur der <strong>Gruppen-Administrator</strong> oder das <strong>ursprünglich erfassende Mitglied</strong> eine Erstattung ausstellen.
       </div>
     </div>
     <div class="faq-item">
@@ -694,11 +714,21 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        ¿Cómo edito o elimino un gasto?
+        ¿Cómo edito, elimino o reembolso un gasto?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Toque el gasto que desea editar o eliminar <span class="arrow">→</span> deslice hacia la izquierda para ver las opciones <strong>Editar</strong> y <strong>Eliminar</strong>.
+        En cualquier fila de gasto de la lista:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Deslice hacia la derecha</strong> para mostrar <strong>Editar</strong> (azul) y, cuando el gasto sea reembolsable, <strong>Reembolsar</strong> (verde).</li>
+          <li><strong>Deslice hacia la izquierda</strong> para mostrar <strong>Eliminar</strong> (rojo).</li>
+        </ul>
+        Quién puede hacerlo:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Gasto personal</strong> — puede editar, eliminar y reembolsar cualquier gasto de su propia lista.</li>
+          <li><strong>Gasto de grupo</strong> — solo el <strong>administrador del grupo</strong> o el miembro que <strong>registró originalmente</strong> el gasto puede editarlo, eliminarlo o reembolsarlo. Los demás miembros pueden ver la fila, pero no verán las opciones al deslizar.</li>
+        </ul>
+        La acción <strong>Reembolsar</strong> se oculta en los reembolsos mismos y en gastos que ya se han reembolsado por completo.
       </div>
     </div>
     <div class="faq-item">
@@ -707,7 +737,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Toque el gasto para abrirlo <span class="arrow">→</span> desplácese hacia abajo y toque <strong>Registrar reembolso</strong> <span class="arrow">→</span> introduzca el importe del reembolso (el valor predeterminado es el importe reembolsable restante) <span class="arrow">→</span> opcionalmente ajuste la fecha y añada una nota <span class="arrow">→</span> toque <strong>Registrar reembolso</strong> de nuevo para confirmar. El reembolso hereda la división, los participantes, la moneda y la categoría del gasto original, y se acredita a quien pagó el gasto original. Puede registrar varios reembolsos parciales siempre que el total no supere el importe original. Los reembolsos aparecen en su lista de gastos con una etiqueta verde <strong>Reembolso</strong> y se restan de los totales del gráfico mensual y del calendario diario. Al eliminar el gasto original también se eliminan sus reembolsos vinculados.
+        <strong>Deslice hacia la derecha</strong> en la fila del gasto y toque <strong>Reembolsar</strong> (la forma más rápida), o toque el gasto para abrirlo y desplácese hacia abajo hasta <strong>Registrar reembolso</strong> <span class="arrow">→</span> introduzca el importe del reembolso (el valor predeterminado es el importe reembolsable restante) <span class="arrow">→</span> opcionalmente ajuste la fecha y añada una nota <span class="arrow">→</span> toque <strong>Registrar reembolso</strong> para confirmar. El reembolso hereda la división, los participantes, la moneda y la categoría del gasto original, y se acredita a quien pagó el gasto original. Puede registrar varios reembolsos parciales siempre que el total no supere el importe original. Los reembolsos aparecen en su lista de gastos con una etiqueta verde <strong>Reembolso</strong> y se restan de los totales del gráfico mensual y del calendario diario. Al eliminar el gasto original también se eliminan sus reembolsos vinculados. En gastos de grupo, solo el <strong>administrador del grupo</strong> o el <strong>miembro que registró originalmente</strong> el gasto puede emitir un reembolso.
       </div>
     </div>
     <div class="faq-item">
