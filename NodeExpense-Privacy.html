@@ -258,6 +258,7 @@
       <button class="lang-tab" onclick="switchLang('zh-hans', this)">简体中文</button>
       <button class="lang-tab" onclick="switchLang('zh-hant', this)">繁體中文</button>
       <button class="lang-tab" onclick="switchLang('ja', this)">日本語</button>
+      <button class="lang-tab" onclick="switchLang('fr', this)">Français</button>
     </div>
   </div>
 </header>
@@ -1045,6 +1046,136 @@
   </div>
 </div>
 
+<!-- ========== FRENCH ========== -->
+<div class="lang-content" id="lang-fr">
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+
+  <h2><span class="section-number">1</span>Aperçu</h2>
+  <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
+
+  <h2><span class="section-number">2</span>Données que nous collectons</h2>
+  <div class="data-grid">
+    <div class="data-card">
+      <div class="card-label">Fournies par vous</div>
+      <ul>
+        <li>Enregistrements de dépenses (montants, notes, catégories)</li>
+        <li>Données de groupe (nom, membres, paramètres)</li>
+        <li>Dépenses et remboursements de groupe</li>
+        <li>Nom d'affichage</li>
+        <li>Identifiants de paiement optionnels (Venmo, Cash App, PayPal.me)</li>
+        <li>Données de localisation optionnelles</li>
+        <li>Accès au calendrier sélectionné</li>
+      </ul>
+    </div>
+    <div class="data-card">
+      <div class="card-label">Collectées automatiquement</div>
+      <ul>
+        <li>Analyses d'utilisation anonymes (Firebase)</li>
+        <li>Identifiant d'appareil anonyme</li>
+        <li>Journaux de plantage et diagnostics</li>
+        <li>Informations de performances de l'appareil et de l'app</li>
+        <li>Jetons de notification push (lorsqu'activés)</li>
+      </ul>
+    </div>
+  </div>
+  <p>Les données collectées automatiquement sont utilisées uniquement pour améliorer la stabilité, les performances et l'expérience utilisateur.</p>
+
+  <h3>Abonnements &amp; paiements</h3>
+  <p>Les achats et abonnements sont traités par Apple et RevenueCat. Nous ne recevons pas vos données de carte de crédit ni vos informations de paiement. RevenueCat stocke des identifiants d'abonné anonymes pour gérer votre statut d'abonnement, l'accès « Lifetime » et la période d'essai gratuite. Ces données sont conservées le temps nécessaire à la vérification de l'accès aux fonctionnalités PRO après une réinstallation et sont traitées indépendamment de vos données cloud de dépenses de groupe.</p>
+
+  <h2><span class="section-number">3</span>Services tiers</h2>
+  <table class="service-table">
+    <thead><tr><th>Service</th><th>Finalité</th></tr></thead>
+    <tbody>
+      <tr><td><strong>RevenueCat</strong></td><td>Gestion des abonnements et achats intégrés, suivi de la période d'essai gratuite</td></tr>
+      <tr><td><strong>Google AdMob</strong></td><td>Publicités bannière, avec récompense et interstitielles</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>Analyses d'utilisation anonymes</td></tr>
+      <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisation des données de groupe (dépenses, membres, remboursements, demandes de suppression)</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Identification d'utilisateur anonyme pour la continuité de l'abonnement</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe et la livraison de notifications push</td></tr>
+      <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notifications push pour l'activité de groupe</td></tr>
+    </tbody>
+  </table>
+  <div class="highlight-box">Firebase est utilisé uniquement comme couche de synchronisation pour les fonctionnalités liées aux groupes. Les données de dépenses personnelles (hors groupe) ne sont <strong>jamais</strong> téléversées vers des services cloud.</div>
+
+  <h2><span class="section-number">4</span>Publicités</h2>
+  <p>Node Expense est soutenu par des publicités pour les utilisateurs du niveau gratuit. Celles-ci peuvent inclure des bannières, des publicités interstitielles lors de l'atteinte des limites mensuelles, ou des publicités avec récompense optionnelles pour débloquer des emplacements de dépenses supplémentaires.</p>
+  <p>Pour offrir une expérience plus personnalisée, nous pouvons vous demander l'autorisation de suivre votre activité. Si vous choisissez de ne pas être suivi, vous verrez toujours le même nombre de publicités, mais elles peuvent être moins pertinentes. Vos données financières restent privées et ne sont <strong>jamais</strong> partagées avec des annonceurs.</p>
+
+  <h2><span class="section-number">5</span>Données de localisation</h2>
+  <p>Les données de localisation sont optionnelles et ne sont collectées que si vous les activez explicitement dans les Réglages. Lorsqu'elles sont activées, votre position est enregistrée avec les nouvelles dépenses. Les données de localisation sont stockées localement sur votre appareil et ne sont pas téléversées vers des services cloud. Vous pouvez désactiver l'accès à la localisation à tout moment dans les Réglages iOS.</p>
+
+  <h2><span class="section-number">6</span>Accès au calendrier</h2>
+  <p>Node Expense n'accède qu'aux calendriers que vous sélectionnez. L'accès au calendrier est utilisé uniquement pour afficher et synchroniser les entrées de dépenses en tant qu'événements de calendrier. Les données du calendrier ne sont jamais partagées avec des tiers.</p>
+
+  <h2><span class="section-number">7</span>Stockage, conservation &amp; chiffrement des données</h2>
+  <h3>7.1 Stockage sur l'appareil</h3>
+  <p>Les données suivantes sont stockées localement à l'aide de SwiftData (le framework de stockage local sécurisé d'Apple) :</p>
+  <ul>
+    <li>Enregistrements de dépenses personnelles (hors groupe)</li>
+    <li>Paramètres et préférences de l'app</li>
+    <li>Copies locales des données de groupe pour un accès hors ligne</li>
+    <li>Dépenses de groupe en cache pour une consultation hors ligne</li>
+  </ul>
+  <p>Les données de dépenses personnelles ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés sont conservées localement avec un marqueur « groupe supprimé ».</p>
+
+  <h3>7.2 Stockage cloud pour les fonctionnalités de groupe</h3>
+  <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore :</p>
+  <ul>
+    <li>Documents de groupe (nom, description, icône, membres, autorisations, code de partage)</li>
+    <li>Dépenses de groupe (montant, catégorie, note, date, localisation si activée, identité du payeur)</li>
+    <li>Remboursements de groupe (enregistrements de paiement entre membres)</li>
+    <li>Demandes de suppression de groupe et votes des membres</li>
+    <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
+    <li>Jetons de notification push (FCM)</li>
+    <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App, PayPal.me)</li>
+  </ul>
+  <div class="highlight-box">Les identifiants de paiement sont <strong>uniquement des noms d'utilisateur publics</strong> (par ex. votre <code>@venmo</code> ou <code>$cashtag</code>), fournis par vous pour que les membres du groupe puissent appuyer pour ouvrir l'application Venmo, Cash App ou PayPal et vous payer directement. Ces identifiants ne sont <strong>pas</strong> des identifiants de paiement, des coordonnées bancaires ou des numéros de compte, et aucun argent ne transite par Node Expense — tous les paiements s'effectuent dans l'application tierce que vous choisissez d'ouvrir.</div>
+
+  <h3>7.3 Chiffrement &amp; sauvegardes</h3>
+  <ul>
+    <li>Les utilisateurs ayant accès aux fonctionnalités peuvent activer des sauvegardes chiffrées à l'aide du chiffrement AES-256-GCM</li>
+    <li>Vous contrôlez la durée de conservation des enregistrements de dépenses (toujours ou un nombre limité d'années)</li>
+    <li>Les fichiers de sauvegarde sont exportés vers un emplacement de votre choix (iCloud Drive, Sur mon appareil ou d'autres emplacements de fichiers iOS)</li>
+    <li>Les clés de chiffrement des sauvegardes sont stockées exclusivement dans votre trousseau iCloud, ne sont jamais transmises à nos serveurs et ne sont pas accessibles par nous en tant que développeurs</li>
+  </ul>
+
+  <h2><span class="section-number">8</span>Migration des données</h2>
+  <p>Les utilisateurs ayant accès aux fonctionnalités (abonnement PRO ou essai gratuit actif) peuvent exporter leurs données en JSON, CSV ou PDF, et importer des données au format JSON. Node Expense n'a pas accès à vos fichiers exportés. Les fichiers exportés sont enregistrés à un emplacement de votre choix.</p>
+
+  <h2><span class="section-number">9</span>Suppression des données</h2>
+  <ul>
+    <li>Supprimer des dépenses personnelles individuelles ou toutes depuis Node Expense</li>
+    <li>Quitter ou demander la suppression d'un groupe — les données du groupe sont supprimées de Firebase lorsque tous les membres sont d'accord</li>
+    <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre appareil ; elles ne sont pas retéléversées</li>
+    <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre appareil</li>
+  </ul>
+  <p>Remarque : Les données de groupe Firebase peuvent persister jusqu'à ce que le groupe soit formellement supprimé via le processus de suppression intégré à l'app.</p>
+
+  <h2><span class="section-number">10</span>Confidentialité des enfants</h2>
+  <p>Node Expense n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles auprès d'enfants de moins de 13 ans. Si vous pensez qu'un enfant a fourni des informations personnelles, veuillez nous contacter.</p>
+
+  <h2><span class="section-number">11</span>Vos droits</h2>
+  <ul>
+    <li>Désactiver l'accès à la localisation dans les Réglages iOS</li>
+    <li>Révoquer l'accès au calendrier dans les Réglages iOS</li>
+    <li>Supprimer vos données de dépenses locales depuis Node Expense</li>
+    <li>Exporter vos données avant de les supprimer</li>
+    <li>Demander la suppression du groupe (supprime les données du groupe de Firebase pour tous les membres)</li>
+    <li>Annuler votre abonnement à tout moment via les paramètres de l'App Store Apple</li>
+    <li>Arrêter d'utiliser les sauvegardes ou les exportations chiffrées à tout moment</li>
+  </ul>
+
+  <h2><span class="section-number">12</span>Modifications de cette politique</h2>
+  <p>Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre. Les modifications seront reflétées par la date de « Dernière mise à jour » en haut de ce document. L'utilisation continue de Node Expense après les modifications constitue une acceptation de la politique mise à jour.</p>
+
+  <h2><span class="section-number">13</span>Contact</h2>
+  <div class="contact-box">
+    <p style="margin:0">Pour toute question concernant cette Politique de Confidentialité ou vos données :<br>
+    <strong>E-mail :</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -1052,7 +1183,7 @@
 </footer>
 
 <script>
-  const titles = { en: 'Privacy Policy', de: 'Datenschutzerklärung', es: 'Política de Privacidad', 'zh-hans': '隐私政策', 'zh-hant': '隱私權政策', ja: 'プライバシーポリシー' };
+  const titles = { en: 'Privacy Policy', de: 'Datenschutzerklärung', es: 'Política de Privacidad', 'zh-hans': '隐私政策', 'zh-hant': '隱私權政策', ja: 'プライバシーポリシー', fr: 'Politique de Confidentialité' };
 
   function switchLang(lang, btn) {
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
@@ -1060,7 +1191,7 @@
     document.getElementById('lang-' + lang).classList.add('active');
     btn.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja' };
+    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja', fr: 'fr' };
     document.documentElement.lang = htmlLangMap[lang] || 'en';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -1076,6 +1207,8 @@
     document.querySelector('[onclick*="\'de\'"]').click();
   } else if (browserLang.toLowerCase().startsWith('es')) {
     document.querySelector('[onclick*="\'es\'"]').click();
+  } else if (browserLang.toLowerCase().startsWith('fr')) {
+    document.querySelector('[onclick*="\'fr\'"]').click();
   }
 </script>
 </body>
