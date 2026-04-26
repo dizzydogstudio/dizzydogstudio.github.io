@@ -215,6 +215,7 @@
       <button class="lang-tab" onclick="switchLang('zh-hans')">简体中文</button>
       <button class="lang-tab" onclick="switchLang('zh-hant')">繁體中文</button>
       <button class="lang-tab" onclick="switchLang('ja')">日本語</button>
+      <button class="lang-tab" onclick="switchLang('fr')">Français</button>
     </div>
   </div>
 </header>
@@ -986,6 +987,133 @@
   </div>
 </div>
 
+<!-- ========== FRENCH ========== -->
+<div class="lang-content" id="lang-fr">
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+
+  <h2><span class="section-number">1</span>Acceptation des Conditions</h2>
+  <p>En téléchargeant, installant ou utilisant Node Expense : Track Together, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'acceptez pas, n'utilisez pas l'application.</p>
+
+  <h2><span class="section-number">2</span>Description du Service</h2>
+  <p>Node Expense : Track Together est une application de suivi des dépenses qui vous permet de :</p>
+  <ul>
+    <li>Suivre vos dépenses personnelles individuelles</li>
+    <li>Suivre et partager des dépenses de groupe avec d'autres membres en temps réel</li>
+    <li>Enregistrer optionnellement votre localisation avec les dépenses</li>
+    <li>Synchroniser les dépenses avec des calendriers iOS sélectionnés</li>
+    <li>Sauvegarder et chiffrer optionnellement vos données (fonctionnalité d'abonnement PRO)</li>
+    <li>Exporter les données de dépenses en JSON, CSV ou PDF, et importer des données au format JSON (fonctionnalité d'abonnement PRO)</li>
+    <li>Scanner des reçus avec la caméra de l'appareil pour remplir automatiquement les détails de la dépense</li>
+    <li>Créer et gérer des catégories de dépenses personnalisées avec des budgets mensuels par catégorie</li>
+    <li>Lancer des applications de paiement entre particuliers directement depuis les remboursements de groupe via des liens profonds vers Venmo, Cash App et PayPal (disponibilité variable selon la région — voir §9)</li>
+  </ul>
+  <p>Les données liées aux groupes sont synchronisées avec Firebase afin que tous les membres du groupe puissent consulter les mêmes informations en temps réel. Les données de dépenses personnelles restent sur votre appareil à moins que vous ne choisissiez de les exporter ou de les sauvegarder.</p>
+
+  <h2><span class="section-number">3</span>Fonctionnalités Gratuites &amp; Payantes</h2>
+  <h3>Plan Gratuit</h3>
+  <ul>
+    <li>15 emplacements mensuels pour les dépenses individuelles</li>
+    <li>Jusqu'à 5 emplacements supplémentaires par mois en regardant des publicités avec récompense</li>
+    <li>Synchronisation manuelle du calendrier pour les 7 derniers jours</li>
+  </ul>
+  <h3>Essai Gratuit</h3>
+  <ul>
+    <li>Essai gratuit de 14 jours donnant accès complet aux Dépenses de Groupe, à la Conservation des Données et à la Migration des Données</li>
+    <li>L'accès à l'essai est suivi par Apple ID et ne peut pas être redémarré après expiration</li>
+  </ul>
+  <h3>Abonnement PRO</h3>
+  <p>Les abonnés PRO bénéficient d'un accès illimité à :</p>
+  <ul>
+    <li>Suivi illimité des dépenses individuelles (sans limite mensuelle)</li>
+    <li>Dépenses de Groupe — créer et rejoindre des groupes, partager les factures, enregistrer les remboursements</li>
+    <li>Conservation des Données — politiques de rétention automatiques avec sauvegardes chiffrées AES-256-GCM optionnelles</li>
+    <li>Migration des Données — exporter les données en JSON, CSV ou PDF, et importer des données au format JSON</li>
+    <li>Budgets par Catégorie — définir des limites de dépenses mensuelles par catégorie personnalisée avec des alertes de seuil</li>
+    <li>Aucune publicité bannière, avec récompense ou interstitielle</li>
+  </ul>
+  <p>Les abonnements se renouvellent automatiquement sauf annulation via les Paramètres de l'App Store Apple au moins 24 heures avant la fin de la période de facturation en cours.</p>
+  <h3>Abonnement à Vie</h3>
+  <p>Le pass « À Vie » donne accès aux fonctionnalités PRO aussi longtemps que l'application est activement prise en charge et distribuée par le Développeur. Il ne constitue pas une garantie que l'application ou ses services de synchronisation cloud (par ex., Firebase, RevenueCat) seront disponibles indéfiniment. La période « À Vie » prend fin si l'application est abandonnée, retirée de l'App Store, ou si le Développeur cesse ses activités.</p>
+  <p><strong>Remboursements &amp; Caractère Définitif :</strong> Les achats à vie sont des paiements uniques. Aucun remboursement au prorata ne sera proposé si l'application est abandonnée ou si certaines intégrations tierces deviennent indisponibles en raison de changements de plateforme.</p>
+
+  <h2><span class="section-number">4</span>Fonctionnalités de Groupe &amp; Suppression</h2>
+  <p>Les dépenses de groupe sont synchronisées en temps réel sur les appareils de tous les membres via Firebase. En participant à un groupe, vous comprenez que :</p>
+  <ul>
+    <li>Votre nom d'affichage et vos données de dépenses sont visibles par tous les membres du groupe</li>
+    <li>Tout membre peut ajouter des dépenses au groupe (sous réserve des autorisations définies par l'administrateur du groupe)</li>
+    <li>La suppression d'un groupe nécessite le consentement unanime de tous les membres dans un délai de vote de 7 jours</li>
+    <li>Les groupes inactifs depuis plus de 3 mois peuvent être supprimés automatiquement si une demande de suppression est soumise et qu'aucun membre ne refuse dans les 7 jours</li>
+    <li>L'administrateur du groupe peut supprimer des membres ou transférer des données à tout moment</li>
+    <li>Les dépenses que vous choisissez de conserver après la suppression du groupe restent localement sur votre appareil, marquées comme provenant d'un groupe supprimé</li>
+  </ul>
+
+  <h2><span class="section-number">5</span>Publicités</h2>
+  <p>Le plan gratuit de l'application peut afficher :</p>
+  <ul>
+    <li><strong>Publicités bannière</strong> — unités publicitaires rectangulaires statiques ou animées en bas de l'écran</li>
+    <li><strong>Publicités avec récompense</strong> — optionnelles ; les regarder débloque jusqu'à 5 emplacements mensuels supplémentaires</li>
+    <li><strong>Publicités interstitielles</strong> — affichées lorsque vous atteignez votre limite mensuelle de dépenses (une fois par session d'application)</li>
+  </ul>
+  <p>Regarder des publicités avec récompense est toujours optionnel. Les fournisseurs de publicités peuvent collecter des identifiants anonymes comme décrit dans notre Politique de Confidentialité.</p>
+
+  <h2><span class="section-number">6</span>Responsabilité de l'Utilisateur</h2>
+  <p>Vous êtes responsable de :</p>
+  <ul>
+    <li>L'exactitude de vos données de dépenses</li>
+    <li>Votre nom d'affichage et la manière dont il apparaît aux autres membres du groupe</li>
+    <li>La protection de l'accès à votre appareil et à l'application</li>
+    <li>S'assurer que les membres du groupe que vous invitez consentent au traitement de leurs données comme décrit dans notre Politique de Confidentialité</li>
+    <li>Maintenir l'accès au trousseau iCloud lié à votre identifiant Apple — les sauvegardes chiffrées ne peuvent pas être récupérées si l'accès au trousseau iCloud est perdu</li>
+    <li>L'exactitude des identifiants de paiement ou noms d'utilisateur que vous saisissez pour les applications de paiement entre particuliers (par ex., Venmo, Cash App, PayPal). La saisie d'un identifiant incorrect peut entraîner l'envoi d'argent à un destinataire non souhaité. Node Expense n'a aucune capacité à annuler ou intercepter de telles transactions, et toute responsabilité pour les paiements mal dirigés vous incombe entièrement</li>
+  </ul>
+  <p>Nous ne sommes pas responsables de la perte de données due à la perte d'appareil, à la suppression accidentelle, à la perte de clé de chiffrement ou à une erreur de l'utilisateur.</p>
+
+  <h2><span class="section-number">7</span>Propriété des Données</h2>
+  <p>Vous conservez la pleine propriété de vos données de dépenses. Nous ne revendiquons pas la propriété de vos enregistrements de dépenses personnelles, données de groupe ou fichiers exportés. En utilisant les fonctionnalités de groupe, vous accordez aux autres membres du groupe la possibilité de consulter les données de dépenses partagées dans l'application.</p>
+
+  <h2><span class="section-number">8</span>Disponibilité</h2>
+  <p>Nous nous efforçons de maintenir l'application et ses services cloud disponibles, mais ne garantissons pas un service ininterrompu. La disponibilité de Firebase et RevenueCat peut être affectée par des pannes de tiers hors de notre contrôle. Les fonctionnalités de synchronisation de groupe nécessitent une connexion Internet active.</p>
+  <h3>Cycle de Vie du Service</h3>
+  <p>Nous nous réservons le droit de modifier ou d'abandonner, temporairement ou définitivement, l'application ou l'une de ses fonctionnalités avec ou sans préavis. En cas d'abandon définitif, le Développeur peut, à sa seule discrétion, fournir une mise à jour finale « locale uniquement » mais n'est pas tenu de maintenir des serveurs cloud ou une synchronisation en temps réel indéfiniment.</p>
+
+  <h2><span class="section-number">9</span>Limitation de Responsabilité</h2>
+  <p>L'application est fournie « telle quelle » sans garantie d'aucune sorte. Dans toute la mesure permise par la loi, nous ne sommes pas responsables de :</p>
+  <ul>
+    <li>Pertes financières, dépenses manquées ou inexactitudes de données</li>
+    <li>Perte de données de sauvegarde chiffrées due à des clés de chiffrement perdues ou inaccessibles</li>
+    <li>Perte de données due à des pannes de services tiers (Firebase, RevenueCat, AdMob)</li>
+    <li>Calculs de remboursement de groupe inexacts dus à des saisies de données incorrectes</li>
+    <li>Pour l'Accès à Vie : la responsabilité totale du Développeur ne dépassera pas le montant réellement payé par l'utilisateur pour ledit abonnement</li>
+  </ul>
+  <p><strong>Aucun Traitement de Paiement :</strong> Node Expense n'est pas un prestataire de services de paiement et ne transmet, ne détient ni ne traite de l'argent sous quelque forme que ce soit. La fonctionnalité de lien profond lance des applications tierces (Venmo, Cash App, PayPal) uniquement par commodité ; toutes les transactions se produisent entièrement dans ces applications et sont soumises à leurs conditions d'utilisation et politiques de confidentialité respectives. Node Expense n'assume aucune responsabilité pour tout paiement effectué via ces plateformes.</p>
+  <p><strong>Disponibilité Régionale :</strong> Venmo et Cash App sont disponibles pour les utilisateurs américains uniquement. La disponibilité de PayPal varie selon les pays. Les utilisateurs hors des États-Unis peuvent constater qu'une ou plusieurs options de paiement par lien profond ne fonctionnent pas dans leur région. Cela ne constitue pas une fausse représentation des fonctionnalités de l'application.</p>
+
+  <h2><span class="section-number">10</span>Résiliation</h2>
+  <p>Nous nous réservons le droit de suspendre ou de résilier l'accès à l'application ou à ses fonctionnalités synchronisées dans le cloud si un abus est détecté, notamment des tentatives d'accès non autorisé, le spam aux membres du groupe, ou le contournement des systèmes d'abonnement ou de publicité.</p>
+
+  <h2><span class="section-number">11</span>Modifications des Conditions</h2>
+  <p>Ces Conditions peuvent être mises à jour de temps à autre. La date de « Dernière mise à jour » reflétera tout changement. L'utilisation continue de l'application après la publication des modifications constitue votre acceptation des Conditions mises à jour.</p>
+
+  <h2><span class="section-number">12</span>Droit Applicable</h2>
+  <p>Ces Conditions sont régies par les lois de l'État de New York, États-Unis. Tout litige sera résolu devant les tribunaux de l'État de New York.</p>
+
+  <h2><span class="section-number">13</span>Arrêt du Service (Politique de Fin de Vie)</h2>
+  <p>Nous nous réservons le droit d'abandonner l'application à tout moment. En cas d'arrêt définitif :</p>
+  <ul>
+    <li><strong>Préavis :</strong> Au moins 30 jours de préavis via une notification dans l'application</li>
+    <li><strong>Accès à Vie :</strong> N'accorde l'accès que pendant la durée de disponibilité de l'application sur l'App Store</li>
+    <li><strong>Portabilité des Données :</strong> Les utilisateurs disposeront d'une fenêtre pour exporter via JSON, CSV ou PDF avant la désactivation de Firebase</li>
+    <li><strong>Aucun Remboursement :</strong> Aucun remboursement au prorata ne sera émis lors de l'arrêt</li>
+    <li><strong>Mise à Jour Finale :</strong> Nous pouvons publier une mise à jour « Local Uniquement » à notre discrétion</li>
+  </ul>
+
+  <h2><span class="section-number">14</span>Contact</h2>
+  <div class="contact-box">
+    <p style="margin:0">Pour toute question de support ou d'ordre juridique :<br>
+    <strong>E-mail :</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -999,7 +1127,8 @@
     es: 'Términos de Servicio',
     'zh-hans': '服务条款',
     'zh-hant': '服務條款',
-    ja: '利用規約'
+    ja: '利用規約',
+    fr: 'Conditions d\'Utilisation'
   };
 
   function switchLang(lang) {
@@ -1008,7 +1137,7 @@
     document.getElementById('lang-' + lang).classList.add('active');
     event.target.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja' };
+    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja', fr: 'fr' };
     document.documentElement.lang = htmlLangMap[lang] || 'en';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -1025,6 +1154,8 @@
     document.querySelector('[onclick="switchLang(\'de\')"]').click();
   } else if (browserLang.toLowerCase().startsWith('es')) {
     document.querySelector('[onclick="switchLang(\'es\')"]').click();
+  } else if (browserLang.toLowerCase().startsWith('fr')) {
+    document.querySelector('[onclick="switchLang(\'fr\')"]').click();
   }
 </script>
 </body>
