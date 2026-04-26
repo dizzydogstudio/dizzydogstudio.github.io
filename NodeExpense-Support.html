@@ -246,6 +246,7 @@
       <button class="lang-tab" onclick="switchLang('zh-hans', this)">简体中文</button>
       <button class="lang-tab" onclick="switchLang('zh-hant', this)">繁體中文</button>
       <button class="lang-tab" onclick="switchLang('ja', this)">日本語</button>
+      <button class="lang-tab" onclick="switchLang('fr', this)">Français</button>
     </div>
   </div>
 </header>
@@ -1407,6 +1408,204 @@
   </div>
 </div>
 
+
+<!-- ========== FRENCH ========== -->
+<div class="lang-content" id="lang-fr">
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>Nous contacter</h2>
+      <p>Pour toute aide, question ou commentaire, écrivez-nous à<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      Nous répondons généralement sous 1 à 2 jours ouvrables.</p>
+    </div>
+  </div>
+
+  <h2>Questions fréquentes</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment créer un groupe ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur l'onglet <strong>Groupes</strong> <span class="arrow">→</span> appuyez sur le bouton <strong>+</strong> en haut à droite <span class="arrow">→</span> appuyez sur <strong>Créer un groupe</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment inviter des amis dans un groupe ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Membres</strong> <span class="arrow">→</span> appuyez sur <strong>Partager le lien d'invitation</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment enregistrer un paiement ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Dépenses</strong> <span class="arrow">→</span> appuyez sur <strong>Enregistrer un paiement</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment configurer Venmo, Cash App ou PayPal.Me pour régler les dettes ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> faites défiler jusqu'à <strong>Coordonnées de paiement</strong>. Saisissez uniquement votre nom d'utilisateur (sans <code>@</code> ni <code>$</code> au début) :
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — votre nom d'utilisateur (ex. <code>alice</code>). Comptes américains uniquement.</li>
+          <li><strong>Cash App</strong> — votre $cashtag (ex. <code>bob</code>). Comptes américains uniquement.</li>
+          <li><strong>PayPal.Me</strong> — le nom de votre lien PayPal.Me (ex. <code>alice</code>). Disponible dans le monde entier.</li>
+        </ul>
+        Laissez un champ vide pour ignorer cette méthode. Vos identifiants sont partagés de façon privée uniquement avec les membres de vos groupes pour qu'ils puissent vous rembourser en un seul geste — ils ne sont jamais partagés publiquement ni avec des annonceurs.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment rembourser quelqu'un via Venmo, Cash App ou PayPal ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Ouvrez le groupe <span class="arrow">→</span> onglet <strong>Soldes</strong> <span class="arrow">→</span> appuyez sur le bouton <strong>Payer</strong> à côté de la dette concernée <span class="arrow">→</span> choisissez <strong>Venmo</strong>, <strong>Cash App</strong> ou <strong>PayPal.Me</strong>. L'application sélectionnée s'ouvre avec le montant et la note préremplis — confirmez et envoyez le paiement dans cette application. Revenez ensuite dans Node Expense et appuyez sur <strong>Enregistrer un paiement</strong> pour consigner le règlement afin que les deux parties puissent le marquer comme confirmé.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Le bouton <strong>Payer</strong> n'apparaît que lorsque le destinataire a enregistré au moins une coordonnée de paiement. Les montants ne sont jamais transférés automatiquement — tous les paiements s'effectuent dans l'application tierce.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Le bouton Venmo, Cash App ou PayPal ne fonctionne pas — que vérifier ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Node Expense ouvre Venmo, Cash App et PayPal via des liens profonds directement dans ces applications. Si le bouton ne fait rien ou affiche une erreur, la cause la plus fréquente est que l'application est <strong>masquée sur votre iPhone</strong>. Pour y remédier :
+        <ol style="margin:8px 0 8px 18px; padding:0;">
+          <li>Ouvrez l'application <strong>Réglages</strong> de l'iPhone <span class="arrow">→</span> appuyez sur <strong>Temps d'écran</strong> <span class="arrow">→</span> <strong>Restrictions de contenu et de confidentialité</strong> <span class="arrow">→</span> <strong>Applications autorisées</strong>.</li>
+          <li>Assurez-vous que l'application de paiement (Venmo, Cash App ou PayPal) est activée.</li>
+          <li>Si vous avez utilisé la Bibliothèque d'apps pour masquer l'application depuis l'écran d'accueil, ouvrez la Bibliothèque d'apps, maintenez l'icône de l'app appuyée et choisissez <strong>Ajouter à l'écran d'accueil</strong>.</li>
+        </ol>
+        Une fois l'application visible et autorisée, revenez dans Node Expense et réessayez le bouton de paiement.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense ne transfère aucun argent lui-même — il ouvre simplement l'application de paiement avec le montant prérempli. L'application doit être installée <em>et</em> accessible sur votre appareil pour que le lien profond fonctionne.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment supprimer un groupe ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Réglages</strong> <span class="arrow">→</span> appuyez sur <strong>Supprimer le groupe</strong> (admin uniquement).
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment modifier, supprimer ou rembourser une dépense ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Sur n'importe quelle ligne de dépense dans la liste :
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Glissez vers la droite</strong> pour afficher <strong>Modifier</strong> (bleu) et, si la dépense est remboursable, <strong>Rembourser</strong> (vert).</li>
+          <li><strong>Glissez vers la gauche</strong> pour afficher <strong>Supprimer</strong> (rouge).</li>
+        </ul>
+        Qui peut effectuer ces actions :
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Dépense personnelle</strong> — vous pouvez modifier, supprimer et rembourser toute dépense de votre propre liste.</li>
+          <li><strong>Dépense de groupe</strong> — seuls l'<strong>admin du groupe</strong> ou le membre qui a <strong>enregistré la dépense à l'origine</strong> peuvent la modifier, la supprimer ou la rembourser. Les autres membres voient la ligne mais n'ont pas accès aux options de glissement.</li>
+        </ul>
+        L'action <strong>Rembourser</strong> est masquée sur les remboursements eux-mêmes et sur les dépenses déjà entièrement remboursées.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment enregistrer un remboursement pour une dépense ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>Glissez vers la droite</strong> sur la ligne de dépense et appuyez sur <strong>Rembourser</strong> (le plus rapide), ou appuyez sur la dépense pour l'ouvrir et faites défiler jusqu'à <strong>Enregistrer un remboursement</strong> <span class="arrow">→</span> saisissez le montant du remboursement (par défaut, le montant total remboursable restant) <span class="arrow">→</span> ajustez éventuellement la date et ajoutez une note <span class="arrow">→</span> appuyez sur <strong>Enregistrer un remboursement</strong> pour confirmer. Le remboursement hérite de la répartition, des participants, de la devise et de la catégorie de la dépense originale, et est crédité à la personne qui a payé l'original. Vous pouvez enregistrer plusieurs remboursements partiels tant que le total ne dépasse pas le montant original. Les remboursements apparaissent dans votre liste de dépenses avec un badge <strong>Remboursement</strong> vert et sont déduits des totaux du graphique mensuel et du calendrier quotidien. La suppression de la dépense originale supprime également les remboursements associés. Pour les dépenses de groupe, seuls l'<strong>admin du groupe</strong> ou le <strong>membre ayant enregistré la dépense</strong> peuvent émettre un remboursement.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Puis-je modifier un remboursement après sa création ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Les modifications possibles dépendent du fait que le remboursement est lié à une dépense <strong>personnelle</strong> ou de <strong>groupe</strong>.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Remboursement d'une dépense personnelle</strong> — appuyez sur le remboursement <span class="arrow">→</span> vous pouvez modifier le <strong>montant</strong>, la <strong>date</strong>, la <strong>note</strong> et la <strong>catégorie</strong>. Le nouveau montant est plafonné au montant remboursable restant de la dépense originale (l'indication sous le champ de montant affiche le maximum saisissable).</li>
+          <li><strong>Remboursement d'une dépense de groupe</strong> — seuls la <strong>date</strong>, la <strong>note</strong> et la <strong>catégorie</strong> peuvent être modifiées. Le montant, la devise et la répartition sont verrouillés car leur modification nécessiterait de recalculer la part proportionnelle de chaque participant. Pour changer le montant, <strong>supprimez le remboursement et enregistrez-en un nouveau</strong>.</li>
+        </ul>
+        La devise reste verrouillée pour tout remboursement — un remboursement dans une devise différente de la dépense originale n'a aucun sens.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment modifier la devise par défaut ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Apparence</strong> <span class="arrow">→</span> <strong>Devise par défaut</strong>. La devise sélectionnée sera utilisée par défaut lors de l'ajout de nouvelles dépenses.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment créer une catégorie personnalisée ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Gérer les catégories</strong> <span class="arrow">→</span> appuyez sur le bouton <strong>+</strong>. Vous pouvez choisir un nom, une icône, une couleur et un emoji pour votre nouvelle catégorie.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment définir un budget mensuel pour une catégorie ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Gérer les catégories</strong> <span class="arrow">→</span> appuyez sur l'<strong>icône de graphique</strong> à côté d'une catégorie. Activez <strong>Définir un budget mensuel</strong> et saisissez votre plafond de dépenses. Le budget utilise toujours votre devise par défaut. Une fois défini, une barre de progression apparaît dans la vue du graphique mensuel et vous recevrez une notification lorsque vous approcherez ou dépasserez la limite.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment scanner un reçu ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur le bouton <strong>+</strong> pour ajouter une nouvelle dépense <span class="arrow">→</span> appuyez sur l'<strong>icône appareil photo</strong> à côté du champ de montant <span class="arrow">→</span> pointez votre caméra vers le reçu. Les montants détectés apparaissent en bas — appuyez sur l'un d'eux pour remplir automatiquement le champ de montant.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment exporter mes dépenses ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Exporter les données</strong>. Choisissez entre <strong>JSON</strong> (pour la réimportation), <strong>CSV</strong> (pour les tableurs) ou <strong>PDF</strong> (pour l'impression ou le partage). L'exportation nécessite un abonnement PRO ou un essai gratuit actif.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Pourquoi le graphique « Tendance des dépenses par catégorie » n'apparaît-il pas dans la vue Année ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Le graphique linéaire <strong>Tendance des dépenses par catégorie</strong> de la vue Année nécessite une seule devise pour être tracé, car additionner des montants dans différentes devises n'a pas de sens. Il apparaît lorsque les deux conditions suivantes sont réunies :
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>L'année sélectionnée contient au moins une dépense.</li>
+          <li>Une seule devise est utilisée — soit parce que toutes les dépenses de cette année utilisent la même devise, soit parce que vous avez sélectionné une devise spécifique dans le filtre <strong>Devise</strong> en haut de l'écran Graphiques (plutôt que <strong>Toutes</strong>).</li>
+        </ul>
+        Si l'année contient des dépenses dans plusieurs devises et que le filtre est laissé sur <strong>Toutes</strong>, le graphique reste masqué. Sélectionnez une devise dans le filtre pour voir la tendance pour cette devise.
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -1414,7 +1613,7 @@
 </footer>
 
 <script>
-  const titles = { en: 'Support', de: 'Support', es: 'Soporte', 'zh-hans': '支持', 'zh-hant': '支援', ja: 'サポート' };
+  const titles = { en: 'Support', de: 'Support', es: 'Soporte', 'zh-hans': '支持', 'zh-hant': '支援', ja: 'サポート', fr: 'Assistance' };
 
   function switchLang(lang, btn) {
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
@@ -1422,7 +1621,7 @@
     document.getElementById('lang-' + lang).classList.add('active');
     btn.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja' };
+    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja', fr: 'fr' };
     document.documentElement.lang = htmlLangMap[lang] || 'en';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -1443,6 +1642,8 @@
     document.querySelector('[onclick*="\'de\'"]').click();
   } else if (browserLang.toLowerCase().startsWith('es')) {
     document.querySelector('[onclick*="\'es\'"]').click();
+  } else if (browserLang.toLowerCase().startsWith('fr')) {
+    document.querySelector('[onclick*="\'fr\'"]').click();
   }
 </script>
 </body>
