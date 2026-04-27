@@ -247,6 +247,7 @@
       <button class="lang-tab" onclick="switchLang('de', this)">Deutsch</button>
       <button class="lang-tab" onclick="switchLang('es', this)">Español</button>
       <button class="lang-tab" onclick="switchLang('fr', this)">Français</button>
+      <button class="lang-tab" onclick="switchLang('ko', this)">한국어</button>
     </div>
   </div>
 </header>
@@ -1613,6 +1614,203 @@
   <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   
+
+<!-- ========== KOREAN ========== -->
+<div class="lang-content" id="lang-ko">
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>문의하기</h2>
+      <p>도움말, 질문 또는 피드백은 이메일로 연락해 주세요<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      보통 1~2 영업일 내에 답변 드립니다.</p>
+    </div>
+  </div>
+
+  <h2>자주 묻는 질문</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        그룹을 어떻게 만드나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>그룹</strong> 탭을 탭하세요 <span class="arrow">→</span> 오른쪽 상단의 <strong>+</strong> 버튼을 탭하세요 <span class="arrow">→</span> <strong>그룹 만들기</strong>를 탭하세요.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        그룹에 친구를 초대하려면 어떻게 하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        그룹을 열어주세요 <span class="arrow">→</span> <strong>멤버</strong> 탭을 탭하세요 <span class="arrow">→</span> <strong>초대 링크 공유</strong>를 탭하세요.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        결제를 어떻게 기록하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭을 탭하세요 <span class="arrow">→</span> <strong>결제 기록</strong>을 탭하세요.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        정산을 위해 Venmo, Cash App 또는 PayPal.Me를 어떻게 설정하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>결제 계정</strong>으로 스크롤하세요. 사용자명만 입력하세요 (<code>@</code> 또는 <code>$</code> 없이):
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — 사용자명 (예: <code>alice</code>). 미국 계정만 가능.</li>
+          <li><strong>Cash App</strong> — $cashtag (예: <code>bob</code>). 미국 계정만 가능.</li>
+          <li><strong>PayPal.Me</strong> — PayPal.Me 링크 이름 (예: <code>alice</code>). 전 세계 사용 가능.</li>
+        </ul>
+        비워두면 해당 방법을 건너뜁니다. 귀하의 계정은 그룹 멤버들만 볼 수 있으며, 한 번의 탭으로 송금할 수 있도록 비공개로 공유됩니다 — 공개되거나 광고주와 공유되지 않습니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo, Cash App 또는 PayPal로 상대방에게 송금하려면 어떻게 하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        그룹을 열어주세요 <span class="arrow">→</span> <strong>잔액</strong> 탭 <span class="arrow">→</span> 갚아야 할 금액 옆의 <strong>결제</strong> 버튼을 탭하세요 <span class="arrow">→</span> <strong>Venmo</strong>, <strong>Cash App</strong> 또는 <strong>PayPal.Me</strong>를 선택하세요. 금액과 메모가 미리 채워진 상태로 선택한 앱이 열립니다 — 해당 앱에서 확인하고 결제를 보내세요. 그런 다음 Node Expense로 돌아와 <strong>결제 기록</strong>을 탭하여 정산을 기록하면 양쪽 모두 확인됨으로 표시할 수 있습니다.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>결제</strong> 버튼은 수신자가 결제 계정을 하나 이상 등록한 경우에만 표시됩니다. 금액이 자동으로 이체되지 않으며 — 모든 결제는 타사 앱 내에서 이루어집니다.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo, Cash App 또는 PayPal 버튼이 작동하지 않을 때 무엇을 확인해야 하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Node Expense는 딥링크를 통해 Venmo, Cash App 및 PayPal 앱을 직접 실행합니다. 버튼을 탭해도 아무 반응이 없거나 오류가 표시되면, 가장 흔한 원인은 앱이 iPhone에서 <strong>숨겨져 있는</strong> 것입니다. 해결 방법:
+        <ol style="margin:8px 0 8px 18px; padding:0;">
+          <li>iPhone <strong>설정</strong> 앱을 열어주세요 <span class="arrow">→</span> <strong>스크린 타임</strong>을 탭하세요 <span class="arrow">→</span> <strong>콘텐츠 및 개인정보 보호 제한</strong> <span class="arrow">→</span> <strong>허용된 앱</strong>.</li>
+          <li>결제 앱 (Venmo, Cash App 또는 PayPal)이 켜져 있는지 확인하세요.</li>
+          <li>앱 보관함을 사용하여 홈 화면에서 앱을 숨긴 경우, 앱 보관함을 열고 앱 아이콘을 길게 누른 다음 <strong>홈 화면에 추가</strong>를 선택하세요.</li>
+        </ol>
+        앱이 표시되고 허용된 후 Node Expense로 돌아와 결제 버튼을 다시 시도해 보세요.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 자체는 어떤 금액도 이동하지 않습니다 — 단순히 금액이 미리 채워진 결제 앱을 여는 것입니다. 딥링크가 작동하려면 앱이 설치되어 있고 기기에서 <em>접근 가능</em>한 상태여야 합니다.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        그룹을 어떻게 삭제하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭을 탭하세요 <span class="arrow">→</span> <strong>그룹 삭제</strong>를 탭하세요 (관리자만 가능).
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        지출을 편집, 삭제 또는 환불하려면 어떻게 하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        목록의 지출 행에서:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>오른쪽으로 스와이프</strong>하면 <strong>편집</strong> (파란색)과 지출이 환불 가능한 경우 <strong>환불</strong> (녹색)이 나타납니다.</li>
+          <li><strong>왼쪽으로 스와이프</strong>하면 <strong>삭제</strong> (빨간색)가 나타납니다.</li>
+        </ul>
+        대상:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>개인 지출</strong> — 자신의 목록에 있는 모든 지출을 편집, 삭제 및 환불할 수 있습니다.</li>
+          <li><strong>그룹 지출</strong> — <strong>그룹 관리자</strong> 또는 지출을 <strong>처음 기록한</strong> 멤버만 편집, 삭제 또는 환불할 수 있습니다. 다른 멤버는 행을 볼 수 있지만 스와이프 옵션은 보이지 않습니다.</li>
+        </ul>
+        <strong>환불</strong> 동작은 환불 자체와 이미 전액 환불된 지출에서는 숨겨집니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        지출에 대한 환불을 어떻게 기록하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        지출 행을 <strong>오른쪽으로 스와이프</strong>하고 <strong>환불</strong>을 탭하거나 (가장 빠른 방법), 지출을 탭하여 열고 아래로 스크롤하여 <strong>환불 기록</strong> <span class="arrow">→</span> 환불 금액 입력 (기본값은 남은 환불 가능 금액) <span class="arrow">→</span> 선택적으로 날짜 조정 및 메모 추가 <span class="arrow">→</span> <strong>환불 기록</strong>을 탭하여 확인합니다. 환불은 원래 지출의 분할, 참가자, 통화 및 카테고리를 상속받으며, 원래 결제한 사람에게 크레딧이 부여됩니다. 총액이 원래 금액을 초과하지 않는 한 여러 부분 환불을 기록할 수 있습니다. 환불은 녹색 <strong>환불</strong> 배지와 함께 지출 목록에 표시되며 월별 차트 및 일별 캘린더 합계에서 차감됩니다. 원래 지출을 삭제하면 연결된 환불도 제거됩니다. 그룹 지출의 경우 <strong>그룹 관리자</strong> 또는 <strong>원래 기록자</strong>만 환불을 발행할 수 있습니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        환불을 만든 후 편집할 수 있나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        편집 가능 여부는 환불이 <strong>개인</strong> 지출과 <strong>그룹</strong> 지출 중 어느 것에 연결되어 있는지에 따라 다릅니다.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>개인 지출 환불</strong> — 환불을 탭하세요 <span class="arrow">→</span> <strong>금액</strong>, <strong>날짜</strong>, <strong>메모</strong> 및 <strong>카테고리</strong>를 편집할 수 있습니다. 새 금액은 원래의 남은 환불 가능 금액으로 제한됩니다.</li>
+          <li><strong>그룹 지출 환불</strong> — <strong>날짜</strong>, <strong>메모</strong> 및 <strong>카테고리</strong>만 편집할 수 있습니다. 금액을 변경하려면 <strong>환불을 삭제하고 새로 기록하세요</strong>.</li>
+        </ul>
+        통화는 모든 환불에서 항상 잠겨 있습니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        기본 통화를 어떻게 변경하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>외관</strong> <span class="arrow">→</span> <strong>기본 통화</strong>. 선택한 통화는 새 지출 추가 시 기본값으로 사용됩니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        맞춤 카테고리를 어떻게 만드나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>카테고리 관리</strong> <span class="arrow">→</span> <strong>+</strong> 버튼을 탭하세요. 새 카테고리의 이름, 아이콘, 색상 및 이모지를 선택할 수 있습니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        카테고리의 월별 예산을 어떻게 설정하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>카테고리 관리</strong> <span class="arrow">→</span> 카테고리 옆의 <strong>차트 아이콘</strong>을 탭하세요. <strong>월별 예산 설정</strong>을 켜고 지출 한도를 입력하세요. 예산은 항상 기본 통화를 사용합니다. 설정 후 월별 차트 보기에 진행 표시줄이 나타나며 한도에 가까워지거나 초과하면 알림을 받습니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        영수증을 어떻게 스캔하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>+</strong> 버튼을 탭하여 새 지출 추가 <span class="arrow">→</span> 금액 필드 옆의 <strong>카메라 아이콘</strong>을 탭하세요 <span class="arrow">→</span> 영수증에 카메라를 향하세요. 감지된 금액이 하단에 나타납니다 — 하나를 탭하면 금액 필드에 자동으로 입력됩니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        지출을 어떻게 내보내나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>데이터 내보내기</strong>. <strong>JSON</strong> (재가져오기용), <strong>CSV</strong> (스프레드시트용) 또는 <strong>PDF</strong> (인쇄 또는 공유용) 중에서 선택하세요. 내보내기는 PRO 구독 또는 활성 무료 체험이 필요합니다.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        연도 보기에서 "카테고리별 지출 추세" 차트가 왜 표시되지 않나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        연도 보기의 <strong>카테고리별 지출 추세</strong> 꺾은선 차트는 단일 통화가 필요합니다. 다음 두 가지 조건이 모두 충족될 때 나타납니다:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>선택한 연도에 지출이 하나 이상 있습니다.</li>
+          <li>단일 통화가 사용됩니다 — 해당 연도의 모든 지출이 동일한 통화를 사용하거나, 차트 화면 상단의 <strong>통화</strong> 필터에서 특정 통화를 선택한 경우 (<strong>전체</strong> 대신).</li>
+        </ul>
+        연도에 여러 통화의 지출이 있고 필터가 <strong>전체</strong>로 설정된 경우 차트는 숨겨진 상태로 유지됩니다. 필터에서 통화를 하나 선택하면 해당 통화의 추세가 표시됩니다.
+      </div>
+    </div>
+  </div>
+</div>
 </main>
 
 <footer>
@@ -1620,7 +1818,7 @@
 </footer>
 
 <script>
-  const titles = { en: 'Support', de: 'Support', es: 'Soporte', 'zh-hans': '支持', 'zh-hant': '支援', ja: 'サポート', fr: 'Assistance' };
+  const titles = { en: 'Support', de: 'Support', es: 'Soporte', 'zh-hans': '支持', 'zh-hant': '支援', ja: 'サポート', fr: 'Assistance', ko: '지원' };
 
   function switchLang(lang, btn) {
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
@@ -1628,7 +1826,7 @@
     document.getElementById('lang-' + lang).classList.add('active');
     btn.classList.add('active');
     document.getElementById('header-title').textContent = titles[lang];
-    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja', fr: 'fr' };
+    const htmlLangMap = { en: 'en', de: 'de', es: 'es', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant', ja: 'ja', fr: 'fr', ko: 'ko' };
     document.documentElement.lang = htmlLangMap[lang] || 'en';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -1652,6 +1850,8 @@
   } else if (browserLang.toLowerCase().startsWith('fr')) {
     document.querySelector('[onclick*="\'fr\'"]').click();
   }
+  } else if (browserLang.toLowerCase().startsWith('ko')) {
+    document.querySelector('[onclick*="\'ko\'"]').click();
 </script>
 </body>
 </html>
