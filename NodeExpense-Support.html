@@ -254,7 +254,11 @@
 
 <main>
 
-<div class="contact-card">
+<!-- ========== ENGLISH ========== -->
+<div class="lang-content active" id="lang-en">
+  <div class="meta"><strong>Last Updated:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+
+  <div class="contact-card">
     <div class="contact-icon">✉️</div>
     <div>
       <h2>Get in Touch</h2>
@@ -446,8 +450,565 @@
     </div>
   </div>
 </div>
+<div class="lang-content" id="lang-zh-hant">
+  <div class="meta"><strong>最後更新：</strong>2026-04-25 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
-<div class="contact-card">
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>聯絡我們</h2>
+      <p>如需協助、有任何疑問或意見回饋，請發送電子郵件至<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      我們通常會在 1-2 個工作日內回覆。</p>
+    </div>
+  </div>
+
+  <h2>常見問題</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何建立群組？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>群組</strong>分頁 <span class="arrow">→</span> 點選右上角的 <strong>+</strong> 按鈕 <span class="arrow">→</span> 點選<strong>建立群組</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何邀請朋友加入群組？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> 點選<strong>成員</strong>分頁 <span class="arrow">→</span> 點選<strong>分享邀請連結</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何記錄付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> 點選<strong>費用</strong>分頁 <span class="arrow">→</span> 點選<strong>記錄付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何設定 Venmo、Cash App 或 PayPal.Me 以一鍵結算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>設定</strong> <span class="arrow">→</span> 捲動至<strong>付款帳號</strong>。只需輸入使用者名稱（無需 <code>@</code> 或 <code>$</code> 前綴）：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — 您的使用者名稱（例如 <code>alice</code>）。僅限美國帳戶。</li>
+          <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。僅限美國帳戶。</li>
+          <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 連結名稱（例如 <code>alice</code>）。全球適用。</li>
+        </ul>
+        留空任意欄位即可跳過該方式。您的帳號僅會私下分享給您所在群組的成員，方便他們一鍵向您付款——絕不會公開或與廣告商共享。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何透過 Venmo、Cash App 或 PayPal 向他人付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> <strong>餘額</strong>分頁 <span class="arrow">→</span> 點選您所欠款項旁的<strong>付款</strong>按鈕 <span class="arrow">→</span> 選擇 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所選應用程式將開啟，並自動帶入金額與備註——在該應用程式中確認並傳送付款。隨後返回 Node Expense 並點選<strong>記錄付款</strong>以登記此筆結算，雙方即可將其標示為已確認。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">僅當收款人已註冊至少一個付款帳號時，<strong>付款</strong>按鈕才會顯示。金額絕不會自動轉帳——所有付款皆在第三方應用程式中完成。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo、Cash App 或 PayPal 按鈕無法使用，該如何處理？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Node Expense 透過深度連結直接開啟 Venmo、Cash App 和 PayPal 應用程式。若按鈕沒有反應或出現錯誤，最常見的原因是該應用程式在您的 iPhone 上被<strong>隱藏</strong>了。請依以下步驟檢查：
+        <ol style="margin:8px 0 8px 18px; padding:0;">
+          <li>開啟 iPhone <strong>設定</strong> <span class="arrow">→</span> 點選<strong>螢幕使用時間</strong> <span class="arrow">→</span> <strong>內容與隱私權限制</strong> <span class="arrow">→</span> <strong>允許的 App</strong>。</li>
+          <li>確認相關付款 App（Venmo、Cash App 或 PayPal）已開啟。</li>
+          <li>若您曾透過 App 資料庫將該 App 從主畫面隱藏，請開啟 App 資料庫，長按 App 圖示，然後選擇<strong>加入主畫面</strong>。</li>
+        </ol>
+        App 可見並已允許後，返回 Node Expense 再次嘗試付款按鈕。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不進行任何資金轉移——它僅負責開啟已預填金額的付款 App。該 App 必須已安裝<em>且</em>在您的裝置上可正常存取，深度連結才能正常運作。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何刪除群組？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>刪除群組</strong>（僅限管理員）。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何編輯或刪除費用？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選您想要編輯／刪除的費用 <span class="arrow">→</span> 向左滑動以查看<strong>編輯</strong>和<strong>刪除</strong>選項。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何為費用記錄退款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選費用以開啟詳情 <span class="arrow">→</span> 向下捲動並點選<strong>記錄退款</strong> <span class="arrow">→</span> 輸入退款金額（預設為剩餘可退款金額） <span class="arrow">→</span> 可選擇調整日期並新增備註 <span class="arrow">→</span> 再次點選<strong>記錄退款</strong>以確認。退款會繼承原費用的分攤方式、參與者、貨幣和類別，並退還給支付原費用的人。只要退款總額不超過原金額，您可以記錄多筆部分退款。退款會在費用列表中以綠色<strong>退款</strong>標記顯示，並從月度圖表和每日日曆彙總中扣除。刪除原費用時，其關聯的退款也會一併刪除。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        建立退款後可以編輯嗎？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        編輯方式取決於退款關聯的是<strong>個人費用</strong>還是<strong>群組費用</strong>。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>個人費用退款</strong> — 點選退款 <span class="arrow">→</span> 您可以編輯<strong>金額</strong>、<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。新金額上限為原費用的剩餘可退款金額（金額欄位下方的提示會顯示可輸入的最大值）。</li>
+          <li><strong>群組費用退款</strong> — 僅可編輯<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。金額、貨幣和分攤已鎖定，因為變更這些項目需要為每位參與者重新計算按比例的分攤份額。若要變更金額，請<strong>刪除該退款並重新記錄一筆</strong>。</li>
+        </ul>
+        所有退款的貨幣始終鎖定 — 使用與原費用不同貨幣的退款在語義上沒有意義。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何更改預設貨幣？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>外觀</strong> <span class="arrow">→</span> <strong>預設貨幣</strong>。所選貨幣將在新增費用時作為預設貨幣使用。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何建立自訂分類？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>管理分類</strong> <span class="arrow">→</span> 點選 <strong>+</strong> 按鈕。您可以為新分類選擇名稱、圖示、顏色和 Emoji。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何為分類設定每月預算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>管理分類</strong> <span class="arrow">→</span> 點選任意分類旁的<strong>圖表圖示</strong>。開啟<strong>設定每月預算</strong>並輸入消費上限。預算一律使用您的預設貨幣。設定後，月度圖表檢視中將顯示進度條，接近或超出上限時您將收到通知。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何掃描收據？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選 <strong>+</strong> 按鈕新增費用 <span class="arrow">→</span> 點選金額欄位旁的<strong>相機圖示</strong> <span class="arrow">→</span> 將相機對準收據。畫面底部將顯示偵測到的金額，點選其中一個即可自動填入金額欄位。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何匯出費用記錄？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>匯出資料</strong>。可選擇 <strong>JSON</strong>（用於重新匯入）、<strong>CSV</strong>（用於試算表）或 <strong>PDF</strong>（用於列印或分享）。匯出功能需要 PRO 訂閱或有效的免費試用期。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        為什麼在年檢視中看不到「按分類支出趨勢」圖表？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        年檢視中的<strong>按分類支出趨勢</strong>折線圖需要單一貨幣才能繪製，因為跨不同貨幣累加金額沒有實際意義。同時滿足以下兩個條件時圖表才會顯示：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>所選年份至少有一筆支出。</li>
+          <li>使用單一貨幣 — 要麼是該年份的所有支出都使用同一貨幣，要麼是您在圖表頁面頂部的<strong>貨幣</strong>篩選器中選擇了某個特定貨幣（而非<strong>全部</strong>）。</li>
+        </ul>
+        如果該年份包含多種貨幣的支出，並且您將篩選器保留為<strong>全部</strong>，則圖表會保持隱藏。請從篩選器中選擇一種貨幣，以查看該貨幣的趨勢。
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lang-content" id="lang-zh-hans">
+  <div class="meta"><strong>最后更新日期：</strong>2026-04-25 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>联系我们</h2>
+      <p>如需帮助、疑问或反馈，请发送电子邮件至<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      我们通常会在 1-2 个工作日内回复。</p>
+    </div>
+  </div>
+
+  <h2>常见问题（FAQ）</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何创建群组？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>群组</strong>标签页 <span class="arrow">→</span> 轻点右上角的 <strong>+</strong> 按钮 <span class="arrow">→</span> 轻点<strong>创建群组</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何邀请朋友加入群组？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> 轻点<strong>成员</strong>标签页 <span class="arrow">→</span> 轻点<strong>分享邀请链接</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何记录付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 轻点<strong>记录付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何设置 Venmo、Cash App 或 PayPal.Me 以便一键结算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>设置</strong> <span class="arrow">→</span> 滚动至<strong>付款账号</strong>。只需输入用户名（无需 <code>@</code> 或 <code>$</code> 前缀）：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — 您的用户名（例如 <code>alice</code>）。仅限美国账户。</li>
+          <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。仅限美国账户。</li>
+          <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 链接名称（例如 <code>alice</code>）。全球可用。</li>
+        </ul>
+        留空任意字段即可跳过该方式。您的账号仅在您所在群组的成员之间私密共享，方便他们一键向您付款——绝不会公开或与广告商共享。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何通过 Venmo、Cash App 或 PayPal 向他人付款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> <strong>余额</strong>标签页 <span class="arrow">→</span> 轻点您所欠款项旁的<strong>付款</strong>按钮 <span class="arrow">→</span> 选择 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所选应用会打开，并自动填入金额和备注——在该应用中确认并发送付款。随后返回 Node Expense 并轻点<strong>记录付款</strong>以登记此笔结算，双方即可将其标记为已确认。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">仅当收款人至少注册了一个付款账号时，<strong>付款</strong>按钮才会显示。金额绝不会自动转账——所有付款均在第三方应用中完成。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo、Cash App 或 PayPal 按钮无法使用，该怎么办？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Node Expense 通过深度链接直接跳转至 Venmo、Cash App 和 PayPal 应用。如果按钮没有反应或出现错误，最常见的原因是相关应用在您的 iPhone 上被<strong>隐藏</strong>了。解决方法如下：
+        <ol style="margin:8px 0 8px 18px; padding:0;">
+          <li>打开 iPhone <strong>设置</strong> <span class="arrow">→</span> 轻点<strong>屏幕使用时间</strong> <span class="arrow">→</span> <strong>内容和隐私访问限制</strong> <span class="arrow">→</span> <strong>允许的应用</strong>。</li>
+          <li>确认相关付款应用（Venmo、Cash App 或 PayPal）已开启。</li>
+          <li>如果您曾通过 App 资源库将该应用从主屏幕隐藏，请打开 App 资源库，长按应用图标，然后选择<strong>添加到主屏幕</strong>。</li>
+        </ol>
+        应用可见并被允许后，返回 Node Expense 再次尝试付款按钮。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不进行任何资金转移——它仅负责打开已预填金额的付款应用。该应用必须已安装<em>且</em>在您的设备上可正常访问，深度链接才能正常工作。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何删除群组？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> 轻点<strong>删除群组</strong>（仅限管理员）。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何编辑或删除支出？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点您想要编辑／删除的支出 <span class="arrow">→</span> 向左滑动即可看到<strong>编辑</strong>和<strong>删除</strong>选项。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何为支出记录退款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点支出以打开详情 <span class="arrow">→</span> 向下滑动并轻点<strong>记录退款</strong> <span class="arrow">→</span> 输入退款金额（默认为剩余可退款金额） <span class="arrow">→</span> 可选择调整日期并添加备注 <span class="arrow">→</span> 再次轻点<strong>记录退款</strong>以确认。退款会继承原支出的分摊方式、参与者、货币和类别，并退还给支付原支出的人。只要退款总额不超过原金额，您可以记录多笔部分退款。退款会在支出列表中以绿色<strong>退款</strong>标记显示，并从月度图表和每日日历汇总中扣除。删除原支出时，其关联的退款也会一并删除。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        创建退款后可以编辑吗？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        编辑方式取决于退款关联的是<strong>个人支出</strong>还是<strong>群组支出</strong>。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>个人支出退款</strong> — 轻点退款 <span class="arrow">→</span> 您可以编辑<strong>金额</strong>、<strong>日期</strong>、<strong>备注</strong>和<strong>类别</strong>。新金额上限为原支出的剩余可退款金额（金额字段下方的提示会显示可输入的最大值）。</li>
+          <li><strong>群组支出退款</strong> — 仅可编辑<strong>日期</strong>、<strong>备注</strong>和<strong>类别</strong>。金额、货币和分摊已锁定，因为更改它们需要为每位参与者重新计算按比例的分摊份额。如需更改金额，请<strong>删除该退款并重新记录一笔</strong>。</li>
+        </ul>
+        所有退款的货币始终锁定 — 使用与原支出不同货币的退款在语义上没有意义。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何更改默认货币？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>外观</strong> <span class="arrow">→</span> <strong>默认货币</strong>。所选货币将在添加新支出时作为默认货币使用。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何创建自定义分类？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>管理分类</strong> <span class="arrow">→</span> 轻点 <strong>+</strong> 按钮。您可以为新分类选择名称、图标、颜色和 Emoji。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何为分类设置每月预算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>管理分类</strong> <span class="arrow">→</span> 轻点任意分类旁边的<strong>图表图标</strong>。开启<strong>设置每月预算</strong>并输入消费上限。预算始终使用您的默认货币。设置后，月度图表视图中将显示进度条，接近或超出限额时您将收到通知。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何扫描收据？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点 <strong>+</strong> 按钮添加新支出 <span class="arrow">→</span> 轻点金额输入框旁的<strong>相机图标</strong> <span class="arrow">→</span> 将相机对准收据。底部将显示检测到的金额，轻点其中一个即可自动填入金额栏。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何导出支出记录？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>导出数据</strong>。可选择 <strong>JSON</strong>（用于重新导入）、<strong>CSV</strong>（用于电子表格）或 <strong>PDF</strong>（用于打印或分享）。导出功能需要专业版订阅或有效的免费试用期。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        为什么在年视图中看不到"按分类支出趋势"图表？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        年视图中的<strong>按分类支出趋势</strong>折线图需要单一货币才能绘制，因为跨不同货币累加金额没有实际意义。同时满足以下两个条件时图表才会显示：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>所选年份至少有一笔支出。</li>
+          <li>使用单一货币 — 要么是该年份的所有支出都使用同一货币，要么是您在图表页面顶部的<strong>货币</strong>筛选器中选择了某个特定货币（而非<strong>全部</strong>）。</li>
+        </ul>
+        如果该年份包含多种货币的支出，并且您将筛选器保留为<strong>全部</strong>，则图表会保持隐藏。请从筛选器中选择一种货币，以查看该货币的趋势。
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lang-content" id="lang-ja">
+  <div class="meta"><strong>最終更新日：</strong>2026-04-25 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <h2>お問い合わせ</h2>
+      <p>サポート、ご質問、またはフィードバックは以下のメールアドレスまでご連絡ください<br>
+      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
+      通常、1〜2営業日以内にご返信いたします。</p>
+    </div>
+  </div>
+
+  <h2>よくある質問</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        グループの作成方法は？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>グループ</strong>タブをタップ <span class="arrow">→</span> 右上の <strong>+</strong> ボタンをタップ <span class="arrow">→</span> <strong>グループを作成</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        友達をグループに招待するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>メンバー</strong>タブをタップ <span class="arrow">→</span> <strong>招待リンクを共有</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支払いを記録するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> <strong>支払いを記録</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo、Cash App、PayPal.Me を設定してワンタップで精算するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>支払いハンドル</strong>までスクロール。ユーザー名のみを入力します（先頭の <code>@</code> や <code>$</code> は不要）：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Venmo</strong> — ユーザー名（例：<code>alice</code>）。米国アカウントのみ対応。</li>
+          <li><strong>Cash App</strong> — $cashtag（例：<code>bob</code>）。米国アカウントのみ対応。</li>
+          <li><strong>PayPal.Me</strong> — PayPal.Me のリンク名（例：<code>alice</code>）。全世界で利用可能。</li>
+        </ul>
+        いずれかの欄を空欄にすると、その方法はスキップされます。入力したハンドルは、ご所属のグループのメンバーにのみ非公開で共有され、ワンタップで送金を受け取れます。公開されたり広告主と共有されたりすることはありません。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo、Cash App、PayPal で相手に送金するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>残高</strong>タブ <span class="arrow">→</span> 支払うべき債務の横にある<strong>支払う</strong>ボタンをタップ <span class="arrow">→</span> <strong>Venmo</strong>、<strong>Cash App</strong>、または <strong>PayPal.Me</strong> を選択します。選択したアプリが金額とメモが自動入力された状態で開くので、そのアプリ内で確認し送金を実行してください。その後 Node Expense に戻り<strong>支払いを記録</strong>をタップして精算を記録すると、双方が確認済みとしてマークできます。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>支払う</strong>ボタンは、受取人が少なくとも 1 つの支払いハンドルを登録している場合にのみ表示されます。金額が自動で送金されることはなく、すべての支払いは第三者アプリ内で完結します。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Venmo、Cash App、PayPal のボタンが機能しない場合は？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Node Expense はディープリンクを使用して Venmo、Cash App、PayPal アプリを直接起動します。ボタンをタップしても何も起きない、またはエラーが表示される場合、最もよくある原因は対象アプリが iPhone 上で<strong>非表示</strong>になっていることです。以下の手順で確認してください：
+        <ol style="margin:8px 0 8px 18px; padding:0;">
+          <li>iPhone の<strong>設定</strong>アプリを開く <span class="arrow">→</span> <strong>スクリーンタイム</strong>をタップ <span class="arrow">→</span> <strong>コンテンツとプライバシーの制限</strong> <span class="arrow">→</span> <strong>許可されたアプリ</strong>。</li>
+          <li>対象の支払いアプリ（Venmo、Cash App、または PayPal）がオンになっていることを確認してください。</li>
+          <li>App ライブラリを使ってホーム画面からアプリを非表示にした場合は、App ライブラリを開いてアプリアイコンを長押しし、<strong>ホーム画面に追加</strong>を選択してください。</li>
+        </ol>
+        アプリが表示され、許可された状態になったら、Node Expense に戻って支払いボタンを再度お試しください。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 自体は送金を行いません。金額があらかじめ入力された状態で支払いアプリを起動するだけです。ディープリンクが正常に機能するには、対象アプリがインストールされており、かつデバイス上でアクセス可能な状態である必要があります。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        グループを削除するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>グループを削除</strong>をタップ（管理者のみ）。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支出を編集または削除するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        編集または削除したい支出をタップ <span class="arrow">→</span> 左にスワイプして<strong>編集</strong>と<strong>削除</strong>オプションを表示。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支出の払い戻しを記録するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        支出をタップして開く <span class="arrow">→</span> 下にスクロールして<strong>払い戻しを記録</strong>をタップ <span class="arrow">→</span> 払い戻し金額を入力（デフォルトは残りの払い戻し可能額） <span class="arrow">→</span> 必要に応じて日付を調整しメモを追加 <span class="arrow">→</span> 再度<strong>払い戻しを記録</strong>をタップして確定。払い戻しは元の支出の分割方法、参加者、通貨、カテゴリを引き継ぎ、元の支払者に返金されます。合計が元の金額を超えない限り、複数回の部分払い戻しを記録できます。払い戻しは支出リストに緑色の<strong>払い戻し</strong>バッジとともに表示され、月間グラフと日次カレンダーの合計から差し引かれます。元の支出を削除すると、紐付いた払い戻しも削除されます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        作成後の払い戻しを編集できますか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        編集できる内容は、払い戻しが<strong>個人</strong>支出と<strong>グループ</strong>支出のどちらに紐付いているかで異なります。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>個人支出の払い戻し</strong> — 払い戻しをタップ <span class="arrow">→</span> <strong>金額</strong>、<strong>日付</strong>、<strong>メモ</strong>、<strong>カテゴリ</strong>を編集できます。新しい金額は元の支出の残り払い戻し可能額が上限となります（金額欄の下のヒントに入力可能な最大額が表示されます）。</li>
+          <li><strong>グループ支出の払い戻し</strong> — <strong>日付</strong>、<strong>メモ</strong>、<strong>カテゴリ</strong>のみ編集可能です。金額、通貨、分割は各参加者の比例配分を再計算する必要があるためロックされています。金額を変更するには、<strong>払い戻しを削除して新しく記録してください</strong>。</li>
+        </ul>
+        通貨はすべての払い戻しで常にロックされます — 元の支出と異なる通貨での払い戻しは意味を持ちません。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        デフォルト通貨を変更するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>外観</strong> <span class="arrow">→</span> <strong>デフォルト通貨</strong>。選択した通貨は新しい支出を追加する際のデフォルトとして使用されます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        カスタムカテゴリを作成するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>カテゴリを管理</strong> <span class="arrow">→</span> <strong>+</strong> ボタンをタップ。新しいカテゴリの名前、アイコン、カラー、絵文字を選択できます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        カテゴリの月次予算を設定するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>カテゴリを管理</strong> <span class="arrow">→</span> 任意のカテゴリ横の<strong>グラフアイコン</strong>をタップ。<strong>月次予算を設定</strong>をオンにして上限金額を入力。予算は常にデフォルト通貨が使用されます。設定後、月次グラフビューに進捗バーが表示され、上限に近づくか超えた場合に通知が届きます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        レシートをスキャンするには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>+</strong> ボタンをタップして新しい支出を追加 <span class="arrow">→</span> 金額フィールド横の<strong>カメラアイコン</strong>をタップ <span class="arrow">→</span> カメラをレシートに向ける。検出された金額が下部に表示されます — タップすると金額フィールドに自動入力されます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支出データをエクスポートするには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>データをエクスポート</strong>。<strong>JSON</strong>（再インポート用）、<strong>CSV</strong>（スプレッドシート用）、または <strong>PDF</strong>（印刷や共有用）から選択。エクスポートには PRO サブスクリプションまたは有効な無料トライアルが必要です。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        年ビューに「カテゴリー別支出推移」グラフが表示されないのはなぜですか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        年ビューの<strong>カテゴリー別支出推移</strong>折れ線グラフは、異なる通貨の金額を合計しても意味がないため、単一通貨が必要です。次の両方の条件を満たすと表示されます：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>選択した年に少なくとも1件の支出がある。</li>
+          <li>単一通貨が使用されている — その年のすべての支出が同じ通貨であるか、またはグラフ画面上部の<strong>通貨</strong>フィルターで特定の通貨を選択している（<strong>すべて</strong>以外）。</li>
+        </ul>
+        選択した年に複数の通貨の支出があり、フィルターを<strong>すべて</strong>のままにしている場合、グラフは非表示のままです。フィルターから1つの通貨を選択すると、その通貨の推移が表示されます。
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lang-content" id="lang-de">
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+
+  <div class="contact-card">
     <div class="contact-icon">✉️</div>
     <div>
       <h2>Kontakt aufnehmen</h2>
@@ -639,9 +1200,10 @@
     </div>
   </div>
 </div>
+<div class="lang-content" id="lang-es">
+  <div class="meta"><strong>Última actualización:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
-
-<div class="contact-card">
+  <div class="contact-card">
     <div class="contact-icon">✉️</div>
     <div>
       <h2>Contáctenos</h2>
@@ -833,560 +1395,10 @@
     </div>
   </div>
 </div>
+<div class="lang-content" id="lang-fr">
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
-
-<div class="contact-card">
-    <div class="contact-icon">✉️</div>
-    <div>
-      <h2>联系我们</h2>
-      <p>如需帮助、疑问或反馈，请发送电子邮件至<br>
-      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
-      我们通常会在 1-2 个工作日内回复。</p>
-    </div>
-  </div>
-
-  <h2>常见问题（FAQ）</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何创建群组？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点<strong>群组</strong>标签页 <span class="arrow">→</span> 轻点右上角的 <strong>+</strong> 按钮 <span class="arrow">→</span> 轻点<strong>创建群组</strong>。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何邀请朋友加入群组？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> 轻点<strong>成员</strong>标签页 <span class="arrow">→</span> 轻点<strong>分享邀请链接</strong>。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何记录付款？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 轻点<strong>记录付款</strong>。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何设置 Venmo、Cash App 或 PayPal.Me 以便一键结算？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点<strong>设置</strong> <span class="arrow">→</span> 滚动至<strong>付款账号</strong>。只需输入用户名（无需 <code>@</code> 或 <code>$</code> 前缀）：
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Venmo</strong> — 您的用户名（例如 <code>alice</code>）。仅限美国账户。</li>
-          <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。仅限美国账户。</li>
-          <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 链接名称（例如 <code>alice</code>）。全球可用。</li>
-        </ul>
-        留空任意字段即可跳过该方式。您的账号仅在您所在群组的成员之间私密共享，方便他们一键向您付款——绝不会公开或与广告商共享。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何通过 Venmo、Cash App 或 PayPal 向他人付款？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> <strong>余额</strong>标签页 <span class="arrow">→</span> 轻点您所欠款项旁的<strong>付款</strong>按钮 <span class="arrow">→</span> 选择 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所选应用会打开，并自动填入金额和备注——在该应用中确认并发送付款。随后返回 Node Expense 并轻点<strong>记录付款</strong>以登记此笔结算，双方即可将其标记为已确认。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">仅当收款人至少注册了一个付款账号时，<strong>付款</strong>按钮才会显示。金额绝不会自动转账——所有付款均在第三方应用中完成。</div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo、Cash App 或 PayPal 按钮无法使用，该怎么办？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        Node Expense 通过深度链接直接跳转至 Venmo、Cash App 和 PayPal 应用。如果按钮没有反应或出现错误，最常见的原因是相关应用在您的 iPhone 上被<strong>隐藏</strong>了。解决方法如下：
-        <ol style="margin:8px 0 8px 18px; padding:0;">
-          <li>打开 iPhone <strong>设置</strong> <span class="arrow">→</span> 轻点<strong>屏幕使用时间</strong> <span class="arrow">→</span> <strong>内容和隐私访问限制</strong> <span class="arrow">→</span> <strong>允许的应用</strong>。</li>
-          <li>确认相关付款应用（Venmo、Cash App 或 PayPal）已开启。</li>
-          <li>如果您曾通过 App 资源库将该应用从主屏幕隐藏，请打开 App 资源库，长按应用图标，然后选择<strong>添加到主屏幕</strong>。</li>
-        </ol>
-        应用可见并被允许后，返回 Node Expense 再次尝试付款按钮。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不进行任何资金转移——它仅负责打开已预填金额的付款应用。该应用必须已安装<em>且</em>在您的设备上可正常访问，深度链接才能正常工作。</div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何删除群组？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> 轻点<strong>删除群组</strong>（仅限管理员）。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何编辑或删除支出？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点您想要编辑／删除的支出 <span class="arrow">→</span> 向左滑动即可看到<strong>编辑</strong>和<strong>删除</strong>选项。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何为支出记录退款？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点支出以打开详情 <span class="arrow">→</span> 向下滑动并轻点<strong>记录退款</strong> <span class="arrow">→</span> 输入退款金额（默认为剩余可退款金额） <span class="arrow">→</span> 可选择调整日期并添加备注 <span class="arrow">→</span> 再次轻点<strong>记录退款</strong>以确认。退款会继承原支出的分摊方式、参与者、货币和类别，并退还给支付原支出的人。只要退款总额不超过原金额，您可以记录多笔部分退款。退款会在支出列表中以绿色<strong>退款</strong>标记显示，并从月度图表和每日日历汇总中扣除。删除原支出时，其关联的退款也会一并删除。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        创建退款后可以编辑吗？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        编辑方式取决于退款关联的是<strong>个人支出</strong>还是<strong>群组支出</strong>。
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>个人支出退款</strong> — 轻点退款 <span class="arrow">→</span> 您可以编辑<strong>金额</strong>、<strong>日期</strong>、<strong>备注</strong>和<strong>类别</strong>。新金额上限为原支出的剩余可退款金额（金额字段下方的提示会显示可输入的最大值）。</li>
-          <li><strong>群组支出退款</strong> — 仅可编辑<strong>日期</strong>、<strong>备注</strong>和<strong>类别</strong>。金额、货币和分摊已锁定，因为更改它们需要为每位参与者重新计算按比例的分摊份额。如需更改金额，请<strong>删除该退款并重新记录一笔</strong>。</li>
-        </ul>
-        所有退款的货币始终锁定 — 使用与原支出不同货币的退款在语义上没有意义。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何更改默认货币？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>外观</strong> <span class="arrow">→</span> <strong>默认货币</strong>。所选货币将在添加新支出时作为默认货币使用。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何创建自定义分类？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>管理分类</strong> <span class="arrow">→</span> 轻点 <strong>+</strong> 按钮。您可以为新分类选择名称、图标、颜色和 Emoji。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何为分类设置每月预算？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>管理分类</strong> <span class="arrow">→</span> 轻点任意分类旁边的<strong>图表图标</strong>。开启<strong>设置每月预算</strong>并输入消费上限。预算始终使用您的默认货币。设置后，月度图表视图中将显示进度条，接近或超出限额时您将收到通知。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何扫描收据？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点 <strong>+</strong> 按钮添加新支出 <span class="arrow">→</span> 轻点金额输入框旁的<strong>相机图标</strong> <span class="arrow">→</span> 将相机对准收据。底部将显示检测到的金额，轻点其中一个即可自动填入金额栏。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何导出支出记录？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>导出数据</strong>。可选择 <strong>JSON</strong>（用于重新导入）、<strong>CSV</strong>（用于电子表格）或 <strong>PDF</strong>（用于打印或分享）。导出功能需要专业版订阅或有效的免费试用期。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        为什么在年视图中看不到"按分类支出趋势"图表？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        年视图中的<strong>按分类支出趋势</strong>折线图需要单一货币才能绘制，因为跨不同货币累加金额没有实际意义。同时满足以下两个条件时图表才会显示：
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li>所选年份至少有一笔支出。</li>
-          <li>使用单一货币 — 要么是该年份的所有支出都使用同一货币，要么是您在图表页面顶部的<strong>货币</strong>筛选器中选择了某个特定货币（而非<strong>全部</strong>）。</li>
-        </ul>
-        如果该年份包含多种货币的支出，并且您将筛选器保留为<strong>全部</strong>，则图表会保持隐藏。请从筛选器中选择一种货币，以查看该货币的趋势。
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="contact-card">
-    <div class="contact-icon">✉️</div>
-    <div>
-      <h2>聯絡我們</h2>
-      <p>如需協助、有任何疑問或意見回饋，請發送電子郵件至<br>
-      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
-      我們通常會在 1-2 個工作日內回覆。</p>
-    </div>
-  </div>
-
-  <h2>常見問題</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何建立群組？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選<strong>群組</strong>分頁 <span class="arrow">→</span> 點選右上角的 <strong>+</strong> 按鈕 <span class="arrow">→</span> 點選<strong>建立群組</strong>。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何邀請朋友加入群組？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> 點選<strong>成員</strong>分頁 <span class="arrow">→</span> 點選<strong>分享邀請連結</strong>。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何記錄付款？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> 點選<strong>費用</strong>分頁 <span class="arrow">→</span> 點選<strong>記錄付款</strong>。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何設定 Venmo、Cash App 或 PayPal.Me 以一鍵結算？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> 捲動至<strong>付款帳號</strong>。只需輸入使用者名稱（無需 <code>@</code> 或 <code>$</code> 前綴）：
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Venmo</strong> — 您的使用者名稱（例如 <code>alice</code>）。僅限美國帳戶。</li>
-          <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。僅限美國帳戶。</li>
-          <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 連結名稱（例如 <code>alice</code>）。全球適用。</li>
-        </ul>
-        留空任意欄位即可跳過該方式。您的帳號僅會私下分享給您所在群組的成員，方便他們一鍵向您付款——絕不會公開或與廣告商共享。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何透過 Venmo、Cash App 或 PayPal 向他人付款？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> <strong>餘額</strong>分頁 <span class="arrow">→</span> 點選您所欠款項旁的<strong>付款</strong>按鈕 <span class="arrow">→</span> 選擇 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所選應用程式將開啟，並自動帶入金額與備註——在該應用程式中確認並傳送付款。隨後返回 Node Expense 並點選<strong>記錄付款</strong>以登記此筆結算，雙方即可將其標示為已確認。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">僅當收款人已註冊至少一個付款帳號時，<strong>付款</strong>按鈕才會顯示。金額絕不會自動轉帳——所有付款皆在第三方應用程式中完成。</div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo、Cash App 或 PayPal 按鈕無法使用，該如何處理？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        Node Expense 透過深度連結直接開啟 Venmo、Cash App 和 PayPal 應用程式。若按鈕沒有反應或出現錯誤，最常見的原因是該應用程式在您的 iPhone 上被<strong>隱藏</strong>了。請依以下步驟檢查：
-        <ol style="margin:8px 0 8px 18px; padding:0;">
-          <li>開啟 iPhone <strong>設定</strong> <span class="arrow">→</span> 點選<strong>螢幕使用時間</strong> <span class="arrow">→</span> <strong>內容與隱私權限制</strong> <span class="arrow">→</span> <strong>允許的 App</strong>。</li>
-          <li>確認相關付款 App（Venmo、Cash App 或 PayPal）已開啟。</li>
-          <li>若您曾透過 App 資料庫將該 App 從主畫面隱藏，請開啟 App 資料庫，長按 App 圖示，然後選擇<strong>加入主畫面</strong>。</li>
-        </ol>
-        App 可見並已允許後，返回 Node Expense 再次嘗試付款按鈕。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不進行任何資金轉移——它僅負責開啟已預填金額的付款 App。該 App 必須已安裝<em>且</em>在您的裝置上可正常存取，深度連結才能正常運作。</div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何刪除群組？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>刪除群組</strong>（僅限管理員）。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何編輯或刪除費用？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選您想要編輯／刪除的費用 <span class="arrow">→</span> 向左滑動以查看<strong>編輯</strong>和<strong>刪除</strong>選項。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何為費用記錄退款？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選費用以開啟詳情 <span class="arrow">→</span> 向下捲動並點選<strong>記錄退款</strong> <span class="arrow">→</span> 輸入退款金額（預設為剩餘可退款金額） <span class="arrow">→</span> 可選擇調整日期並新增備註 <span class="arrow">→</span> 再次點選<strong>記錄退款</strong>以確認。退款會繼承原費用的分攤方式、參與者、貨幣和類別，並退還給支付原費用的人。只要退款總額不超過原金額，您可以記錄多筆部分退款。退款會在費用列表中以綠色<strong>退款</strong>標記顯示，並從月度圖表和每日日曆彙總中扣除。刪除原費用時，其關聯的退款也會一併刪除。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        建立退款後可以編輯嗎？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        編輯方式取決於退款關聯的是<strong>個人費用</strong>還是<strong>群組費用</strong>。
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>個人費用退款</strong> — 點選退款 <span class="arrow">→</span> 您可以編輯<strong>金額</strong>、<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。新金額上限為原費用的剩餘可退款金額（金額欄位下方的提示會顯示可輸入的最大值）。</li>
-          <li><strong>群組費用退款</strong> — 僅可編輯<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。金額、貨幣和分攤已鎖定，因為變更這些項目需要為每位參與者重新計算按比例的分攤份額。若要變更金額，請<strong>刪除該退款並重新記錄一筆</strong>。</li>
-        </ul>
-        所有退款的貨幣始終鎖定 — 使用與原費用不同貨幣的退款在語義上沒有意義。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何更改預設貨幣？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> <strong>外觀</strong> <span class="arrow">→</span> <strong>預設貨幣</strong>。所選貨幣將在新增費用時作為預設貨幣使用。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何建立自訂分類？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> <strong>管理分類</strong> <span class="arrow">→</span> 點選 <strong>+</strong> 按鈕。您可以為新分類選擇名稱、圖示、顏色和 Emoji。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何為分類設定每月預算？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> <strong>管理分類</strong> <span class="arrow">→</span> 點選任意分類旁的<strong>圖表圖示</strong>。開啟<strong>設定每月預算</strong>並輸入消費上限。預算一律使用您的預設貨幣。設定後，月度圖表檢視中將顯示進度條，接近或超出上限時您將收到通知。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何掃描收據？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選 <strong>+</strong> 按鈕新增費用 <span class="arrow">→</span> 點選金額欄位旁的<strong>相機圖示</strong> <span class="arrow">→</span> 將相機對準收據。畫面底部將顯示偵測到的金額，點選其中一個即可自動填入金額欄位。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        如何匯出費用記錄？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> <strong>匯出資料</strong>。可選擇 <strong>JSON</strong>（用於重新匯入）、<strong>CSV</strong>（用於試算表）或 <strong>PDF</strong>（用於列印或分享）。匯出功能需要 PRO 訂閱或有效的免費試用期。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        為什麼在年檢視中看不到「按分類支出趨勢」圖表？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        年檢視中的<strong>按分類支出趨勢</strong>折線圖需要單一貨幣才能繪製，因為跨不同貨幣累加金額沒有實際意義。同時滿足以下兩個條件時圖表才會顯示：
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li>所選年份至少有一筆支出。</li>
-          <li>使用單一貨幣 — 要麼是該年份的所有支出都使用同一貨幣，要麼是您在圖表頁面頂部的<strong>貨幣</strong>篩選器中選擇了某個特定貨幣（而非<strong>全部</strong>）。</li>
-        </ul>
-        如果該年份包含多種貨幣的支出，並且您將篩選器保留為<strong>全部</strong>，則圖表會保持隱藏。請從篩選器中選擇一種貨幣，以查看該貨幣的趨勢。
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="contact-card">
-    <div class="contact-icon">✉️</div>
-    <div>
-      <h2>お問い合わせ</h2>
-      <p>サポート、ご質問、またはフィードバックは以下のメールアドレスまでご連絡ください<br>
-      <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a><br>
-      通常、1〜2営業日以内にご返信いたします。</p>
-    </div>
-  </div>
-
-  <h2>よくある質問</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        グループの作成方法は？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>グループ</strong>タブをタップ <span class="arrow">→</span> 右上の <strong>+</strong> ボタンをタップ <span class="arrow">→</span> <strong>グループを作成</strong>をタップ。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        友達をグループに招待するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>メンバー</strong>タブをタップ <span class="arrow">→</span> <strong>招待リンクを共有</strong>をタップ。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        支払いを記録するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> <strong>支払いを記録</strong>をタップ。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo、Cash App、PayPal.Me を設定してワンタップで精算するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>支払いハンドル</strong>までスクロール。ユーザー名のみを入力します（先頭の <code>@</code> や <code>$</code> は不要）：
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Venmo</strong> — ユーザー名（例：<code>alice</code>）。米国アカウントのみ対応。</li>
-          <li><strong>Cash App</strong> — $cashtag（例：<code>bob</code>）。米国アカウントのみ対応。</li>
-          <li><strong>PayPal.Me</strong> — PayPal.Me のリンク名（例：<code>alice</code>）。全世界で利用可能。</li>
-        </ul>
-        いずれかの欄を空欄にすると、その方法はスキップされます。入力したハンドルは、ご所属のグループのメンバーにのみ非公開で共有され、ワンタップで送金を受け取れます。公開されたり広告主と共有されたりすることはありません。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo、Cash App、PayPal で相手に送金するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>残高</strong>タブ <span class="arrow">→</span> 支払うべき債務の横にある<strong>支払う</strong>ボタンをタップ <span class="arrow">→</span> <strong>Venmo</strong>、<strong>Cash App</strong>、または <strong>PayPal.Me</strong> を選択します。選択したアプリが金額とメモが自動入力された状態で開くので、そのアプリ内で確認し送金を実行してください。その後 Node Expense に戻り<strong>支払いを記録</strong>をタップして精算を記録すると、双方が確認済みとしてマークできます。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>支払う</strong>ボタンは、受取人が少なくとも 1 つの支払いハンドルを登録している場合にのみ表示されます。金額が自動で送金されることはなく、すべての支払いは第三者アプリ内で完結します。</div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo、Cash App、PayPal のボタンが機能しない場合は？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        Node Expense はディープリンクを使用して Venmo、Cash App、PayPal アプリを直接起動します。ボタンをタップしても何も起きない、またはエラーが表示される場合、最もよくある原因は対象アプリが iPhone 上で<strong>非表示</strong>になっていることです。以下の手順で確認してください：
-        <ol style="margin:8px 0 8px 18px; padding:0;">
-          <li>iPhone の<strong>設定</strong>アプリを開く <span class="arrow">→</span> <strong>スクリーンタイム</strong>をタップ <span class="arrow">→</span> <strong>コンテンツとプライバシーの制限</strong> <span class="arrow">→</span> <strong>許可されたアプリ</strong>。</li>
-          <li>対象の支払いアプリ（Venmo、Cash App、または PayPal）がオンになっていることを確認してください。</li>
-          <li>App ライブラリを使ってホーム画面からアプリを非表示にした場合は、App ライブラリを開いてアプリアイコンを長押しし、<strong>ホーム画面に追加</strong>を選択してください。</li>
-        </ol>
-        アプリが表示され、許可された状態になったら、Node Expense に戻って支払いボタンを再度お試しください。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 自体は送金を行いません。金額があらかじめ入力された状態で支払いアプリを起動するだけです。ディープリンクが正常に機能するには、対象アプリがインストールされており、かつデバイス上でアクセス可能な状態である必要があります。</div>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        グループを削除するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>グループを削除</strong>をタップ（管理者のみ）。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        支出を編集または削除するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        編集または削除したい支出をタップ <span class="arrow">→</span> 左にスワイプして<strong>編集</strong>と<strong>削除</strong>オプションを表示。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        支出の払い戻しを記録するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        支出をタップして開く <span class="arrow">→</span> 下にスクロールして<strong>払い戻しを記録</strong>をタップ <span class="arrow">→</span> 払い戻し金額を入力（デフォルトは残りの払い戻し可能額） <span class="arrow">→</span> 必要に応じて日付を調整しメモを追加 <span class="arrow">→</span> 再度<strong>払い戻しを記録</strong>をタップして確定。払い戻しは元の支出の分割方法、参加者、通貨、カテゴリを引き継ぎ、元の支払者に返金されます。合計が元の金額を超えない限り、複数回の部分払い戻しを記録できます。払い戻しは支出リストに緑色の<strong>払い戻し</strong>バッジとともに表示され、月間グラフと日次カレンダーの合計から差し引かれます。元の支出を削除すると、紐付いた払い戻しも削除されます。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        作成後の払い戻しを編集できますか？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        編集できる内容は、払い戻しが<strong>個人</strong>支出と<strong>グループ</strong>支出のどちらに紐付いているかで異なります。
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>個人支出の払い戻し</strong> — 払い戻しをタップ <span class="arrow">→</span> <strong>金額</strong>、<strong>日付</strong>、<strong>メモ</strong>、<strong>カテゴリ</strong>を編集できます。新しい金額は元の支出の残り払い戻し可能額が上限となります（金額欄の下のヒントに入力可能な最大額が表示されます）。</li>
-          <li><strong>グループ支出の払い戻し</strong> — <strong>日付</strong>、<strong>メモ</strong>、<strong>カテゴリ</strong>のみ編集可能です。金額、通貨、分割は各参加者の比例配分を再計算する必要があるためロックされています。金額を変更するには、<strong>払い戻しを削除して新しく記録してください</strong>。</li>
-        </ul>
-        通貨はすべての払い戻しで常にロックされます — 元の支出と異なる通貨での払い戻しは意味を持ちません。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        デフォルト通貨を変更するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>外観</strong> <span class="arrow">→</span> <strong>デフォルト通貨</strong>。選択した通貨は新しい支出を追加する際のデフォルトとして使用されます。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        カスタムカテゴリを作成するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>カテゴリを管理</strong> <span class="arrow">→</span> <strong>+</strong> ボタンをタップ。新しいカテゴリの名前、アイコン、カラー、絵文字を選択できます。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        カテゴリの月次予算を設定するには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>カテゴリを管理</strong> <span class="arrow">→</span> 任意のカテゴリ横の<strong>グラフアイコン</strong>をタップ。<strong>月次予算を設定</strong>をオンにして上限金額を入力。予算は常にデフォルト通貨が使用されます。設定後、月次グラフビューに進捗バーが表示され、上限に近づくか超えた場合に通知が届きます。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        レシートをスキャンするには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>+</strong> ボタンをタップして新しい支出を追加 <span class="arrow">→</span> 金額フィールド横の<strong>カメラアイコン</strong>をタップ <span class="arrow">→</span> カメラをレシートに向ける。検出された金額が下部に表示されます — タップすると金額フィールドに自動入力されます。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        支出データをエクスポートするには？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>データをエクスポート</strong>。<strong>JSON</strong>（再インポート用）、<strong>CSV</strong>（スプレッドシート用）、または <strong>PDF</strong>（印刷や共有用）から選択。エクスポートには PRO サブスクリプションまたは有効な無料トライアルが必要です。
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        年ビューに「カテゴリー別支出推移」グラフが表示されないのはなぜですか？
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        年ビューの<strong>カテゴリー別支出推移</strong>折れ線グラフは、異なる通貨の金額を合計しても意味がないため、単一通貨が必要です。次の両方の条件を満たすと表示されます：
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li>選択した年に少なくとも1件の支出がある。</li>
-          <li>単一通貨が使用されている — その年のすべての支出が同じ通貨であるか、またはグラフ画面上部の<strong>通貨</strong>フィルターで特定の通貨を選択している（<strong>すべて</strong>以外）。</li>
-        </ul>
-        選択した年に複数の通貨の支出があり、フィルターを<strong>すべて</strong>のままにしている場合、グラフは非表示のままです。フィルターから1つの通貨を選択すると、その通貨の推移が表示されます。
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="contact-card">
+  <div class="contact-card">
     <div class="contact-icon">✉️</div>
     <div>
       <h2>Nous contacter</h2>
@@ -1578,43 +1590,6 @@
     </div>
   </div>
 </div>
-
-<!-- ========== ENGLISH ========== -->
-<div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
-
-  
-<!-- ========== TRADITIONAL CHINESE ========== -->
-<div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-04-25 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
-
-  
-<!-- ========== SIMPLIFIED CHINESE ========== -->
-<div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-04-25 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
-
-  
-<!-- ========== JAPANESE ========== -->
-<div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-04-25 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
-
-  
-<!-- ========== GERMAN ========== -->
-<div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
-
-  
-<!-- ========== SPANISH ========== -->
-<div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
-
-  
-<!-- ========== FRENCH ========== -->
-<div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
-
-  
-
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
   <div class="meta"><strong>최종 업데이트:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
@@ -1632,182 +1607,68 @@
   <h2>자주 묻는 질문</h2>
   <div class="faq-list">
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        그룹을 어떻게 만드나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>그룹</strong> 탭을 탭하세요 <span class="arrow">→</span> 오른쪽 상단의 <strong>+</strong> 버튼을 탭하세요 <span class="arrow">→</span> <strong>그룹 만들기</strong>를 탭하세요.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">그룹을 어떻게 만드나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>그룹</strong> 탭을 탭하세요 <span class="arrow">→</span> 오른쪽 상단의 <strong>+</strong> 버튼 <span class="arrow">→</span> <strong>그룹 만들기</strong>를 탭하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        그룹에 친구를 초대하려면 어떻게 하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        그룹을 열어주세요 <span class="arrow">→</span> <strong>멤버</strong> 탭을 탭하세요 <span class="arrow">→</span> <strong>초대 링크 공유</strong>를 탭하세요.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">그룹에 친구를 초대하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>멤버</strong> 탭 <span class="arrow">→</span> <strong>초대 링크 공유</strong>를 탭하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        결제를 어떻게 기록하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭을 탭하세요 <span class="arrow">→</span> <strong>결제 기록</strong>을 탭하세요.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">결제를 어떻게 기록하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭 <span class="arrow">→</span> <strong>결제 기록</strong>을 탭하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        정산을 위해 Venmo, Cash App 또는 PayPal.Me를 어떻게 설정하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>결제 계정</strong>으로 스크롤하세요. 사용자명만 입력하세요 (<code>@</code> 또는 <code>$</code> 없이):
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Venmo</strong> — 사용자명 (예: <code>alice</code>). 미국 계정만 가능.</li>
-          <li><strong>Cash App</strong> — $cashtag (예: <code>bob</code>). 미국 계정만 가능.</li>
-          <li><strong>PayPal.Me</strong> — PayPal.Me 링크 이름 (예: <code>alice</code>). 전 세계 사용 가능.</li>
-        </ul>
-        비워두면 해당 방법을 건너뜁니다. 귀하의 계정은 그룹 멤버들만 볼 수 있으며, 한 번의 탭으로 송금할 수 있도록 비공개로 공유됩니다 — 공개되거나 광고주와 공유되지 않습니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">정산을 위해 Venmo, Cash App 또는 PayPal.Me를 어떻게 설정하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>결제 계정</strong>으로 스크롤하세요. 사용자명만 입력하세요 (<code>@</code> 또는 <code>$</code> 없이). Venmo / Cash App은 미국 계정만 가능, PayPal.Me는 전 세계 사용 가능.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo, Cash App 또는 PayPal로 상대방에게 송금하려면 어떻게 하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        그룹을 열어주세요 <span class="arrow">→</span> <strong>잔액</strong> 탭 <span class="arrow">→</span> 갚아야 할 금액 옆의 <strong>결제</strong> 버튼을 탭하세요 <span class="arrow">→</span> <strong>Venmo</strong>, <strong>Cash App</strong> 또는 <strong>PayPal.Me</strong>를 선택하세요. 금액과 메모가 미리 채워진 상태로 선택한 앱이 열립니다 — 해당 앱에서 확인하고 결제를 보내세요. 그런 다음 Node Expense로 돌아와 <strong>결제 기록</strong>을 탭하여 정산을 기록하면 양쪽 모두 확인됨으로 표시할 수 있습니다.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>결제</strong> 버튼은 수신자가 결제 계정을 하나 이상 등록한 경우에만 표시됩니다. 금액이 자동으로 이체되지 않으며 — 모든 결제는 타사 앱 내에서 이루어집니다.</div>
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">Venmo, Cash App 또는 PayPal로 상대방에게 송금하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>잔액</strong> 탭 <span class="arrow">→</span> <strong>결제</strong> 버튼을 탭하세요 <span class="arrow">→</span> 결제 앱을 선택하세요. 앱에서 결제 후 Node Expense로 돌아와 <strong>결제 기록</strong>을 탭하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo, Cash App 또는 PayPal 버튼이 작동하지 않을 때 무엇을 확인해야 하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        Node Expense는 딥링크를 통해 Venmo, Cash App 및 PayPal 앱을 직접 실행합니다. 버튼을 탭해도 아무 반응이 없거나 오류가 표시되면, 가장 흔한 원인은 앱이 iPhone에서 <strong>숨겨져 있는</strong> 것입니다. 해결 방법:
-        <ol style="margin:8px 0 8px 18px; padding:0;">
-          <li>iPhone <strong>설정</strong> 앱을 열어주세요 <span class="arrow">→</span> <strong>스크린 타임</strong>을 탭하세요 <span class="arrow">→</span> <strong>콘텐츠 및 개인정보 보호 제한</strong> <span class="arrow">→</span> <strong>허용된 앱</strong>.</li>
-          <li>결제 앱 (Venmo, Cash App 또는 PayPal)이 켜져 있는지 확인하세요.</li>
-          <li>앱 보관함을 사용하여 홈 화면에서 앱을 숨긴 경우, 앱 보관함을 열고 앱 아이콘을 길게 누른 다음 <strong>홈 화면에 추가</strong>를 선택하세요.</li>
-        </ol>
-        앱이 표시되고 허용된 후 Node Expense로 돌아와 결제 버튼을 다시 시도해 보세요.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 자체는 어떤 금액도 이동하지 않습니다 — 단순히 금액이 미리 채워진 결제 앱을 여는 것입니다. 딥링크가 작동하려면 앱이 설치되어 있고 기기에서 <em>접근 가능</em>한 상태여야 합니다.</div>
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">Venmo, Cash App 또는 PayPal 버튼이 작동하지 않을 때 무엇을 확인해야 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">iPhone <strong>설정</strong> <span class="arrow">→</span> <strong>스크린 타임</strong> <span class="arrow">→</span> <strong>콘텐츠 및 개인정보 보호 제한</strong> <span class="arrow">→</span> <strong>허용된 앱</strong>에서 결제 앱이 켜져 있는지 확인하세요. 앱 보관함에 숨겨진 경우 홈 화면에 다시 추가하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        그룹을 어떻게 삭제하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭을 탭하세요 <span class="arrow">→</span> <strong>그룹 삭제</strong>를 탭하세요 (관리자만 가능).
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">그룹을 어떻게 삭제하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭 <span class="arrow">→</span> <strong>그룹 삭제</strong>를 탭하세요 (관리자만 가능).</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        지출을 편집, 삭제 또는 환불하려면 어떻게 하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        목록의 지출 행에서:
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>오른쪽으로 스와이프</strong>하면 <strong>편집</strong> (파란색)과 지출이 환불 가능한 경우 <strong>환불</strong> (녹색)이 나타납니다.</li>
-          <li><strong>왼쪽으로 스와이프</strong>하면 <strong>삭제</strong> (빨간색)가 나타납니다.</li>
-        </ul>
-        대상:
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>개인 지출</strong> — 자신의 목록에 있는 모든 지출을 편집, 삭제 및 환불할 수 있습니다.</li>
-          <li><strong>그룹 지출</strong> — <strong>그룹 관리자</strong> 또는 지출을 <strong>처음 기록한</strong> 멤버만 편집, 삭제 또는 환불할 수 있습니다. 다른 멤버는 행을 볼 수 있지만 스와이프 옵션은 보이지 않습니다.</li>
-        </ul>
-        <strong>환불</strong> 동작은 환불 자체와 이미 전액 환불된 지출에서는 숨겨집니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">지출을 편집, 삭제 또는 환불하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>오른쪽으로 스와이프</strong> — 편집(파란색) / 환불(녹색). <strong>왼쪽으로 스와이프</strong> — 삭제(빨간색). 그룹 지출은 관리자 또는 원래 기록자만 수정 가능합니다.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        지출에 대한 환불을 어떻게 기록하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        지출 행을 <strong>오른쪽으로 스와이프</strong>하고 <strong>환불</strong>을 탭하거나 (가장 빠른 방법), 지출을 탭하여 열고 아래로 스크롤하여 <strong>환불 기록</strong> <span class="arrow">→</span> 환불 금액 입력 (기본값은 남은 환불 가능 금액) <span class="arrow">→</span> 선택적으로 날짜 조정 및 메모 추가 <span class="arrow">→</span> <strong>환불 기록</strong>을 탭하여 확인합니다. 환불은 원래 지출의 분할, 참가자, 통화 및 카테고리를 상속받으며, 원래 결제한 사람에게 크레딧이 부여됩니다. 총액이 원래 금액을 초과하지 않는 한 여러 부분 환불을 기록할 수 있습니다. 환불은 녹색 <strong>환불</strong> 배지와 함께 지출 목록에 표시되며 월별 차트 및 일별 캘린더 합계에서 차감됩니다. 원래 지출을 삭제하면 연결된 환불도 제거됩니다. 그룹 지출의 경우 <strong>그룹 관리자</strong> 또는 <strong>원래 기록자</strong>만 환불을 발행할 수 있습니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">지출에 대한 환불을 어떻게 기록하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">지출 행을 <strong>오른쪽으로 스와이프</strong>하고 <strong>환불</strong>을 탭하거나, 지출을 열고 <strong>환불 기록</strong>으로 스크롤하세요. 금액을 입력하고 확인하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        환불을 만든 후 편집할 수 있나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        편집 가능 여부는 환불이 <strong>개인</strong> 지출과 <strong>그룹</strong> 지출 중 어느 것에 연결되어 있는지에 따라 다릅니다.
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>개인 지출 환불</strong> — 환불을 탭하세요 <span class="arrow">→</span> <strong>금액</strong>, <strong>날짜</strong>, <strong>메모</strong> 및 <strong>카테고리</strong>를 편집할 수 있습니다. 새 금액은 원래의 남은 환불 가능 금액으로 제한됩니다.</li>
-          <li><strong>그룹 지출 환불</strong> — <strong>날짜</strong>, <strong>메모</strong> 및 <strong>카테고리</strong>만 편집할 수 있습니다. 금액을 변경하려면 <strong>환불을 삭제하고 새로 기록하세요</strong>.</li>
-        </ul>
-        통화는 모든 환불에서 항상 잠겨 있습니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">환불을 만든 후 편집할 수 있나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">개인 지출 환불은 금액, 날짜, 메모, 카테고리를 편집할 수 있습니다. 그룹 지출 환불은 날짜, 메모, 카테고리만 편집 가능합니다. 금액 변경은 삭제 후 재기록하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        기본 통화를 어떻게 변경하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>외관</strong> <span class="arrow">→</span> <strong>기본 통화</strong>. 선택한 통화는 새 지출 추가 시 기본값으로 사용됩니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">기본 통화를 어떻게 변경하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>외관</strong> <span class="arrow">→</span> <strong>기본 통화</strong>를 탭하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        맞춤 카테고리를 어떻게 만드나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>카테고리 관리</strong> <span class="arrow">→</span> <strong>+</strong> 버튼을 탭하세요. 새 카테고리의 이름, 아이콘, 색상 및 이모지를 선택할 수 있습니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">맞춤 카테고리를 어떻게 만드나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>카테고리 관리</strong> <span class="arrow">→</span> <strong>+</strong> 버튼을 탭하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        카테고리의 월별 예산을 어떻게 설정하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>카테고리 관리</strong> <span class="arrow">→</span> 카테고리 옆의 <strong>차트 아이콘</strong>을 탭하세요. <strong>월별 예산 설정</strong>을 켜고 지출 한도를 입력하세요. 예산은 항상 기본 통화를 사용합니다. 설정 후 월별 차트 보기에 진행 표시줄이 나타나며 한도에 가까워지거나 초과하면 알림을 받습니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">카테고리의 월별 예산을 어떻게 설정하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>카테고리 관리</strong> <span class="arrow">→</span> 카테고리 옆 <strong>차트 아이콘</strong> <span class="arrow">→</span> <strong>월별 예산 설정</strong>을 켜고 금액을 입력하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        영수증을 어떻게 스캔하나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>+</strong> 버튼을 탭하여 새 지출 추가 <span class="arrow">→</span> 금액 필드 옆의 <strong>카메라 아이콘</strong>을 탭하세요 <span class="arrow">→</span> 영수증에 카메라를 향하세요. 감지된 금액이 하단에 나타납니다 — 하나를 탭하면 금액 필드에 자동으로 입력됩니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">영수증을 어떻게 스캔하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>+</strong> 버튼 <span class="arrow">→</span> 금액 필드 옆 <strong>카메라 아이콘</strong> <span class="arrow">→</span> 영수증에 카메라를 향하세요. 감지된 금액을 탭하면 자동 입력됩니다.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        지출을 어떻게 내보내나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        <strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>데이터 내보내기</strong>. <strong>JSON</strong> (재가져오기용), <strong>CSV</strong> (스프레드시트용) 또는 <strong>PDF</strong> (인쇄 또는 공유용) 중에서 선택하세요. 내보내기는 PRO 구독 또는 활성 무료 체험이 필요합니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">지출을 어떻게 내보내나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>데이터 내보내기</strong>. JSON, CSV 또는 PDF를 선택하세요. PRO 구독 또는 활성 무료 체험이 필요합니다.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        연도 보기에서 "카테고리별 지출 추세" 차트가 왜 표시되지 않나요?
-        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-answer">
-        연도 보기의 <strong>카테고리별 지출 추세</strong> 꺾은선 차트는 단일 통화가 필요합니다. 다음 두 가지 조건이 모두 충족될 때 나타납니다:
-        <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li>선택한 연도에 지출이 하나 이상 있습니다.</li>
-          <li>단일 통화가 사용됩니다 — 해당 연도의 모든 지출이 동일한 통화를 사용하거나, 차트 화면 상단의 <strong>통화</strong> 필터에서 특정 통화를 선택한 경우 (<strong>전체</strong> 대신).</li>
-        </ul>
-        연도에 여러 통화의 지출이 있고 필터가 <strong>전체</strong>로 설정된 경우 차트는 숨겨진 상태로 유지됩니다. 필터에서 통화를 하나 선택하면 해당 통화의 추세가 표시됩니다.
-      </div>
+      <button class="faq-question" onclick="toggleFaq(this)">연도 보기에서 "카테고리별 지출 추세" 차트가 왜 표시되지 않나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">단일 통화가 필요합니다. 차트 화면 상단의 <strong>통화</strong> 필터에서 <strong>전체</strong> 대신 특정 통화를 선택하면 차트가 표시됩니다.</div>
     </div>
   </div>
 </div>
@@ -1841,10 +1702,10 @@
     document.querySelector('[onclick*="zh-hant"]').click();
   } else if (browserLang.toLowerCase().includes('zh')) {
     document.querySelector('[onclick*="zh-hans"]').click();
-  } else if (browserLang.toLowerCase().startsWith('ja')) {
-    document.querySelector('[onclick*="\'ja\'"]').click();
   } else if (browserLang.toLowerCase().startsWith('ko')) {
     document.querySelector('[onclick*="\'ko\'"]').click();
+  } else if (browserLang.toLowerCase().startsWith('ja')) {
+    document.querySelector('[onclick*="\'ja\'"]').click();
   } else if (browserLang.toLowerCase().startsWith('de')) {
     document.querySelector('[onclick*="\'de\'"]').click();
   } else if (browserLang.toLowerCase().startsWith('es')) {
