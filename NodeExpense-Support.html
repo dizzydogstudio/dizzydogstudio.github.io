@@ -256,7 +256,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -436,6 +436,50 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        What happens to receipt photos in a backup or export? Which export format carries the photo data?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>Where photos live:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Personal expense photos</strong> are stored only on this device and are included in your standard device backup (iCloud Backup).</li>
+          <li><strong>Group expense photos</strong> are stored in the cloud and remain accessible to every member of the group.</li>
+        </ul>
+        <strong>Export formats:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — the only format that can carry photo data, and only when <strong>Include Receipt Photos</strong> is enabled under Settings → Data &amp; Privacy. Personal photos travel as embedded image data; group photos travel as a cloud link.</li>
+          <li><strong>CSV</strong> — flags each row with <strong>Yes/No</strong> for whether a photo is attached. No image data is included.</li>
+          <li><strong>PDF</strong> — marks expenses with a 📎 next to the note. No image is embedded.</li>
+        </ul>
+        <strong>Include Receipt Photos</strong> is off by default to keep exports small. While off, JSON exports skip photo bytes — if you later restore only from JSON, group photos can still be retrieved from the cloud, but personal photos cannot be recovered. Keep your device backup enabled, or turn the toggle on before exporting, to preserve personal photos.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I add or change my profile photo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        In the <strong>Groups</strong> tab, tap the <strong>Profile</strong> icon in the top-left corner to open the profile editor <span class="arrow">→</span> tap the circular avatar above your name <span class="arrow">→</span> choose <strong>Take Photo</strong>, <strong>Choose from Library</strong>, or <strong>Remove Photo</strong> <span class="arrow">→</span> tap <strong>Save</strong>. The photo will then appear next to your name on the Members tab of every group you belong to.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>Profile photos are a <strong>PRO subscription feature</strong>. Free users see only the initials avatar.</li>
+          <li>Photos are visible to <strong>all members</strong> of every group you join. Don't upload anything you wouldn't want a stranger to see — anyone you invite to a group, or who knows your group's share code, will see it.</li>
+          <li>Updating overwrites your previous photo. Choosing <strong>Remove Photo</strong> deletes the file from cloud storage.</li>
+          <li>If another member has uploaded an inappropriate photo, long-press their entry on the Members tab and choose <strong>Report Member</strong> — this opens an email to support with the relevant context pre-filled.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What does the number badge on the filter icon mean?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        The small red number on the filter icon (the three-line funnel symbol) shows how many <strong>categories</strong> you currently have selected as a filter. It appears on both the <strong>Expenses</strong> tab and inside a <strong>Group</strong>'s expense list. For example, a badge of <strong>2</strong> means two categories are active — only expenses in those two categories are shown. The badge does not count other active filters such as time range, sort order, Refunds Only, or Groups Only. To clear it, tap the filter icon <span class="arrow">→</span> tap <strong>All Categories</strong> (or tap <strong>Clear</strong> next to the Categories heading) <span class="arrow">→</span> tap <strong>Done</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         Why doesn't the "Spending Trend by Category" chart appear in the Year view?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -451,7 +495,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-04-25 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-05-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -621,6 +665,50 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        備份或匯出時，收據照片會發生什麼事？哪種匯出格式會包含照片資料？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>照片儲存位置：</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>個人費用照片</strong>僅儲存在本裝置上，並包含在標準裝置備份（iCloud 備份）中。</li>
+          <li><strong>群組費用照片</strong>儲存於雲端，群組所有成員皆可存取。</li>
+        </ul>
+        <strong>匯出格式：</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — 唯一可包含照片資料的格式，且僅在「設定 → 資料與隱私」中啟用<strong>包含收據照片</strong>時才會包含。個人照片以嵌入影像資料形式匯出，群組照片則以雲端連結形式匯出。</li>
+          <li><strong>CSV</strong> — 每列僅以<strong>是／否</strong>標示是否附有照片，不包含影像資料。</li>
+          <li><strong>PDF</strong> — 在備註旁標示 📎 圖示，但不嵌入影像。</li>
+        </ul>
+        為了讓匯出檔案保持精簡，<strong>包含收據照片</strong>預設為關閉。在關閉狀態下，JSON 匯出不會包含照片資料——若日後僅從 JSON 還原，群組照片仍可從雲端取得，但個人照片將無法復原。請保持裝置備份已啟用，或在匯出前開啟此選項，以保留個人照片。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何新增或變更我的個人頭像？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        在<strong>群組</strong>分頁中，點選左上角的<strong>個人資料</strong>圖示以開啟個人資料編輯器 <span class="arrow">→</span> 點選姓名上方的圓形頭像 <span class="arrow">→</span> 選擇<strong>拍照</strong>、<strong>從相簿選擇</strong>或<strong>移除照片</strong> <span class="arrow">→</span> 點選<strong>儲存</strong>。照片隨後會在您所屬的每個群組的「成員」分頁中顯示在您的姓名旁。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>個人頭像為 <strong>PRO 訂閱功能</strong>。免費使用者僅會顯示姓名首字母頭像。</li>
+          <li>照片對您加入的所有群組的<strong>所有成員</strong>可見。請勿上傳您不希望陌生人看到的內容 — 您邀請至群組的任何人，或知道群組分享代碼的人，都將看見它。</li>
+          <li>更新會覆寫您先前的照片。選擇<strong>移除照片</strong>會從雲端儲存中刪除該檔案。</li>
+          <li>若其他成員上傳了不當照片，請長按「成員」分頁中該成員的項目，並選擇<strong>檢舉成員</strong> — 這將開啟一封寄給支援團隊的電子郵件，並預填相關背景資訊。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        篩選圖示上的數字徽章代表什麼？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        篩選圖示（三條橫線的漏斗符號）上的小紅色數字，代表您目前已選取的<strong>分類</strong>篩選數量。此徽章會出現在<strong>費用</strong>分頁及<strong>群組</strong>的費用列表中。例如，徽章顯示 <strong>2</strong>，表示有兩個分類已啟用篩選，畫面中只會顯示屬於這兩個分類的費用。此數字不計算其他篩選條件，例如時間範圍、排序方式、僅限退款或僅限群組。若要清除，請點選篩選圖示 <span class="arrow">→</span> 點選<strong>所有分類</strong>（或點選分類標題旁的<strong>清除</strong>） <span class="arrow">→</span> 點選<strong>完成</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         為什麼在年檢視中看不到「按分類支出趨勢」圖表？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -636,7 +724,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-04-25 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-05-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -806,6 +894,50 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        备份或导出时，收据照片会发生什么？哪种导出格式会包含照片数据？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>照片存储位置：</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>个人费用照片</strong>仅存储在本设备上，并包含在标准设备备份（iCloud 备份）中。</li>
+          <li><strong>群组费用照片</strong>存储在云端，群组所有成员都可访问。</li>
+        </ul>
+        <strong>导出格式：</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — 唯一可以包含照片数据的格式，且仅在"设置 → 数据与隐私"中启用<strong>包含收据照片</strong>时才会包含。个人照片以嵌入图像数据形式导出，群组照片则以云端链接形式导出。</li>
+          <li><strong>CSV</strong> — 每行仅以<strong>是／否</strong>标记是否附有照片，不包含图像数据。</li>
+          <li><strong>PDF</strong> — 在备注旁标记 📎 图标，但不嵌入图像。</li>
+        </ul>
+        为了让导出文件保持精简，<strong>包含收据照片</strong>默认为关闭。在关闭状态下，JSON 导出不会包含照片数据——如果之后仅从 JSON 还原，群组照片仍可从云端获取，但个人照片将无法恢复。请保持设备备份已启用，或在导出前打开此选项，以保留个人照片。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何添加或更改我的个人头像？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        在<strong>群组</strong>标签页中，轻点左上角的<strong>个人资料</strong>图标以打开个人资料编辑器 <span class="arrow">→</span> 点击姓名上方的圆形头像 <span class="arrow">→</span> 选择<strong>拍照</strong>、<strong>从相册选择</strong>或<strong>移除照片</strong> <span class="arrow">→</span> 点击<strong>保存</strong>。照片随后会在您所属的每个群组的"成员"标签页中显示在您的姓名旁。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>个人头像为 <strong>PRO 订阅功能</strong>。免费用户仅显示姓名首字母头像。</li>
+          <li>照片对您加入的所有群组的<strong>所有成员</strong>可见。请勿上传您不希望陌生人看到的内容 — 您邀请到群组的任何人，或知道群组分享代码的人，都将看到它。</li>
+          <li>更新会覆盖您之前的照片。选择<strong>移除照片</strong>会从云端存储中删除该文件。</li>
+          <li>如果其他成员上传了不当照片，请长按"成员"标签页中该成员的项目，并选择<strong>举报成员</strong> — 这将打开一封发往支持团队的电子邮件，并预填相关背景信息。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        筛选图标上的数字徽章代表什么？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        筛选图标（三条横线的漏斗符号）上的小红色数字，表示您当前已选择的<strong>分类</strong>筛选数量。该徽章会出现在<strong>支出</strong>标签页及<strong>群组</strong>的支出列表中。例如，徽章显示 <strong>2</strong>，代表有两个分类处于筛选状态，列表中只会显示属于这两个分类的支出。此数字不统计其他筛选条件，例如时间范围、排序方式、仅限退款或仅限群组。若要清除，轻点筛选图标 <span class="arrow">→</span> 轻点<strong>所有分类</strong>（或轻点分类标题旁的<strong>清除</strong>） <span class="arrow">→</span> 轻点<strong>完成</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         为什么在年视图中看不到"按分类支出趋势"图表？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -821,7 +953,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-04-25 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-05-03 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -991,6 +1123,50 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        バックアップやエクスポート時にレシート写真はどうなりますか？どのエクスポート形式が写真データを含みますか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>写真の保存場所：</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>個人の費用写真</strong>はこのデバイスのみに保存され、標準のデバイスバックアップ（iCloud バックアップ）に含まれます。</li>
+          <li><strong>グループの費用写真</strong>はクラウドに保存され、グループの全メンバーがアクセスできます。</li>
+        </ul>
+        <strong>エクスポート形式：</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — 写真データを含められる唯一の形式で、「設定 → データとプライバシー」の<strong>レシート写真を含める</strong>を有効にした場合のみ含まれます。個人写真は埋め込み画像データとして、グループ写真はクラウドリンクとしてエクスポートされます。</li>
+          <li><strong>CSV</strong> — 各行に写真の有無を<strong>はい／いいえ</strong>で示すのみで、画像データは含まれません。</li>
+          <li><strong>PDF</strong> — メモの横に 📎 を表示しますが、画像は埋め込まれません。</li>
+        </ul>
+        エクスポートファイルを小さく保つため、<strong>レシート写真を含める</strong>は初期設定でオフになっています。オフの状態では、JSON エクスポートに写真データは含まれません。後で JSON のみから復元した場合、グループ写真はクラウドから取得できますが、個人写真は復元できません。個人写真を保全するには、デバイスのバックアップを有効にしておくか、エクスポート前にこのトグルをオンにしてください。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        プロフィール写真を追加または変更するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>グループ</strong>タブで左上の<strong>プロフィール</strong>アイコンをタップしてプロフィールエディタを開く <span class="arrow">→</span> 名前の上の丸いアバターをタップ <span class="arrow">→</span> <strong>写真を撮る</strong>、<strong>ライブラリから選ぶ</strong>、または<strong>写真を削除</strong>を選択 <span class="arrow">→</span> <strong>保存</strong>をタップ。写真は所属するすべてのグループの「メンバー」タブで、お名前の横に表示されます。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>プロフィール写真は <strong>PRO サブスクリプション機能</strong>です。無料ユーザーには頭文字のみのアバターが表示されます。</li>
+          <li>写真は参加するすべてのグループの<strong>全メンバー</strong>に表示されます。見知らぬ人に見られたくないものはアップロードしないでください — グループに招待した人、またはグループの共有コードを知っている人は誰でもこれを目にします。</li>
+          <li>更新すると以前の写真が上書きされます。<strong>写真を削除</strong>を選択するとクラウドストレージからファイルが削除されます。</li>
+          <li>他のメンバーが不適切な写真をアップロードしている場合は、「メンバー」タブで該当メンバーの項目を長押しし、<strong>メンバーを報告</strong>を選択してください — 関連情報があらかじめ入力された電子メールがサポート宛てに開きます。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        フィルターアイコンの数字バッジは何を意味しますか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        フィルターアイコン（3本線の漏斗マーク）上の小さな赤い数字は、現在選択している<strong>カテゴリー</strong>フィルターの数を示しています。このバッジは<strong>支出</strong>タブおよび<strong>グループ</strong>の支出リストの両方に表示されます。例えば <strong>2</strong> と表示されている場合、2つのカテゴリーが有効になっており、そのカテゴリーの支出のみが表示されます。時間範囲・並び順・払い戻しのみ・グループのみなど、他のフィルターはこの数字に含まれません。解除するには、フィルターアイコンをタップ <span class="arrow">→</span> <strong>すべてのカテゴリー</strong>をタップ（またはカテゴリー見出し横の<strong>クリア</strong>をタップ） <span class="arrow">→</span> <strong>完了</strong>をタップしてください。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         年ビューに「カテゴリー別支出推移」グラフが表示されないのはなぜですか？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -1006,7 +1182,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1186,6 +1362,50 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        Was passiert mit Belegfotos bei einem Backup oder Export? Welches Exportformat enthält die Fotodaten?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>Wo Fotos gespeichert werden:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Fotos persönlicher Ausgaben</strong> werden ausschließlich auf diesem Gerät gespeichert und sind in Ihrem regulären Geräte-Backup (iCloud-Backup) enthalten.</li>
+          <li><strong>Fotos von Gruppenausgaben</strong> werden in der Cloud gespeichert und sind für alle Mitglieder der Gruppe zugänglich.</li>
+        </ul>
+        <strong>Exportformate:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — das einzige Format, das Fotodaten enthalten kann, und nur, wenn <strong>Belegfotos einschließen</strong> unter Einstellungen → Daten &amp; Datenschutz aktiviert ist. Persönliche Fotos werden als eingebettete Bilddaten exportiert; Gruppenfotos werden als Cloud-Link exportiert.</li>
+          <li><strong>CSV</strong> — markiert jede Zeile mit <strong>Ja/Nein</strong>, ob ein Foto angehängt ist. Keine Bilddaten enthalten.</li>
+          <li><strong>PDF</strong> — kennzeichnet Ausgaben mit einem 📎 neben der Notiz. Es wird kein Bild eingebettet.</li>
+        </ul>
+        <strong>Belegfotos einschließen</strong> ist standardmäßig deaktiviert, damit Exporte klein bleiben. Im deaktivierten Zustand enthalten JSON-Exporte keine Fotodaten — bei einer späteren Wiederherstellung nur aus JSON können Gruppenfotos weiterhin aus der Cloud abgerufen werden, persönliche Fotos jedoch nicht. Halten Sie Ihr Geräte-Backup aktiviert oder schalten Sie die Option vor dem Export ein, um persönliche Fotos zu erhalten.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie füge ich ein Profilfoto hinzu oder ändere es?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie im Tab <strong>Gruppen</strong> auf das <strong>Profil</strong>-Symbol oben links, um den Profil-Editor zu öffnen <span class="arrow">→</span> tippen Sie auf den runden Avatar über Ihrem Namen <span class="arrow">→</span> wählen Sie <strong>Foto aufnehmen</strong>, <strong>Aus Bibliothek wählen</strong> oder <strong>Foto entfernen</strong> <span class="arrow">→</span> tippen Sie auf <strong>Speichern</strong>. Das Foto erscheint dann im Tab „Mitglieder" jeder Gruppe, der Sie angehören, neben Ihrem Namen.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>Profilfotos sind eine <strong>PRO-Abonnementfunktion</strong>. Kostenlose Nutzer sehen nur den Initialen-Avatar.</li>
+          <li>Fotos sind für <strong>alle Mitglieder</strong> jeder Gruppe sichtbar, der Sie beitreten. Laden Sie nichts hoch, was Sie keinem Fremden zeigen würden — jeder, den Sie in eine Gruppe einladen oder der den Freigabecode Ihrer Gruppe kennt, wird es sehen.</li>
+          <li>Beim Aktualisieren wird Ihr vorheriges Foto überschrieben. <strong>Foto entfernen</strong> löscht die Datei aus dem Cloud-Speicher.</li>
+          <li>Wenn ein anderes Mitglied ein unangemessenes Foto hochgeladen hat, drücken Sie lange auf den Eintrag im Tab „Mitglieder" und wählen Sie <strong>Mitglied melden</strong> — dadurch öffnet sich eine E-Mail an den Support mit relevantem Kontext im Voraus ausgefüllt.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Was bedeutet die Zahl auf dem Filtersymbol?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Die kleine rote Zahl auf dem Filtersymbol (das Trichter-Symbol mit drei Linien) zeigt an, wie viele <strong>Kategorien</strong> Sie aktuell als Filter ausgewählt haben. Sie erscheint sowohl im Tab <strong>Ausgaben</strong> als auch in der Ausgabenliste einer <strong>Gruppe</strong>. Ein Abzeichen mit <strong>2</strong> bedeutet beispielsweise, dass zwei Kategorien aktiv sind – es werden nur Ausgaben aus diesen beiden Kategorien angezeigt. Andere aktive Filter wie Zeitraum, Sortierung, „Nur Erstattungen" oder „Nur Gruppen" werden in dieser Zahl nicht mitgezählt. Zum Zurücksetzen: Filtersymbol tippen <span class="arrow">→</span> <strong>Alle Kategorien</strong> tippen (oder <strong>Löschen</strong> neben der Kategorieüberschrift) <span class="arrow">→</span> <strong>Fertig</strong> tippen.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         Warum erscheint das Diagramm „Ausgabentrend nach Kategorie" in der Jahresansicht nicht?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -1201,7 +1421,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1381,6 +1601,50 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Qué ocurre con las fotos de recibos en una copia de seguridad o exportación? ¿Qué formato de exportación contiene los datos de las fotos?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>Dónde se almacenan las fotos:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Fotos de gastos personales</strong> se almacenan únicamente en este dispositivo y se incluyen en la copia de seguridad estándar del dispositivo (iCloud Backup).</li>
+          <li><strong>Fotos de gastos de grupo</strong> se almacenan en la nube y son accesibles para todos los miembros del grupo.</li>
+        </ul>
+        <strong>Formatos de exportación:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — el único formato que puede contener datos de fotos, y solo cuando <strong>Incluir fotos de recibos</strong> está activado en Ajustes → Datos y privacidad. Las fotos personales viajan como datos de imagen incrustados; las fotos de grupo viajan como un enlace a la nube.</li>
+          <li><strong>CSV</strong> — marca cada fila con <strong>Sí/No</strong> según si tiene foto adjunta. No incluye datos de imagen.</li>
+          <li><strong>PDF</strong> — señala los gastos con un 📎 junto a la nota. No incrusta imágenes.</li>
+        </ul>
+        <strong>Incluir fotos de recibos</strong> está desactivado de forma predeterminada para mantener exportaciones pequeñas. Mientras esté desactivado, las exportaciones JSON no contienen datos de fotos — si más adelante restaura solo desde JSON, las fotos de grupo seguirán recuperándose desde la nube, pero las fotos personales no podrán recuperarse. Mantenga activada la copia de seguridad de su dispositivo, o active la opción antes de exportar, para conservar las fotos personales.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo añado o cambio mi foto de perfil?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        En la pestaña <strong>Grupos</strong>, toque el icono de <strong>Perfil</strong> en la esquina superior izquierda para abrir el editor de perfil <span class="arrow">→</span> toque el avatar circular encima de su nombre <span class="arrow">→</span> elija <strong>Tomar foto</strong>, <strong>Elegir de la biblioteca</strong> o <strong>Eliminar foto</strong> <span class="arrow">→</span> toque <strong>Guardar</strong>. La foto aparecerá entonces junto a su nombre en la pestaña Miembros de cada grupo al que pertenezca.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>Las fotos de perfil son una <strong>función de suscripción PRO</strong>. Los usuarios gratuitos solo ven el avatar de iniciales.</li>
+          <li>Las fotos son visibles para <strong>todos los miembros</strong> de cualquier grupo al que se una. No suba nada que no quiera que vea un desconocido — cualquiera al que invite a un grupo, o que conozca el código de invitación de su grupo, podrá verla.</li>
+          <li>Actualizar sobrescribe su foto anterior. Elegir <strong>Eliminar foto</strong> borra el archivo del almacenamiento en la nube.</li>
+          <li>Si otro miembro ha subido una foto inapropiada, mantenga pulsada su entrada en la pestaña Miembros y elija <strong>Reportar miembro</strong> — esto abre un correo electrónico al soporte con el contexto relevante predefinido.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Qué significa el número que aparece sobre el icono de filtro?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        El pequeño número rojo sobre el icono de filtro (el símbolo de embudo con tres líneas) indica cuántas <strong>categorías</strong> tienes seleccionadas como filtro en ese momento. Aparece tanto en la pestaña <strong>Gastos</strong> como en la lista de gastos de un <strong>Grupo</strong>. Por ejemplo, un distintivo con <strong>2</strong> significa que hay dos categorías activas y solo se muestran los gastos de esas dos categorías. No cuenta otros filtros activos como el intervalo de tiempo, el orden, Solo reembolsos o Solo grupos. Para eliminarlo, toca el icono de filtro <span class="arrow">→</span> toca <strong>Todas las categorías</strong> (o toca <strong>Borrar</strong> junto al encabezado de Categorías) <span class="arrow">→</span> toca <strong>Hecho</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         ¿Por qué no aparece el gráfico "Tendencia de gasto por categoría" en la vista Año?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -1396,7 +1660,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-25 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1576,6 +1840,50 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        Que deviennent les photos de reçus lors d'une sauvegarde ou d'un export ? Quel format d'export contient les données des photos ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>Où sont stockées les photos :</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Les photos de dépenses personnelles</strong> sont stockées uniquement sur cet appareil et sont incluses dans votre sauvegarde standard (iCloud Backup).</li>
+          <li><strong>Les photos de dépenses de groupe</strong> sont stockées dans le cloud et restent accessibles à tous les membres du groupe.</li>
+        </ul>
+        <strong>Formats d'export :</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — le seul format pouvant contenir les données des photos, et uniquement lorsque <strong>Inclure les photos de reçus</strong> est activé dans Réglages → Données et confidentialité. Les photos personnelles sont exportées sous forme de données image intégrées ; les photos de groupe sont exportées sous forme de lien cloud.</li>
+          <li><strong>CSV</strong> — indique pour chaque ligne <strong>Oui/Non</strong> selon la présence d'une photo. Aucune donnée image n'est incluse.</li>
+          <li><strong>PDF</strong> — marque les dépenses avec un 📎 à côté de la note. Aucune image n'est intégrée.</li>
+        </ul>
+        <strong>Inclure les photos de reçus</strong> est désactivé par défaut afin que les exports restent légers. Tant que l'option est désactivée, les exports JSON ne contiennent pas les données des photos — si vous restaurez ensuite uniquement depuis JSON, les photos de groupe peuvent toujours être récupérées depuis le cloud, mais les photos personnelles ne peuvent pas être récupérées. Gardez la sauvegarde de votre appareil activée, ou activez l'option avant d'exporter, pour préserver les photos personnelles.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment ajouter ou modifier ma photo de profil ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Dans l'onglet <strong>Groupes</strong>, appuyez sur l'icône <strong>Profil</strong> en haut à gauche pour ouvrir l'éditeur de profil <span class="arrow">→</span> appuyez sur l'avatar circulaire au-dessus de votre nom <span class="arrow">→</span> choisissez <strong>Prendre une photo</strong>, <strong>Choisir dans la bibliothèque</strong> ou <strong>Supprimer la photo</strong> <span class="arrow">→</span> appuyez sur <strong>Enregistrer</strong>. La photo apparaîtra alors à côté de votre nom dans l'onglet Membres de chaque groupe auquel vous appartenez.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>Les photos de profil sont une <strong>fonctionnalité d'abonnement PRO</strong>. Les utilisateurs gratuits ne voient que l'avatar avec les initiales.</li>
+          <li>Les photos sont visibles par <strong>tous les membres</strong> de chaque groupe que vous rejoignez. Ne téléversez rien que vous ne voudriez pas qu'un inconnu voie — toute personne que vous invitez dans un groupe, ou qui connaît le code de partage de votre groupe, la verra.</li>
+          <li>La mise à jour écrase votre photo précédente. <strong>Supprimer la photo</strong> efface le fichier du stockage cloud.</li>
+          <li>Si un autre membre a téléversé une photo inappropriée, appuyez longuement sur son entrée dans l'onglet Membres et choisissez <strong>Signaler le membre</strong> — cela ouvre un e-mail au support avec le contexte pertinent prérempli.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Que signifie le nombre affiché sur l'icône de filtre ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Le petit nombre rouge sur l'icône de filtre (le symbole d'entonnoir à trois lignes) indique combien de <strong>catégories</strong> vous avez actuellement sélectionnées comme filtre. Il apparaît aussi bien dans l'onglet <strong>Dépenses</strong> que dans la liste des dépenses d'un <strong>Groupe</strong>. Par exemple, un badge <strong>2</strong> signifie que deux catégories sont actives — seules les dépenses appartenant à ces deux catégories sont affichées. Ce nombre ne comptabilise pas les autres filtres actifs tels que la plage de dates, l'ordre de tri, Remboursements uniquement ou Groupes uniquement. Pour le supprimer, appuyez sur l'icône de filtre <span class="arrow">→</span> appuyez sur <strong>Toutes les catégories</strong> (ou appuyez sur <strong>Effacer</strong> à côté de l'en-tête Catégories) <span class="arrow">→</span> appuyez sur <strong>Terminé</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         Pourquoi le graphique « Tendance des dépenses par catégorie » n'apparaît-il pas dans la vue Année ?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -1592,7 +1900,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-04-25 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1665,6 +1973,39 @@
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">지출을 어떻게 내보내나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>데이터 내보내기</strong>. JSON, CSV 또는 PDF를 선택하세요. PRO 구독 또는 활성 무료 체험이 필요합니다.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">백업이나 내보내기 시 영수증 사진은 어떻게 되나요? 어떤 내보내기 형식이 사진 데이터를 포함하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">
+        <strong>사진이 저장되는 위치:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>개인 지출 사진</strong>은 이 기기에만 저장되며, 일반 기기 백업(iCloud 백업)에 포함됩니다.</li>
+          <li><strong>그룹 지출 사진</strong>은 클라우드에 저장되며, 그룹의 모든 멤버가 접근할 수 있습니다.</li>
+        </ul>
+        <strong>내보내기 형식:</strong>
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>JSON</strong> — 사진 데이터를 포함할 수 있는 유일한 형식이며, 설정 → 데이터 및 개인정보 보호에서 <strong>영수증 사진 포함</strong>을 활성화한 경우에만 포함됩니다. 개인 사진은 임베디드 이미지 데이터로, 그룹 사진은 클라우드 링크로 내보내집니다.</li>
+          <li><strong>CSV</strong> — 각 행에 사진 첨부 여부를 <strong>예/아니오</strong>로만 표시하며, 이미지 데이터는 포함되지 않습니다.</li>
+          <li><strong>PDF</strong> — 메모 옆에 📎 표시만 추가하며, 이미지는 포함되지 않습니다.</li>
+        </ul>
+        내보내기 파일을 작게 유지하기 위해 <strong>영수증 사진 포함</strong>은 기본적으로 꺼져 있습니다. 꺼진 상태에서는 JSON 내보내기에 사진 데이터가 포함되지 않으며, 나중에 JSON에서만 복원하면 그룹 사진은 클라우드에서 다시 가져올 수 있지만 개인 사진은 복구할 수 없습니다. 개인 사진을 보존하려면 기기 백업을 활성화 상태로 유지하거나, 내보내기 전에 이 옵션을 켜세요.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">프로필 사진을 추가하거나 변경하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">
+        <strong>그룹</strong> 탭에서 왼쪽 상단의 <strong>프로필</strong> 아이콘을 탭하여 프로필 편집기를 엽니다 <span class="arrow">→</span> 이름 위의 원형 아바타를 탭합니다 <span class="arrow">→</span> <strong>사진 촬영</strong>, <strong>라이브러리에서 선택</strong> 또는 <strong>사진 제거</strong>를 선택합니다 <span class="arrow">→</span> <strong>저장</strong>을 탭합니다. 그러면 사진이 소속된 모든 그룹의 "멤버" 탭에서 이름 옆에 표시됩니다.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>프로필 사진은 <strong>PRO 구독 기능</strong>입니다. 무료 사용자는 이니셜 아바타만 표시됩니다.</li>
+          <li>사진은 참가하는 모든 그룹의 <strong>모든 멤버</strong>에게 표시됩니다. 낯선 사람이 보는 것을 원하지 않는 내용은 업로드하지 마세요 — 그룹에 초대한 모든 사람, 또는 그룹 공유 코드를 아는 사람은 누구나 이를 볼 수 있습니다.</li>
+          <li>업데이트하면 이전 사진이 덮어쓰기됩니다. <strong>사진 제거</strong>를 선택하면 클라우드 저장소에서 파일이 삭제됩니다.</li>
+          <li>다른 멤버가 부적절한 사진을 업로드한 경우, "멤버" 탭에서 해당 멤버의 항목을 길게 누르고 <strong>멤버 신고</strong>를 선택하세요 — 그러면 관련 컨텍스트가 미리 입력된 이메일이 지원팀에 열립니다.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">필터 아이콘 위의 숫자 배지는 무엇을 의미하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">필터 아이콘(세 줄 깔때기 모양) 위의 작은 빨간 숫자는 현재 선택된 <strong>카테고리</strong> 필터의 개수를 나타냅니다. 이 배지는 <strong>지출</strong> 탭과 <strong>그룹</strong>의 지출 목록 모두에 표시됩니다. 예를 들어 배지에 <strong>2</strong>가 표시되면 두 개의 카테고리가 활성화되어 있으며, 해당 두 카테고리에 속하는 지출만 표시됩니다. 시간 범위, 정렬 순서, 환불만 보기, 그룹만 보기 등 다른 활성 필터는 이 숫자에 포함되지 않습니다. 해제하려면 필터 아이콘을 탭하세요 <span class="arrow">→</span> <strong>모든 카테고리</strong>를 탭하세요 (또는 카테고리 헤더 옆 <strong>지우기</strong> 탭) <span class="arrow">→</span> <strong>완료</strong>를 탭하세요.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">연도 보기에서 "카테고리별 지출 추세" 차트가 왜 표시되지 않나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
