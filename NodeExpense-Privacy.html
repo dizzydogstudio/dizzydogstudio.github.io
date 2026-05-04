@@ -268,7 +268,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -283,6 +283,8 @@
         <li>Group expenses and settlements</li>
         <li>Display name</li>
         <li>Optional payment handles (Venmo, Cash App, PayPal.me)</li>
+        <li>Optional receipt photos attached to expenses (PRO subscription feature)</li>
+        <li>Optional profile photo, visible to all members of any group you join (PRO subscription feature)</li>
         <li>Optional location data</li>
         <li>Selected calendar access</li>
       </ul>
@@ -311,6 +313,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>Banner, rewarded, and interstitial advertisements</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Anonymous usage analytics</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Group data syncing (expenses, members, settlements, deletion requests)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Receipt photo storage for group expenses and user profile photos (compressed JPEG, accessible to authenticated users)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonymous user identification for subscription continuity</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Background tasks including group deletion and push notification delivery</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push notifications for group activity</td></tr>
@@ -333,22 +336,26 @@
   <p>The following data is stored locally using SwiftData (Apple's secure local storage framework):</p>
   <ul>
     <li>Personal (non-group) expense records</li>
+    <li>Personal expense receipt photos (PRO subscription feature; never uploaded to any cloud service)</li>
     <li>App settings and preferences</li>
     <li>Local copies of group data for offline access</li>
     <li>Cached group expenses for offline viewing</li>
   </ul>
-  <p>Personal expense data never leaves your device unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker.</p>
+  <p>Personal expense data — including any attached receipt photos — never leaves your device unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker.</p>
 
   <h3>7.2 Cloud Storage for Group Features</h3>
-  <p>For group features, selected data is synced to Firebase Firestore:</p>
+  <p>For group features, selected data is synced to Firebase Firestore (and Firebase Storage for photos):</p>
   <ul>
     <li>Group documents (name, description, icon, members, permissions, share code)</li>
     <li>Group expenses (amount, category, note, date, location if enabled, payer identity)</li>
+    <li>Group expense receipt photos (compressed JPEG, stored in Firebase Storage and visible to all members of the group; PRO subscription feature)</li>
+    <li>User profile photos (compressed JPEG, stored at <code>users/{userID}/profile.jpg</code> in Firebase Storage; readable by any authenticated user, writable only by the photo's owner; visible to all members of every group you join; PRO subscription feature)</li>
     <li>Group settlements (payment records between members)</li>
     <li>Group deletion requests and member votes</li>
     <li>Trial start dates (for reinstall recovery)</li>
     <li>Push notification tokens (FCM)</li>
     <li>Optional payment handles for settle-up deep links (Venmo, Cash App, PayPal.me usernames)</li>
+    <li><strong>Group activity history</strong> — a record of every action performed in the group (expenses added, edited, refunded, or deleted; members who joined, left, or were removed). This data is stored in Firebase Firestore and is <strong>automatically and permanently deleted after 90 days</strong>. Activity older than 90 days cannot be recovered.</li>
   </ul>
   <div class="highlight-box">Payment handles are <strong>public usernames only</strong> (e.g., your <code>@venmo</code> or <code>$cashtag</code>), provided by you so group members can tap to open the Venmo, Cash App, or PayPal app and pay you directly. These handles are <strong>not</strong> payment credentials, bank details, or account numbers, and no money flows through Node Expense — all payments happen inside the third-party app you choose to open.</div>
 
@@ -368,6 +375,9 @@
     <li>Delete individual or all personal expenses from within Node Expense</li>
     <li>Leave or request deletion of a group — group data is removed from Firebase when all members agree</li>
     <li>Group expenses marked as 'keep on deletion' remain on your device locally; they are not re-uploaded</li>
+    <li>When a group is deleted with 'remove records' selected, every receipt photo for that group is also deleted from Firebase Storage. When 'keep records' is chosen, the photos remain in Firebase Storage so original members can still view them on their own devices.</li>
+    <li>Removing a receipt photo from a group expense (via the Edit screen) deletes the underlying file from Firebase Storage.</li>
+    <li>Updating your profile photo overwrites the previous file at <code>users/{userID}/profile.jpg</code>. Choosing "Remove Photo" deletes the file from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing devices may retain a cached copy until next sync.</li>
     <li>Uninstalling Node Expense removes all locally stored data from your device</li>
   </ul>
   <p>Note: Firebase group data may persist until the group is formally deleted through the in-app deletion flow.</p>
@@ -396,7 +406,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-04-19 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-05-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -411,6 +421,8 @@
         <li>群組費用與結算</li>
         <li>顯示名稱</li>
         <li>選填的付款帳號（Venmo、Cash App、PayPal.me）</li>
+        <li>選填的費用收據照片（PRO 訂閱功能）</li>
+        <li>選填的個人頭像，您加入的所有群組的成員皆可見（PRO 訂閱功能）</li>
         <li>選填的位置資料</li>
         <li>所選行事曆存取</li>
       </ul>
@@ -439,6 +451,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>橫幅、獎勵及插頁式廣告</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群組資料同步（費用、成員、結算、刪除請求）</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>群組費用的收據照片儲存與使用者個人頭像（壓縮 JPEG，可由已驗證使用者存取）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>用於訂閱連續性的匿名使用者識別</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>背景工作，包括群組刪除及推播通知傳送</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群組活動的推播通知</td></tr>
@@ -461,24 +474,27 @@
   <p>以下資料使用 SwiftData（Apple 的安全本機儲存框架）儲存於您的裝置本機：</p>
   <ul>
     <li>個人（非群組）費用記錄</li>
+    <li>個人費用的收據照片（PRO 訂閱功能；不會上傳至任何雲端服務）</li>
     <li>應用程式設定與偏好設定</li>
     <li>群組資料的本機副本（供離線存取）</li>
     <li>群組費用的快取（供離線檢視）</li>
   </ul>
-  <p>個人費用資料不會離開您的裝置，除非您明確匯出或備份。已刪除群組的費用將在您的裝置本機保留，並標示為「已刪除群組」。</p>
+  <p>個人費用資料——包括所附加的收據照片——不會離開您的裝置，除非您明確匯出或備份。已刪除群組的費用將在您的裝置本機保留，並標示為「已刪除群組」。</p>
 
   <h3>7.2 群組功能的雲端儲存</h3>
-  <p>針對群組功能，所選資料將同步至 Firebase Firestore：</p>
+  <p>針對群組功能，所選資料將同步至 Firebase Firestore（照片則同步至 Firebase Storage）：</p>
   <ul>
     <li>群組文件（名稱、說明、圖示、成員、權限、分享碼）</li>
     <li>群組費用（金額、類別、備註、日期、位置（若已啟用）、付款人身份）</li>
+    <li>群組費用收據照片（壓縮 JPEG，儲存於 Firebase Storage，所有群組成員皆可檢視；PRO 訂閱功能）</li>
+    <li>使用者個人頭像（壓縮 JPEG，儲存於 Firebase Storage 的 <code>users/{userID}/profile.jpg</code>；任何已驗證使用者皆可讀取，僅照片擁有者可寫入；您加入的所有群組成員皆可見；PRO 訂閱功能）</li>
     <li>群組結算（成員之間的付款記錄）</li>
     <li>群組刪除請求及成員投票</li>
     <li>試用開始日期（用於重新安裝後的復原）</li>
     <li>推播通知權杖（FCM）</li>
     <li>用於結算深度連結的選填付款帳號（Venmo、Cash App、PayPal.me 使用者名稱）</li>
-  </ul>
-  <div class="highlight-box">付款帳號<strong>僅為公開的使用者名稱</strong>（例如您的 <code>@venmo</code> 或 <code>$cashtag</code>），由您提供，讓群組成員可點擊直接開啟 Venmo、Cash App 或 PayPal 應用程式向您付款。這些帳號<strong>並非</strong>付款憑證、銀行資訊或帳號密碼，也沒有任何款項透過 Node Expense 轉移——所有付款皆在您所選擇開啟的第三方應用程式中完成。</div>
+    <li><strong>群組活動記錄</strong>——群組內所有操作的記錄（費用的新增、編輯、退款或刪除；成員的加入、離開或移除）。此資料儲存於 Firebase Firestore，並於 <strong>90 天後自動永久刪除</strong>。超過 90 天的活動記錄無法復原。</li>
+  </ul>（例如您的 <code>@venmo</code> 或 <code>$cashtag</code>），由您提供，讓群組成員可點擊直接開啟 Venmo、Cash App 或 PayPal 應用程式向您付款。這些帳號<strong>並非</strong>付款憑證、銀行資訊或帳號密碼，也沒有任何款項透過 Node Expense 轉移——所有付款皆在您所選擇開啟的第三方應用程式中完成。</div>
 
   <h3>7.3 加密與備份</h3>
   <ul>
@@ -496,6 +512,9 @@
     <li>在 Node Expense 中刪除個別或全部個人費用</li>
     <li>離開或請求刪除群組 — 當所有成員同意後，群組資料將從 Firebase 移除</li>
     <li>標示為「刪除時保留」的群組費用將保留於您的裝置本機；這些資料不會被重新上傳</li>
+    <li>當刪除群組時若選擇「移除記錄」，該群組的所有收據照片也會從 Firebase Storage 中刪除。若選擇「保留記錄」，照片將保留於 Firebase Storage 中，原群組成員仍可在自己的裝置上檢視。</li>
+    <li>從群組費用中移除收據照片（透過編輯畫面）會將底層檔案從 Firebase Storage 中刪除。</li>
+    <li>更新個人頭像會覆寫 <code>users/{userID}/profile.jpg</code> 的舊檔案。選擇「移除照片」會將檔案從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
     <li>解除安裝 Node Expense 將移除您裝置上所有本機儲存的資料</li>
   </ul>
   <p>注意：Firebase 群組資料可能在群組透過應用程式內的刪除流程正式刪除之前持續存在。</p>
@@ -524,7 +543,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-04-19 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-05-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -539,6 +558,8 @@
         <li>群组支出与结算</li>
         <li>显示名称</li>
         <li>可选的付款账号（Venmo、Cash App、PayPal.me）</li>
+        <li>可选的支出收据照片（PRO 订阅功能）</li>
+        <li>可选的个人头像，您加入的所有群组的成员均可见（PRO 订阅功能）</li>
         <li>可选的位置数据</li>
         <li>所选日历访问权限</li>
       </ul>
@@ -567,6 +588,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>横幅广告、激励广告和插屏广告</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群组数据同步（支出、成员、结算、删除申请）</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>群组支出的收据照片存储与用户个人头像（压缩 JPEG，已认证用户可访问）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>用于维护订阅连续性的匿名用户识别</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>后台任务，包括群组删除和推送通知发送</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群组活动的推送通知</td></tr>
@@ -589,22 +611,26 @@
   <p>以下数据使用 SwiftData（Apple 的安全本地存储框架）存储在您的设备本地：</p>
   <ul>
     <li>个人（非群组）支出记录</li>
+    <li>个人支出的收据照片（PRO 订阅功能；不会上传到任何云端服务）</li>
     <li>应用设置与偏好</li>
     <li>用于离线访问的群组数据本地副本</li>
     <li>用于离线查看的缓存群组支出</li>
   </ul>
-  <p>除非您明确导出或备份，否则个人支出数据绝不会离开您的设备。已删除群组的支出将保留在您的设备本地并带有"已删除群组"标记。</p>
+  <p>除非您明确导出或备份，否则个人支出数据——包括所附加的收据照片——绝不会离开您的设备。已删除群组的支出将保留在您的设备本地并带有"已删除群组"标记。</p>
 
   <h3>7.2 群组功能的云存储</h3>
-  <p>对于群组功能，选定的数据将同步到 Firebase Firestore：</p>
+  <p>对于群组功能，选定的数据将同步到 Firebase Firestore（照片同步至 Firebase Storage）：</p>
   <ul>
     <li>群组文档（名称、描述、图标、成员、权限、共享代码）</li>
     <li>群组支出（金额、分类、备注、日期、位置（若启用）、付款人身份）</li>
+    <li>群组支出的收据照片（压缩 JPEG，存储于 Firebase Storage，所有群组成员均可查看；PRO 订阅功能）</li>
+    <li>用户个人头像（压缩 JPEG，存储于 Firebase Storage 的 <code>users/{userID}/profile.jpg</code>；任何已认证用户均可读取，仅照片所有者可写入；您加入的所有群组成员均可见；PRO 订阅功能）</li>
     <li>群组结算（成员间的付款记录）</li>
     <li>群组删除申请和成员投票</li>
     <li>试用开始日期（用于重新安装恢复）</li>
     <li>推送通知令牌（FCM）</li>
     <li>用于结算深度链接的可选付款账号（Venmo、Cash App、PayPal.me 用户名）</li>
+    <li><strong>群组活动记录</strong>——群组内所有操作的记录（支出的添加、编辑、退款或删除；成员的加入、离开或移除）。此数据存储于 Firebase Firestore，并于 <strong>90 天后自动永久删除</strong>。超过 90 天的活动记录无法恢复。</li>
   </ul>
   <div class="highlight-box">付款账号<strong>仅为公开用户名</strong>（例如您的 <code>@venmo</code> 或 <code>$cashtag</code>），由您提供，以便群组成员可点击直接打开 Venmo、Cash App 或 PayPal 应用向您付款。这些账号<strong>不是</strong>支付凭证、银行信息或账号密码，也没有任何资金通过 Node Expense 流转——所有付款均在您所选择打开的第三方应用中完成。</div>
 
@@ -624,6 +650,9 @@
     <li>在 Node Expense 内删除单个或所有个人支出</li>
     <li>退出或申请删除群组——当所有成员同意时，群组数据将从 Firebase 中移除</li>
     <li>标记为"删除时保留"的群组支出将保留在您的设备本地；它们不会被重新上传</li>
+    <li>当删除群组时若选择"移除记录"，该群组的所有收据照片也会从 Firebase Storage 中删除。若选择"保留记录"，照片将保留在 Firebase Storage 中，原群组成员仍可在自己的设备上查看。</li>
+    <li>从群组支出中移除收据照片（通过编辑界面）会将底层文件从 Firebase Storage 中删除。</li>
+    <li>更新个人头像会覆盖 <code>users/{userID}/profile.jpg</code> 的旧文件。选择"移除照片"会将文件从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
     <li>卸载 Node Expense 将删除设备上存储的所有本地数据</li>
   </ul>
   <p>注意：Firebase 群组数据可能会保留，直到通过应用内删除流程正式删除群组。</p>
@@ -652,7 +681,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-04-19 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-05-03 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -667,6 +696,8 @@
         <li>グループ支出と精算</li>
         <li>表示名</li>
         <li>任意の支払いハンドル（Venmo、Cash App、PayPal.me）</li>
+        <li>任意の支出に添付されるレシート写真（PRO サブスクリプション機能）</li>
+        <li>任意のプロフィール写真。参加するすべてのグループのメンバーに表示されます（PRO サブスクリプション機能）</li>
         <li>任意の位置情報</li>
         <li>選択したカレンダーへのアクセス</li>
       </ul>
@@ -695,6 +726,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>バナー広告、リワード広告、インタースティシャル広告</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>匿名の利用分析</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>グループデータの同期（支出、メンバー、精算、削除リクエスト）</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>グループ支出のレシート写真およびユーザープロフィール写真の保存（圧縮 JPEG、認証済みユーザーがアクセス可能）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>サブスクリプション継続性のための匿名ユーザー識別</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>グループ削除やプッシュ通知配信を含むバックグラウンドタスク</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>グループアクティビティのプッシュ通知</td></tr>
@@ -717,24 +749,27 @@
   <p>以下のデータは SwiftData（Apple のセキュアなローカルストレージフレームワーク）を使用してデバイスにローカル保存されます：</p>
   <ul>
     <li>個人（非グループ）の支出記録</li>
+    <li>個人支出のレシート写真（PRO サブスクリプション機能。クラウドサービスにアップロードされることはありません）</li>
     <li>アプリの設定と環境設定</li>
     <li>オフラインアクセス用のグループデータのローカルコピー</li>
     <li>オフライン表示用のグループ支出のキャッシュ</li>
   </ul>
-  <p>個人の支出データは、明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。削除されたグループからの支出は、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。</p>
+  <p>個人の支出データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。削除されたグループからの支出は、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。</p>
 
   <h3>7.2 グループ機能のクラウドストレージ</h3>
-  <p>グループ機能では、選択されたデータが Firebase Firestore に同期されます：</p>
+  <p>グループ機能では、選択されたデータが Firebase Firestore（写真は Firebase Storage）に同期されます：</p>
   <ul>
     <li>グループドキュメント（名前、説明、アイコン、メンバー、権限、招待コード）</li>
     <li>グループ支出（金額、カテゴリ、メモ、日付、位置情報（有効時）、支払者の情報）</li>
+    <li>グループ支出のレシート写真（圧縮 JPEG、Firebase Storage に保存され、グループの全メンバーが閲覧可能。PRO サブスクリプション機能）</li>
+    <li>ユーザープロフィール写真（圧縮 JPEG、Firebase Storage の <code>users/{userID}/profile.jpg</code> に保存。認証済みユーザーは誰でも読み取り可能、書き込みは所有者のみ。参加するすべてのグループの全メンバーに表示。PRO サブスクリプション機能）</li>
     <li>グループ精算（メンバー間の支払い記録）</li>
     <li>グループ削除リクエストとメンバーの投票</li>
     <li>トライアル開始日（再インストール後の復元用）</li>
     <li>プッシュ通知トークン（FCM）</li>
     <li>精算用ディープリンクのための任意の支払いハンドル（Venmo、Cash App、PayPal.me のユーザー名）</li>
-  </ul>
-  <div class="highlight-box">支払いハンドルは<strong>公開のユーザー名のみ</strong>（例：<code>@venmo</code> や <code>$cashtag</code>）で、グループメンバーがタップして Venmo、Cash App、PayPal アプリを直接開いてお客様へ送金できるようにするためにお客様自身が提供する情報です。これらのハンドルは支払い認証情報、銀行情報、口座番号<strong>ではありません</strong>。また、Node Expense を経由して送金が行われることはなく、すべての支払いはお客様が選択して開いた第三者アプリ内で完結します。</div>
+    <li><strong>グループアクティビティ履歴</strong>——グループ内で行われたすべての操作の記録（支出の追加・編集・返金・削除、メンバーの参加・退出・除名）。このデータは Firebase Firestore に保存され、<strong>90日後に自動的かつ永続的に削除</strong>されます。90日以上前のアクティビティは復元できません。</li>
+  </ul>（例：<code>@venmo</code> や <code>$cashtag</code>）で、グループメンバーがタップして Venmo、Cash App、PayPal アプリを直接開いてお客様へ送金できるようにするためにお客様自身が提供する情報です。これらのハンドルは支払い認証情報、銀行情報、口座番号<strong>ではありません</strong>。また、Node Expense を経由して送金が行われることはなく、すべての支払いはお客様が選択して開いた第三者アプリ内で完結します。</div>
 
   <h3>7.3 暗号化とバックアップ</h3>
   <ul>
@@ -752,6 +787,9 @@
     <li>Node Expense 内で個別または全ての個人支出を削除</li>
     <li>グループを退出または削除リクエスト — 全メンバーが同意した場合、グループデータは Firebase から削除</li>
     <li>「削除時に保持」としてマークされたグループ支出はデバイスのローカルに残ります。再アップロードされることはありません</li>
+    <li>グループ削除時に「記録を削除」を選択した場合、そのグループのすべてのレシート写真も Firebase Storage から削除されます。「記録を保持」を選択した場合、写真は Firebase Storage に残り、元のメンバーは引き続き自分のデバイスで閲覧できます。</li>
+    <li>編集画面からグループ支出のレシート写真を削除すると、Firebase Storage 上の元ファイルも削除されます。</li>
+    <li>プロフィール写真を更新すると、<code>users/{userID}/profile.jpg</code> の以前のファイルが上書きされます。「写真を削除」を選択すると、ファイルは Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
     <li>Node Expense をアンインストールすると、デバイスに保存されているすべてのローカルデータが削除されます</li>
   </ul>
   <p>注意：Firebase のグループデータは、アプリ内の削除フローを通じてグループが正式に削除されるまで残る場合があります。</p>
@@ -780,7 +818,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -795,6 +833,8 @@
         <li>Gruppenausgaben und Abrechnungen</li>
         <li>Anzeigename</li>
         <li>Optionale Zahlungshandles (Venmo, Cash App, PayPal.me)</li>
+        <li>Optionale Belegfotos, die an Ausgaben angehängt werden (PRO-Abonnementfunktion)</li>
+        <li>Optionales Profilfoto, sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten (PRO-Abonnementfunktion)</li>
         <li>Optionale Standortdaten</li>
         <li>Zugriff auf ausgewählte Kalender</li>
       </ul>
@@ -823,6 +863,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>Banner-, Belohnungs- und Interstitial-Werbeanzeigen</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Anonyme Nutzungsanalysen</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisierung von Gruppendaten (Ausgaben, Mitglieder, Abrechnungen, Löschanfragen)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Speicherung von Belegfotos für Gruppenausgaben und Profilfotos der Nutzer (komprimiertes JPEG, für authentifizierte Nutzer zugänglich)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Benutzeridentifikation für Abonnementkontinuität</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Hintergrundaufgaben einschließlich Gruppenlöschung und Push-Benachrichtigungsversand</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push-Benachrichtigungen für Gruppenaktivitäten</td></tr>
@@ -845,24 +886,27 @@
   <p>Die folgenden Daten werden lokal mit SwiftData (Apples sicherem lokalem Speicher-Framework) gespeichert:</p>
   <ul>
     <li>Persönliche (nicht gruppenspezifische) Ausgabeneinträge</li>
+    <li>Belegfotos persönlicher Ausgaben (PRO-Abonnementfunktion; werden niemals in einen Cloud-Dienst hochgeladen)</li>
     <li>App-Einstellungen und Präferenzen</li>
     <li>Lokale Kopien von Gruppendaten für den Offline-Zugriff</li>
     <li>Zwischengespeicherte Gruppenausgaben zur Offline-Ansicht</li>
   </ul>
-  <p>Persönliche Ausgabendaten verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Ausgaben aus gelöschten Gruppen werden lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt.</p>
+  <p>Persönliche Ausgabendaten — einschließlich angehängter Belegfotos — verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Ausgaben aus gelöschten Gruppen werden lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt.</p>
 
   <h3>7.2 Cloud-Speicher für Gruppenfunktionen</h3>
-  <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore synchronisiert:</p>
+  <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore (und Fotos mit Firebase Storage) synchronisiert:</p>
   <ul>
     <li>Gruppendokumente (Name, Beschreibung, Symbol, Mitglieder, Berechtigungen, Freigabecode)</li>
     <li>Gruppenausgaben (Betrag, Kategorie, Notiz, Datum, Standort falls aktiviert, Zahleridentität)</li>
+    <li>Belegfotos von Gruppenausgaben (komprimiertes JPEG, in Firebase Storage gespeichert und für alle Mitglieder der Gruppe sichtbar; PRO-Abonnementfunktion)</li>
+    <li>Profilfotos der Nutzer (komprimiertes JPEG, gespeichert unter <code>users/{userID}/profile.jpg</code> in Firebase Storage; für jeden authentifizierten Nutzer lesbar, beschreibbar nur durch den Eigentümer; sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten; PRO-Abonnementfunktion)</li>
     <li>Gruppenabrechnungen (Zahlungsaufzeichnungen zwischen Mitgliedern)</li>
     <li>Gruppen-Löschanfragen und Mitgliederabstimmungen</li>
     <li>Teststart-Daten (zur Wiederherstellung nach Neuinstallation)</li>
     <li>Push-Benachrichtigungs-Token (FCM)</li>
     <li>Optionale Zahlungshandles für Abrechnungs-Deeplinks (Venmo, Cash App, PayPal.me-Benutzernamen)</li>
-  </ul>
-  <div class="highlight-box">Zahlungshandles sind <strong>ausschließlich öffentliche Benutzernamen</strong> (z. B. Ihr <code>@venmo</code> oder <code>$cashtag</code>), die Sie bereitstellen, damit Gruppenmitglieder tippen können, um die Venmo-, Cash App- oder PayPal-App zu öffnen und Sie direkt zu bezahlen. Diese Handles sind <strong>keine</strong> Zahlungsdaten, Bankdaten oder Kontonummern, und kein Geld fließt über Node Expense — alle Zahlungen erfolgen innerhalb der Drittanbieter-App, die Sie öffnen.</div>
+    <li><strong>Gruppenaktivitätsverlauf</strong> — eine Aufzeichnung aller in der Gruppe durchgeführten Aktionen (Ausgaben hinzugefügt, bearbeitet, erstattet oder gelöscht; Mitglieder beigetreten, ausgetreten oder entfernt). Diese Daten werden in Firebase Firestore gespeichert und nach <strong>90 Tagen automatisch und dauerhaft gelöscht</strong>. Aktivitäten, die älter als 90 Tage sind, können nicht wiederhergestellt werden.</li>
+  </ul> (z. B. Ihr <code>@venmo</code> oder <code>$cashtag</code>), die Sie bereitstellen, damit Gruppenmitglieder tippen können, um die Venmo-, Cash App- oder PayPal-App zu öffnen und Sie direkt zu bezahlen. Diese Handles sind <strong>keine</strong> Zahlungsdaten, Bankdaten oder Kontonummern, und kein Geld fließt über Node Expense — alle Zahlungen erfolgen innerhalb der Drittanbieter-App, die Sie öffnen.</div>
 
   <h3>7.3 Verschlüsselung &amp; Backups</h3>
   <ul>
@@ -880,6 +924,9 @@
     <li>Einzelne oder alle persönlichen Ausgaben innerhalb von Node Expense löschen</li>
     <li>Eine Gruppe verlassen oder deren Löschung beantragen — Gruppendaten werden aus Firebase entfernt, wenn alle Mitglieder zustimmen</li>
     <li>Gruppenausgaben, die als „Bei Löschung behalten" markiert sind, verbleiben lokal auf Ihrem Gerät und werden nicht erneut hochgeladen</li>
+    <li>Wenn beim Löschen einer Gruppe „Datensätze entfernen" gewählt wird, werden auch alle Belegfotos dieser Gruppe aus Firebase Storage gelöscht. Bei „Datensätze behalten" verbleiben die Fotos in Firebase Storage, sodass die ursprünglichen Mitglieder sie weiterhin auf ihren eigenen Geräten anzeigen können.</li>
+    <li>Das Entfernen eines Belegfotos aus einer Gruppenausgabe (über den Bearbeitungsbildschirm) löscht die zugrunde liegende Datei aus Firebase Storage.</li>
+    <li>Beim Aktualisieren Ihres Profilfotos wird die vorherige Datei unter <code>users/{userID}/profile.jpg</code> überschrieben. Bei „Foto entfernen" wird die Datei aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
     <li>Die Deinstallation von Node Expense entfernt alle lokal gespeicherten Daten von Ihrem Gerät</li>
   </ul>
   <p>Hinweis: Firebase-Gruppendaten können bestehen bleiben, bis die Gruppe über den gruppeninternen Löschvorgang formal gelöscht wird.</p>
@@ -908,7 +955,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -923,6 +970,8 @@
         <li>Gastos y liquidaciones del grupo</li>
         <li>Nombre para mostrar</li>
         <li>Identificadores de pago opcionales (Venmo, Cash App, PayPal.me)</li>
+        <li>Fotos de recibos opcionales adjuntas a los gastos (función de suscripción PRO)</li>
+        <li>Foto de perfil opcional, visible para todos los miembros de cualquier grupo al que se una (función de suscripción PRO)</li>
         <li>Datos de ubicación opcionales</li>
         <li>Acceso al calendario seleccionado</li>
       </ul>
@@ -951,6 +1000,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>Anuncios de banner, recompensados e intersticiales</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Análisis de uso anónimo</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Sincronización de datos de grupo (gastos, miembros, liquidaciones, solicitudes de eliminación)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Almacenamiento de fotos de recibos para gastos de grupo y fotos de perfil de usuario (JPEG comprimido, accesible para usuarios autenticados)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Identificación de usuario anónima para continuidad de suscripción</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tareas en segundo plano, incluida la eliminación de grupos y el envío de notificaciones push</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notificaciones push para actividad de grupo</td></tr>
@@ -973,24 +1023,27 @@
   <p>Los siguientes datos se almacenan localmente usando SwiftData (el framework de almacenamiento local seguro de Apple):</p>
   <ul>
     <li>Registros de gastos personales (no de grupo)</li>
+    <li>Fotos de recibos de gastos personales (función de suscripción PRO; nunca se cargan en ningún servicio en la nube)</li>
     <li>Configuración y preferencias de la app</li>
     <li>Copias locales de datos de grupo para acceso sin conexión</li>
     <li>Gastos de grupo en caché para visualización sin conexión</li>
   </ul>
-  <p>Los datos de gastos personales nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado".</p>
+  <p>Los datos de gastos personales — incluidas las fotos de recibos adjuntas — nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado".</p>
 
   <h3>7.2 Almacenamiento en la nube para funciones de grupo</h3>
-  <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore:</p>
+  <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore (y las fotos con Firebase Storage):</p>
   <ul>
     <li>Documentos de grupo (nombre, descripción, icono, miembros, permisos, código de invitación)</li>
     <li>Gastos de grupo (importe, categoría, nota, fecha, ubicación si está habilitada, identidad del pagador)</li>
+    <li>Fotos de recibos de gastos de grupo (JPEG comprimido, almacenadas en Firebase Storage y visibles para todos los miembros del grupo; función de suscripción PRO)</li>
+    <li>Fotos de perfil de usuario (JPEG comprimido, almacenadas en <code>users/{userID}/profile.jpg</code> en Firebase Storage; legibles por cualquier usuario autenticado, escribibles solo por el propietario; visibles para todos los miembros de cualquier grupo al que se una; función de suscripción PRO)</li>
     <li>Liquidaciones de grupo (registros de pago entre miembros)</li>
     <li>Solicitudes de eliminación de grupo y votos de miembros</li>
     <li>Fechas de inicio de prueba (para recuperación tras reinstalación)</li>
     <li>Tokens de notificaciones push (FCM)</li>
     <li>Identificadores de pago opcionales para enlaces directos de liquidación (nombres de usuario de Venmo, Cash App, PayPal.me)</li>
-  </ul>
-  <div class="highlight-box">Los identificadores de pago son <strong>únicamente nombres de usuario públicos</strong> (p. ej., su <code>@venmo</code> o <code>$cashtag</code>), proporcionados por usted para que los miembros del grupo puedan pulsar para abrir la app de Venmo, Cash App o PayPal y pagarle directamente. Estos identificadores <strong>no</strong> son credenciales de pago, datos bancarios ni números de cuenta, y ningún dinero fluye a través de Node Expense; todos los pagos se realizan dentro de la app de terceros que elija abrir.</div>
+    <li><strong>Historial de actividad del grupo</strong> — un registro de todas las acciones realizadas en el grupo (gastos añadidos, editados, reembolsados o eliminados; miembros que se unieron, abandonaron o fueron eliminados). Estos datos se almacenan en Firebase Firestore y se <strong>eliminan automática y permanentemente después de 90 días</strong>. La actividad anterior a 90 días no puede recuperarse.</li>
+  </ul> (p. ej., su <code>@venmo</code> o <code>$cashtag</code>), proporcionados por usted para que los miembros del grupo puedan pulsar para abrir la app de Venmo, Cash App o PayPal y pagarle directamente. Estos identificadores <strong>no</strong> son credenciales de pago, datos bancarios ni números de cuenta, y ningún dinero fluye a través de Node Expense; todos los pagos se realizan dentro de la app de terceros que elija abrir.</div>
 
   <h3>7.3 Cifrado &amp; copias de seguridad</h3>
   <ul>
@@ -1008,6 +1061,9 @@
     <li>Eliminar gastos personales individuales o todos desde Node Expense</li>
     <li>Abandonar o solicitar la eliminación de un grupo — los datos del grupo se eliminan de Firebase cuando todos los miembros están de acuerdo</li>
     <li>Los gastos de grupo marcados como "conservar al eliminar" permanecen localmente en su dispositivo; no se vuelven a cargar</li>
+    <li>Cuando se elimina un grupo eligiendo "eliminar registros", todas las fotos de recibos de ese grupo también se eliminan de Firebase Storage. Cuando se elige "conservar registros", las fotos permanecen en Firebase Storage para que los miembros originales puedan seguir viéndolas en sus propios dispositivos.</li>
+    <li>Eliminar una foto de recibo de un gasto de grupo (a través de la pantalla de Editar) borra el archivo subyacente de Firebase Storage.</li>
+    <li>Actualizar su foto de perfil sobrescribe el archivo anterior en <code>users/{userID}/profile.jpg</code>. Al elegir «Eliminar foto», el archivo se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
     <li>Desinstalar Node Expense elimina todos los datos almacenados localmente de su dispositivo</li>
   </ul>
   <p>Nota: Los datos de grupo de Firebase pueden persistir hasta que el grupo se elimine formalmente a través del proceso de eliminación en la app.</p>
@@ -1036,7 +1092,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-04-19 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1051,6 +1107,8 @@
         <li>Dépenses et remboursements de groupe</li>
         <li>Nom d'affichage</li>
         <li>Identifiants de paiement optionnels (Venmo, Cash App, PayPal.me)</li>
+        <li>Photos de reçus optionnelles attachées aux dépenses (fonctionnalité d'abonnement PRO)</li>
+        <li>Photo de profil optionnelle, visible par tous les membres de chaque groupe que vous rejoignez (fonctionnalité d'abonnement PRO)</li>
         <li>Données de localisation optionnelles</li>
         <li>Accès au calendrier sélectionné</li>
       </ul>
@@ -1079,6 +1137,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>Publicités bannière, avec récompense et interstitielles</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Analyses d'utilisation anonymes</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisation des données de groupe (dépenses, membres, remboursements, demandes de suppression)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Stockage des photos de reçus pour les dépenses de groupe et des photos de profil utilisateur (JPEG compressé, accessible aux utilisateurs authentifiés)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Identification d'utilisateur anonyme pour la continuité de l'abonnement</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe et la livraison de notifications push</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notifications push pour l'activité de groupe</td></tr>
@@ -1101,24 +1160,27 @@
   <p>Les données suivantes sont stockées localement à l'aide de SwiftData (le framework de stockage local sécurisé d'Apple) :</p>
   <ul>
     <li>Enregistrements de dépenses personnelles (hors groupe)</li>
+    <li>Photos de reçus des dépenses personnelles (fonctionnalité d'abonnement PRO ; jamais téléversées vers un service cloud)</li>
     <li>Paramètres et préférences de l'app</li>
     <li>Copies locales des données de groupe pour un accès hors ligne</li>
     <li>Dépenses de groupe en cache pour une consultation hors ligne</li>
   </ul>
-  <p>Les données de dépenses personnelles ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés sont conservées localement avec un marqueur « groupe supprimé ».</p>
+  <p>Les données de dépenses personnelles — y compris les photos de reçus jointes — ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés sont conservées localement avec un marqueur « groupe supprimé ».</p>
 
   <h3>7.2 Stockage cloud pour les fonctionnalités de groupe</h3>
-  <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore :</p>
+  <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore (et les photos avec Firebase Storage) :</p>
   <ul>
     <li>Documents de groupe (nom, description, icône, membres, autorisations, code de partage)</li>
     <li>Dépenses de groupe (montant, catégorie, note, date, localisation si activée, identité du payeur)</li>
+    <li>Photos de reçus des dépenses de groupe (JPEG compressé, stockées dans Firebase Storage et visibles par tous les membres du groupe ; fonctionnalité d'abonnement PRO)</li>
+    <li>Photos de profil utilisateur (JPEG compressé, stockées dans <code>users/{userID}/profile.jpg</code> sur Firebase Storage ; lisibles par tout utilisateur authentifié, modifiables uniquement par leur propriétaire ; visibles par tous les membres de chaque groupe que vous rejoignez ; fonctionnalité d'abonnement PRO)</li>
     <li>Remboursements de groupe (enregistrements de paiement entre membres)</li>
     <li>Demandes de suppression de groupe et votes des membres</li>
     <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
     <li>Jetons de notification push (FCM)</li>
     <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App, PayPal.me)</li>
-  </ul>
-  <div class="highlight-box">Les identifiants de paiement sont <strong>uniquement des noms d'utilisateur publics</strong> (par ex. votre <code>@venmo</code> ou <code>$cashtag</code>), fournis par vous pour que les membres du groupe puissent appuyer pour ouvrir l'application Venmo, Cash App ou PayPal et vous payer directement. Ces identifiants ne sont <strong>pas</strong> des identifiants de paiement, des coordonnées bancaires ou des numéros de compte, et aucun argent ne transite par Node Expense — tous les paiements s'effectuent dans l'application tierce que vous choisissez d'ouvrir.</div>
+    <li><strong>Historique des activités du groupe</strong> — un enregistrement de toutes les actions effectuées dans le groupe (dépenses ajoutées, modifiées, remboursées ou supprimées ; membres ayant rejoint, quitté ou été retirés). Ces données sont stockées dans Firebase Firestore et sont <strong>automatiquement et définitivement supprimées après 90 jours</strong>. Les activités antérieures à 90 jours ne peuvent pas être récupérées.</li>
+  </ul> (par ex. votre <code>@venmo</code> ou <code>$cashtag</code>), fournis par vous pour que les membres du groupe puissent appuyer pour ouvrir l'application Venmo, Cash App ou PayPal et vous payer directement. Ces identifiants ne sont <strong>pas</strong> des identifiants de paiement, des coordonnées bancaires ou des numéros de compte, et aucun argent ne transite par Node Expense — tous les paiements s'effectuent dans l'application tierce que vous choisissez d'ouvrir.</div>
 
   <h3>7.3 Chiffrement &amp; sauvegardes</h3>
   <ul>
@@ -1136,6 +1198,9 @@
     <li>Supprimer des dépenses personnelles individuelles ou toutes depuis Node Expense</li>
     <li>Quitter ou demander la suppression d'un groupe — les données du groupe sont supprimées de Firebase lorsque tous les membres sont d'accord</li>
     <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre appareil ; elles ne sont pas retéléversées</li>
+    <li>Lorsqu'un groupe est supprimé en choisissant « supprimer les enregistrements », toutes les photos de reçus de ce groupe sont également supprimées de Firebase Storage. Lorsque « conserver les enregistrements » est choisi, les photos restent dans Firebase Storage afin que les membres d'origine puissent continuer à les consulter sur leurs propres appareils.</li>
+    <li>Supprimer une photo de reçu d'une dépense de groupe (via l'écran d'édition) supprime le fichier sous-jacent de Firebase Storage.</li>
+    <li>La mise à jour de votre photo de profil écrase le fichier précédent à <code>users/{userID}/profile.jpg</code>. Choisir « Supprimer la photo » efface le fichier de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareils existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
     <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre appareil</li>
   </ul>
   <p>Remarque : Les données de groupe Firebase peuvent persister jusqu'à ce que le groupe soit formellement supprimé via le processus de suppression intégré à l'app.</p>
@@ -1165,7 +1230,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-04-19 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1180,6 +1245,8 @@
         <li>그룹 지출 및 정산 내역</li>
         <li>표시 이름</li>
         <li>선택적 결제 식별자 (Venmo, Cash App, PayPal.me)</li>
+        <li>지출에 첨부하는 선택적 영수증 사진 (PRO 구독 기능)</li>
+        <li>선택적 프로필 사진 — 참가하는 모든 그룹의 멤버에게 표시됨 (PRO 구독 기능)</li>
         <li>선택적 위치 데이터</li>
         <li>선택한 캘린더 접근 권한</li>
       </ul>
@@ -1208,6 +1275,7 @@
       <tr><td><strong>Google AdMob</strong></td><td>배너, 보상형, 전면 광고 제공</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>익명 사용 분석</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>그룹 데이터 동기화 (지출, 멤버, 정산, 삭제 요청)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>그룹 지출의 영수증 사진 및 사용자 프로필 사진 저장 (압축 JPEG, 인증된 사용자가 접근 가능)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>구독 연속성을 위한 익명 사용자 식별</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>그룹 삭제 및 푸시 알림 발송 등 백그라운드 작업</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>그룹 활동에 대한 푸시 알림</td></tr>
@@ -1230,24 +1298,27 @@
   <p>다음 데이터는 Apple의 안전한 로컬 저장 프레임워크인 SwiftData를 사용하여 로컬에 저장됩니다:</p>
   <ul>
     <li>개인(비그룹) 지출 기록</li>
+    <li>개인 지출의 영수증 사진 (PRO 구독 기능; 어떠한 클라우드 서비스에도 업로드되지 않음)</li>
     <li>앱 설정 및 환경설정</li>
     <li>오프라인 접근을 위한 그룹 데이터 로컬 복사본</li>
     <li>오프라인 조회를 위해 캐시된 그룹 지출</li>
   </ul>
-  <p>개인 지출 데이터는 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 삭제된 그룹의 지출은 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다.</p>
+  <p>개인 지출 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 삭제된 그룹의 지출은 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다.</p>
 
   <h3>7.2 그룹 기능을 위한 클라우드 저장</h3>
-  <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다:</p>
+  <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다(사진은 Firebase Storage):</p>
   <ul>
     <li>그룹 문서 (이름, 설명, 아이콘, 멤버, 권한, 공유 코드)</li>
     <li>그룹 지출 (금액, 카테고리, 메모, 날짜, 활성화 시 위치, 결제자 신원)</li>
+    <li>그룹 지출의 영수증 사진 (압축 JPEG, Firebase Storage에 저장되며 그룹의 모든 멤버가 볼 수 있음; PRO 구독 기능)</li>
+    <li>사용자 프로필 사진 (압축 JPEG, Firebase Storage의 <code>users/{userID}/profile.jpg</code>에 저장; 인증된 사용자는 누구나 읽을 수 있고, 쓰기는 사진 소유자만 가능; 참가하는 모든 그룹의 모든 멤버에게 표시; PRO 구독 기능)</li>
     <li>그룹 정산 (멤버 간 결제 기록)</li>
     <li>그룹 삭제 요청 및 멤버 투표</li>
     <li>체험 시작일 (재설치 후 복구용)</li>
     <li>푸시 알림 토큰 (FCM)</li>
     <li>정산 딥링크를 위한 선택적 결제 식별자 (Venmo, Cash App, PayPal.me 사용자명)</li>
-  </ul>
-  <div class="highlight-box">결제 식별자는 <strong>공개 사용자명만</strong> 해당합니다(예: 귀하의 <code>@venmo</code> 또는 <code>$cashtag</code>). 이 식별자는 결제 자격증명, 은행 세부정보 또는 계좌 번호가 <strong>아니며</strong>, Node Expense를 통해 어떠한 금액도 이동하지 않습니다.</div>
+    <li><strong>그룹 활동 기록</strong> — 그룹에서 수행된 모든 작업의 기록 (지출 추가, 수정, 환불 또는 삭제; 멤버 가입, 탈퇴 또는 제거). 이 데이터는 Firebase Firestore에 저장되며 <strong>90일 후 자동으로 영구 삭제</strong>됩니다. 90일이 지난 활동은 복구할 수 없습니다.</li>
+  </ul> 해당합니다(예: 귀하의 <code>@venmo</code> 또는 <code>$cashtag</code>). 이 식별자는 결제 자격증명, 은행 세부정보 또는 계좌 번호가 <strong>아니며</strong>, Node Expense를 통해 어떠한 금액도 이동하지 않습니다.</div>
 
   <h3>7.3 암호화 및 백업</h3>
   <ul>
@@ -1265,6 +1336,9 @@
     <li>Node Expense에서 개별 개인 지출 또는 모든 지출 삭제</li>
     <li>그룹 탈퇴 또는 삭제 요청 — 모든 멤버가 동의하면 그룹 데이터가 Firebase에서 삭제됨</li>
     <li>'삭제 시 보관'으로 표시된 그룹 지출은 기기에 로컬로 남으며, 재업로드되지 않음</li>
+    <li>그룹을 삭제할 때 '기록 제거'를 선택하면 해당 그룹의 모든 영수증 사진도 Firebase Storage에서 삭제됩니다. '기록 보관'을 선택하면 사진은 Firebase Storage에 그대로 남아 원래 멤버들이 자신의 기기에서 계속 볼 수 있습니다.</li>
+    <li>편집 화면에서 그룹 지출의 영수증 사진을 제거하면 Firebase Storage에 있는 원본 파일도 삭제됩니다.</li>
+    <li>프로필 사진을 업데이트하면 <code>users/{userID}/profile.jpg</code>의 이전 파일이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 파일이 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
     <li>Node Expense 삭제 시 기기에 로컬로 저장된 모든 데이터가 제거됨</li>
   </ul>
   <p>참고: Firebase 그룹 데이터는 앱 내 삭제 프로세스를 통해 그룹이 공식적으로 삭제될 때까지 유지될 수 있습니다.</p>
