@@ -268,7 +268,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -285,6 +285,7 @@
         <li>Optional payment handles (Venmo, Cash App, PayPal.me)</li>
         <li>Optional receipt photos attached to expenses (PRO subscription feature)</li>
         <li>Optional profile photo, visible to all members of any group you join (PRO subscription feature)</li>
+        <li>Optional group photo, set by the group admin and visible to all members of that group (PRO subscription feature)</li>
         <li>Optional location data</li>
         <li>Selected calendar access</li>
       </ul>
@@ -349,7 +350,8 @@
     <li>Group documents (name, description, icon, members, permissions, share code)</li>
     <li>Group expenses (amount, category, note, date, location if enabled, payer identity)</li>
     <li>Group expense receipt photos (compressed JPEG, stored in Firebase Storage and visible to all members of the group; PRO subscription feature)</li>
-    <li>User profile photos (compressed JPEG, stored at <code>users/{userID}/profile.jpg</code> in Firebase Storage; readable by any authenticated user, writable only by the photo's owner; visible to all members of every group you join; PRO subscription feature)</li>
+    <li>User profile photos (compressed JPEG, stored in Firebase Storage; readable by any authenticated user, writable only by the photo's owner; visible to all members of every group you join; PRO subscription feature)</li>
+    <li>Group photos (compressed JPEG, stored in Firebase Storage; readable by all members of that group, writable only by the group admin; visible to all members of the group; PRO subscription feature)</li>
     <li>Group settlements (payment records between members)</li>
     <li>Group deletion requests and member votes</li>
     <li>Trial start dates (for reinstall recovery)</li>
@@ -377,7 +379,8 @@
     <li>Group expenses marked as 'keep on deletion' remain on your device locally; they are not re-uploaded</li>
     <li>When a group is deleted with 'remove records' selected, every receipt photo for that group is also deleted from Firebase Storage. When 'keep records' is chosen, the photos remain in Firebase Storage so original members can still view them on their own devices.</li>
     <li>Removing a receipt photo from a group expense (via the Edit screen) deletes the underlying file from Firebase Storage.</li>
-    <li>Updating your profile photo overwrites the previous file at <code>users/{userID}/profile.jpg</code>. Choosing "Remove Photo" deletes the file from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing devices may retain a cached copy until next sync.</li>
+    <li>Updating your profile photo overwrites the previous photo in Firebase Storage. Choosing "Remove Photo" deletes it from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing devices may retain a cached copy until next sync.</li>
+    <li>Updating or removing a group photo works the same way: updating overwrites the existing photo in Firebase Storage, and choosing "Remove Photo" deletes it. Only the group admin can perform these actions. The photo is also deleted from Firebase Storage when the group itself is deleted, regardless of which deletion option is chosen.</li>
     <li>Uninstalling Node Expense removes all locally stored data from your device</li>
   </ul>
   <p>Note: Firebase group data may persist until the group is formally deleted through the in-app deletion flow.</p>
@@ -406,7 +409,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-05-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-05-06 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -423,6 +426,7 @@
         <li>選填的付款帳號（Venmo、Cash App、PayPal.me）</li>
         <li>選填的費用收據照片（PRO 訂閱功能）</li>
         <li>選填的個人頭像，您加入的所有群組的成員皆可見（PRO 訂閱功能）</li>
+        <li>選填的群組頭像，由群組管理員設定，僅該群組的所有成員可見（PRO 訂閱功能）</li>
         <li>選填的位置資料</li>
         <li>所選行事曆存取</li>
       </ul>
@@ -487,7 +491,8 @@
     <li>群組文件（名稱、說明、圖示、成員、權限、分享碼）</li>
     <li>群組費用（金額、類別、備註、日期、位置（若已啟用）、付款人身份）</li>
     <li>群組費用收據照片（壓縮 JPEG，儲存於 Firebase Storage，所有群組成員皆可檢視；PRO 訂閱功能）</li>
-    <li>使用者個人頭像（壓縮 JPEG，儲存於 Firebase Storage 的 <code>users/{userID}/profile.jpg</code>；任何已驗證使用者皆可讀取，僅照片擁有者可寫入；您加入的所有群組成員皆可見；PRO 訂閱功能）</li>
+    <li>使用者個人頭像（壓縮 JPEG，儲存於 Firebase Storage；任何已驗證使用者皆可讀取，僅照片擁有者可寫入；您加入的所有群組成員皆可見；PRO 訂閱功能）</li>
+    <li>群組頭像（壓縮 JPEG，儲存於 Firebase Storage；僅該群組成員可讀取，僅群組管理員可寫入；僅該群組的所有成員可見；PRO 訂閱功能）</li>
     <li>群組結算（成員之間的付款記錄）</li>
     <li>群組刪除請求及成員投票</li>
     <li>試用開始日期（用於重新安裝後的復原）</li>
@@ -514,7 +519,8 @@
     <li>標示為「刪除時保留」的群組費用將保留於您的裝置本機；這些資料不會被重新上傳</li>
     <li>當刪除群組時若選擇「移除記錄」，該群組的所有收據照片也會從 Firebase Storage 中刪除。若選擇「保留記錄」，照片將保留於 Firebase Storage 中，原群組成員仍可在自己的裝置上檢視。</li>
     <li>從群組費用中移除收據照片（透過編輯畫面）會將底層檔案從 Firebase Storage 中刪除。</li>
-    <li>更新個人頭像會覆寫 <code>users/{userID}/profile.jpg</code> 的舊檔案。選擇「移除照片」會將檔案從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
+    <li>更新個人頭像會覆寫 Firebase Storage 中的舊照片。選擇「移除照片」會將其從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
+    <li>更新或移除群組頭像的運作方式相同：更新會覆寫 Firebase Storage 中的現有照片，選擇「移除照片」則會將其刪除。此操作僅限群組管理員執行。群組本身被刪除時，無論選擇哪種刪除選項，群組頭像也會一併從 Firebase Storage 中刪除。</li>
     <li>解除安裝 Node Expense 將移除您裝置上所有本機儲存的資料</li>
   </ul>
   <p>注意：Firebase 群組資料可能在群組透過應用程式內的刪除流程正式刪除之前持續存在。</p>
@@ -543,7 +549,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-05-03 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-05-06 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -560,6 +566,7 @@
         <li>可选的付款账号（Venmo、Cash App、PayPal.me）</li>
         <li>可选的支出收据照片（PRO 订阅功能）</li>
         <li>可选的个人头像，您加入的所有群组的成员均可见（PRO 订阅功能）</li>
+        <li>可选的群组头像，由群组管理员设置，仅该群组的所有成员可见（PRO 订阅功能）</li>
         <li>可选的位置数据</li>
         <li>所选日历访问权限</li>
       </ul>
@@ -624,7 +631,8 @@
     <li>群组文档（名称、描述、图标、成员、权限、共享代码）</li>
     <li>群组支出（金额、分类、备注、日期、位置（若启用）、付款人身份）</li>
     <li>群组支出的收据照片（压缩 JPEG，存储于 Firebase Storage，所有群组成员均可查看；PRO 订阅功能）</li>
-    <li>用户个人头像（压缩 JPEG，存储于 Firebase Storage 的 <code>users/{userID}/profile.jpg</code>；任何已认证用户均可读取，仅照片所有者可写入；您加入的所有群组成员均可见；PRO 订阅功能）</li>
+    <li>用户个人头像（压缩 JPEG，存储于 Firebase Storage；任何已认证用户均可读取，仅照片所有者可写入；您加入的所有群组成员均可见；PRO 订阅功能）</li>
+    <li>群组头像（压缩 JPEG，存储于 Firebase Storage；仅该群组成员可读取，仅群组管理员可写入；仅该群组的所有成员可见；PRO 订阅功能）</li>
     <li>群组结算（成员间的付款记录）</li>
     <li>群组删除申请和成员投票</li>
     <li>试用开始日期（用于重新安装恢复）</li>
@@ -652,7 +660,8 @@
     <li>标记为"删除时保留"的群组支出将保留在您的设备本地；它们不会被重新上传</li>
     <li>当删除群组时若选择"移除记录"，该群组的所有收据照片也会从 Firebase Storage 中删除。若选择"保留记录"，照片将保留在 Firebase Storage 中，原群组成员仍可在自己的设备上查看。</li>
     <li>从群组支出中移除收据照片（通过编辑界面）会将底层文件从 Firebase Storage 中删除。</li>
-    <li>更新个人头像会覆盖 <code>users/{userID}/profile.jpg</code> 的旧文件。选择"移除照片"会将文件从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
+    <li>更新个人头像会覆盖 Firebase Storage 中的旧照片。选择"移除照片"会将其从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
+    <li>更新或移除群组头像的方式相同：更新会覆盖 Firebase Storage 中的现有照片，选择"移除照片"则会将其删除。此操作仅限群组管理员执行。群组本身被删除时，无论选择哪种删除选项，群组头像也会一并从 Firebase Storage 中删除。</li>
     <li>卸载 Node Expense 将删除设备上存储的所有本地数据</li>
   </ul>
   <p>注意：Firebase 群组数据可能会保留，直到通过应用内删除流程正式删除群组。</p>
@@ -681,7 +690,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-05-03 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-05-06 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -698,6 +707,7 @@
         <li>任意の支払いハンドル（Venmo、Cash App、PayPal.me）</li>
         <li>任意の支出に添付されるレシート写真（PRO サブスクリプション機能）</li>
         <li>任意のプロフィール写真。参加するすべてのグループのメンバーに表示されます（PRO サブスクリプション機能）</li>
+        <li>任意のグループ写真。グループ管理者が設定し、そのグループの全メンバーに表示されます（PRO サブスクリプション機能）</li>
         <li>任意の位置情報</li>
         <li>選択したカレンダーへのアクセス</li>
       </ul>
@@ -762,7 +772,8 @@
     <li>グループドキュメント（名前、説明、アイコン、メンバー、権限、招待コード）</li>
     <li>グループ支出（金額、カテゴリ、メモ、日付、位置情報（有効時）、支払者の情報）</li>
     <li>グループ支出のレシート写真（圧縮 JPEG、Firebase Storage に保存され、グループの全メンバーが閲覧可能。PRO サブスクリプション機能）</li>
-    <li>ユーザープロフィール写真（圧縮 JPEG、Firebase Storage の <code>users/{userID}/profile.jpg</code> に保存。認証済みユーザーは誰でも読み取り可能、書き込みは所有者のみ。参加するすべてのグループの全メンバーに表示。PRO サブスクリプション機能）</li>
+    <li>ユーザープロフィール写真（圧縮 JPEG、Firebase Storage に保存。認証済みユーザーは誰でも読み取り可能、書き込みは所有者のみ。参加するすべてのグループの全メンバーに表示。PRO サブスクリプション機能）</li>
+    <li>グループ写真（圧縮 JPEG、Firebase Storage に保存。そのグループのメンバーのみ読み取り可能、書き込みはグループ管理者のみ。グループの全メンバーに表示。PRO サブスクリプション機能）</li>
     <li>グループ精算（メンバー間の支払い記録）</li>
     <li>グループ削除リクエストとメンバーの投票</li>
     <li>トライアル開始日（再インストール後の復元用）</li>
@@ -789,7 +800,8 @@
     <li>「削除時に保持」としてマークされたグループ支出はデバイスのローカルに残ります。再アップロードされることはありません</li>
     <li>グループ削除時に「記録を削除」を選択した場合、そのグループのすべてのレシート写真も Firebase Storage から削除されます。「記録を保持」を選択した場合、写真は Firebase Storage に残り、元のメンバーは引き続き自分のデバイスで閲覧できます。</li>
     <li>編集画面からグループ支出のレシート写真を削除すると、Firebase Storage 上の元ファイルも削除されます。</li>
-    <li>プロフィール写真を更新すると、<code>users/{userID}/profile.jpg</code> の以前のファイルが上書きされます。「写真を削除」を選択すると、ファイルは Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
+    <li>プロフィール写真を更新すると、Firebase Storage 内の以前の写真が上書きされます。「写真を削除」を選択すると、Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
+    <li>グループ写真の更新・削除も同様の動作となります。更新すると Firebase Storage 内の既存の写真が上書きされ、「写真を削除」を選択するとファイルが削除されます。この操作はグループ管理者のみが行えます。グループ自体が削除された場合、どの削除オプションを選択したかにかかわらず、グループ写真も Firebase Storage から削除されます。</li>
     <li>Node Expense をアンインストールすると、デバイスに保存されているすべてのローカルデータが削除されます</li>
   </ul>
   <p>注意：Firebase のグループデータは、アプリ内の削除フローを通じてグループが正式に削除されるまで残る場合があります。</p>
@@ -818,7 +830,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -835,6 +847,7 @@
         <li>Optionale Zahlungshandles (Venmo, Cash App, PayPal.me)</li>
         <li>Optionale Belegfotos, die an Ausgaben angehängt werden (PRO-Abonnementfunktion)</li>
         <li>Optionales Profilfoto, sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten (PRO-Abonnementfunktion)</li>
+        <li>Optionales Gruppenfoto, vom Gruppen-Administrator festgelegt und für alle Mitglieder dieser Gruppe sichtbar (PRO-Abonnementfunktion)</li>
         <li>Optionale Standortdaten</li>
         <li>Zugriff auf ausgewählte Kalender</li>
       </ul>
@@ -899,7 +912,8 @@
     <li>Gruppendokumente (Name, Beschreibung, Symbol, Mitglieder, Berechtigungen, Freigabecode)</li>
     <li>Gruppenausgaben (Betrag, Kategorie, Notiz, Datum, Standort falls aktiviert, Zahleridentität)</li>
     <li>Belegfotos von Gruppenausgaben (komprimiertes JPEG, in Firebase Storage gespeichert und für alle Mitglieder der Gruppe sichtbar; PRO-Abonnementfunktion)</li>
-    <li>Profilfotos der Nutzer (komprimiertes JPEG, gespeichert unter <code>users/{userID}/profile.jpg</code> in Firebase Storage; für jeden authentifizierten Nutzer lesbar, beschreibbar nur durch den Eigentümer; sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten; PRO-Abonnementfunktion)</li>
+    <li>Profilfotos der Nutzer (komprimiertes JPEG, in Firebase Storage gespeichert; für jeden authentifizierten Nutzer lesbar, beschreibbar nur durch den Eigentümer; sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten; PRO-Abonnementfunktion)</li>
+    <li>Gruppenfotos (komprimiertes JPEG, in Firebase Storage gespeichert; nur für Mitglieder der jeweiligen Gruppe lesbar, beschreibbar nur durch den Gruppen-Administrator; sichtbar für alle Mitglieder der Gruppe; PRO-Abonnementfunktion)</li>
     <li>Gruppenabrechnungen (Zahlungsaufzeichnungen zwischen Mitgliedern)</li>
     <li>Gruppen-Löschanfragen und Mitgliederabstimmungen</li>
     <li>Teststart-Daten (zur Wiederherstellung nach Neuinstallation)</li>
@@ -926,7 +940,8 @@
     <li>Gruppenausgaben, die als „Bei Löschung behalten" markiert sind, verbleiben lokal auf Ihrem Gerät und werden nicht erneut hochgeladen</li>
     <li>Wenn beim Löschen einer Gruppe „Datensätze entfernen" gewählt wird, werden auch alle Belegfotos dieser Gruppe aus Firebase Storage gelöscht. Bei „Datensätze behalten" verbleiben die Fotos in Firebase Storage, sodass die ursprünglichen Mitglieder sie weiterhin auf ihren eigenen Geräten anzeigen können.</li>
     <li>Das Entfernen eines Belegfotos aus einer Gruppenausgabe (über den Bearbeitungsbildschirm) löscht die zugrunde liegende Datei aus Firebase Storage.</li>
-    <li>Beim Aktualisieren Ihres Profilfotos wird die vorherige Datei unter <code>users/{userID}/profile.jpg</code> überschrieben. Bei „Foto entfernen" wird die Datei aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
+    <li>Beim Aktualisieren Ihres Profilfotos wird das vorherige Foto in Firebase Storage überschrieben. Bei „Foto entfernen" wird es aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
+    <li>Das Aktualisieren oder Entfernen eines Gruppenfotos funktioniert auf dieselbe Weise: Beim Aktualisieren wird das vorhandene Foto in Firebase Storage überschrieben, bei „Foto entfernen" wird es gelöscht. Nur der Gruppen-Administrator kann diese Aktionen ausführen. Das Gruppenfoto wird auch dann aus Firebase Storage gelöscht, wenn die Gruppe selbst gelöscht wird – unabhängig davon, welche Löschoption gewählt wurde.</li>
     <li>Die Deinstallation von Node Expense entfernt alle lokal gespeicherten Daten von Ihrem Gerät</li>
   </ul>
   <p>Hinweis: Firebase-Gruppendaten können bestehen bleiben, bis die Gruppe über den gruppeninternen Löschvorgang formal gelöscht wird.</p>
@@ -955,7 +970,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -972,6 +987,7 @@
         <li>Identificadores de pago opcionales (Venmo, Cash App, PayPal.me)</li>
         <li>Fotos de recibos opcionales adjuntas a los gastos (función de suscripción PRO)</li>
         <li>Foto de perfil opcional, visible para todos los miembros de cualquier grupo al que se una (función de suscripción PRO)</li>
+        <li>Foto de grupo opcional, establecida por el administrador del grupo y visible para todos los miembros de ese grupo (función de suscripción PRO)</li>
         <li>Datos de ubicación opcionales</li>
         <li>Acceso al calendario seleccionado</li>
       </ul>
@@ -1036,7 +1052,8 @@
     <li>Documentos de grupo (nombre, descripción, icono, miembros, permisos, código de invitación)</li>
     <li>Gastos de grupo (importe, categoría, nota, fecha, ubicación si está habilitada, identidad del pagador)</li>
     <li>Fotos de recibos de gastos de grupo (JPEG comprimido, almacenadas en Firebase Storage y visibles para todos los miembros del grupo; función de suscripción PRO)</li>
-    <li>Fotos de perfil de usuario (JPEG comprimido, almacenadas en <code>users/{userID}/profile.jpg</code> en Firebase Storage; legibles por cualquier usuario autenticado, escribibles solo por el propietario; visibles para todos los miembros de cualquier grupo al que se una; función de suscripción PRO)</li>
+    <li>Fotos de perfil de usuario (JPEG comprimido, almacenadas en Firebase Storage; legibles por cualquier usuario autenticado, escribibles solo por el propietario; visibles para todos los miembros de cualquier grupo al que se una; función de suscripción PRO)</li>
+    <li>Fotos de grupo (JPEG comprimido, almacenadas en Firebase Storage; legibles solo por los miembros de ese grupo, escribibles solo por el administrador del grupo; visibles para todos los miembros del grupo; función de suscripción PRO)</li>
     <li>Liquidaciones de grupo (registros de pago entre miembros)</li>
     <li>Solicitudes de eliminación de grupo y votos de miembros</li>
     <li>Fechas de inicio de prueba (para recuperación tras reinstalación)</li>
@@ -1063,7 +1080,8 @@
     <li>Los gastos de grupo marcados como "conservar al eliminar" permanecen localmente en su dispositivo; no se vuelven a cargar</li>
     <li>Cuando se elimina un grupo eligiendo "eliminar registros", todas las fotos de recibos de ese grupo también se eliminan de Firebase Storage. Cuando se elige "conservar registros", las fotos permanecen en Firebase Storage para que los miembros originales puedan seguir viéndolas en sus propios dispositivos.</li>
     <li>Eliminar una foto de recibo de un gasto de grupo (a través de la pantalla de Editar) borra el archivo subyacente de Firebase Storage.</li>
-    <li>Actualizar su foto de perfil sobrescribe el archivo anterior en <code>users/{userID}/profile.jpg</code>. Al elegir «Eliminar foto», el archivo se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
+    <li>Actualizar su foto de perfil sobrescribe la foto anterior en Firebase Storage. Al elegir «Eliminar foto», esta se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
+    <li>Actualizar o eliminar la foto de grupo funciona de la misma manera: actualizar sobrescribe la foto existente en Firebase Storage, y elegir «Eliminar foto» la borra. Solo el administrador del grupo puede realizar estas acciones. La foto de grupo también se elimina de Firebase Storage cuando el propio grupo se elimina, independientemente de la opción de eliminación elegida.</li>
     <li>Desinstalar Node Expense elimina todos los datos almacenados localmente de su dispositivo</li>
   </ul>
   <p>Nota: Los datos de grupo de Firebase pueden persistir hasta que el grupo se elimine formalmente a través del proceso de eliminación en la app.</p>
@@ -1092,7 +1110,7 @@
   </div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-03 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1109,6 +1127,7 @@
         <li>Identifiants de paiement optionnels (Venmo, Cash App, PayPal.me)</li>
         <li>Photos de reçus optionnelles attachées aux dépenses (fonctionnalité d'abonnement PRO)</li>
         <li>Photo de profil optionnelle, visible par tous les membres de chaque groupe que vous rejoignez (fonctionnalité d'abonnement PRO)</li>
+        <li>Photo de groupe optionnelle, définie par l'admin du groupe et visible par tous les membres de ce groupe (fonctionnalité d'abonnement PRO)</li>
         <li>Données de localisation optionnelles</li>
         <li>Accès au calendrier sélectionné</li>
       </ul>
@@ -1173,7 +1192,8 @@
     <li>Documents de groupe (nom, description, icône, membres, autorisations, code de partage)</li>
     <li>Dépenses de groupe (montant, catégorie, note, date, localisation si activée, identité du payeur)</li>
     <li>Photos de reçus des dépenses de groupe (JPEG compressé, stockées dans Firebase Storage et visibles par tous les membres du groupe ; fonctionnalité d'abonnement PRO)</li>
-    <li>Photos de profil utilisateur (JPEG compressé, stockées dans <code>users/{userID}/profile.jpg</code> sur Firebase Storage ; lisibles par tout utilisateur authentifié, modifiables uniquement par leur propriétaire ; visibles par tous les membres de chaque groupe que vous rejoignez ; fonctionnalité d'abonnement PRO)</li>
+    <li>Photos de profil utilisateur (JPEG compressé, stockées dans Firebase Storage ; lisibles par tout utilisateur authentifié, modifiables uniquement par leur propriétaire ; visibles par tous les membres de chaque groupe que vous rejoignez ; fonctionnalité d'abonnement PRO)</li>
+    <li>Photos de groupe (JPEG compressé, stockées dans Firebase Storage ; lisibles uniquement par les membres de ce groupe, modifiables uniquement par l'admin du groupe ; visibles par tous les membres du groupe ; fonctionnalité d'abonnement PRO)</li>
     <li>Remboursements de groupe (enregistrements de paiement entre membres)</li>
     <li>Demandes de suppression de groupe et votes des membres</li>
     <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
@@ -1200,7 +1220,8 @@
     <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre appareil ; elles ne sont pas retéléversées</li>
     <li>Lorsqu'un groupe est supprimé en choisissant « supprimer les enregistrements », toutes les photos de reçus de ce groupe sont également supprimées de Firebase Storage. Lorsque « conserver les enregistrements » est choisi, les photos restent dans Firebase Storage afin que les membres d'origine puissent continuer à les consulter sur leurs propres appareils.</li>
     <li>Supprimer une photo de reçu d'une dépense de groupe (via l'écran d'édition) supprime le fichier sous-jacent de Firebase Storage.</li>
-    <li>La mise à jour de votre photo de profil écrase le fichier précédent à <code>users/{userID}/profile.jpg</code>. Choisir « Supprimer la photo » efface le fichier de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareils existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
+    <li>La mise à jour de votre photo de profil écrase la photo précédente dans Firebase Storage. Choisir « Supprimer la photo » l'efface de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareils existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
+    <li>La mise à jour ou la suppression d'une photo de groupe fonctionne de la même façon : la mise à jour écrase la photo existante dans Firebase Storage, et choisir « Supprimer la photo » la supprime. Seul l'admin du groupe peut effectuer ces actions. La photo de groupe est également supprimée de Firebase Storage lorsque le groupe lui-même est supprimé, quelle que soit l'option de suppression choisie.</li>
     <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre appareil</li>
   </ul>
   <p>Remarque : Les données de groupe Firebase peuvent persister jusqu'à ce que le groupe soit formellement supprimé via le processus de suppression intégré à l'app.</p>
@@ -1230,7 +1251,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-03 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1247,6 +1268,7 @@
         <li>선택적 결제 식별자 (Venmo, Cash App, PayPal.me)</li>
         <li>지출에 첨부하는 선택적 영수증 사진 (PRO 구독 기능)</li>
         <li>선택적 프로필 사진 — 참가하는 모든 그룹의 멤버에게 표시됨 (PRO 구독 기능)</li>
+        <li>선택적 그룹 사진 — 그룹 관리자가 설정하며 해당 그룹의 모든 멤버에게 표시됨 (PRO 구독 기능)</li>
         <li>선택적 위치 데이터</li>
         <li>선택한 캘린더 접근 권한</li>
       </ul>
@@ -1311,7 +1333,8 @@
     <li>그룹 문서 (이름, 설명, 아이콘, 멤버, 권한, 공유 코드)</li>
     <li>그룹 지출 (금액, 카테고리, 메모, 날짜, 활성화 시 위치, 결제자 신원)</li>
     <li>그룹 지출의 영수증 사진 (압축 JPEG, Firebase Storage에 저장되며 그룹의 모든 멤버가 볼 수 있음; PRO 구독 기능)</li>
-    <li>사용자 프로필 사진 (압축 JPEG, Firebase Storage의 <code>users/{userID}/profile.jpg</code>에 저장; 인증된 사용자는 누구나 읽을 수 있고, 쓰기는 사진 소유자만 가능; 참가하는 모든 그룹의 모든 멤버에게 표시; PRO 구독 기능)</li>
+    <li>사용자 프로필 사진 (압축 JPEG, Firebase Storage에 저장; 인증된 사용자는 누구나 읽을 수 있고, 쓰기는 사진 소유자만 가능; 참가하는 모든 그룹의 모든 멤버에게 표시; PRO 구독 기능)</li>
+    <li>그룹 사진 (압축 JPEG, Firebase Storage에 저장; 해당 그룹 멤버만 읽을 수 있고, 쓰기는 그룹 관리자만 가능; 그룹의 모든 멤버에게 표시; PRO 구독 기능)</li>
     <li>그룹 정산 (멤버 간 결제 기록)</li>
     <li>그룹 삭제 요청 및 멤버 투표</li>
     <li>체험 시작일 (재설치 후 복구용)</li>
@@ -1338,7 +1361,8 @@
     <li>'삭제 시 보관'으로 표시된 그룹 지출은 기기에 로컬로 남으며, 재업로드되지 않음</li>
     <li>그룹을 삭제할 때 '기록 제거'를 선택하면 해당 그룹의 모든 영수증 사진도 Firebase Storage에서 삭제됩니다. '기록 보관'을 선택하면 사진은 Firebase Storage에 그대로 남아 원래 멤버들이 자신의 기기에서 계속 볼 수 있습니다.</li>
     <li>편집 화면에서 그룹 지출의 영수증 사진을 제거하면 Firebase Storage에 있는 원본 파일도 삭제됩니다.</li>
-    <li>프로필 사진을 업데이트하면 <code>users/{userID}/profile.jpg</code>의 이전 파일이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 파일이 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
+    <li>프로필 사진을 업데이트하면 Firebase Storage의 이전 사진이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
+    <li>그룹 사진의 업데이트 또는 제거도 동일한 방식으로 작동합니다. 업데이트하면 Firebase Storage의 기존 사진이 덮어쓰기되고, "사진 제거"를 선택하면 삭제됩니다. 이 작업은 그룹 관리자만 수행할 수 있습니다. 그룹 자체가 삭제될 때에도 선택한 삭제 옵션에 관계없이 그룹 사진이 Firebase Storage에서 삭제됩니다.</li>
     <li>Node Expense 삭제 시 기기에 로컬로 저장된 모든 데이터가 제거됨</li>
   </ul>
   <p>참고: Firebase 그룹 데이터는 앱 내 삭제 프로세스를 통해 그룹이 공식적으로 삭제될 때까지 유지될 수 있습니다.</p>
