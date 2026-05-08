@@ -225,7 +225,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Acceptance of Terms</h2>
   <p>By downloading, installing, or using Node Expense: Track Together, you agree to be bound by these Terms of Service. If you do not agree, do not use the app.</p>
@@ -237,7 +237,7 @@
     <li>Track and split group expenses with other members in real time</li>
     <li>Optionally record your location with expenses</li>
     <li>Sync expenses with selected iOS calendars</li>
-    <li>Back up and optionally encrypt your data (PRO subscription feature)</li>
+    <li>Back up and optionally encrypt your data (PRO subscription feature). Backups cover locally stored personal expense records and cached group data; live group expense data in Firebase Firestore is not included in local backups.</li>
     <li>Export expense data as JSON, CSV, or PDF, and import data in JSON format (PRO subscription feature)</li>
     <li>Scan receipts using your device camera to auto-fill expense details</li>
     <li>Attach receipt photos to expenses (PRO subscription feature). Personal expense photos stay on your device; group expense photos are stored in Firebase Storage and visible to all members of the group.</li>
@@ -334,6 +334,7 @@
   <ul>
     <li>Financial losses, missed expenses, or data inaccuracies</li>
     <li>Loss of encrypted backup data due to lost or inaccessible encryption keys</li>
+    <li>Loss of group expense data stored in Firebase Firestore that was not explicitly exported prior to group deletion, device loss, or app removal</li>
     <li>Data loss due to third-party service outages (Firebase, RevenueCat, AdMob)</li>
     <li>Inaccurate group settlement calculations due to incorrect data entry</li>
     <li>For Lifetime Access: the Developer's total liability shall not exceed the actual amount paid by the user for said subscription</li>
@@ -355,7 +356,7 @@
   <ul>
     <li><strong>Notice:</strong> At least 30 days' notice via in-app notification</li>
     <li><strong>Lifetime Access:</strong> Grants access only for the duration of the App's availability on the App Store</li>
-    <li><strong>Data Portability:</strong> Users will have a window to export via JSON, CSV, or PDF before Firebase is deactivated</li>
+    <li><strong>Data Portability:</strong> Users will have a window to export their locally stored data via JSON, CSV, or PDF before Firebase is deactivated. Note that only locally cached data is included in exports — group expenses should be reviewed before Firebase shutdown.</li>
     <li><strong>No Refunds:</strong> No pro-rated refunds will be issued upon discontinuation</li>
     <li><strong>Final Update:</strong> We may release a "Local Only" update at our discretion</li>
   </ul>
@@ -369,7 +370,7 @@
 
 <!-- ========== GERMAN ========== -->
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Annahme der Nutzungsbedingungen</h2>
   <p>Durch das Herunterladen, Installieren oder Verwenden von Node Expense: Track Together erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie nicht zustimmen, verwenden Sie die App bitte nicht.</p>
@@ -381,7 +382,7 @@
     <li>Gruppenausgaben in Echtzeit mit anderen Mitgliedern verfolgen und aufteilen</li>
     <li>Optional Ihren Standort bei Ausgaben erfassen</li>
     <li>Ausgaben mit ausgewählten iOS-Kalendern synchronisieren</li>
-    <li>Ihre Daten sichern und optional verschlüsseln (PRO-Abonnement-Funktion)</li>
+    <li>Ihre Daten sichern und optional verschlüsseln (PRO-Abonnement-Funktion). Backups umfassen lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Gruppenausgabendaten in Firebase Firestore sind nicht in lokalen Backups enthalten.</li>
     <li>Ausgabendaten als JSON, CSV oder PDF exportieren und im JSON-Format importieren (PRO-Abonnement-Funktion)</li>
     <li>Belege mit der Gerätekamera scannen, um Ausgabendetails automatisch auszufüllen</li>
     <li>Belegfotos an Ausgaben anhängen (PRO-Abonnement-Funktion). Fotos persönlicher Ausgaben verbleiben auf Ihrem Gerät; Fotos von Gruppenausgaben werden in Firebase Storage gespeichert und sind für alle Mitglieder der Gruppe sichtbar.</li>
@@ -478,6 +479,7 @@
   <ul>
     <li>Finanzielle Verluste, fehlende Ausgaben oder Datenungenauigkeiten</li>
     <li>Verlust verschlüsselter Backup-Daten aufgrund verlorener oder unzugänglicher Verschlüsselungsschlüssel</li>
+    <li>Verlust von in Firebase Firestore gespeicherten Gruppenausgabendaten, die vor der Gruppenlöschung, dem Geräteverlust oder der App-Deinstallation nicht explizit exportiert wurden</li>
     <li>Datenverluste aufgrund von Drittanbieter-Ausfällen (Firebase, RevenueCat, AdMob)</li>
     <li>Ungenaue Gruppenausgleichsberechnungen aufgrund falscher Dateneingaben</li>
     <li>Für Lifetime-Zugang: Die Gesamthaftung des Entwicklers übersteigt nicht den tatsächlich vom Nutzer für das betreffende Abonnement gezahlten Betrag</li>
@@ -499,7 +501,7 @@
   <ul>
     <li><strong>Benachrichtigung:</strong> Mindestens 30 Tage Vorankündigung über In-App-Benachrichtigung</li>
     <li><strong>Lifetime-Zugang:</strong> Gewährt Zugriff nur für die Dauer der Verfügbarkeit der App im App Store</li>
-    <li><strong>Datenportabilität:</strong> Nutzer haben ein Zeitfenster, um Daten per JSON, CSV oder PDF zu exportieren, bevor Firebase deaktiviert wird</li>
+    <li><strong>Datenportabilität:</strong> Nutzer haben ein Zeitfenster, um lokal gespeicherte Daten per JSON, CSV oder PDF zu exportieren, bevor Firebase deaktiviert wird. Beachten Sie, dass Exporte nur lokal gecachte Daten enthalten — Gruppenausgaben sollten vor der Firebase-Abschaltung geprüft werden.</li>
     <li><strong>Keine Rückerstattungen:</strong> Bei Einstellung werden keine anteiligen Rückerstattungen gewährt</li>
     <li><strong>Letztes Update:</strong> Wir können nach eigenem Ermessen ein „Nur lokal"-Update veröffentlichen</li>
   </ul>
@@ -514,7 +516,7 @@
 
 <!-- ========== SPANISH ========== -->
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Aceptación de los Términos</h2>
   <p>Al descargar, instalar o usar Node Expense: Track Together, acepta quedar vinculado por estos Términos de Servicio. Si no está de acuerdo, no utilice la aplicación.</p>
@@ -526,7 +528,7 @@
     <li>Rastrear y dividir gastos de grupo con otros miembros en tiempo real</li>
     <li>Registrar opcionalmente su ubicación con los gastos</li>
     <li>Sincronizar gastos con calendarios de iOS seleccionados</li>
-    <li>Hacer copias de seguridad y cifrar opcionalmente sus datos (función de suscripción PRO)</li>
+    <li>Hacer copias de seguridad y cifrar opcionalmente sus datos (función de suscripción PRO). Las copias de seguridad abarcan los registros de gastos personales almacenados localmente y los datos de grupo en caché; los datos de gastos de grupo en tiempo real en Firebase Firestore no están incluidos en las copias de seguridad locales.</li>
     <li>Exportar datos de gastos en formato JSON, CSV o PDF, e importar datos en formato JSON (función de suscripción PRO)</li>
     <li>Escanear recibos con la cámara del dispositivo para rellenar automáticamente los detalles del gasto</li>
     <li>Adjuntar fotos de recibos a los gastos (función de suscripción PRO). Las fotos de gastos personales permanecen en su dispositivo; las fotos de gastos de grupo se almacenan en Firebase Storage y son visibles para todos los miembros del grupo.</li>
@@ -623,6 +625,7 @@
   <ul>
     <li>Pérdidas financieras, gastos omitidos o inexactitudes de datos</li>
     <li>Pérdida de datos de copia de seguridad cifrados debido a claves de cifrado perdidas o inaccesibles</li>
+    <li>Pérdida de datos de gastos de grupo almacenados en Firebase Firestore que no fueron exportados explícitamente antes de la eliminación del grupo, la pérdida del dispositivo o la desinstalación de la aplicación</li>
     <li>Pérdida de datos debida a interrupciones de servicios de terceros (Firebase, RevenueCat, AdMob)</li>
     <li>Cálculos inexactos de liquidación de grupo debidos a entradas de datos incorrectas</li>
     <li>Para el Acceso de por Vida: la responsabilidad total del Desarrollador no superará el importe real pagado por el usuario por dicha suscripción</li>
@@ -644,7 +647,7 @@
   <ul>
     <li><strong>Aviso:</strong> Al menos 30 días de aviso mediante notificación dentro de la aplicación</li>
     <li><strong>Acceso de por Vida:</strong> Otorga acceso solo durante el período de disponibilidad de la aplicación en la App Store</li>
-    <li><strong>Portabilidad de Datos:</strong> Los usuarios tendrán un período para exportar a través de JSON, CSV o PDF antes de que Firebase sea desactivado</li>
+    <li><strong>Portabilidad de Datos:</strong> Los usuarios tendrán un período para exportar sus datos almacenados localmente a través de JSON, CSV o PDF antes de que Firebase sea desactivado. Tenga en cuenta que las exportaciones solo incluyen datos en caché local; se recomienda revisar los gastos de grupo antes del cierre de Firebase.</li>
     <li><strong>Sin Reembolsos:</strong> No se emitirán reembolsos prorrateados tras la discontinuación</li>
     <li><strong>Actualización Final:</strong> Podemos publicar una actualización de «solo local» a nuestra discreción</li>
   </ul>
@@ -659,7 +662,7 @@
 
 <!-- ========== SIMPLIFIED CHINESE ========== -->
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-05-06 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-05-08 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
 <h2><span class="section-number">1</span>接受条款</h2>
   <p>通过下载、安装或使用 Node Expense: Track Together，您同意受本服务条款的约束。如果您不同意，请勿使用本应用。</p>
@@ -671,7 +674,7 @@
     <li>与其他成员实时追踪并分摊群组支出</li>
     <li>可选在支出中记录您的位置</li>
     <li>将支出与选定的 iOS 日历同步</li>
-    <li>备份并可选加密您的数据（专业版订阅功能）</li>
+    <li>备份并可选加密您的数据（专业版订阅功能）。备份涵盖本地存储的个人支出记录和已缓存的群组数据；Firebase Firestore 中的即时群组支出数据不包含在本地备份中。</li>
     <li>以 JSON、CSV 或 PDF 格式导出支出数据，并以 JSON 格式导入数据（专业版订阅功能）</li>
     <li>使用设备摄像头扫描收据，自动填写支出信息</li>
     <li>为支出附加收据照片（专业版订阅功能）。个人支出照片保留在您的设备上；群组支出照片存储在 Firebase Storage 中，群组所有成员均可查看。</li>
@@ -768,6 +771,7 @@
   <ul>
     <li>财务损失、遗漏支出或数据不准确</li>
     <li>由于加密密钥丢失或无法访问导致的加密备份数据丢失</li>
+    <li>在群组删除、设备丢失或卸载应用之前未明确导出的 Firebase Firestore 群组支出数据丢失</li>
     <li>由于第三方服务停机导致的数据丢失</li>
     <li>由于数据输入错误导致的群组结算计算不准确</li>
     <li>针对终身访问：开发者对"终身"订阅的总责任不得超过用户为该订阅实际支付的金额</li>
@@ -789,7 +793,7 @@
   <ul>
     <li><strong>通知：</strong>我们将通过应用内通知提供至少 30 天的通知</li>
     <li><strong>终身访问：</strong>"终身"购买仅在应用在 App Store 上可用期间授予访问权限</li>
-    <li><strong>数据可移植性：</strong>用户将在 Firebase 停用前有一个使用 JSON、CSV 或 PDF 导出功能的窗口期</li>
+    <li><strong>数据可移植性：</strong>用户将在 Firebase 停用前有一个使用 JSON、CSV 或 PDF 导出本地存储数据的窗口期。请注意，导出内容仅包含本地缓存数据，建议在 Firebase 关闭前检查群组支出。</li>
     <li><strong>不退款：</strong>停止服务时不会发放按比例的退款</li>
     <li><strong>最终更新：</strong>我们可自行决定发布"仅限本地"的更新</li>
   </ul>
@@ -803,7 +807,7 @@
 
 <!-- ========== TRADITIONAL CHINESE ========== -->
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-05-06 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-05-08 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
 <h2><span class="section-number">1</span>條款接受</h2>
   <p>下載、安裝或使用 Node Expense: Track Together，即表示您同意受本服務條款約束。若您不同意，請勿使用本應用程式。</p>
@@ -815,7 +819,7 @@
     <li>即時追蹤並與其他成員分攤群組費用</li>
     <li>選擇性地記錄費用時的位置</li>
     <li>將費用與所選的 iOS 行事曆同步</li>
-    <li>備份並選擇性地加密您的資料（PRO 訂閱功能）</li>
+    <li>備份並選擇性地加密您的資料（PRO 訂閱功能）。備份涵蓋本機儲存的個人費用記錄及已快取的群組資料；Firebase Firestore 中的即時群組費用資料不包含在本機備份中。</li>
     <li>以 JSON、CSV 或 PDF 格式匯出費用資料，並以 JSON 格式匯入資料（PRO 訂閱功能）</li>
     <li>使用裝置相機掃描收據，自動填入費用詳情</li>
     <li>為費用附加收據照片（PRO 訂閱功能）。個人費用照片保留在您的裝置上；群組費用照片儲存於 Firebase Storage，群組所有成員皆可檢視。</li>
@@ -912,6 +916,7 @@
   <ul>
     <li>財務損失、費用漏記或資料不準確</li>
     <li>因加密金鑰遺失或無法存取所導致的加密備份資料損失</li>
+    <li>在群組刪除、裝置遺失或移除應用程式前未明確匯出的 Firebase Firestore 群組費用資料損失</li>
     <li>因第三方服務中斷所造成的資料損失</li>
     <li>因輸入資料不正確所導致的群組結算計算不準確</li>
     <li>專就終身使用權而言：開發者的總責任不得超過使用者為該訂閱實際支付的金額</li>
@@ -933,7 +938,7 @@
   <ul>
     <li><strong>通知：</strong>我們將透過應用程式內通知提前至少 30 天發出通知</li>
     <li><strong>終身使用權：</strong>「終身」購買僅授予在本應用程式於 App Store 上提供期間的使用權</li>
-    <li><strong>資料可攜性：</strong>使用者將有一段時間可在 Firebase 停用前使用 JSON、CSV 或 PDF 匯出功能</li>
+    <li><strong>資料可攜性：</strong>使用者將有一段時間可在 Firebase 停用前使用 JSON、CSV 或 PDF 匯出本機儲存的資料。請注意，匯出內容僅包含本機快取資料，建議在 Firebase 關閉前確認群組費用。</li>
     <li><strong>不予退款：</strong>停止服務時不會發放按比例計算的退款</li>
     <li><strong>最終更新：</strong>我們可自行決定是否發佈「僅限本機」更新</li>
   </ul>
@@ -948,7 +953,7 @@
 
 <!-- ========== JAPANESE ========== -->
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-05-06 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-05-08 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
 <h2><span class="section-number">1</span>利用規約への同意</h2>
   <p>Node Expense: Track Together をダウンロード、インストール、または使用することにより、本利用規約に同意したものとみなされます。同意されない場合は、本アプリをご使用にならないでください。</p>
@@ -960,7 +965,7 @@
     <li>グループメンバーとリアルタイムでグループ支出を追跡・割り勘</li>
     <li>支出に位置情報を記録（任意）</li>
     <li>選択した iOS カレンダーと支出を同期</li>
-    <li>データのバックアップおよび暗号化（PRO サブスクリプション機能）</li>
+    <li>データのバックアップおよび暗号化（PRO サブスクリプション機能）。バックアップにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore 内のライブグループ支出データはローカルバックアップに含まれません。</li>
     <li>支出データを JSON、CSV、PDF 形式でエクスポート、および JSON 形式でインポート（PRO サブスクリプション機能）</li>
     <li>デバイスのカメラでレシートをスキャンして支出情報を自動入力</li>
     <li>支出にレシート写真を添付（PRO サブスクリプション機能）。個人支出の写真はデバイスにのみ保存されます。グループ支出の写真は Firebase Storage に保存され、グループの全メンバーが閲覧できます。</li>
@@ -1057,6 +1062,7 @@
   <ul>
     <li>金銭的損失、支出の記録漏れ、またはデータの不正確さ</li>
     <li>暗号化キーの紛失またはアクセス不能による暗号化バックアップデータの損失</li>
+    <li>グループ削除、デバイス紛失、またはアプリ削除前に明示的にエクスポートされなかった Firebase Firestore のグループ支出データの損失</li>
     <li>サードパーティサービスの障害（Firebase、RevenueCat、AdMob）によるデータ損失</li>
     <li>不正確なデータ入力によるグループ精算計算の誤り</li>
     <li>ライフタイムアクセスについて：開発者の総責任は、ユーザーが当該サブスクリプションに実際に支払った金額を超えないものとします</li>
@@ -1078,7 +1084,7 @@
   <ul>
     <li><strong>通知：</strong>アプリ内通知で少なくとも30日前に通知</li>
     <li><strong>ライフタイムアクセス：</strong>「ライフタイム」購入は、アプリが App Store で提供されている期間のみアクセスを付与</li>
-    <li><strong>データの可搬性：</strong>Firebase が無効化される前に、JSON、CSV、または PDF でエクスポートする期間が設けられます</li>
+    <li><strong>データの可搬性：</strong>Firebase が無効化される前に、ローカル保存データを JSON、CSV、または PDF でエクスポートする期間が設けられます。エクスポートにはローカルキャッシュデータのみが含まれるため、Firebase 停止前にグループ支出をご確認ください。</li>
     <li><strong>返金なし：</strong>サービス終了時に按分返金は行われません</li>
     <li><strong>最終アップデート：</strong>当社の裁量で「ローカルのみ」アップデートをリリースする場合があります</li>
   </ul>
@@ -1092,7 +1098,7 @@
 
 <!-- ========== FRENCH ========== -->
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-06 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Acceptation des Conditions</h2>
   <p>En téléchargeant, installant ou utilisant Node Expense : Track Together, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'acceptez pas, n'utilisez pas l'application.</p>
@@ -1104,7 +1110,7 @@
     <li>Suivre et partager des dépenses de groupe avec d'autres membres en temps réel</li>
     <li>Enregistrer optionnellement votre localisation avec les dépenses</li>
     <li>Synchroniser les dépenses avec des calendriers iOS sélectionnés</li>
-    <li>Sauvegarder et chiffrer optionnellement vos données (fonctionnalité d'abonnement PRO)</li>
+    <li>Sauvegarder et chiffrer optionnellement vos données (fonctionnalité d'abonnement PRO). Les sauvegardes couvrent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; les données de dépenses de groupe en temps réel dans Firebase Firestore ne sont pas incluses dans les sauvegardes locales.</li>
     <li>Exporter les données de dépenses en JSON, CSV ou PDF, et importer des données au format JSON (fonctionnalité d'abonnement PRO)</li>
     <li>Scanner des reçus avec la caméra de l'appareil pour remplir automatiquement les détails de la dépense</li>
     <li>Joindre des photos de reçus aux dépenses (fonctionnalité d'abonnement PRO). Les photos des dépenses personnelles restent sur votre appareil ; les photos des dépenses de groupe sont stockées dans Firebase Storage et visibles par tous les membres du groupe.</li>
@@ -1201,6 +1207,7 @@
   <ul>
     <li>Pertes financières, dépenses manquées ou inexactitudes de données</li>
     <li>Perte de données de sauvegarde chiffrées due à des clés de chiffrement perdues ou inaccessibles</li>
+    <li>Perte de données de dépenses de groupe stockées dans Firebase Firestore qui n'ont pas été explicitement exportées avant la suppression du groupe, la perte de l'appareil ou la désinstallation de l'application</li>
     <li>Perte de données due à des pannes de services tiers (Firebase, RevenueCat, AdMob)</li>
     <li>Calculs de remboursement de groupe inexacts dus à des saisies de données incorrectes</li>
     <li>Pour l'Accès à Vie : la responsabilité totale du Développeur ne dépassera pas le montant réellement payé par l'utilisateur pour ledit abonnement</li>
@@ -1222,7 +1229,7 @@
   <ul>
     <li><strong>Préavis :</strong> Au moins 30 jours de préavis via une notification dans l'application</li>
     <li><strong>Accès à Vie :</strong> N'accorde l'accès que pendant la durée de disponibilité de l'application sur l'App Store</li>
-    <li><strong>Portabilité des Données :</strong> Les utilisateurs disposeront d'une fenêtre pour exporter via JSON, CSV ou PDF avant la désactivation de Firebase</li>
+    <li><strong>Portabilité des Données :</strong> Les utilisateurs disposeront d'une fenêtre pour exporter leurs données stockées localement via JSON, CSV ou PDF avant la désactivation de Firebase. Notez que seules les données en cache local sont incluses dans les exports — il est conseillé de vérifier les dépenses de groupe avant la fermeture de Firebase.</li>
     <li><strong>Aucun Remboursement :</strong> Aucun remboursement au prorata ne sera émis lors de l'arrêt</li>
     <li><strong>Mise à Jour Finale :</strong> Nous pouvons publier une mise à jour « Local Uniquement » à notre discrétion</li>
   </ul>
@@ -1237,7 +1244,7 @@
 
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-06 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>약관 동의</h2>
   <p>Node Expense: Track Together를 다운로드, 설치 또는 사용함으로써 본 이용약관에 동의하게 됩니다. 동의하지 않는 경우 앱을 사용하지 마십시오.</p>
@@ -1249,7 +1256,7 @@
     <li>다른 멤버와 실시간으로 그룹 지출 추적 및 공유</li>
     <li>선택적으로 지출과 함께 위치 기록</li>
     <li>선택한 iOS 캘린더와 지출 동기화</li>
-    <li>선택적으로 데이터 백업 및 암호화 (PRO 구독 기능)</li>
+    <li>선택적으로 데이터 백업 및 암호화 (PRO 구독 기능). 백업은 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터를 포함합니다. Firebase Firestore의 실시간 그룹 지출 데이터는 로컬 백업에 포함되지 않습니다.</li>
     <li>지출 데이터를 JSON, CSV 또는 PDF로 내보내기 및 JSON 형식으로 가져오기 (PRO 구독 기능)</li>
     <li>기기 카메라로 영수증을 스캔하여 지출 내역 자동 입력</li>
     <li>지출에 영수증 사진 첨부 (PRO 구독 기능). 개인 지출 사진은 기기에 보관됩니다. 그룹 지출 사진은 Firebase Storage에 저장되며 그룹의 모든 멤버가 볼 수 있습니다.</li>
@@ -1346,6 +1353,7 @@
   <ul>
     <li>재정적 손실, 누락된 지출 또는 데이터 부정확성</li>
     <li>분실되거나 접근 불가능한 암호화 키로 인한 암호화 백업 데이터 손실</li>
+    <li>그룹 삭제, 기기 분실 또는 앱 제거 전에 명시적으로 내보내지 않은 Firebase Firestore 그룹 지출 데이터 손실</li>
     <li>타사 서비스(Firebase, RevenueCat, AdMob) 장애로 인한 데이터 손실</li>
     <li>잘못된 데이터 입력으로 인한 부정확한 그룹 정산 계산</li>
     <li>평생 접근의 경우: 개발자의 총 책임은 해당 구독을 위해 사용자가 실제로 지불한 금액을 초과하지 않습니다</li>
@@ -1367,7 +1375,7 @@
   <ul>
     <li><strong>사전 통지:</strong> 앱 내 알림을 통해 최소 30일 사전 통지</li>
     <li><strong>평생 접근:</strong> 앱이 App Store에서 사용 가능한 기간 동안만 접근 제공</li>
-    <li><strong>데이터 이동성:</strong> Firebase 비활성화 전에 JSON, CSV 또는 PDF를 통해 내보낼 수 있는 기회 제공</li>
+    <li><strong>데이터 이동성:</strong> Firebase 비활성화 전에 로컬 저장 데이터를 JSON, CSV 또는 PDF를 통해 내보낼 수 있는 기회가 제공됩니다. 내보내기에는 로컬 캐시 데이터만 포함되므로 Firebase 종료 전에 그룹 지출을 확인하시기 바랍니다.</li>
     <li><strong>환불 없음:</strong> 종료 시 비례 환불 없음</li>
     <li><strong>최종 업데이트:</strong> 당사 재량에 따라 '로컬 전용' 업데이트를 출시할 수 있습니다</li>
   </ul>
