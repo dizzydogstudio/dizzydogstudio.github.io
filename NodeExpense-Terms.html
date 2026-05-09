@@ -285,7 +285,7 @@
     <li>The group admin may set a group photo that is visible to all members of the group; this photo is stored in Firebase Storage and is deleted when the group is deleted</li>
     <li>Any member can add expenses to the group (subject to permissions set by the group admin)</li>
     <li>Group deletion requires unanimous consent from all members within a 7-day voting window</li>
-    <li>Groups inactive for over 3 months may be deleted automatically if a deletion request is submitted and no member declines within 7 days</li>
+    <li>Groups inactive for over 6 months with all debts settled may be deleted automatically if a deletion request is submitted and no member declines within 7 days.</li>
     <li>The group admin may remove members or transfer data at any time</li>
     <li>Expenses you choose to keep after group deletion remain on your device locally, marked as from a deleted group; receipt photos for those expenses remain accessible from Firebase Storage. If the deletion is performed with "remove records", every receipt photo for the group is deleted from Firebase Storage and cannot be recovered.</li>
     <li><strong>Activity Log Retention:</strong> Group activity history (such as who added, edited, refunded, or deleted an expense, and who joined or left the group) is stored on Firebase Firestore servers and is automatically and permanently deleted after <strong>90 days</strong>. Activity older than 90 days cannot be recovered. This retention period applies per group and is not affected by your subscription status.</li>
@@ -430,7 +430,7 @@
     <li>Der Gruppenadministrator ein Gruppenfoto festlegen kann, das für alle Mitglieder der Gruppe sichtbar ist; dieses Foto wird in Firebase Storage gespeichert und bei der Löschung der Gruppe gelöscht</li>
     <li>Jedes Mitglied Ausgaben zur Gruppe hinzufügen kann (vorbehaltlich der vom Gruppenadministrator festgelegten Berechtigungen)</li>
     <li>Die Löschung einer Gruppe die einstimmige Zustimmung aller Mitglieder innerhalb eines 7-tägigen Abstimmungsfensters erfordert</li>
-    <li>Gruppen, die länger als 3 Monate inaktiv waren, automatisch gelöscht werden können, wenn ein Löschantrag gestellt wird und kein Mitglied innerhalb von 7 Tagen ablehnt</li>
+    <li>Gruppen, die seit über 6 Monaten inaktiv sind und deren Schulden beglichen wurden, können automatisch gelöscht werden, wenn ein Löschantrag gestellt wird und kein Mitglied innerhalb von 7 Tagen widerspricht.</li>
     <li>Der Gruppenadministrator Mitglieder jederzeit entfernen oder Daten übertragen kann</li>
     <li>Ausgaben, die Sie nach der Gruppenlöschung behalten möchten, lokal auf Ihrem Gerät verbleiben, gekennzeichnet als aus einer gelöschten Gruppe stammend; Belegfotos für diese Ausgaben bleiben weiterhin über Firebase Storage zugänglich. Wenn die Löschung mit „Datensätze entfernen" durchgeführt wird, werden alle Belegfotos der Gruppe aus Firebase Storage gelöscht und können nicht wiederhergestellt werden.</li>
     <li><strong>Aufbewahrung des Aktivitätsprotokolls:</strong> Der Gruppenaktivitätsverlauf (z. B. wer eine Ausgabe hinzugefügt, bearbeitet, erstattet oder gelöscht hat und wer der Gruppe beigetreten ist oder sie verlassen hat) wird auf Firebase Firestore-Servern gespeichert und nach <strong>90 Tagen</strong> automatisch und dauerhaft gelöscht. Aktivitäten, die älter als 90 Tage sind, können nicht wiederhergestellt werden. Diese Aufbewahrungsfrist gilt pro Gruppe und ist unabhängig von Ihrem Abonnementstatus.</li>
@@ -576,7 +576,7 @@
     <li>El administrador del grupo puede establecer una foto de grupo visible para todos los miembros del grupo; esta foto se almacena en Firebase Storage y se elimina cuando se elimina el grupo</li>
     <li>Cualquier miembro puede añadir gastos al grupo (sujeto a los permisos establecidos por el administrador del grupo)</li>
     <li>La eliminación del grupo requiere el consentimiento unánime de todos los miembros dentro de un período de votación de 7 días</li>
-    <li>Los grupos inactivos durante más de 3 meses pueden eliminarse automáticamente si se presenta una solicitud de eliminación y ningún miembro la rechaza dentro de los 7 días</li>
+    <li>Los grupos inactivos por más de 6 meses con todas las deudas liquidadas pueden ser eliminados automáticamente si se envía una solicitud y ningún miembro la rechaza en un plazo de 7 días.</li>
     <li>El administrador del grupo puede eliminar miembros o transferir datos en cualquier momento</li>
     <li>Los gastos que elija conservar tras la eliminación del grupo permanecen localmente en su dispositivo, marcados como provenientes de un grupo eliminado; las fotos de recibos de esos gastos siguen siendo accesibles desde Firebase Storage. Si la eliminación se realiza con «eliminar registros», todas las fotos de recibos del grupo se eliminan de Firebase Storage y no podrán recuperarse.</li>
     <li><strong>Retención del registro de actividad:</strong> El historial de actividad del grupo (como quién añadió, editó, reembolsó o eliminó un gasto, y quién se unió o salió del grupo) se almacena en los servidores de Firebase Firestore y se elimina automática y permanentemente tras <strong>90 días</strong>. La actividad anterior a 90 días no puede recuperarse. Este período de retención se aplica por grupo y no depende de su estado de suscripción.</li>
@@ -722,7 +722,7 @@
     <li>群组管理员可设置对所有成员可见的群组头像；该头像存储在 Firebase Storage 中，群组删除时一并删除</li>
     <li>任何成员都可以向群组添加支出（受群组管理员设置的权限约束）</li>
     <li>删除群组需要在 7 天投票期内获得所有成员的一致同意</li>
-    <li>超过 3 个月未活动的群组，如果提交了删除申请且在 7 天内没有成员拒绝，可能会被自动删除</li>
+    <li>对于非活跃超过 6 个月且债务已结清的群组，如果提交了删除申请且 7 天内没有成员反对，该群组可能会被自动删除。</li>
     <li>群组管理员可以随时移除成员或转移数据</li>
     <li>您在群组删除后选择保留的支出将保留在您的设备本地，并标记为来自已删除群组；这些支出的收据照片仍可通过 Firebase Storage 访问。如果删除时选择"移除记录"，该群组的所有收据照片将从 Firebase Storage 中删除且无法恢复。</li>
     <li><strong>活动记录保留期：</strong>群组活动历史（例如谁添加、编辑、退款或删除了支出，以及谁加入或离开了群组）存储在 Firebase Firestore 服务器上，并在 <strong>90 天</strong>后自动永久删除。超过 90 天的活动记录无法恢复。该保留期限适用于每个群组，与您的订阅状态无关。</li>
@@ -867,7 +867,7 @@
     <li>群組管理員可設定對所有成員可見的群組頭像；該頭像儲存於 Firebase Storage，群組刪除時一併刪除</li>
     <li>任何成員均可新增費用至群組（受群組管理員設定的權限約束）</li>
     <li>群組刪除需要所有成員在 7 天投票期限內一致同意</li>
-    <li>若提交刪除請求且無成員在 7 天內拒絕，閒置超過 3 個月的群組可能被自動刪除</li>
+    <li>對於非活躍超過 6 個月且債務已結清的群組，如果提交了刪除申請且 7 天內沒有成員反對，該群組可能會被自動刪除。</li>
     <li>群組管理員可隨時移除成員或轉移資料</li>
     <li>您選擇在群組刪除後保留的費用將保留在您的裝置本機，並標示為來自已刪除群組；這些費用的收據照片仍可透過 Firebase Storage 存取。若刪除時選擇「移除記錄」，該群組的所有收據照片將從 Firebase Storage 中刪除且無法復原。</li>
     <li><strong>活動記錄保留期：</strong>群組活動歷史（例如誰新增、編輯、退款或刪除了費用，以及誰加入或離開了群組）儲存於 Firebase Firestore 伺服器上，並於 <strong>90 天</strong>後自動永久刪除。超過 90 天的活動記錄無法復原。此保留期限適用於每個群組，不受您的訂閱狀態影響。</li>
@@ -1013,7 +1013,7 @@
     <li>グループ管理者は、グループの全メンバーに表示されるグループ写真を設定できます。この写真は Firebase Storage に保存され、グループが削除されると合わせて削除されます</li>
     <li>どのメンバーもグループに支出を追加できます（グループ管理者が設定した権限に従います）</li>
     <li>グループの削除には、7日間の投票期間内にすべてのメンバーの同意が必要です</li>
-    <li>3ヶ月以上非アクティブなグループは、削除リクエストが提出され、7日以内にメンバーから拒否されない場合、自動的に削除される場合があります</li>
+    <li>6ヶ月以上アクティブではなく、すべての債務が精算されているグループは、削除申請が提出され、7日以内にメンバーからの異議がない場合、自動的に削除されることがあります。</li>
     <li>グループ管理者はいつでもメンバーを削除したりデータを移行したりできます</li>
     <li>グループ削除後に保持を選択した支出は、デバイスのローカルに「削除済みグループ」のマーク付きで残ります。これらの支出のレシート写真は引き続き Firebase Storage から閲覧できます。削除時に「記録を削除」を選択した場合、グループのすべてのレシート写真は Firebase Storage から削除され、復元できません。</li>
     <li><strong>アクティビティログの保持：</strong>グループのアクティビティ履歴（支出を追加・編集・返金・削除した人、グループに参加・脱退した人など）は Firebase Firestore サーバーに保存され、<strong>90日</strong>後に自動的かつ永続的に削除されます。90日以上前のアクティビティは復元できません。この保持期間はグループごとに適用され、サブスクリプションの状態には依存しません。</li>
@@ -1158,7 +1158,7 @@
     <li>L'administrateur du groupe peut définir une photo de groupe visible par tous les membres du groupe ; cette photo est stockée dans Firebase Storage et supprimée lors de la suppression du groupe</li>
     <li>Tout membre peut ajouter des dépenses au groupe (sous réserve des autorisations définies par l'administrateur du groupe)</li>
     <li>La suppression d'un groupe nécessite le consentement unanime de tous les membres dans un délai de vote de 7 jours</li>
-    <li>Les groupes inactifs depuis plus de 3 mois peuvent être supprimés automatiquement si une demande de suppression est soumise et qu'aucun membre ne refuse dans les 7 jours</li>
+    <li>Les groupes inactifs depuis plus de 6 mois avec toutes les dettes réglées peuvent être supprimés automatiquement si une demande est soumise et qu'aucun membre ne s'y oppose sous 7 jours.</li>
     <li>L'administrateur du groupe peut supprimer des membres ou transférer des données à tout moment</li>
     <li>Les dépenses que vous choisissez de conserver après la suppression du groupe restent localement sur votre appareil, marquées comme provenant d'un groupe supprimé ; les photos de reçus de ces dépenses restent accessibles via Firebase Storage. Si la suppression est effectuée avec « supprimer les enregistrements », toutes les photos de reçus du groupe sont supprimées de Firebase Storage et ne pourront pas être récupérées.</li>
     <li><strong>Conservation du journal d'activité :</strong> L'historique des activités du groupe (par exemple, qui a ajouté, modifié, remboursé ou supprimé une dépense, et qui a rejoint ou quitté le groupe) est stocké sur les serveurs Firebase Firestore et est automatiquement et définitivement supprimé après <strong>90 jours</strong>. Les activités antérieures à 90 jours ne peuvent pas être récupérées. Cette période de conservation s'applique par groupe et ne dépend pas de votre statut d'abonnement.</li>
@@ -1304,7 +1304,7 @@
     <li>그룹 관리자는 그룹의 모든 멤버에게 표시되는 그룹 사진을 설정할 수 있습니다. 이 사진은 Firebase Storage에 저장되며 그룹이 삭제될 때 함께 삭제됩니다</li>
     <li>모든 멤버가 그룹에 지출을 추가할 수 있습니다 (그룹 관리자가 설정한 권한 적용)</li>
     <li>그룹 삭제는 7일 투표 기간 내에 모든 멤버의 동의가 필요합니다</li>
-    <li>3개월 이상 비활성 그룹은 삭제 요청이 제출되고 7일 내에 멤버가 거부하지 않으면 자동으로 삭제될 수 있습니다</li>
+    <li>6개월 이상 활동이 없고 모든 부채가 정산된 그룹은 삭제 요청이 제출된 후 7일 이내에 거절하는 멤버가 없으면 자동으로 삭제될 수 있습니다.</li>
     <li>그룹 관리자는 언제든지 멤버를 삭제하거나 데이터를 이전할 수 있습니다</li>
     <li>그룹 삭제 후 보관을 선택한 지출은 삭제된 그룹으로 표시되어 기기에 로컬로 유지되며, 해당 지출의 영수증 사진은 Firebase Storage에서 계속 접근할 수 있습니다. 삭제 시 "기록 제거"를 선택하면 그룹의 모든 영수증 사진이 Firebase Storage에서 삭제되며 복구할 수 없습니다.</li>
     <li><strong>활동 기록 보존:</strong> 그룹 활동 기록(예: 누가 지출을 추가, 수정, 환불 또는 삭제했는지, 누가 그룹에 참여하거나 탈퇴했는지)은 Firebase Firestore 서버에 저장되며 <strong>90일</strong> 후 자동으로 영구 삭제됩니다. 90일 이상된 활동 기록은 복구할 수 없습니다. 이 보존 기간은 그룹별로 적용되며 구독 상태와 무관합니다.</li>
