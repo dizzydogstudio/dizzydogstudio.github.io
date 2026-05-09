@@ -270,7 +270,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -384,6 +384,7 @@
     <li>Removing a receipt photo from a group expense (via the Edit screen) deletes the underlying file from Firebase Storage.</li>
     <li>Updating your profile photo overwrites the previous photo in Firebase Storage. Choosing "Remove Photo" deletes it from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing devices may retain a cached copy until next sync.</li>
     <li>Updating or removing a group photo works the same way: updating overwrites the existing photo in Firebase Storage, and choosing "Remove Photo" deletes it. Only the group admin can perform these actions. The photo is also deleted from Firebase Storage when the group itself is deleted, regardless of which deletion option is chosen.</li>
+    <li>Group admins can prune inactive groups directly from Settings → Data &amp; Privacy → Inactive Groups. A group is eligible for pruning after 6 months of inactivity with all debts settled. When an admin initiates deletion, all affected group members receive a push notification identifying who deleted the group. The admin may choose to export group expenses, retain them locally, or delete them entirely before the group is removed from Firebase.</li>
     <li>Uninstalling Node Expense removes all locally stored data from your device</li>
   </ul>
   <p>Note: Firebase group data may persist until the group is formally deleted through the in-app deletion flow.</p>
@@ -398,6 +399,7 @@
     <li>Delete your local expense data within Node Expense</li>
     <li>Export your data before deleting</li>
     <li>Request group deletion (removes group data from Firebase for all members)</li>
+    <li>As a group admin, prune inactive groups (6+ months inactive, all debts settled) from Settings → Data &amp; Privacy → Inactive Groups, with a choice to export, keep locally, or delete all group expenses</li>
     <li>Cancel your subscription at any time through Apple App Store settings</li>
     <li>Stop using backups or encrypted exports at any time</li>
   </ul>
@@ -412,7 +414,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-05-08 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-05-09 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -526,6 +528,7 @@
     <li>從群組費用中移除收據照片（透過編輯畫面）會將底層檔案從 Firebase Storage 中刪除。</li>
     <li>更新個人頭像會覆寫 Firebase Storage 中的舊照片。選擇「移除照片」會將其從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
     <li>更新或移除群組頭像的運作方式相同：更新會覆寫 Firebase Storage 中的現有照片，選擇「移除照片」則會將其刪除。此操作僅限群組管理員執行。群組本身被刪除時，無論選擇哪種刪除選項，群組頭像也會一併從 Firebase Storage 中刪除。</li>
+    <li>群組管理員可直接在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組。群組需在停止活動超過 6 個月且所有債務已結清後，方可進行清理。當管理員發起刪除請求時，所有受影響的群組成員將收到推播通知，通知內容包含刪除群組的管理員姓名。管理員可選擇在將群組從 Firebase 移除前，匯出群組費用、將其保留於本機，或全部刪除。</li>
     <li>解除安裝 Node Expense 將移除您裝置上所有本機儲存的資料</li>
   </ul>
   <p>注意：Firebase 群組資料可能在群組透過應用程式內的刪除流程正式刪除之前持續存在。</p>
@@ -540,6 +543,7 @@
     <li>在 Node Expense 中刪除您的本機費用資料</li>
     <li>在刪除前匯出您的資料</li>
     <li>請求刪除群組（將為所有成員從 Firebase 移除群組資料）</li>
+    <li>作為群組管理員，可在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組（停止活動超過 6 個月且所有債務已結清），並可選擇匯出、保留於本機或刪除所有群組費用</li>
     <li>隨時透過 Apple App Store 設定取消您的訂閱</li>
     <li>隨時停止使用備份或加密匯出功能</li>
   </ul>
@@ -554,7 +558,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-05-08 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-05-09 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -668,6 +672,7 @@
     <li>从群组支出中移除收据照片（通过编辑界面）会将底层文件从 Firebase Storage 中删除。</li>
     <li>更新个人头像会覆盖 Firebase Storage 中的旧照片。选择"移除照片"会将其从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
     <li>更新或移除群组头像的方式相同：更新会覆盖 Firebase Storage 中的现有照片，选择"移除照片"则会将其删除。此操作仅限群组管理员执行。群组本身被删除时，无论选择哪种删除选项，群组头像也会一并从 Firebase Storage 中删除。</li>
+    <li>群组管理员可直接在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组。群组需在停止活动超过 6 个月且所有债务已结清后，方可进行清理。管理员发起删除时，所有受影响的群组成员将收到推送通知，通知中包含删除群组的管理员姓名。管理员可在将群组从 Firebase 移除前，选择导出群组支出、保留至本地，或全部删除。</li>
     <li>卸载 Node Expense 将删除设备上存储的所有本地数据</li>
   </ul>
   <p>注意：Firebase 群组数据可能会保留，直到通过应用内删除流程正式删除群组。</p>
@@ -682,6 +687,7 @@
     <li>在 Node Expense 内删除您的本地支出数据</li>
     <li>在删除前导出您的数据</li>
     <li>申请删除群组（为所有成员从 Firebase 中移除群组数据）</li>
+    <li>作为群组管理员，可在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组（停止活动超过 6 个月且所有债务已结清），并可选择导出、保留至本地或删除所有群组支出</li>
     <li>随时通过 Apple App Store 设置取消订阅</li>
     <li>随时停止使用备份或加密导出</li>
   </ul>
@@ -696,7 +702,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-05-08 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-05-09 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -810,6 +816,7 @@
     <li>編集画面からグループ支出のレシート写真を削除すると、Firebase Storage 上の元ファイルも削除されます。</li>
     <li>プロフィール写真を更新すると、Firebase Storage 内の以前の写真が上書きされます。「写真を削除」を選択すると、Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
     <li>グループ写真の更新・削除も同様の動作となります。更新すると Firebase Storage 内の既存の写真が上書きされ、「写真を削除」を選択するとファイルが削除されます。この操作はグループ管理者のみが行えます。グループ自体が削除された場合、どの削除オプションを選択したかにかかわらず、グループ写真も Firebase Storage から削除されます。</li>
+    <li>グループ管理者は「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループを直接整理できます。対象グループは、6ヶ月以上活動がなく、すべての債務が精算済みである必要があります。管理者が削除を開始すると、影響を受けるすべてのグループメンバーに、グループを削除した管理者名を含むプッシュ通知が送信されます。管理者はグループを Firebase から削除する前に、グループ支出をエクスポート、ローカルに保持、または全削除を選択できます。</li>
     <li>Node Expense をアンインストールすると、デバイスに保存されているすべてのローカルデータが削除されます</li>
   </ul>
   <p>注意：Firebase のグループデータは、アプリ内の削除フローを通じてグループが正式に削除されるまで残る場合があります。</p>
@@ -824,6 +831,7 @@
     <li>Node Expense 内でローカルの支出データを削除する</li>
     <li>削除前にデータをエクスポートする</li>
     <li>グループの削除をリクエストする（全メンバーの Firebase からグループデータを削除）</li>
+    <li>グループ管理者として、「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループ（6ヶ月以上非アクティブかつ全債務精算済み）を整理し、グループ支出をエクスポート、ローカル保持、または全削除を選択できます</li>
     <li>Apple App Store の設定からいつでもサブスクリプションをキャンセルする</li>
     <li>バックアップや暗号化エクスポートの使用をいつでも停止する</li>
   </ul>
@@ -838,7 +846,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -952,6 +960,7 @@
     <li>Das Entfernen eines Belegfotos aus einer Gruppenausgabe (über den Bearbeitungsbildschirm) löscht die zugrunde liegende Datei aus Firebase Storage.</li>
     <li>Beim Aktualisieren Ihres Profilfotos wird das vorherige Foto in Firebase Storage überschrieben. Bei „Foto entfernen" wird es aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
     <li>Das Aktualisieren oder Entfernen eines Gruppenfotos funktioniert auf dieselbe Weise: Beim Aktualisieren wird das vorhandene Foto in Firebase Storage überschrieben, bei „Foto entfernen" wird es gelöscht. Nur der Gruppen-Administrator kann diese Aktionen ausführen. Das Gruppenfoto wird auch dann aus Firebase Storage gelöscht, wenn die Gruppe selbst gelöscht wird – unabhängig davon, welche Löschoption gewählt wurde.</li>
+    <li>Gruppen-Administratoren können inaktive Gruppen direkt unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen. Eine Gruppe kommt für die Bereinigung in Frage, wenn sie seit über 6 Monaten inaktiv ist und alle Schulden beglichen wurden. Wenn ein Administrator die Löschung einleitet, erhalten alle betroffenen Gruppenmitglieder eine Push-Benachrichtigung mit dem Namen des Administrators. Der Administrator kann wählen, ob er die Gruppenausgaben exportieren, lokal behalten oder vollständig löschen möchte, bevor die Gruppe aus Firebase entfernt wird.</li>
     <li>Die Deinstallation von Node Expense entfernt alle lokal gespeicherten Daten von Ihrem Gerät</li>
   </ul>
   <p>Hinweis: Firebase-Gruppendaten können bestehen bleiben, bis die Gruppe über den gruppeninternen Löschvorgang formal gelöscht wird.</p>
@@ -966,6 +975,7 @@
     <li>Ihre lokalen Ausgabendaten innerhalb von Node Expense löschen</li>
     <li>Ihre Daten vor dem Löschen exportieren</li>
     <li>Gruppenlöschung beantragen (entfernt Gruppendaten aus Firebase für alle Mitglieder)</li>
+    <li>Als Gruppen-Administrator inaktive Gruppen (über 6 Monate inaktiv, alle Schulden beglichen) unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen, mit der Wahl zwischen Exportieren, lokal Behalten oder vollständigem Löschen aller Gruppenausgaben</li>
     <li>Ihr Abonnement jederzeit über die Apple App Store-Einstellungen kündigen</li>
     <li>Die Nutzung von Backups oder verschlüsselten Exporten jederzeit beenden</li>
   </ul>
@@ -980,7 +990,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1094,6 +1104,7 @@
     <li>Eliminar una foto de recibo de un gasto de grupo (a través de la pantalla de Editar) borra el archivo subyacente de Firebase Storage.</li>
     <li>Actualizar su foto de perfil sobrescribe la foto anterior en Firebase Storage. Al elegir «Eliminar foto», esta se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
     <li>Actualizar o eliminar la foto de grupo funciona de la misma manera: actualizar sobrescribe la foto existente en Firebase Storage, y elegir «Eliminar foto» la borra. Solo el administrador del grupo puede realizar estas acciones. La foto de grupo también se elimina de Firebase Storage cuando el propio grupo se elimina, independientemente de la opción de eliminación elegida.</li>
+    <li>Los administradores de grupo pueden depurar grupos inactivos directamente desde Ajustes → Datos y privacidad → Grupos inactivos. Un grupo es elegible para su depuración tras 6 meses de inactividad con todas las deudas saldadas. Cuando un administrador inicia la eliminación, todos los miembros afectados del grupo reciben una notificación push con el nombre de quien eliminó el grupo. El administrador puede elegir exportar los gastos del grupo, conservarlos localmente o eliminarlos por completo antes de que el grupo se retire de Firebase.</li>
     <li>Desinstalar Node Expense elimina todos los datos almacenados localmente de su dispositivo</li>
   </ul>
   <p>Nota: Los datos de grupo de Firebase pueden persistir hasta que el grupo se elimine formalmente a través del proceso de eliminación en la app.</p>
@@ -1108,6 +1119,7 @@
     <li>Eliminar sus datos de gastos locales desde Node Expense</li>
     <li>Exportar sus datos antes de eliminarlos</li>
     <li>Solicitar la eliminación del grupo (elimina los datos del grupo de Firebase para todos los miembros)</li>
+    <li>Como administrador del grupo, depurar grupos inactivos (más de 6 meses inactivos, todas las deudas saldadas) desde Ajustes → Datos y privacidad → Grupos inactivos, con la opción de exportar, conservar localmente o eliminar todos los gastos del grupo</li>
     <li>Cancelar su suscripción en cualquier momento a través de los ajustes del App Store de Apple</li>
     <li>Dejar de usar copias de seguridad o exportaciones cifradas en cualquier momento</li>
   </ul>
@@ -1122,7 +1134,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-08 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1236,6 +1248,7 @@
     <li>Supprimer une photo de reçu d'une dépense de groupe (via l'écran d'édition) supprime le fichier sous-jacent de Firebase Storage.</li>
     <li>La mise à jour de votre photo de profil écrase la photo précédente dans Firebase Storage. Choisir « Supprimer la photo » l'efface de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareils existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
     <li>La mise à jour ou la suppression d'une photo de groupe fonctionne de la même façon : la mise à jour écrase la photo existante dans Firebase Storage, et choisir « Supprimer la photo » la supprime. Seul l'admin du groupe peut effectuer ces actions. La photo de groupe est également supprimée de Firebase Storage lorsque le groupe lui-même est supprimé, quelle que soit l'option de suppression choisie.</li>
+    <li>Les administrateurs de groupe peuvent supprimer les groupes inactifs directement depuis Réglages → Données et confidentialité → Groupes inactifs. Un groupe est éligible à la suppression après 6 mois d'inactivité avec toutes les dettes réglées. Lorsqu'un administrateur initie la suppression, tous les membres concernés reçoivent une notification push indiquant qui a supprimé le groupe. L'administrateur peut choisir d'exporter les dépenses du groupe, de les conserver localement ou de les supprimer entièrement avant que le groupe ne soit retiré de Firebase.</li>
     <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre appareil</li>
   </ul>
   <p>Remarque : Les données de groupe Firebase peuvent persister jusqu'à ce que le groupe soit formellement supprimé via le processus de suppression intégré à l'app.</p>
@@ -1250,6 +1263,7 @@
     <li>Supprimer vos données de dépenses locales depuis Node Expense</li>
     <li>Exporter vos données avant de les supprimer</li>
     <li>Demander la suppression du groupe (supprime les données du groupe de Firebase pour tous les membres)</li>
+    <li>En tant qu'administrateur de groupe, supprimer les groupes inactifs (plus de 6 mois d'inactivité, toutes les dettes réglées) depuis Réglages → Données et confidentialité → Groupes inactifs, avec le choix d'exporter, de conserver localement ou de supprimer toutes les dépenses du groupe</li>
     <li>Annuler votre abonnement à tout moment via les paramètres de l'App Store Apple</li>
     <li>Arrêter d'utiliser les sauvegardes ou les exportations chiffrées à tout moment</li>
   </ul>
@@ -1265,7 +1279,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-08 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1379,6 +1393,7 @@
     <li>편집 화면에서 그룹 지출의 영수증 사진을 제거하면 Firebase Storage에 있는 원본 파일도 삭제됩니다.</li>
     <li>프로필 사진을 업데이트하면 Firebase Storage의 이전 사진이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
     <li>그룹 사진의 업데이트 또는 제거도 동일한 방식으로 작동합니다. 업데이트하면 Firebase Storage의 기존 사진이 덮어쓰기되고, "사진 제거"를 선택하면 삭제됩니다. 이 작업은 그룹 관리자만 수행할 수 있습니다. 그룹 자체가 삭제될 때에도 선택한 삭제 옵션에 관계없이 그룹 사진이 Firebase Storage에서 삭제됩니다.</li>
+    <li>그룹 관리자는 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹을 직접 정리할 수 있습니다. 6개월 이상 활동이 없고 모든 채무가 정산된 그룹이 정리 대상입니다. 관리자가 삭제를 시작하면 영향을 받는 모든 그룹 멤버에게 그룹을 삭제한 관리자 이름이 포함된 푸시 알림이 전송됩니다. 관리자는 그룹을 Firebase에서 제거하기 전에 그룹 지출을 내보내거나, 로컬에 보관하거나, 전체 삭제 중에서 선택할 수 있습니다.</li>
     <li>Node Expense 삭제 시 기기에 로컬로 저장된 모든 데이터가 제거됨</li>
   </ul>
   <p>참고: Firebase 그룹 데이터는 앱 내 삭제 프로세스를 통해 그룹이 공식적으로 삭제될 때까지 유지될 수 있습니다.</p>
@@ -1393,6 +1408,7 @@
     <li>Node Expense에서 로컬 지출 데이터 삭제</li>
     <li>삭제 전 데이터 내보내기</li>
     <li>그룹 삭제 요청 (모든 멤버의 Firebase 그룹 데이터 삭제)</li>
+    <li>그룹 관리자로서 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹(6개월 이상 비활성, 모든 채무 정산 완료)을 정리하고, 그룹 지출 내보내기, 로컬 보관, 또는 전체 삭제 중 선택 가능</li>
     <li>Apple App Store 설정을 통해 언제든지 구독 취소</li>
     <li>언제든지 암호화된 백업 또는 내보내기 중단</li>
   </ul>
