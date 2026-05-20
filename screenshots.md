@@ -7,7 +7,7 @@
 ****
 
 <p align="center">
-  <img width="1290" height="2796" alt="2  E - Split Bill" src="https://github.com/user-attachments/assets/733ee743-ac61-49ef-8998-f9960882cb8f" />
+  <img width="1290" height="2796" alt="2  E - Split Bill" src="https://github.com/user-attachments/assets/bf6f344c-5802-4eea-b2d3-366882224ba4" />
 </p>
 
 ****
