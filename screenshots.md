@@ -1,8 +1,9 @@
 
+
 ****
 
 <p align="center">
-  <img width="1290" height="2796" alt="1  E - Group Summary" src="https://github.com/user-attachments/assets/b9b169be-7026-4a90-8b8c-e63eaac9a6ef" />
+  <img width="1260" height="2736" alt="1  E - Group Summary" src="https://github.com/user-attachments/assets/306b8103-88f4-41f1-94d4-9ba1f6870242" />
 </p>
 
 ****
