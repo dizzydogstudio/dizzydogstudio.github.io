@@ -1,3 +1,4 @@
+
 ****
 
 <p align="center">
@@ -25,7 +26,7 @@
 ****
 
 <p align="center">
-  <img width="1290" height="2796" alt="5  E - Category Budget Progress" src="https://github.com/user-attachments/assets/e85efa76-1e62-4206-84b3-5c196da178e6" />
+ <img width="1290" height="2796" alt="5  E - Category Budget Progress" src="https://github.com/user-attachments/assets/f6e4ea04-7ec3-4afc-9ae5-d7d604346c16" />
 </p>
 
 ****
