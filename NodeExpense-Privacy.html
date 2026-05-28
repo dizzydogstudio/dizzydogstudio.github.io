@@ -270,7 +270,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -286,6 +286,7 @@
         <li>Display name</li>
         <li>Optional payment handles (Venmo, Cash App, PayPal.me)</li>
         <li>Optional receipt photos attached to expenses (PRO subscription feature)</li>
+        <li>Receipt images scanned for itemised splitting via Pick &amp; Pay (sent to Google's Gemini API for AI processing; PRO subscription feature)</li>
         <li>Optional profile photo, visible to all members of any group you join (PRO subscription feature)</li>
         <li>Optional group photo, set by the group admin and visible to all members of that group (PRO subscription feature)</li>
         <li>Optional location data</li>
@@ -320,23 +321,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonymous user identification for subscription continuity</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Background tasks including group deletion and push notification delivery</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push notifications for group activity</td></tr>
+      <tr><td><strong>Google Gemini API (via Firebase AI Logic)</strong></td><td>AI-powered OCR and line-item extraction from receipt photos scanned via Pick &amp; Pay (PRO subscription feature)</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>Remote feature configuration (e.g., per-account monthly scan caps) without requiring an app update</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Fraud and abuse prevention for backend API calls</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase is used as a sync layer for group-related features only. Personal (non-group) expense data is <strong>never</strong> uploaded to cloud services.</div>
 
-  <h2><span class="section-number">4</span>Ads</h2>
-  <p>Node Expense is supported by advertisements for users on the free tier. These may include banners, interstitial ads when reaching monthly limits, or optional rewarded ads to unlock additional expense slots.</p>
-  <p>To provide a more personalized experience, we may ask for your permission to track your activity. If you choose not to be tracked, you will still see the same number of ads, but they may be less relevant. Your financial data remains private and is <strong>never</strong> shared with advertisers.</p>
+  <h2><span class="section-number">4</span>AI-Assisted Receipt Scanning (Pick &amp; Pay)</h2>
+  <p><strong>Pick &amp; Pay is a group-only feature</strong> and is not available for personal (non-group) expenses. When you tap Pick &amp; Pay while adding a <strong>group expense</strong>, the receipt photo you take or select is sent to Google's <strong>Gemini API</strong> (via Firebase AI Logic) to extract the individual line items, prices, tax, and merchant name. The extracted data is returned to you so you can assign each item to a member of the group.</p>
+  <p>No receipt images are sent to Google unless you actively use Pick &amp; Pay.</p>
 
-  <h2><span class="section-number">5</span>Location Data</h2>
+  <h3>What is sent</h3>
+  <ul>
+    <li>A compressed copy of the receipt image</li>
+    <li>A fixed parsing instruction to the model</li>
+  </ul>
+
+  <h3>What is NOT sent</h3>
+  <ul>
+    <li>Your name, group membership, payment handles, or any other identifying information about you or your contacts</li>
+    <li>Other expenses, group history, or any data outside the receipt image itself</li>
+  </ul>
+
+  <h3>How Google handles the data</h3>
+  <p>Node Expense uses the <strong>paid tier</strong> of the Gemini API. Per <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google's Gemini API Additional Terms of Service</a>, Google does <strong>not</strong> use your prompts, images, or responses to train or improve its products. Google may briefly log requests for security, abuse prevention, and compliance purposes, after which they are discarded. Receipts are processed and not retained by Google as user data.</p>
+
+  <h3>Usage limits</h3>
+  <p>To keep the subscription price flat, we cap the number of Pick &amp; Pay scans each PRO subscriber can perform per month. You can check your remaining scans any time under <strong>Settings → Subscription → Pick &amp; Pay credits</strong>.</p>
+
+  <h3>Photo persistence after scanning</h3>
+  <p>After a successful Pick &amp; Pay scan, the receipt photo is automatically attached to the group expense as the receipt photo (a PRO benefit). It is uploaded and visible to other members of the same group, consistent with the receipt-photo behaviour described elsewhere in this policy.</p>
+
+  <h3>Opting out</h3>
+  <p>Pick &amp; Pay is entirely optional. You can split group expenses using any of the other split modes (Equal, By %, By $) without sending any data to the Gemini API. If you never use Pick &amp; Pay, no receipt images are sent to Google.</p>
+
+  <h2><span class="section-number">5</span>Ads</h2>
+  <p>Node Expense is supported by advertisements for users on the free tier. These may include banners, interstitial ads when reaching monthly limits, or optional rewarded ads to unlock additional expense slots.</p>
+  <p>To support our free tier, we may ask for your permission to deliver more relevant ads using Apple's App Tracking Transparency framework. If you decline, you will still see the same number of ads, but they will be less relevant to you. Choosing to allow or deny this does not grant advertisers access to your financial records, your on-device personal data, or your cloud-synced group expenses.</p>
+
+  <h2><span class="section-number">6</span>Location Data</h2>
   <p>Location data is optional and only collected if you explicitly enable it in Settings. When enabled, your location is recorded with new expenses. Location data is stored locally on your device and is not uploaded to cloud services. You can disable location access at any time in iOS Settings.</p>
 
-  <h2><span class="section-number">6</span>Calendar Access</h2>
+  <h2><span class="section-number">7</span>Calendar Access</h2>
   <p>Node Expense only accesses the calendars you select. Calendar access is used solely to display and sync expense entries as calendar events. Calendar data is never shared with third parties.</p>
 
-  <h2><span class="section-number">7</span>Data Storage, Retention &amp; Encryption</h2>
-  <h3>7.1 On-Device Storage</h3>
-  <p>The following data is stored locally using SwiftData (Apple's secure local storage framework):</p>
+  <h2><span class="section-number">8</span>Data Storage, Retention &amp; Encryption</h2>
+  <h3>8.1 On-Device Storage</h3>
+  <p>The following data is stored in your iPhone:</p>
   <ul>
     <li>Personal (non-group) expense records</li>
     <li>Personal expense receipt photos (PRO subscription feature; never uploaded to any cloud service)</li>
@@ -346,7 +378,7 @@
   </ul>
   <p>Personal expense data — including any attached receipt photos — never leaves your device unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker.</p>
 
-  <h3>7.2 Cloud Storage for Group Features</h3>
+  <h3>8.2 Cloud Storage for Group Features</h3>
   <p>For group features, selected data is synced to Firebase Firestore (and Firebase Storage for photos):</p>
   <ul>
     <li>Group documents (name, description, icon, members, permissions, share code)</li>
@@ -359,11 +391,12 @@
     <li>Trial start dates (for reinstall recovery)</li>
     <li>Push notification tokens (FCM)</li>
     <li>Optional payment handles for settle-up deep links (Venmo, Cash App, PayPal.me usernames)</li>
+    <li><strong>Pick &amp; Pay scan tracking</strong> — a small per-account record of how many scans you've made this month and whether your trial freebie has been used. Used to enforce per-account monthly limits and to show you your remaining scans in Settings. Contains no information about the contents of any receipt.</li>
     <li><strong>Group activity history</strong> — a record of every action performed in the group (expenses added, edited, refunded, or deleted; members who joined, left, or were removed). This data is stored in Firebase Firestore and is <strong>automatically and permanently deleted after 90 days</strong>. Activity older than 90 days cannot be recovered.</li>
   </ul>
   <div class="highlight-box">Payment handles are <strong>public usernames only</strong> (e.g., your <code>@venmo</code> or <code>$cashtag</code>), provided by you so group members can tap to open the Venmo, Cash App, or PayPal app and pay you directly. These handles are <strong>not</strong> payment credentials, bank details, or account numbers, and no money flows through Node Expense — all payments happen inside the third-party app you choose to open.</div>
 
-  <h3>7.3 Encryption &amp; Backups</h3>
+  <h3>8.3 Encryption &amp; Backups</h3>
   <ul>
     <li>Users with feature access may enable encrypted backups using AES-256-GCM encryption</li>
     <li>You control how long expense records are retained (all time or a limited number of years)</li>
@@ -372,16 +405,18 @@
   </ul>
   <p><strong>Backup scope:</strong> Backups and exports cover your locally stored personal expense records and cached group metadata. Live group expense data stored in Firebase Firestore is <strong>not</strong> included in local device backups — it remains accessible via Firestore as long as the group exists and has not been deleted.</p>
 
-  <h2><span class="section-number">8</span>Data Migration</h2>
+  <h2><span class="section-number">9</span>Data Migration</h2>
   <p>Users with feature access (PRO subscription or active free trial) may export their data as JSON, CSV, or PDF, and import data in JSON format. Node Expense does not have access to your exported files. Exported files are saved to a location you choose. Note that exports include locally stored personal expense records and cached group data; they do not pull live data directly from Firebase Firestore.</p>
 
-  <h2><span class="section-number">9</span>Data Deletion</h2>
+  <h2><span class="section-number">10</span>Data Deletion</h2>
   <ul>
     <li>Delete individual or all personal expenses from within Node Expense</li>
     <li>Leave or request deletion of a group — group data is removed from Firebase when all members agree</li>
     <li>Group expenses marked as 'keep on deletion' remain on your device locally; they are not re-uploaded</li>
     <li>When a group is deleted with 'remove records' selected, every receipt photo for that group is also deleted from Firebase Storage. When 'keep records' is chosen, the photos remain in Firebase Storage so original members can still view them on their own devices.</li>
     <li>Removing a receipt photo from a group expense (via the Edit screen) deletes the underlying file from Firebase Storage.</li>
+    <li>Deleting an itemised (Pick &amp; Pay) expense removes the line-item detail along with the expense.</li>
+    <li>Deleting the auto-attached Pick &amp; Pay receipt photo (via the Edit screen) removes both the local copy and the copy in Firebase Storage that other group members can see.</li>
     <li>Updating your profile photo overwrites the previous photo in Firebase Storage. Choosing "Remove Photo" deletes it from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing devices may retain a cached copy until next sync.</li>
     <li>Updating or removing a group photo works the same way: updating overwrites the existing photo in Firebase Storage, and choosing "Remove Photo" deletes it. Only the group admin can perform these actions. The photo is also deleted from Firebase Storage when the group itself is deleted, regardless of which deletion option is chosen.</li>
     <li>Group admins can prune inactive groups directly from Settings → Data &amp; Privacy → Inactive Groups. A group is eligible for pruning after 6 months of inactivity with all debts settled. When an admin initiates deletion, all affected group members receive a push notification identifying who deleted the group. The admin may choose to export group expenses, retain them locally, or delete them entirely before the group is removed from Firebase.</li>
@@ -389,10 +424,10 @@
   </ul>
   <p>Note: Firebase group data may persist until the group is formally deleted through the in-app deletion flow.</p>
 
-  <h2><span class="section-number">10</span>Children's Privacy</h2>
+  <h2><span class="section-number">11</span>Children's Privacy</h2>
   <p>Node Expense is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you believe a child has provided personal information, please contact us.</p>
 
-  <h2><span class="section-number">11</span>Your Rights</h2>
+  <h2><span class="section-number">12</span>Your Rights</h2>
   <ul>
     <li>Disable location access in iOS Settings</li>
     <li>Revoke calendar access in iOS Settings</li>
@@ -404,17 +439,17 @@
     <li>Stop using backups or encrypted exports at any time</li>
   </ul>
 
-  <h2><span class="section-number">12</span>Changes to This Policy</h2>
+  <h2><span class="section-number">13</span>Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. Changes will be reflected by the "Last Updated" date at the top of this document. Continued use of Node Expense after changes constitutes acceptance of the updated policy.</p>
 
-  <h2><span class="section-number">13</span>Contact</h2>
+  <h2><span class="section-number">14</span>Contact</h2>
   <div class="contact-box">
     <p style="margin:0">For questions about this Privacy Policy or your data:<br>
     <strong>Email:</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-05-09 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-05-27 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -430,6 +465,7 @@
         <li>顯示名稱</li>
         <li>選填的付款帳號（Venmo、Cash App、PayPal.me）</li>
         <li>選填的費用收據照片（PRO 訂閱功能）</li>
+        <li>透過 Pick &amp; Pay 進行逐項分帳所掃描的收據圖片（將傳送至 Google Gemini API 進行 AI 處理；PRO 訂閱功能）</li>
         <li>選填的個人頭像，您加入的所有群組的成員皆可見（PRO 訂閱功能）</li>
         <li>選填的群組頭像，由群組管理員設定，僅該群組的所有成員可見（PRO 訂閱功能）</li>
         <li>選填的位置資料</li>
@@ -464,23 +500,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>用於訂閱連續性的匿名使用者識別</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>背景工作，包括群組刪除及推播通知傳送</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群組活動的推播通知</td></tr>
+      <tr><td><strong>Google Gemini API（透過 Firebase AI Logic）</strong></td><td>透過 Pick &amp; Pay 掃描收據照片進行 AI 驅動的 OCR 與逐項提取（PRO 訂閱功能）</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>無需更新應用程式即可遠端配置功能參數（例如每帳戶每月掃描上限）</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>後端 API 呼叫的詐欺與濫用防護</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase 僅作為群組相關功能的同步層。個人（非群組）費用資料<strong>絕不會</strong>上傳至雲端服務。</div>
 
-  <h2><span class="section-number">4</span>廣告</h2>
-  <p>免費方案的使用者將在 Node Expense 中看到廣告支援。這些廣告可能包含橫幅廣告、達到每月上限時的插頁式廣告，或用於解鎖額外費用記錄槽位的選填獎勵廣告。</p>
-  <p>為提供更個人化的體驗，我們可能會請求您的許可來追蹤您的活動。若您選擇不被追蹤，您仍會看到相同數量的廣告，但廣告的相關性可能較低。您的財務資料將保持私密，<strong>絕不會</strong>與廣告商共享。</p>
+  <h2><span class="section-number">4</span>AI 輔助收據掃描（Pick &amp; Pay）</h2>
+  <p><strong>Pick &amp; Pay 為僅限群組的功能</strong>，個人（非群組）費用無法使用此功能。當您在新增<strong>群組費用</strong>時點擊 Pick &amp; Pay，您拍攝或選擇的收據照片將傳送至 Google 的 <strong>Gemini API</strong>（透過 Firebase AI Logic）以提取個別品項、價格、稅金及商家名稱。提取後的資料將回傳給您,以便將每項分配給群組成員。</p>
+  <p>除非您主動使用 Pick &amp; Pay,否則不會有任何收據圖片傳送至 Google。</p>
 
-  <h2><span class="section-number">5</span>位置資料</h2>
+  <h3>傳送的內容</h3>
+  <ul>
+    <li>收據圖片的壓縮副本</li>
+    <li>給模型的固定解析指令</li>
+  </ul>
+
+  <h3>不會傳送的內容</h3>
+  <ul>
+    <li>您的姓名、群組成員身份、付款帳號或任何其他可識別您或您聯絡人的資訊</li>
+    <li>其他費用、群組記錄,或收據圖片以外的任何資料</li>
+  </ul>
+
+  <h3>Google 如何處理資料</h3>
+  <p>Node Expense 使用 Gemini API 的<strong>付費方案</strong>。根據 <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google Gemini API 附加服務條款</a>,Google <strong>不會</strong>使用您的提示、圖片或回應來訓練或改進其產品。Google 可能會為了安全、防止濫用及合規目的短暫記錄請求,之後將其捨棄。收據經處理後,不會被 Google 保留為使用者資料。</p>
+
+  <h3>使用限制</h3>
+  <p>為了維持訂閱費用不變,我們限制每位 PRO 訂閱者每月可進行的 Pick &amp; Pay 掃描次數。您可隨時在<strong>「設定 → 訂閱 → Pick &amp; Pay credits」</strong>查看剩餘掃描次數。</p>
+
+  <h3>掃描後的照片保留</h3>
+  <p>Pick &amp; Pay 掃描成功後,該收據照片將自動附加至群組費用作為收據照片(PRO 福利)。該照片會上傳並對同群組的其他成員可見,與本政策其他部分所述的收據照片行為一致。</p>
+
+  <h3>選擇不使用</h3>
+  <p>Pick &amp; Pay 完全為選用功能。您可使用其他任何分攤模式(平均、按 %、按 $)分攤群組費用,無需傳送任何資料給 Gemini API。若您從未使用 Pick &amp; Pay,則不會有任何收據圖片傳送至 Google。</p>
+
+  <h2><span class="section-number">5</span>廣告</h2>
+  <p>免費方案的使用者將在 Node Expense 中看到廣告支援。這些廣告可能包含橫幅廣告、達到每月上限時的插頁式廣告，或用於解鎖額外費用記錄槽位的選填獎勵廣告。</p>
+  <p>為了支持我們的免費方案，我們可能會徵求您的許可，以便使用 Apple 的「App 追蹤透明度」（App Tracking Transparency）架構為您投放更具相關性的廣告。如果您拒絕，您看到的廣告數量不會減少，但這些廣告與您的相關性會降低。無論您選擇允許還是拒絕，廣告商都無法存取您的財務記錄、儲存在您 iPhone 中的個人數據或雲端同步的群組費用。</p>
+
+  <h2><span class="section-number">6</span>位置資料</h2>
   <p>位置資料為選填，僅在您在「設定」中明確啟用以進行費用追蹤時才會收集。啟用後，您的位置將隨新費用一同記錄。位置資料儲存於您的裝置本機，不會上傳至雲端服務。您可以隨時在 iOS 設定中停用位置存取。</p>
 
-  <h2><span class="section-number">6</span>行事曆存取</h2>
+  <h2><span class="section-number">7</span>行事曆存取</h2>
   <p>Node Expense 僅存取您所選擇的行事曆。行事曆存取僅用於以行事曆事件的形式顯示及同步費用項目。行事曆資料絕不會與第三方共享。</p>
 
-  <h2><span class="section-number">7</span>資料儲存、保留與加密</h2>
-  <h3>7.1 裝置本機儲存</h3>
-  <p>以下資料使用 SwiftData（Apple 的安全本機儲存框架）儲存於您的裝置本機：</p>
+  <h2><span class="section-number">8</span>資料儲存、保留與加密</h2>
+  <h3>8.1 裝置本機儲存</h3>
+  <p>以下資料儲存在您的 iPhone 中：</p>
   <ul>
     <li>個人（非群組）費用記錄</li>
     <li>個人費用的收據照片（PRO 訂閱功能；不會上傳至任何雲端服務）</li>
@@ -490,7 +557,7 @@
   </ul>
   <p>個人費用資料——包括所附加的收據照片——不會離開您的裝置，除非您明確匯出或備份。已刪除群組的費用將在您的裝置本機保留，並標示為「已刪除群組」。</p>
 
-  <h3>7.2 群組功能的雲端儲存</h3>
+  <h3>8.2 群組功能的雲端儲存</h3>
   <p>針對群組功能，所選資料將同步至 Firebase Firestore（照片則同步至 Firebase Storage）：</p>
   <ul>
     <li>群組文件（名稱、說明、圖示、成員、權限、分享碼）</li>
@@ -503,11 +570,12 @@
     <li>試用開始日期（用於重新安裝後的復原）</li>
     <li>推播通知權杖（FCM）</li>
     <li>用於結算深度連結的選填付款帳號（Venmo、Cash App、PayPal.me 使用者名稱）</li>
+    <li><strong>Pick &amp; Pay 掃描追蹤</strong>——記錄您本月已進行的掃描次數及試用免費額度是否已使用的小型每帳戶記錄。用於執行每帳戶每月限制，並在「設定」中向您顯示剩餘掃描次數。不包含任何收據內容的資訊。</li>
     <li><strong>群組活動記錄</strong>——群組內所有操作的記錄（費用的新增、編輯、退款或刪除；成員的加入、離開或移除）。此資料儲存於 Firebase Firestore，並於 <strong>90 天後自動永久刪除</strong>。超過 90 天的活動記錄無法復原。</li>
   </ul>
   <div class="highlight-box">付款帳號為<strong>公開用戶名稱</strong>（例如您的 <code>@venmo</code> 或 <code>$cashtag</code>），由您提供，讓群組成員可點擊直接開啟 Venmo、Cash App 或 PayPal 應用程式向您付款。這些帳號<strong>並非</strong>付款憑證、銀行資訊或帳號密碼，也沒有任何款項透過 Node Expense 轉移——所有付款皆在您所選擇開啟的第三方應用程式中完成。</div>
 
-  <h3>7.3 加密與備份</h3>
+  <h3>8.3 加密與備份</h3>
   <ul>
     <li>具有功能存取權限的使用者可啟用使用 AES-256-GCM 加密的加密備份</li>
     <li>您可控制費用記錄的保留時間（全部時間或指定年數）</li>
@@ -516,16 +584,18 @@
   </ul>
   <p><strong>備份範圍：</strong>備份與匯出涵蓋您本機儲存的個人費用記錄及已快取的群組中繼資料。儲存於 Firebase Firestore 的即時群組費用資料<strong>不包含</strong>在本機裝置備份中——只要群組存在且未被刪除，即可透過 Firestore 存取。</p>
 
-  <h2><span class="section-number">8</span>資料遷移</h2>
+  <h2><span class="section-number">9</span>資料遷移</h2>
   <p>具有功能存取權限的使用者（PRO 訂閱或有效免費試用）可將資料匯出為 JSON、CSV 或 PDF 格式，並支援以 JSON 格式匯入資料。Node Expense 無法存取您的匯出檔案。匯出檔案會儲存至您所選擇的位置。請注意，匯出內容包含本機儲存的個人費用記錄及已快取的群組資料；並非直接從 Firebase Firestore 擷取即時資料。</p>
 
-  <h2><span class="section-number">9</span>資料刪除</h2>
+  <h2><span class="section-number">10</span>資料刪除</h2>
   <ul>
     <li>在 Node Expense 中刪除個別或全部個人費用</li>
     <li>離開或請求刪除群組 — 當所有成員同意後，群組資料將從 Firebase 移除</li>
     <li>標示為「刪除時保留」的群組費用將保留於您的裝置本機；這些資料不會被重新上傳</li>
     <li>當刪除群組時若選擇「移除記錄」，該群組的所有收據照片也會從 Firebase Storage 中刪除。若選擇「保留記錄」，照片將保留於 Firebase Storage 中，原群組成員仍可在自己的裝置上檢視。</li>
     <li>從群組費用中移除收據照片（透過編輯畫面）會將底層檔案從 Firebase Storage 中刪除。</li>
+    <li>刪除逐項（Pick &amp; Pay）費用時，會連同該費用一併移除逐項明細。</li>
+    <li>從編輯畫面刪除自動附加的 Pick &amp; Pay 收據照片時，會同時移除本機副本以及 Firebase Storage 中其他群組成員可見的副本。</li>
     <li>更新個人頭像會覆寫 Firebase Storage 中的舊照片。選擇「移除照片」會將其從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
     <li>更新或移除群組頭像的運作方式相同：更新會覆寫 Firebase Storage 中的現有照片，選擇「移除照片」則會將其刪除。此操作僅限群組管理員執行。群組本身被刪除時，無論選擇哪種刪除選項，群組頭像也會一併從 Firebase Storage 中刪除。</li>
     <li>群組管理員可直接在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組。群組需在停止活動超過 6 個月且所有債務已結清後，方可進行清理。當管理員發起刪除請求時，所有受影響的群組成員將收到推播通知，通知內容包含刪除群組的管理員姓名。管理員可選擇在將群組從 Firebase 移除前，匯出群組費用、將其保留於本機，或全部刪除。</li>
@@ -533,10 +603,10 @@
   </ul>
   <p>注意：Firebase 群組資料可能在群組透過應用程式內的刪除流程正式刪除之前持續存在。</p>
 
-  <h2><span class="section-number">10</span>兒童隱私</h2>
+  <h2><span class="section-number">11</span>兒童隱私</h2>
   <p>Node Expense 不適用於 13 歲以下兒童。我們不會在知情的情況下收集 13 歲以下兒童的個人資料。若您認為兒童已提供個人資訊，請與我們聯絡。</p>
 
-  <h2><span class="section-number">11</span>您的權利</h2>
+  <h2><span class="section-number">12</span>您的權利</h2>
   <ul>
     <li>在 iOS 設定中停用位置存取</li>
     <li>在 iOS 設定中撤銷行事曆存取</li>
@@ -548,17 +618,17 @@
     <li>隨時停止使用備份或加密匯出功能</li>
   </ul>
 
-  <h2><span class="section-number">12</span>本政策的變更</h2>
+  <h2><span class="section-number">13</span>本政策的變更</h2>
   <p>我們可能會不定期更新本隱私權政策。變更將反映於本文件頂部的「最後更新」日期。在變更後繼續使用 Node Expense，即表示您接受更新後的政策。</p>
 
-  <h2><span class="section-number">13</span>聯絡方式</h2>
+  <h2><span class="section-number">14</span>聯絡方式</h2>
   <div class="contact-box">
     <p style="margin:0">若您對本隱私權政策或您的資料有任何疑問，請聯絡：<br>
     <strong>電子郵件：</strong><a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-05-09 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-05-27 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -574,6 +644,7 @@
         <li>显示名称</li>
         <li>可选的付款账号（Venmo、Cash App、PayPal.me）</li>
         <li>可选的支出收据照片（PRO 订阅功能）</li>
+        <li>通过 Pick &amp; Pay 进行逐项分账所扫描的收据图片（将发送至 Google Gemini API 进行 AI 处理；PRO 订阅功能）</li>
         <li>可选的个人头像，您加入的所有群组的成员均可见（PRO 订阅功能）</li>
         <li>可选的群组头像，由群组管理员设置，仅该群组的所有成员可见（PRO 订阅功能）</li>
         <li>可选的位置数据</li>
@@ -608,23 +679,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>用于维护订阅连续性的匿名用户识别</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>后台任务，包括群组删除和推送通知发送</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群组活动的推送通知</td></tr>
+      <tr><td><strong>Google Gemini API（通过 Firebase AI Logic）</strong></td><td>通过 Pick &amp; Pay 扫描收据照片进行 AI 驱动的 OCR 和逐项提取（PRO 订阅功能）</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>无需更新应用即可远程配置功能参数（例如每账户每月扫描上限）</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>后端 API 调用的欺诈和滥用防护</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase 仅用作群组相关功能的同步层。个人（非群组）支出数据<strong>绝不会</strong>上传到云端服务。</div>
 
-  <h2><span class="section-number">4</span>广告</h2>
-  <p>Node Expense 为免费层级的用户提供广告支持。这些可能包括横幅广告、达到每月限制时的插屏广告，或用于解锁额外支出名额的可选激励广告。</p>
-  <p>为了提供更加个性化的体验，我们可能会请求您的跟踪许可。如果您选择不被跟踪，您仍会看到相同数量的广告，但相关性可能会降低。您的财务数据保持私密，<strong>绝不会</strong>与广告商共享。</p>
+  <h2><span class="section-number">4</span>AI 辅助收据扫描（Pick &amp; Pay）</h2>
+  <p><strong>Pick &amp; Pay 仅适用于群组功能</strong>，个人（非群组）支出无法使用此功能。当您在添加<strong>群组支出</strong>时点击 Pick &amp; Pay，您拍摄或选择的收据照片将发送至 Google 的 <strong>Gemini API</strong>（通过 Firebase AI Logic）以提取各个项目、价格、税金及商家名称。提取后的数据将返回给您，以便将每项分配给群组成员。</p>
+  <p>除非您主动使用 Pick &amp; Pay，否则不会有任何收据图片发送至 Google。</p>
 
-  <h2><span class="section-number">5</span>位置数据</h2>
+  <h3>发送的内容</h3>
+  <ul>
+    <li>收据图片的压缩副本</li>
+    <li>给模型的固定解析指令</li>
+  </ul>
+
+  <h3>不会发送的内容</h3>
+  <ul>
+    <li>您的姓名、群组成员身份、付款账号或任何其他可识别您或您联系人的信息</li>
+    <li>其他支出、群组记录，或收据图片以外的任何数据</li>
+  </ul>
+
+  <h3>Google 如何处理数据</h3>
+  <p>Node Expense 使用 Gemini API 的<strong>付费方案</strong>。根据 <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google Gemini API 附加服务条款</a>，Google <strong>不会</strong>使用您的提示、图片或响应来训练或改进其产品。Google 可能会出于安全、防止滥用和合规目的短暂记录请求，之后将其丢弃。收据经处理后，不会被 Google 保留为用户数据。</p>
+
+  <h3>使用限制</h3>
+  <p>为保持订阅费用不变，我们限制每位 PRO 订阅者每月可执行的 Pick &amp; Pay 扫描次数。您可随时在<strong>「设置 → 订阅 → Pick &amp; Pay credits」</strong>查看剩余扫描次数。</p>
+
+  <h3>扫描后的照片保留</h3>
+  <p>Pick &amp; Pay 扫描成功后，该收据照片将自动附加到群组支出作为收据照片（PRO 福利）。该照片会上传并对同群组的其他成员可见，与本政策其他部分所述的收据照片行为一致。</p>
+
+  <h3>选择不使用</h3>
+  <p>Pick &amp; Pay 完全为可选功能。您可以使用其他任何分摊模式（平均、按 %、按 $）分摊群组支出，无需向 Gemini API 发送任何数据。若您从未使用 Pick &amp; Pay，则不会有任何收据图片发送至 Google。</p>
+
+  <h2><span class="section-number">5</span>广告</h2>
+  <p>Node Expense 为免费层级的用户提供广告支持。这些可能包括横幅广告、达到每月限制时的插屏广告，或用于解锁额外支出名额的可选激励广告。</p>
+  <p>为了支持我们的免费方案，我们可能会征求您的许可，以便使用 Apple 的‘应用跟踪透明度’（App Tracking Transparency）框架为您投放更具相关性的广告。如果您拒绝，您看到的广告数量不会减少，但这些广告与您的相关性会降低。无论您选择允许还是拒绝，广告商都无法访问您的财务记录、存储在您 iPhone 中的个人数据或云端同步的群组费用。</p>
+
+  <h2><span class="section-number">6</span>位置数据</h2>
   <p>位置数据是可选的，仅在您在"设置"中明确启用支出追踪时才会收集。启用后，您的位置将随新支出一起记录。位置数据存储在您的设备本地，不会上传到云端服务。您可以随时在 iOS 设置中禁用位置访问权限。</p>
 
-  <h2><span class="section-number">6</span>日历访问权限</h2>
+  <h2><span class="section-number">7</span>日历访问权限</h2>
   <p>Node Expense 仅访问您选择的日历。日历访问权限仅用于将支出条目显示并同步为日历事件。日历数据绝不会与第三方共享。</p>
 
-  <h2><span class="section-number">7</span>数据存储、保留与加密</h2>
-  <h3>7.1 设备端存储</h3>
-  <p>以下数据使用 SwiftData（Apple 的安全本地存储框架）存储在您的设备本地：</p>
+  <h2><span class="section-number">8</span>数据存储、保留与加密</h2>
+  <h3>8.1 设备端存储</h3>
+  <p>以下数据存储在您的 iPhone 中：</p>
   <ul>
     <li>个人（非群组）支出记录</li>
     <li>个人支出的收据照片（PRO 订阅功能；不会上传到任何云端服务）</li>
@@ -634,7 +736,7 @@
   </ul>
   <p>除非您明确导出或备份，否则个人支出数据——包括所附加的收据照片——绝不会离开您的设备。已删除群组的支出将保留在您的设备本地并带有"已删除群组"标记。</p>
 
-  <h3>7.2 群组功能的云存储</h3>
+  <h3>8.2 群组功能的云存储</h3>
   <p>对于群组功能，选定的数据将同步到 Firebase Firestore（照片同步至 Firebase Storage）：</p>
   <ul>
     <li>群组文档（名称、描述、图标、成员、权限、共享代码）</li>
@@ -647,11 +749,12 @@
     <li>试用开始日期（用于重新安装恢复）</li>
     <li>推送通知令牌（FCM）</li>
     <li>用于结算深度链接的可选付款账号（Venmo、Cash App、PayPal.me 用户名）</li>
+    <li><strong>Pick &amp; Pay 扫描跟踪</strong>——记录您本月已进行的扫描次数及试用免费额度是否已使用的小型每账户记录。用于执行每账户每月限制，并在「设置」中向您显示剩余扫描次数。不包含任何收据内容的信息。</li>
     <li><strong>群组活动记录</strong>——群组内所有操作的记录（支出的添加、编辑、退款或删除；成员的加入、离开或移除）。此数据存储于 Firebase Firestore，并于 <strong>90 天后自动永久删除</strong>。超过 90 天的活动记录无法恢复。</li>
   </ul>
   <div class="highlight-box">付款账号<strong>仅为公开用户名</strong>（例如您的 <code>@venmo</code> 或 <code>$cashtag</code>），由您提供，以便群组成员可点击直接打开 Venmo、Cash App 或 PayPal 应用向您付款。这些账号<strong>不是</strong>支付凭证、银行信息或账号密码，也没有任何资金通过 Node Expense 流转——所有付款均在您所选择打开的第三方应用中完成。</div>
 
-  <h3>7.3 加密与备份</h3>
+  <h3>8.3 加密与备份</h3>
   <ul>
     <li>拥有功能访问权限的用户可以启用使用 AES-256-GCM 加密的加密备份</li>
     <li>您可以控制支出记录的保留时长（永久或有限年限）</li>
@@ -660,16 +763,18 @@
   </ul>
   <p><strong>备份范围：</strong>备份与导出涵盖您本地存储的个人支出记录及已缓存的群组元数据。存储于 Firebase Firestore 的即时群组支出数据<strong>不包含</strong>在本地设备备份中——只要群组存在且未被删除，即可通过 Firestore 访问。</p>
 
-  <h2><span class="section-number">8</span>数据迁移</h2>
+  <h2><span class="section-number">9</span>数据迁移</h2>
   <p>拥有功能访问权限的用户（专业版订阅或处于有效免费试用期）可将数据导出为 JSON、CSV 或 PDF 格式，并支持以 JSON 格式导入数据。Node Expense 无法访问您导出的文件。导出文件将保存到您选择的位置。请注意，导出内容包含本地存储的个人支出记录及已缓存的群组数据；并非直接从 Firebase Firestore 获取即时数据。</p>
 
-  <h2><span class="section-number">9</span>数据删除</h2>
+  <h2><span class="section-number">10</span>数据删除</h2>
   <ul>
     <li>在 Node Expense 内删除单个或所有个人支出</li>
     <li>退出或申请删除群组——当所有成员同意时，群组数据将从 Firebase 中移除</li>
     <li>标记为"删除时保留"的群组支出将保留在您的设备本地；它们不会被重新上传</li>
     <li>当删除群组时若选择"移除记录"，该群组的所有收据照片也会从 Firebase Storage 中删除。若选择"保留记录"，照片将保留在 Firebase Storage 中，原群组成员仍可在自己的设备上查看。</li>
     <li>从群组支出中移除收据照片（通过编辑界面）会将底层文件从 Firebase Storage 中删除。</li>
+    <li>删除逐项（Pick &amp; Pay）支出时，会连同该支出一并移除逐项明细。</li>
+    <li>从编辑界面删除自动附加的 Pick &amp; Pay 收据照片时，会同时移除本地副本以及 Firebase Storage 中其他群组成员可见的副本。</li>
     <li>更新个人头像会覆盖 Firebase Storage 中的旧照片。选择"移除照片"会将其从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
     <li>更新或移除群组头像的方式相同：更新会覆盖 Firebase Storage 中的现有照片，选择"移除照片"则会将其删除。此操作仅限群组管理员执行。群组本身被删除时，无论选择哪种删除选项，群组头像也会一并从 Firebase Storage 中删除。</li>
     <li>群组管理员可直接在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组。群组需在停止活动超过 6 个月且所有债务已结清后，方可进行清理。管理员发起删除时，所有受影响的群组成员将收到推送通知，通知中包含删除群组的管理员姓名。管理员可在将群组从 Firebase 移除前，选择导出群组支出、保留至本地，或全部删除。</li>
@@ -677,10 +782,10 @@
   </ul>
   <p>注意：Firebase 群组数据可能会保留，直到通过应用内删除流程正式删除群组。</p>
 
-  <h2><span class="section-number">10</span>儿童隐私</h2>
+  <h2><span class="section-number">11</span>儿童隐私</h2>
   <p>Node Expense 不适用于 13 岁以下的儿童。我们不会故意收集 13 岁以下儿童的个人数据。如果您认为儿童提供了个人信息，请联系我们。</p>
 
-  <h2><span class="section-number">11</span>您的权利</h2>
+  <h2><span class="section-number">12</span>您的权利</h2>
   <ul>
     <li>在 iOS 设置中禁用位置访问权限</li>
     <li>在 iOS 设置中撤销日历访问权限</li>
@@ -692,17 +797,17 @@
     <li>随时停止使用备份或加密导出</li>
   </ul>
 
-  <h2><span class="section-number">12</span>本政策的变更</h2>
+  <h2><span class="section-number">13</span>本政策的变更</h2>
   <p>我们可能会不时更新本隐私政策。变更将通过本文档顶部的"最后更新日期"反映。变更发布后继续使用 Node Expense 即表示接受更新后的政策。</p>
 
-  <h2><span class="section-number">13</span>联系方式</h2>
+  <h2><span class="section-number">14</span>联系方式</h2>
   <div class="contact-box">
     <p style="margin:0">如果您对本隐私政策或您的数据有疑问，请联系：<br>
     <strong>电子邮件：</strong><a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-05-09 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-05-27 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -718,6 +823,7 @@
         <li>表示名</li>
         <li>任意の支払いハンドル（Venmo、Cash App、PayPal.me）</li>
         <li>任意の支出に添付されるレシート写真（PRO サブスクリプション機能）</li>
+        <li>Pick &amp; Pay でアイテム別に割り勘するためにスキャンしたレシート画像（Google Gemini API による AI 処理のため送信されます。PRO サブスクリプション機能）</li>
         <li>任意のプロフィール写真。参加するすべてのグループのメンバーに表示されます（PRO サブスクリプション機能）</li>
         <li>任意のグループ写真。グループ管理者が設定し、そのグループの全メンバーに表示されます（PRO サブスクリプション機能）</li>
         <li>任意の位置情報</li>
@@ -752,23 +858,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>サブスクリプション継続性のための匿名ユーザー識別</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>グループ削除やプッシュ通知配信を含むバックグラウンドタスク</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>グループアクティビティのプッシュ通知</td></tr>
+      <tr><td><strong>Google Gemini API（Firebase AI Logic 経由）</strong></td><td>Pick &amp; Pay でスキャンしたレシート写真の AI による OCR とアイテム抽出（PRO サブスクリプション機能）</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>アプリの更新を必要としない機能設定のリモート構成（例: アカウントごとの月間スキャン上限）</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>バックエンド API 呼び出しの不正使用防止</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase はグループ関連機能の同期レイヤーとしてのみ使用されます。個人（非グループ）の支出データはクラウドサービスに<strong>一切</strong>アップロードされません。</div>
 
-  <h2><span class="section-number">4</span>広告</h2>
-  <p>Node Expense は、無料プランのユーザー向けに広告によるサポートを受けています。バナー広告、月次上限に達したときのインタースティシャル広告、または追加の支出スロットをアンロックするための任意のリワード広告が含まれる場合があります。</p>
-  <p>よりパーソナライズされた体験を提供するために、アクティビティの追跡許可を求める場合があります。追跡を希望しない場合でも、同じ数の広告が表示されますが、関連性が低くなる場合があります。お客様の財務データはプライベートに保たれ、広告主と<strong>共有されることはありません</strong>。</p>
+  <h2><span class="section-number">4</span>AI 補助のレシートスキャン（Pick &amp; Pay）</h2>
+  <p><strong>Pick &amp; Pay はグループ専用機能</strong>であり、個人（非グループ）支出では利用できません。<strong>グループ支出</strong>の追加時に Pick &amp; Pay をタップすると、撮影または選択したレシート写真が Google の <strong>Gemini API</strong>（Firebase AI Logic 経由）に送信され、個別の項目、価格、税、店舗名が抽出されます。抽出されたデータはユーザーに返され、各項目をグループメンバーに割り当てることができます。</p>
+  <p>Pick &amp; Pay を能動的に使用しない限り、レシート画像が Google に送信されることはありません。</p>
 
-  <h2><span class="section-number">5</span>位置情報</h2>
+  <h3>送信される内容</h3>
+  <ul>
+    <li>レシート画像の圧縮版</li>
+    <li>モデルへの固定された解析指示</li>
+  </ul>
+
+  <h3>送信されない内容</h3>
+  <ul>
+    <li>ユーザーの氏名、グループ所属、支払いハンドル、その他のユーザーまたは連絡先を特定する情報</li>
+    <li>他の支出、グループ履歴、レシート画像以外のデータ</li>
+  </ul>
+
+  <h3>Google によるデータの取り扱い</h3>
+  <p>Node Expense は Gemini API の<strong>有料プラン</strong>を使用します。<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google の Gemini API 追加利用規約</a>によると、Google はユーザーのプロンプト、画像、応答を製品のトレーニングや改善に<strong>使用しません</strong>。Google はセキュリティ、不正使用防止、コンプライアンスの目的でリクエストを短時間ログに記録することがありますが、その後は破棄されます。レシートは処理され、Google によってユーザーデータとして保持されることはありません。</p>
+
+  <h3>使用制限</h3>
+  <p>サブスクリプション価格を一定に保つため、PRO サブスクライバーごとに 1 か月あたりに実行できる Pick &amp; Pay スキャン回数を制限しています。<strong>「設定 → サブスクリプション → Pick &amp; Pay credits」</strong>で残りのスキャン回数をいつでも確認できます。</p>
+
+  <h3>スキャン後の写真の保存</h3>
+  <p>Pick &amp; Pay のスキャンが成功すると、レシート写真はレシート写真としてグループ支出に自動的に添付されます（PRO 特典）。この写真はアップロードされ、同じグループの他のメンバーから閲覧可能となります。本ポリシーの他の箇所で説明されているレシート写真の取り扱いと同様です。</p>
+
+  <h3>オプトアウト</h3>
+  <p>Pick &amp; Pay は完全に任意です。他の分割モード（均等、％ で、$ で）でグループ支出を分割すれば、Gemini API にデータを送信する必要はありません。Pick &amp; Pay を一度も使用しなければ、レシート画像が Google に送信されることはありません。</p>
+
+  <h2><span class="section-number">5</span>広告</h2>
+  <p>Node Expense は、無料プランのユーザー向けに広告によるサポートを受けています。バナー広告、月次上限に達したときのインタースティシャル広告、または追加の支出スロットをアンロックするための任意のリワード広告が含まれる場合があります。</p>
+  <p>無料プランを維持するため、Appleの「Appのトラッキング透明性」（App Tracking Transparency）フレームワークを使用して、より関連性の高い広告を配信する許可を求める場合があります。トラッキングを拒否した場合でも表示される広告の数は変わりませんが、関心の低い広告が表示されるようになります。この許可の選択によって、広告主がお客様の財務記録、デバイス内の個人データ、またはクラウドに同期されたグループ出費にアクセスできるようになることは決してありません。</p>
+
+  <h2><span class="section-number">6</span>位置情報</h2>
   <p>位置情報の収集は任意であり、設定で明示的に有効にした場合のみ収集されます。有効にすると、新しい支出に位置情報が記録されます。位置情報はデバイスにローカル保存され、クラウドサービスにアップロードされることはありません。iOS の設定からいつでも位置情報へのアクセスを無効にできます。</p>
 
-  <h2><span class="section-number">6</span>カレンダーへのアクセス</h2>
+  <h2><span class="section-number">7</span>カレンダーへのアクセス</h2>
   <p>Node Expense はお客様が選択したカレンダーのみにアクセスします。カレンダーへのアクセスは、支出をカレンダーイベントとして表示・同期する目的のみに使用されます。カレンダーデータがサードパーティと共有されることはありません。</p>
 
-  <h2><span class="section-number">7</span>データの保存、保持、および暗号化</h2>
-  <h3>7.1 デバイス上のストレージ</h3>
-  <p>以下のデータは SwiftData（Apple のセキュアなローカルストレージフレームワーク）を使用してデバイスにローカル保存されます：</p>
+  <h2><span class="section-number">8</span>データの保存、保持、および暗号化</h2>
+  <h3>8.1 デバイス上のストレージ</h3>
+  <p>以下のデータがiPhoneに保存されています：</p>
   <ul>
     <li>個人（非グループ）の支出記録</li>
     <li>個人支出のレシート写真（PRO サブスクリプション機能。クラウドサービスにアップロードされることはありません）</li>
@@ -778,7 +915,7 @@
   </ul>
   <p>個人の支出データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。削除されたグループからの支出は、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。</p>
 
-  <h3>7.2 グループ機能のクラウドストレージ</h3>
+  <h3>8.2 グループ機能のクラウドストレージ</h3>
   <p>グループ機能では、選択されたデータが Firebase Firestore（写真は Firebase Storage）に同期されます：</p>
   <ul>
     <li>グループドキュメント（名前、説明、アイコン、メンバー、権限、招待コード）</li>
@@ -791,11 +928,12 @@
     <li>トライアル開始日（再インストール後の復元用）</li>
     <li>プッシュ通知トークン（FCM）</li>
     <li>精算用ディープリンクのための任意の支払いハンドル（Venmo、Cash App、PayPal.me のユーザー名）</li>
+    <li><strong>Pick &amp; Pay スキャン追跡</strong>——今月実行したスキャン数と、トライアルの無料利用が消費されたかどうかを記録する、アカウントごとの小さな記録です。アカウントごとの月次上限を適用し、「設定」画面で残りのスキャン数を表示するために使用されます。レシートの内容に関する情報は含まれていません。</li>
     <li><strong>グループアクティビティ履歴</strong>——グループ内で行われたすべての操作の記録（支出の追加・編集・返金・削除、メンバーの参加・退出・除名）。このデータは Firebase Firestore に保存され、<strong>90日後に自動的かつ永続的に削除</strong>されます。90日以上前のアクティビティは復元できません。</li>
   </ul>
   <div class="highlight-box">支払いハンドルは<strong>公開ユーザー名のみ</strong>（例：<code>@venmo</code> や <code>$cashtag</code>）で、グループメンバーがタップして Venmo、Cash App、PayPal アプリを直接開いてお客様へ送金できるようにするためにお客様自身が提供する情報です。これらのハンドルは支払い認証情報、銀行情報、口座番号<strong>ではありません</strong>。また、Node Expense を経由して送金が行われることはなく、すべての支払いはお客様が選択して開いた第三者アプリ内で完結します。</div>
 
-  <h3>7.3 暗号化とバックアップ</h3>
+  <h3>8.3 暗号化とバックアップ</h3>
   <ul>
     <li>機能へのアクセス権を持つユーザーは、AES-256-GCM 暗号化を使用した暗号化バックアップを有効にできます</li>
     <li>支出記録の保持期間を制御できます（全期間または指定した年数）</li>
@@ -804,16 +942,18 @@
   </ul>
   <p><strong>バックアップ対象範囲：</strong>バックアップおよびエクスポートには、デバイスにローカル保存された個人支出記録とキャッシュされたグループメタデータが含まれます。Firebase Firestore に保存されているライブのグループ支出データは、ローカルデバイスのバックアップに<strong>含まれません</strong>。グループが存在し削除されていない限り、Firestore を通じてアクセスできます。</p>
 
-  <h2><span class="section-number">8</span>データの移行</h2>
+  <h2><span class="section-number">9</span>データの移行</h2>
   <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。エクスポートにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore からライブデータを直接取得するものではありません。</p>
 
-  <h2><span class="section-number">9</span>データの削除</h2>
+  <h2><span class="section-number">10</span>データの削除</h2>
   <ul>
     <li>Node Expense 内で個別または全ての個人支出を削除</li>
     <li>グループを退出または削除リクエスト — 全メンバーが同意した場合、グループデータは Firebase から削除</li>
     <li>「削除時に保持」としてマークされたグループ支出はデバイスのローカルに残ります。再アップロードされることはありません</li>
     <li>グループ削除時に「記録を削除」を選択した場合、そのグループのすべてのレシート写真も Firebase Storage から削除されます。「記録を保持」を選択した場合、写真は Firebase Storage に残り、元のメンバーは引き続き自分のデバイスで閲覧できます。</li>
     <li>編集画面からグループ支出のレシート写真を削除すると、Firebase Storage 上の元ファイルも削除されます。</li>
+    <li>アイテム別（Pick &amp; Pay）支出を削除すると、その支出とともに項目明細も削除されます。</li>
+    <li>編集画面から自動添付された Pick &amp; Pay のレシート写真を削除すると、ローカルのコピーと、他のグループメンバーが閲覧できる Firebase Storage 上のコピーの両方が削除されます。</li>
     <li>プロフィール写真を更新すると、Firebase Storage 内の以前の写真が上書きされます。「写真を削除」を選択すると、Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
     <li>グループ写真の更新・削除も同様の動作となります。更新すると Firebase Storage 内の既存の写真が上書きされ、「写真を削除」を選択するとファイルが削除されます。この操作はグループ管理者のみが行えます。グループ自体が削除された場合、どの削除オプションを選択したかにかかわらず、グループ写真も Firebase Storage から削除されます。</li>
     <li>グループ管理者は「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループを直接整理できます。対象グループは、6ヶ月以上活動がなく、すべての債務が精算済みである必要があります。管理者が削除を開始すると、影響を受けるすべてのグループメンバーに、グループを削除した管理者名を含むプッシュ通知が送信されます。管理者はグループを Firebase から削除する前に、グループ支出をエクスポート、ローカルに保持、または全削除を選択できます。</li>
@@ -821,10 +961,10 @@
   </ul>
   <p>注意：Firebase のグループデータは、アプリ内の削除フローを通じてグループが正式に削除されるまで残る場合があります。</p>
 
-  <h2><span class="section-number">10</span>子どものプライバシー</h2>
+  <h2><span class="section-number">11</span>子どものプライバシー</h2>
   <p>Node Expense は 13 歳未満の子どもを対象としていません。当社は 13 歳未満の子どもから意図的に個人データを収集しません。子どもが個人情報を提供したと思われる場合は、ご連絡ください。</p>
 
-  <h2><span class="section-number">11</span>お客様の権利</h2>
+  <h2><span class="section-number">12</span>お客様の権利</h2>
   <ul>
     <li>iOS の設定で位置情報へのアクセスを無効にする</li>
     <li>iOS の設定でカレンダーへのアクセスを取り消す</li>
@@ -836,17 +976,17 @@
     <li>バックアップや暗号化エクスポートの使用をいつでも停止する</li>
   </ul>
 
-  <h2><span class="section-number">12</span>本ポリシーの変更</h2>
+  <h2><span class="section-number">13</span>本ポリシーの変更</h2>
   <p>本プライバシーポリシーは随時更新される場合があります。変更は本文書上部の「最終更新日」に反映されます。変更後も Node Expense を継続して使用した場合、更新されたポリシーに同意したものとみなされます。</p>
 
-  <h2><span class="section-number">13</span>お問い合わせ</h2>
+  <h2><span class="section-number">14</span>お問い合わせ</h2>
   <div class="contact-box">
     <p style="margin:0">本プライバシーポリシーまたはお客様のデータについてご質問がある場合は：<br>
     <strong>メール：</strong><a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -862,6 +1002,7 @@
         <li>Anzeigename</li>
         <li>Optionale Zahlungshandles (Venmo, Cash App, PayPal.me)</li>
         <li>Optionale Belegfotos, die an Ausgaben angehängt werden (PRO-Abonnementfunktion)</li>
+        <li>Belegbilder, die für die positionsweise Aufteilung über Pick &amp; Pay gescannt werden (werden zur KI-Verarbeitung an die Google Gemini API gesendet; PRO-Abonnementfunktion)</li>
         <li>Optionales Profilfoto, sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten (PRO-Abonnementfunktion)</li>
         <li>Optionales Gruppenfoto, vom Gruppen-Administrator festgelegt und für alle Mitglieder dieser Gruppe sichtbar (PRO-Abonnementfunktion)</li>
         <li>Optionale Standortdaten</li>
@@ -896,23 +1037,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Benutzeridentifikation für Abonnementkontinuität</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Hintergrundaufgaben einschließlich Gruppenlöschung und Push-Benachrichtigungsversand</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push-Benachrichtigungen für Gruppenaktivitäten</td></tr>
+      <tr><td><strong>Google Gemini API (über Firebase AI Logic)</strong></td><td>KI-gestützte OCR und Positionsextraktion aus Belegfotos, die über Pick &amp; Pay gescannt werden (PRO-Abonnementfunktion)</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>Remote-Konfiguration von Funktionsparametern (z. B. monatliche Scan-Limits pro Konto) ohne App-Update</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Schutz vor Betrug und Missbrauch für Backend-API-Aufrufe</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase wird ausschließlich als Synchronisierungsschicht für gruppenspezifische Funktionen verwendet. Persönliche (nicht gruppen­bezogene) Ausgabendaten werden <strong>niemals</strong> in Cloud-Dienste hochgeladen.</div>
 
-  <h2><span class="section-number">4</span>Werbung</h2>
-  <p>Node Expense wird für Nutzer im kostenlosen Tarif durch Werbung unterstützt. Dazu können Banner, Interstitial-Anzeigen beim Erreichen monatlicher Limits oder optionale Belohnungswerbung zum Freischalten zusätzlicher Ausgabenslots gehören.</p>
-  <p>Um ein personalisiertes Erlebnis zu bieten, können wir Sie um Erlaubnis zur Aktivitätsverfolgung bitten. Wenn Sie sich gegen eine Verfolgung entscheiden, sehen Sie weiterhin dieselbe Anzahl an Anzeigen, die jedoch möglicherweise weniger relevant sind. Ihre Finanzdaten bleiben privat und werden <strong>niemals</strong> mit Werbetreibenden geteilt.</p>
+  <h2><span class="section-number">4</span>KI-gestütztes Beleg-Scannen (Pick &amp; Pay)</h2>
+  <p><strong>Pick &amp; Pay ist eine reine Gruppenfunktion</strong> und steht für persönliche (nicht zur Gruppe gehörende) Ausgaben nicht zur Verfügung. Wenn Sie beim Hinzufügen einer <strong>Gruppenausgabe</strong> auf Pick &amp; Pay tippen, wird das aufgenommene oder ausgewählte Belegfoto an die <strong>Gemini API</strong> von Google (über Firebase AI Logic) gesendet, um einzelne Positionen, Preise, Steuern und Händlernamen zu extrahieren. Die extrahierten Daten werden Ihnen zurückgegeben, damit Sie jede Position einem Gruppenmitglied zuweisen können.</p>
+  <p>Es werden keine Belegbilder an Google gesendet, sofern Sie Pick &amp; Pay nicht aktiv verwenden.</p>
 
-  <h2><span class="section-number">5</span>Standortdaten</h2>
+  <h3>Was gesendet wird</h3>
+  <ul>
+    <li>Eine komprimierte Kopie des Belegbilds</li>
+    <li>Eine feste Verarbeitungsanweisung an das Modell</li>
+  </ul>
+
+  <h3>Was NICHT gesendet wird</h3>
+  <ul>
+    <li>Ihr Name, Ihre Gruppenmitgliedschaft, Zahlungs-Handles oder andere Informationen, die Sie oder Ihre Kontakte identifizieren könnten</li>
+    <li>Andere Ausgaben, Gruppenverlauf oder andere Daten außerhalb des Belegbilds selbst</li>
+  </ul>
+
+  <h3>Wie Google mit den Daten umgeht</h3>
+  <p>Node Expense nutzt den <strong>kostenpflichtigen Tarif</strong> der Gemini API. Gemäß den <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Zusätzlichen Nutzungsbedingungen für die Gemini API von Google</a> verwendet Google Ihre Eingaben, Bilder oder Antworten <strong>nicht</strong>, um seine Produkte zu trainieren oder zu verbessern. Google kann Anfragen kurzzeitig zu Sicherheits-, Missbrauchspräventions- und Compliance-Zwecken protokollieren und verwirft sie anschließend. Belege werden verarbeitet und nicht als Nutzerdaten von Google aufbewahrt.</p>
+
+  <h3>Nutzungsbeschränkungen</h3>
+  <p>Um den Abonnementpreis konstant zu halten, begrenzen wir die Anzahl der Pick &amp; Pay-Scans, die jeder PRO-Abonnent pro Monat durchführen kann. Sie können Ihre verbleibenden Scans jederzeit unter <strong>„Einstellungen → Abonnement → Pick &amp; Pay credits“</strong> einsehen.</p>
+
+  <h3>Aufbewahrung des Fotos nach dem Scan</h3>
+  <p>Nach einem erfolgreichen Pick &amp; Pay-Scan wird das Belegfoto automatisch als Belegfoto an die Gruppenausgabe angehängt (PRO-Vorteil). Es wird hochgeladen und ist für andere Mitglieder derselben Gruppe sichtbar, entsprechend dem an anderer Stelle in dieser Richtlinie beschriebenen Verhalten von Belegfotos.</p>
+
+  <h3>Verzicht auf die Funktion</h3>
+  <p>Pick &amp; Pay ist vollständig optional. Sie können Gruppenausgaben mit jedem anderen Aufteilungsmodus (Gleich, Nach %, Nach $) teilen, ohne Daten an die Gemini API zu senden. Wenn Sie Pick &amp; Pay nie verwenden, werden keine Belegbilder an Google gesendet.</p>
+
+  <h2><span class="section-number">5</span>Werbung</h2>
+  <p>Node Expense wird für Nutzer im kostenlosen Tarif durch Werbung unterstützt. Dazu können Banner, Interstitial-Anzeigen beim Erreichen monatlicher Limits oder optionale Belohnungswerbung zum Freischalten zusätzlicher Ausgabenslots gehören.</p>
+  <p>Um unsere kostenlose Version zu unterstützen, bitten wir Sie möglicherweise um Erlaubnis, Ihnen mithilfe des „App-Tracking-Transparency“-Frameworks von Apple relevantere Werbung anzuzeigen. Wenn Sie dies ablehnen, sehen Sie weiterhin die gleiche Anzahl an Anzeigen, diese sind jedoch weniger relevant für Sie. Ihre Entscheidung, dies zu erlauben oder abzulehnen, gewährt Werbetreibenden keinen Zugriff auf Ihre Finanzdaten, Ihre lokalen Daten auf dem Gerät oder Ihre in der Cloud synchronisierten Gruppenausgaben.</p>
+
+  <h2><span class="section-number">6</span>Standortdaten</h2>
   <p>Standortdaten sind optional und werden nur erfasst, wenn Sie dies in den Einstellungen explizit aktivieren. Wenn aktiviert, wird Ihr Standort mit neuen Ausgaben gespeichert. Standortdaten werden lokal auf Ihrem Gerät gespeichert und nicht in Cloud-Dienste hochgeladen. Sie können den Standortzugriff jederzeit in den iOS-Einstellungen deaktivieren.</p>
 
-  <h2><span class="section-number">6</span>Kalenderzugriff</h2>
+  <h2><span class="section-number">7</span>Kalenderzugriff</h2>
   <p>Node Expense greift nur auf die von Ihnen ausgewählten Kalender zu. Der Kalenderzugriff dient ausschließlich dazu, Ausgabeneinträge als Kalenderereignisse anzuzeigen und zu synchronisieren. Kalenderdaten werden niemals an Dritte weitergegeben.</p>
 
-  <h2><span class="section-number">7</span>Datenspeicherung, -aufbewahrung &amp; Verschlüsselung</h2>
-  <h3>7.1 Lokale Gerätespeicherung</h3>
-  <p>Die folgenden Daten werden lokal mit SwiftData (Apples sicherem lokalem Speicher-Framework) gespeichert:</p>
+  <h2><span class="section-number">8</span>Datenspeicherung, -aufbewahrung &amp; Verschlüsselung</h2>
+  <h3>8.1 Lokale Gerätespeicherung</h3>
+  <p>Die folgenden Daten sind auf deinem iPhone gespeichert:</p>
   <ul>
     <li>Persönliche (nicht gruppenspezifische) Ausgabeneinträge</li>
     <li>Belegfotos persönlicher Ausgaben (PRO-Abonnementfunktion; werden niemals in einen Cloud-Dienst hochgeladen)</li>
@@ -922,7 +1094,7 @@
   </ul>
   <p>Persönliche Ausgabendaten — einschließlich angehängter Belegfotos — verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Ausgaben aus gelöschten Gruppen werden lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt.</p>
 
-  <h3>7.2 Cloud-Speicher für Gruppenfunktionen</h3>
+  <h3>8.2 Cloud-Speicher für Gruppenfunktionen</h3>
   <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore (und Fotos mit Firebase Storage) synchronisiert:</p>
   <ul>
     <li>Gruppendokumente (Name, Beschreibung, Symbol, Mitglieder, Berechtigungen, Freigabecode)</li>
@@ -935,11 +1107,12 @@
     <li>Teststart-Daten (zur Wiederherstellung nach Neuinstallation)</li>
     <li>Push-Benachrichtigungs-Token (FCM)</li>
     <li>Optionale Zahlungshandles für Abrechnungs-Deeplinks (Venmo, Cash App, PayPal.me-Benutzernamen)</li>
+    <li><strong>Pick &amp; Pay-Scan-Erfassung</strong> — ein kleiner kontobezogener Datensatz, der protokolliert, wie viele Scans Sie in diesem Monat durchgeführt haben und ob Ihre Testversion-Gratisnutzung verwendet wurde. Wird verwendet, um die monatlichen Limits pro Konto durchzusetzen und Ihnen die verbleibenden Scans in den Einstellungen anzuzeigen. Enthält keine Informationen über den Inhalt eines Belegs.</li>
     <li><strong>Gruppenaktivitätsverlauf</strong> — eine Aufzeichnung aller in der Gruppe durchgeführten Aktionen (Ausgaben hinzugefügt, bearbeitet, erstattet oder gelöscht; Mitglieder beigetreten, ausgetreten oder entfernt). Diese Daten werden in Firebase Firestore gespeichert und nach <strong>90 Tagen automatisch und dauerhaft gelöscht</strong>. Aktivitäten, die älter als 90 Tage sind, können nicht wiederhergestellt werden.</li>
   </ul>
   <div class="highlight-box">Zahlungshandles sind <strong>ausschließlich öffentliche Benutzernamen</strong> (z. B. Ihr <code>@venmo</code> oder <code>$cashtag</code>), die Sie bereitstellen, damit Gruppenmitglieder tippen können, um die Venmo-, Cash App- oder PayPal-App zu öffnen und Sie direkt zu bezahlen. Diese Handles sind <strong>keine</strong> Zahlungsdaten, Bankdaten oder Kontonummern, und kein Geld fließt über Node Expense — alle Zahlungen erfolgen innerhalb der Drittanbieter-App, die Sie öffnen.</div>
 
-  <h3>7.3 Verschlüsselung &amp; Backups</h3>
+  <h3>8.3 Verschlüsselung &amp; Backups</h3>
   <ul>
     <li>Benutzer mit Funktionszugang können verschlüsselte Backups mit AES-256-GCM-Verschlüsselung aktivieren</li>
     <li>Sie steuern, wie lange Ausgabeneinträge aufbewahrt werden (dauerhaft oder eine begrenzte Anzahl von Jahren)</li>
@@ -948,16 +1121,18 @@
   </ul>
   <p><strong>Backup-Umfang:</strong> Backups und Exporte umfassen Ihre lokal gespeicherten persönlichen Ausgabeneinträge und gecachten Gruppenmetadaten. In Firebase Firestore gespeicherte Live-Gruppenausgabendaten sind <strong>nicht</strong> in lokalen Geräte-Backups enthalten — sie bleiben über Firestore zugänglich, solange die Gruppe existiert und nicht gelöscht wurde.</p>
 
-  <h2><span class="section-number">8</span>Datenmigration</h2>
+  <h2><span class="section-number">9</span>Datenmigration</h2>
   <p>Benutzer mit Funktionszugang (PRO-Abonnement oder aktive kostenlose Testversion) können ihre Daten als JSON, CSV oder PDF exportieren und Daten im JSON-Format importieren. Node Expense hat keinen Zugriff auf Ihre exportierten Dateien. Exportierte Dateien werden an einem von Ihnen gewählten Ort gespeichert. Exporte enthalten lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Daten werden nicht direkt aus Firebase Firestore abgerufen.</p>
 
-  <h2><span class="section-number">9</span>Datenlöschung</h2>
+  <h2><span class="section-number">10</span>Datenlöschung</h2>
   <ul>
     <li>Einzelne oder alle persönlichen Ausgaben innerhalb von Node Expense löschen</li>
     <li>Eine Gruppe verlassen oder deren Löschung beantragen — Gruppendaten werden aus Firebase entfernt, wenn alle Mitglieder zustimmen</li>
     <li>Gruppenausgaben, die als „Bei Löschung behalten" markiert sind, verbleiben lokal auf Ihrem Gerät und werden nicht erneut hochgeladen</li>
     <li>Wenn beim Löschen einer Gruppe „Datensätze entfernen" gewählt wird, werden auch alle Belegfotos dieser Gruppe aus Firebase Storage gelöscht. Bei „Datensätze behalten" verbleiben die Fotos in Firebase Storage, sodass die ursprünglichen Mitglieder sie weiterhin auf ihren eigenen Geräten anzeigen können.</li>
     <li>Das Entfernen eines Belegfotos aus einer Gruppenausgabe (über den Bearbeitungsbildschirm) löscht die zugrunde liegende Datei aus Firebase Storage.</li>
+    <li>Das Löschen einer positionsweise aufgeteilten Ausgabe (Pick &amp; Pay) entfernt zusammen mit der Ausgabe auch die Positionsdetails.</li>
+    <li>Das Löschen des automatisch angehängten Pick &amp; Pay-Belegfotos (über den Bearbeitungsbildschirm) entfernt sowohl die lokale Kopie als auch die für andere Gruppenmitglieder sichtbare Kopie in Firebase Storage.</li>
     <li>Beim Aktualisieren Ihres Profilfotos wird das vorherige Foto in Firebase Storage überschrieben. Bei „Foto entfernen" wird es aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
     <li>Das Aktualisieren oder Entfernen eines Gruppenfotos funktioniert auf dieselbe Weise: Beim Aktualisieren wird das vorhandene Foto in Firebase Storage überschrieben, bei „Foto entfernen" wird es gelöscht. Nur der Gruppen-Administrator kann diese Aktionen ausführen. Das Gruppenfoto wird auch dann aus Firebase Storage gelöscht, wenn die Gruppe selbst gelöscht wird – unabhängig davon, welche Löschoption gewählt wurde.</li>
     <li>Gruppen-Administratoren können inaktive Gruppen direkt unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen. Eine Gruppe kommt für die Bereinigung in Frage, wenn sie seit über 6 Monaten inaktiv ist und alle Schulden beglichen wurden. Wenn ein Administrator die Löschung einleitet, erhalten alle betroffenen Gruppenmitglieder eine Push-Benachrichtigung mit dem Namen des Administrators. Der Administrator kann wählen, ob er die Gruppenausgaben exportieren, lokal behalten oder vollständig löschen möchte, bevor die Gruppe aus Firebase entfernt wird.</li>
@@ -965,10 +1140,10 @@
   </ul>
   <p>Hinweis: Firebase-Gruppendaten können bestehen bleiben, bis die Gruppe über den gruppeninternen Löschvorgang formal gelöscht wird.</p>
 
-  <h2><span class="section-number">10</span>Datenschutz für Kinder</h2>
+  <h2><span class="section-number">11</span>Datenschutz für Kinder</h2>
   <p>Node Expense ist nicht für Kinder unter 13 Jahren bestimmt. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Wenn Sie der Meinung sind, dass ein Kind persönliche Informationen bereitgestellt hat, kontaktieren Sie uns bitte.</p>
 
-  <h2><span class="section-number">11</span>Ihre Rechte</h2>
+  <h2><span class="section-number">12</span>Ihre Rechte</h2>
   <ul>
     <li>Standortzugriff in den iOS-Einstellungen deaktivieren</li>
     <li>Kalenderzugriff in den iOS-Einstellungen widerrufen</li>
@@ -980,17 +1155,17 @@
     <li>Die Nutzung von Backups oder verschlüsselten Exporten jederzeit beenden</li>
   </ul>
 
-  <h2><span class="section-number">12</span>Änderungen dieser Richtlinie</h2>
+  <h2><span class="section-number">13</span>Änderungen dieser Richtlinie</h2>
   <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Änderungen werden durch das Datum „Zuletzt aktualisiert" oben in diesem Dokument widergespiegelt. Die weitere Nutzung von Node Expense nach Änderungen gilt als Zustimmung zur aktualisierten Richtlinie.</p>
 
-  <h2><span class="section-number">13</span>Kontakt</h2>
+  <h2><span class="section-number">14</span>Kontakt</h2>
   <div class="contact-box">
     <p style="margin:0">Bei Fragen zu dieser Datenschutzerklärung oder Ihren Daten:<br>
     <strong>E-Mail:</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1006,6 +1181,7 @@
         <li>Nombre para mostrar</li>
         <li>Identificadores de pago opcionales (Venmo, Cash App, PayPal.me)</li>
         <li>Fotos de recibos opcionales adjuntas a los gastos (función de suscripción PRO)</li>
+        <li>Imágenes de recibos escaneadas para dividir por artículos mediante Pick &amp; Pay (se envían a la API de Google Gemini para su procesamiento por IA; función de suscripción PRO)</li>
         <li>Foto de perfil opcional, visible para todos los miembros de cualquier grupo al que se una (función de suscripción PRO)</li>
         <li>Foto de grupo opcional, establecida por el administrador del grupo y visible para todos los miembros de ese grupo (función de suscripción PRO)</li>
         <li>Datos de ubicación opcionales</li>
@@ -1040,23 +1216,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>Identificación de usuario anónima para continuidad de suscripción</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tareas en segundo plano, incluida la eliminación de grupos y el envío de notificaciones push</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notificaciones push para actividad de grupo</td></tr>
+      <tr><td><strong>Google Gemini API (a través de Firebase AI Logic)</strong></td><td>OCR con IA y extracción de líneas de artículos a partir de fotos de recibos escaneadas con Pick &amp; Pay (función de suscripción PRO)</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>Configuración remota de parámetros de funciones (por ejemplo, límites mensuales de escaneo por cuenta) sin necesidad de actualizar la app</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Prevención de fraude y abuso para las llamadas a la API del backend</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase se utiliza únicamente como capa de sincronización para las funciones relacionadas con grupos. Los datos de gastos personales (no de grupo) <strong>nunca</strong> se cargan en servicios en la nube.</div>
 
-  <h2><span class="section-number">4</span>Publicidad</h2>
-  <p>Node Expense está respaldado por anuncios para los usuarios del nivel gratuito. Estos pueden incluir banners, anuncios intersticiales al alcanzar los límites mensuales o anuncios de recompensa opcionales para desbloquear espacios adicionales de gastos.</p>
-  <p>Para ofrecer una experiencia más personalizada, es posible que solicitemos su permiso para rastrear su actividad. Si decide no ser rastreado, seguirá viendo la misma cantidad de anuncios, aunque pueden ser menos relevantes. Sus datos financieros permanecen privados y <strong>nunca</strong> se comparten con anunciantes.</p>
+  <h2><span class="section-number">4</span>Escaneo de recibos asistido por IA (Pick &amp; Pay)</h2>
+  <p><strong>Pick &amp; Pay es una función exclusiva para grupos</strong> y no está disponible para gastos personales (no de grupo). Cuando toca Pick &amp; Pay al añadir un <strong>gasto de grupo</strong>, la foto de recibo que toma o selecciona se envía a la <strong>API de Gemini</strong> de Google (a través de Firebase AI Logic) para extraer los artículos individuales, los precios, los impuestos y el nombre del comercio. Los datos extraídos se le devuelven para que pueda asignar cada artículo a un miembro del grupo.</p>
+  <p>No se envían imágenes de recibos a Google a menos que utilice activamente Pick &amp; Pay.</p>
 
-  <h2><span class="section-number">5</span>Datos de ubicación</h2>
+  <h3>Qué se envía</h3>
+  <ul>
+    <li>Una copia comprimida de la imagen del recibo</li>
+    <li>Una instrucción fija de análisis al modelo</li>
+  </ul>
+
+  <h3>Qué NO se envía</h3>
+  <ul>
+    <li>Su nombre, pertenencia a grupos, identificadores de pago u otra información que le identifique a usted o a sus contactos</li>
+    <li>Otros gastos, historial de grupo o cualquier dato fuera de la propia imagen del recibo</li>
+  </ul>
+
+  <h3>Cómo gestiona Google los datos</h3>
+  <p>Node Expense utiliza el <strong>nivel de pago</strong> de la API de Gemini. Según los <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Términos adicionales de servicio de la API de Gemini de Google</a>, Google <strong>no</strong> utiliza sus indicaciones, imágenes ni respuestas para entrenar ni mejorar sus productos. Google puede registrar brevemente las solicitudes con fines de seguridad, prevención de abuso y cumplimiento, tras lo cual se descartan. Los recibos se procesan y Google no los conserva como datos de usuario.</p>
+
+  <h3>Límites de uso</h3>
+  <p>Para mantener constante el precio de la suscripción, limitamos el número de escaneos de Pick &amp; Pay que cada suscriptor PRO puede realizar al mes. Puede consultar sus escaneos restantes en cualquier momento en <strong>Ajustes → Suscripción → Pick &amp; Pay credits</strong>.</p>
+
+  <h3>Conservación de la foto tras el escaneo</h3>
+  <p>Tras un escaneo exitoso de Pick &amp; Pay, la foto del recibo se adjunta automáticamente al gasto de grupo como foto de recibo (un beneficio PRO). Se sube y es visible para otros miembros del mismo grupo, de acuerdo con el comportamiento de las fotos de recibo descrito en otras partes de esta política.</p>
+
+  <h3>Excluirse</h3>
+  <p>Pick &amp; Pay es totalmente opcional. Puede dividir los gastos de grupo utilizando cualquiera de los otros modos de división (Igual, Por %, Por $) sin enviar ningún dato a la API de Gemini. Si nunca utiliza Pick &amp; Pay, no se envían imágenes de recibos a Google.</p>
+
+  <h2><span class="section-number">5</span>Publicidad</h2>
+  <p>Node Expense está respaldado por anuncios para los usuarios del nivel gratuito. Estos pueden incluir banners, anuncios intersticiales al alcanzar los límites mensuales o anuncios de recompensa opcionales para desbloquear espacios adicionales de gastos.</p>
+  <p>Para poder mantener nuestra versión gratuita, es posible que le pidamos permiso para mostrarle anuncios más relevantes a través del marco de Transparencia de seguimiento en apps (App Tracking Transparency) de Apple. Si se niega, seguirá viendo la misma cantidad de anuncios, pero serán menos relevantes para usted. Elegir permitir o denegar esto no otorga a los anunciantes acceso a sus registros financieros, a sus datos personales guardados en el dispositivo ni a sus gastos de grupo sincronizados en la nube.</p>
+
+  <h2><span class="section-number">6</span>Datos de ubicación</h2>
   <p>Los datos de ubicación son opcionales y solo se recopilan si los habilita explícitamente en Configuración. Cuando está habilitada, su ubicación se registra junto con los nuevos gastos. Los datos de ubicación se almacenan localmente en su dispositivo y no se cargan en servicios en la nube. Puede deshabilitar el acceso a la ubicación en cualquier momento en los Ajustes de iOS.</p>
 
-  <h2><span class="section-number">6</span>Acceso al calendario</h2>
+  <h2><span class="section-number">7</span>Acceso al calendario</h2>
   <p>Node Expense solo accede a los calendarios que usted seleccione. El acceso al calendario se utiliza exclusivamente para mostrar y sincronizar entradas de gastos como eventos del calendario. Los datos del calendario nunca se comparten con terceros.</p>
 
-  <h2><span class="section-number">7</span>Almacenamiento, retención y cifrado de datos</h2>
-  <h3>7.1 Almacenamiento en el dispositivo</h3>
-  <p>Los siguientes datos se almacenan localmente usando SwiftData (el framework de almacenamiento local seguro de Apple):</p>
+  <h2><span class="section-number">8</span>Almacenamiento, retención y cifrado de datos</h2>
+  <h3>8.1 Almacenamiento en el dispositivo</h3>
+  <p>Los siguientes datos están guardados en tu iPhone:</p>
   <ul>
     <li>Registros de gastos personales (no de grupo)</li>
     <li>Fotos de recibos de gastos personales (función de suscripción PRO; nunca se cargan en ningún servicio en la nube)</li>
@@ -1066,7 +1273,7 @@
   </ul>
   <p>Los datos de gastos personales — incluidas las fotos de recibos adjuntas — nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado".</p>
 
-  <h3>7.2 Almacenamiento en la nube para funciones de grupo</h3>
+  <h3>8.2 Almacenamiento en la nube para funciones de grupo</h3>
   <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore (y las fotos con Firebase Storage):</p>
   <ul>
     <li>Documentos de grupo (nombre, descripción, icono, miembros, permisos, código de invitación)</li>
@@ -1079,11 +1286,12 @@
     <li>Fechas de inicio de prueba (para recuperación tras reinstalación)</li>
     <li>Tokens de notificaciones push (FCM)</li>
     <li>Identificadores de pago opcionales para enlaces directos de liquidación (nombres de usuario de Venmo, Cash App, PayPal.me)</li>
+    <li><strong>Seguimiento de escaneos de Pick &amp; Pay</strong> — un pequeño registro por cuenta del número de escaneos que ha realizado este mes y si se ha utilizado su prueba gratuita. Se usa para aplicar los límites mensuales por cuenta y para mostrarle los escaneos restantes en Ajustes. No contiene ninguna información sobre el contenido de ningún recibo.</li>
     <li><strong>Historial de actividad del grupo</strong> — un registro de todas las acciones realizadas en el grupo (gastos añadidos, editados, reembolsados o eliminados; miembros que se unieron, abandonaron o fueron eliminados). Estos datos se almacenan en Firebase Firestore y se <strong>eliminan automática y permanentemente después de 90 días</strong>. La actividad anterior a 90 días no puede recuperarse.</li>
   </ul>
   <div class="highlight-box">Los identificadores de pago son <strong>únicamente nombres de usuario públicos</strong> (p. ej., su <code>@venmo</code> o <code>$cashtag</code>), proporcionados por usted para que los miembros del grupo puedan pulsar para abrir la app de Venmo, Cash App o PayPal y pagarle directamente. Estos identificadores <strong>no</strong> son credenciales de pago, datos bancarios ni números de cuenta, y ningún dinero fluye a través de Node Expense; todos los pagos se realizan dentro de la app de terceros que elija abrir.</div>
 
-  <h3>7.3 Cifrado &amp; copias de seguridad</h3>
+  <h3>8.3 Cifrado &amp; copias de seguridad</h3>
   <ul>
     <li>Los usuarios con acceso a funciones pueden habilitar copias de seguridad cifradas con cifrado AES-256-GCM</li>
     <li>Usted controla durante cuánto tiempo se conservan los registros de gastos (siempre o un número limitado de años)</li>
@@ -1092,16 +1300,18 @@
   </ul>
   <p><strong>Alcance de las copias de seguridad:</strong> Las copias de seguridad y exportaciones abarcan sus registros de gastos personales almacenados localmente y los metadatos de grupo en caché. Los datos de gastos de grupo en tiempo real almacenados en Firebase Firestore <strong>no</strong> se incluyen en las copias de seguridad del dispositivo local; permanecen accesibles a través de Firestore mientras el grupo exista y no haya sido eliminado.</p>
 
-  <h2><span class="section-number">8</span>Migración de datos</h2>
+  <h2><span class="section-number">9</span>Migración de datos</h2>
   <p>Los usuarios con acceso a funciones (suscripción PRO o prueba gratuita activa) pueden exportar sus datos en formato JSON, CSV o PDF, e importar datos en formato JSON. Node Expense no tiene acceso a sus archivos exportados. Los archivos exportados se guardan en una ubicación de su elección. Las exportaciones incluyen registros de gastos personales almacenados localmente y datos de grupo en caché; no se obtienen datos en tiempo real directamente de Firebase Firestore.</p>
 
-  <h2><span class="section-number">9</span>Eliminación de datos</h2>
+  <h2><span class="section-number">10</span>Eliminación de datos</h2>
   <ul>
     <li>Eliminar gastos personales individuales o todos desde Node Expense</li>
     <li>Abandonar o solicitar la eliminación de un grupo — los datos del grupo se eliminan de Firebase cuando todos los miembros están de acuerdo</li>
     <li>Los gastos de grupo marcados como "conservar al eliminar" permanecen localmente en su dispositivo; no se vuelven a cargar</li>
     <li>Cuando se elimina un grupo eligiendo "eliminar registros", todas las fotos de recibos de ese grupo también se eliminan de Firebase Storage. Cuando se elige "conservar registros", las fotos permanecen en Firebase Storage para que los miembros originales puedan seguir viéndolas en sus propios dispositivos.</li>
     <li>Eliminar una foto de recibo de un gasto de grupo (a través de la pantalla de Editar) borra el archivo subyacente de Firebase Storage.</li>
+    <li>Eliminar un gasto dividido por artículos (Pick &amp; Pay) borra los detalles de los artículos junto con el gasto.</li>
+    <li>Eliminar la foto de recibo adjuntada automáticamente por Pick &amp; Pay (a través de la pantalla de Editar) borra tanto la copia local como la copia en Firebase Storage que pueden ver los demás miembros del grupo.</li>
     <li>Actualizar su foto de perfil sobrescribe la foto anterior en Firebase Storage. Al elegir «Eliminar foto», esta se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
     <li>Actualizar o eliminar la foto de grupo funciona de la misma manera: actualizar sobrescribe la foto existente en Firebase Storage, y elegir «Eliminar foto» la borra. Solo el administrador del grupo puede realizar estas acciones. La foto de grupo también se elimina de Firebase Storage cuando el propio grupo se elimina, independientemente de la opción de eliminación elegida.</li>
     <li>Los administradores de grupo pueden depurar grupos inactivos directamente desde Ajustes → Datos y privacidad → Grupos inactivos. Un grupo es elegible para su depuración tras 6 meses de inactividad con todas las deudas saldadas. Cuando un administrador inicia la eliminación, todos los miembros afectados del grupo reciben una notificación push con el nombre de quien eliminó el grupo. El administrador puede elegir exportar los gastos del grupo, conservarlos localmente o eliminarlos por completo antes de que el grupo se retire de Firebase.</li>
@@ -1109,10 +1319,10 @@
   </ul>
   <p>Nota: Los datos de grupo de Firebase pueden persistir hasta que el grupo se elimine formalmente a través del proceso de eliminación en la app.</p>
 
-  <h2><span class="section-number">10</span>Privacidad de los niños</h2>
+  <h2><span class="section-number">11</span>Privacidad de los niños</h2>
   <p>Node Expense no está destinado a niños menores de 13 años. No recopilamos conscientemente datos personales de niños menores de 13 años. Si cree que un niño ha proporcionado información personal, contáctenos.</p>
 
-  <h2><span class="section-number">11</span>Sus derechos</h2>
+  <h2><span class="section-number">12</span>Sus derechos</h2>
   <ul>
     <li>Deshabilitar el acceso a la ubicación en los Ajustes de iOS</li>
     <li>Revocar el acceso al calendario en los Ajustes de iOS</li>
@@ -1124,17 +1334,17 @@
     <li>Dejar de usar copias de seguridad o exportaciones cifradas en cualquier momento</li>
   </ul>
 
-  <h2><span class="section-number">12</span>Cambios en esta política</h2>
+  <h2><span class="section-number">13</span>Cambios en esta política</h2>
   <p>Podemos actualizar esta Política de Privacidad de vez en cuando. Los cambios se reflejarán en la fecha de "Última actualización" en la parte superior de este documento. El uso continuado de Node Expense después de los cambios constituye la aceptación de la política actualizada.</p>
 
-  <h2><span class="section-number">13</span>Contacto</h2>
+  <h2><span class="section-number">14</span>Contacto</h2>
   <div class="contact-box">
     <p style="margin:0">Para preguntas sobre esta Política de Privacidad o sus datos:<br>
     <strong>Correo electrónico:</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-09 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1150,6 +1360,7 @@
         <li>Nom d'affichage</li>
         <li>Identifiants de paiement optionnels (Venmo, Cash App, PayPal.me)</li>
         <li>Photos de reçus optionnelles attachées aux dépenses (fonctionnalité d'abonnement PRO)</li>
+        <li>Images de reçus scannées pour le partage par article via Pick &amp; Pay (envoyées à l'API Google Gemini pour traitement par IA ; fonctionnalité d'abonnement PRO)</li>
         <li>Photo de profil optionnelle, visible par tous les membres de chaque groupe que vous rejoignez (fonctionnalité d'abonnement PRO)</li>
         <li>Photo de groupe optionnelle, définie par l'admin du groupe et visible par tous les membres de ce groupe (fonctionnalité d'abonnement PRO)</li>
         <li>Données de localisation optionnelles</li>
@@ -1184,23 +1395,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>Identification d'utilisateur anonyme pour la continuité de l'abonnement</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe et la livraison de notifications push</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notifications push pour l'activité de groupe</td></tr>
+      <tr><td><strong>API Google Gemini (via Firebase AI Logic)</strong></td><td>OCR alimenté par IA et extraction de lignes d'articles à partir de photos de reçus scannées via Pick &amp; Pay (fonctionnalité d'abonnement PRO)</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>Configuration à distance de paramètres de fonctionnalités (par ex. plafonds mensuels de scans par compte) sans nécessiter de mise à jour de l'app</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Prévention de la fraude et des abus pour les appels d'API backend</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase est utilisé uniquement comme couche de synchronisation pour les fonctionnalités liées aux groupes. Les données de dépenses personnelles (hors groupe) ne sont <strong>jamais</strong> téléversées vers des services cloud.</div>
 
-  <h2><span class="section-number">4</span>Publicités</h2>
-  <p>Node Expense est soutenu par des publicités pour les utilisateurs du niveau gratuit. Celles-ci peuvent inclure des bannières, des publicités interstitielles lors de l'atteinte des limites mensuelles, ou des publicités avec récompense optionnelles pour débloquer des emplacements de dépenses supplémentaires.</p>
-  <p>Pour offrir une expérience plus personnalisée, nous pouvons vous demander l'autorisation de suivre votre activité. Si vous choisissez de ne pas être suivi, vous verrez toujours le même nombre de publicités, mais elles peuvent être moins pertinentes. Vos données financières restent privées et ne sont <strong>jamais</strong> partagées avec des annonceurs.</p>
+  <h2><span class="section-number">4</span>Numérisation de reçus assistée par IA (Pick &amp; Pay)</h2>
+  <p><strong>Pick &amp; Pay est une fonctionnalité réservée aux groupes</strong> et n'est pas disponible pour les dépenses personnelles (hors groupe). Lorsque vous touchez Pick &amp; Pay lors de l'ajout d'une <strong>dépense de groupe</strong>, la photo du reçu que vous prenez ou sélectionnez est envoyée à l'<strong>API Gemini</strong> de Google (via Firebase AI Logic) pour en extraire les articles individuels, les prix, les taxes et le nom du marchand. Les données extraites vous sont renvoyées afin que vous puissiez attribuer chaque article à un membre du groupe.</p>
+  <p>Aucune image de reçu n'est envoyée à Google sauf si vous utilisez activement Pick &amp; Pay.</p>
 
-  <h2><span class="section-number">5</span>Données de localisation</h2>
+  <h3>Ce qui est envoyé</h3>
+  <ul>
+    <li>Une copie compressée de l'image du reçu</li>
+    <li>Une instruction d'analyse fixe envoyée au modèle</li>
+  </ul>
+
+  <h3>Ce qui N'EST PAS envoyé</h3>
+  <ul>
+    <li>Votre nom, votre appartenance à un groupe, vos identifiants de paiement ou toute autre information vous identifiant, vous ou vos contacts</li>
+    <li>D'autres dépenses, l'historique de groupe ou toute donnée hors de l'image du reçu elle-même</li>
+  </ul>
+
+  <h3>Comment Google traite les données</h3>
+  <p>Node Expense utilise le <strong>palier payant</strong> de l'API Gemini. Selon les <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Conditions d'utilisation supplémentaires de l'API Gemini de Google</a>, Google <strong>n'utilise pas</strong> vos invites, images ou réponses pour entraîner ou améliorer ses produits. Google peut consigner brièvement les requêtes à des fins de sécurité, de prévention des abus et de conformité, après quoi elles sont supprimées. Les reçus sont traités et ne sont pas conservés par Google en tant que données utilisateur.</p>
+
+  <h3>Limites d'utilisation</h3>
+  <p>Pour maintenir un prix d'abonnement stable, nous plafonnons le nombre de scans Pick &amp; Pay que chaque abonné PRO peut effectuer par mois. Vous pouvez consulter à tout moment vos scans restants dans <strong>Réglages → Abonnement → Pick &amp; Pay credits</strong>.</p>
+
+  <h3>Conservation de la photo après la numérisation</h3>
+  <p>Après un scan Pick &amp; Pay réussi, la photo du reçu est automatiquement attachée à la dépense de groupe en tant que photo de reçu (un avantage PRO). Elle est téléchargée et visible par les autres membres du même groupe, conformément au comportement des photos de reçus décrit ailleurs dans cette politique.</p>
+
+  <h3>Refuser</h3>
+  <p>Pick &amp; Pay est entièrement optionnel. Vous pouvez répartir les dépenses de groupe en utilisant n'importe quel autre mode de partage (Égal, Par %, Par $) sans envoyer aucune donnée à l'API Gemini. Si vous n'utilisez jamais Pick &amp; Pay, aucune image de reçu n'est envoyée à Google.</p>
+
+  <h2><span class="section-number">5</span>Publicités</h2>
+  <p>Node Expense est soutenu par des publicités pour les utilisateurs du niveau gratuit. Celles-ci peuvent inclure des bannières, des publicités interstitielles lors de l'atteinte des limites mensuelles, ou des publicités avec récompense optionnelles pour débloquer des emplacements de dépenses supplémentaires.</p>
+  <p>Afin de maintenir notre version gratuite, nous pouvons vous demander l'autorisation de diffuser des publicités plus pertinentes via le cadre de Transparence du suivi des apps (App Tracking Transparency) d'Apple. Si vous refusez, vous verrez le même nombre de publicités, mais elles seront moins pertinentes. Le fait d'accepter ou de refuser n'autorise en aucun cas les annonceurs à accéder à vos registres financiers, à vos données personnelles stockées sur l'appareil ou à vos dépenses de groupe synchronisées dans le cloud.</p>
+
+  <h2><span class="section-number">6</span>Données de localisation</h2>
   <p>Les données de localisation sont optionnelles et ne sont collectées que si vous les activez explicitement dans les Réglages. Lorsqu'elles sont activées, votre position est enregistrée avec les nouvelles dépenses. Les données de localisation sont stockées localement sur votre appareil et ne sont pas téléversées vers des services cloud. Vous pouvez désactiver l'accès à la localisation à tout moment dans les Réglages iOS.</p>
 
-  <h2><span class="section-number">6</span>Accès au calendrier</h2>
+  <h2><span class="section-number">7</span>Accès au calendrier</h2>
   <p>Node Expense n'accède qu'aux calendriers que vous sélectionnez. L'accès au calendrier est utilisé uniquement pour afficher et synchroniser les entrées de dépenses en tant qu'événements de calendrier. Les données du calendrier ne sont jamais partagées avec des tiers.</p>
 
-  <h2><span class="section-number">7</span>Stockage, conservation &amp; chiffrement des données</h2>
-  <h3>7.1 Stockage sur l'appareil</h3>
-  <p>Les données suivantes sont stockées localement à l'aide de SwiftData (le framework de stockage local sécurisé d'Apple) :</p>
+  <h2><span class="section-number">8</span>Stockage, conservation &amp; chiffrement des données</h2>
+  <h3>8.1 Stockage sur l'appareil</h3>
+  <p>Les données suivantes sont stockées sur votre iPhone :</p>
   <ul>
     <li>Enregistrements de dépenses personnelles (hors groupe)</li>
     <li>Photos de reçus des dépenses personnelles (fonctionnalité d'abonnement PRO ; jamais téléversées vers un service cloud)</li>
@@ -1210,7 +1452,7 @@
   </ul>
   <p>Les données de dépenses personnelles — y compris les photos de reçus jointes — ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés sont conservées localement avec un marqueur « groupe supprimé ».</p>
 
-  <h3>7.2 Stockage cloud pour les fonctionnalités de groupe</h3>
+  <h3>8.2 Stockage cloud pour les fonctionnalités de groupe</h3>
   <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore (et les photos avec Firebase Storage) :</p>
   <ul>
     <li>Documents de groupe (nom, description, icône, membres, autorisations, code de partage)</li>
@@ -1223,11 +1465,12 @@
     <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
     <li>Jetons de notification push (FCM)</li>
     <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App, PayPal.me)</li>
+    <li><strong>Suivi des scans Pick &amp; Pay</strong> — un petit enregistrement par compte du nombre de scans que vous avez effectués ce mois-ci et si votre essai gratuit a été utilisé. Sert à appliquer les plafonds mensuels par compte et à vous montrer vos scans restants dans les Réglages. Ne contient aucune information sur le contenu d'un reçu.</li>
     <li><strong>Historique des activités du groupe</strong> — un enregistrement de toutes les actions effectuées dans le groupe (dépenses ajoutées, modifiées, remboursées ou supprimées ; membres ayant rejoint, quitté ou été retirés). Ces données sont stockées dans Firebase Firestore et sont <strong>automatiquement et définitivement supprimées après 90 jours</strong>. Les activités antérieures à 90 jours ne peuvent pas être récupérées.</li>
   </ul>
   <div class="highlight-box">Les identifiants de paiement sont <strong>uniquement des noms d'utilisateur publics</strong> (par ex. votre <code>@venmo</code> ou <code>$cashtag</code>), fournis par vous pour que les membres du groupe puissent appuyer pour ouvrir l'application Venmo, Cash App ou PayPal et vous payer directement. Ces identifiants ne sont <strong>pas</strong> des identifiants de paiement, des coordonnées bancaires ou des numéros de compte, et aucun argent ne transite par Node Expense — tous les paiements s'effectuent dans l'application tierce que vous choisissez d'ouvrir.</div>
 
-  <h3>7.3 Chiffrement &amp; sauvegardes</h3>
+  <h3>8.3 Chiffrement &amp; sauvegardes</h3>
   <ul>
     <li>Les utilisateurs ayant accès aux fonctionnalités peuvent activer des sauvegardes chiffrées à l'aide du chiffrement AES-256-GCM</li>
     <li>Vous contrôlez la durée de conservation des enregistrements de dépenses (toujours ou un nombre limité d'années)</li>
@@ -1236,16 +1479,18 @@
   </ul>
   <p><strong>Périmètre des sauvegardes :</strong> Les sauvegardes et exportations couvrent vos enregistrements de dépenses personnelles stockés localement et les métadonnées de groupe en cache. Les données de dépenses de groupe en temps réel stockées dans Firebase Firestore ne sont <strong>pas</strong> incluses dans les sauvegardes locales de l'appareil — elles restent accessibles via Firestore tant que le groupe existe et n'a pas été supprimé.</p>
 
-  <h2><span class="section-number">8</span>Migration des données</h2>
+  <h2><span class="section-number">9</span>Migration des données</h2>
   <p>Les utilisateurs ayant accès aux fonctionnalités (abonnement PRO ou essai gratuit actif) peuvent exporter leurs données en JSON, CSV ou PDF, et importer des données au format JSON. Node Expense n'a pas accès à vos fichiers exportés. Les fichiers exportés sont enregistrés à un emplacement de votre choix. Les exportations comprennent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; elles ne récupèrent pas de données en temps réel directement depuis Firebase Firestore.</p>
 
-  <h2><span class="section-number">9</span>Suppression des données</h2>
+  <h2><span class="section-number">10</span>Suppression des données</h2>
   <ul>
     <li>Supprimer des dépenses personnelles individuelles ou toutes depuis Node Expense</li>
     <li>Quitter ou demander la suppression d'un groupe — les données du groupe sont supprimées de Firebase lorsque tous les membres sont d'accord</li>
     <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre appareil ; elles ne sont pas retéléversées</li>
     <li>Lorsqu'un groupe est supprimé en choisissant « supprimer les enregistrements », toutes les photos de reçus de ce groupe sont également supprimées de Firebase Storage. Lorsque « conserver les enregistrements » est choisi, les photos restent dans Firebase Storage afin que les membres d'origine puissent continuer à les consulter sur leurs propres appareils.</li>
     <li>Supprimer une photo de reçu d'une dépense de groupe (via l'écran d'édition) supprime le fichier sous-jacent de Firebase Storage.</li>
+    <li>Supprimer une dépense partagée par article (Pick &amp; Pay) supprime le détail des articles avec la dépense.</li>
+    <li>Supprimer la photo de reçu Pick &amp; Pay attachée automatiquement (via l'écran d'édition) supprime à la fois la copie locale et la copie dans Firebase Storage que les autres membres du groupe peuvent voir.</li>
     <li>La mise à jour de votre photo de profil écrase la photo précédente dans Firebase Storage. Choisir « Supprimer la photo » l'efface de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareils existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
     <li>La mise à jour ou la suppression d'une photo de groupe fonctionne de la même façon : la mise à jour écrase la photo existante dans Firebase Storage, et choisir « Supprimer la photo » la supprime. Seul l'admin du groupe peut effectuer ces actions. La photo de groupe est également supprimée de Firebase Storage lorsque le groupe lui-même est supprimé, quelle que soit l'option de suppression choisie.</li>
     <li>Les administrateurs de groupe peuvent supprimer les groupes inactifs directement depuis Réglages → Données et confidentialité → Groupes inactifs. Un groupe est éligible à la suppression après 6 mois d'inactivité avec toutes les dettes réglées. Lorsqu'un administrateur initie la suppression, tous les membres concernés reçoivent une notification push indiquant qui a supprimé le groupe. L'administrateur peut choisir d'exporter les dépenses du groupe, de les conserver localement ou de les supprimer entièrement avant que le groupe ne soit retiré de Firebase.</li>
@@ -1253,10 +1498,10 @@
   </ul>
   <p>Remarque : Les données de groupe Firebase peuvent persister jusqu'à ce que le groupe soit formellement supprimé via le processus de suppression intégré à l'app.</p>
 
-  <h2><span class="section-number">10</span>Confidentialité des enfants</h2>
+  <h2><span class="section-number">11</span>Confidentialité des enfants</h2>
   <p>Node Expense n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles auprès d'enfants de moins de 13 ans. Si vous pensez qu'un enfant a fourni des informations personnelles, veuillez nous contacter.</p>
 
-  <h2><span class="section-number">11</span>Vos droits</h2>
+  <h2><span class="section-number">12</span>Vos droits</h2>
   <ul>
     <li>Désactiver l'accès à la localisation dans les Réglages iOS</li>
     <li>Révoquer l'accès au calendrier dans les Réglages iOS</li>
@@ -1268,10 +1513,10 @@
     <li>Arrêter d'utiliser les sauvegardes ou les exportations chiffrées à tout moment</li>
   </ul>
 
-  <h2><span class="section-number">12</span>Modifications de cette politique</h2>
+  <h2><span class="section-number">13</span>Modifications de cette politique</h2>
   <p>Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre. Les modifications seront reflétées par la date de « Dernière mise à jour » en haut de ce document. L'utilisation continue de Node Expense après les modifications constitue une acceptation de la politique mise à jour.</p>
 
-  <h2><span class="section-number">13</span>Contact</h2>
+  <h2><span class="section-number">14</span>Contact</h2>
   <div class="contact-box">
     <p style="margin:0">Pour toute question concernant cette Politique de Confidentialité ou vos données :<br>
     <strong>E-mail :</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
@@ -1279,7 +1524,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-09 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1295,6 +1540,7 @@
         <li>표시 이름</li>
         <li>선택적 결제 식별자 (Venmo, Cash App, PayPal.me)</li>
         <li>지출에 첨부하는 선택적 영수증 사진 (PRO 구독 기능)</li>
+        <li>Pick &amp; Pay 를 통한 항목별 분할용으로 스캔된 영수증 이미지 (AI 처리를 위해 Google Gemini API 로 전송됨; PRO 구독 기능)</li>
         <li>선택적 프로필 사진 — 참가하는 모든 그룹의 멤버에게 표시됨 (PRO 구독 기능)</li>
         <li>선택적 그룹 사진 — 그룹 관리자가 설정하며 해당 그룹의 모든 멤버에게 표시됨 (PRO 구독 기능)</li>
         <li>선택적 위치 데이터</li>
@@ -1329,23 +1575,54 @@
       <tr><td><strong>Firebase Authentication</strong></td><td>구독 연속성을 위한 익명 사용자 식별</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>그룹 삭제 및 푸시 알림 발송 등 백그라운드 작업</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>그룹 활동에 대한 푸시 알림</td></tr>
+      <tr><td><strong>Google Gemini API (Firebase AI Logic 경유)</strong></td><td>Pick &amp; Pay 로 스캔한 영수증 사진의 AI 기반 OCR 및 항목 추출 (PRO 구독 기능)</td></tr>
+      <tr><td><strong>Firebase Remote Config</strong></td><td>앱 업데이트 없이 기능 매개변수를 원격으로 구성 (예: 계정당 월간 스캔 한도)</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>백엔드 API 호출에 대한 사기 및 남용 방지</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase는 그룹 관련 기능의 동기화 레이어로만 사용됩니다. 개인(비그룹) 지출 데이터는 클라우드 서비스에 <strong>절대</strong> 업로드되지 않습니다.</div>
 
-  <h2><span class="section-number">4</span>광고</h2>
-  <p>Node Expense는 무료 등급 사용자를 위해 광고로 운영됩니다. 여기에는 배너 광고, 월별 한도 도달 시 전면 광고, 또는 추가 지출 슬롯을 잠금 해제하기 위한 선택적 보상형 광고가 포함될 수 있습니다.</p>
-  <p>더욱 개인화된 경험을 제공하기 위해 활동 추적 권한을 요청할 수 있습니다. 추적을 거부하더라도 동일한 수의 광고가 표시되지만 관련성이 낮을 수 있습니다. 귀하의 재무 데이터는 광고주와 <strong>절대</strong> 공유되지 않습니다.</p>
+  <h2><span class="section-number">4</span>AI 보조 영수증 스캔 (Pick &amp; Pay)</h2>
+  <p><strong>Pick &amp; Pay 는 그룹 전용 기능</strong>이며, 개인(비그룹) 지출에는 사용할 수 없습니다. <strong>그룹 지출</strong>을 추가할 때 Pick &amp; Pay 를 탭하면, 촬영하거나 선택한 영수증 사진이 Google 의 <strong>Gemini API</strong>(Firebase AI Logic 경유)로 전송되어 개별 항목, 가격, 세금 및 가맹점 이름을 추출합니다. 추출된 데이터가 사용자에게 반환되어 각 항목을 그룹 멤버에게 배정할 수 있습니다.</p>
+  <p>Pick &amp; Pay 를 능동적으로 사용하지 않는 한 영수증 이미지가 Google 로 전송되지 않습니다.</p>
 
-  <h2><span class="section-number">5</span>위치 데이터</h2>
+  <h3>전송되는 내용</h3>
+  <ul>
+    <li>영수증 이미지의 압축본</li>
+    <li>모델에 전달되는 고정 파싱 지시</li>
+  </ul>
+
+  <h3>전송되지 않는 내용</h3>
+  <ul>
+    <li>사용자 이름, 그룹 멤버십, 결제 핸들 또는 사용자나 연락처를 식별할 수 있는 기타 정보</li>
+    <li>기타 지출, 그룹 기록, 영수증 이미지 외의 어떠한 데이터</li>
+  </ul>
+
+  <h3>Google 의 데이터 처리 방식</h3>
+  <p>Node Expense 는 Gemini API 의 <strong>유료 등급</strong>을 사용합니다. <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google 의 Gemini API 추가 서비스 약관</a>에 따라, Google 은 사용자의 프롬프트, 이미지 또는 응답을 자사 제품의 학습 또는 개선에 <strong>사용하지 않습니다</strong>. Google 은 보안, 남용 방지 및 컴플라이언스 목적으로 요청을 잠시 기록한 후 폐기할 수 있습니다. 영수증은 처리되며 Google 이 사용자 데이터로 보관하지 않습니다.</p>
+
+  <h3>사용 제한</h3>
+  <p>구독 가격을 일정하게 유지하기 위해, PRO 구독자가 월별로 수행할 수 있는 Pick &amp; Pay 스캔 횟수에 한도를 둡니다. 남은 스캔 횟수는 언제든지 <strong>「설정 → 구독 → Pick &amp; Pay credits」</strong>에서 확인할 수 있습니다.</p>
+
+  <h3>스캔 후 사진 보관</h3>
+  <p>Pick &amp; Pay 스캔이 성공하면, 영수증 사진이 그룹 지출의 영수증 사진으로 자동 첨부됩니다(PRO 혜택). 이 사진은 업로드되며 동일 그룹의 다른 멤버에게 표시됩니다. 본 정책의 다른 부분에서 설명하는 영수증 사진 동작과 동일합니다.</p>
+
+  <h3>거부</h3>
+  <p>Pick &amp; Pay 는 전적으로 선택 사항입니다. 다른 분할 모드(균등, % 별, $ 별) 중 어떤 것을 사용해서도 Gemini API 에 데이터를 전송하지 않고 그룹 지출을 분할할 수 있습니다. Pick &amp; Pay 를 한 번도 사용하지 않으면, 영수증 이미지가 Google 로 전송되지 않습니다.</p>
+
+  <h2><span class="section-number">5</span>광고</h2>
+  <p>Node Expense는 무료 등급 사용자를 위해 광고로 운영됩니다. 여기에는 배너 광고, 월별 한도 도달 시 전면 광고, 또는 추가 지출 슬롯을 잠금 해제하기 위한 선택적 보상형 광고가 포함될 수 있습니다.</p>
+  <p>무료 서비스를 유지하기 위해 Apple의 앱 추적 투명성(App Tracking Transparency) 프레임워크를 사용하여 보다 관련성 높은 광고를 표시할 수 있도록 귀하의 허가를 요청할 수 있습니다. 허가하지 않더라도 표시되는 광고의 수는 동일하지만, 귀하와 관련성이 낮은 광고가 표시될 수 있습니다. 허가 또는 거부 여부와 관계없이 광고주는 귀하의 금융 기록, 기기 내 개인 데이터 또는 클라우드에 동기화된 그룹 지출 내역에 절대 접근할 수 없습니다.</p>
+
+  <h2><span class="section-number">6</span>위치 데이터</h2>
   <p>위치 데이터는 선택 사항이며 설정에서 명시적으로 활성화한 경우에만 수집됩니다. 활성화 시, 새로운 지출과 함께 위치가 기록됩니다. 위치 데이터는 기기에 로컬로 저장되며 클라우드 서비스에 업로드되지 않습니다. iOS 설정에서 언제든지 위치 접근을 비활성화할 수 있습니다.</p>
 
-  <h2><span class="section-number">6</span>캘린더 접근</h2>
+  <h2><span class="section-number">7</span>캘린더 접근</h2>
   <p>Node Expense는 귀하가 선택한 캘린더에만 접근합니다. 캘린더 접근은 지출 항목을 캘린더 이벤트로 표시하고 동기화하는 데만 사용됩니다. 캘린더 데이터는 제3자와 절대 공유되지 않습니다.</p>
 
-  <h2><span class="section-number">7</span>데이터 저장, 보관 및 암호화</h2>
-  <h3>7.1 기기 저장</h3>
-  <p>다음 데이터는 Apple의 안전한 로컬 저장 프레임워크인 SwiftData를 사용하여 로컬에 저장됩니다:</p>
+  <h2><span class="section-number">8</span>데이터 저장, 보관 및 암호화</h2>
+  <h3>8.1 기기 저장</h3>
+  <p>다음 데이터가 iPhone에 저장되어 있습니다:</p>
   <ul>
     <li>개인(비그룹) 지출 기록</li>
     <li>개인 지출의 영수증 사진 (PRO 구독 기능; 어떠한 클라우드 서비스에도 업로드되지 않음)</li>
@@ -1355,7 +1632,7 @@
   </ul>
   <p>개인 지출 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 삭제된 그룹의 지출은 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다.</p>
 
-  <h3>7.2 그룹 기능을 위한 클라우드 저장</h3>
+  <h3>8.2 그룹 기능을 위한 클라우드 저장</h3>
   <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다(사진은 Firebase Storage):</p>
   <ul>
     <li>그룹 문서 (이름, 설명, 아이콘, 멤버, 권한, 공유 코드)</li>
@@ -1368,11 +1645,12 @@
     <li>체험 시작일 (재설치 후 복구용)</li>
     <li>푸시 알림 토큰 (FCM)</li>
     <li>정산 딥링크를 위한 선택적 결제 식별자 (Venmo, Cash App, PayPal.me 사용자명)</li>
+    <li><strong>Pick &amp; Pay 스캔 추적</strong> — 이번 달 수행한 스캔 횟수와 체험 무료 사용 여부를 기록하는 계정별 소규모 기록입니다. 계정당 월간 한도를 적용하고 설정에 남은 스캔 횟수를 표시하는 데 사용됩니다. 영수증 내용에 관한 어떤 정보도 포함하지 않습니다.</li>
     <li><strong>그룹 활동 기록</strong> — 그룹에서 수행된 모든 작업의 기록 (지출 추가, 수정, 환불 또는 삭제; 멤버 가입, 탈퇴 또는 제거). 이 데이터는 Firebase Firestore에 저장되며 <strong>90일 후 자동으로 영구 삭제</strong>됩니다. 90일이 지난 활동은 복구할 수 없습니다.</li>
   </ul>
   <div class="highlight-box">결제 식별자는 <strong>공개 사용자명에 불과합니다</strong>(예: 귀하의 <code>@venmo</code> 또는 <code>$cashtag</code>). 이 식별자는 결제 자격증명, 은행 세부정보 또는 계좌 번호가 <strong>아니며</strong>, Node Expense를 통해 어떠한 금액도 이동하지 않습니다. 모든 결제는 귀하가 선택하여 연 제3자 앱 내에서 이루어집니다.</div>
 
-  <h3>7.3 암호화 및 백업</h3>
+  <h3>8.3 암호화 및 백업</h3>
   <ul>
     <li>기능 접근 권한이 있는 사용자는 AES-256-GCM 암호화를 사용하여 암호화된 백업을 활성화할 수 있습니다</li>
     <li>지출 기록 보관 기간을 직접 제어할 수 있습니다 (전체 또는 제한된 연수)</li>
@@ -1381,16 +1659,18 @@
   </ul>
   <p><strong>백업 범위:</strong> 백업 및 내보내기는 기기에 로컬로 저장된 개인 지출 기록과 캐시된 그룹 메타데이터를 포함합니다. Firebase Firestore에 저장된 실시간 그룹 지출 데이터는 로컬 기기 백업에 <strong>포함되지 않습니다</strong>. 그룹이 존재하고 삭제되지 않은 한 Firestore를 통해 접근할 수 있습니다.</p>
 
-  <h2><span class="section-number">8</span>데이터 마이그레이션</h2>
+  <h2><span class="section-number">9</span>데이터 마이그레이션</h2>
   <p>기능 접근 권한(PRO 구독 또는 활성 무료 체험)이 있는 사용자는 JSON, CSV 또는 PDF 형식으로 데이터를 내보내고, JSON 형식으로 데이터를 가져올 수 있습니다. Node Expense는 내보낸 파일에 접근할 수 없습니다. 내보낸 파일은 귀하가 선택한 위치에 저장됩니다. 내보내기에는 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터가 포함되며, Firebase Firestore에서 실시간 데이터를 직접 가져오지 않습니다.</p>
 
-  <h2><span class="section-number">9</span>데이터 삭제</h2>
+  <h2><span class="section-number">10</span>데이터 삭제</h2>
   <ul>
     <li>Node Expense에서 개별 개인 지출 또는 모든 지출 삭제</li>
     <li>그룹 탈퇴 또는 삭제 요청 — 모든 멤버가 동의하면 그룹 데이터가 Firebase에서 삭제됨</li>
     <li>'삭제 시 보관'으로 표시된 그룹 지출은 기기에 로컬로 남으며, 재업로드되지 않음</li>
     <li>그룹을 삭제할 때 '기록 제거'를 선택하면 해당 그룹의 모든 영수증 사진도 Firebase Storage에서 삭제됩니다. '기록 보관'을 선택하면 사진은 Firebase Storage에 그대로 남아 원래 멤버들이 자신의 기기에서 계속 볼 수 있습니다.</li>
     <li>편집 화면에서 그룹 지출의 영수증 사진을 제거하면 Firebase Storage에 있는 원본 파일도 삭제됩니다.</li>
+    <li>항목별(Pick &amp; Pay) 지출을 삭제하면 지출과 함께 항목별 세부 내역도 삭제됩니다.</li>
+    <li>편집 화면에서 자동 첨부된 Pick &amp; Pay 영수증 사진을 삭제하면, 로컬 사본과 다른 그룹 멤버가 볼 수 있는 Firebase Storage 의 사본이 모두 삭제됩니다.</li>
     <li>프로필 사진을 업데이트하면 Firebase Storage의 이전 사진이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
     <li>그룹 사진의 업데이트 또는 제거도 동일한 방식으로 작동합니다. 업데이트하면 Firebase Storage의 기존 사진이 덮어쓰기되고, "사진 제거"를 선택하면 삭제됩니다. 이 작업은 그룹 관리자만 수행할 수 있습니다. 그룹 자체가 삭제될 때에도 선택한 삭제 옵션에 관계없이 그룹 사진이 Firebase Storage에서 삭제됩니다.</li>
     <li>그룹 관리자는 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹을 직접 정리할 수 있습니다. 6개월 이상 활동이 없고 모든 채무가 정산된 그룹이 정리 대상입니다. 관리자가 삭제를 시작하면 영향을 받는 모든 그룹 멤버에게 그룹을 삭제한 관리자 이름이 포함된 푸시 알림이 전송됩니다. 관리자는 그룹을 Firebase에서 제거하기 전에 그룹 지출을 내보내거나, 로컬에 보관하거나, 전체 삭제 중에서 선택할 수 있습니다.</li>
@@ -1398,10 +1678,10 @@
   </ul>
   <p>참고: Firebase 그룹 데이터는 앱 내 삭제 프로세스를 통해 그룹이 공식적으로 삭제될 때까지 유지될 수 있습니다.</p>
 
-  <h2><span class="section-number">10</span>아동 개인정보</h2>
+  <h2><span class="section-number">11</span>아동 개인정보</h2>
   <p>Node Expense는 13세 미만 아동을 대상으로 하지 않습니다. 당사는 13세 미만 아동으로부터 개인정보를 고의로 수집하지 않습니다. 아동이 개인정보를 제공했다고 생각되면 당사에 연락해 주세요.</p>
 
-  <h2><span class="section-number">11</span>귀하의 권리</h2>
+  <h2><span class="section-number">12</span>귀하의 권리</h2>
   <ul>
     <li>iOS 설정에서 위치 접근 비활성화</li>
     <li>iOS 설정에서 캘린더 접근 취소</li>
@@ -1413,10 +1693,10 @@
     <li>언제든지 암호화된 백업 또는 내보내기 중단</li>
   </ul>
 
-  <h2><span class="section-number">12</span>정책 변경</h2>
+  <h2><span class="section-number">13</span>정책 변경</h2>
   <p>당사는 본 개인정보처리방침을 수시로 업데이트할 수 있습니다. 변경 사항은 이 문서 상단의 '최종 업데이트' 날짜에 반영됩니다. 변경 후 Node Expense를 계속 사용하면 업데이트된 정책에 동의한 것으로 간주됩니다.</p>
 
-  <h2><span class="section-number">13</span>문의</h2>
+  <h2><span class="section-number">14</span>문의</h2>
   <div class="contact-box">
     <p style="margin:0">본 개인정보처리방침 또는 귀하의 데이터에 관한 문의사항:<br>
     <strong>이메일:</strong> <a href="mailto:thedizzydogstudio@gmail.com">thedizzydogstudio@gmail.com</a></p>
