@@ -227,7 +227,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Acceptance of Terms</h2>
   <p>By downloading, installing, or using Node Expense: Track Together, you agree to be bound by these Terms of Service. If you do not agree, do not use the app.</p>
@@ -241,15 +241,16 @@
     <li>Sync expenses with selected iOS calendars</li>
     <li>Back up and optionally encrypt your data (PRO subscription feature). Backups cover locally stored personal expense records and cached group data; live group expense data in Firebase Firestore is not included in local backups.</li>
     <li>Export expense data as JSON, CSV, or PDF, and import data in JSON format (PRO subscription feature)</li>
-    <li>Scan receipts using your device camera to auto-fill expense details</li>
-    <li>Attach receipt photos to expenses (PRO subscription feature). Personal expense photos stay on your device; group expense photos are stored in Firebase Storage and visible to all members of the group.</li>
+    <li>Scan receipts using your iPhone camera to auto-fill expense details</li>
+    <li>Attach receipt photos to expenses (PRO subscription feature). Personal expense photos stay on your iPhone; group expense photos are stored in Firebase Storage and visible to all members of the group.</li>
     <li>Use <strong>Pick &amp; Pay</strong> to photograph a receipt and let Google Gemini AI identify and itemise individual line items, which you can then convert into expenses (PRO subscription feature; trial users receive one complimentary scan)</li>
     <li>Set an optional profile photo (PRO subscription feature). Profile photos are stored in Firebase Storage and visible to all members of every group you join.</li>
     <li>Set an optional group photo (PRO subscription feature). Group photos are stored in Firebase Storage and visible to all members of that group. Only the group admin can set or change a group photo.</li>
     <li>Create and manage custom expense categories with per-category monthly budgets</li>
     <li>Launch peer payment apps directly from group settlements via deep links to Venmo, Cash App, and PayPal (availability varies by region — see §9)</li>
+    <li>Optionally check the numbers on scanned Taiwan electronic invoices (電子發票) against the official government uniform-invoice lottery (統一發票) and receive a notification of a possible win (off by default; the check runs on your iPhone)</li>
   </ul>
-  <p>Group-related data is synced to Firebase so all group members can view the same information in real time. Personal expense data remains on your device unless you choose to export or back it up.</p>
+  <p>Group-related data is synced to Firebase so all group members can view the same information in real time. Personal expense data remains on your iPhone unless you choose to export or back it up.</p>
 
   <h2><span class="section-number">3</span>Free &amp; Paid Features</h2>
   <h3>Free Tier</h3>
@@ -281,7 +282,7 @@
   <p><strong>Refunds &amp; Finality:</strong> Lifetime purchases are one-time payments. No pro-rated refunds will be offered if the App is discontinued or if certain third-party integrations become unavailable due to platform changes.</p>
 
   <h2><span class="section-number">4</span>Group Features &amp; Deletion</h2>
-  <p>Group expenses are synced in real time across all members' devices via Firebase. By participating in a group, you understand that:</p>
+  <p>Group expenses are synced in real time across all members' iPhones via Firebase. By participating in a group, you understand that:</p>
   <ul>
     <li>Your display name, profile photo (if set), and expense data are visible to all members of the group</li>
     <li>Any receipt photos you attach to a group expense are uploaded to Firebase Storage and visible to all members of the group</li>
@@ -291,7 +292,7 @@
     <li>Groups inactive for over 6 months with all debts settled may be deleted automatically if a deletion request is submitted and no member declines within 7 days.</li>
     <li>Group admins can proactively prune eligible inactive groups from Settings → Data &amp; Privacy → Inactive Groups. When an admin initiates deletion this way, all affected group members immediately receive a push notification identifying who deleted the group. The admin chooses to export group expenses, keep them locally, or delete them entirely before the group is removed from Firebase.</li>
     <li>The group admin may remove members or transfer data at any time</li>
-    <li>Expenses you choose to keep after group deletion remain on your device locally, marked as from a deleted group; receipt photos for those expenses remain accessible from Firebase Storage. If the deletion is performed with "remove records", every receipt photo for the group is deleted from Firebase Storage and cannot be recovered.</li>
+    <li>Expenses you choose to keep after group deletion remain on your iPhone locally, marked as from a deleted group; receipt photos for those expenses remain accessible from Firebase Storage. If the deletion is performed with "remove records", every receipt photo for the group is deleted from Firebase Storage and cannot be recovered.</li>
     <li><strong>Activity Log Retention:</strong> Group activity history (such as who added, edited, refunded, or deleted an expense, and who joined or left the group) is stored on Firebase Firestore servers and is automatically and permanently deleted after <strong>90 days</strong>. Activity older than 90 days cannot be recovered. This retention period applies per group and is not affected by your subscription status.</li>
   </ul>
 
@@ -309,7 +310,7 @@
   <ul>
     <li>The accuracy of your expense data</li>
     <li>Your display name and how it appears to other group members</li>
-    <li>Protecting access to your device and the app</li>
+    <li>Protecting access to your iPhone and the app</li>
     <li>Ensuring group members you invite consent to having their data processed as described in our Privacy Policy</li>
     <li>Maintaining access to the iCloud Keychain linked to your Apple ID — encrypted backups cannot be recovered if iCloud Keychain access is lost</li>
     <li>The accuracy of any payment handles or usernames you enter for peer payment apps (e.g., Venmo, Cash App, PayPal). Entering an incorrect handle may result in money being sent to an unintended recipient. Node Expense has no ability to reverse or intercept such transactions, and all liability for misdirected payments rests solely with you</li>
@@ -323,10 +324,10 @@
     <li>You own — or have the right to use — any image you upload as your profile photo or as a group photo. You grant Node Expense a non-exclusive licence to host, distribute, and display that photo for the sole purpose of operating the app's group features.</li>
     <li>Other group members may report your profile photo or display name from within the app. If the group admin has set an inappropriate group photo, any member may report it by long-pressing the admin's name on the Members tab and choosing <strong>Report Member</strong>. We may, at our sole discretion and without notice, remove any reported content, suspend access to profile-photo, group-photo, or group features, or terminate the account of users who repeatedly violate these rules.</li>
     <li>You may report another member's profile photo or display name by long-pressing their entry in the Members tab and choosing <strong>Report Member</strong>. This opens an email to our support address with the relevant context pre-populated. Reports are reviewed manually within a reasonable time.</li>
-    <li>Removing a reported photo from Firebase Storage is not retroactive — devices that have already cached the photo may retain a local copy until the next sync.</li>
+    <li>Removing a reported photo from Firebase Storage is not retroactive — iPhones that have already cached the photo may retain a local copy until the next sync.</li>
   </ul>
 
-  <p>We are not responsible for data loss due to device loss, accidental deletion, encryption key loss, or user error.</p>
+  <p>We are not responsible for data loss due to iPhone loss, accidental deletion, encryption key loss, or user error.</p>
 
   <h2><span class="section-number">7</span>Data Ownership</h2>
   <p>You retain full ownership of your expense data. We do not claim ownership of your personal expense records, group data, or exported files. By using group features, you grant other group members the ability to view shared expense data within the app.</p>
@@ -341,11 +342,12 @@
   <ul>
     <li>Financial losses, missed expenses, or data inaccuracies</li>
     <li>Loss of encrypted backup data due to lost or inaccessible encryption keys</li>
-    <li>Loss of group expense data stored in Firebase Firestore that was not explicitly exported prior to group deletion, device loss, or app removal</li>
+    <li>Loss of group expense data stored in Firebase Firestore that was not explicitly exported prior to group deletion, iPhone loss, or app removal</li>
     <li>Data loss due to third-party service outages (Firebase, RevenueCat, AdMob)</li>
     <li>Inaccurate group settlement calculations due to incorrect data entry</li>
     <li>For Lifetime Access: the Developer's total liability shall not exceed the actual amount paid by the user for said subscription</li>
     <li>Inaccurate, incomplete, or misinterpreted results from <strong>Pick &amp; Pay</strong> AI receipt scanning. Google Gemini may misread amounts, item names, or currencies — you are responsible for verifying all extracted data before saving</li>
+    <li>Inaccurate, missed, or delayed Taiwan uniform-invoice lottery (統一發票) results. The in-app check is provided as a convenience only — a possible win is unofficial until you verify it with Taiwan's Ministry of Finance, and you must retain the printed invoice to claim any prize. We do not guarantee that a winning number will be detected or reported, and we are not responsible for any prize that is missed, expires, or cannot be claimed</li>
   </ul>
   <p><strong>No Payment Processing:</strong> Node Expense is not a payment processor and does not transmit, hold, or process money of any kind. The deep-link feature launches third-party apps (Venmo, Cash App, PayPal) solely as a convenience; all transactions occur entirely within those apps and are subject to their respective terms of service and privacy policies. Node Expense bears no responsibility for any payment made through those platforms.</p>
   <p><strong>Regional Availability:</strong> Venmo and Cash App are available to U.S. users only. PayPal availability varies by country. Non-U.S. users may find that one or more deep-link payment options do not function in their region. This does not constitute a misrepresentation of the app's features.</p>
@@ -378,7 +380,7 @@
 
 <!-- ========== GERMAN ========== -->
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Annahme der Nutzungsbedingungen</h2>
   <p>Durch das Herunterladen, Installieren oder Verwenden von Node Expense: Track Together erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie nicht zustimmen, verwenden Sie die App bitte nicht.</p>
@@ -392,15 +394,16 @@
     <li>Ausgaben mit ausgewählten iOS-Kalendern synchronisieren</li>
     <li>Ihre Daten sichern und optional verschlüsseln (PRO-Abonnement-Funktion). Backups umfassen lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Gruppenausgabendaten in Firebase Firestore sind nicht in lokalen Backups enthalten.</li>
     <li>Ausgabendaten als JSON, CSV oder PDF exportieren und im JSON-Format importieren (PRO-Abonnement-Funktion)</li>
-    <li>Belege mit der Gerätekamera scannen, um Ausgabendetails automatisch auszufüllen</li>
-    <li>Belegfotos an Ausgaben anhängen (PRO-Abonnement-Funktion). Fotos persönlicher Ausgaben verbleiben auf Ihrem Gerät; Fotos von Gruppenausgaben werden in Firebase Storage gespeichert und sind für alle Mitglieder der Gruppe sichtbar.</li>
+    <li>Belege mit der iPhone-Kamera scannen, um Ausgabendetails automatisch auszufüllen</li>
+    <li>Belegfotos an Ausgaben anhängen (PRO-Abonnement-Funktion). Fotos persönlicher Ausgaben verbleiben auf Ihrem iPhone; Fotos von Gruppenausgaben werden in Firebase Storage gespeichert und sind für alle Mitglieder der Gruppe sichtbar.</li>
     <li>Verwenden Sie <strong>Pick &amp; Pay</strong>, um einen Beleg zu fotografieren und Google Gemini AI die einzelnen Positionen identifizieren und auflisten zu lassen, die Sie dann als Ausgaben übernehmen können (PRO-Abonnement-Funktion; Testnutzer erhalten einen kostenlosen Scan)</li>
     <li>Optionales Profilfoto festlegen (PRO-Abonnement-Funktion). Profilfotos werden in Firebase Storage gespeichert und sind für alle Mitglieder jeder Gruppe sichtbar, der Sie beitreten.</li>
     <li>Optionales Gruppenfoto festlegen (PRO-Abonnement-Funktion). Gruppenfotos werden in Firebase Storage gespeichert und sind für alle Mitglieder der jeweiligen Gruppe sichtbar. Nur der Gruppen-Administrator kann ein Gruppenfoto festlegen oder ändern.</li>
     <li>Benutzerdefinierte Ausgabenkategorien mit monatlichen Budgets pro Kategorie erstellen und verwalten</li>
     <li>Peer-Payment-Apps direkt aus Gruppenausgleichen über Deeplinks zu Venmo, Cash App und PayPal starten (Verfügbarkeit variiert je nach Region – siehe §9)</li>
+    <li>Optional die Nummern gescannter taiwanesischer elektronischer Rechnungen (電子發票) mit der offiziellen staatlichen Lotterie der einheitlichen Rechnung (統一發票) abgleichen und bei einem möglichen Gewinn eine Benachrichtigung erhalten (standardmäßig deaktiviert; der Abgleich erfolgt auf Ihrem iPhone)</li>
   </ul>
-  <p>Gruppenbezogene Daten werden mit Firebase synchronisiert, sodass alle Gruppenmitglieder dieselben Informationen in Echtzeit abrufen können. Persönliche Ausgabendaten verbleiben auf Ihrem Gerät, es sei denn, Sie exportieren oder sichern diese.</p>
+  <p>Gruppenbezogene Daten werden mit Firebase synchronisiert, sodass alle Gruppenmitglieder dieselben Informationen in Echtzeit abrufen können. Persönliche Ausgabendaten verbleiben auf Ihrem iPhone, es sei denn, Sie exportieren oder sichern diese.</p>
 
   <h2><span class="section-number">3</span>Kostenlose &amp; kostenpflichtige Funktionen</h2>
   <h3>Kostenlose Version</h3>
@@ -432,7 +435,7 @@
   <p><strong>Rückerstattungen &amp; Endgültigkeit:</strong> Lifetime-Käufe sind Einmalzahlungen. Es werden keine anteiligen Rückerstattungen angeboten, wenn die App eingestellt wird oder bestimmte Drittanbieter-Integrationen aufgrund von Plattformänderungen nicht mehr verfügbar sind.</p>
 
   <h2><span class="section-number">4</span>Gruppenfunktionen &amp; Löschung</h2>
-  <p>Gruppenausgaben werden über Firebase in Echtzeit auf den Geräten aller Mitglieder synchronisiert. Durch die Teilnahme an einer Gruppe erkennen Sie an, dass:</p>
+  <p>Gruppenausgaben werden über Firebase in Echtzeit auf den iPhones aller Mitglieder synchronisiert. Durch die Teilnahme an einer Gruppe erkennen Sie an, dass:</p>
   <ul>
     <li>Ihr Anzeigename, Ihr Profilfoto (sofern festgelegt) und Ihre Ausgabendaten für alle Mitglieder der Gruppe sichtbar sind</li>
     <li>Belegfotos, die Sie an eine Gruppenausgabe anhängen, in Firebase Storage hochgeladen werden und für alle Mitglieder der Gruppe sichtbar sind</li>
@@ -442,7 +445,7 @@
     <li>Gruppen, die seit über 6 Monaten inaktiv sind und deren Schulden beglichen wurden, können automatisch gelöscht werden, wenn ein Löschantrag gestellt wird und kein Mitglied innerhalb von 7 Tagen widerspricht.</li>
     <li>Gruppen-Administratoren können berechtigte inaktive Gruppen proaktiv unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen. Wenn ein Administrator die Löschung auf diesem Weg einleitet, erhalten alle betroffenen Gruppenmitglieder sofort eine Push-Benachrichtigung mit dem Namen des Administrators. Der Administrator wählt, ob er die Gruppenausgaben exportieren, lokal behalten oder vollständig löschen möchte, bevor die Gruppe aus Firebase entfernt wird.</li>
     <li>Der Gruppenadministrator Mitglieder jederzeit entfernen oder Daten übertragen kann</li>
-    <li>Ausgaben, die Sie nach der Gruppenlöschung behalten möchten, lokal auf Ihrem Gerät verbleiben, gekennzeichnet als aus einer gelöschten Gruppe stammend; Belegfotos für diese Ausgaben bleiben weiterhin über Firebase Storage zugänglich. Wenn die Löschung mit „Datensätze entfernen" durchgeführt wird, werden alle Belegfotos der Gruppe aus Firebase Storage gelöscht und können nicht wiederhergestellt werden.</li>
+    <li>Ausgaben, die Sie nach der Gruppenlöschung behalten möchten, lokal auf Ihrem iPhone verbleiben, gekennzeichnet als aus einer gelöschten Gruppe stammend; Belegfotos für diese Ausgaben bleiben weiterhin über Firebase Storage zugänglich. Wenn die Löschung mit „Datensätze entfernen" durchgeführt wird, werden alle Belegfotos der Gruppe aus Firebase Storage gelöscht und können nicht wiederhergestellt werden.</li>
     <li><strong>Aufbewahrung des Aktivitätsprotokolls:</strong> Der Gruppenaktivitätsverlauf (z. B. wer eine Ausgabe hinzugefügt, bearbeitet, erstattet oder gelöscht hat und wer der Gruppe beigetreten ist oder sie verlassen hat) wird auf Firebase Firestore-Servern gespeichert und nach <strong>90 Tagen</strong> automatisch und dauerhaft gelöscht. Aktivitäten, die älter als 90 Tage sind, können nicht wiederhergestellt werden. Diese Aufbewahrungsfrist gilt pro Gruppe und ist unabhängig von Ihrem Abonnementstatus.</li>
   </ul>
 
@@ -460,7 +463,7 @@
   <ul>
     <li>Die Richtigkeit Ihrer Ausgabendaten</li>
     <li>Ihren Anzeigenamen und wie er anderen Gruppenmitgliedern angezeigt wird</li>
-    <li>Den Schutz des Zugriffs auf Ihr Gerät und die App</li>
+    <li>Den Schutz des Zugriffs auf Ihr iPhone und die App</li>
     <li>Die Sicherstellung, dass eingeladene Gruppenmitglieder der Verarbeitung ihrer Daten gemäß unserer Datenschutzrichtlinie zustimmen</li>
     <li>Die Aufrechterhaltung des Zugriffs auf den mit Ihrer Apple-ID verknüpften iCloud-Schlüsselbund – verschlüsselte Backups können nicht wiederhergestellt werden, wenn der Zugriff auf den iCloud-Schlüsselbund verloren geht</li>
     <li>Die Richtigkeit aller Zahlungskonten oder Benutzernamen, die Sie für Peer-Payment-Apps (z. B. Venmo, Cash App, PayPal) eingeben. Die Eingabe eines falschen Kontos kann dazu führen, dass Geld an einen unbeabsichtigten Empfänger gesendet wird. Node Expense hat keine Möglichkeit, solche Transaktionen rückgängig zu machen oder abzufangen, und die gesamte Haftung für fehlgeleitete Zahlungen liegt allein bei Ihnen</li>
@@ -474,10 +477,10 @@
     <li>Sie das Eigentum an oder das Recht zur Nutzung jedes Bildes besitzen, das Sie als Profilfoto oder Gruppenfoto hochladen. Sie gewähren Node Expense eine nicht-exklusive Lizenz zum Hosten, Verteilen und Anzeigen dieses Fotos – ausschließlich zum Zweck des Betriebs der Gruppenfunktionen der App.</li>
     <li>Andere Gruppenmitglieder können Ihr Profilfoto oder Ihren Anzeigenamen über die App melden. Hat der Gruppenadministrator ein unangemessenes Gruppenfoto festgelegt, kann jedes Mitglied dies melden, indem es den Namen des Administrators im Tab „Mitglieder" lange drückt und <strong>Mitglied melden</strong> wählt. Wir können nach eigenem Ermessen und ohne Vorankündigung gemeldete Inhalte entfernen, den Zugriff auf Profilfoto-, Gruppenfoto- oder Gruppenfunktionen aussetzen oder das Konto von Nutzern, die wiederholt gegen diese Regeln verstoßen, kündigen.</li>
     <li>Sie können das Profilfoto oder den Anzeigenamen eines anderen Mitglieds melden, indem Sie dessen Eintrag im Tab „Mitglieder" lange drücken und <strong>Mitglied melden</strong> wählen. Dadurch wird eine E-Mail an unsere Support-Adresse mit den relevanten Kontextinformationen vorausgefüllt geöffnet. Meldungen werden innerhalb einer angemessenen Frist manuell überprüft.</li>
-    <li>Das Entfernen eines gemeldeten Fotos aus Firebase Storage wirkt nicht rückwirkend – Geräte, die das Foto bereits zwischengespeichert haben, können bis zur nächsten Synchronisierung eine lokale Kopie behalten.</li>
+    <li>Das Entfernen eines gemeldeten Fotos aus Firebase Storage wirkt nicht rückwirkend – iPhones, die das Foto bereits zwischengespeichert haben, können bis zur nächsten Synchronisierung eine lokale Kopie behalten.</li>
   </ul>
 
-  <p>Wir haften nicht für Datenverluste aufgrund von Geräteverlust, versehentlicher Löschung, Verlust von Verschlüsselungsschlüsseln oder Benutzerfehlern.</p>
+  <p>Wir haften nicht für Datenverluste aufgrund von iPhone-Verlust, versehentlicher Löschung, Verlust von Verschlüsselungsschlüsseln oder Benutzerfehlern.</p>
 
   <h2><span class="section-number">7</span>Dateneigentum</h2>
   <p>Sie behalten das vollständige Eigentum an Ihren Ausgabendaten. Wir erheben keinen Anspruch auf Ihre persönlichen Ausgabenaufzeichnungen, Gruppendaten oder exportierten Dateien. Durch die Nutzung von Gruppenfunktionen gewähren Sie anderen Gruppenmitgliedern die Möglichkeit, gemeinsame Ausgabendaten in der App einzusehen.</p>
@@ -492,11 +495,12 @@
   <ul>
     <li>Finanzielle Verluste, fehlende Ausgaben oder Datenungenauigkeiten</li>
     <li>Verlust verschlüsselter Backup-Daten aufgrund verlorener oder unzugänglicher Verschlüsselungsschlüssel</li>
-    <li>Verlust von in Firebase Firestore gespeicherten Gruppenausgabendaten, die vor der Gruppenlöschung, dem Geräteverlust oder der App-Deinstallation nicht explizit exportiert wurden</li>
+    <li>Verlust von in Firebase Firestore gespeicherten Gruppenausgabendaten, die vor der Gruppenlöschung, dem iPhone-Verlust oder der App-Deinstallation nicht explizit exportiert wurden</li>
     <li>Datenverluste aufgrund von Drittanbieter-Ausfällen (Firebase, RevenueCat, AdMob)</li>
     <li>Ungenaue Gruppenausgleichsberechnungen aufgrund falscher Dateneingaben</li>
     <li>Für Lifetime-Zugang: Die Gesamthaftung des Entwicklers übersteigt nicht den tatsächlich vom Nutzer für das betreffende Abonnement gezahlten Betrag</li>
     <li>Ungenaue, unvollständige oder falsch interpretierte Ergebnisse des <strong>Pick &amp; Pay</strong>-KI-Beleg-Scans. Google Gemini kann Beträge, Artikelbezeichnungen oder Währungen falsch lesen — Sie sind verantwortlich, alle extrahierten Daten vor dem Speichern zu überprüfen</li>
+    <li>Ungenaue, übersehene oder verzögerte Ergebnisse der taiwanesischen Lotterie der einheitlichen Rechnung (統一發票). Die In-App-Prüfung dient lediglich der Bequemlichkeit – ein möglicher Gewinn ist inoffiziell, bis Sie ihn beim taiwanesischen Finanzministerium bestätigen, und Sie müssen die gedruckte Rechnung aufbewahren, um einen Preis einzulösen. Wir garantieren nicht, dass eine Gewinnzahl erkannt oder gemeldet wird, und übernehmen keine Verantwortung für einen Preis, der übersehen wird, verfällt oder nicht eingelöst werden kann</li>
   </ul>
   <p><strong>Kein Zahlungsdienstleister:</strong> Node Expense ist kein Zahlungsdienstleister und überträgt, hält oder verarbeitet in keiner Form Geld. Die Deeplink-Funktion startet Drittanbieter-Apps (Venmo, Cash App, PayPal) ausschließlich zur Bequemlichkeit; alle Transaktionen finden vollständig innerhalb dieser Apps statt und unterliegen deren jeweiligen Nutzungsbedingungen und Datenschutzrichtlinien. Node Expense übernimmt keine Verantwortung für Zahlungen, die über diese Plattformen getätigt werden.</p>
   <p><strong>Regionale Verfügbarkeit:</strong> Venmo und Cash App sind nur für US-Nutzer verfügbar. Die Verfügbarkeit von PayPal variiert je nach Land. Nutzer außerhalb der USA stellen möglicherweise fest, dass eine oder mehrere Deeplink-Zahlungsoptionen in ihrer Region nicht funktionieren. Dies stellt keine Falschdarstellung der App-Funktionen dar.</p>
@@ -530,7 +534,7 @@
 
 <!-- ========== SPANISH ========== -->
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Aceptación de los Términos</h2>
   <p>Al descargar, instalar o usar Node Expense: Track Together, acepta quedar vinculado por estos Términos de Servicio. Si no está de acuerdo, no utilice la aplicación.</p>
@@ -544,15 +548,16 @@
     <li>Sincronizar gastos con calendarios de iOS seleccionados</li>
     <li>Hacer copias de seguridad y cifrar opcionalmente sus datos (función de suscripción PRO). Las copias de seguridad abarcan los registros de gastos personales almacenados localmente y los datos de grupo en caché; los datos de gastos de grupo en tiempo real en Firebase Firestore no están incluidos en las copias de seguridad locales.</li>
     <li>Exportar datos de gastos en formato JSON, CSV o PDF, e importar datos en formato JSON (función de suscripción PRO)</li>
-    <li>Escanear recibos con la cámara del dispositivo para rellenar automáticamente los detalles del gasto</li>
-    <li>Adjuntar fotos de recibos a los gastos (función de suscripción PRO). Las fotos de gastos personales permanecen en su dispositivo; las fotos de gastos de grupo se almacenan en Firebase Storage y son visibles para todos los miembros del grupo.</li>
+    <li>Escanear recibos con la cámara del iPhone para rellenar automáticamente los detalles del gasto</li>
+    <li>Adjuntar fotos de recibos a los gastos (función de suscripción PRO). Las fotos de gastos personales permanecen en su iPhone; las fotos de gastos de grupo se almacenan en Firebase Storage y son visibles para todos los miembros del grupo.</li>
     <li>Utilice <strong>Pick &amp; Pay</strong> para fotografiar un recibo y dejar que Google Gemini AI identifique y detalle las partidas individuales, que luego puede convertir en gastos (función de suscripción PRO; los usuarios de prueba reciben un escaneo gratuito)</li>
     <li>Establecer una foto de perfil opcional (función de suscripción PRO). Las fotos de perfil se almacenan en Firebase Storage y son visibles para todos los miembros de cada grupo al que se una.</li>
     <li>Establecer una foto de grupo opcional (función de suscripción PRO). Las fotos de grupo se almacenan en Firebase Storage y son visibles para todos los miembros de ese grupo. Solo el administrador del grupo puede establecer o cambiar la foto del grupo.</li>
     <li>Crear y gestionar categorías de gastos personalizadas con presupuestos mensuales por categoría</li>
     <li>Lanzar aplicaciones de pago entre particulares directamente desde las liquidaciones de grupo mediante enlaces profundos a Venmo, Cash App y PayPal (la disponibilidad varía según la región; consulte el §9)</li>
+    <li>Opcionalmente, comparar los números de las facturas electrónicas de Taiwán (電子發票) escaneadas con la lotería oficial de la factura unificada (統一發票) del gobierno y recibir una notificación de un posible premio (desactivado de forma predeterminada; la comprobación se realiza en su iPhone)</li>
   </ul>
-  <p>Los datos relacionados con el grupo se sincronizan con Firebase para que todos los miembros del grupo puedan ver la misma información en tiempo real. Los datos de gastos personales permanecen en su dispositivo a menos que elija exportarlos o hacer una copia de seguridad.</p>
+  <p>Los datos relacionados con el grupo se sincronizan con Firebase para que todos los miembros del grupo puedan ver la misma información en tiempo real. Los datos de gastos personales permanecen en su iPhone a menos que elija exportarlos o hacer una copia de seguridad.</p>
 
   <h2><span class="section-number">3</span>Funciones Gratuitas y de Pago</h2>
   <h3>Plan Gratuito</h3>
@@ -584,7 +589,7 @@
   <p><strong>Reembolsos y Carácter Definitivo:</strong> Las compras de por vida son pagos únicos. No se ofrecerán reembolsos prorrateados si la aplicación se descontinúa o si ciertas integraciones de terceros dejan de estar disponibles debido a cambios en la plataforma.</p>
 
   <h2><span class="section-number">4</span>Funciones de Grupo y Eliminación</h2>
-  <p>Los gastos de grupo se sincronizan en tiempo real en los dispositivos de todos los miembros a través de Firebase. Al participar en un grupo, usted entiende que:</p>
+  <p>Los gastos de grupo se sincronizan en tiempo real en los iPhones de todos los miembros a través de Firebase. Al participar en un grupo, usted entiende que:</p>
   <ul>
     <li>Su nombre para mostrar, su foto de perfil (si está establecida) y los datos de gastos son visibles para todos los miembros del grupo</li>
     <li>Cualquier foto de recibo que adjunte a un gasto de grupo se carga en Firebase Storage y es visible para todos los miembros del grupo</li>
@@ -594,7 +599,7 @@
     <li>Los grupos inactivos por más de 6 meses con todas las deudas liquidadas pueden ser eliminados automáticamente si se envía una solicitud y ningún miembro la rechaza en un plazo de 7 días.</li>
     <li>Los administradores del grupo pueden eliminar proactivamente grupos inactivos elegibles desde Ajustes → Datos y privacidad → Grupos inactivos. Cuando un administrador inicia la eliminación de esta forma, todos los miembros afectados reciben inmediatamente una notificación push identificando quién eliminó el grupo. El administrador elige exportar los gastos del grupo, conservarlos localmente o eliminarlos por completo antes de retirar el grupo de Firebase.</li>
     <li>El administrador del grupo puede eliminar miembros o transferir datos en cualquier momento</li>
-    <li>Los gastos que elija conservar tras la eliminación del grupo permanecen localmente en su dispositivo, marcados como provenientes de un grupo eliminado; las fotos de recibos de esos gastos siguen siendo accesibles desde Firebase Storage. Si la eliminación se realiza con «eliminar registros», todas las fotos de recibos del grupo se eliminan de Firebase Storage y no podrán recuperarse.</li>
+    <li>Los gastos que elija conservar tras la eliminación del grupo permanecen localmente en su iPhone, marcados como provenientes de un grupo eliminado; las fotos de recibos de esos gastos siguen siendo accesibles desde Firebase Storage. Si la eliminación se realiza con «eliminar registros», todas las fotos de recibos del grupo se eliminan de Firebase Storage y no podrán recuperarse.</li>
     <li><strong>Retención del registro de actividad:</strong> El historial de actividad del grupo (como quién añadió, editó, reembolsó o eliminó un gasto, y quién se unió o salió del grupo) se almacena en los servidores de Firebase Firestore y se elimina automática y permanentemente tras <strong>90 días</strong>. La actividad anterior a 90 días no puede recuperarse. Este período de retención se aplica por grupo y no depende de su estado de suscripción.</li>
   </ul>
 
@@ -612,7 +617,7 @@
   <ul>
     <li>La exactitud de sus datos de gastos</li>
     <li>Su nombre para mostrar y cómo aparece ante otros miembros del grupo</li>
-    <li>Proteger el acceso a su dispositivo y a la aplicación</li>
+    <li>Proteger el acceso a su iPhone y a la aplicación</li>
     <li>Garantizar que los miembros del grupo que invite consientan el tratamiento de sus datos tal como se describe en nuestra Política de Privacidad</li>
     <li>Mantener el acceso al llavero de iCloud vinculado a su Apple ID – las copias de seguridad cifradas no se pueden recuperar si se pierde el acceso al llavero de iCloud</li>
     <li>La exactitud de los identificadores de pago o nombres de usuario que introduzca en aplicaciones de pago entre particulares (p. ej., Venmo, Cash App, PayPal). Introducir un identificador incorrecto puede resultar en que el dinero se envíe a un destinatario no deseado. Node Expense no tiene capacidad para revertir o interceptar dichas transacciones, y toda responsabilidad por pagos mal dirigidos recae exclusivamente en usted</li>
@@ -626,10 +631,10 @@
     <li>Es propietario — o tiene derecho a usar — cualquier imagen que cargue como su foto de perfil o como foto de grupo. Otorga a Node Expense una licencia no exclusiva para alojar, distribuir y mostrar dicha foto con el único propósito de operar las funciones de grupo de la aplicación.</li>
     <li>Otros miembros del grupo pueden reportar su foto de perfil o nombre para mostrar desde la aplicación. Si el administrador del grupo ha establecido una foto de grupo inapropiada, cualquier miembro puede reportarla manteniendo pulsado el nombre del administrador en la pestaña de Miembros y eligiendo <strong>Reportar miembro</strong>. Podemos, a nuestra entera discreción y sin previo aviso, eliminar cualquier contenido reportado, suspender el acceso a las funciones de foto de perfil, foto de grupo o de grupo, o terminar la cuenta de los usuarios que infrinjan repetidamente estas reglas.</li>
     <li>Puede reportar la foto de perfil o el nombre para mostrar de otro miembro manteniendo pulsada su entrada en la pestaña de Miembros y eligiendo <strong>Reportar miembro</strong>. Esto abrirá un correo electrónico a nuestra dirección de soporte con el contexto relevante predefinido. Los reportes se revisan manualmente en un tiempo razonable.</li>
-    <li>La eliminación de una foto reportada de Firebase Storage no es retroactiva — los dispositivos que ya hayan almacenado la foto en caché pueden conservar una copia local hasta la próxima sincronización.</li>
+    <li>La eliminación de una foto reportada de Firebase Storage no es retroactiva — los iPhones que ya hayan almacenado la foto en caché pueden conservar una copia local hasta la próxima sincronización.</li>
   </ul>
 
-  <p>No somos responsables de la pérdida de datos debida a pérdida del dispositivo, eliminación accidental, pérdida de claves de cifrado o error del usuario.</p>
+  <p>No somos responsables de la pérdida de datos debida a pérdida del iPhone, eliminación accidental, pérdida de claves de cifrado o error del usuario.</p>
 
   <h2><span class="section-number">7</span>Propiedad de los Datos</h2>
   <p>Usted conserva la plena propiedad de sus datos de gastos. No reclamamos la propiedad de sus registros de gastos personales, datos de grupo o archivos exportados. Al utilizar las funciones de grupo, otorga a otros miembros del grupo la capacidad de ver los datos de gastos compartidos dentro de la aplicación.</p>
@@ -644,11 +649,12 @@
   <ul>
     <li>Pérdidas financieras, gastos omitidos o inexactitudes de datos</li>
     <li>Pérdida de datos de copia de seguridad cifrados debido a claves de cifrado perdidas o inaccesibles</li>
-    <li>Pérdida de datos de gastos de grupo almacenados en Firebase Firestore que no fueron exportados explícitamente antes de la eliminación del grupo, la pérdida del dispositivo o la desinstalación de la aplicación</li>
+    <li>Pérdida de datos de gastos de grupo almacenados en Firebase Firestore que no fueron exportados explícitamente antes de la eliminación del grupo, la pérdida del iPhone o la desinstalación de la aplicación</li>
     <li>Pérdida de datos debida a interrupciones de servicios de terceros (Firebase, RevenueCat, AdMob)</li>
     <li>Cálculos inexactos de liquidación de grupo debidos a entradas de datos incorrectas</li>
     <li>Para el Acceso de por Vida: la responsabilidad total del Desarrollador no superará el importe real pagado por el usuario por dicha suscripción</li>
     <li>Resultados inexactos, incompletos o mal interpretados del escaneo de recibos con IA de <strong>Pick &amp; Pay</strong>. Google Gemini puede leer incorrectamente importes, nombres de artículos o monedas — usted es responsable de verificar todos los datos extraídos antes de guardarlos</li>
+    <li>Resultados inexactos, omitidos o tardíos de la lotería de la factura unificada de Taiwán (統一發票). La comprobación dentro de la app se ofrece solo por comodidad: un posible premio no es oficial hasta que lo verifique con el Ministerio de Finanzas de Taiwán, y debe conservar la factura impresa para cobrar cualquier premio. No garantizamos que se detecte o notifique un número premiado, y no somos responsables de ningún premio que se omita, caduque o no pueda cobrarse</li>
   </ul>
   <p><strong>No Procesamos Pagos:</strong> Node Expense no es un procesador de pagos y no transmite, retiene ni procesa dinero de ningún tipo. La función de enlace profundo lanza aplicaciones de terceros (Venmo, Cash App, PayPal) únicamente por conveniencia; todas las transacciones ocurren enteramente dentro de esas aplicaciones y están sujetas a sus respectivos términos de servicio y políticas de privacidad. Node Expense no asume ninguna responsabilidad por los pagos realizados a través de esas plataformas.</p>
   <p><strong>Disponibilidad Regional:</strong> Venmo y Cash App están disponibles solo para usuarios de EE. UU. La disponibilidad de PayPal varía según el país. Los usuarios fuera de EE. UU. pueden encontrar que una o más opciones de pago con enlace profundo no funcionan en su región. Esto no constituye una tergiversación de las funciones de la aplicación.</p>
@@ -682,7 +688,7 @@
 
 <!-- ========== SIMPLIFIED CHINESE ========== -->
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-05-27 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-06-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
 <h2><span class="section-number">1</span>接受条款</h2>
   <p>通过下载、安装或使用 Node Expense: Track Together，您同意受本服务条款的约束。如果您不同意，请勿使用本应用。</p>
@@ -696,15 +702,16 @@
     <li>将支出与选定的 iOS 日历同步</li>
     <li>备份并可选加密您的数据（专业版订阅功能）。备份涵盖本地存储的个人支出记录和已缓存的群组数据；Firebase Firestore 中的即时群组支出数据不包含在本地备份中。</li>
     <li>以 JSON、CSV 或 PDF 格式导出支出数据，并以 JSON 格式导入数据（专业版订阅功能）</li>
-    <li>使用设备摄像头扫描收据，自动填写支出信息</li>
-    <li>为支出附加收据照片（专业版订阅功能）。个人支出照片保留在您的设备上；群组支出照片存储在 Firebase Storage 中，群组所有成员均可查看。</li>
+    <li>使用 iPhone 摄像头扫描收据，自动填写支出信息</li>
+    <li>为支出附加收据照片（专业版订阅功能）。个人支出照片保留在您的 iPhone 上；群组支出照片存储在 Firebase Storage 中，群组所有成员均可查看。</li>
     <li>使用 <strong>Pick &amp; Pay</strong> 拍摄收据，让 Google Gemini AI 识别并列出各个明细项目，然后您可以将其转换为支出记录（专业版订阅功能；试用用户可享受一次免费扫描）</li>
     <li>设置可选的个人头像（专业版订阅功能）。个人头像存储在 Firebase Storage 中，您加入的所有群组的成员均可见。</li>
     <li>设置可选的群组头像（专业版订阅功能）。群组头像存储在 Firebase Storage 中，该群组的所有成员均可见。只有群组管理员可以设置或更改群组头像。</li>
     <li>创建和管理自定义支出类别，并为每个类别设置每月预算</li>
     <li>通过深度链接直接从群组结算中启动 Venmo、Cash App 和 PayPal 等点对点支付应用（可用性因地区而异，请参阅第 9 条）</li>
+    <li>可选：将扫描的台湾电子发票（电子发票）号码与政府官方统一发票对奖（统一发票）比对，并在可能中奖时收到通知（默认关闭；比对在您的 iPhone 上进行）</li>
   </ul>
-  <p>群组相关数据会同步到 Firebase，以便所有群组成员都能实时查看相同信息。除非您选择导出或备份，否则个人支出数据将保留在您的设备上。</p>
+  <p>群组相关数据会同步到 Firebase，以便所有群组成员都能实时查看相同信息。除非您选择导出或备份，否则个人支出数据将保留在您的 iPhone 上。</p>
 
   <h2><span class="section-number">3</span>免费与付费功能</h2>
   <h3>免费层级</h3>
@@ -736,7 +743,7 @@
   <p><strong>退款与最终性：</strong>终身购买属于一次性付款。如果应用停止开发，或由于平台更改导致某些第三方集成不可用，将不提供按比例退款。</p>
 
   <h2><span class="section-number">4</span>群组功能与删除</h2>
-  <p>群组支出通过 Firebase 在所有成员的设备上实时同步。参与群组即表示您理解：</p>
+  <p>群组支出通过 Firebase 在所有成员的 iPhone 上实时同步。参与群组即表示您理解：</p>
   <ul>
     <li>您的显示名称、个人头像（若已设置）和支出数据对群组所有成员可见</li>
     <li>您附加到群组支出的任何收据照片都会上传至 Firebase Storage，并对群组所有成员可见</li>
@@ -746,7 +753,7 @@
     <li>对于非活跃超过 6 个月且债务已结清的群组，如果提交了删除申请且 7 天内没有成员反对，该群组可能会被自动删除。</li>
     <li>群组管理员可在"设置 → 数据与隐私 → 闲置群组"中主动清理符合条件的闲置群组。当管理员以此方式发起删除时，所有受影响的群组成员将立即收到推送通知，通知中注明是谁删除了该群组。管理员可选择在将群组从 Firebase 移除前导出群组支出、保留至本地或全部删除。</li>
     <li>群组管理员可以随时移除成员或转移数据</li>
-    <li>您在群组删除后选择保留的支出将保留在您的设备本地，并标记为来自已删除群组；这些支出的收据照片仍可通过 Firebase Storage 访问。如果删除时选择"移除记录"，该群组的所有收据照片将从 Firebase Storage 中删除且无法恢复。</li>
+    <li>您在群组删除后选择保留的支出将保留在您的 iPhone 本地，并标记为来自已删除群组；这些支出的收据照片仍可通过 Firebase Storage 访问。如果删除时选择"移除记录"，该群组的所有收据照片将从 Firebase Storage 中删除且无法恢复。</li>
     <li><strong>活动记录保留期：</strong>群组活动历史（例如谁添加、编辑、退款或删除了支出，以及谁加入或离开了群组）存储在 Firebase Firestore 服务器上，并在 <strong>90 天</strong>后自动永久删除。超过 90 天的活动记录无法恢复。该保留期限适用于每个群组，与您的订阅状态无关。</li>
   </ul>
 
@@ -764,7 +771,7 @@
   <ul>
     <li>支出数据的准确性</li>
     <li>您的显示名称及其在其他群组成员面前的显示方式</li>
-    <li>保护对您的设备和应用的访问权限</li>
+    <li>保护对您的 iPhone 和应用的访问权限</li>
     <li>确保您邀请的群组成员同意按照我们的隐私政策处理其数据</li>
     <li>维护对链接到您 Apple ID 的 iCloud 钥匙串的访问——如果丢失 iCloud 钥匙串访问权限，加密备份将无法恢复</li>
     <li>您为点对点支付应用（如 Venmo、Cash App、PayPal）输入的付款账号或用户名的准确性。账号输入有误可能导致款项被发送至非预期收款人。Node Expense 无法撤销或拦截此类交易，错误转账的全部责任由您自行承担</li>
@@ -778,10 +785,10 @@
     <li>您拥有上传作为个人头像或群组头像之图像的所有权或使用权。您授予 Node Expense 一项非排他性许可，仅为运行应用群组功能之目的，得存储、分发及显示该照片。</li>
     <li>其他群组成员可在应用内举报您的个人头像或显示名称。若群组管理员设置了不当的群组头像，任何成员均可长按"成员"标签页中管理员的名称并选择<strong>举报成员</strong>来举报。我们可自行决定且无需事先通知，移除任何被举报的内容、暂停个人头像、群组头像或群组功能的访问，或终止屡次违反这些规定的用户账户。</li>
     <li>您可长按"成员"标签页中的某位成员并选择<strong>举报成员</strong>来举报其个人头像或显示名称。此操作会以预填了相关背景信息的电子邮件发送至我们的支持邮箱。举报将在合理时间内由人工审核。</li>
-    <li>从 Firebase Storage 删除已被举报的照片不具追溯性 — 已缓存该照片的设备可能会保留本地副本，直至下次同步。</li>
+    <li>从 Firebase Storage 删除已被举报的照片不具追溯性 — 已缓存该照片的 iPhone 可能会保留本地副本，直至下次同步。</li>
   </ul>
 
-  <p>我们不对由于设备丢失、意外删除、加密密钥丢失或用户错误导致的数据丢失负责。</p>
+  <p>我们不对由于 iPhone 丢失、意外删除、加密密钥丢失或用户错误导致的数据丢失负责。</p>
 
   <h2><span class="section-number">7</span>数据所有权</h2>
   <p>您保留对支出数据的完整所有权。我们不主张对您的个人支出记录、群组数据或导出文件的所有权。通过使用群组功能，您授权其他群组成员在应用内查看共享的支出数据。</p>
@@ -796,11 +803,12 @@
   <ul>
     <li>财务损失、遗漏支出或数据不准确</li>
     <li>由于加密密钥丢失或无法访问导致的加密备份数据丢失</li>
-    <li>在群组删除、设备丢失或卸载应用之前未明确导出的 Firebase Firestore 群组支出数据丢失</li>
+    <li>在群组删除、iPhone 丢失或卸载应用之前未明确导出的 Firebase Firestore 群组支出数据丢失</li>
     <li>由于第三方服务停机导致的数据丢失</li>
     <li>由于数据输入错误导致的群组结算计算不准确</li>
     <li>针对终身访问：开发者对"终身"订阅的总责任不得超过用户为该订阅实际支付的金额</li>
     <li><strong>Pick &amp; Pay</strong> AI 收据扫描结果不准确、不完整或解析有误。Google Gemini 可能会误读金额、商品名称或货币 — 您有责任在保存前核实所有提取的数据</li>
+    <li>不准确、遗漏或延迟的台湾统一发票（统一发票）对奖结果。应用程序内的对奖仅为便利功能——在您向财政部核对之前，可能中奖均非正式结果，且您必须保留纸质发票才能兑奖。我们不保证一定会检测或报告中奖号码，对于任何遗漏、逾期或无法兑领的奖项概不负责</li>
   </ul>
   <p><strong>非支付处理方声明：</strong>Node Expense 不是支付处理方，不以任何形式传输、持有或处理资金。深度链接功能仅为方便用户而启动第三方应用（Venmo、Cash App、PayPal）；所有交易均完全在上述第三方应用内完成，并受其各自的服务条款和隐私政策约束。Node Expense 对通过上述平台进行的任何付款概不负责。</p>
   <p><strong>地区可用性：</strong>Venmo 和 Cash App 仅面向美国用户提供。PayPal 的可用性因国家/地区而异。非美国用户可能会发现一项或多项深度链接支付功能在其所在地区无法使用，这不构成对应用功能的虚假描述。</p>
@@ -833,7 +841,7 @@
 
 <!-- ========== TRADITIONAL CHINESE ========== -->
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-05-27 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-06-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
 <h2><span class="section-number">1</span>條款接受</h2>
   <p>下載、安裝或使用 Node Expense: Track Together，即表示您同意受本服務條款約束。若您不同意，請勿使用本應用程式。</p>
@@ -847,15 +855,16 @@
     <li>將費用與所選的 iOS 行事曆同步</li>
     <li>備份並選擇性地加密您的資料（PRO 訂閱功能）。備份涵蓋本機儲存的個人費用記錄及已快取的群組資料；Firebase Firestore 中的即時群組費用資料不包含在本機備份中。</li>
     <li>以 JSON、CSV 或 PDF 格式匯出費用資料，並以 JSON 格式匯入資料（PRO 訂閱功能）</li>
-    <li>使用裝置相機掃描收據，自動填入費用詳情</li>
-    <li>為費用附加收據照片（PRO 訂閱功能）。個人費用照片保留在您的裝置上；群組費用照片儲存於 Firebase Storage，群組所有成員皆可檢視。</li>
+    <li>使用 iPhone 相機掃描收據，自動填入費用詳情</li>
+    <li>為費用附加收據照片（PRO 訂閱功能）。個人費用照片保留在您的 iPhone 上；群組費用照片儲存於 Firebase Storage，群組所有成員皆可檢視。</li>
     <li>使用 <strong>Pick &amp; Pay</strong> 拍攝收據，讓 Google Gemini AI 識別並列出各個明細項目，然後可將其轉換為費用記錄（PRO 訂閱功能；試用使用者可享有一次免費掃描）</li>
     <li>設定選填的個人頭像（PRO 訂閱功能）。個人頭像儲存於 Firebase Storage，您加入的所有群組的成員皆可見。</li>
     <li>設定選填的群組頭像（PRO 訂閱功能）。群組頭像儲存於 Firebase Storage，該群組的所有成員皆可見。只有群組管理員可以設定或變更群組頭像。</li>
     <li>建立及管理自訂費用類別，並為每個類別設定每月預算</li>
     <li>透過深度連結從群組結算中直接啟動 Venmo、Cash App 和 PayPal 等點對點付款應用程式（可用性因地區而異，請參閱第 9 條）</li>
+    <li>選用：將掃描的台灣電子發票（電子發票）號碼與政府官方統一發票對獎（統一發票）比對，並在可能中獎時收到通知（預設關閉；比對在您的 iPhone 上進行）</li>
   </ul>
-  <p>群組相關資料會同步至 Firebase，讓所有群組成員能夠即時查看相同資訊。個人費用資料將保留在您的裝置上，除非您選擇匯出或備份。</p>
+  <p>群組相關資料會同步至 Firebase，讓所有群組成員能夠即時查看相同資訊。個人費用資料將保留在您的 iPhone 上，除非您選擇匯出或備份。</p>
 
   <h2><span class="section-number">3</span>免費與付費功能</h2>
   <h3>免費方案</h3>
@@ -887,7 +896,7 @@
   <p><strong>退款與最終性：</strong>終身購買為一次性付款。若應用程式停止服務，或某些第三方整合因平台變更而無法使用，將不提供按比例計算的退款。</p>
 
   <h2><span class="section-number">4</span>群組功能與刪除</h2>
-  <p>群組費用透過 Firebase 在所有成員的裝置上即時同步。參與群組即表示您了解：</p>
+  <p>群組費用透過 Firebase 在所有成員的 iPhone 上即時同步。參與群組即表示您了解：</p>
   <ul>
     <li>您的顯示名稱、個人頭像（如已設定）及費用資料對群組所有成員可見</li>
     <li>您附加至群組費用的任何收據照片皆會上傳至 Firebase Storage，並對群組所有成員可見</li>
@@ -897,7 +906,7 @@
     <li>對於非活躍超過 6 個月且債務已結清的群組，如果提交了刪除申請且 7 天內沒有成員反對，該群組可能會被自動刪除。</li>
     <li>群組管理員可在「設定 → 資料與隱私 → 閒置群組」中主動清理符合條件的閒置群組。當管理員以此方式發起刪除時，所有受影響的群組成員將立即收到推播通知，通知中說明是誰刪除了該群組。管理員可選擇在將群組從 Firebase 移除前匯出群組費用、保留至本機或全部刪除。</li>
     <li>群組管理員可隨時移除成員或轉移資料</li>
-    <li>您選擇在群組刪除後保留的費用將保留在您的裝置本機，並標示為來自已刪除群組；這些費用的收據照片仍可透過 Firebase Storage 存取。若刪除時選擇「移除記錄」，該群組的所有收據照片將從 Firebase Storage 中刪除且無法復原。</li>
+    <li>您選擇在群組刪除後保留的費用將保留在您的 iPhone 本機，並標示為來自已刪除群組；這些費用的收據照片仍可透過 Firebase Storage 存取。若刪除時選擇「移除記錄」，該群組的所有收據照片將從 Firebase Storage 中刪除且無法復原。</li>
     <li><strong>活動記錄保留期：</strong>群組活動歷史（例如誰新增、編輯、退款或刪除了費用，以及誰加入或離開了群組）儲存於 Firebase Firestore 伺服器上，並於 <strong>90 天</strong>後自動永久刪除。超過 90 天的活動記錄無法復原。此保留期限適用於每個群組，不受您的訂閱狀態影響。</li>
   </ul>
 
@@ -915,7 +924,7 @@
   <ul>
     <li>費用資料的準確性</li>
     <li>您的顯示名稱及其在其他群組成員面前的呈現方式</li>
-    <li>保護您的裝置及應用程式的存取安全</li>
+    <li>保護您的 iPhone 及應用程式的存取安全</li>
     <li>確保您邀請的群組成員同意按照我們的隱私權政策處理其資料</li>
     <li>維持與您 Apple ID 關聯的 iCloud 鑰匙圈的存取權限 — 若失去存取權限，加密備份將無法復原</li>
     <li>您為點對點付款應用程式（如 Venmo、Cash App、PayPal）輸入的付款帳號或用戶名稱之正確性。帳號輸入錯誤可能導致款項被轉至非預期的收款人。Node Expense 無法撤銷或攔截此類交易，因轉帳錯誤所產生的一切責任由您自行承擔</li>
@@ -929,10 +938,10 @@
     <li>您擁有上傳作為個人頭像或群組頭像之圖像的所有權，或擁有使用該圖像的權利。您授予 Node Expense 一項非專屬授權，僅為運作應用程式群組功能之目的，得儲存、分發及顯示該照片。</li>
     <li>其他群組成員可在應用程式內檢舉您的個人頭像或顯示名稱。若群組管理員設定了不當的群組頭像，任何成員均可長按「成員」分頁中管理員的名稱並選擇<strong>檢舉成員</strong>來檢舉。我們可自行決定且無需事先通知，移除任何被檢舉的內容、暫停個人頭像、群組頭像或群組功能的存取，或終止屢次違反這些規定使用者的帳戶。</li>
     <li>您可長按「成員」分頁中的某位成員，並選擇<strong>檢舉成員</strong>來檢舉其個人頭像或顯示名稱。此操作會以已預填相關背景資訊的電子郵件，寄至我們的支援信箱。檢舉將於合理時間內由人工審核。</li>
-    <li>從 Firebase Storage 移除已被檢舉的照片並非追溯性 — 已快取該照片的裝置可能會保留本機副本，直至下次同步。</li>
+    <li>從 Firebase Storage 移除已被檢舉的照片並非追溯性 — 已快取該照片的 iPhone 可能會保留本機副本，直至下次同步。</li>
   </ul>
 
-  <p>對於因裝置遺失、意外刪除、加密金鑰遺失或使用者錯誤所造成的資料損失，我們概不負責。</p>
+  <p>對於因 iPhone 遺失、意外刪除、加密金鑰遺失或使用者錯誤所造成的資料損失，我們概不負責。</p>
 
   <h2><span class="section-number">7</span>資料所有權</h2>
   <p>您對自己的費用資料保有完整所有權。我們不主張對您的個人費用記錄、群組資料或匯出檔案的所有權。使用群組功能時，您授予其他群組成員在應用程式中查看共享費用資料的能力。</p>
@@ -947,11 +956,12 @@
   <ul>
     <li>財務損失、費用漏記或資料不準確</li>
     <li>因加密金鑰遺失或無法存取所導致的加密備份資料損失</li>
-    <li>在群組刪除、裝置遺失或移除應用程式前未明確匯出的 Firebase Firestore 群組費用資料損失</li>
+    <li>在群組刪除、iPhone 遺失或移除應用程式前未明確匯出的 Firebase Firestore 群組費用資料損失</li>
     <li>因第三方服務中斷所造成的資料損失</li>
     <li>因輸入資料不正確所導致的群組結算計算不準確</li>
     <li>專就終身使用權而言：開發者的總責任不得超過使用者為該訂閱實際支付的金額</li>
     <li><strong>Pick &amp; Pay</strong> AI 收據掃描結果不準確、不完整或解析有誤。Google Gemini 可能會誤讀金額、品項名稱或貨幣 — 您有責任在儲存前核實所有擷取的資料</li>
+    <li>不準確、遺漏或延遲的台灣統一發票（統一發票）對獎結果。應用程式內的對獎僅為便利功能——在您向財政部核對之前，可能中獎均非正式結果，且您必須保留紙本發票才能兌獎。我們不保證一定會偵測或回報中獎號碼，對於任何遺漏、逾期或無法兌領的獎項概不負責</li>
   </ul>
   <p><strong>非支付處理方聲明：</strong>Node Expense 並非支付處理方，不以任何形式傳輸、持有或處理資金。深度連結功能僅為方便使用者而啟動第三方應用程式（Venmo、Cash App、PayPal）；所有交易均完全在上述第三方應用程式內完成，並受其各自的服務條款及隱私權政策規範。Node Expense 對透過上述平台進行的任何付款概不負責。</p>
   <p><strong>地區可用性：</strong>Venmo 和 Cash App 僅供美國用戶使用。PayPal 的可用性因國家/地區而異。非美國用戶可能會發現部分深度連結付款選項在其所在地區無法使用，此情況不構成對本應用程式功能的不實陳述。</p>
@@ -985,7 +995,7 @@
 
 <!-- ========== JAPANESE ========== -->
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-05-27 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-06-11 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
 <h2><span class="section-number">1</span>利用規約への同意</h2>
   <p>Node Expense: Track Together をダウンロード、インストール、または使用することにより、本利用規約に同意したものとみなされます。同意されない場合は、本アプリをご使用にならないでください。</p>
@@ -997,17 +1007,18 @@
     <li>グループメンバーとリアルタイムでグループ支出を追跡・割り勘</li>
     <li>支出に位置情報を記録（任意）</li>
     <li>選択した iOS カレンダーと支出を同期</li>
-    <li>データのバックアップおよび暗号化（PRO サブスクリプション機能）。バックアップにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore 内のライブグループ支出データはローカルバックアップに含まれません。</li>
+    <li>データのバックアップおよび暗号化（PRO サブスクリプション機能）。バックアップには iPhone にローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore 内のライブグループ支出データはローカルバックアップに含まれません。</li>
     <li>支出データを JSON、CSV、PDF 形式でエクスポート、および JSON 形式でインポート（PRO サブスクリプション機能）</li>
-    <li>デバイスのカメラでレシートをスキャンして支出情報を自動入力</li>
-    <li>支出にレシート写真を添付（PRO サブスクリプション機能）。個人支出の写真はデバイスにのみ保存されます。グループ支出の写真は Firebase Storage に保存され、グループの全メンバーが閲覧できます。</li>
+    <li>iPhone のカメラでレシートをスキャンして支出情報を自動入力</li>
+    <li>支出にレシート写真を添付（PRO サブスクリプション機能）。個人支出の写真は iPhone にのみ保存されます。グループ支出の写真は Firebase Storage に保存され、グループの全メンバーが閲覧できます。</li>
     <li><strong>Pick &amp; Pay</strong> を使ってレシートを撮影し、Google Gemini AI が個別の項目を識別・一覧化します。その後、各項目を支出として登録できます（PRO サブスクリプション機能。トライアルユーザーは1回無料スキャン可）</li>
     <li>任意のプロフィール写真の設定（PRO サブスクリプション機能）。プロフィール写真は Firebase Storage に保存され、参加するすべてのグループのメンバーに表示されます。</li>
     <li>任意のグループ写真の設定（PRO サブスクリプション機能）。グループ写真は Firebase Storage に保存され、そのグループの全メンバーに表示されます。グループ写真の設定・変更はグループ管理者のみ行えます。</li>
     <li>カスタム支出カテゴリの作成・管理と月次予算の設定</li>
     <li>グループ精算からディープリンクで Venmo・Cash App・PayPal などの個人間送金アプリを直接起動（地域により利用可否が異なります。§9 参照）</li>
+    <li>任意：スキャンした台湾の電子発票（電子發票）番号を政府公式の統一発票くじ（統一發票）と照合し、当選の可能性がある場合に通知を受け取る（初期設定で無効。照合は iPhone 上で実行）</li>
   </ul>
-  <p>グループ関連のデータは Firebase に同期され、すべてのグループメンバーがリアルタイムで同じ情報を確認できます。個人の支出データは、エクスポートまたはバックアップを選択しない限り、デバイス上に保存されます。</p>
+  <p>グループ関連のデータは Firebase に同期され、すべてのグループメンバーがリアルタイムで同じ情報を確認できます。個人の支出データは、エクスポートまたはバックアップを選択しない限り、iPhone 上に保存されます。</p>
 
   <h2><span class="section-number">3</span>無料・有料機能</h2>
   <h3>無料プラン</h3>
@@ -1039,7 +1050,7 @@
   <p><strong>返金と最終性：</strong>ライフタイム購入は一回限りの支払いです。アプリが廃止された場合、またはプラットフォームの変更により一部のサードパーティ連携が利用不可になった場合、按分返金は行われません。</p>
 
   <h2><span class="section-number">4</span>グループ機能と削除</h2>
-  <p>グループ支出は Firebase を通じてすべてのメンバーのデバイス間でリアルタイムに同期されます。グループに参加することで、以下の事項に同意したものとみなされます：</p>
+  <p>グループ支出は Firebase を通じてすべてのメンバーの iPhone 間でリアルタイムに同期されます。グループに参加することで、以下の事項に同意したものとみなされます：</p>
   <ul>
     <li>あなたの表示名、プロフィール写真（設定している場合）、および支出データはグループの全メンバーに表示されます</li>
     <li>グループ支出に添付したレシート写真は Firebase Storage にアップロードされ、グループの全メンバーが閲覧できます</li>
@@ -1049,7 +1060,7 @@
     <li>6ヶ月以上アクティブではなく、すべての債務が精算されているグループは、削除申請が提出され、7日以内にメンバーからの異議がない場合、自動的に削除されることがあります。</li>
     <li>グループ管理者は「設定 → データとプライバシー → 非アクティブなグループ」から対象の非アクティブグループを積極的に整理できます。管理者がこの方法で削除を開始すると、影響を受けるすべてのグループメンバーに、誰がグループを削除したかを示すプッシュ通知が即座に送信されます。管理者はグループを Firebase から削除する前に、グループ支出のエクスポート、ローカル保持、または全削除を選択できます。</li>
     <li>グループ管理者はいつでもメンバーを削除したりデータを移行したりできます</li>
-    <li>グループ削除後に保持を選択した支出は、デバイスのローカルに「削除済みグループ」のマーク付きで残ります。これらの支出のレシート写真は引き続き Firebase Storage から閲覧できます。削除時に「記録を削除」を選択した場合、グループのすべてのレシート写真は Firebase Storage から削除され、復元できません。</li>
+    <li>グループ削除後に保持を選択した支出は、iPhone のローカルに「削除済みグループ」のマーク付きで残ります。これらの支出のレシート写真は引き続き Firebase Storage から閲覧できます。削除時に「記録を削除」を選択した場合、グループのすべてのレシート写真は Firebase Storage から削除され、復元できません。</li>
     <li><strong>アクティビティログの保持：</strong>グループのアクティビティ履歴（支出を追加・編集・返金・削除した人、グループに参加・脱退した人など）は Firebase Firestore サーバーに保存され、<strong>90日</strong>後に自動的かつ永続的に削除されます。90日以上前のアクティビティは復元できません。この保持期間はグループごとに適用され、サブスクリプションの状態には依存しません。</li>
   </ul>
 
@@ -1067,7 +1078,7 @@
   <ul>
     <li>支出データの正確性</li>
     <li>表示名および他のグループメンバーへの表示方法</li>
-    <li>デバイスとアプリへのアクセスの保護</li>
+    <li>iPhone とアプリへのアクセスの保護</li>
     <li>招待するグループメンバーが、プライバシーポリシーに従ったデータ処理に同意していることの確認</li>
     <li>Apple ID にリンクされた iCloud キーチェーンへのアクセスの維持 — iCloud キーチェーンへのアクセスを失った場合、暗号化バックアップは復元できません</li>
     <li>Venmo・Cash App・PayPal などの個人間送金アプリに入力する送金先のハンドル名またはユーザー名の正確性。誤ったハンドル名を入力した場合、意図しない相手に送金される可能性があります。Node Expense はそのような取引を取り消したり差し止めたりする手段を持たず、誤送金に関する一切の責任はお客様のみが負うものとします</li>
@@ -1081,10 +1092,10 @@
     <li>プロフィール写真またはグループ写真としてアップロードする画像の所有権または使用権を有していること。お客様は、アプリのグループ機能の運営の目的に限り、当該写真をホスト・配信・表示するための非独占的ライセンスを Node Expense に付与するものとします。</li>
     <li>他のグループメンバーは、アプリ内からお客様のプロフィール写真または表示名を報告できます。グループ管理者が不適切なグループ写真を設定した場合、任意のメンバーがメンバータブで管理者の名前を長押しして<strong>メンバーを報告</strong>を選択することで報告できます。当社は独自の裁量で、事前通知なく、報告されたコンテンツの削除、プロフィール写真機能、グループ写真機能またはグループ機能へのアクセス停止、または規定に繰り返し違反するユーザーのアカウント終了を行うことができます。</li>
     <li>お客様は、メンバータブのメンバーを長押しして<strong>メンバーを報告</strong>を選択することで、そのメンバーのプロフィール写真または表示名を報告できます。これにより、関連情報があらかじめ入力された電子メールが当社のサポート宛てに開きます。報告は合理的な時間内に手動で確認されます。</li>
-    <li>報告された写真の Firebase Storage からの削除は遡及的ではありません — すでに写真をキャッシュしているデバイスは、次回の同期までローカルコピーを保持する場合があります。</li>
+    <li>報告された写真の Firebase Storage からの削除は遡及的ではありません — すでに写真をキャッシュしている iPhone は、次回の同期までローカルコピーを保持する場合があります。</li>
   </ul>
 
-  <p>デバイスの紛失、誤削除、暗号化キーの紛失、またはユーザーエラーによるデータ損失については、当社は責任を負いません。</p>
+  <p>iPhone の紛失、誤削除、暗号化キーの紛失、またはユーザーエラーによるデータ損失については、当社は責任を負いません。</p>
 
   <h2><span class="section-number">7</span>データの所有権</h2>
   <p>お客様は支出データの完全な所有権を保持します。当社は、お客様の個人支出記録、グループデータ、またはエクスポートされたファイルの所有権を主張しません。グループ機能を使用することにより、他のグループメンバーがアプリ内で共有支出データを閲覧できる権限を付与するものとします。</p>
@@ -1099,11 +1110,12 @@
   <ul>
     <li>金銭的損失、支出の記録漏れ、またはデータの不正確さ</li>
     <li>暗号化キーの紛失またはアクセス不能による暗号化バックアップデータの損失</li>
-    <li>グループ削除、デバイス紛失、またはアプリ削除前に明示的にエクスポートされなかった Firebase Firestore のグループ支出データの損失</li>
+    <li>グループ削除、iPhone 紛失、またはアプリ削除前に明示的にエクスポートされなかった Firebase Firestore のグループ支出データの損失</li>
     <li>サードパーティサービスの障害（Firebase、RevenueCat、AdMob）によるデータ損失</li>
     <li>不正確なデータ入力によるグループ精算計算の誤り</li>
     <li>ライフタイムアクセスについて：開発者の総責任は、ユーザーが当該サブスクリプションに実際に支払った金額を超えないものとします</li>
     <li><strong>Pick &amp; Pay</strong> AI レシートスキャンによる不正確・不完全・誤認識の結果。Google Gemini は金額・品目名・通貨を誤読する場合があります。保存前に抽出されたすべてのデータを確認する責任はお客様にあります</li>
+    <li>不正確、見落とし、または遅延した台湾統一発票（統一發票）くじの結果。アプリ内の照合は利便性のための機能にすぎません。台湾財政部で確認するまで当選の可能性は正式なものではなく、賞金の受け取りには印刷された発票を保管する必要があります。当社は当選番号の検出または通知を保証せず、見落とし・期限切れ・受け取り不能となった賞金について一切責任を負いません</li>
   </ul>
   <p><strong>決済処理業者ではない旨の免責：</strong>Node Expense は決済処理業者ではなく、いかなる形でも資金の送受信・保管・処理を行いません。ディープリンク機能はあくまで利便性のために第三方アプリ（Venmo・Cash App・PayPal）を起動するものであり、すべての取引はそれぞれのアプリ内で完結し、各アプリの利用規約およびプライバシーポリシーに従います。Node Expense はそれらのプラットフォームを通じて行われた支払いについて一切の責任を負いません。</p>
   <p><strong>地域ごとの利用可否：</strong>Venmo および Cash App は米国ユーザー向けのサービスです。PayPal の利用可否は国によって異なります。米国外のユーザーは、一部または全部のディープリンク決済オプションが使用できない場合があります。これはアプリ機能の虚偽表示には当たりません。</p>
@@ -1136,7 +1148,7 @@
 
 <!-- ========== FRENCH ========== -->
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-27 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
 <h2><span class="section-number">1</span>Acceptation des Conditions</h2>
   <p>En téléchargeant, installant ou utilisant Node Expense : Track Together, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'acceptez pas, n'utilisez pas l'application.</p>
@@ -1150,15 +1162,16 @@
     <li>Synchroniser les dépenses avec des calendriers iOS sélectionnés</li>
     <li>Sauvegarder et chiffrer optionnellement vos données (fonctionnalité d'abonnement PRO). Les sauvegardes couvrent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; les données de dépenses de groupe en temps réel dans Firebase Firestore ne sont pas incluses dans les sauvegardes locales.</li>
     <li>Exporter les données de dépenses en JSON, CSV ou PDF, et importer des données au format JSON (fonctionnalité d'abonnement PRO)</li>
-    <li>Scanner des reçus avec la caméra de l'appareil pour remplir automatiquement les détails de la dépense</li>
-    <li>Joindre des photos de reçus aux dépenses (fonctionnalité d'abonnement PRO). Les photos des dépenses personnelles restent sur votre appareil ; les photos des dépenses de groupe sont stockées dans Firebase Storage et visibles par tous les membres du groupe.</li>
+    <li>Scanner des reçus avec la caméra de l'iPhone pour remplir automatiquement les détails de la dépense</li>
+    <li>Joindre des photos de reçus aux dépenses (fonctionnalité d'abonnement PRO). Les photos des dépenses personnelles restent sur votre iPhone ; les photos des dépenses de groupe sont stockées dans Firebase Storage et visibles par tous les membres du groupe.</li>
     <li>Utilisez <strong>Pick &amp; Pay</strong> pour photographier un reçu et laisser Google Gemini AI identifier et lister les postes individuels, que vous pouvez ensuite convertir en dépenses (fonctionnalité d'abonnement PRO ; les utilisateurs en essai reçoivent un scan gratuit)</li>
     <li>Définir une photo de profil optionnelle (fonctionnalité d'abonnement PRO). Les photos de profil sont stockées dans Firebase Storage et visibles par tous les membres de chaque groupe que vous rejoignez.</li>
     <li>Définir une photo de groupe optionnelle (fonctionnalité d'abonnement PRO). Les photos de groupe sont stockées dans Firebase Storage et visibles par tous les membres de ce groupe. Seul l'administrateur du groupe peut définir ou modifier la photo du groupe.</li>
     <li>Créer et gérer des catégories de dépenses personnalisées avec des budgets mensuels par catégorie</li>
     <li>Lancer des applications de paiement entre particuliers directement depuis les remboursements de groupe via des liens profonds vers Venmo, Cash App et PayPal (disponibilité variable selon la région — voir §9)</li>
+    <li>Comparer, en option, les numéros des factures électroniques taïwanaises (電子發票) numérisées à la loterie officielle de la facture unifiée (統一發票) du gouvernement et recevoir une notification d'un gain possible (désactivé par défaut ; la vérification s'effectue sur votre iPhone)</li>
   </ul>
-  <p>Les données liées aux groupes sont synchronisées avec Firebase afin que tous les membres du groupe puissent consulter les mêmes informations en temps réel. Les données de dépenses personnelles restent sur votre appareil à moins que vous ne choisissiez de les exporter ou de les sauvegarder.</p>
+  <p>Les données liées aux groupes sont synchronisées avec Firebase afin que tous les membres du groupe puissent consulter les mêmes informations en temps réel. Les données de dépenses personnelles restent sur votre iPhone à moins que vous ne choisissiez de les exporter ou de les sauvegarder.</p>
 
   <h2><span class="section-number">3</span>Fonctionnalités Gratuites &amp; Payantes</h2>
   <h3>Plan Gratuit</h3>
@@ -1190,7 +1203,7 @@
   <p><strong>Remboursements &amp; Caractère Définitif :</strong> Les achats à vie sont des paiements uniques. Aucun remboursement au prorata ne sera proposé si l'application est abandonnée ou si certaines intégrations tierces deviennent indisponibles en raison de changements de plateforme.</p>
 
   <h2><span class="section-number">4</span>Fonctionnalités de Groupe &amp; Suppression</h2>
-  <p>Les dépenses de groupe sont synchronisées en temps réel sur les appareils de tous les membres via Firebase. En participant à un groupe, vous comprenez que :</p>
+  <p>Les dépenses de groupe sont synchronisées en temps réel sur les iPhone de tous les membres via Firebase. En participant à un groupe, vous comprenez que :</p>
   <ul>
     <li>Votre nom d'affichage, votre photo de profil (si définie) et vos données de dépenses sont visibles par tous les membres du groupe</li>
     <li>Toute photo de reçu que vous joignez à une dépense de groupe est téléversée vers Firebase Storage et visible par tous les membres du groupe</li>
@@ -1200,7 +1213,7 @@
     <li>Les groupes inactifs depuis plus de 6 mois avec toutes les dettes réglées peuvent être supprimés automatiquement si une demande est soumise et qu'aucun membre ne s'y oppose sous 7 jours.</li>
     <li>Les administrateurs de groupe peuvent proactivement supprimer les groupes inactifs éligibles depuis Réglages → Données et confidentialité → Groupes inactifs. Lorsqu'un administrateur initie la suppression de cette façon, tous les membres concernés reçoivent immédiatement une notification push indiquant qui a supprimé le groupe. L'administrateur choisit d'exporter les dépenses du groupe, de les conserver localement ou de les supprimer entièrement avant que le groupe ne soit retiré de Firebase.</li>
     <li>L'administrateur du groupe peut supprimer des membres ou transférer des données à tout moment</li>
-    <li>Les dépenses que vous choisissez de conserver après la suppression du groupe restent localement sur votre appareil, marquées comme provenant d'un groupe supprimé ; les photos de reçus de ces dépenses restent accessibles via Firebase Storage. Si la suppression est effectuée avec « supprimer les enregistrements », toutes les photos de reçus du groupe sont supprimées de Firebase Storage et ne pourront pas être récupérées.</li>
+    <li>Les dépenses que vous choisissez de conserver après la suppression du groupe restent localement sur votre iPhone, marquées comme provenant d'un groupe supprimé ; les photos de reçus de ces dépenses restent accessibles via Firebase Storage. Si la suppression est effectuée avec « supprimer les enregistrements », toutes les photos de reçus du groupe sont supprimées de Firebase Storage et ne pourront pas être récupérées.</li>
     <li><strong>Conservation du journal d'activité :</strong> L'historique des activités du groupe (par exemple, qui a ajouté, modifié, remboursé ou supprimé une dépense, et qui a rejoint ou quitté le groupe) est stocké sur les serveurs Firebase Firestore et est automatiquement et définitivement supprimé après <strong>90 jours</strong>. Les activités antérieures à 90 jours ne peuvent pas être récupérées. Cette période de conservation s'applique par groupe et ne dépend pas de votre statut d'abonnement.</li>
   </ul>
 
@@ -1218,7 +1231,7 @@
   <ul>
     <li>L'exactitude de vos données de dépenses</li>
     <li>Votre nom d'affichage et la manière dont il apparaît aux autres membres du groupe</li>
-    <li>La protection de l'accès à votre appareil et à l'application</li>
+    <li>La protection de l'accès à votre iPhone et à l'application</li>
     <li>S'assurer que les membres du groupe que vous invitez consentent au traitement de leurs données comme décrit dans notre Politique de Confidentialité</li>
     <li>Maintenir l'accès au trousseau iCloud lié à votre identifiant Apple — les sauvegardes chiffrées ne peuvent pas être récupérées si l'accès au trousseau iCloud est perdu</li>
     <li>L'exactitude des identifiants de paiement ou noms d'utilisateur que vous saisissez pour les applications de paiement entre particuliers (par ex., Venmo, Cash App, PayPal). La saisie d'un identifiant incorrect peut entraîner l'envoi d'argent à un destinataire non souhaité. Node Expense n'a aucune capacité à annuler ou intercepter de telles transactions, et toute responsabilité pour les paiements mal dirigés vous incombe entièrement</li>
@@ -1232,10 +1245,10 @@
     <li>Vous êtes propriétaire — ou avez le droit d'utiliser — toute image que vous téléversez comme photo de profil ou photo de groupe. Vous accordez à Node Expense une licence non exclusive pour héberger, distribuer et afficher cette photo dans le seul but d'exploiter les fonctionnalités de groupe de l'application.</li>
     <li>Les autres membres du groupe peuvent signaler votre photo de profil ou nom d'affichage depuis l'application. Si l'administrateur du groupe a défini une photo de groupe inappropriée, tout membre peut la signaler en appuyant longuement sur le nom de l'administrateur dans l'onglet Membres et en choisissant <strong>Signaler le membre</strong>. Nous pouvons, à notre seule discrétion et sans préavis, supprimer tout contenu signalé, suspendre l'accès aux fonctionnalités de photo de profil, de photo de groupe ou de groupe, ou résilier le compte des utilisateurs qui enfreignent à plusieurs reprises ces règles.</li>
     <li>Vous pouvez signaler la photo de profil ou le nom d'affichage d'un autre membre en appuyant longuement sur son entrée dans l'onglet Membres et en choisissant <strong>Signaler le membre</strong>. Cela ouvre un e-mail à notre adresse de support avec le contexte pertinent prérempli. Les signalements sont examinés manuellement dans un délai raisonnable.</li>
-    <li>La suppression d'une photo signalée de Firebase Storage n'est pas rétroactive — les appareils qui ont déjà mis la photo en cache peuvent en conserver une copie locale jusqu'à la prochaine synchronisation.</li>
+    <li>La suppression d'une photo signalée de Firebase Storage n'est pas rétroactive — les iPhone qui ont déjà mis la photo en cache peuvent en conserver une copie locale jusqu'à la prochaine synchronisation.</li>
   </ul>
 
-  <p>Nous ne sommes pas responsables de la perte de données due à la perte d'appareil, à la suppression accidentelle, à la perte de clé de chiffrement ou à une erreur de l'utilisateur.</p>
+  <p>Nous ne sommes pas responsables de la perte de données due à la perte d'iPhone, à la suppression accidentelle, à la perte de clé de chiffrement ou à une erreur de l'utilisateur.</p>
 
   <h2><span class="section-number">7</span>Propriété des Données</h2>
   <p>Vous conservez la pleine propriété de vos données de dépenses. Nous ne revendiquons pas la propriété de vos enregistrements de dépenses personnelles, données de groupe ou fichiers exportés. En utilisant les fonctionnalités de groupe, vous accordez aux autres membres du groupe la possibilité de consulter les données de dépenses partagées dans l'application.</p>
@@ -1250,11 +1263,12 @@
   <ul>
     <li>Pertes financières, dépenses manquées ou inexactitudes de données</li>
     <li>Perte de données de sauvegarde chiffrées due à des clés de chiffrement perdues ou inaccessibles</li>
-    <li>Perte de données de dépenses de groupe stockées dans Firebase Firestore qui n'ont pas été explicitement exportées avant la suppression du groupe, la perte de l'appareil ou la désinstallation de l'application</li>
+    <li>Perte de données de dépenses de groupe stockées dans Firebase Firestore qui n'ont pas été explicitement exportées avant la suppression du groupe, la perte de l'iPhone ou la désinstallation de l'application</li>
     <li>Perte de données due à des pannes de services tiers (Firebase, RevenueCat, AdMob)</li>
     <li>Calculs de remboursement de groupe inexacts dus à des saisies de données incorrectes</li>
     <li>Pour l'Accès à Vie : la responsabilité totale du Développeur ne dépassera pas le montant réellement payé par l'utilisateur pour ledit abonnement</li>
     <li>Les résultats inexacts, incomplets ou mal interprétés de la numérisation de reçus IA <strong>Pick &amp; Pay</strong>. Google Gemini peut mal lire les montants, noms d'articles ou devises — vous êtes responsable de vérifier toutes les données extraites avant de les enregistrer</li>
+    <li>Résultats inexacts, manqués ou tardifs de la loterie de la facture unifiée de Taïwan (統一發票). La vérification dans l'app est fournie uniquement par commodité — un gain possible n'est pas officiel tant que vous ne l'avez pas vérifié auprès du ministère des Finances de Taïwan, et vous devez conserver la facture imprimée pour encaisser un prix. Nous ne garantissons pas qu'un numéro gagnant sera détecté ou signalé, et nous ne sommes pas responsables d'un prix manqué, expiré ou ne pouvant être réclamé</li>
   </ul>
   <p><strong>Aucun Traitement de Paiement :</strong> Node Expense n'est pas un prestataire de services de paiement et ne transmet, ne détient ni ne traite de l'argent sous quelque forme que ce soit. La fonctionnalité de lien profond lance des applications tierces (Venmo, Cash App, PayPal) uniquement par commodité ; toutes les transactions se produisent entièrement dans ces applications et sont soumises à leurs conditions d'utilisation et politiques de confidentialité respectives. Node Expense n'assume aucune responsabilité pour tout paiement effectué via ces plateformes.</p>
   <p><strong>Disponibilité Régionale :</strong> Venmo et Cash App sont disponibles pour les utilisateurs américains uniquement. La disponibilité de PayPal varie selon les pays. Les utilisateurs hors des États-Unis peuvent constater qu'une ou plusieurs options de paiement par lien profond ne fonctionnent pas dans leur région. Cela ne constitue pas une fausse représentation des fonctionnalités de l'application.</p>
@@ -1288,7 +1302,7 @@
 
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-27 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>약관 동의</h2>
   <p>Node Expense: Track Together를 다운로드, 설치 또는 사용함으로써 본 이용약관에 동의하게 됩니다. 동의하지 않는 경우 앱을 사용하지 마십시오.</p>
@@ -1302,15 +1316,16 @@
     <li>선택한 iOS 캘린더와 지출 동기화</li>
     <li>선택적으로 데이터 백업 및 암호화 (PRO 구독 기능). 백업은 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터를 포함합니다. Firebase Firestore의 실시간 그룹 지출 데이터는 로컬 백업에 포함되지 않습니다.</li>
     <li>지출 데이터를 JSON, CSV 또는 PDF로 내보내기 및 JSON 형식으로 가져오기 (PRO 구독 기능)</li>
-    <li>기기 카메라로 영수증을 스캔하여 지출 내역 자동 입력</li>
-    <li>지출에 영수증 사진 첨부 (PRO 구독 기능). 개인 지출 사진은 기기에 보관됩니다. 그룹 지출 사진은 Firebase Storage에 저장되며 그룹의 모든 멤버가 볼 수 있습니다.</li>
+    <li>iPhone 카메라로 영수증을 스캔하여 지출 내역 자동 입력</li>
+    <li>지출에 영수증 사진 첨부 (PRO 구독 기능). 개인 지출 사진은 iPhone 에 보관됩니다. 그룹 지출 사진은 Firebase Storage에 저장되며 그룹의 모든 멤버가 볼 수 있습니다.</li>
     <li><strong>Pick &amp; Pay</strong>를 사용하여 영수증을 촬영하고 Google Gemini AI가 개별 항목을 식별하고 목록화하면, 이를 지출로 변환할 수 있습니다 (PRO 구독 기능; 체험 사용자는 무료 스캔 1회 제공)</li>
     <li>선택적 프로필 사진 설정 (PRO 구독 기능). 프로필 사진은 Firebase Storage에 저장되며, 참가하는 모든 그룹의 멤버에게 표시됩니다.</li>
     <li>선택적 그룹 사진 설정 (PRO 구독 기능). 그룹 사진은 Firebase Storage에 저장되며, 해당 그룹의 모든 멤버에게 표시됩니다. 그룹 사진은 그룹 관리자만 설정하거나 변경할 수 있습니다.</li>
     <li>맞춤 지출 카테고리 및 월별 카테고리 예산 생성 및 관리</li>
     <li>그룹 정산에서 Venmo, Cash App 및 PayPal로의 딥링크를 통해 직접 개인 간 결제 앱 실행 (지역에 따라 가용성 다름 — §9 참조)</li>
+    <li>선택적으로 스캔한 대만 전자 발표(電子發票) 번호를 정부 공식 통일발표 복권(統一發票)과 대조하고 당첨 가능성이 있을 때 알림을 받음(기본적으로 꺼져 있으며, 대조는 iPhone에서 수행됨)</li>
   </ul>
-  <p>그룹 관련 데이터는 Firebase와 동기화되어 모든 그룹 멤버가 실시간으로 동일한 정보를 볼 수 있습니다. 개인 지출 데이터는 귀하가 내보내거나 백업하기로 선택하지 않는 한 기기에 남습니다.</p>
+  <p>그룹 관련 데이터는 Firebase와 동기화되어 모든 그룹 멤버가 실시간으로 동일한 정보를 볼 수 있습니다. 개인 지출 데이터는 귀하가 내보내거나 백업하기로 선택하지 않는 한 iPhone 에 남습니다.</p>
 
   <h2><span class="section-number">3</span>무료 및 유료 기능</h2>
   <h3>무료 플랜</h3>
@@ -1342,7 +1357,7 @@
   <p><strong>환불 및 최종성:</strong> 평생 구매는 일회성 결제입니다. 앱이 중단되거나 플랫폼 변경으로 인해 일부 타사 통합이 불가능해지는 경우 비례 환불이 제공되지 않습니다.</p>
 
   <h2><span class="section-number">4</span>그룹 기능 및 삭제</h2>
-  <p>그룹 지출은 Firebase를 통해 모든 멤버의 기기에서 실시간으로 동기화됩니다. 그룹에 참여함으로써 귀하는 다음을 이해합니다:</p>
+  <p>그룹 지출은 Firebase를 통해 모든 멤버의 iPhone 에서 실시간으로 동기화됩니다. 그룹에 참여함으로써 귀하는 다음을 이해합니다:</p>
   <ul>
     <li>귀하의 표시 이름, 프로필 사진(설정한 경우), 지출 데이터가 모든 그룹 멤버에게 표시됩니다</li>
     <li>그룹 지출에 첨부한 영수증 사진은 Firebase Storage에 업로드되며 그룹의 모든 멤버에게 표시됩니다</li>
@@ -1352,7 +1367,7 @@
     <li>6개월 이상 활동이 없고 모든 부채가 정산된 그룹은 삭제 요청이 제출된 후 7일 이내에 거절하는 멤버가 없으면 자동으로 삭제될 수 있습니다.</li>
     <li>그룹 관리자는 설정 → 데이터 및 개인정보 → 비활성 그룹에서 조건을 충족하는 비활성 그룹을 직접 정리할 수 있습니다. 관리자가 이 방법으로 삭제를 시작하면, 영향을 받는 모든 그룹 멤버에게 누가 그룹을 삭제했는지 알리는 푸시 알림이 즉시 전송됩니다. 관리자는 그룹을 Firebase에서 제거하기 전에 그룹 지출을 내보내거나, 로컬에 보관하거나, 전체 삭제 중 선택할 수 있습니다.</li>
     <li>그룹 관리자는 언제든지 멤버를 삭제하거나 데이터를 이전할 수 있습니다</li>
-    <li>그룹 삭제 후 보관을 선택한 지출은 삭제된 그룹으로 표시되어 기기에 로컬로 유지되며, 해당 지출의 영수증 사진은 Firebase Storage에서 계속 접근할 수 있습니다. 삭제 시 "기록 제거"를 선택하면 그룹의 모든 영수증 사진이 Firebase Storage에서 삭제되며 복구할 수 없습니다.</li>
+    <li>그룹 삭제 후 보관을 선택한 지출은 삭제된 그룹으로 표시되어 iPhone 에 로컬로 유지되며, 해당 지출의 영수증 사진은 Firebase Storage에서 계속 접근할 수 있습니다. 삭제 시 "기록 제거"를 선택하면 그룹의 모든 영수증 사진이 Firebase Storage에서 삭제되며 복구할 수 없습니다.</li>
     <li><strong>활동 기록 보존:</strong> 그룹 활동 기록(예: 누가 지출을 추가, 수정, 환불 또는 삭제했는지, 누가 그룹에 참여하거나 탈퇴했는지)은 Firebase Firestore 서버에 저장되며 <strong>90일</strong> 후 자동으로 영구 삭제됩니다. 90일 이상된 활동 기록은 복구할 수 없습니다. 이 보존 기간은 그룹별로 적용되며 구독 상태와 무관합니다.</li>
   </ul>
 
@@ -1370,7 +1385,7 @@
   <ul>
     <li>지출 데이터의 정확성</li>
     <li>표시 이름 및 다른 그룹 멤버에게 표시되는 방식</li>
-    <li>기기 및 앱 접근 보호</li>
+    <li>iPhone 및 앱 접근 보호</li>
     <li>초대한 그룹 멤버가 개인정보처리방침에 설명된 대로 데이터 처리에 동의했는지 확인</li>
     <li>Apple ID와 연결된 iCloud 키체인 접근 유지 — iCloud 키체인 접근이 손실되면 암호화된 백업을 복구할 수 없습니다</li>
     <li>개인 간 결제 앱(예: Venmo, Cash App, PayPal)에 입력하는 결제 식별자 또는 사용자명의 정확성. 잘못된 식별자를 입력하면 의도하지 않은 수신자에게 송금될 수 있습니다. Node Expense는 이러한 거래를 취소하거나 가로챌 능력이 없으며, 잘못 전송된 결제에 대한 모든 책임은 전적으로 귀하에게 있습니다</li>
@@ -1384,10 +1399,10 @@
     <li>프로필 사진 또는 그룹 사진으로 업로드하는 모든 이미지의 소유권 또는 사용 권한을 보유한다. 귀하는 Node Expense에 앱의 그룹 기능 운영을 유일한 목적으로 해당 사진을 호스팅, 배포 및 표시할 수 있는 비독점적 라이선스를 부여한다.</li>
     <li>다른 그룹 멤버는 앱 내에서 귀하의 프로필 사진이나 표시 이름을 신고할 수 있다. 그룹 관리자가 부적절한 그룹 사진을 설정한 경우, 모든 멤버는 멤버 탭에서 관리자의 이름을 길게 눌러 <strong>멤버 신고</strong>를 선택하여 신고할 수 있다. 당사는 자체 재량으로 사전 통지 없이 신고된 콘텐츠를 제거하거나, 프로필 사진, 그룹 사진 또는 그룹 기능 접근을 정지하거나, 이러한 규칙을 반복적으로 위반하는 사용자의 계정을 종료할 수 있다.</li>
     <li>멤버 탭에서 다른 멤버의 항목을 길게 눌러 <strong>멤버 신고</strong>를 선택하여 해당 멤버의 프로필 사진이나 표시 이름을 신고할 수 있다. 이렇게 하면 관련 컨텍스트가 미리 입력된 이메일이 당사 지원 주소로 열린다. 신고는 합리적인 시간 내에 수동으로 검토된다.</li>
-    <li>Firebase Storage에서 신고된 사진을 제거하는 것은 소급 적용되지 않는다 — 사진을 이미 캐시한 기기는 다음 동기화까지 로컬 사본을 유지할 수 있다.</li>
+    <li>Firebase Storage에서 신고된 사진을 제거하는 것은 소급 적용되지 않는다 — 사진을 이미 캐시한 iPhone 는 다음 동기화까지 로컬 사본을 유지할 수 있다.</li>
   </ul>
 
-  <p>당사는 기기 분실, 우발적 삭제, 암호화 키 분실 또는 사용자 오류로 인한 데이터 손실에 대해 책임지지 않습니다.</p>
+  <p>당사는 iPhone 분실, 우발적 삭제, 암호화 키 분실 또는 사용자 오류로 인한 데이터 손실에 대해 책임지지 않습니다.</p>
 
   <h2><span class="section-number">7</span>데이터 소유권</h2>
   <p>귀하는 지출 데이터의 전체 소유권을 보유합니다. 당사는 개인 지출 기록, 그룹 데이터 또는 내보낸 파일에 대한 소유권을 주장하지 않습니다. 그룹 기능을 사용함으로써 귀하는 다른 그룹 멤버가 앱 내에서 공유된 지출 데이터를 볼 수 있음에 동의합니다.</p>
@@ -1402,11 +1417,12 @@
   <ul>
     <li>재정적 손실, 누락된 지출 또는 데이터 부정확성</li>
     <li>분실되거나 접근 불가능한 암호화 키로 인한 암호화 백업 데이터 손실</li>
-    <li>그룹 삭제, 기기 분실 또는 앱 제거 전에 명시적으로 내보내지 않은 Firebase Firestore 그룹 지출 데이터 손실</li>
+    <li>그룹 삭제, iPhone 분실 또는 앱 제거 전에 명시적으로 내보내지 않은 Firebase Firestore 그룹 지출 데이터 손실</li>
     <li>타사 서비스(Firebase, RevenueCat, AdMob) 장애로 인한 데이터 손실</li>
     <li>잘못된 데이터 입력으로 인한 부정확한 그룹 정산 계산</li>
     <li>평생 접근의 경우: 개발자의 총 책임은 해당 구독을 위해 사용자가 실제로 지불한 금액을 초과하지 않습니다</li>
     <li><strong>Pick &amp; Pay</strong> AI 영수증 스캔의 부정확하거나 불완전하거나 잘못 해석된 결과. Google Gemini는 금액, 상품명 또는 통화를 잘못 읽을 수 있습니다 — 저장하기 전에 추출된 모든 데이터를 확인할 책임은 귀하에게 있습니다</li>
+    <li>부정확하거나 누락되거나 지연된 대만 통일발표 복권(統一發票) 결과. 앱 내 대조는 편의를 위한 기능일 뿐이며, 대만 재정부에서 확인하기 전까지 당첨 가능성은 공식적인 것이 아니고 상금을 수령하려면 인쇄된 발표를 보관해야 합니다. 당사는 당첨 번호의 감지 또는 통지를 보장하지 않으며, 누락되거나 만료되거나 수령할 수 없는 상금에 대해 책임지지 않습니다</li>
   </ul>
   <p><strong>결제 처리 없음:</strong> Node Expense는 결제 서비스 제공업체가 아니며 어떤 형태로도 금액을 전송, 보유 또는 처리하지 않습니다. 딥링크 기능은 편의를 위해 타사 앱(Venmo, Cash App, PayPal)을 실행할 뿐이며, 모든 거래는 해당 앱 내에서 이루어지고 각 앱의 이용약관 및 개인정보처리방침이 적용됩니다. Node Expense는 이러한 플랫폼을 통해 이루어진 결제에 대해 어떠한 책임도 지지 않습니다.</p>
   <p><strong>지역 가용성:</strong> Venmo와 Cash App은 미국 사용자만 이용 가능합니다. PayPal의 가용성은 국가마다 다릅니다. 미국 이외 지역 사용자는 하나 이상의 딥링크 결제 옵션이 해당 지역에서 작동하지 않을 수 있습니다. 이는 앱 기능에 대한 허위 표시가 아닙니다.</p>
