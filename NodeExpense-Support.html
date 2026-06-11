@@ -256,7 +256,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-05-21 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -335,7 +335,7 @@
           <li>Alternatively, if you used the App Library to hide the app from your Home Screen, open the App Library, long-press the app icon, and choose <strong>Add to Home Screen</strong>.</li>
         </ol>
         Once the app is visible and allowed, return to Node Expense and try the payment button again.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense does not move any money itself — it simply opens the payment app with the amount pre-filled. The app must be installed <em>and</em> accessible on your device for the deep link to work.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense does not move any money itself — it simply opens the payment app with the amount pre-filled. The app must be installed <em>and</em> accessible on your iPhone for the deep link to work.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -466,7 +466,7 @@
       <div class="faq-answer">
         <strong>Where photos live:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Personal expense photos</strong> are stored only on this device and are included in your standard device backup (iCloud Backup).</li>
+          <li><strong>Personal expense photos</strong> are stored only on this iPhone and are included in your standard iPhone backup (iCloud Backup).</li>
           <li><strong>Group expense photos</strong> are stored in the cloud and remain accessible to every member of the group.</li>
         </ul>
         <strong>Export formats:</strong>
@@ -475,7 +475,7 @@
           <li><strong>CSV</strong> — flags each row with <strong>Yes/No</strong> for whether a photo is attached. No image data is included.</li>
           <li><strong>PDF</strong> — marks expenses with a 📎 next to the note. No image is embedded.</li>
         </ul>
-        <strong>Include Receipt Photos</strong> is off by default to keep exports small. While off, JSON exports skip photo bytes — if you later restore only from JSON, group photos can still be retrieved from the cloud, but personal photos cannot be recovered. Keep your device backup enabled, or turn the toggle on before exporting, to preserve personal photos.
+        <strong>Include Receipt Photos</strong> is off by default to keep exports small. While off, JSON exports skip photo bytes — if you later restore only from JSON, group photos can still be retrieved from the cloud, but personal photos cannot be recovered. Keep your iPhone backup enabled, or turn the toggle on before exporting, to preserve personal photos.
       </div>
     </div>
     <div class="faq-item">
@@ -532,10 +532,37 @@
         If the year holds expenses in multiple currencies and the filter is left on <strong>All</strong>, the chart stays hidden. Pick one currency from the filter to see the trend for that currency.
       </div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Why is the "Month-end forecast" lower than the total at the top of the Expenses screen?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        The <strong>Month-end forecast</strong> insight is calculated using only your <strong>default currency</strong>. The large total at the top of the Expenses screen converts expenses from <strong>every</strong> currency into your default currency before adding them together. So in a month that includes expenses in more than one currency, the forecast can appear lower than the total at the top, because it leaves out the amounts spent in other currencies. This is intentional — a month-end projection only makes sense within a single currency. Your spending in other currencies is shown separately by the <strong>multi-currency</strong> insight. When every expense for the month uses your default currency, the forecast and the total stay consistent.
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Why don't I see the Taiwan invoice-lottery option in Settings → Notifications?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        The <strong>Taiwan Uniform Invoice Lottery</strong> toggle only appears once you have saved at least one expense that has a Taiwan electronic invoice (電子發票) number attached. To capture one, add an expense by using your iPhone camera to scan a Taiwan e-invoice receipt — when its <strong>QR code</strong> is read, the invoice number is saved automatically. After that expense is saved, open <strong>Settings</strong> <span class="arrow">→</span> <strong>Notifications</strong> and the <strong>Taiwan Uniform Invoice Lottery</strong> card will be there; turn it on to start checking (it is off by default).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Receipts you scanned in an older version — before this feature existed — do not count, because the invoice number was not captured then. Scan a new Taiwan e-invoice (or re-scan an old one) and the toggle will appear.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I see which of my expenses won the uniform-invoice lottery?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Open the <strong>Expenses</strong> tab <span class="arrow">→</span> tap the <strong>filter icon</strong> (funnel) <span class="arrow">→</span> turn on <strong>Lottery winners only</strong> <span class="arrow">→</span> tap <strong>Done</strong>. The list then shows only expenses whose invoice matched a winning number, each marked with a <strong>🏆 trophy</strong>. The app checks your stored invoice numbers automatically after each drawing (winning numbers are published every two months, on the 25th of the following month).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">A possible win is <strong>unofficial</strong> until you verify it with Taiwan's Ministry of Finance — keep the printed invoice to claim any prize. The <strong>Lottery winners only</strong> filter only appears once you have at least one Taiwan invoice on record.</div>
+      </div>
+    </div>
+</div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-05-21 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-06-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -614,7 +641,7 @@
           <li>若您曾透過 App 資料庫將該 App 從主畫面隱藏，請開啟 App 資料庫，長按 App 圖示，然後選擇<strong>加入主畫面</strong>。</li>
         </ol>
         App 可見並已允許後，返回 Node Expense 再次嘗試付款按鈕。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不進行任何資金轉移——它僅負責開啟已預填金額的付款 App。該 App 必須已安裝<em>且</em>在您的裝置上可正常存取，深度連結才能正常運作。</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不進行任何資金轉移——它僅負責開啟已預填金額的付款 App。該 App 必須已安裝<em>且</em>在您的 iPhone 上可正常存取，深度連結才能正常運作。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -735,7 +762,7 @@
       <div class="faq-answer">
         <strong>照片儲存位置：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>個人費用照片</strong>僅儲存在本裝置上，並包含在標準裝置備份（iCloud 備份）中。</li>
+          <li><strong>個人費用照片</strong>僅儲存在本 iPhone 上，並包含在標準 iPhone 備份（iCloud 備份）中。</li>
           <li><strong>群組費用照片</strong>儲存於雲端，群組所有成員皆可存取。</li>
         </ul>
         <strong>匯出格式：</strong>
@@ -744,7 +771,7 @@
           <li><strong>CSV</strong> — 每列僅以<strong>是／否</strong>標示是否附有照片，不包含影像資料。</li>
           <li><strong>PDF</strong> — 在備註旁標示 📎 圖示，但不嵌入影像。</li>
         </ul>
-        為了讓匯出檔案保持精簡，<strong>包含收據照片</strong>預設為關閉。在關閉狀態下，JSON 匯出不會包含照片資料——若日後僅從 JSON 還原，群組照片仍可從雲端取得，但個人照片將無法復原。請保持裝置備份已啟用，或在匯出前開啟此選項，以保留個人照片。
+        為了讓匯出檔案保持精簡，<strong>包含收據照片</strong>預設為關閉。在關閉狀態下，JSON 匯出不會包含照片資料——若日後僅從 JSON 還原，群組照片仍可從雲端取得，但個人照片將無法復原。請保持 iPhone 備份已啟用，或在匯出前開啟此選項，以保留個人照片。
       </div>
     </div>
     <div class="faq-item">
@@ -801,10 +828,37 @@
         如果該年份包含多種貨幣的支出，並且您將篩選器保留為<strong>全部</strong>，則圖表會保持隱藏。請從篩選器中選擇一種貨幣，以查看該貨幣的趨勢。
       </div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        為什麼「月底預測」會低於支出畫面頂部的總計？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        「<strong>月底預測</strong>」洞察僅以您的<strong>預設貨幣</strong>計算。支出畫面頂部的大型總計則會先將<strong>所有</strong>貨幣的支出換算成您的預設貨幣後再加總。因此，當某個月份包含多種貨幣的支出時，預測金額可能會低於頂部的總計，因為預測並未計入以其他貨幣支出的金額。這是刻意的設計——月底預測只有在單一貨幣下才有意義。您以其他貨幣的支出會由「<strong>多貨幣</strong>」洞察另行顯示。當該月份的所有支出都使用您的預設貨幣時，預測與總計便會一致。
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        為什麼「設定 → 通知」中沒有出現台灣統一發票對獎的選項？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>台灣統一發票對獎</strong>開關只會在您已儲存至少一筆附有台灣電子發票（電子發票）號碼的費用後才會出現。若要擷取號碼，請新增一筆費用，並使用 iPhone 相機掃描台灣電子發票收據——當其 <strong>QR 碼</strong>被讀取時，發票號碼會自動儲存。儲存該筆費用後，開啟<strong>設定</strong> <span class="arrow">→</span> <strong>通知</strong>，即可看到<strong>台灣統一發票對獎</strong>卡片；開啟它即可開始對獎（預設為關閉）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">您在舊版本（此功能尚未推出前）掃描的收據不算在內，因為當時並未擷取發票號碼。請掃描一張新的台灣電子發票（或重新掃描舊的），開關就會出現。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何查看我的哪些費用中了統一發票對獎？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟<strong>費用</strong>分頁 <span class="arrow">→</span> 點選<strong>篩選圖示</strong>（漏斗）<span class="arrow">→</span> 開啟<strong>僅中獎發票</strong> <span class="arrow">→</span> 點選<strong>完成</strong>。清單只會顯示發票號碼與中獎號碼相符的費用，每筆都會標示 <strong>🏆 獎盃</strong>。每次開獎後，應用程式會自動比對您已儲存的發票號碼（中獎號碼每兩個月公布一次，於次月 25 日）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">在您向財政部核對之前，可能中獎均非正式結果——請保留紙本發票才能兌獎。<strong>僅中獎發票</strong>篩選只會在您已有至少一筆台灣發票記錄後才會出現。</div>
+      </div>
+    </div>
+</div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-05-21 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-06-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -883,7 +937,7 @@
           <li>如果您曾通过 App 资源库将该应用从主屏幕隐藏，请打开 App 资源库，长按应用图标，然后选择<strong>添加到主屏幕</strong>。</li>
         </ol>
         应用可见并被允许后，返回 Node Expense 再次尝试付款按钮。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不进行任何资金转移——它仅负责打开已预填金额的付款应用。该应用必须已安装<em>且</em>在您的设备上可正常访问，深度链接才能正常工作。</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 本身不进行任何资金转移——它仅负责打开已预填金额的付款应用。该应用必须已安装<em>且</em>在您的 iPhone 上可正常访问，深度链接才能正常工作。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1004,7 +1058,7 @@
       <div class="faq-answer">
         <strong>照片存储位置：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>个人费用照片</strong>仅存储在本设备上，并包含在标准设备备份（iCloud 备份）中。</li>
+          <li><strong>个人费用照片</strong>仅存储在本 iPhone 上，并包含在标准 iPhone 备份（iCloud 备份）中。</li>
           <li><strong>群组费用照片</strong>存储在云端，群组所有成员都可访问。</li>
         </ul>
         <strong>导出格式：</strong>
@@ -1013,7 +1067,7 @@
           <li><strong>CSV</strong> — 每行仅以<strong>是／否</strong>标记是否附有照片，不包含图像数据。</li>
           <li><strong>PDF</strong> — 在备注旁标记 📎 图标，但不嵌入图像。</li>
         </ul>
-        为了让导出文件保持精简，<strong>包含收据照片</strong>默认为关闭。在关闭状态下，JSON 导出不会包含照片数据——如果之后仅从 JSON 还原，群组照片仍可从云端获取，但个人照片将无法恢复。请保持设备备份已启用，或在导出前打开此选项，以保留个人照片。
+        为了让导出文件保持精简，<strong>包含收据照片</strong>默认为关闭。在关闭状态下，JSON 导出不会包含照片数据——如果之后仅从 JSON 还原，群组照片仍可从云端获取，但个人照片将无法恢复。请保持 iPhone 备份已启用，或在导出前打开此选项，以保留个人照片。
       </div>
     </div>
     <div class="faq-item">
@@ -1070,10 +1124,37 @@
         如果该年份包含多种货币的支出，并且您将筛选器保留为<strong>全部</strong>，则图表会保持隐藏。请从筛选器中选择一种货币，以查看该货币的趋势。
       </div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        为什么"月底预测"会低于支出页面顶部的总计？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        "<strong>月底预测</strong>"洞察仅以您的<strong>默认货币</strong>计算。支出页面顶部的大型总计则会先将<strong>所有</strong>货币的支出换算成您的默认货币后再相加。因此，当某个月份包含多种货币的支出时，预测金额可能会低于顶部的总计，因为预测未计入以其他货币支出的金额。这是有意的设计——月底预测只有在单一货币下才有意义。您以其他货币的支出会由"<strong>多货币</strong>"洞察单独显示。当该月份的所有支出都使用您的默认货币时，预测与总计便会保持一致。
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        为什么“设置 → 通知”中没有出现台湾统一发票对奖的选项？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>台湾统一发票对奖</strong>开关只会在您已保存至少一笔附有台湾电子发票（电子发票）号码的支出后才会出现。若要获取号码，请新增一笔支出，并使用 iPhone 相机扫描台湾电子发票收据——当其 <strong>QR 码</strong>被读取时，发票号码会自动保存。保存该笔支出后，打开<strong>设置</strong> <span class="arrow">→</span> <strong>通知</strong>，即可看到<strong>台湾统一发票对奖</strong>卡片；开启它即可开始对奖（默认为关闭）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">您在旧版本（此功能尚未推出前）扫描的收据不计入，因为当时并未获取发票号码。请扫描一张新的台湾电子发票（或重新扫描旧的），开关就会出现。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何查看我的哪些支出中了统一发票对奖？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开<strong>支出</strong>标签页 <span class="arrow">→</span> 点击<strong>筛选图标</strong>（漏斗）<span class="arrow">→</span> 开启<strong>仅中奖发票</strong> <span class="arrow">→</span> 点击<strong>完成</strong>。列表只会显示发票号码与中奖号码相符的支出，每笔都会标记 <strong>🏆 奖杯</strong>。每次开奖后，应用程序会自动比对您已保存的发票号码（中奖号码每两个月公布一次，于次月 25 日）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">在您向财政部核对之前，可能中奖均非正式结果——请保留纸质发票才能兑奖。<strong>仅中奖发票</strong>筛选只会在您已有至少一笔台湾发票记录后才会出现。</div>
+      </div>
+    </div>
+</div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-05-21 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-06-11 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1152,7 +1233,7 @@
           <li>App ライブラリを使ってホーム画面からアプリを非表示にした場合は、App ライブラリを開いてアプリアイコンを長押しし、<strong>ホーム画面に追加</strong>を選択してください。</li>
         </ol>
         アプリが表示され、許可された状態になったら、Node Expense に戻って支払いボタンを再度お試しください。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 自体は送金を行いません。金額があらかじめ入力された状態で支払いアプリを起動するだけです。ディープリンクが正常に機能するには、対象アプリがインストールされており、かつデバイス上でアクセス可能な状態である必要があります。</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense 自体は送金を行いません。金額があらかじめ入力された状態で支払いアプリを起動するだけです。ディープリンクが正常に機能するには、対象アプリがインストールされており、かつ iPhone 上でアクセス可能な状態である必要があります。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1273,7 +1354,7 @@
       <div class="faq-answer">
         <strong>写真の保存場所：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>個人の費用写真</strong>はこのデバイスのみに保存され、標準のデバイスバックアップ（iCloud バックアップ）に含まれます。</li>
+          <li><strong>個人の費用写真</strong>はこの iPhone のみに保存され、標準の iPhone バックアップ（iCloud バックアップ）に含まれます。</li>
           <li><strong>グループの費用写真</strong>はクラウドに保存され、グループの全メンバーがアクセスできます。</li>
         </ul>
         <strong>エクスポート形式：</strong>
@@ -1282,7 +1363,7 @@
           <li><strong>CSV</strong> — 各行に写真の有無を<strong>はい／いいえ</strong>で示すのみで、画像データは含まれません。</li>
           <li><strong>PDF</strong> — メモの横に 📎 を表示しますが、画像は埋め込まれません。</li>
         </ul>
-        エクスポートファイルを小さく保つため、<strong>レシート写真を含める</strong>は初期設定でオフになっています。オフの状態では、JSON エクスポートに写真データは含まれません。後で JSON のみから復元した場合、グループ写真はクラウドから取得できますが、個人写真は復元できません。個人写真を保全するには、デバイスのバックアップを有効にしておくか、エクスポート前にこのトグルをオンにしてください。
+        エクスポートファイルを小さく保つため、<strong>レシート写真を含める</strong>は初期設定でオフになっています。オフの状態では、JSON エクスポートに写真データは含まれません。後で JSON のみから復元した場合、グループ写真はクラウドから取得できますが、個人写真は復元できません。個人写真を保全するには、iPhone のバックアップを有効にしておくか、エクスポート前にこのトグルをオンにしてください。
       </div>
     </div>
     <div class="faq-item">
@@ -1339,10 +1420,37 @@
         選択した年に複数の通貨の支出があり、フィルターを<strong>すべて</strong>のままにしている場合、グラフは非表示のままです。フィルターから1つの通貨を選択すると、その通貨の推移が表示されます。
       </div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        「月末予測」が支出画面上部の合計より少ないのはなぜですか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        「<strong>月末予測</strong>」インサイトは、<strong>デフォルト通貨</strong>のみで計算されます。支出画面上部に表示される大きな合計は、<strong>すべての</strong>通貨の支出をデフォルト通貨に換算してから合算しています。そのため、複数の通貨の支出が含まれる月では、予測が他通貨での支出額を含まないため、上部の合計より少なく表示されることがあります。これは意図的な仕様です。月末予測は単一通貨でのみ意味を持つためです。他通貨での支出は「<strong>複数通貨</strong>」インサイトで別途表示されます。その月のすべての支出がデフォルト通貨であれば、予測と合計は一致します。
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        「設定 → 通知」に台湾統一発票くじの項目が表示されないのはなぜですか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>台湾統一発票くじ</strong>のスイッチは、台湾の電子発票（電子發票）番号が紐づいた支出を少なくとも1件保存して初めて表示されます。番号を取得するには、支出を追加し、iPhone のカメラで台湾の電子発票レシートをスキャンしてください。<strong>QR コード</strong>が読み取られると、発票番号が自動的に保存されます。その支出を保存後、<strong>設定</strong> <span class="arrow">→</span> <strong>通知</strong>を開くと<strong>台湾統一発票くじ</strong>のカードが表示されます。オンにすると照合が始まります（初期設定では無効）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">この機能が存在しなかった旧バージョンでスキャンしたレシートは、当時発票番号を取得していないため対象外です。新しい台湾の電子発票をスキャン（または古いものを再スキャン）すると、スイッチが表示されます。</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        どの支出が統一発票くじに当選したか確認するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>支出</strong>タブを開く <span class="arrow">→</span> <strong>フィルターアイコン</strong>（じょうご）をタップ <span class="arrow">→</span> <strong>当選した発票のみ</strong>をオン <span class="arrow">→</span> <strong>完了</strong>をタップ。発票番号が当選番号と一致した支出だけが表示され、それぞれに <strong>🏆 トロフィー</strong>が付きます。抽選のたびに、保存済みの発票番号がアプリによって自動照合されます（当選番号は2か月ごと、翌月25日に発表）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">当選の可能性は台湾財政部で確認するまで正式なものではありません——賞金の受け取りには印刷された発票を保管してください。<strong>当選した発票のみ</strong>フィルターは、台湾の発票が少なくとも1件記録されている場合にのみ表示されます。</div>
+      </div>
+    </div>
+</div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-05-21 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1421,7 +1529,7 @@
           <li>Falls Sie die App über die App-Mediathek vom Home-Bildschirm ausgeblendet haben, öffnen Sie die App-Mediathek, halten Sie das App-Symbol gedrückt und wählen Sie <strong>Zum Home-Bildschirm hinzufügen</strong>.</li>
         </ol>
         Sobald die App sichtbar und erlaubt ist, kehren Sie zu Node Expense zurück und versuchen Sie die Zahlungsschaltfläche erneut.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense überweist selbst kein Geld – es öffnet lediglich die Zahlungs-App mit vorausgefülltem Betrag. Die App muss installiert <em>und</em> auf Ihrem Gerät zugänglich sein, damit der Deeplink funktioniert.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense überweist selbst kein Geld – es öffnet lediglich die Zahlungs-App mit vorausgefülltem Betrag. Die App muss installiert <em>und</em> auf Ihrem iPhone zugänglich sein, damit der Deeplink funktioniert.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1552,7 +1660,7 @@
       <div class="faq-answer">
         <strong>Wo Fotos gespeichert werden:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Fotos persönlicher Ausgaben</strong> werden ausschließlich auf diesem Gerät gespeichert und sind in Ihrem regulären Geräte-Backup (iCloud-Backup) enthalten.</li>
+          <li><strong>Fotos persönlicher Ausgaben</strong> werden ausschließlich auf diesem iPhone gespeichert und sind in Ihrem regulären iPhone-Backup (iCloud-Backup) enthalten.</li>
           <li><strong>Fotos von Gruppenausgaben</strong> werden in der Cloud gespeichert und sind für alle Mitglieder der Gruppe zugänglich.</li>
         </ul>
         <strong>Exportformate:</strong>
@@ -1561,7 +1669,7 @@
           <li><strong>CSV</strong> — markiert jede Zeile mit <strong>Ja/Nein</strong>, ob ein Foto angehängt ist. Keine Bilddaten enthalten.</li>
           <li><strong>PDF</strong> — kennzeichnet Ausgaben mit einem 📎 neben der Notiz. Es wird kein Bild eingebettet.</li>
         </ul>
-        <strong>Belegfotos einschließen</strong> ist standardmäßig deaktiviert, damit Exporte klein bleiben. Im deaktivierten Zustand enthalten JSON-Exporte keine Fotodaten — bei einer späteren Wiederherstellung nur aus JSON können Gruppenfotos weiterhin aus der Cloud abgerufen werden, persönliche Fotos jedoch nicht. Halten Sie Ihr Geräte-Backup aktiviert oder schalten Sie die Option vor dem Export ein, um persönliche Fotos zu erhalten.
+        <strong>Belegfotos einschließen</strong> ist standardmäßig deaktiviert, damit Exporte klein bleiben. Im deaktivierten Zustand enthalten JSON-Exporte keine Fotodaten — bei einer späteren Wiederherstellung nur aus JSON können Gruppenfotos weiterhin aus der Cloud abgerufen werden, persönliche Fotos jedoch nicht. Halten Sie Ihr iPhone-Backup aktiviert oder schalten Sie die Option vor dem Export ein, um persönliche Fotos zu erhalten.
       </div>
     </div>
     <div class="faq-item">
@@ -1618,10 +1726,37 @@
         Wenn das Jahr Ausgaben in mehreren Währungen enthält und der Filter auf <strong>Alle</strong> belassen wurde, bleibt das Diagramm ausgeblendet. Wählen Sie eine Währung aus dem Filter, um den Trend für diese Währung anzuzeigen.
       </div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Warum ist die „Monatsendprognose" niedriger als die Gesamtsumme oben im Ausgabenbildschirm?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Die Insight „<strong>Monatsendprognose</strong>" wird ausschließlich in Ihrer <strong>Standardwährung</strong> berechnet. Die große Gesamtsumme oben im Ausgabenbildschirm rechnet dagegen Ausgaben aus <strong>allen</strong> Währungen in Ihre Standardwährung um und addiert sie anschließend. In einem Monat mit Ausgaben in mehr als einer Währung kann die Prognose daher niedriger ausfallen als die Summe oben, weil sie die in anderen Währungen ausgegebenen Beträge nicht berücksichtigt. Das ist beabsichtigt — eine Monatsendprognose ist nur innerhalb einer einzigen Währung sinnvoll. Ihre Ausgaben in anderen Währungen werden separat durch die Insight „<strong>Mehrere Währungen</strong>" angezeigt. Wenn alle Ausgaben des Monats Ihre Standardwährung verwenden, bleiben Prognose und Gesamtsumme konsistent.
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Warum sehe ich die Option für die taiwanesische Rechnungslotterie nicht unter „Einstellungen → Benachrichtigungen“?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Der Schalter <strong>Taiwanesische Lotterie der einheitlichen Rechnung</strong> erscheint erst, wenn Sie mindestens eine Ausgabe mit einer angehängten taiwanesischen elektronischen Rechnungsnummer (電子發票) gespeichert haben. Um eine zu erfassen, fügen Sie eine Ausgabe hinzu und scannen Sie mit der iPhone-Kamera einen taiwanesischen elektronischen Rechnungsbeleg — sobald dessen <strong>QR-Code</strong> gelesen wird, wird die Rechnungsnummer automatisch gespeichert. Nach dem Speichern dieser Ausgabe öffnen Sie <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Benachrichtigungen</strong>; dort finden Sie die Karte <strong>Taiwanesische Lotterie der einheitlichen Rechnung</strong>. Aktivieren Sie sie, um die Prüfung zu starten (standardmäßig deaktiviert).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Belege, die Sie in einer älteren Version — vor Einführung dieser Funktion — gescannt haben, zählen nicht, da die Rechnungsnummer damals nicht erfasst wurde. Scannen Sie eine neue taiwanesische elektronische Rechnung (oder scannen Sie eine alte erneut), und der Schalter erscheint.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie sehe ich, welche meiner Ausgaben bei der Lotterie der einheitlichen Rechnung gewonnen haben?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Öffnen Sie den Tab <strong>Ausgaben</strong> <span class="arrow">→</span> tippen Sie auf das <strong>Filtersymbol</strong> (Trichter) <span class="arrow">→</span> aktivieren Sie <strong>Nur Lottogewinne</strong> <span class="arrow">→</span> tippen Sie auf <strong>Fertig</strong>. Die Liste zeigt dann nur Ausgaben, deren Rechnung mit einer Gewinnzahl übereinstimmt, jeweils mit einem <strong>🏆 Pokal</strong> markiert. Die App prüft Ihre gespeicherten Rechnungsnummern nach jeder Ziehung automatisch (Gewinnzahlen werden alle zwei Monate am 25. des Folgemonats veröffentlicht).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Ein möglicher Gewinn ist inoffiziell, bis Sie ihn beim taiwanesischen Finanzministerium bestätigen — bewahren Sie die gedruckte Rechnung auf, um einen Preis einzulösen. Der Filter <strong>Nur Lottogewinne</strong> erscheint erst, wenn mindestens eine taiwanesische Rechnung erfasst ist.</div>
+      </div>
+    </div>
+</div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-05-21 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1700,7 +1835,7 @@
           <li>Si usó la Biblioteca de apps para ocultar la aplicación de la pantalla de inicio, abra la Biblioteca de apps, mantenga presionado el ícono de la app y elija <strong>Agregar a la pantalla de inicio</strong>.</li>
         </ol>
         Una vez que la aplicación esté visible y permitida, regrese a Node Expense e intente el botón de pago de nuevo.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense no mueve dinero por sí mismo — simplemente abre la aplicación de pago con el monto ya completado. La aplicación debe estar instalada <em>y</em> accesible en su dispositivo para que el enlace profundo funcione.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense no mueve dinero por sí mismo — simplemente abre la aplicación de pago con el monto ya completado. La aplicación debe estar instalada <em>y</em> accesible en su iPhone para que el enlace profundo funcione.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1831,7 +1966,7 @@
       <div class="faq-answer">
         <strong>Dónde se almacenan las fotos:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Fotos de gastos personales</strong> se almacenan únicamente en este dispositivo y se incluyen en la copia de seguridad estándar del dispositivo (iCloud Backup).</li>
+          <li><strong>Fotos de gastos personales</strong> se almacenan únicamente en este iPhone y se incluyen en la copia de seguridad estándar del iPhone (iCloud Backup).</li>
           <li><strong>Fotos de gastos de grupo</strong> se almacenan en la nube y son accesibles para todos los miembros del grupo.</li>
         </ul>
         <strong>Formatos de exportación:</strong>
@@ -1840,7 +1975,7 @@
           <li><strong>CSV</strong> — marca cada fila con <strong>Sí/No</strong> según si tiene foto adjunta. No incluye datos de imagen.</li>
           <li><strong>PDF</strong> — señala los gastos con un 📎 junto a la nota. No incrusta imágenes.</li>
         </ul>
-        <strong>Incluir fotos de recibos</strong> está desactivado de forma predeterminada para mantener exportaciones pequeñas. Mientras esté desactivado, las exportaciones JSON no contienen datos de fotos — si más adelante restaura solo desde JSON, las fotos de grupo seguirán recuperándose desde la nube, pero las fotos personales no podrán recuperarse. Mantenga activada la copia de seguridad de su dispositivo, o active la opción antes de exportar, para conservar las fotos personales.
+        <strong>Incluir fotos de recibos</strong> está desactivado de forma predeterminada para mantener exportaciones pequeñas. Mientras esté desactivado, las exportaciones JSON no contienen datos de fotos — si más adelante restaura solo desde JSON, las fotos de grupo seguirán recuperándose desde la nube, pero las fotos personales no podrán recuperarse. Mantenga activada la copia de seguridad de su iPhone, o active la opción antes de exportar, para conservar las fotos personales.
       </div>
     </div>
     <div class="faq-item">
@@ -1897,10 +2032,37 @@
         Si el año contiene gastos en varias monedas y deja el filtro en <strong>Todas</strong>, el gráfico permanece oculto. Elija una moneda en el filtro para ver la tendencia de esa moneda.
       </div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Por qué la «Previsión de fin de mes» es menor que el total que aparece en la parte superior de la pantalla de Gastos?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        La perspectiva «<strong>Previsión de fin de mes</strong>» se calcula utilizando únicamente tu <strong>moneda predeterminada</strong>. El total grande de la parte superior de la pantalla de Gastos convierte los gastos de <strong>todas</strong> las monedas a tu moneda predeterminada antes de sumarlos. Por eso, en un mes que incluye gastos en más de una moneda, la previsión puede parecer menor que el total de arriba, ya que no incluye los importes gastados en otras monedas. Esto es intencionado: una previsión de fin de mes solo tiene sentido dentro de una única moneda. Tus gastos en otras monedas se muestran por separado en la perspectiva «<strong>multidivisa</strong>». Cuando todos los gastos del mes usan tu moneda predeterminada, la previsión y el total se mantienen coherentes.
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Por qué no veo la opción de la lotería de facturas de Taiwán en Configuración → Notificaciones?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        El interruptor <strong>Lotería de la factura unificada de Taiwán</strong> solo aparece una vez que ha guardado al menos un gasto con un número de factura electrónica de Taiwán (電子發票) adjunto. Para capturar uno, añada un gasto usando la cámara de su iPhone para escanear un recibo de factura electrónica de Taiwán: cuando se lee su <strong>código QR</strong>, el número de factura se guarda automáticamente. Tras guardar ese gasto, abra <strong>Configuración</strong> <span class="arrow">→</span> <strong>Notificaciones</strong> y allí estará la tarjeta <strong>Lotería de la factura unificada de Taiwán</strong>; actívela para empezar a comprobar (está desactivada de forma predeterminada).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Los recibos que escaneó en una versión anterior — antes de que existiera esta función — no cuentan, porque entonces no se capturaba el número de factura. Escanee una nueva factura electrónica de Taiwán (o vuelva a escanear una antigua) y el interruptor aparecerá.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo veo cuáles de mis gastos ganaron la lotería de la factura unificada?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Abra la pestaña <strong>Gastos</strong> <span class="arrow">→</span> toque el <strong>icono de filtro</strong> (embudo) <span class="arrow">→</span> active <strong>Solo premios de lotería</strong> <span class="arrow">→</span> toque <strong>Listo</strong>. La lista mostrará solo los gastos cuya factura coincidió con un número premiado, cada uno marcado con un <strong>🏆 trofeo</strong>. La app comprueba sus números de factura guardados automáticamente tras cada sorteo (los números premiados se publican cada dos meses, el día 25 del mes siguiente).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Un posible premio no es oficial hasta que lo verifique con el Ministerio de Finanzas de Taiwán: conserve la factura impresa para cobrar cualquier premio. El filtro <strong>Solo premios de lotería</strong> solo aparece cuando tiene al menos una factura de Taiwán registrada.</div>
+      </div>
+    </div>
+</div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-05-21 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1979,7 +2141,7 @@
           <li>Si vous avez utilisé la Bibliothèque d'apps pour masquer l'application depuis l'écran d'accueil, ouvrez la Bibliothèque d'apps, maintenez l'icône de l'app appuyée et choisissez <strong>Ajouter à l'écran d'accueil</strong>.</li>
         </ol>
         Une fois l'application visible et autorisée, revenez dans Node Expense et réessayez le bouton de paiement.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense ne transfère aucun argent lui-même — il ouvre simplement l'application de paiement avec le montant prérempli. L'application doit être installée <em>et</em> accessible sur votre appareil pour que le lien profond fonctionne.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Node Expense ne transfère aucun argent lui-même — il ouvre simplement l'application de paiement avec le montant prérempli. L'application doit être installée <em>et</em> accessible sur votre iPhone pour que le lien profond fonctionne.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2090,7 +2252,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Appuyez sur le bouton <strong>+</strong> pour ajouter une nouvelle dépense <span class="arrow">→</span> appuyez sur l'<strong>icône appareil photo</strong> à côté du champ de montant <span class="arrow">→</span> pointez votre caméra vers le reçu. Les montants détectés apparaissent en bas — appuyez sur l'un d'eux pour remplir automatiquement le champ de montant.
+        Appuyez sur le bouton <strong>+</strong> pour ajouter une nouvelle dépense <span class="arrow">→</span> appuyez sur l'<strong>icône iPhone photo</strong> à côté du champ de montant <span class="arrow">→</span> pointez votre caméra vers le reçu. Les montants détectés apparaissent en bas — appuyez sur l'un d'eux pour remplir automatiquement le champ de montant.
       </div>
     </div>
     <div class="faq-item">
@@ -2110,7 +2272,7 @@
       <div class="faq-answer">
         <strong>Où sont stockées les photos :</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>Les photos de dépenses personnelles</strong> sont stockées uniquement sur cet appareil et sont incluses dans votre sauvegarde standard (iCloud Backup).</li>
+          <li><strong>Les photos de dépenses personnelles</strong> sont stockées uniquement sur cet iPhone et sont incluses dans votre sauvegarde standard (iCloud Backup).</li>
           <li><strong>Les photos de dépenses de groupe</strong> sont stockées dans le cloud et restent accessibles à tous les membres du groupe.</li>
         </ul>
         <strong>Formats d'export :</strong>
@@ -2119,7 +2281,7 @@
           <li><strong>CSV</strong> — indique pour chaque ligne <strong>Oui/Non</strong> selon la présence d'une photo. Aucune donnée image n'est incluse.</li>
           <li><strong>PDF</strong> — marque les dépenses avec un 📎 à côté de la note. Aucune image n'est intégrée.</li>
         </ul>
-        <strong>Inclure les photos de reçus</strong> est désactivé par défaut afin que les exports restent légers. Tant que l'option est désactivée, les exports JSON ne contiennent pas les données des photos — si vous restaurez ensuite uniquement depuis JSON, les photos de groupe peuvent toujours être récupérées depuis le cloud, mais les photos personnelles ne peuvent pas être récupérées. Gardez la sauvegarde de votre appareil activée, ou activez l'option avant d'exporter, pour préserver les photos personnelles.
+        <strong>Inclure les photos de reçus</strong> est désactivé par défaut afin que les exports restent légers. Tant que l'option est désactivée, les exports JSON ne contiennent pas les données des photos — si vous restaurez ensuite uniquement depuis JSON, les photos de groupe peuvent toujours être récupérées depuis le cloud, mais les photos personnelles ne peuvent pas être récupérées. Gardez la sauvegarde de votre iPhone activée, ou activez l'option avant d'exporter, pour préserver les photos personnelles.
       </div>
     </div>
     <div class="faq-item">
@@ -2176,11 +2338,38 @@
         Si l'année contient des dépenses dans plusieurs devises et que le filtre est laissé sur <strong>Toutes</strong>, le graphique reste masqué. Sélectionnez une devise dans le filtre pour voir la tendance pour cette devise.
       </div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Pourquoi la « Prévision de fin de mois » est-elle inférieure au total affiché en haut de l'écran Dépenses ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        L'analyse « <strong>Prévision de fin de mois</strong> » est calculée uniquement dans votre <strong>devise par défaut</strong>. Le grand total affiché en haut de l'écran Dépenses convertit quant à lui les dépenses de <strong>toutes</strong> les devises dans votre devise par défaut avant de les additionner. Ainsi, lors d'un mois comportant des dépenses dans plusieurs devises, la prévision peut sembler inférieure au total affiché en haut, car elle exclut les montants dépensés dans d'autres devises. C'est intentionnel : une prévision de fin de mois n'a de sens que dans une seule devise. Vos dépenses dans d'autres devises sont présentées séparément par l'analyse « <strong>multidevise</strong> ». Lorsque toutes les dépenses du mois utilisent votre devise par défaut, la prévision et le total restent cohérents.
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Pourquoi l'option de la loterie des factures de Taïwan n'apparaît-elle pas dans Réglages → Notifications ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Le commutateur <strong>Loterie de la facture unifiée de Taïwan</strong> n'apparaît qu'une fois que vous avez enregistré au moins une dépense à laquelle est associé un numéro de facture électronique taïwanaise (電子發票). Pour en capturer un, ajoutez une dépense en utilisant l'appareil photo de votre iPhone pour numériser un reçu de facture électronique taïwanaise — lorsque son <strong>code QR</strong> est lu, le numéro de facture est enregistré automatiquement. Une fois cette dépense enregistrée, ouvrez <strong>Réglages</strong> <span class="arrow">→</span> <strong>Notifications</strong> : la carte <strong>Loterie de la facture unifiée de Taïwan</strong> s'y trouvera ; activez-la pour lancer la vérification (désactivée par défaut).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Les reçus numérisés dans une ancienne version — avant l'existence de cette fonctionnalité — ne comptent pas, car le numéro de facture n'était pas capturé à l'époque. Numérisez une nouvelle facture électronique taïwanaise (ou renumérisez-en une ancienne) et le commutateur apparaîtra.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment voir lesquelles de mes dépenses ont gagné à la loterie de la facture unifiée ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Ouvrez l'onglet <strong>Dépenses</strong> <span class="arrow">→</span> touchez l'<strong>icône de filtre</strong> (entonnoir) <span class="arrow">→</span> activez <strong>Gains à la loterie uniquement</strong> <span class="arrow">→</span> touchez <strong>Terminé</strong>. La liste n'affiche alors que les dépenses dont la facture correspond à un numéro gagnant, chacune marquée d'un <strong>🏆 trophée</strong>. L'app vérifie automatiquement vos numéros de facture enregistrés après chaque tirage (les numéros gagnants sont publiés tous les deux mois, le 25 du mois suivant).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Un gain possible n'est pas officiel tant que vous ne l'avez pas vérifié auprès du ministère des Finances de Taïwan — conservez la facture imprimée pour encaisser un prix. Le filtre <strong>Gains à la loterie uniquement</strong> n'apparaît qu'une fois qu'au moins une facture taïwanaise est enregistrée.</div>
+      </div>
+    </div>
+</div>
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-05-21 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2274,7 +2463,7 @@
       <div class="faq-answer">
         <strong>사진이 저장되는 위치:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>개인 지출 사진</strong>은 이 기기에만 저장되며, 일반 기기 백업(iCloud 백업)에 포함됩니다.</li>
+          <li><strong>개인 지출 사진</strong>은 이 iPhone 에만 저장되며, 일반 iPhone 백업(iCloud 백업)에 포함됩니다.</li>
           <li><strong>그룹 지출 사진</strong>은 클라우드에 저장되며, 그룹의 모든 멤버가 접근할 수 있습니다.</li>
         </ul>
         <strong>내보내기 형식:</strong>
@@ -2283,7 +2472,7 @@
           <li><strong>CSV</strong> — 각 행에 사진 첨부 여부를 <strong>예/아니오</strong>로만 표시하며, 이미지 데이터는 포함되지 않습니다.</li>
           <li><strong>PDF</strong> — 메모 옆에 📎 표시만 추가하며, 이미지는 포함되지 않습니다.</li>
         </ul>
-        내보내기 파일을 작게 유지하기 위해 <strong>영수증 사진 포함</strong>은 기본적으로 꺼져 있습니다. 꺼진 상태에서는 JSON 내보내기에 사진 데이터가 포함되지 않으며, 나중에 JSON에서만 복원하면 그룹 사진은 클라우드에서 다시 가져올 수 있지만 개인 사진은 복구할 수 없습니다. 개인 사진을 보존하려면 기기 백업을 활성화 상태로 유지하거나, 내보내기 전에 이 옵션을 켜세요.
+        내보내기 파일을 작게 유지하기 위해 <strong>영수증 사진 포함</strong>은 기본적으로 꺼져 있습니다. 꺼진 상태에서는 JSON 내보내기에 사진 데이터가 포함되지 않으며, 나중에 JSON에서만 복원하면 그룹 사진은 클라우드에서 다시 가져올 수 있지만 개인 사진은 복구할 수 없습니다. 개인 사진을 보존하려면 iPhone 백업을 활성화 상태로 유지하거나, 내보내기 전에 이 옵션을 켜세요.
       </div>
     </div>
     <div class="faq-item">
@@ -2319,7 +2508,34 @@
       <button class="faq-question" onclick="toggleFaq(this)">연도 보기에서 "카테고리별 지출 추세" 차트가 왜 표시되지 않나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="faq-answer">단일 통화가 필요합니다. 차트 화면 상단의 <strong>통화</strong> 필터에서 <strong>전체</strong> 대신 특정 통화를 선택하면 차트가 표시됩니다.</div>
     </div>
-  </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        '월말 예측'이 지출 화면 상단의 합계보다 낮은 이유는 무엇인가요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        '<strong>월말 예측</strong>' 인사이트는 <strong>기본 통화</strong>만으로 계산됩니다. 지출 화면 상단의 큰 합계는 <strong>모든</strong> 통화의 지출을 기본 통화로 환산한 후 더한 값입니다. 따라서 여러 통화의 지출이 포함된 달에는 예측이 다른 통화로 지출한 금액을 포함하지 않기 때문에 상단 합계보다 낮게 표시될 수 있습니다. 이는 의도된 동작으로, 월말 예측은 단일 통화에서만 의미가 있기 때문입니다. 다른 통화의 지출은 '<strong>다중 통화</strong>' 인사이트에서 별도로 표시됩니다. 해당 월의 모든 지출이 기본 통화를 사용하는 경우 예측과 합계는 일치합니다.
+      </div>
+    </div>
+      <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        '설정 → 알림'에 대만 발표 복권 옵션이 보이지 않는 이유는 무엇인가요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>대만 통일발표 복권</strong> 토글은 대만 전자 발표(電子發票) 번호가 첨부된 지출을 하나 이상 저장한 후에만 나타납니다. 번호를 캡처하려면 지출을 추가하고 iPhone 카메라로 대만 전자 발표 영수증을 스캔하세요. <strong>QR 코드</strong>가 읽히면 발표 번호가 자동으로 저장됩니다. 해당 지출을 저장한 후 <strong>설정</strong> <span class="arrow">→</span> <strong>알림</strong>을 열면 <strong>대만 통일발표 복권</strong> 카드가 표시됩니다. 켜면 대조가 시작됩니다(기본적으로 꺼져 있음).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">이 기능이 없던 이전 버전에서 스캔한 영수증은 당시 발표 번호가 캡처되지 않았으므로 포함되지 않습니다. 새 대만 전자 발표를 스캔(또는 기존 것을 다시 스캔)하면 토글이 나타납니다.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        내 지출 중 어떤 것이 통일발표 복권에 당첨되었는지 어떻게 확인하나요?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <strong>지출</strong> 탭을 엽니다 <span class="arrow">→</span> <strong>필터 아이콘</strong>(깔때기)을 탭합니다 <span class="arrow">→</span> <strong>당첨 발표만</strong>을 켭니다 <span class="arrow">→</span> <strong>완료</strong>를 탭합니다. 그러면 발표 번호가 당첨 번호와 일치하는 지출만 표시되며, 각각 <strong>🏆 트로피</strong>로 표시됩니다. 추첨이 있을 때마다 앱이 저장된 발표 번호를 자동으로 대조합니다(당첨 번호는 2개월마다 다음 달 25일에 발표됩니다).<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">당첨 가능성은 대만 재정부에서 확인하기 전까지 공식적인 것이 아닙니다 — 상금을 수령하려면 인쇄된 발표를 보관하세요. <strong>당첨 발표만</strong> 필터는 대만 발표가 하나 이상 기록된 경우에만 나타납니다.</div>
+      </div>
+    </div>
+</div>
 </div>
 </main>
 
