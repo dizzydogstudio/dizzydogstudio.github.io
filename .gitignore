@@ -1,0 +1,36 @@
+# ── Secrets — never commit real credentials ───────────────────────────────────
+Secrets.xcconfig
+GoogleService-Info.plist
+
+# ── Xcode ─────────────────────────────────────────────────────────────────────
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.env
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# ── Swift Package Manager ─────────────────────────────────────────────────────
+.build/
+.swiftpm/
+
+# ── CocoaPods (if used) ───────────────────────────────────────────────────────
+Pods/
+
+# ── Claude Code (local tooling state — never commit) ──────────────────────────
+.claude/
+
+# --- Studio Tools ---
+add_copy_right_file_headers.sh.sh
+
+# Marketing screenshots (large, kept locally — not committed)
+marketing/App_Store_Screenshots/
