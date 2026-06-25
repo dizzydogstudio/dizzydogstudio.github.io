@@ -35,6 +35,18 @@
   a { color: inherit; text-decoration: none; }
   .phone { filter: drop-shadow(0 18px 38px rgba(24,24,40,0.14)) drop-shadow(0 2px 8px rgba(24,24,40,0.10)); }
 
+  /* in-action video */
+  .see { text-align: center; padding: 56px 0 8px; }
+  .see h2 { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 10px 0 6px; }
+  .see .sub { font-size: 16px; color: var(--muted); margin-bottom: 30px; }
+  .video-wrap { position: relative; display: inline-block; cursor: pointer; }
+  .phone-video { width: 300px; max-width: 76vw; border-radius: 32px; display: block;
+        filter: drop-shadow(0 18px 38px rgba(24,24,40,0.14)) drop-shadow(0 2px 8px rgba(24,24,40,0.10)); }
+  .sound-hint { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+        background: rgba(24,24,40,0.72); color: #fff; font-size: 12.5px; font-weight: 500;
+        padding: 6px 14px; border-radius: 999px; backdrop-filter: blur(4px);
+        pointer-events: none; transition: opacity .3s; white-space: nowrap; }
+
   /* apple download button */
   .dl { display: inline-flex; align-items: center; gap: 11px; background: var(--indigo); color: #fff;
         padding: 13px 26px; border-radius: 13px; font-weight: 500; transition: transform .12s, box-shadow .12s;
@@ -125,12 +137,12 @@
 <a id="top"></a>
 <header class="hero wrap">
   <h1>Split bills with friends. Skip the awkward math.</h1>
-  <p>Scan a receipt and AI splits it line by line — who owes who, settled in a tap. On your own? Scan your own receipts, set category budgets, and see where your money goes — all private by design.</p>
+  <p>Scan a receipt and AI splits it line by line — who owes who, settled in a tap. Going solo? Track your own spending and budgets too — all private by design.</p>
   <a class="dl" href="https://apps.apple.com/us/app/node-expense-track-together/id6759304601">
     <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
     <span><small>Download on the</small><b>App Store</b></span>
   </a>
-  <div class="hero-meta"><span class="stars">★★★★★</span> &nbsp;on the App Store &nbsp;·&nbsp; Free to start &nbsp;·&nbsp; iPhone</div>
+  <div class="hero-meta">Free to start &nbsp;·&nbsp; No sign-up required &nbsp;·&nbsp; iPhone</div>
   <div class="qr-wrap">
     <img src="./assets/qr-appstore.png" alt="QR code to download Node Expense on the App Store">
     <span>Scan to download on iPhone</span>
@@ -145,6 +157,16 @@
     <span class="pill">Pay monthly, yearly — or once for life</span>
   </div>
   <p style="margin-top:16px; font-size:14px; color:var(--muted);">Free to start — up to 15 personal expenses a month. PRO is ad-free and unlimited.</p>
+</section>
+
+<section class="see wrap">
+  <span class="label" style="display:inline-block;">See it in action</span>
+  <h2>The whole flow, start to finish.</h2>
+  <p class="sub">Scan a receipt, split it line by line, settle up — watch it happen.</p>
+  <div class="video-wrap" onclick="var v=this.querySelector('video'),h=this.querySelector('.sound-hint');v.muted=!v.muted;h.style.opacity=v.muted?'1':'0';">
+    <video class="phone-video" src="./assets/preview.mp4" poster="./assets/preview-poster.jpg" muted autoplay loop playsinline preload="metadata" aria-label="Node Expense app demo — scanning a receipt and splitting the bill"></video>
+    <span class="sound-hint">🔊 Tap for sound</span>
+  </div>
 </section>
 
 <main class="wrap">
