@@ -270,7 +270,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-07-01 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -292,6 +292,7 @@
         <li>Taiwan electronic invoice numbers (captured when you scan a Taiwan e-invoice; stored locally on your iPhone for the optional uniform-invoice lottery check)</li>
         <li>Optional location data</li>
         <li>Selected calendar access</li>
+        <li>Optional Apple sign-in identifier (only if you turn on Cross-Device License Sync; a stable, app-specific identifier used solely to match your PRO license across your devices — no name or email is requested)</li>
       </ul>
     </div>
     <div class="data-card">
@@ -310,12 +311,15 @@
   <h3>Subscriptions &amp; Payments</h3>
   <p>Purchases and subscriptions are processed by Apple and RevenueCat. We do not receive your credit card or payment details. RevenueCat stores anonymous subscriber identifiers to manage your subscription status, "Lifetime" access, and free trial period. This data is retained as long as necessary to verify PRO feature access across iPhone reinstalls and is processed independently of your Group Expense cloud data.</p>
 
+  <h3>Cross-Device License Sync (Sign in with Apple)</h3>
+  <p>No account or sign-in is required to use Node Expense. If you own PRO on more than one device (iPhone, iPad, or Mac) signed in to the same Apple Account, you can <strong>optionally</strong> tap <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across them. We request <strong>no name and no email</strong> — only the stable, app-specific identifier Apple provides. That identifier is used <strong>solely</strong> to match your PRO license (and any App Store offer codes you have redeemed) to the same subscriber profile on each device, through RevenueCat. It is <strong>never</strong> used for advertising, tracking, or profiling. You can disconnect a device at any time from the Subscription screen, and you can revoke the sign-in entirely in iOS Settings → your Apple Account → Sign in with Apple.</p>
+
   <h2><span class="section-number">3</span>Third-Party Services</h2>
   <table class="service-table">
     <thead><tr><th>Service</th><th>Purpose</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Subscription &amp; in-app purchase management, free trial tracking</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>Rewarded and interstitial advertisements</td></tr>
+      <tr><td><strong>Sign in with Apple</strong></td><td>Optional cross-device sync of your PRO license (only if you enable it); provides a stable, app-specific identifier — no name or email</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Anonymous usage analytics</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Group data syncing (expenses, members, settlements, deletion requests); public Taiwan uniform-invoice lottery winning numbers</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Receipt photo storage for group expenses and user profile photos (compressed JPEG, accessible to authenticated users)</td></tr>
@@ -364,9 +368,8 @@
   <p><strong>Notifications.</strong> If an invoice number matches, the app shows a local notification on your iPhone. A possible win is unofficial until you verify it with Taiwan's Ministry of Finance, and you must keep the printed invoice to claim any prize.</p>
   <p><strong>Your choice.</strong> The feature is off by default and requires you to opt in. You can turn it off at any time in Settings, after which no winning numbers are downloaded and no checks are performed.</p>
 
-<h2><span class="section-number">6</span>Ads</h2>
-  <p>Node Expense is supported by advertisements for users on the free tier. These may include interstitial ads when reaching monthly limits, or optional rewarded ads to unlock additional expense slots.</p>
-  <p>To support our free tier, we may ask for your permission to deliver more relevant ads using Apple's App Tracking Transparency framework. If you decline, you will still see the same number of ads, but they will be less relevant to you. Choosing to allow or deny this does not grant advertisers access to your financial records, your personal data stored on your iPhone, or your cloud-synced group expenses.</p>
+<h2><span class="section-number">6</span>No Advertising or Cross-App Tracking</h2>
+  <p>Node Expense shows <strong>no advertisements</strong> — neither on the free tier nor with a PRO subscription. The app does <strong>not</strong> track you across other apps or websites, does not use Apple's App Tracking Transparency framework, and does not share your data with advertising networks or data brokers. There is no advertising SDK in the app.</p>
 
   <h2><span class="section-number">7</span>Location Data</h2>
   <p>Location data is optional and only collected if you explicitly enable it in Settings. When enabled, your location is recorded with new expenses. Location data is stored locally on your iPhone and is not uploaded to cloud services. You can disable location access at any time in iOS Settings.</p>
@@ -458,7 +461,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-06-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-07-01 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -480,6 +483,7 @@
         <li>台灣電子發票號碼（掃描台灣電子發票時擷取；儲存在您的 iPhone 本機，供選用的統一發票對獎功能使用）</li>
         <li>選填的位置資料</li>
         <li>所選行事曆存取</li>
+        <li>選填的 Apple 登入識別碼（僅在您開啟「跨裝置授權同步」時；這是一組穩定、僅限本應用程式的識別碼，只用於在您的裝置間比對您的 PRO 授權——我們不會索取您的姓名或電子郵件）</li>
       </ul>
     </div>
     <div class="data-card">
@@ -498,12 +502,15 @@
   <h3>訂閱與付款</h3>
   <p>購買及訂閱由 Apple 與 RevenueCat 處理。我們不會收到您的信用卡或付款詳細資訊。RevenueCat 儲存匿名訂閱者識別碼，以管理您的訂閱狀態、「終身」使用權及免費試用期。此資料的保存期限以驗證您在重新安裝後存取 PRO 功能所需為限，並與您的群組費用雲端資料分開處理。</p>
 
+  <h3>跨裝置授權同步（透過 Apple 登入）</h3>
+  <p>使用 Node Expense <strong>無需帳戶或登入</strong>。若您在多台使用同一 Apple 帳戶的裝置（iPhone、iPad 或 Mac）上擁有 PRO，您可以在「訂閱」頁面<strong>選擇性地</strong>點按<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至這些裝置。我們<strong>不會索取您的姓名或電子郵件</strong>——僅取得 Apple 提供的穩定、僅限本應用程式的識別碼。該識別碼<strong>僅</strong>用於透過 RevenueCat 在每台裝置上將您的 PRO 授權（以及您兌換過的任何 App Store 優惠代碼）比對至同一個訂閱者身分，<strong>絕不會</strong>用於廣告、追蹤或建立個人檔案。您可隨時在「訂閱」頁面中斷某台裝置的連結，也可以在「iOS 設定 → 您的 Apple 帳戶 → 透過 Apple 登入」中完全撤銷授權。</p>
+
   <h2><span class="section-number">3</span>第三方服務</h2>
   <table class="service-table">
     <thead><tr><th>服務</th><th>用途</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>訂閱與應用程式內購管理，包括免費試用追蹤</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>獎勵及插頁式廣告</td></tr>
+      <tr><td><strong>透過 Apple 登入</strong></td><td>選用的 PRO 授權跨裝置同步（僅在您啟用時）；提供穩定、僅限本應用程式的識別碼——不含姓名或電子郵件</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群組資料同步（費用、成員、結算、刪除請求）；公開的台灣統一發票中獎號碼</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>群組費用的收據照片儲存與使用者個人頭像（壓縮 JPEG，可由已驗證使用者存取）</td></tr>
@@ -552,9 +559,8 @@
   <p><strong>通知。</strong>若發票號碼相符，應用程式會在您的 iPhone 上顯示本機通知。在向財政部核對之前，可能中獎均非正式結果，且您必須保留紙本發票才能兌獎。</p>
   <p><strong>您的選擇。</strong>此功能預設關閉，需由您主動開啟。您可隨時在「設定」中關閉，關閉後將不再下載任何中獎號碼，也不會進行任何比對。</p>
 
-<h2><span class="section-number">6</span>廣告</h2>
-  <p>免費方案的使用者將在 Node Expense 中看到廣告支援。這些廣告可能包含達到每月上限時的插頁式廣告，或用於解鎖額外費用記錄槽位的選填獎勵廣告。</p>
-  <p>為了支持我們的免費方案，我們可能會徵求您的許可，以便使用 Apple 的「App 追蹤透明度」（App Tracking Transparency）架構為您投放更具相關性的廣告。如果您拒絕，您看到的廣告數量不會減少，但這些廣告與您的相關性會降低。無論您選擇允許還是拒絕，廣告商都無法存取您的財務記錄、儲存在您 iPhone 中的個人數據或雲端同步的群組費用。</p>
+<h2><span class="section-number">6</span>無廣告、不進行跨應用程式追蹤</h2>
+  <p>Node Expense <strong>不顯示任何廣告</strong>——無論免費方案或 PRO 訂閱皆然。本應用程式<strong>不會</strong>跨其他應用程式或網站追蹤您、不使用 Apple 的「App 追蹤透明度」（App Tracking Transparency）架構，也不會將您的資料分享給廣告聯播網或資料仲介。應用程式中沒有任何廣告 SDK。</p>
 
   <h2><span class="section-number">7</span>位置資料</h2>
   <p>位置資料為選填，僅在您在「設定」中明確啟用以進行費用追蹤時才會收集。啟用後，您的位置將隨新費用一同記錄。位置資料儲存於您的 iPhone 本機，不會上傳至雲端服務。您可以隨時在 iOS 設定中停用位置存取。</p>
@@ -646,7 +652,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-06-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-07-01 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -668,6 +674,7 @@
         <li>台湾电子发票号码（扫描台湾电子发票时获取；存储在您的 iPhone 本地，供可选的统一发票对奖功能使用）</li>
         <li>可选的位置数据</li>
         <li>所选日历访问权限</li>
+        <li>可选的 Apple 登录标识符（仅在您开启"跨设备授权同步"时；这是一组稳定、仅限本应用的标识符，只用于在您的设备间比对您的 PRO 授权——我们不会索取您的姓名或电子邮件）</li>
       </ul>
     </div>
     <div class="data-card">
@@ -686,12 +693,15 @@
   <h3>订阅与付款</h3>
   <p>购买和订阅由 Apple 和 RevenueCat 处理。我们不会收到您的信用卡或付款详情。RevenueCat 存储匿名订阅者标识符，以管理您的订阅状态、"终身"访问权限和免费试用期。这些数据将根据需要保留，以便在重新安装 iPhone 时验证您的专业版功能访问权限，并独立于您的群组支出云端数据进行处理。</p>
 
+  <h3>跨设备授权同步（通过 Apple 登录）</h3>
+  <p>使用 Node Expense <strong>无需账户或登录</strong>。若您在多台使用同一 Apple 账户的设备（iPhone、iPad 或 Mac）上拥有 PRO，您可以在"订阅"页面<strong>选择性地</strong>点按<strong>通过 Apple 登录</strong>，将您的 PRO 授权同步至这些设备。我们<strong>不会索取您的姓名或电子邮件</strong>——仅获取 Apple 提供的稳定、仅限本应用的标识符。该标识符<strong>仅</strong>用于通过 RevenueCat 在每台设备上将您的 PRO 授权（以及您兑换过的任何 App Store 优惠代码）比对至同一个订阅者身份，<strong>绝不会</strong>用于广告、追踪或建立用户画像。您可随时在"订阅"页面断开某台设备的连接，也可以在"iOS 设置 → 您的 Apple 账户 → 通过 Apple 登录"中完全撤销授权。</p>
+
   <h2><span class="section-number">3</span>第三方服务</h2>
   <table class="service-table">
     <thead><tr><th>服务</th><th>用途</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>订阅和应用内购买管理，包括免费试用跟踪</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>激励广告和插屏广告</td></tr>
+      <tr><td><strong>通过 Apple 登录</strong></td><td>可选的 PRO 授权跨设备同步（仅在您启用时）；提供稳定、仅限本应用的标识符——不含姓名或电子邮件</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群组数据同步（支出、成员、结算、删除申请）；公开的台湾统一发票中奖号码</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>群组支出的收据照片存储与用户个人头像（压缩 JPEG，已认证用户可访问）</td></tr>
@@ -740,9 +750,8 @@
   <p><strong>通知。</strong>若发票号码相符，应用程序会在您的 iPhone 上显示本地通知。在向财政部核对之前，可能中奖均非正式结果，且您必须保留纸质发票才能兑奖。</p>
   <p><strong>您的选择。</strong>此功能默认关闭，需由您主动开启。您可随时在"设置"中关闭，关闭后将不再下载任何中奖号码，也不会进行任何比对。</p>
 
-<h2><span class="section-number">6</span>广告</h2>
-  <p>Node Expense 为免费层级的用户提供广告支持。这些可能包括达到每月限制时的插屏广告，或用于解锁额外支出名额的可选激励广告。</p>
-  <p>为了支持我们的免费方案，我们可能会征求您的许可，以便使用 Apple 的‘应用跟踪透明度’（App Tracking Transparency）框架为您投放更具相关性的广告。如果您拒绝，您看到的广告数量不会减少，但这些广告与您的相关性会降低。无论您选择允许还是拒绝，广告商都无法访问您的财务记录、存储在您 iPhone 中的个人数据或云端同步的群组费用。</p>
+<h2><span class="section-number">6</span>无广告、不进行跨应用追踪</h2>
+  <p>Node Expense <strong>不显示任何广告</strong>——无论免费方案或 PRO 订阅皆是如此。本应用<strong>不会</strong>跨其他应用或网站追踪您、不使用 Apple 的"应用跟踪透明度"（App Tracking Transparency）框架，也不会将您的数据分享给广告网络或数据经纪商。应用中没有任何广告 SDK。</p>
 
   <h2><span class="section-number">7</span>位置数据</h2>
   <p>位置数据是可选的，仅在您在"设置"中明确启用支出追踪时才会收集。启用后，您的位置将随新支出一起记录。位置数据存储在您的 iPhone 本地，不会上传到云端服务。您可以随时在 iOS 设置中禁用位置访问权限。</p>
@@ -834,7 +843,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-06-11 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-07-01 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -856,6 +865,7 @@
         <li>台湾の電子発票番号（台湾の電子発票をスキャンした際に取得。任意の統一発票くじ照合のため iPhone にローカル保存）</li>
         <li>任意の位置情報</li>
         <li>選択したカレンダーへのアクセス</li>
+        <li>任意の Apple サインイン識別子（「デバイス間ライセンス同期」を有効にした場合のみ。安定したアプリ固有の識別子で、お客様のデバイス間で PRO ライセンスを照合する目的にのみ使用します。氏名やメールアドレスは要求しません）</li>
       </ul>
     </div>
     <div class="data-card">
@@ -874,12 +884,15 @@
   <h3>サブスクリプションと支払い</h3>
   <p>購入とサブスクリプションは Apple と RevenueCat によって処理されます。当社はお客様のクレジットカードや支払い情報を受け取りません。RevenueCat は、サブスクリプションステータス、「ライフタイム」アクセス、および無料トライアル期間を管理するために匿名のサブスクライバー識別子を保存します。このデータは、iPhone の再インストール後も PRO 機能へのアクセスを確認するために必要な期間保持され、グループ支出のクラウドデータとは独立して処理されます。</p>
 
+  <h3>デバイス間ライセンス同期（Apple でサインイン）</h3>
+  <p>Node Expense の利用に<strong>アカウントやサインインは不要</strong>です。同じ Apple アカウントでサインインした複数のデバイス（iPhone、iPad、Mac）で PRO をお持ちの場合、「サブスクリプション」画面で<strong>任意に</strong><strong>Apple でサインイン</strong>をタップすると、PRO ライセンスをそれらのデバイス間で同期できます。当社は<strong>氏名もメールアドレスも要求しません</strong>。Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子は、RevenueCat を通じて各デバイス上でお客様の PRO ライセンス（および利用済みの App Store オファーコード）を同一のサブスクライバー情報に照合する目的に<strong>のみ</strong>使用され、広告・トラッキング・プロファイリングには<strong>一切</strong>使用されません。デバイスの連携はいつでも「サブスクリプション」画面から解除でき、「iOS 設定 → お客様の Apple アカウント → Apple でサインイン」からサインインを完全に取り消すこともできます。</p>
+
   <h2><span class="section-number">3</span>サードパーティサービス</h2>
   <table class="service-table">
     <thead><tr><th>サービス</th><th>目的</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>サブスクリプションとアプリ内購入の管理、無料トライアルの追跡</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>リワード広告、インタースティシャル広告</td></tr>
+      <tr><td><strong>Apple でサインイン</strong></td><td>任意の PRO ライセンスのデバイス間同期（有効にした場合のみ）。安定したアプリ固有の識別子を提供。氏名・メールアドレスは含みません</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>匿名の利用分析</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>グループデータの同期（支出、メンバー、精算、削除リクエスト）、公開されている台湾統一発票の当選番号</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>グループ支出のレシート写真およびユーザープロフィール写真の保存（圧縮 JPEG、認証済みユーザーがアクセス可能）</td></tr>
@@ -928,9 +941,8 @@
   <p><strong>通知。</strong>発票番号が一致した場合、アプリは iPhone 上にローカル通知を表示します。当選の可能性は台湾財政部で確認するまで正式なものではなく、賞金の受け取りには印刷された発票を保管しておく必要があります。</p>
   <p><strong>お客様の選択。</strong>この機能は初期設定で無効であり、お客様ご自身による有効化が必要です。いつでも設定でオフにでき、オフにすると当選番号のダウンロードも照合も行われません。</p>
 
-<h2><span class="section-number">6</span>広告</h2>
-  <p>Node Expense は、無料プランのユーザー向けに広告によるサポートを受けています。月次上限に達したときのインタースティシャル広告、または追加の支出スロットをアンロックするための任意のリワード広告が含まれる場合があります。</p>
-  <p>無料プランを維持するため、Appleの「Appのトラッキング透明性」（App Tracking Transparency）フレームワークを使用して、より関連性の高い広告を配信する許可を求める場合があります。トラッキングを拒否した場合でも表示される広告の数は変わりませんが、関心の低い広告が表示されるようになります。この許可の選択によって、広告主がお客様の財務記録、iPhone 内の個人データ、またはクラウドに同期されたグループ出費にアクセスできるようになることは決してありません。</p>
+<h2><span class="section-number">6</span>広告なし・アプリ間トラッキングなし</h2>
+  <p>Node Expense は<strong>広告を一切表示しません</strong>。無料プランでも PRO サブスクリプションでも同様です。本アプリは他のアプリや Web サイトを横断してお客様を<strong>トラッキングせず</strong>、Apple の「App のトラッキング透明性」（App Tracking Transparency）フレームワークも使用せず、お客様のデータを広告ネットワークやデータブローカーに提供することもありません。アプリ内に広告 SDK は一切含まれていません。</p>
 
   <h2><span class="section-number">7</span>位置情報</h2>
   <p>位置情報の収集は任意であり、設定で明示的に有効にした場合のみ収集されます。有効にすると、新しい支出に位置情報が記録されます。位置情報は iPhone にローカル保存され、クラウドサービスにアップロードされることはありません。iOS の設定からいつでも位置情報へのアクセスを無効にできます。</p>
@@ -1022,7 +1034,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-07-01 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1044,6 +1056,7 @@
         <li>Taiwanesische elektronische Rechnungsnummern (beim Scannen einer taiwanesischen elektronischen Rechnung erfasst; lokal auf Ihrem iPhone für die optionale Lotterieprüfung gespeichert)</li>
         <li>Optionale Standortdaten</li>
         <li>Zugriff auf ausgewählte Kalender</li>
+        <li>Optionale Apple-Anmeldekennung (nur wenn Sie die geräteübergreifende Lizenzsynchronisierung aktivieren; eine stabile, app-spezifische Kennung, die ausschließlich dazu dient, Ihre PRO-Lizenz auf Ihren Geräten abzugleichen – es werden weder Name noch E-Mail-Adresse angefordert)</li>
       </ul>
     </div>
     <div class="data-card">
@@ -1062,12 +1075,15 @@
   <h3>Abonnements &amp; Zahlungen</h3>
   <p>Käufe und Abonnements werden von Apple und RevenueCat abgewickelt. Wir erhalten keine Kredit- oder Zahlungsdaten von Ihnen. RevenueCat speichert anonyme Abonnentenidentifikatoren zur Verwaltung Ihres Abonnementstatus, des „Lifetime"-Zugangs und des kostenlosen Testzeitraums. Diese Daten werden so lange aufbewahrt, wie es zur Überprüfung des PRO-Funktionszugangs nach einer Neuinstallation erforderlich ist, und werden unabhängig von Ihren Gruppenausgaben-Cloud-Daten verarbeitet.</p>
 
+  <h3>Geräteübergreifende Lizenzsynchronisierung (Mit Apple anmelden)</h3>
+  <p>Für die Nutzung von Node Expense sind <strong>kein Konto und keine Anmeldung erforderlich</strong>. Wenn Sie PRO auf mehreren Geräten (iPhone, iPad oder Mac) besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm <strong>optional</strong> auf <strong>Mit Apple anmelden</strong> tippen, um Ihre PRO-Lizenz geräteübergreifend zu synchronisieren. Wir fordern <strong>weder Name noch E-Mail-Adresse</strong> an – nur die stabile, app-spezifische Kennung, die Apple bereitstellt. Diese Kennung wird <strong>ausschließlich</strong> dazu verwendet, Ihre PRO-Lizenz (sowie eingelöste App-Store-Angebotscodes) über RevenueCat auf jedem Gerät demselben Abonnentenprofil zuzuordnen. Sie wird <strong>niemals</strong> für Werbung, Tracking oder Profilbildung verwendet. Sie können ein Gerät jederzeit über den Abonnement-Bildschirm trennen und die Anmeldung vollständig widerrufen unter „iOS-Einstellungen → Ihr Apple-Account → Mit Apple anmelden“.</p>
+
   <h2><span class="section-number">3</span>Drittanbieterdienste</h2>
   <table class="service-table">
     <thead><tr><th>Dienst</th><th>Zweck</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Verwaltung von Abonnements und In-App-Käufen, Verfolgung kostenloser Testzeiträume</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>Belohnungs- und Interstitial-Werbeanzeigen</td></tr>
+      <tr><td><strong>Mit Apple anmelden</strong></td><td>Optionale geräteübergreifende Synchronisierung Ihrer PRO-Lizenz (nur wenn Sie sie aktivieren); stellt eine stabile, app-spezifische Kennung bereit – ohne Name oder E-Mail-Adresse</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Anonyme Nutzungsanalysen</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisierung von Gruppendaten (Ausgaben, Mitglieder, Abrechnungen, Löschanfragen); öffentliche Gewinnzahlen der taiwanesischen Lotterie der einheitlichen Rechnung</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Speicherung von Belegfotos für Gruppenausgaben und Profilfotos der Nutzer (komprimiertes JPEG, für authentifizierte Nutzer zugänglich)</td></tr>
@@ -1116,9 +1132,8 @@
   <p><strong>Benachrichtigungen.</strong> Bei einer Übereinstimmung zeigt die App eine lokale Benachrichtigung auf Ihrem iPhone an. Ein möglicher Gewinn ist inoffiziell, bis Sie ihn beim taiwanesischen Finanzministerium bestätigen, und Sie müssen die gedruckte Rechnung aufbewahren, um einen Preis einzulösen.</p>
   <p><strong>Ihre Wahl.</strong> Die Funktion ist standardmäßig deaktiviert und erfordert Ihre Zustimmung. Sie können sie jederzeit in den Einstellungen deaktivieren; danach werden keine Gewinnzahlen heruntergeladen und keine Abgleiche durchgeführt.</p>
 
-<h2><span class="section-number">6</span>Werbung</h2>
-  <p>Node Expense wird für Nutzer im kostenlosen Tarif durch Werbung unterstützt. Dazu können Interstitial-Anzeigen beim Erreichen monatlicher Limits oder optionale Belohnungswerbung zum Freischalten zusätzlicher Ausgabenslots gehören.</p>
-  <p>Um unsere kostenlose Version zu unterstützen, bitten wir Sie möglicherweise um Erlaubnis, Ihnen mithilfe des „App-Tracking-Transparency“-Frameworks von Apple relevantere Werbung anzuzeigen. Wenn Sie dies ablehnen, sehen Sie weiterhin die gleiche Anzahl an Anzeigen, diese sind jedoch weniger relevant für Sie. Ihre Entscheidung, dies zu erlauben oder abzulehnen, gewährt Werbetreibenden keinen Zugriff auf Ihre Finanzdaten, Ihre lokalen Daten auf dem iPhone oder Ihre in der Cloud synchronisierten Gruppenausgaben.</p>
+<h2><span class="section-number">6</span>Keine Werbung, kein app-übergreifendes Tracking</h2>
+  <p>Node Expense zeigt <strong>keine Werbung</strong> – weder im kostenlosen Tarif noch mit einem PRO-Abonnement. Die App <strong>verfolgt Sie nicht</strong> über andere Apps oder Websites hinweg, verwendet nicht das „App-Tracking-Transparency“-Framework von Apple und gibt Ihre Daten nicht an Werbenetzwerke oder Datenhändler weiter. In der App ist kein Werbe-SDK enthalten.</p>
 
   <h2><span class="section-number">7</span>Standortdaten</h2>
   <p>Standortdaten sind optional und werden nur erfasst, wenn Sie dies in den Einstellungen explizit aktivieren. Wenn aktiviert, wird Ihr Standort mit neuen Ausgaben gespeichert. Standortdaten werden lokal auf Ihrem iPhone gespeichert und nicht in Cloud-Dienste hochgeladen. Sie können den Standortzugriff jederzeit in den iOS-Einstellungen deaktivieren.</p>
@@ -1210,7 +1225,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-07-01 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1232,6 +1247,7 @@
         <li>Números de factura electrónica de Taiwán (capturados al escanear una factura electrónica de Taiwán; guardados localmente en su iPhone para la comprobación opcional de la lotería)</li>
         <li>Datos de ubicación opcionales</li>
         <li>Acceso al calendario seleccionado</li>
+        <li>Identificador opcional de inicio de sesión de Apple (solo si activa la Sincronización de licencia entre dispositivos; un identificador estable y específico de la app que se usa únicamente para asociar su licencia PRO en sus dispositivos; no se solicita nombre ni correo electrónico)</li>
       </ul>
     </div>
     <div class="data-card">
@@ -1250,12 +1266,15 @@
   <h3>Suscripciones &amp; pagos</h3>
   <p>Las compras y suscripciones son procesadas por Apple y RevenueCat. No recibimos sus datos de tarjeta de crédito ni información de pago. RevenueCat almacena identificadores de suscriptor anónimos para gestionar el estado de su suscripción, el acceso "Lifetime" y el período de prueba gratuito. Estos datos se conservan el tiempo necesario para verificar el acceso a las funciones PRO tras reinstalaciones del iPhone y se procesan independientemente de los datos en la nube de gastos de grupo.</p>
 
+  <h3>Sincronización de licencia entre dispositivos (Iniciar sesión con Apple)</h3>
+  <p>No se requiere cuenta ni inicio de sesión para usar Node Expense. Si tiene PRO en más de un dispositivo (iPhone, iPad o Mac) con la sesión iniciada en la misma cuenta de Apple, puede <strong>opcionalmente</strong> tocar <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO entre ellos. <strong>No solicitamos ni nombre ni correo electrónico</strong>: solo el identificador estable y específico de la app que proporciona Apple. Ese identificador se usa <strong>únicamente</strong> para asociar su licencia PRO (y cualquier código de oferta de la App Store que haya canjeado) al mismo perfil de suscriptor en cada dispositivo, a través de RevenueCat. <strong>Nunca</strong> se usa para publicidad, seguimiento ni elaboración de perfiles. Puede desconectar un dispositivo en cualquier momento desde la pantalla de Suscripción, y puede revocar el inicio de sesión por completo en Configuración de iOS → su cuenta de Apple → Iniciar sesión con Apple.</p>
+
   <h2><span class="section-number">3</span>Servicios de terceros</h2>
   <table class="service-table">
     <thead><tr><th>Servicio</th><th>Finalidad</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Gestión de suscripciones y compras dentro de la app, seguimiento de período de prueba gratuito</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>Anuncios recompensados e intersticiales</td></tr>
+      <tr><td><strong>Iniciar sesión con Apple</strong></td><td>Sincronización opcional de su licencia PRO entre dispositivos (solo si la activa); proporciona un identificador estable y específico de la app, sin nombre ni correo electrónico</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Análisis de uso anónimo</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Sincronización de datos de grupo (gastos, miembros, liquidaciones, solicitudes de eliminación); números premiados públicos de la lotería de la factura unificada de Taiwán</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Almacenamiento de fotos de recibos para gastos de grupo y fotos de perfil de usuario (JPEG comprimido, accesible para usuarios autenticados)</td></tr>
@@ -1304,9 +1323,8 @@
   <p><strong>Notificaciones.</strong> Si un número coincide, la app muestra una notificación local en su iPhone. Un posible premio no es oficial hasta que lo verifique con el Ministerio de Finanzas de Taiwán, y debe conservar la factura impresa para cobrar cualquier premio.</p>
   <p><strong>Su elección.</strong> La función está desactivada de forma predeterminada y requiere que usted la active. Puede desactivarla en cualquier momento en Configuración; después no se descargará ningún número premiado ni se realizará ninguna comprobación.</p>
 
-<h2><span class="section-number">6</span>Publicidad</h2>
-  <p>Node Expense está respaldado por anuncios para los usuarios del nivel gratuito. Estos pueden incluir anuncios intersticiales al alcanzar los límites mensuales o anuncios de recompensa opcionales para desbloquear espacios adicionales de gastos.</p>
-  <p>Para poder mantener nuestra versión gratuita, es posible que le pidamos permiso para mostrarle anuncios más relevantes a través del marco de Transparencia de seguimiento en apps (App Tracking Transparency) de Apple. Si se niega, seguirá viendo la misma cantidad de anuncios, pero serán menos relevantes para usted. Elegir permitir o denegar esto no otorga a los anunciantes acceso a sus registros financieros, a sus datos personales guardados en el iPhone ni a sus gastos de grupo sincronizados en la nube.</p>
+<h2><span class="section-number">6</span>Sin publicidad ni seguimiento entre apps</h2>
+  <p>Node Expense <strong>no muestra ningún anuncio</strong>, ni en el nivel gratuito ni con una suscripción PRO. La app <strong>no</strong> le realiza seguimiento a través de otras apps o sitios web, no utiliza el marco de Transparencia de seguimiento en apps (App Tracking Transparency) de Apple y no comparte sus datos con redes publicitarias ni intermediarios de datos. La app no incluye ningún SDK de publicidad.</p>
 
   <h2><span class="section-number">7</span>Datos de ubicación</h2>
   <p>Los datos de ubicación son opcionales y solo se recopilan si los habilita explícitamente en Configuración. Cuando está habilitada, su ubicación se registra junto con los nuevos gastos. Los datos de ubicación se almacenan localmente en su iPhone y no se cargan en servicios en la nube. Puede deshabilitar el acceso a la ubicación en cualquier momento en los Ajustes de iOS.</p>
@@ -1398,7 +1416,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-06-11 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-07-01 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1420,6 +1438,7 @@
         <li>Numéros de facture électronique taïwanaise (capturés lors du scan d'une facture électronique taïwanaise ; enregistrés localement sur votre iPhone pour la vérification facultative de la loterie)</li>
         <li>Données de localisation optionnelles</li>
         <li>Accès au calendrier sélectionné</li>
+        <li>Identifiant de connexion Apple optionnel (uniquement si vous activez la Synchronisation de licence entre appareils ; un identifiant stable et propre à l'app, utilisé uniquement pour associer votre licence PRO sur vos appareils — aucun nom ni e-mail n'est demandé)</li>
       </ul>
     </div>
     <div class="data-card">
@@ -1438,12 +1457,15 @@
   <h3>Abonnements &amp; paiements</h3>
   <p>Les achats et abonnements sont traités par Apple et RevenueCat. Nous ne recevons pas vos données de carte de crédit ni vos informations de paiement. RevenueCat stocke des identifiants d'abonné anonymes pour gérer votre statut d'abonnement, l'accès « Lifetime » et la période d'essai gratuite. Ces données sont conservées le temps nécessaire à la vérification de l'accès aux fonctionnalités PRO après une réinstallation et sont traitées indépendamment de vos données cloud de dépenses de groupe.</p>
 
+  <h3>Synchronisation de licence entre appareils (Se connecter avec Apple)</h3>
+  <p>Aucun compte ni aucune connexion n'est requis pour utiliser Node Expense. Si vous possédez PRO sur plusieurs appareils (iPhone, iPad ou Mac) connectés au même compte Apple, vous pouvez <strong>facultativement</strong> toucher <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre eux. Nous ne demandons <strong>ni nom ni e-mail</strong> — uniquement l'identifiant stable et propre à l'app fourni par Apple. Cet identifiant sert <strong>uniquement</strong> à associer votre licence PRO (ainsi que tout code promotionnel App Store que vous avez utilisé) au même profil d'abonné sur chaque appareil, via RevenueCat. Il n'est <strong>jamais</strong> utilisé à des fins de publicité, de suivi ou de profilage. Vous pouvez déconnecter un appareil à tout moment depuis l'écran Abonnement, et révoquer entièrement la connexion dans Réglages iOS → votre compte Apple → Se connecter avec Apple.</p>
+
   <h2><span class="section-number">3</span>Services tiers</h2>
   <table class="service-table">
     <thead><tr><th>Service</th><th>Finalité</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Gestion des abonnements et achats intégrés, suivi de la période d'essai gratuite</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>Publicités avec récompense et interstitielles</td></tr>
+      <tr><td><strong>Se connecter avec Apple</strong></td><td>Synchronisation optionnelle de votre licence PRO entre appareils (uniquement si vous l'activez) ; fournit un identifiant stable et propre à l'app — sans nom ni e-mail</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>Analyses d'utilisation anonymes</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisation des données de groupe (dépenses, membres, remboursements, demandes de suppression) ; numéros gagnants publics de la loterie de la facture unifiée de Taïwan</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Stockage des photos de reçus pour les dépenses de groupe et des photos de profil utilisateur (JPEG compressé, accessible aux utilisateurs authentifiés)</td></tr>
@@ -1492,9 +1514,8 @@
   <p><strong>Notifications.</strong> En cas de correspondance, l'app affiche une notification locale sur votre iPhone. Un gain possible n'est pas officiel tant que vous ne l'avez pas vérifié auprès du ministère des Finances de Taïwan, et vous devez conserver la facture imprimée pour encaisser un prix.</p>
   <p><strong>Votre choix.</strong> La fonctionnalité est désactivée par défaut et nécessite votre consentement. Vous pouvez la désactiver à tout moment dans les Réglages ; ensuite, aucun numéro gagnant n'est téléchargé et aucune vérification n'est effectuée.</p>
 
-<h2><span class="section-number">6</span>Publicités</h2>
-  <p>Node Expense est soutenu par des publicités pour les utilisateurs du niveau gratuit. Celles-ci peuvent inclure des publicités interstitielles lors de l'atteinte des limites mensuelles, ou des publicités avec récompense optionnelles pour débloquer des emplacements de dépenses supplémentaires.</p>
-  <p>Afin de maintenir notre version gratuite, nous pouvons vous demander l'autorisation de diffuser des publicités plus pertinentes via le cadre de Transparence du suivi des apps (App Tracking Transparency) d'Apple. Si vous refusez, vous verrez le même nombre de publicités, mais elles seront moins pertinentes. Le fait d'accepter ou de refuser n'autorise en aucun cas les annonceurs à accéder à vos registres financiers, à vos données personnelles stockées sur l'iPhone ou à vos dépenses de groupe synchronisées dans le cloud.</p>
+<h2><span class="section-number">6</span>Aucune publicité ni suivi inter-apps</h2>
+  <p>Node Expense n'affiche <strong>aucune publicité</strong> — ni dans le niveau gratuit, ni avec un abonnement PRO. L'app <strong>ne vous suit pas</strong> à travers d'autres apps ou sites web, n'utilise pas le cadre de Transparence du suivi des apps (App Tracking Transparency) d'Apple et ne partage pas vos données avec des réseaux publicitaires ou des courtiers en données. L'app ne contient aucun SDK publicitaire.</p>
 
   <h2><span class="section-number">7</span>Données de localisation</h2>
   <p>Les données de localisation sont optionnelles et ne sont collectées que si vous les activez explicitement dans les Réglages. Lorsqu'elles sont activées, votre position est enregistrée avec les nouvelles dépenses. Les données de localisation sont stockées localement sur votre iPhone et ne sont pas téléversées vers des services cloud. Vous pouvez désactiver l'accès à la localisation à tout moment dans les Réglages iOS.</p>
@@ -1587,7 +1608,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-06-11 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-07-01 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1606,9 +1627,10 @@
         <li>Pick &amp; Pay 를 통한 항목별 분할용으로 스캔된 영수증 이미지 (AI 처리를 위해 Google Gemini API 로 전송됨; PRO 구독 기능)</li>
         <li>선택적 프로필 사진 — 참가하는 모든 그룹의 멤버에게 표시됨 (PRO 구독 기능)</li>
         <li>선택적 그룹 사진 — 그룹 관리자가 설정하며 해당 그룹의 모든 멤버에게 표시됨 (PRO 구독 기능)</li>
-        <li>대만 전자 발표 번호(대만 전자 발표를 스캔할 때 캡처되며, 선택적 통일발표 복권 대조를 위해 iPhone에 로컬로 저장됨)</li>
+        <li>대만 전자영수증 번호(대만 전자영수증을 스캔할 때 캡처되며, 선택적 통일발표 복권 대조를 위해 iPhone에 로컬로 저장됨)</li>
         <li>선택적 위치 데이터</li>
         <li>선택한 캘린더 접근 권한</li>
+        <li>선택적 Apple 로그인 식별자(‘기기 간 라이선스 동기화’를 켠 경우에만 해당; 안정적이고 앱에 한정된 식별자로, 귀하의 기기 간에 PRO 라이선스를 대조하는 용도로만 사용되며 이름이나 이메일은 요청하지 않습니다)</li>
       </ul>
     </div>
     <div class="data-card">
@@ -1627,12 +1649,15 @@
   <h3>구독 및 결제</h3>
   <p>구매 및 구독은 Apple과 RevenueCat을 통해 처리됩니다. 당사는 귀하의 신용카드나 결제 정보를 받지 않습니다. RevenueCat은 구독 상태, '평생' 접근 권한 및 무료 체험 기간을 관리하기 위해 익명 구독자 식별자를 저장합니다. 해당 데이터는 재설치 후 PRO 기능 접근 확인에 필요한 기간 동안 보관되며, 그룹 지출 클라우드 데이터와는 별도로 처리됩니다.</p>
 
+  <h3>기기 간 라이선스 동기화 (Apple로 로그인)</h3>
+  <p>Node Expense 사용에는 <strong>계정이나 로그인이 필요하지 않습니다</strong>. 동일한 Apple 계정으로 로그인한 여러 기기(iPhone, iPad, Mac)에서 PRO를 보유하고 있다면, 구독 화면에서 <strong>선택적으로</strong> <strong>Apple로 로그인</strong>을 탭하여 PRO 라이선스를 기기 간에 동기화할 수 있습니다. 당사는 <strong>이름이나 이메일을 요청하지 않으며</strong>, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 RevenueCat을 통해 각 기기에서 귀하의 PRO 라이선스(및 귀하가 사용한 App Store 오퍼 코드)를 동일한 구독자 프로필에 대조하는 용도로만 사용되며, 광고·추적·프로파일링에는 <strong>절대</strong> 사용되지 않습니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있고, 「iOS 설정 → 귀하의 Apple 계정 → Apple로 로그인」에서 로그인을 완전히 취소할 수 있습니다.</p>
+
   <h2><span class="section-number">3</span>제3자 서비스</h2>
   <table class="service-table">
     <thead><tr><th>서비스</th><th>목적</th></tr></thead>
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>구독 및 인앱 구매 관리, 무료 체험 기간 추적</td></tr>
-      <tr><td><strong>Google AdMob</strong></td><td>보상형, 전면 광고 제공</td></tr>
+      <tr><td><strong>Apple로 로그인</strong></td><td>선택적 PRO 라이선스 기기 간 동기화(활성화한 경우에만); 안정적이고 앱에 한정된 식별자 제공 — 이름이나 이메일 없음</td></tr>
       <tr><td><strong>Firebase Analytics</strong></td><td>익명 사용 분석</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>그룹 데이터 동기화 (지출, 멤버, 정산, 삭제 요청); 공개된 대만 통일발표 복권 당첨 번호</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>그룹 지출의 영수증 사진 및 사용자 프로필 사진 저장 (압축 JPEG, 인증된 사용자가 접근 가능)</td></tr>
@@ -1675,15 +1700,14 @@
   <p>Pick &amp; Pay 는 전적으로 선택 사항입니다. 다른 분할 모드(균등, % 별, $ 별) 중 어떤 것을 사용해서도 Gemini API 에 데이터를 전송하지 않고 그룹 지출을 분할할 수 있습니다. Pick &amp; Pay 를 한 번도 사용하지 않으면, 영수증 이미지가 Google 로 전송되지 않습니다.</p>
 
     <h2><span class="section-number">5</span>대만 통일발표 복권</h2>
-  <p>대만 전자 발표(電子發票)에는 정부가 2개월마다 시행하는 통일발표 복권(統一發票)의 대상이 되는 번호가 기재되어 있습니다. Node Expense는 스캔한 발표 번호를 공식 당첨 번호와 대조하여 당첨 가능성을 알려주는 선택적이고 <strong>기본적으로 꺼져 있는</strong> 기능을 제공합니다.</p>
-  <p><strong>iPhone에서만 처리.</strong> 대만 전자 발표를 스캔하면 발표 번호가 해당 지출과 함께 iPhone에 로컬로 저장되며, 이는 다른 개인 지출 데이터와 완전히 동일하게 처리되어 당사 서버에 <strong>업로드되지 않습니다</strong>.</p>
-  <p><strong>대조 방식.</strong> 이 기능을 켜면(설정 → 알림 → 대만 통일발표 복권) 앱이 <strong>공개 정보</strong>인 공식 당첨 번호를 당사 Firebase Firestore에서 다운로드하여 <strong>전적으로 iPhone에서</strong> 귀하의 발표 번호와 대조합니다. 귀하의 발표 번호는 iPhone을 벗어나지 않으며, 이 기능을 위해 귀하의 발표, 구매 또는 신원에 관한 어떠한 정보도 당사나 제3자에게 전송되지 않습니다.</p>
-  <p><strong>알림.</strong> 번호가 일치하면 앱이 iPhone에 로컬 알림을 표시합니다. 당첨 가능성은 대만 재정부에서 확인하기 전까지 공식적인 것이 아니며, 상금을 수령하려면 인쇄된 발표를 보관해야 합니다.</p>
+  <p>대만 전자영수증(電子發票)에는 정부가 2개월마다 시행하는 통일발표 복권(統一發票)의 대상이 되는 번호가 기재되어 있습니다. Node Expense는 스캔한 영수증 번호를 공식 당첨 번호와 대조하여 당첨 가능성을 알려주는 선택적이고 <strong>기본적으로 꺼져 있는</strong> 기능을 제공합니다.</p>
+  <p><strong>iPhone에서만 처리.</strong> 대만 전자영수증을 스캔하면 영수증 번호가 해당 지출과 함께 iPhone에 로컬로 저장되며, 이는 다른 개인 지출 데이터와 완전히 동일하게 처리되어 당사 서버에 <strong>업로드되지 않습니다</strong>.</p>
+  <p><strong>대조 방식.</strong> 이 기능을 켜면(설정 → 알림 → 대만 통일발표 복권) 앱이 <strong>공개 정보</strong>인 공식 당첨 번호를 당사 Firebase Firestore에서 다운로드하여 <strong>전적으로 iPhone에서</strong> 귀하의 영수증 번호와 대조합니다. 귀하의 영수증 번호는 iPhone을 벗어나지 않으며, 이 기능을 위해 귀하의 영수증, 구매 또는 신원에 관한 어떠한 정보도 당사나 제3자에게 전송되지 않습니다.</p>
+  <p><strong>알림.</strong> 번호가 일치하면 앱이 iPhone에 로컬 알림을 표시합니다. 당첨 가능성은 대만 재정부에서 확인하기 전까지 공식적인 것이 아니며, 상금을 수령하려면 인쇄된 영수증을 보관해야 합니다.</p>
   <p><strong>귀하의 선택.</strong> 이 기능은 기본적으로 꺼져 있으며 귀하가 직접 켜야 합니다. 언제든지 설정에서 끌 수 있으며, 끄면 당첨 번호가 다운로드되지 않고 어떠한 대조도 수행되지 않습니다.</p>
 
-<h2><span class="section-number">6</span>광고</h2>
-  <p>Node Expense는 무료 등급 사용자를 위해 광고로 운영됩니다. 여기에는 월별 한도 도달 시 전면 광고, 또는 추가 지출 슬롯을 잠금 해제하기 위한 선택적 보상형 광고가 포함될 수 있습니다.</p>
-  <p>무료 서비스를 유지하기 위해 Apple의 앱 추적 투명성(App Tracking Transparency) 프레임워크를 사용하여 보다 관련성 높은 광고를 표시할 수 있도록 귀하의 허가를 요청할 수 있습니다. 허가하지 않더라도 표시되는 광고의 수는 동일하지만, 귀하와 관련성이 낮은 광고가 표시될 수 있습니다. 허가 또는 거부 여부와 관계없이 광고주는 귀하의 금융 기록, iPhone 내 개인 데이터 또는 클라우드에 동기화된 그룹 지출 내역에 절대 접근할 수 없습니다.</p>
+<h2><span class="section-number">6</span>광고 없음 · 앱 간 추적 없음</h2>
+  <p>Node Expense는 무료 등급에서도, PRO 구독에서도 <strong>어떠한 광고도 표시하지 않습니다</strong>. 이 앱은 다른 앱이나 웹사이트에 걸쳐 귀하를 <strong>추적하지 않으며</strong>, Apple의 앱 추적 투명성(App Tracking Transparency) 프레임워크를 사용하지 않고, 귀하의 데이터를 광고 네트워크나 데이터 브로커와 공유하지 않습니다. 앱에는 어떠한 광고 SDK도 포함되어 있지 않습니다.</p>
 
   <h2><span class="section-number">7</span>위치 데이터</h2>
   <p>위치 데이터는 선택 사항이며 설정에서 명시적으로 활성화한 경우에만 수집됩니다. 활성화 시, 새로운 지출과 함께 위치가 기록됩니다. 위치 데이터는 iPhone 에 로컬로 저장되며 클라우드 서비스에 업로드되지 않습니다. iOS 설정에서 언제든지 위치 접근을 비활성화할 수 있습니다.</p>
@@ -1696,7 +1720,7 @@
   <p>다음 데이터가 iPhone 에 저장되어 있습니다:</p>
   <ul>
     <li>개인(비그룹) 지출 기록</li>
-    <li>지출에 첨부된 대만 전자 발표 번호(선택적 통일발표 복권 대조에만 사용)</li>
+    <li>지출에 첨부된 대만 전자영수증 번호(선택적 통일발표 복권 대조에만 사용)</li>
     <li>개인 지출의 영수증 사진 (PRO 구독 기능; 어떠한 클라우드 서비스에도 업로드되지 않음)</li>
     <li>앱 설정 및 환경설정</li>
     <li>오프라인 접근을 위한 그룹 데이터 로컬 복사본</li>
