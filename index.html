@@ -318,6 +318,59 @@
   </div>
 </section>
 
+<style>
+  .cmp-card { max-width: 840px; margin: 0 auto; border: 1px solid var(--line,#ececef); border-radius: 16px; overflow-x: auto; }
+  .cmp-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 14px; table-layout: fixed; }
+  .cmp-table th, .cmp-table td { padding: 13px 8px; text-align: center; }
+  .cmp-table thead th { background: var(--bg-soft,#f7f7f9); font-weight: 600; font-size: 13.5px; padding: 15px 8px; }
+  .cmp-table thead th.cmp-feat { text-align: left; padding-left: 18px; color: var(--muted,#6b7280); font-weight: 500; width: 38%; }
+  .cmp-table thead th.cmp-me { color: var(--indigo,#4f46e5); font-weight: 700; background: var(--indigo-soft,#f1f0fe); line-height: 1.2; }
+  .cmp-table tbody td { border-top: 1px solid var(--line,#ececef); }
+  .cmp-table td.cmp-feat { text-align: left; padding-left: 18px; }
+  .cmp-table td.cmp-me { background: #faf9ff; }
+  .cmp-yes { color: var(--indigo,#4f46e5); font-weight: 700; }
+  .cmp-no { color: #c4c2cc; }
+  .cmp-part { color: var(--muted,#6b7280); font-size: 12px; }
+  .cmp-notes { max-width: 840px; margin: 18px auto 0; padding-left: 22px; font-size: 12.5px; color: #9b99a3; line-height: 1.6; text-align: left; }
+  .cmp-notes li { margin-bottom: 6px; }
+</style>
+<section class="wrap" style="padding:44px 0 8px;">
+  <div style="text-align:center; max-width:760px; margin:0 auto 30px;">
+    <span class="label" style="display:inline-block;">How it compares</span>
+    <h2 style="font-size:34px; font-weight:700; letter-spacing:-0.02em; line-height:1.14; margin:10px 0 8px;">Split smarter — and keep it private.</h2>
+    <p style="font-size:17px; color:var(--muted); margin:0;">The things people actually switch for, side by side.</p>
+  </div>
+  <div class="cmp-card">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th class="cmp-feat"></th>
+          <th class="cmp-me">Node Expense</th>
+          <th>Splitwise</th>
+          <th>Tricount</th>
+          <th>Settle Up</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cmp-feat">Scan a receipt and split it line by line</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">Import a saved photo, not just the live camera</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-part">Camera only</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">Split a single item by quantity <span style="color:#a5a3ad;">(one beer, not the round)</span></td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">Your receipts are never used to train AI models <sup style="color:var(--indigo,#4f46e5);">1</sup></td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-part">May train</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">Settle up via Venmo, Cash App &amp; PayPal</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-part">Venmo/PayPal</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">Smart debt simplification</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td><span class="cmp-yes">&#10003;</span></td></tr>
+        <tr><td class="cmp-feat">Personal spending tracker &mdash; solo, on-device</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">No phone, email, or sign-up required</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">Pay once for life &mdash; no subscription</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-part">Free</td><td class="cmp-no">&mdash;</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ol class="cmp-notes">
+    <li>Per Splitwise's privacy policy, a third-party OCR vendor &ldquo;may &hellip; train an algorithm on receipts you provide.&rdquo; Node's personal scans stay on-device; group scans use Google's paid Gemini API, which is not used to train Google's models.</li>
+    <li>Comparison based on each app's publicly available App Store description and privacy policy as of <strong style="color:var(--muted,#6b7280); font-weight:600;">July 5, 2026</strong>; features may change over time.</li>
+    <li>Node Expense is an iPhone, iPad &amp; Mac app. Splitwise, Tricount, and Settle Up are trademarks of their respective owners and are not affiliated with or endorsers of Node Expense.</li>
+  </ol>
+</section>
+
 <section class="band">
   <div class="band-in">
     <h2>Private by design.</h2>

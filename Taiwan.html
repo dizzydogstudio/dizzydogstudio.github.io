@@ -320,6 +320,59 @@
   </div>
 </section>
 
+<style>
+  .cmp-card { max-width: 840px; margin: 0 auto; border: 1px solid var(--line,#ececef); border-radius: 16px; overflow-x: auto; }
+  .cmp-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 14px; table-layout: fixed; }
+  .cmp-table th, .cmp-table td { padding: 13px 8px; text-align: center; }
+  .cmp-table thead th { background: var(--bg-soft,#f7f7f9); font-weight: 600; font-size: 13.5px; padding: 15px 8px; }
+  .cmp-table thead th.cmp-feat { text-align: left; padding-left: 18px; color: var(--muted,#6b7280); font-weight: 500; width: 38%; }
+  .cmp-table thead th.cmp-me { color: var(--indigo,#4f46e5); font-weight: 700; background: var(--indigo-soft,#f1f0fe); line-height: 1.2; }
+  .cmp-table tbody td { border-top: 1px solid var(--line,#ececef); }
+  .cmp-table td.cmp-feat { text-align: left; padding-left: 18px; }
+  .cmp-table td.cmp-me { background: #faf9ff; }
+  .cmp-yes { color: var(--indigo,#4f46e5); font-weight: 700; }
+  .cmp-no { color: #c4c2cc; }
+  .cmp-part { color: var(--muted,#6b7280); font-size: 12px; }
+  .cmp-notes { max-width: 840px; margin: 18px auto 0; padding-left: 22px; font-size: 12.5px; color: #9b99a3; line-height: 1.7; text-align: left; }
+  .cmp-notes li { margin-bottom: 6px; }
+</style>
+<section class="wrap" style="padding:44px 0 8px;">
+  <div style="text-align:center; max-width:760px; margin:0 auto 30px;">
+    <span class="label" style="display:inline-block;">功能比較</span>
+    <h2 style="font-size:34px; font-weight:700; letter-spacing:-0.02em; line-height:1.2; margin:10px 0 8px;">分帳更聰明，隱私更安心。</h2>
+    <p style="font-size:17px; color:var(--muted); margin:0;">大家真正會為它換 App 的那些差別，一次看清。</p>
+  </div>
+  <div class="cmp-card">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th class="cmp-feat"></th>
+          <th class="cmp-me">Node Expense</th>
+          <th>Splitwise</th>
+          <th>Tricount</th>
+          <th>Settle Up</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cmp-feat">掃描收據並逐項拆分</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">可匯入已存的照片，不限即時相機</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-part">僅限相機</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">單一品項可依數量拆分 <span style="color:#a5a3ad;">(只算你那杯，不是整輪)</span></td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">您的收據絕不會用來訓練 AI 模型 <sup style="color:var(--indigo,#4f46e5);">1</sup></td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-part">可能訓練</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">透過 Venmo、Cash App 與 PayPal 結清</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-part">Venmo/PayPal</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">智慧債務精簡</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td><span class="cmp-yes">&#10003;</span></td></tr>
+        <tr><td class="cmp-feat">個人記帳 &mdash; 獨自使用、資料存於裝置</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">免電話、免電子郵件、免註冊</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td></tr>
+        <tr><td class="cmp-feat">一次買斷終身使用 &mdash; 免訂閱</td><td class="cmp-me"><span class="cmp-yes">&#10003;</span></td><td class="cmp-no">&mdash;</td><td class="cmp-part">免費</td><td class="cmp-no">&mdash;</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ol class="cmp-notes">
+    <li>根據 Splitwise 的隱私權政策,第三方 OCR 供應商「可能……以您提供的收據訓練演算法」。Node 的個人掃描皆在裝置上完成；群組掃描使用 Google 付費版 Gemini API,不會用於訓練 Google 的模型。</li>
+    <li>本比較依各 App 於 <strong style="color:var(--muted,#6b7280); font-weight:600;">2026 年 7 月 5 日</strong> 公開的 App Store 說明與隱私權政策製作；功能可能隨時變動。</li>
+    <li>Node Expense 為 iPhone、iPad 與 Mac App。Splitwise、Tricount 與 Settle Up 為其各自擁有者的商標,與 Node Expense 並無關聯,亦未為其背書。</li>
+  </ol>
+</section>
+
 <section class="band">
   <div class="band-in">
     <h2>以隱私為設計核心。</h2>
