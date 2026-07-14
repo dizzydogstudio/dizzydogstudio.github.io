@@ -34,3 +34,9 @@ add_copy_right_file_headers.sh.sh
 
 # Marketing screenshots (large, kept locally — not committed)
 marketing/App_Store_Screenshots/
+
+# Source screenshots for the scenario landing pages — full-res originals kept
+# locally; the published copies live in assets/phone-{roommates,couples,travel}-*.png
+couples/
+roommates/
+travel/
