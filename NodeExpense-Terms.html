@@ -4,8 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Node Expense: Track Together — Terms of Service</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="./assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* Self-hosted — see assets/fonts/OFL.txt. No third-party font requests. */
+  @font-face {
+    font-family: 'DM Sans'; font-style: normal; font-weight: 300 600;
+    font-display: swap; src: url('./assets/fonts/dm-sans.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Serif Display'; font-style: normal; font-weight: 400;
+    font-display: swap; src: url('./assets/fonts/dm-serif-display.woff2') format('woff2');
+  }
   :root {
     --bg: #f7f5f0;
     --surface: #ffffff;
