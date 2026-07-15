@@ -76,6 +76,7 @@
   /* hero */
   .hero { text-align: center; padding: 84px 0 16px; }
   .hero h1 { font-size: 58px; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; max-width: 760px; margin: 0 auto 22px; }
+  .hero h1 .h1-line { display: block; }
   .hero p { font-size: 21px; color: var(--muted); max-width: 600px; margin: 0 auto 30px; }
   .hero-meta { margin-top: 16px; font-size: 14px; color: var(--muted); }
   .hero-meta .stars { color: #f4b740; letter-spacing: 1px; }
@@ -146,6 +147,7 @@
   @media (max-width: 1000px) { .feat.trio { grid-template-columns: 1fr; gap: 36px; } }
   @media (max-width: 760px) {
     .hero { padding: 60px 0 8px; } .hero h1 { font-size: 40px; } .hero p { font-size: 18px; }
+    .hero h1 .h1-line { display: inline; }
     .hero-scenarios { gap: 8px; }
     .hero-scenarios > span:first-child { flex-basis: 100%; margin-bottom: 2px; }
     .feat { grid-template-columns: 1fr; gap: 32px; padding: 64px 0; text-align: center; }
@@ -176,8 +178,8 @@
 
 <a id="top"></a>
 <header class="hero wrap">
-  <h1>Set your split ratio once. Every expense follows it.</h1>
-  <p>Not every couple splits 50/50. Set a default ratio for your household — 60/40, 70/30, whatever's fair — and it pre-fills automatically every time either of you adds a shared expense.</p>
+  <h1>Spend time together. <span class="h1-line">Not keeping score.</span></h1>
+  <p>No mental tally, no “didn't I pay last time?”. Set what's fair once — 50/50, 60/40, whatever works for the two of you — and every shared expense quietly follows it.</p>
   <a class="dl" href="https://apps.apple.com/us/app/node-expense-track-together/id6759304601">
     <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
     <span><small>Download on the</small><b>App Store</b></span>
@@ -197,10 +199,10 @@
 <section class="wrap" style="text-align:center; padding-top:54px;">
   <span class="label" style="display:inline-block;">Default split</span>
   <div class="pills pills-tight" style="margin-top:14px;">
-    <span class="pill">Set once, applies to every new expense</span>
-    <span class="pill">Still adjustable per expense</span>
-    <span class="pill">Turns blue when you go off the default ratio</span>
-    <span class="pill">Not locked to 50/50</span>
+    <span class="pill">Fair isn't always 50/50</span>
+    <span class="pill">Set it once, then forget it</span>
+    <span class="pill">Tonight's on you? Adjust just that one</span>
+    <span class="pill">No tally to keep in your head</span>
   </div>
   <p style="margin-top:24px; font-size:14px; color:var(--muted);">Up to 15 personal expenses a month, no ads. Go PRO for unlimited.</p>
 </section>
@@ -209,8 +211,8 @@
 
   <section class="feat">
     <div class="feat-text">
-      <span class="label">Group settings</span>
-      <h2>Set your split ratio once.</h2>
+      <span class="label">Agree once</span>
+      <h2>Decide what's fair. Once.</h2>
       <p>Open your group settings and set a fixed ratio between the two of you — say, 60% and 40%. Drag each person's slider to set their share, and a live total confirms the moment they add up to 100%.</p>
       <ul class="ticks">
         <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Turn on "Use Fixed Split Ratio" for the group</li>
@@ -223,8 +225,8 @@
 
   <section class="feat alt">
     <div class="feat-text">
-      <span class="label">Add expense</span>
-      <h2>Every new expense follows it.</h2>
+      <span class="label">Every expense after</span>
+      <h2>Then nobody does the math again.</h2>
       <p>Add an expense the normal way, and "Split by %" is already there — pre-filled to your saved ratio. No retyping 60/40 every single time one of you splits a bill.</p>
       <ul class="ticks">
         <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>"By %" opens already set to your group's default split</li>
@@ -237,8 +239,8 @@
 
   <section class="feat">
     <div class="feat-text">
-      <span class="label">One-off adjustments</span>
-      <h2>Still yours to adjust.</h2>
+      <span class="label">Exceptions</span>
+      <h2>Except when tonight's on you.</h2>
       <p>Splitting one big-ticket item differently just this once? Drag the slider for that expense only — your saved default doesn't change. The slider turns blue the moment it's off-ratio, so it's obvious at a glance which expenses are the exception.</p>
       <ul class="ticks">
         <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Override the split for any single expense without touching the group default</li>
@@ -251,8 +253,8 @@
 
   <section class="feat alt">
     <div class="feat-text">
-      <span class="label">Group overview</span>
-      <h2>Always visible. One tap to change it.</h2>
+      <span class="label">No surprises</span>
+      <h2>Nothing hidden. Nothing to argue about.</h2>
       <p>Your default split isn't buried in a menu — it's right at the top of the group's expense list, every time you open it. Tap the banner and you're straight into settings to adjust the ratio, any time you need to.</p>
       <ul class="ticks">
         <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>A "Default split active" banner shows your saved ratio right on the group's expense list</li>
@@ -338,7 +340,7 @@
 </section>
 
 <section class="cta wrap">
-  <h2>Ready to set your split and stop doing the math?</h2>
+  <h2>Ready to stop keeping score?</h2>
   <a class="dl" href="https://apps.apple.com/us/app/node-expense-track-together/id6759304601">
     <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
     <span><small>Download on the</small><b>App Store</b></span>
