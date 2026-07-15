@@ -79,9 +79,24 @@
   .hero p { font-size: 21px; color: var(--muted); max-width: 600px; margin: 0 auto 30px; }
   .hero-meta { margin-top: 16px; font-size: 14px; color: var(--muted); }
   .hero-meta .stars { color: #f4b740; letter-spacing: 1px; }
-  .hero-scenarios { margin-top: 12px; font-size: 16px; color: var(--muted); }
-  .hero-scenarios a { font-weight: 700; color: var(--indigo); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
-  .hero-scenarios a:hover { color: #3730a3; }
+  .hero-scenarios { margin-top: 20px; display: flex; align-items: center; justify-content: center;
+        gap: 10px; flex-wrap: wrap; font-size: 15px; color: var(--muted); }
+  .scen { display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 999px;
+        background: var(--indigo-soft); border: 1px solid #dcd8fb; color: var(--indigo);
+        font-size: 15px; font-weight: 600; white-space: nowrap;
+        transition: background .14s, border-color .14s, transform .14s, box-shadow .14s; }
+  .scen:hover { background: #e7e4fd; border-color: var(--indigo); transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(79,70,229,0.18); }
+  .scen:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
+  .scen-emoji { font-size: 14px; line-height: 1; }
+  .scen-arrow { width: 13px; height: 13px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.4;
+        stroke-linecap: round; stroke-linejoin: round; opacity: .5; transition: transform .14s, opacity .14s; }
+  .scen:hover .scen-arrow { opacity: 1; transform: translateX(2px); }
+  @media (prefers-reduced-motion: reduce) {
+    .scen, .scen-arrow { transition: none; }
+    .scen:hover { transform: none; }
+    .scen:hover .scen-arrow { transform: none; }
+  }
   .qr-wrap { display: inline-flex; align-items: center; gap: 14px; margin-top: 24px; padding: 12px 18px 12px 14px; border: 1px solid #e3e0f0; border-radius: 16px; background: #fff; box-shadow: 0 8px 24px rgba(24,24,40,0.13); }
   .qr-wrap img { width: 60px; height: 60px; display: block; }
   .qr-wrap span { font-size: 14px; color: var(--muted); text-align: left; max-width: 110px; line-height: 1.35; }
@@ -116,8 +131,14 @@
   .band h2 { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; max-width: 640px; margin: 0 auto 14px; }
   .band p { font-size: 18px; color: var(--muted); max-width: 670px; margin: 0 auto 26px; }
   .pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .pill { background: #fff; border: 1px solid var(--border-strong, #ddd9e6); border-radius: 999px; padding: 10px 18px; font-size: 14px; font-weight: 500; white-space: nowrap; box-shadow: 0 3px 12px rgba(24,24,40,0.11); }
-  .pill:hover { border-color: var(--indigo); color: var(--indigo); }
+  .pill { background: #fff; border: 1px solid #e4e1ec; border-radius: 999px; padding: 9px 17px;
+        font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .pill-soft { background: var(--bg-soft); border-color: transparent; color: var(--muted);
+        font-size: 13.5px; font-weight: 400; }
+  .pills-tight { max-width: 600px; margin-left: auto; margin-right: auto; }
+  a.pill { color: var(--indigo); font-weight: 600; border-color: #d5d0f5; transition: border-color .12s, background .12s; }
+  a.pill:hover { border-color: var(--indigo); background: var(--indigo-soft); }
+  a.pill:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
 
   /* final cta */
   .cta { text-align: center; padding: 80px 0; }
@@ -133,6 +154,8 @@
   @media (max-width: 1000px) { .feat.trio { grid-template-columns: 1fr; gap: 36px; } }
   @media (max-width: 760px) {
     .hero { padding: 60px 0 8px; } .hero h1 { font-size: 40px; } .hero p { font-size: 18px; }
+    .hero-scenarios { gap: 8px; }
+    .hero-scenarios > span:first-child { flex-basis: 100%; margin-bottom: 2px; }
     .feat { grid-template-columns: 1fr; gap: 32px; padding: 64px 0; text-align: center; }
     .feat.alt .feat-text { order: 0; }
     .ticks { justify-items: center; } .ticks li { text-align: left; }
@@ -169,14 +192,18 @@
     <span><small>Download on the</small><b>App Store</b></span>
   </a>
   <div class="hero-meta">Free to start &nbsp;·&nbsp; No sign-up required &nbsp;·&nbsp; iPhone, iPad &amp; Mac</div>
-  <div class="hero-scenarios">Also perfect for <a href="./roommates.html">Roommates</a> &nbsp;·&nbsp; <a href="./couples.html">Couples</a></div>
+  <div class="hero-scenarios">
+    <span>Also perfect for</span>
+    <a class="scen" href="./roommates.html"><span class="scen-emoji" aria-hidden="true">🏠</span>Roommates<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="scen" href="./couples.html"><span class="scen-emoji" aria-hidden="true">💜</span>Couples<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+  </div>
   <div class="qr-wrap">
     <img src="./assets/qr-appstore.png" alt="QR code to download Node Expense on the App Store">
     <span>Scan to download on iPhone</span>
   </div>
 </header>
 
-<section class="wrap" style="text-align:center; padding-top:30px;">
+<section class="wrap" style="text-align:center; padding-top:54px;">
   <span class="label" style="display:inline-block;">Built for splitting</span>
   <div class="pills" style="margin-top:14px;">
     <span class="pill">✈️ Flights</span>
@@ -186,13 +213,13 @@
     <span class="pill">🍔 Food</span>
     <span class="pill">🎟️ Activities</span>
   </div>
-  <div class="pills" style="margin-top:14px;">
-    <span class="pill">AI itemizes every receipt, in any currency</span>
-    <span class="pill">No sign-up needed for friends</span>
-    <span class="pill">Smart settle-up — fewest payments possible</span>
-    <span class="pill">Multi-currency tracking, built in</span>
+  <div class="pills pills-tight" style="margin-top:11px;">
+    <span class="pill pill-soft">AI itemizes every receipt, in any currency</span>
+    <span class="pill pill-soft">No sign-up needed for friends</span>
+    <span class="pill pill-soft">Smart settle-up — fewest payments possible</span>
+    <span class="pill pill-soft">Multi-currency tracking, built in</span>
   </div>
-  <p style="margin-top:16px; font-size:14px; color:var(--muted);">Free to start — up to 15 personal expenses a month, no ads. Go PRO for unlimited.</p>
+  <p style="margin-top:24px; font-size:14px; color:var(--muted);">Free to start — up to 15 personal expenses a month, no ads. Go PRO for unlimited.</p>
 </section>
 
 <main class="wrap">
@@ -243,12 +270,7 @@
 </main>
 
 <section class="wrap" style="text-align:center; padding:40px 0 66px;">
-  <span class="label" style="display:inline-block;">Also perfect for</span>
-  <div class="pills" style="margin-top:16px;">
-    <a class="pill" href="./roommates.html">Roommates</a>
-    <a class="pill" href="./couples.html">Couples</a>
-    <a class="pill" href="./">See all features</a>
-  </div>
+  <a class="scen" href="./">See all features<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
 </section>
 
 <style>
