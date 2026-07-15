@@ -60,6 +60,35 @@
     text-transform: uppercase;
     margin-bottom: 4px;
   }
+  a.app-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    transition: opacity .12s;
+  }
+  a.app-name:hover { opacity: .65; }
+  a.app-name:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+  .home-arrow {
+    width: 11px;
+    height: 11px;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform .12s;
+  }
+  a.app-name:hover .home-arrow { transform: translateX(-2px); }
+  @media (prefers-reduced-motion: reduce) {
+    a.app-name, .home-arrow { transition: none; }
+    a.app-name:hover .home-arrow { transform: none; }
+  }
 
   .page-title {
     font-family: 'DM Serif Display', serif;
@@ -246,7 +275,7 @@
 
 <header>
   <div class="header-inner">
-    <div class="app-name">Node Expense: Track Together</div>
+    <a class="app-name" href="./" title="Back to Node Expense home"><svg class="home-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Node Expense: Track Together</a>
     <div class="page-title" id="header-title">Support</div>
     <div class="lang-tabs">
       <button class="lang-tab active" onclick="switchLang('en', this)">English</button>
