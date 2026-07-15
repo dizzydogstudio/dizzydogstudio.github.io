@@ -79,9 +79,30 @@
   /* hero */
   .hero { text-align: center; padding: 84px 0 16px; }
   .hero h1 { font-size: 54px; font-weight: 800; line-height: 1.18; letter-spacing: 0; max-width: 760px; margin: 0 auto 22px; }
+  .hero h1 .h1-line { display: block; }
+  #solo { scroll-margin-top: 12px; }
   .hero p { font-size: 21px; color: var(--muted); max-width: 640px; margin: 0 auto 30px; }
   .hero-meta { margin-top: 16px; font-size: 14px; color: var(--muted); }
   .hero-meta .stars { color: #f4b740; letter-spacing: 1px; }
+  .hero-scenarios { margin-top: 20px; display: flex; align-items: center; justify-content: center;
+        gap: 10px; flex-wrap: wrap; font-size: 15px; color: var(--muted); }
+  .scen { display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 999px;
+        background: var(--indigo-soft); border: 1px solid #dcd8fb; color: var(--indigo);
+        font-size: 15px; font-weight: 600; white-space: nowrap;
+        transition: background .14s, border-color .14s, transform .14s, box-shadow .14s; }
+  .scen:hover { background: #e7e4fd; border-color: var(--indigo); transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(79,70,229,0.18); }
+  .scen:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
+  .scen-emoji { font-size: 14px; line-height: 1; }
+  .scen-arrow { width: 13px; height: 13px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.4;
+        stroke-linecap: round; stroke-linejoin: round; opacity: .5; transition: transform .14s, opacity .14s; }
+  .scen:hover .scen-arrow { opacity: 1; transform: translateX(2px); }
+  .scen:hover .scen-arrow.down { transform: translateY(2px); }
+  @media (prefers-reduced-motion: reduce) {
+    .scen, .scen-arrow { transition: none; }
+    .scen:hover { transform: none; }
+    .scen:hover .scen-arrow, .scen:hover .scen-arrow.down { transform: none; }
+  }
   .qr-wrap { display: inline-flex; align-items: center; gap: 14px; margin-top: 24px; padding: 12px 18px 12px 14px; border: 1px solid #e3e0f0; border-radius: 16px; background: #fff; box-shadow: 0 8px 24px rgba(24,24,40,0.13); }
   .qr-wrap img { width: 60px; height: 60px; display: block; }
   .qr-wrap span { font-size: 14px; color: var(--muted); text-align: left; max-width: 120px; line-height: 1.45; }
@@ -102,13 +123,22 @@
   .ticks li { display: flex; align-items: flex-start; gap: 10px; font-size: 16px; }
   .ticks svg { width: 19px; height: 19px; flex: none; margin-top: 4px; fill: var(--indigo); }
 
+  /* chapter bands — group the feature rows into readable chapters */
+  .chapter-soft { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
   /* privacy band */
   .band { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .band-in { max-width: 900px; margin: 0 auto; padding: 80px 28px; text-align: center; }
   .band h2 { font-size: 34px; font-weight: 700; letter-spacing: 0; max-width: 640px; margin: 0 auto 14px; }
   .band p { font-size: 18px; color: var(--muted); max-width: 700px; margin: 0 auto 26px; }
   .pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .pill { background: #fff; border: 1px solid var(--border-strong, #ddd9e6); border-radius: 999px; padding: 10px 18px; font-size: 14px; font-weight: 500; white-space: nowrap; box-shadow: 0 3px 12px rgba(24,24,40,0.11); }
+  .pill { background: #fff; border: 1px solid #e4e1ec; border-radius: 999px; padding: 9px 17px;
+        font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .pill-soft { background: var(--bg-soft); border-color: transparent; color: var(--muted);
+        font-size: 13.5px; font-weight: 400; }
+  a.pill { color: var(--indigo); font-weight: 600; border-color: #d5d0f5; transition: border-color .12s, background .12s; }
+  a.pill:hover { border-color: var(--indigo); background: var(--indigo-soft); }
+  a.pill:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
 
   /* final cta */
   .cta { text-align: center; padding: 80px 0; }
@@ -124,6 +154,9 @@
   @media (max-width: 1000px) { .feat.trio { grid-template-columns: 1fr; gap: 36px; } }
   @media (max-width: 760px) {
     .hero { padding: 60px 0 8px; } .hero h1 { font-size: 36px; } .hero p { font-size: 18px; }
+    .hero h1 .h1-line { display: inline; }
+    .hero-scenarios { gap: 8px; }
+    .hero-scenarios > span:first-child { flex-basis: 100%; margin-bottom: 2px; }
     .feat { grid-template-columns: 1fr; gap: 32px; padding: 64px 0; text-align: center; }
     .feat.alt .feat-text { order: 0; }
     .ticks { justify-items: center; } .ticks li { text-align: left; }
@@ -152,27 +185,34 @@
 
 <a id="top"></a>
 <header class="hero wrap">
-  <h1>和朋友分帳，免去算錢的尷尬。</h1>
-  <p>掃一張收據，AI 就幫您逐項拆分——誰欠誰，一鍵結清。自己一個人？也能記錄開銷、管理預算，而且一切隱私為先。</p>
+  <h1>和朋友分帳，<span class="h1-line">免去算錢的尷尬。</span></h1>
+  <p>掃一張收據，AI 就幫您逐項拆分——誰欠誰，一鍵結清。只想記自己的帳？也沒問題，而且完全不會離開您的裝置。</p>
   <a class="dl" href="https://apps.apple.com/tw/app/node-expense-track-together/id6759304601">
     <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
     <span><small>下載於</small><b>App Store</b></span>
   </a>
   <div class="hero-meta">免費開始 &nbsp;·&nbsp; 無需註冊 &nbsp;·&nbsp; iPhone、iPad 與 Mac</div>
+  <div class="hero-scenarios">
+    <span>特別適合</span>
+    <a class="scen" href="./Taiwan-roommates.html"><span class="scen-emoji" aria-hidden="true">🏠</span>室友<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="scen" href="./Taiwan-couples.html"><span class="scen-emoji" aria-hidden="true">💜</span>情侶<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="scen" href="./Taiwan-travel.html"><span class="scen-emoji" aria-hidden="true">✈️</span>團體旅行<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="scen" href="#solo"><span class="scen-emoji" aria-hidden="true">💰</span>個人記帳<svg class="scen-arrow down" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+  </div>
   <div class="qr-wrap">
     <img src="./assets/qr-appstore.png" alt="下載 Node Expense 的 App Store QR Code">
     <span>用 iPhone 掃描即可下載</span>
   </div>
 </header>
 
-<section class="wrap" style="text-align:center; padding-top:30px;">
+<section class="wrap" style="text-align:center; padding-top:54px;">
   <div class="pills" style="margin-top:0;">
     <span class="pill">AI 自動逐項拆解收據</span>
     <span class="pill">依每項數量精準分攤</span>
     <span class="pill">個人預算與群組分帳，一個 App 搞定</span>
     <span class="pill">可月付、年付，或一次買斷</span>
   </div>
-  <p style="margin-top:16px; font-size:14px; color:var(--muted);">免費開始——每月最多 15 筆個人支出，無廣告。升級 PRO 享無限筆數。</p>
+  <p style="margin-top:24px; font-size:14px; color:var(--muted);">免費方案：每月最多 15 筆個人支出，無廣告。升級 PRO 享無限筆數。</p>
 </section>
 
 <section class="see wrap">
@@ -184,7 +224,10 @@
   </div>
 </section>
 
-<main class="wrap">
+<main>
+
+<div class="chapter chapter-soft">
+<div class="wrap">
 
   <section class="feat trio">
     <div class="feat-img"><img class="phone" src="./assets/phone-split.png" alt="彈性分帳畫面"></div>
@@ -245,8 +288,13 @@
     </div>
     <div class="feat-img"><img class="phone" src="./assets/phone-comment.png" alt="群組支出上的留言串——John、您與 Cathy 正在討論帳單"></div>
   </section>
+</div>
+</div>
 
-  <section class="feat alt">
+<div class="chapter">
+<div class="wrap">
+
+  <section class="feat alt" id="solo">
     <div class="feat-text">
       <span class="label">獨自記帳</span>
       <h2>無需分帳？個人開銷紀錄一樣面面俱到。</h2>
@@ -291,6 +339,11 @@
     </div>
     <div class="feat-img"><img class="phone" src="./assets/phone-calendar.png" alt="行事曆與定期帳單畫面"></div>
   </section>
+</div>
+</div>
+
+<div class="chapter chapter-soft">
+<div class="wrap">
 
   <section class="feat">
     <div class="feat-text">
@@ -305,16 +358,17 @@
     </div>
     <div class="feat-img"><img class="phone" style="width:460px;max-width:100%;border-radius:14px;" src="./assets/phone-report.png" alt="支出報告 PDF——分類彙總與逐項支出"></div>
   </section>
-
+</div>
+</div>
 </main>
 
 <section class="wrap" style="text-align:center; padding:40px 0 66px;">
   <span class="label" style="display:inline-block;">適合這些場景</span>
   <div class="pills" style="margin-top:16px;">
     <span class="pill">個人記帳</span>
-    <span class="pill">室友</span>
-    <span class="pill">情侶</span>
-    <span class="pill">團體旅行</span>
+    <a class="pill" href="./Taiwan-roommates.html">室友</a>
+    <a class="pill" href="./Taiwan-couples.html">情侶</a>
+    <a class="pill" href="./Taiwan-travel.html">團體旅行</a>
     <span class="pill">聚餐</span>
     <span class="pill">商務差旅</span>
   </div>
