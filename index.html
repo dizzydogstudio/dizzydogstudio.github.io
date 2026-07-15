@@ -79,6 +79,7 @@
   .hero { text-align: center; padding: 84px 0 16px; }
   .hero h1 { font-size: 58px; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; max-width: 760px; margin: 0 auto 22px; }
   .hero h1 .h1-line { display: block; }
+  #solo { scroll-margin-top: 12px; }
   .hero p { font-size: 21px; color: var(--muted); max-width: 600px; margin: 0 auto 30px; }
   .hero-meta { margin-top: 16px; font-size: 14px; color: var(--muted); }
   .hero-meta .stars { color: #f4b740; letter-spacing: 1px; }
@@ -95,10 +96,11 @@
   .scen-arrow { width: 13px; height: 13px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.4;
         stroke-linecap: round; stroke-linejoin: round; opacity: .5; transition: transform .14s, opacity .14s; }
   .scen:hover .scen-arrow { opacity: 1; transform: translateX(2px); }
+  .scen:hover .scen-arrow.down { transform: translateY(2px); }
   @media (prefers-reduced-motion: reduce) {
     .scen, .scen-arrow { transition: none; }
     .scen:hover { transform: none; }
-    .scen:hover .scen-arrow { transform: none; }
+    .scen:hover .scen-arrow, .scen:hover .scen-arrow.down { transform: none; }
   }
   .qr-wrap { display: inline-flex; align-items: center; gap: 14px; margin-top: 24px; padding: 12px 18px 12px 14px; border: 1px solid #e3e0f0; border-radius: 16px; background: #fff; box-shadow: 0 8px 24px rgba(24,24,40,0.13); }
   .qr-wrap img { width: 60px; height: 60px; display: block; }
@@ -195,6 +197,7 @@
     <a class="scen" href="./roommates.html"><span class="scen-emoji" aria-hidden="true">🏠</span>Roommates<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     <a class="scen" href="./couples.html"><span class="scen-emoji" aria-hidden="true">💜</span>Couples<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     <a class="scen" href="./travel.html"><span class="scen-emoji" aria-hidden="true">✈️</span>Group trips<svg class="scen-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="scen" href="#solo"><span class="scen-emoji" aria-hidden="true">💰</span>Solo budgeting<svg class="scen-arrow down" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
   </div>
   <div class="qr-wrap">
     <img src="./assets/qr-appstore.png" alt="QR code to download Node Expense on the App Store">
@@ -291,7 +294,7 @@
 <div class="chapter">
 <div class="wrap">
 
-  <section class="feat alt">
+  <section class="feat alt" id="solo">
     <div class="feat-text">
       <span class="label">On your own</span>
       <h2>Not splitting? Just track it solo.</h2>
