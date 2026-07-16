@@ -98,6 +98,7 @@
 
   /* feature rows */
   .feat { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 56px; padding: 96px 0; }
+  .feat.alt .feat-text { order: 2; }
   .feat-img { text-align: center; }
   .feat-img img { width: 280px; max-width: 80%; }
   .label { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--indigo); margin-bottom: 14px; }
@@ -144,6 +145,7 @@
     .hero-scenarios { gap: 8px; }
     .hero-scenarios > span:first-child { flex-basis: 100%; margin-bottom: 2px; }
     .feat { grid-template-columns: 1fr; gap: 32px; padding: 64px 0; text-align: center; }
+    .feat.alt .feat-text { order: 0; }
     .ticks { justify-items: center; } .ticks li { text-align: left; }
     .report { padding: 64px 0; } .report h2 { font-size: 28px; }
     .cta h2 { font-size: 30px; }
@@ -261,7 +263,7 @@
     <img class="phone report-img" src="./assets/phone-travel-report.png" alt="iPad 上的日本群組支出報告——依幣別呈現的成員結餘、建議結清方式，以及逐項支出列表">
   </section>
 
-  <section class="feat">
+  <section class="feat alt">
     <div class="feat-text">
       <span class="label">排除任何人</span>
       <h2>沒去？那就不用付。</h2>
