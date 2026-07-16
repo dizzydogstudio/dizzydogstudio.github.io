@@ -67,7 +67,7 @@
   nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--line); }
   .nav-in { max-width: 1040px; margin: 0 auto; padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; white-space: nowrap; }
   .brand img { width: 30px; height: 30px; border-radius: 8px; }
   .nav-right { display: flex; align-items: center; gap: 12px; }
   .lang { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600;
@@ -167,13 +167,24 @@
     .cta h2 { font-size: 30px; }
     .qr-wrap { display: none; }
   }
+
+  @media (max-width: 480px) {
+    .nav-in { padding-left: 18px; padding-right: 18px; }
+    .brand { gap: 0; }
+    /* visually hidden, not display:none — the icon's alt is empty, so removing
+       this text outright would leave the home link with no accessible name */
+    .brand-name {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+  }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a class="brand" href="./Taiwan.html"><img src="./assets/icon.png" alt="">Node Expense</a>
+    <a class="brand" href="./Taiwan.html" aria-label="Node Expense"><img src="./assets/icon.png" alt=""><span class="brand-name">Node Expense</span></a>
     <div class="nav-right">
       <a class="lang" href="./travel.html" lang="en" hreflang="en" title="Switch to English">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
