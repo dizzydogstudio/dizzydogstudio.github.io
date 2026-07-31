@@ -323,7 +323,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-07-05 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -382,6 +382,7 @@
       <tr><td><strong>Google Gemini API (via Firebase AI Logic)</strong></td><td>AI-powered OCR and line-item extraction from receipt photos scanned via Pick &amp; Pay (PRO subscription feature)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote feature configuration (e.g., per-account monthly scan caps) without requiring an app update</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Fraud and abuse prevention for backend API calls</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>Crash reporting and stability diagnostics</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase is used as a sync layer for group-related features only. Personal (non-group) expense data is <strong>never</strong> uploaded to cloud services.</div>
@@ -409,7 +410,7 @@
   <p>To keep the subscription price flat, we cap the number of Pick &amp; Pay scans each PRO subscriber can perform per month. You can check your remaining scans any time under <strong>Settings → Subscription → Pick &amp; Pay credits</strong>.</p>
 
   <h3>Photo persistence after scanning</h3>
-  <p>After a successful Pick &amp; Pay scan, the receipt photo is automatically attached to the group expense as the receipt photo (a PRO benefit). It is uploaded and visible to other members of the same group, consistent with the receipt-photo behaviour described elsewhere in this policy.</p>
+  <p>After a successful Pick &amp; Pay scan, the receipt photo is automatically attached to the group expense for PRO subscribers; trial users receive the scan's extracted details but no photo is stored or uploaded. When attached, it is uploaded and visible to other members of the same group, consistent with the receipt-photo behaviour described elsewhere in this policy.</p>
 
   <h3>Opting out</h3>
   <p>Pick &amp; Pay is entirely optional. You can split group expenses using any of the other split modes (Equal, By %, By $) without sending any data to the Gemini API. If you never use Pick &amp; Pay, no receipt images are sent to Google.</p>
@@ -441,7 +442,7 @@
     <li>Local copies of group data for offline access</li>
     <li>Cached group expenses for offline viewing</li>
   </ul>
-  <p>Personal expense data — including any attached receipt photos — never leaves your iPhone unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker.</p>
+  <p>Personal expense data — including any attached receipt photos — never leaves your iPhone unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker, but only if whoever deleted the group chose to keep the records. If they chose to remove them, those expenses are deleted from your iPhone as well.</p>
 
   <h3>9.2 Cloud Storage for Group Features</h3>
   <p>For group features, selected data is synced to Firebase Firestore (and Firebase Storage for photos):</p>
@@ -476,7 +477,7 @@
   <h2><span class="section-number">11</span>Data Deletion</h2>
   <ul>
     <li>Delete individual or all personal expenses from within Node Expense</li>
-    <li>Leave or request deletion of a group — group data is removed from Firebase when all members agree</li>
+    <li>Leave or request deletion of a group — group data is removed from Firebase when all members agree. The group's expenses, settlements, activity history, comments and reminder timers are deleted from our servers immediately (except expenses you chose to keep, described below). For 90 days afterwards we retain only a small deletion record, so that devices which were offline at the time can learn the group was deleted and clean up their local copy; it holds the group name, the member list (display names, identifiers, any payment handles and profile photo links), and who deleted it and when. That record is automatically and permanently deleted after 90 days.</li>
     <li>Group expenses marked as 'keep on deletion' remain on your iPhone locally; they are not re-uploaded</li>
     <li>When a group is deleted with 'remove records' selected, every receipt photo for that group is also deleted from Firebase Storage. When 'keep records' is chosen, the photos remain in Firebase Storage so original members can still view them on their own iPhones.</li>
     <li>Removing a receipt photo from a group expense (via the Edit screen) deletes the underlying file from Firebase Storage.</li>
@@ -514,7 +515,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-07-05 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-07-31 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -573,6 +574,7 @@
       <tr><td><strong>Google Gemini API（透過 Firebase AI Logic）</strong></td><td>透過 Pick &amp; Pay 掃描收據照片進行 AI 驅動的 OCR 與逐項提取（PRO 訂閱功能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>無需更新應用程式即可遠端配置功能參數（例如每帳戶每月掃描上限）</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>後端 API 呼叫的詐欺與濫用防護</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>當機回報與穩定性診斷</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase 僅作為群組相關功能的同步層。個人（非群組）費用資料<strong>絕不會</strong>上傳至雲端服務。</div>
@@ -600,7 +602,7 @@
   <p>為了維持訂閱費用不變,我們限制每位 PRO 訂閱者每月可進行的 Pick &amp; Pay 掃描次數。您可隨時在<strong>「設定 → 訂閱 → Pick &amp; Pay credits」</strong>查看剩餘掃描次數。</p>
 
   <h3>掃描後的照片保留</h3>
-  <p>Pick &amp; Pay 掃描成功後,該收據照片將自動附加至群組費用作為收據照片(PRO 福利)。該照片會上傳並對同群組的其他成員可見,與本政策其他部分所述的收據照片行為一致。</p>
+  <p>Pick &amp; Pay 掃描成功後,PRO 訂閱者的收據照片將自動附加至群組費用作為收據照片；試用期使用者可取得掃描擷取的資訊,但不會儲存或上傳任何照片。附加後,該照片會上傳並對同群組的其他成員可見,與本政策其他部分所述的收據照片行為一致。</p>
 
   <h3>選擇不使用</h3>
   <p>Pick &amp; Pay 完全為選用功能。您可使用其他任何分攤模式(平均、按 %、按 $)分攤群組費用,無需傳送任何資料給 Gemini API。若您從未使用 Pick &amp; Pay,則不會有任何收據圖片傳送至 Google。</p>
@@ -632,7 +634,7 @@
     <li>群組資料的本機副本（供離線存取）</li>
     <li>群組費用的快取（供離線檢視）</li>
   </ul>
-  <p>個人費用資料——包括所附加的收據照片——不會離開您的 iPhone，除非您明確匯出或備份。已刪除群組的費用將在您的 iPhone 本機保留，並標示為「已刪除群組」。</p>
+  <p>個人費用資料——包括所附加的收據照片——不會離開您的 iPhone，除非您明確匯出或備份。若刪除群組的人選擇保留記錄，已刪除群組的費用才會在您的 iPhone 本機保留，並標示為「已刪除群組」；若選擇移除記錄，這些費用也會從您的 iPhone 刪除。</p>
 
   <h3>9.2 群組功能的雲端儲存</h3>
   <p>針對群組功能，所選資料將同步至 Firebase Firestore（照片則同步至 Firebase Storage）：</p>
@@ -667,7 +669,7 @@
   <h2><span class="section-number">11</span>資料刪除</h2>
   <ul>
     <li>在 Node Expense 中刪除個別或全部個人費用</li>
-    <li>離開或請求刪除群組 — 當所有成員同意後，群組資料將從 Firebase 移除</li>
+    <li>離開或請求刪除群組 — 當所有成員同意後，群組資料將從 Firebase 移除。群組的費用、結算、活動記錄、留言與提醒計時器會立即從我們的伺服器刪除（您選擇保留的費用除外，詳見下方）。之後我們僅保留一筆小型的刪除記錄 90 天，讓當時離線的裝置得知該群組已被刪除並清理本機副本；該記錄包含群組名稱、成員清單（顯示名稱、識別碼、任何付款帳號與個人頭像連結），以及由誰在何時刪除。該記錄會在 90 天後自動且永久刪除。</li>
     <li>標示為「刪除時保留」的群組費用將保留於您的 iPhone 本機；這些資料不會被重新上傳</li>
     <li>當刪除群組時若選擇「移除記錄」，該群組的所有收據照片也會從 Firebase Storage 中刪除。若選擇「保留記錄」，照片將保留於 Firebase Storage 中，原群組成員仍可在自己的 iPhone 上檢視。</li>
     <li>從群組費用中移除收據照片（透過編輯畫面）會將底層檔案從 Firebase Storage 中刪除。</li>
@@ -705,7 +707,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-07-05 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-07-31 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -764,6 +766,7 @@
       <tr><td><strong>Google Gemini API（通过 Firebase AI Logic）</strong></td><td>通过 Pick &amp; Pay 扫描收据照片进行 AI 驱动的 OCR 和逐项提取（PRO 订阅功能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>无需更新应用即可远程配置功能参数（例如每账户每月扫描上限）</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>后端 API 调用的欺诈和滥用防护</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>崩溃报告与稳定性诊断</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase 仅用作群组相关功能的同步层。个人（非群组）支出数据<strong>绝不会</strong>上传到云端服务。</div>
@@ -791,7 +794,7 @@
   <p>为保持订阅费用不变，我们限制每位 PRO 订阅者每月可执行的 Pick &amp; Pay 扫描次数。您可随时在<strong>「设置 → 订阅 → Pick &amp; Pay credits」</strong>查看剩余扫描次数。</p>
 
   <h3>扫描后的照片保留</h3>
-  <p>Pick &amp; Pay 扫描成功后，该收据照片将自动附加到群组支出作为收据照片（PRO 福利）。该照片会上传并对同群组的其他成员可见，与本政策其他部分所述的收据照片行为一致。</p>
+  <p>Pick &amp; Pay 扫描成功后，PRO 订阅者的收据照片将自动附加到群组支出作为收据照片；试用期用户可获得扫描提取的信息，但不会存储或上传任何照片。附加后，该照片会上传并对同群组的其他成员可见，与本政策其他部分所述的收据照片行为一致。</p>
 
   <h3>选择不使用</h3>
   <p>Pick &amp; Pay 完全为可选功能。您可以使用其他任何分摊模式（平均、按 %、按 $）分摊群组支出，无需向 Gemini API 发送任何数据。若您从未使用 Pick &amp; Pay，则不会有任何收据图片发送至 Google。</p>
@@ -823,7 +826,7 @@
     <li>用于离线访问的群组数据本地副本</li>
     <li>用于离线查看的缓存群组支出</li>
   </ul>
-  <p>除非您明确导出或备份，否则个人支出数据——包括所附加的收据照片——绝不会离开您的 iPhone。已删除群组的支出将保留在您的 iPhone 本地并带有"已删除群组"标记。</p>
+  <p>除非您明确导出或备份，否则个人支出数据——包括所附加的收据照片——绝不会离开您的 iPhone。只有当删除群组的人选择保留记录时，已删除群组的支出才会保留在您的 iPhone 本地并带有"已删除群组"标记；若选择移除记录，这些支出也会从您的 iPhone 删除。</p>
 
   <h3>9.2 群组功能的云存储</h3>
   <p>对于群组功能，选定的数据将同步到 Firebase Firestore（照片同步至 Firebase Storage）：</p>
@@ -858,7 +861,7 @@
   <h2><span class="section-number">11</span>数据删除</h2>
   <ul>
     <li>在 Node Expense 内删除单个或所有个人支出</li>
-    <li>退出或申请删除群组——当所有成员同意时，群组数据将从 Firebase 中移除</li>
+    <li>退出或申请删除群组——当所有成员同意时，群组数据将从 Firebase 中移除。群组的支出、结算、活动记录、留言和提醒计时器会立即从我们的服务器删除（您选择保留的支出除外，详见下方）。之后我们仅保留一条小型删除记录 90 天，让当时离线的设备得知该群组已被删除并清理本机副本；该记录包含群组名称、成员列表（显示名称、标识符、任何付款账号和头像链接），以及由谁在何时删除。该记录将在 90 天后自动且永久删除。</li>
     <li>标记为"删除时保留"的群组支出将保留在您的 iPhone 本地；它们不会被重新上传</li>
     <li>当删除群组时若选择"移除记录"，该群组的所有收据照片也会从 Firebase Storage 中删除。若选择"保留记录"，照片将保留在 Firebase Storage 中，原群组成员仍可在自己的 iPhone 上查看。</li>
     <li>从群组支出中移除收据照片（通过编辑界面）会将底层文件从 Firebase Storage 中删除。</li>
@@ -896,7 +899,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-07-05 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-07-31 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -955,6 +958,7 @@
       <tr><td><strong>Google Gemini API（Firebase AI Logic 経由）</strong></td><td>Pick &amp; Pay でスキャンしたレシート写真の AI による OCR とアイテム抽出（PRO サブスクリプション機能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>アプリの更新を必要としない機能設定のリモート構成（例: アカウントごとの月間スキャン上限）</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>バックエンド API 呼び出しの不正使用防止</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>クラッシュレポートと安定性診断</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase はグループ関連機能の同期レイヤーとしてのみ使用されます。個人（非グループ）の支出データはクラウドサービスに<strong>一切</strong>アップロードされません。</div>
@@ -982,7 +986,7 @@
   <p>サブスクリプション価格を一定に保つため、PRO サブスクライバーごとに 1 か月あたりに実行できる Pick &amp; Pay スキャン回数を制限しています。<strong>「設定 → サブスクリプション → Pick &amp; Pay credits」</strong>で残りのスキャン回数をいつでも確認できます。</p>
 
   <h3>スキャン後の写真の保存</h3>
-  <p>Pick &amp; Pay のスキャンが成功すると、レシート写真はレシート写真としてグループ支出に自動的に添付されます（PRO 特典）。この写真はアップロードされ、同じグループの他のメンバーから閲覧可能となります。本ポリシーの他の箇所で説明されているレシート写真の取り扱いと同様です。</p>
+  <p>Pick &amp; Pay のスキャンが成功すると、PRO サブスクリプションをご利用の場合はレシート写真がグループ支出に自動的に添付されます。試用期間中のユーザーはスキャンで抽出された情報を利用できますが、写真は保存もアップロードもされません。添付された場合、この写真はアップロードされ、同じグループの他のメンバーから閲覧可能となります。本ポリシーの他の箇所で説明されているレシート写真の取り扱いと同様です。</p>
 
   <h3>オプトアウト</h3>
   <p>Pick &amp; Pay は完全に任意です。他の分割モード（均等、％ で、$ で）でグループ支出を分割すれば、Gemini API にデータを送信する必要はありません。Pick &amp; Pay を一度も使用しなければ、レシート画像が Google に送信されることはありません。</p>
@@ -1014,7 +1018,7 @@
     <li>オフラインアクセス用のグループデータのローカルコピー</li>
     <li>オフライン表示用のグループ支出のキャッシュ</li>
   </ul>
-  <p>個人の支出データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、iPhone の外に出ることはありません。削除されたグループからの支出は、「削除済みグループ」のマーク付きで iPhone のローカルに保持されます。</p>
+  <p>個人の支出データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、iPhone の外に出ることはありません。削除されたグループからの支出は、グループを削除した人が記録の保持を選択した場合にのみ、「削除済みグループ」のマーク付きで iPhone のローカルに保持されます。記録の削除を選択した場合、これらの支出はお客様の iPhone からも削除されます。</p>
 
   <h3>9.2 グループ機能のクラウドストレージ</h3>
   <p>グループ機能では、選択されたデータが Firebase Firestore（写真は Firebase Storage）に同期されます：</p>
@@ -1049,7 +1053,7 @@
   <h2><span class="section-number">11</span>データの削除</h2>
   <ul>
     <li>Node Expense 内で個別または全ての個人支出を削除</li>
-    <li>グループを退出または削除リクエスト — 全メンバーが同意した場合、グループデータは Firebase から削除</li>
+    <li>グループを退出または削除リクエスト — 全メンバーが同意した場合、グループデータは Firebase から削除されます。グループの支出、精算、アクティビティ履歴、コメント、リマインダータイマーは、当社のサーバーから直ちに削除されます（お客様が保持を選択した支出を除きます。詳細は下記）。その後 90 日間は、削除時にオフラインだった端末がグループの削除を認識してローカルのコピーを整理できるよう、小さな削除記録のみを保持します。この記録には、グループ名、メンバー一覧（表示名、識別子、登録された送金アカウント、プロフィール写真のリンク）、および削除者と削除日時が含まれます。この記録は 90 日後に自動的かつ完全に削除されます。</li>
     <li>「削除時に保持」としてマークされたグループ支出は iPhone のローカルに残ります。再アップロードされることはありません</li>
     <li>グループ削除時に「記録を削除」を選択した場合、そのグループのすべてのレシート写真も Firebase Storage から削除されます。「記録を保持」を選択した場合、写真は Firebase Storage に残り、元のメンバーは引き続き自分の iPhone で閲覧できます。</li>
     <li>編集画面からグループ支出のレシート写真を削除すると、Firebase Storage 上の元ファイルも削除されます。</li>
@@ -1087,7 +1091,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-07-05 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1146,6 +1150,7 @@
       <tr><td><strong>Google Gemini API (über Firebase AI Logic)</strong></td><td>KI-gestützte OCR und Positionsextraktion aus Belegfotos, die über Pick &amp; Pay gescannt werden (PRO-Abonnementfunktion)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote-Konfiguration von Funktionsparametern (z. B. monatliche Scan-Limits pro Konto) ohne App-Update</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Schutz vor Betrug und Missbrauch für Backend-API-Aufrufe</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>Absturzberichte und Stabilitätsdiagnose</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase wird ausschließlich als Synchronisierungsschicht für gruppenspezifische Funktionen verwendet. Persönliche (nicht gruppen­bezogene) Ausgabendaten werden <strong>niemals</strong> in Cloud-Dienste hochgeladen.</div>
@@ -1173,7 +1178,7 @@
   <p>Um den Abonnementpreis konstant zu halten, begrenzen wir die Anzahl der Pick &amp; Pay-Scans, die jeder PRO-Abonnent pro Monat durchführen kann. Sie können Ihre verbleibenden Scans jederzeit unter <strong>„Einstellungen → Abonnement → Pick &amp; Pay credits“</strong> einsehen.</p>
 
   <h3>Aufbewahrung des Fotos nach dem Scan</h3>
-  <p>Nach einem erfolgreichen Pick &amp; Pay-Scan wird das Belegfoto automatisch als Belegfoto an die Gruppenausgabe angehängt (PRO-Vorteil). Es wird hochgeladen und ist für andere Mitglieder derselben Gruppe sichtbar, entsprechend dem an anderer Stelle in dieser Richtlinie beschriebenen Verhalten von Belegfotos.</p>
+  <p>Nach einem erfolgreichen Pick &amp; Pay-Scan wird das Belegfoto für PRO-Abonnenten automatisch an die Gruppenausgabe angehängt; Testnutzer erhalten die aus dem Scan ausgelesenen Angaben, es wird jedoch kein Foto gespeichert oder hochgeladen. Sofern angehängt, wird es hochgeladen und ist für andere Mitglieder derselben Gruppe sichtbar, entsprechend dem an anderer Stelle in dieser Richtlinie beschriebenen Verhalten von Belegfotos.</p>
 
   <h3>Verzicht auf die Funktion</h3>
   <p>Pick &amp; Pay ist vollständig optional. Sie können Gruppenausgaben mit jedem anderen Aufteilungsmodus (Gleich, Nach %, Nach $) teilen, ohne Daten an die Gemini API zu senden. Wenn Sie Pick &amp; Pay nie verwenden, werden keine Belegbilder an Google gesendet.</p>
@@ -1205,7 +1210,7 @@
     <li>Lokale Kopien von Gruppendaten für den Offline-Zugriff</li>
     <li>Zwischengespeicherte Gruppenausgaben zur Offline-Ansicht</li>
   </ul>
-  <p>Persönliche Ausgabendaten — einschließlich angehängter Belegfotos — verlassen Ihr iPhone nicht, es sei denn, Sie exportieren oder sichern diese explizit. Ausgaben aus gelöschten Gruppen werden lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt.</p>
+  <p>Persönliche Ausgabendaten — einschließlich angehängter Belegfotos — verlassen Ihr iPhone nicht, es sei denn, Sie exportieren oder sichern diese explizit. Ausgaben aus gelöschten Gruppen werden nur dann lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt, wenn die Person, die die Gruppe gelöscht hat, sich für das Behalten der Datensätze entschieden hat. Wurde das Entfernen gewählt, werden diese Ausgaben auch von Ihrem iPhone gelöscht.</p>
 
   <h3>9.2 Cloud-Speicher für Gruppenfunktionen</h3>
   <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore (und Fotos mit Firebase Storage) synchronisiert:</p>
@@ -1240,7 +1245,7 @@
   <h2><span class="section-number">11</span>Datenlöschung</h2>
   <ul>
     <li>Einzelne oder alle persönlichen Ausgaben innerhalb von Node Expense löschen</li>
-    <li>Eine Gruppe verlassen oder deren Löschung beantragen — Gruppendaten werden aus Firebase entfernt, wenn alle Mitglieder zustimmen</li>
+    <li>Eine Gruppe verlassen oder deren Löschung beantragen — Gruppendaten werden aus Firebase entfernt, wenn alle Mitglieder zustimmen. Ausgaben, Abrechnungen, Aktivitätsverlauf, Kommentare und Erinnerungs-Timer der Gruppe werden sofort von unseren Servern gelöscht (ausgenommen Ausgaben, die Sie behalten möchten, siehe unten). Danach bewahren wir 90 Tage lang lediglich einen kleinen Löschvermerk auf, damit Geräte, die zu diesem Zeitpunkt offline waren, die Löschung erkennen und ihre lokale Kopie bereinigen können; er enthält den Gruppennamen, die Mitgliederliste (Anzeigenamen, Kennungen, etwaige Zahlungs-Handles und Links zu Profilfotos) sowie wer die Gruppe wann gelöscht hat. Dieser Vermerk wird nach 90 Tagen automatisch und dauerhaft gelöscht.</li>
     <li>Gruppenausgaben, die als „Bei Löschung behalten" markiert sind, verbleiben lokal auf Ihrem iPhone und werden nicht erneut hochgeladen</li>
     <li>Wenn beim Löschen einer Gruppe „Datensätze entfernen" gewählt wird, werden auch alle Belegfotos dieser Gruppe aus Firebase Storage gelöscht. Bei „Datensätze behalten" verbleiben die Fotos in Firebase Storage, sodass die ursprünglichen Mitglieder sie weiterhin auf ihren eigenen iPhones anzeigen können.</li>
     <li>Das Entfernen eines Belegfotos aus einer Gruppenausgabe (über den Bearbeitungsbildschirm) löscht die zugrunde liegende Datei aus Firebase Storage.</li>
@@ -1278,7 +1283,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-07-05 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1337,6 +1342,7 @@
       <tr><td><strong>Google Gemini API (a través de Firebase AI Logic)</strong></td><td>OCR con IA y extracción de líneas de artículos a partir de fotos de recibos escaneadas con Pick &amp; Pay (función de suscripción PRO)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuración remota de parámetros de funciones (por ejemplo, límites mensuales de escaneo por cuenta) sin necesidad de actualizar la app</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Prevención de fraude y abuso para las llamadas a la API del backend</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>Informes de fallos y diagnóstico de estabilidad</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase se utiliza únicamente como capa de sincronización para las funciones relacionadas con grupos. Los datos de gastos personales (no de grupo) <strong>nunca</strong> se cargan en servicios en la nube.</div>
@@ -1364,7 +1370,7 @@
   <p>Para mantener constante el precio de la suscripción, limitamos el número de escaneos de Pick &amp; Pay que cada suscriptor PRO puede realizar al mes. Puede consultar sus escaneos restantes en cualquier momento en <strong>Ajustes → Suscripción → Pick &amp; Pay credits</strong>.</p>
 
   <h3>Conservación de la foto tras el escaneo</h3>
-  <p>Tras un escaneo exitoso de Pick &amp; Pay, la foto del recibo se adjunta automáticamente al gasto de grupo como foto de recibo (un beneficio PRO). Se sube y es visible para otros miembros del mismo grupo, de acuerdo con el comportamiento de las fotos de recibo descrito en otras partes de esta política.</p>
+  <p>Tras un escaneo exitoso de Pick &amp; Pay, la foto del recibo se adjunta automáticamente al gasto de grupo para los suscriptores PRO; los usuarios en prueba reciben los datos extraídos del escaneo, pero no se almacena ni se sube ninguna foto. Cuando se adjunta, se sube y es visible para otros miembros del mismo grupo, de acuerdo con el comportamiento de las fotos de recibo descrito en otras partes de esta política.</p>
 
   <h3>Excluirse</h3>
   <p>Pick &amp; Pay es totalmente opcional. Puede dividir los gastos de grupo utilizando cualquiera de los otros modos de división (Igual, Por %, Por $) sin enviar ningún dato a la API de Gemini. Si nunca utiliza Pick &amp; Pay, no se envían imágenes de recibos a Google.</p>
@@ -1396,7 +1402,7 @@
     <li>Copias locales de datos de grupo para acceso sin conexión</li>
     <li>Gastos de grupo en caché para visualización sin conexión</li>
   </ul>
-  <p>Los datos de gastos personales — incluidas las fotos de recibos adjuntas — nunca salen de su iPhone a menos que los exporte o respalde explícitamente. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado".</p>
+  <p>Los datos de gastos personales — incluidas las fotos de recibos adjuntas — nunca salen de su iPhone a menos que los exporte o respalde explícitamente. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado" solo si quien eliminó el grupo optó por conservar los registros. Si optó por eliminarlos, esos gastos también se borran de su iPhone.</p>
 
   <h3>9.2 Almacenamiento en la nube para funciones de grupo</h3>
   <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore (y las fotos con Firebase Storage):</p>
@@ -1431,7 +1437,7 @@
   <h2><span class="section-number">11</span>Eliminación de datos</h2>
   <ul>
     <li>Eliminar gastos personales individuales o todos desde Node Expense</li>
-    <li>Abandonar o solicitar la eliminación de un grupo — los datos del grupo se eliminan de Firebase cuando todos los miembros están de acuerdo</li>
+    <li>Abandonar o solicitar la eliminación de un grupo — los datos del grupo se eliminan de Firebase cuando todos los miembros están de acuerdo. Los gastos, liquidaciones, historial de actividad, comentarios y temporizadores de recordatorio del grupo se eliminan de nuestros servidores de inmediato (salvo los gastos que hayas elegido conservar, descritos más abajo). Después conservamos únicamente un pequeño registro de eliminación durante 90 días, para que los dispositivos que estaban sin conexión en ese momento puedan detectar la eliminación y limpiar su copia local; contiene el nombre del grupo, la lista de miembros (nombres visibles, identificadores, cualquier alias de pago y enlaces a fotos de perfil), y quién lo eliminó y cuándo. Ese registro se elimina automática y permanentemente a los 90 días.</li>
     <li>Los gastos de grupo marcados como "conservar al eliminar" permanecen localmente en su iPhone; no se vuelven a cargar</li>
     <li>Cuando se elimina un grupo eligiendo "eliminar registros", todas las fotos de recibos de ese grupo también se eliminan de Firebase Storage. Cuando se elige "conservar registros", las fotos permanecen en Firebase Storage para que los miembros originales puedan seguir viéndolas en sus propios iPhones.</li>
     <li>Eliminar una foto de recibo de un gasto de grupo (a través de la pantalla de Editar) borra el archivo subyacente de Firebase Storage.</li>
@@ -1469,7 +1475,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-07-05 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1528,6 +1534,7 @@
       <tr><td><strong>API Google Gemini (via Firebase AI Logic)</strong></td><td>OCR alimenté par IA et extraction de lignes d'articles à partir de photos de reçus scannées via Pick &amp; Pay (fonctionnalité d'abonnement PRO)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuration à distance de paramètres de fonctionnalités (par ex. plafonds mensuels de scans par compte) sans nécessiter de mise à jour de l'app</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Prévention de la fraude et des abus pour les appels d'API backend</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>Rapports de plantage et diagnostics de stabilité</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase est utilisé uniquement comme couche de synchronisation pour les fonctionnalités liées aux groupes. Les données de dépenses personnelles (hors groupe) ne sont <strong>jamais</strong> téléversées vers des services cloud.</div>
@@ -1555,7 +1562,7 @@
   <p>Pour maintenir un prix d'abonnement stable, nous plafonnons le nombre de scans Pick &amp; Pay que chaque abonné PRO peut effectuer par mois. Vous pouvez consulter à tout moment vos scans restants dans <strong>Réglages → Abonnement → Pick &amp; Pay credits</strong>.</p>
 
   <h3>Conservation de la photo après la numérisation</h3>
-  <p>Après un scan Pick &amp; Pay réussi, la photo du reçu est automatiquement attachée à la dépense de groupe en tant que photo de reçu (un avantage PRO). Elle est téléchargée et visible par les autres membres du même groupe, conformément au comportement des photos de reçus décrit ailleurs dans cette politique.</p>
+  <p>Après un scan Pick &amp; Pay réussi, la photo du reçu est automatiquement attachée à la dépense de groupe pour les abonnés PRO ; les utilisateurs en période d'essai reçoivent les informations extraites du scan, mais aucune photo n'est stockée ni téléversée. Lorsqu'elle est jointe, elle est téléchargée et visible par les autres membres du même groupe, conformément au comportement des photos de reçus décrit ailleurs dans cette politique.</p>
 
   <h3>Refuser</h3>
   <p>Pick &amp; Pay est entièrement optionnel. Vous pouvez répartir les dépenses de groupe en utilisant n'importe quel autre mode de partage (Égal, Par %, Par $) sans envoyer aucune donnée à l'API Gemini. Si vous n'utilisez jamais Pick &amp; Pay, aucune image de reçu n'est envoyée à Google.</p>
@@ -1587,7 +1594,7 @@
     <li>Copies locales des données de groupe pour un accès hors ligne</li>
     <li>Dépenses de groupe en cache pour une consultation hors ligne</li>
   </ul>
-  <p>Les données de dépenses personnelles — y compris les photos de reçus jointes — ne quittent jamais votre iPhone à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés sont conservées localement avec un marqueur « groupe supprimé ».</p>
+  <p>Les données de dépenses personnelles — y compris les photos de reçus jointes — ne quittent jamais votre iPhone à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés ne sont conservées localement avec un marqueur « groupe supprimé » que si la personne ayant supprimé le groupe a choisi de conserver les enregistrements. Si elle a choisi de les supprimer, ces dépenses sont également effacées de votre iPhone.</p>
 
   <h3>9.2 Stockage cloud pour les fonctionnalités de groupe</h3>
   <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore (et les photos avec Firebase Storage) :</p>
@@ -1622,7 +1629,7 @@
   <h2><span class="section-number">11</span>Suppression des données</h2>
   <ul>
     <li>Supprimer des dépenses personnelles individuelles ou toutes depuis Node Expense</li>
-    <li>Quitter ou demander la suppression d'un groupe — les données du groupe sont supprimées de Firebase lorsque tous les membres sont d'accord</li>
+    <li>Quitter ou demander la suppression d'un groupe — les données du groupe sont supprimées de Firebase lorsque tous les membres sont d'accord. Les dépenses, règlements, historique d'activité, commentaires et minuteurs de rappel du groupe sont supprimés de nos serveurs immédiatement (à l'exception des dépenses que vous avez choisi de conserver, décrites ci-dessous). Nous conservons ensuite uniquement un petit enregistrement de suppression pendant 90 jours, afin que les appareils hors ligne à ce moment-là puissent constater la suppression et nettoyer leur copie locale ; il contient le nom du groupe, la liste des membres (noms affichés, identifiants, éventuels identifiants de paiement et liens vers les photos de profil), ainsi que l'auteur et la date de la suppression. Cet enregistrement est supprimé automatiquement et définitivement au bout de 90 jours.</li>
     <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre iPhone ; elles ne sont pas retéléversées</li>
     <li>Lorsqu'un groupe est supprimé en choisissant « supprimer les enregistrements », toutes les photos de reçus de ce groupe sont également supprimées de Firebase Storage. Lorsque « conserver les enregistrements » est choisi, les photos restent dans Firebase Storage afin que les membres d'origine puissent continuer à les consulter sur leurs propres iPhone.</li>
     <li>Supprimer une photo de reçu d'une dépense de groupe (via l'écran d'édition) supprime le fichier sous-jacent de Firebase Storage.</li>
@@ -1661,7 +1668,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-07-05 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1720,6 +1727,7 @@
       <tr><td><strong>Google Gemini API (Firebase AI Logic 경유)</strong></td><td>Pick &amp; Pay 로 스캔한 영수증 사진의 AI 기반 OCR 및 항목 추출 (PRO 구독 기능)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>앱 업데이트 없이 기능 매개변수를 원격으로 구성 (예: 계정당 월간 스캔 한도)</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>백엔드 API 호출에 대한 사기 및 남용 방지</td></tr>
+      <tr><td><strong>Firebase Crashlytics</strong></td><td>충돌 보고 및 안정성 진단</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase는 그룹 관련 기능의 동기화 레이어로만 사용됩니다. 개인(비그룹) 지출 데이터는 클라우드 서비스에 <strong>절대</strong> 업로드되지 않습니다.</div>
@@ -1747,7 +1755,7 @@
   <p>구독 가격을 일정하게 유지하기 위해, PRO 구독자가 월별로 수행할 수 있는 Pick &amp; Pay 스캔 횟수에 한도를 둡니다. 남은 스캔 횟수는 언제든지 <strong>「설정 → 구독 → Pick &amp; Pay credits」</strong>에서 확인할 수 있습니다.</p>
 
   <h3>스캔 후 사진 보관</h3>
-  <p>Pick &amp; Pay 스캔이 성공하면, 영수증 사진이 그룹 지출의 영수증 사진으로 자동 첨부됩니다(PRO 혜택). 이 사진은 업로드되며 동일 그룹의 다른 멤버에게 표시됩니다. 본 정책의 다른 부분에서 설명하는 영수증 사진 동작과 동일합니다.</p>
+  <p>Pick &amp; Pay 스캔이 성공하면, PRO 구독자의 경우 영수증 사진이 그룹 지출의 영수증 사진으로 자동 첨부됩니다. 체험판 사용자는 스캔으로 추출된 정보를 받을 수 있지만 사진은 저장되거나 업로드되지 않습니다. 첨부된 경우 이 사진은 업로드되며 동일 그룹의 다른 멤버에게 표시됩니다. 본 정책의 다른 부분에서 설명하는 영수증 사진 동작과 동일합니다.</p>
 
   <h3>거부</h3>
   <p>Pick &amp; Pay 는 전적으로 선택 사항입니다. 다른 분할 모드(균등, % 별, $ 별) 중 어떤 것을 사용해서도 Gemini API 에 데이터를 전송하지 않고 그룹 지출을 분할할 수 있습니다. Pick &amp; Pay 를 한 번도 사용하지 않으면, 영수증 이미지가 Google 로 전송되지 않습니다.</p>
@@ -1779,7 +1787,7 @@
     <li>오프라인 접근을 위한 그룹 데이터 로컬 복사본</li>
     <li>오프라인 조회를 위해 캐시된 그룹 지출</li>
   </ul>
-  <p>개인 지출 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 iPhone 를 절대 벗어나지 않습니다. 삭제된 그룹의 지출은 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다.</p>
+  <p>개인 지출 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 iPhone 를 절대 벗어나지 않습니다. 삭제된 그룹의 지출은 그룹을 삭제한 사람이 기록 보관을 선택한 경우에만 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다. 기록 삭제를 선택한 경우 해당 지출은 귀하의 iPhone 에서도 삭제됩니다.</p>
 
   <h3>9.2 그룹 기능을 위한 클라우드 저장</h3>
   <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다(사진은 Firebase Storage):</p>
@@ -1814,7 +1822,7 @@
   <h2><span class="section-number">11</span>데이터 삭제</h2>
   <ul>
     <li>Node Expense에서 개별 개인 지출 또는 모든 지출 삭제</li>
-    <li>그룹 탈퇴 또는 삭제 요청 — 모든 멤버가 동의하면 그룹 데이터가 Firebase에서 삭제됨</li>
+    <li>그룹 탈퇴 또는 삭제 요청 — 모든 멤버가 동의하면 그룹 데이터가 Firebase에서 삭제됩니다. 그룹의 지출, 정산, 활동 기록, 댓글 및 알림 타이머는 당사 서버에서 즉시 삭제됩니다(보관을 선택한 지출은 제외하며, 아래에서 설명합니다). 이후 90일 동안은 당시 오프라인 상태였던 기기가 삭제 사실을 확인하고 로컬 사본을 정리할 수 있도록 작은 삭제 기록만 보관합니다. 이 기록에는 그룹 이름, 멤버 목록(표시 이름, 식별자, 등록된 결제 계정, 프로필 사진 링크), 삭제한 사람과 삭제 시각이 포함됩니다. 이 기록은 90일 후 자동으로 영구 삭제됩니다.</li>
     <li>'삭제 시 보관'으로 표시된 그룹 지출은 iPhone 에 로컬로 남으며, 재업로드되지 않음</li>
     <li>그룹을 삭제할 때 '기록 제거'를 선택하면 해당 그룹의 모든 영수증 사진도 Firebase Storage에서 삭제됩니다. '기록 보관'을 선택하면 사진은 Firebase Storage에 그대로 남아 원래 멤버들이 자신의 iPhone 에서 계속 볼 수 있습니다.</li>
     <li>편집 화면에서 그룹 지출의 영수증 사진을 제거하면 Firebase Storage에 있는 원본 파일도 삭제됩니다.</li>
