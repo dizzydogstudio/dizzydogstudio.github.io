@@ -323,7 +323,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Platform:</strong> iOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -342,7 +342,7 @@
         <li>Receipt images scanned for itemised splitting via Pick &amp; Pay (sent to Google's Gemini API for AI processing; PRO subscription feature)</li>
         <li>Optional profile photo, visible to all members of any group you join (PRO subscription feature)</li>
         <li>Optional group photo, set by the group admin and visible to all members of that group (PRO subscription feature)</li>
-        <li>Taiwan electronic invoice numbers (captured when you scan a Taiwan e-invoice; stored locally on your iPhone for the optional uniform-invoice lottery check)</li>
+        <li>Taiwan electronic invoice numbers (captured when you scan a Taiwan e-invoice; stored locally on your device for the optional uniform-invoice lottery check)</li>
         <li>Optional location data</li>
         <li>Selected calendar access</li>
         <li>Optional Apple sign-in identifier (only if you turn on Cross-Device License Sync; a stable, app-specific identifier used solely to match your PRO license across your devices — no name or email is requested)</li>
@@ -352,9 +352,9 @@
       <div class="card-label">Automatically Collected</div>
       <ul>
         <li>Anonymous usage analytics (Firebase)</li>
-        <li>Anonymous iPhone identifier</li>
+        <li>Anonymous device identifier</li>
         <li>Crash logs and diagnostics</li>
-        <li>iPhone & app performance info</li>
+        <li>device & app performance info</li>
         <li>Push notification tokens (when enabled)</li>
       </ul>
     </div>
@@ -362,10 +362,10 @@
   <p>Automatically collected data is used only to improve stability, performance, and user experience.</p>
 
   <h3>Subscriptions &amp; Payments</h3>
-  <p>Purchases and subscriptions are processed by Apple and RevenueCat. We do not receive your credit card or payment details. RevenueCat stores anonymous subscriber identifiers to manage your subscription status, "Lifetime" access, and free trial period. This data is retained as long as necessary to verify PRO feature access across iPhone reinstalls and is processed independently of your Group Expense cloud data.</p>
+  <p>Purchases and subscriptions are processed by Apple and RevenueCat. We do not receive your credit card or payment details. RevenueCat stores anonymous subscriber identifiers to manage your subscription status, "Lifetime" access, and free trial period. This data is retained as long as necessary to verify PRO feature access across device reinstalls and is processed independently of your Group Expense cloud data.</p>
 
   <h3>Cross-Device License Sync (Sign in with Apple)</h3>
-  <p>No account or sign-in is required to use Node Expense. If you own PRO on more than one device (iPhone, iPad, or Mac) signed in to the same Apple Account, you can <strong>optionally</strong> tap <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across them. We request <strong>no name and no email</strong> — only the stable, app-specific identifier Apple provides. That identifier is used <strong>solely</strong> to match your PRO license (and any App Store offer codes you have redeemed) to the same subscriber profile on each device, through RevenueCat. It is <strong>never</strong> used for advertising, tracking, or profiling. You can disconnect a device at any time from the Subscription screen, and you can revoke the sign-in entirely in iOS Settings → your Apple Account → Sign in with Apple.</p>
+  <p>No account or sign-in is required to use Node Expense. If you own PRO on more than one device (device, iPad, or Mac) signed in to the same Apple Account, you can <strong>optionally</strong> tap <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across them. We request <strong>no name and no email</strong> — only the stable, app-specific identifier Apple provides. That identifier is used <strong>solely</strong> to match your PRO license (and any App Store offer codes you have redeemed) to the same subscriber profile on each device, through RevenueCat. It is <strong>never</strong> used for advertising, tracking, or profiling. You can disconnect a device at any time from the Subscription screen, and you can revoke the sign-in entirely in iOS Settings → your Apple Account → Sign in with Apple.</p>
 
   <h2><span class="section-number">3</span>Third-Party Services</h2>
   <table class="service-table">
@@ -417,23 +417,23 @@
 
     <h2><span class="section-number">5</span>Taiwan Uniform Invoice Lottery</h2>
   <p>Taiwan electronic invoices (電子發票) carry a number eligible for the government's bi-monthly uniform-invoice lottery (統一發票). Node Expense includes an optional, <strong>off-by-default</strong> feature that checks your scanned invoice numbers against the official winning numbers and notifies you of a possible win.</p>
-  <p><strong>On-iPhone only.</strong> When you scan a Taiwan electronic invoice, the invoice number is stored locally on your iPhone with the expense, exactly like your other personal expense data — it is <strong>never uploaded</strong> to our servers.</p>
-  <p><strong>How the check works.</strong> If you turn the feature on (Settings → Notifications → Taiwan Uniform Invoice Lottery), the app downloads the official winning numbers — which are <strong>public information</strong> — from our Firebase Firestore and compares them to your invoice numbers <strong>entirely on your iPhone</strong>. Your invoice numbers never leave your iPhone; nothing about your invoices, purchases, or identity is sent to us or any third party for this feature.</p>
-  <p><strong>Notifications.</strong> If an invoice number matches, the app shows a local notification on your iPhone. A possible win is unofficial until you verify it with Taiwan's Ministry of Finance, and you must keep the printed invoice to claim any prize.</p>
+  <p><strong>On-device only.</strong> When you scan a Taiwan electronic invoice, the invoice number is stored locally on your device with the expense, exactly like your other personal expense data — it is <strong>never uploaded</strong> to our servers.</p>
+  <p><strong>How the check works.</strong> If you turn the feature on (Settings → Notifications → Taiwan Uniform Invoice Lottery), the app downloads the official winning numbers — which are <strong>public information</strong> — from our Firebase Firestore and compares them to your invoice numbers <strong>entirely on your device</strong>. Your invoice numbers never leave your device; nothing about your invoices, purchases, or identity is sent to us or any third party for this feature.</p>
+  <p><strong>Notifications.</strong> If an invoice number matches, the app shows a local notification on your device. A possible win is unofficial until you verify it with Taiwan's Ministry of Finance, and you must keep the printed invoice to claim any prize.</p>
   <p><strong>Your choice.</strong> The feature is off by default and requires you to opt in. You can turn it off at any time in Settings, after which no winning numbers are downloaded and no checks are performed.</p>
 
 <h2><span class="section-number">6</span>No Advertising or Cross-App Tracking</h2>
   <p>Node Expense shows <strong>no advertisements</strong> — neither on the free tier nor with a PRO subscription. The app does <strong>not</strong> track you across other apps or websites, does not use Apple's App Tracking Transparency framework, and does not share your data with advertising networks or data brokers. There is no advertising SDK in the app.</p>
 
   <h2><span class="section-number">7</span>Location Data</h2>
-  <p>Location data is optional and only collected if you explicitly enable it in Settings. When enabled, your location is recorded with new expenses. Location data is stored locally on your iPhone and is not uploaded to cloud services. You can disable location access at any time in iOS Settings.</p>
+  <p>Location data is optional and only collected if you explicitly enable it in Settings. When enabled, your location is recorded with new expenses. Location data is stored locally on your device and is not uploaded to cloud services. You can disable location access at any time in iOS Settings.</p>
 
   <h2><span class="section-number">8</span>Calendar Access</h2>
   <p>Node Expense only accesses the calendars you select. Calendar access is used solely to display and sync expense entries as calendar events. Calendar data is never shared with third parties.</p>
 
   <h2><span class="section-number">9</span>Data Storage, Retention &amp; Encryption</h2>
-  <h3>9.1 On-iPhone Storage</h3>
-  <p>The following data is stored in your iPhone:</p>
+  <h3>9.1 On-device Storage</h3>
+  <p>The following data is stored in your device:</p>
   <ul>
     <li>Personal (non-group) expense records</li>
     <li>Taiwan electronic invoice numbers attached to expenses (used only for the optional uniform-invoice lottery check)</li>
@@ -442,7 +442,7 @@
     <li>Local copies of group data for offline access</li>
     <li>Cached group expenses for offline viewing</li>
   </ul>
-  <p>Personal expense data — including any attached receipt photos — never leaves your iPhone unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker, but only if whoever deleted the group chose to keep the records. If they chose to remove them, those expenses are deleted from your iPhone as well.</p>
+  <p>Personal expense data — including any attached receipt photos — never leaves your device unless you explicitly export or back it up. Expenses from deleted groups are retained locally with a 'deleted group' marker, but only if whoever deleted the group chose to keep the records. If they chose to remove them, those expenses are deleted from your device as well.</p>
 
   <h3>9.2 Cloud Storage for Group Features</h3>
   <p>For group features, selected data is synced to Firebase Firestore (and Firebase Storage for photos):</p>
@@ -469,7 +469,7 @@
     <li>Backup files are exported to a location you choose (iCloud Drive, On My iPhone, or other iOS Files locations)</li>
     <li>Backup encryption keys are stored exclusively in your iCloud Keychain, never transmitted to our servers, and are not accessible to us as developers</li>
   </ul>
-  <p><strong>Backup scope:</strong> Backups and exports cover your locally stored personal expense records and cached group metadata. Live group expense data stored in Firebase Firestore is <strong>not</strong> included in local iPhone backups — it remains accessible via Firestore as long as the group exists and has not been deleted.</p>
+  <p><strong>Backup scope:</strong> Backups and exports cover your locally stored personal expense records and cached group metadata. Live group expense data stored in Firebase Firestore is <strong>not</strong> included in local device backups — it remains accessible via Firestore as long as the group exists and has not been deleted.</p>
 
   <h2><span class="section-number">10</span>Data Migration</h2>
   <p>Users with feature access (PRO subscription or active free trial) may export their data as JSON, CSV, or PDF, and import data in JSON format. Node Expense does not have access to your exported files. Exported files are saved to a location you choose. Note that exports include locally stored personal expense records and cached group data; they do not pull live data directly from Firebase Firestore.</p>
@@ -478,15 +478,15 @@
   <ul>
     <li>Delete individual or all personal expenses from within Node Expense</li>
     <li>Leave or request deletion of a group — group data is removed from Firebase when all members agree. The group's expenses, settlements, activity history, comments and reminder timers are deleted from our servers immediately (except expenses you chose to keep, described below). For 90 days afterwards we retain only a small deletion record, so that devices which were offline at the time can learn the group was deleted and clean up their local copy; it holds the group name, the member list (display names, identifiers, any payment handles and profile photo links), and who deleted it and when. That record is automatically and permanently deleted after 90 days.</li>
-    <li>Group expenses marked as 'keep on deletion' remain on your iPhone locally; they are not re-uploaded</li>
-    <li>When a group is deleted with 'remove records' selected, every receipt photo for that group is also deleted from Firebase Storage. When 'keep records' is chosen, the photos remain in Firebase Storage so original members can still view them on their own iPhones.</li>
+    <li>Group expenses marked as 'keep on deletion' remain on your device locally; they are not re-uploaded</li>
+    <li>When a group is deleted with 'remove records' selected, every receipt photo for that group is also deleted from Firebase Storage. When 'keep records' is chosen, the photos remain in Firebase Storage so original members can still view them on their own devices.</li>
     <li>Removing a receipt photo from a group expense (via the Edit screen) deletes the underlying file from Firebase Storage.</li>
     <li>Deleting an itemised (Pick &amp; Pay) expense removes the line-item detail along with the expense.</li>
     <li>Deleting the auto-attached Pick &amp; Pay receipt photo (via the Edit screen) removes both the local copy and the copy in Firebase Storage that other group members can see.</li>
-    <li>Updating your profile photo overwrites the previous photo in Firebase Storage. Choosing "Remove Photo" deletes it from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing iPhones may retain a cached copy until next sync.</li>
+    <li>Updating your profile photo overwrites the previous photo in Firebase Storage. Choosing "Remove Photo" deletes it from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing devices may retain a cached copy until next sync.</li>
     <li>Updating or removing a group photo works the same way: updating overwrites the existing photo in Firebase Storage, and choosing "Remove Photo" deletes it. Only the group admin can perform these actions. The photo is also deleted from Firebase Storage when the group itself is deleted, regardless of which deletion option is chosen.</li>
     <li>Group admins can prune inactive groups directly from Settings → Data &amp; Privacy → Inactive Groups. A group is eligible for pruning after 6 months of inactivity with all debts settled. When an admin initiates deletion, all affected group members receive a push notification identifying who deleted the group. The admin may choose to export group expenses, retain them locally, or delete them entirely before the group is removed from Firebase.</li>
-    <li>Uninstalling Node Expense removes all locally stored data from your iPhone</li>
+    <li>Uninstalling Node Expense removes all locally stored data from your device</li>
   </ul>
   <p>Note: Firebase group data may persist until the group is formally deleted through the in-app deletion flow.</p>
 
@@ -515,7 +515,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-07-31 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-07-31 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -534,7 +534,7 @@
         <li>透過 Pick &amp; Pay 進行逐項分帳所掃描的收據圖片（將傳送至 Google Gemini API 進行 AI 處理；PRO 訂閱功能）</li>
         <li>選填的個人頭像，您加入的所有群組的成員皆可見（PRO 訂閱功能）</li>
         <li>選填的群組頭像，由群組管理員設定，僅該群組的所有成員可見（PRO 訂閱功能）</li>
-        <li>台灣電子發票號碼（掃描台灣電子發票時擷取；儲存在您的 iPhone 本機，供選用的統一發票對獎功能使用）</li>
+        <li>台灣電子發票號碼（掃描台灣電子發票時擷取；儲存在您的裝置裡，供選用的統一發票對獎功能使用）</li>
         <li>選填的位置資料</li>
         <li>所選行事曆存取</li>
         <li>選填的 Apple 登入識別碼（僅在您開啟「跨裝置授權同步」時；這是一組穩定、僅限本應用程式的識別碼，只用於在您的裝置間比對您的 PRO 授權——我們不會索取您的姓名或電子郵件）</li>
@@ -544,9 +544,9 @@
       <div class="card-label">自動收集的資料</div>
       <ul>
         <li>匿名使用分析（Firebase）</li>
-        <li>匿名 iPhone 識別碼</li>
+        <li>匿名裝置識別碼</li>
         <li>當機記錄與診斷資訊</li>
-        <li>iPhone 與應用程式效能資訊</li>
+        <li>裝置與應用程式效能資訊</li>
         <li>推播通知權杖（啟用時）</li>
       </ul>
     </div>
@@ -557,7 +557,7 @@
   <p>購買及訂閱由 Apple 與 RevenueCat 處理。我們不會收到您的信用卡或付款詳細資訊。RevenueCat 儲存匿名訂閱者識別碼，以管理您的訂閱狀態、「終身」使用權及免費試用期。此資料的保存期限以驗證您在重新安裝後存取 PRO 功能所需為限，並與您的群組費用雲端資料分開處理。</p>
 
   <h3>跨裝置授權同步（透過 Apple 登入）</h3>
-  <p>使用 Node Expense <strong>無需帳戶或登入</strong>。若您在多台使用同一 Apple 帳戶的裝置（iPhone、iPad 或 Mac）上擁有 PRO，您可以在「訂閱」頁面<strong>選擇性地</strong>點按<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至這些裝置。我們<strong>不會索取您的姓名或電子郵件</strong>——僅取得 Apple 提供的穩定、僅限本應用程式的識別碼。該識別碼<strong>僅</strong>用於透過 RevenueCat 在每台裝置上將您的 PRO 授權（以及您兌換過的任何 App Store 優惠代碼）比對至同一個訂閱者身分，<strong>絕不會</strong>用於廣告、追蹤或建立個人檔案。您可隨時在「訂閱」頁面中斷某台裝置的連結，也可以在「iOS 設定 → 您的 Apple 帳戶 → 透過 Apple 登入」中完全撤銷授權。</p>
+  <p>使用 Node Expense <strong>無需帳戶或登入</strong>。若您在多台使用同一 Apple 帳戶的裝置（裝置、iPad 或 Mac）上擁有 PRO，您可以在「訂閱」頁面<strong>選擇性地</strong>點按<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至這些裝置。我們<strong>不會索取您的姓名或電子郵件</strong>——僅取得 Apple 提供的穩定、僅限本應用程式的識別碼。該識別碼<strong>僅</strong>用於透過 RevenueCat 在每台裝置上將您的 PRO 授權（以及您兌換過的任何 App Store 優惠代碼）比對至同一個訂閱者身分，<strong>絕不會</strong>用於廣告、追蹤或建立個人檔案。您可隨時在「訂閱」頁面中斷某台裝置的連結，也可以在「iOS 設定 → 您的 Apple 帳戶 → 透過 Apple 登入」中完全撤銷授權。</p>
 
   <h2><span class="section-number">3</span>第三方服務</h2>
   <table class="service-table">
@@ -609,23 +609,23 @@
 
     <h2><span class="section-number">5</span>台灣統一發票對獎</h2>
   <p>台灣的電子發票載有可參加政府每兩個月一次之統一發票對獎的號碼。Node Expense 提供一項選用且<strong>預設關閉</strong>的功能，會將您掃描的發票號碼與官方中獎號碼比對，並在您可能中獎時通知您。</p>
-  <p><strong>僅在 iPhone 上進行。</strong>當您掃描台灣電子發票時，發票號碼會與該筆費用一同儲存在您的 iPhone 本機，與您其他個人費用資料完全相同——<strong>絕不會上傳</strong>至我們的伺服器。</p>
-  <p><strong>對獎方式。</strong>若您開啟此功能（設定 → 通知 → 台灣統一發票對獎），應用程式會從我們的 Firebase Firestore 下載官方中獎號碼（屬<strong>公開資訊</strong>），並<strong>完全在您的 iPhone 上</strong>與您的發票號碼比對。您的發票號碼絕不會離開您的 iPhone；此功能不會將您的發票、消費或身分等任何資訊傳送給我們或任何第三方。</p>
-  <p><strong>通知。</strong>若發票號碼相符，應用程式會在您的 iPhone 上顯示本機通知。在向財政部核對之前，可能中獎均非正式結果，且您必須保留紙本發票才能兌獎。</p>
+  <p><strong>僅在裝置上進行。</strong>當您掃描台灣電子發票時，發票號碼會與該筆費用一同儲存在您的裝置裡，與您其他個人費用資料完全相同——<strong>絕不會上傳</strong>至我們的伺服器。</p>
+  <p><strong>對獎方式。</strong>若您開啟此功能（設定 → 通知 → 台灣統一發票對獎），應用程式會從我們的 Firebase Firestore 下載官方中獎號碼（屬<strong>公開資訊</strong>），並<strong>完全在您的裝置上</strong>與您的發票號碼比對。您的發票號碼絕不會離開您的裝置；此功能不會將您的發票、消費或身分等任何資訊傳送給我們或任何第三方。</p>
+  <p><strong>通知。</strong>若發票號碼相符，應用程式會在您的裝置上顯示本機通知。在向財政部核對之前，可能中獎均非正式結果，且您必須保留紙本發票才能兌獎。</p>
   <p><strong>您的選擇。</strong>此功能預設關閉，需由您主動開啟。您可隨時在「設定」中關閉，關閉後將不再下載任何中獎號碼，也不會進行任何比對。</p>
 
 <h2><span class="section-number">6</span>無廣告、不進行跨應用程式追蹤</h2>
   <p>Node Expense <strong>不顯示任何廣告</strong>——無論免費方案或 PRO 訂閱皆然。本應用程式<strong>不會</strong>跨其他應用程式或網站追蹤您、不使用 Apple 的「App 追蹤透明度」（App Tracking Transparency）架構，也不會將您的資料分享給廣告聯播網或資料仲介。應用程式中沒有任何廣告 SDK。</p>
 
   <h2><span class="section-number">7</span>位置資料</h2>
-  <p>位置資料為選填，僅在您在「設定」中明確啟用以進行費用追蹤時才會收集。啟用後，您的位置將隨新費用一同記錄。位置資料儲存於您的 iPhone 本機，不會上傳至雲端服務。您可以隨時在 iOS 設定中停用位置存取。</p>
+  <p>位置資料為選填，僅在您在「設定」中明確啟用以進行費用追蹤時才會收集。啟用後，您的位置將隨新費用一同記錄。位置資料儲存於您的裝置裡，不會上傳至雲端服務。您可以隨時在 iOS 設定中停用位置存取。</p>
 
   <h2><span class="section-number">8</span>行事曆存取</h2>
   <p>Node Expense 僅存取您所選擇的行事曆。行事曆存取僅用於以行事曆事件的形式顯示及同步費用項目。行事曆資料絕不會與第三方共享。</p>
 
   <h2><span class="section-number">9</span>資料儲存、保留與加密</h2>
-  <h3>9.1 iPhone 本機儲存</h3>
-  <p>以下資料儲存在您的 iPhone 中：</p>
+  <h3>9.1 裝置本機儲存</h3>
+  <p>以下資料儲存在您的裝置中：</p>
   <ul>
     <li>個人（非群組）費用記錄</li>
     <li>附加於費用的台灣電子發票號碼（僅供選用的統一發票對獎功能使用）</li>
@@ -634,7 +634,7 @@
     <li>群組資料的本機副本（供離線存取）</li>
     <li>群組費用的快取（供離線檢視）</li>
   </ul>
-  <p>個人費用資料——包括所附加的收據照片——不會離開您的 iPhone，除非您明確匯出或備份。若刪除群組的人選擇保留記錄，已刪除群組的費用才會在您的 iPhone 本機保留，並標示為「已刪除群組」；若選擇移除記錄，這些費用也會從您的 iPhone 刪除。</p>
+  <p>個人費用資料——包括所附加的收據照片——不會離開您的裝置，除非您明確匯出或備份。若刪除群組的人選擇保留記錄，已刪除群組的費用才會在您的裝置裡保留，並標示為「已刪除群組」；若選擇移除記錄，這些費用也會從您的裝置刪除。</p>
 
   <h3>9.2 群組功能的雲端儲存</h3>
   <p>針對群組功能，所選資料將同步至 Firebase Firestore（照片則同步至 Firebase Storage）：</p>
@@ -661,7 +661,7 @@
     <li>備份檔案會匯出至您所選擇的位置（iCloud 雲碟、本機 iPhone 或其他 iOS 檔案位置）</li>
     <li>備份加密金鑰僅儲存於您的 iCloud 鑰匙圈中，絕不會傳輸至我們的伺服器，也不會被我們開發者存取</li>
   </ul>
-  <p><strong>備份範圍：</strong>備份與匯出涵蓋您本機儲存的個人費用記錄及已快取的群組中繼資料。儲存於 Firebase Firestore 的即時群組費用資料<strong>不包含</strong>在本機 iPhone 備份中——只要群組存在且未被刪除，即可透過 Firestore 存取。</p>
+  <p><strong>備份範圍：</strong>備份與匯出涵蓋您本機儲存的個人費用記錄及已快取的群組中繼資料。儲存於 Firebase Firestore 的即時群組費用資料<strong>不包含</strong>在本機裝置備份中——只要群組存在且未被刪除，即可透過 Firestore 存取。</p>
 
   <h2><span class="section-number">10</span>資料遷移</h2>
   <p>具有功能存取權限的使用者（PRO 訂閱或有效免費試用）可將資料匯出為 JSON、CSV 或 PDF 格式，並支援以 JSON 格式匯入資料。Node Expense 無法存取您的匯出檔案。匯出檔案會儲存至您所選擇的位置。請注意，匯出內容包含本機儲存的個人費用記錄及已快取的群組資料；並非直接從 Firebase Firestore 擷取即時資料。</p>
@@ -670,15 +670,15 @@
   <ul>
     <li>在 Node Expense 中刪除個別或全部個人費用</li>
     <li>離開或請求刪除群組 — 當所有成員同意後，群組資料將從 Firebase 移除。群組的費用、結算、活動記錄、留言與提醒計時器會立即從我們的伺服器刪除（您選擇保留的費用除外，詳見下方）。之後我們僅保留一筆小型的刪除記錄 90 天，讓當時離線的裝置得知該群組已被刪除並清理本機副本；該記錄包含群組名稱、成員清單（顯示名稱、識別碼、任何付款帳號與個人頭像連結），以及由誰在何時刪除。該記錄會在 90 天後自動且永久刪除。</li>
-    <li>標示為「刪除時保留」的群組費用將保留於您的 iPhone 本機；這些資料不會被重新上傳</li>
-    <li>當刪除群組時若選擇「移除記錄」，該群組的所有收據照片也會從 Firebase Storage 中刪除。若選擇「保留記錄」，照片將保留於 Firebase Storage 中，原群組成員仍可在自己的 iPhone 上檢視。</li>
+    <li>標示為「刪除時保留」的群組費用將保留於您的裝置裡；這些資料不會被重新上傳</li>
+    <li>當刪除群組時若選擇「移除記錄」，該群組的所有收據照片也會從 Firebase Storage 中刪除。若選擇「保留記錄」，照片將保留於 Firebase Storage 中，原群組成員仍可在自己的裝置上檢視。</li>
     <li>從群組費用中移除收據照片（透過編輯畫面）會將底層檔案從 Firebase Storage 中刪除。</li>
     <li>刪除逐項（Pick &amp; Pay）費用時，會連同該費用一併移除逐項明細。</li>
     <li>從編輯畫面刪除自動附加的 Pick &amp; Pay 收據照片時，會同時移除本機副本以及 Firebase Storage 中其他群組成員可見的副本。</li>
-    <li>更新個人頭像會覆寫 Firebase Storage 中的舊照片。選擇「移除照片」會將其從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有 iPhone 可能在下次同步前仍保留快取副本。</li>
+    <li>更新個人頭像會覆寫 Firebase Storage 中的舊照片。選擇「移除照片」會將其從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
     <li>更新或移除群組頭像的運作方式相同：更新會覆寫 Firebase Storage 中的現有照片，選擇「移除照片」則會將其刪除。此操作僅限群組管理員執行。群組本身被刪除時，無論選擇哪種刪除選項，群組頭像也會一併從 Firebase Storage 中刪除。</li>
     <li>群組管理員可直接在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組。群組需在停止活動超過 6 個月且所有債務已結清後，方可進行清理。當管理員發起刪除請求時，所有受影響的群組成員將收到推播通知，通知內容包含刪除群組的管理員姓名。管理員可選擇在將群組從 Firebase 移除前，匯出群組費用、將其保留於本機，或全部刪除。</li>
-    <li>解除安裝 Node Expense 將移除您 iPhone 上所有本機儲存的資料</li>
+    <li>解除安裝 Node Expense 將移除您裝置上所有本機儲存的資料</li>
   </ul>
   <p>注意：Firebase 群組資料可能在群組透過應用程式內的刪除流程正式刪除之前持續存在。</p>
 
@@ -707,7 +707,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-07-31 &nbsp;·&nbsp; <strong>平台：</strong>iOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-07-31 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -726,7 +726,7 @@
         <li>通过 Pick &amp; Pay 进行逐项分账所扫描的收据图片（将发送至 Google Gemini API 进行 AI 处理；PRO 订阅功能）</li>
         <li>可选的个人头像，您加入的所有群组的成员均可见（PRO 订阅功能）</li>
         <li>可选的群组头像，由群组管理员设置，仅该群组的所有成员可见（PRO 订阅功能）</li>
-        <li>台湾电子发票号码（扫描台湾电子发票时获取；存储在您的 iPhone 本地，供可选的统一发票对奖功能使用）</li>
+        <li>台湾电子发票号码（扫描台湾电子发票时获取；存储在您的设备里，供可选的统一发票对奖功能使用）</li>
         <li>可选的位置数据</li>
         <li>所选日历访问权限</li>
         <li>可选的 Apple 登录标识符（仅在您开启"跨设备授权同步"时；这是一组稳定、仅限本应用的标识符，只用于在您的设备间比对您的 PRO 授权——我们不会索取您的姓名或电子邮件）</li>
@@ -736,9 +736,9 @@
       <div class="card-label">自动收集的数据</div>
       <ul>
         <li>匿名使用分析（Firebase）</li>
-        <li>匿名 iPhone 标识符</li>
+        <li>匿名设备标识符</li>
         <li>崩溃日志与诊断信息</li>
-        <li>iPhone 与应用性能信息</li>
+        <li>设备与应用性能信息</li>
         <li>推送通知令牌（启用时）</li>
       </ul>
     </div>
@@ -746,10 +746,10 @@
   <p>自动收集的数据仅用于提高 Node Expense 的稳定性、性能和用户体验。</p>
 
   <h3>订阅与付款</h3>
-  <p>购买和订阅由 Apple 和 RevenueCat 处理。我们不会收到您的信用卡或付款详情。RevenueCat 存储匿名订阅者标识符，以管理您的订阅状态、"终身"访问权限和免费试用期。这些数据将根据需要保留，以便在重新安装 iPhone 时验证您的专业版功能访问权限，并独立于您的群组支出云端数据进行处理。</p>
+  <p>购买和订阅由 Apple 和 RevenueCat 处理。我们不会收到您的信用卡或付款详情。RevenueCat 存储匿名订阅者标识符，以管理您的订阅状态、"终身"访问权限和免费试用期。这些数据将根据需要保留，以便在重新安装设备时验证您的专业版功能访问权限，并独立于您的群组支出云端数据进行处理。</p>
 
   <h3>跨设备授权同步（通过 Apple 登录）</h3>
-  <p>使用 Node Expense <strong>无需账户或登录</strong>。若您在多台使用同一 Apple 账户的设备（iPhone、iPad 或 Mac）上拥有 PRO，您可以在"订阅"页面<strong>选择性地</strong>点按<strong>通过 Apple 登录</strong>，将您的 PRO 授权同步至这些设备。我们<strong>不会索取您的姓名或电子邮件</strong>——仅获取 Apple 提供的稳定、仅限本应用的标识符。该标识符<strong>仅</strong>用于通过 RevenueCat 在每台设备上将您的 PRO 授权（以及您兑换过的任何 App Store 优惠代码）比对至同一个订阅者身份，<strong>绝不会</strong>用于广告、追踪或建立用户画像。您可随时在"订阅"页面断开某台设备的连接，也可以在"iOS 设置 → 您的 Apple 账户 → 通过 Apple 登录"中完全撤销授权。</p>
+  <p>使用 Node Expense <strong>无需账户或登录</strong>。若您在多台使用同一 Apple 账户的设备（设备、iPad 或 Mac）上拥有 PRO，您可以在"订阅"页面<strong>选择性地</strong>点按<strong>通过 Apple 登录</strong>，将您的 PRO 授权同步至这些设备。我们<strong>不会索取您的姓名或电子邮件</strong>——仅获取 Apple 提供的稳定、仅限本应用的标识符。该标识符<strong>仅</strong>用于通过 RevenueCat 在每台设备上将您的 PRO 授权（以及您兑换过的任何 App Store 优惠代码）比对至同一个订阅者身份，<strong>绝不会</strong>用于广告、追踪或建立用户画像。您可随时在"订阅"页面断开某台设备的连接，也可以在"iOS 设置 → 您的 Apple 账户 → 通过 Apple 登录"中完全撤销授权。</p>
 
   <h2><span class="section-number">3</span>第三方服务</h2>
   <table class="service-table">
@@ -801,23 +801,23 @@
 
     <h2><span class="section-number">5</span>台湾统一发票对奖</h2>
   <p>台湾的电子发票载有可参加政府每两个月一次的统一发票对奖的号码。Node Expense 提供一项可选且<strong>默认关闭</strong>的功能，会将您扫描的发票号码与官方中奖号码比对，并在您可能中奖时通知您。</p>
-  <p><strong>仅在 iPhone 上进行。</strong>当您扫描台湾电子发票时，发票号码会与该笔支出一同存储在您的 iPhone 本地，与您其他个人支出数据完全相同——<strong>绝不会上传</strong>至我们的服务器。</p>
-  <p><strong>对奖方式。</strong>若您开启此功能（设置 → 通知 → 台湾统一发票对奖），应用程序会从我们的 Firebase Firestore 下载官方中奖号码（属<strong>公开信息</strong>），并<strong>完全在您的 iPhone 上</strong>与您的发票号码比对。您的发票号码绝不会离开您的 iPhone；此功能不会将您的发票、消费或身份等任何信息发送给我们或任何第三方。</p>
-  <p><strong>通知。</strong>若发票号码相符，应用程序会在您的 iPhone 上显示本地通知。在向财政部核对之前，可能中奖均非正式结果，且您必须保留纸质发票才能兑奖。</p>
+  <p><strong>仅在设备上进行。</strong>当您扫描台湾电子发票时，发票号码会与该笔支出一同存储在您的设备里，与您其他个人支出数据完全相同——<strong>绝不会上传</strong>至我们的服务器。</p>
+  <p><strong>对奖方式。</strong>若您开启此功能（设置 → 通知 → 台湾统一发票对奖），应用程序会从我们的 Firebase Firestore 下载官方中奖号码（属<strong>公开信息</strong>），并<strong>完全在您的设备上</strong>与您的发票号码比对。您的发票号码绝不会离开您的设备；此功能不会将您的发票、消费或身份等任何信息发送给我们或任何第三方。</p>
+  <p><strong>通知。</strong>若发票号码相符，应用程序会在您的设备上显示本地通知。在向财政部核对之前，可能中奖均非正式结果，且您必须保留纸质发票才能兑奖。</p>
   <p><strong>您的选择。</strong>此功能默认关闭，需由您主动开启。您可随时在"设置"中关闭，关闭后将不再下载任何中奖号码，也不会进行任何比对。</p>
 
 <h2><span class="section-number">6</span>无广告、不进行跨应用追踪</h2>
   <p>Node Expense <strong>不显示任何广告</strong>——无论免费方案或 PRO 订阅皆是如此。本应用<strong>不会</strong>跨其他应用或网站追踪您、不使用 Apple 的"应用跟踪透明度"（App Tracking Transparency）框架，也不会将您的数据分享给广告网络或数据经纪商。应用中没有任何广告 SDK。</p>
 
   <h2><span class="section-number">7</span>位置数据</h2>
-  <p>位置数据是可选的，仅在您在"设置"中明确启用支出追踪时才会收集。启用后，您的位置将随新支出一起记录。位置数据存储在您的 iPhone 本地，不会上传到云端服务。您可以随时在 iOS 设置中禁用位置访问权限。</p>
+  <p>位置数据是可选的，仅在您在"设置"中明确启用支出追踪时才会收集。启用后，您的位置将随新支出一起记录。位置数据存储在您的设备里，不会上传到云端服务。您可以随时在 iOS 设置中禁用位置访问权限。</p>
 
   <h2><span class="section-number">8</span>日历访问权限</h2>
   <p>Node Expense 仅访问您选择的日历。日历访问权限仅用于将支出条目显示并同步为日历事件。日历数据绝不会与第三方共享。</p>
 
   <h2><span class="section-number">9</span>数据存储、保留与加密</h2>
-  <h3>9.1 iPhone 端存储</h3>
-  <p>以下数据存储在您的 iPhone 中：</p>
+  <h3>9.1 设备端存储</h3>
+  <p>以下数据存储在您的设备中：</p>
   <ul>
     <li>个人（非群组）支出记录</li>
     <li>附加于支出的台湾电子发票号码（仅供可选的统一发票对奖功能使用）</li>
@@ -826,7 +826,7 @@
     <li>用于离线访问的群组数据本地副本</li>
     <li>用于离线查看的缓存群组支出</li>
   </ul>
-  <p>除非您明确导出或备份，否则个人支出数据——包括所附加的收据照片——绝不会离开您的 iPhone。只有当删除群组的人选择保留记录时，已删除群组的支出才会保留在您的 iPhone 本地并带有"已删除群组"标记；若选择移除记录，这些支出也会从您的 iPhone 删除。</p>
+  <p>除非您明确导出或备份，否则个人支出数据——包括所附加的收据照片——绝不会离开您的设备。只有当删除群组的人选择保留记录时，已删除群组的支出才会保留在您的设备里并带有"已删除群组"标记；若选择移除记录，这些支出也会从您的设备删除。</p>
 
   <h3>9.2 群组功能的云存储</h3>
   <p>对于群组功能，选定的数据将同步到 Firebase Firestore（照片同步至 Firebase Storage）：</p>
@@ -853,7 +853,7 @@
     <li>备份文件会导出到您选择的位置（iCloud 云盘、我的 iPhone 或其他 iOS 文件位置）</li>
     <li>备份加密密钥仅存储在您的 iCloud 钥匙串中，绝不会传输到我们的服务器，开发者也无法访问</li>
   </ul>
-  <p><strong>备份范围：</strong>备份与导出涵盖您本地存储的个人支出记录及已缓存的群组元数据。存储于 Firebase Firestore 的即时群组支出数据<strong>不包含</strong>在本地 iPhone 备份中——只要群组存在且未被删除，即可通过 Firestore 访问。</p>
+  <p><strong>备份范围：</strong>备份与导出涵盖您本地存储的个人支出记录及已缓存的群组元数据。存储于 Firebase Firestore 的即时群组支出数据<strong>不包含</strong>在本地设备备份中——只要群组存在且未被删除，即可通过 Firestore 访问。</p>
 
   <h2><span class="section-number">10</span>数据迁移</h2>
   <p>拥有功能访问权限的用户（专业版订阅或处于有效免费试用期）可将数据导出为 JSON、CSV 或 PDF 格式，并支持以 JSON 格式导入数据。Node Expense 无法访问您导出的文件。导出文件将保存到您选择的位置。请注意，导出内容包含本地存储的个人支出记录及已缓存的群组数据；并非直接从 Firebase Firestore 获取即时数据。</p>
@@ -862,15 +862,15 @@
   <ul>
     <li>在 Node Expense 内删除单个或所有个人支出</li>
     <li>退出或申请删除群组——当所有成员同意时，群组数据将从 Firebase 中移除。群组的支出、结算、活动记录、留言和提醒计时器会立即从我们的服务器删除（您选择保留的支出除外，详见下方）。之后我们仅保留一条小型删除记录 90 天，让当时离线的设备得知该群组已被删除并清理本机副本；该记录包含群组名称、成员列表（显示名称、标识符、任何付款账号和头像链接），以及由谁在何时删除。该记录将在 90 天后自动且永久删除。</li>
-    <li>标记为"删除时保留"的群组支出将保留在您的 iPhone 本地；它们不会被重新上传</li>
-    <li>当删除群组时若选择"移除记录"，该群组的所有收据照片也会从 Firebase Storage 中删除。若选择"保留记录"，照片将保留在 Firebase Storage 中，原群组成员仍可在自己的 iPhone 上查看。</li>
+    <li>标记为"删除时保留"的群组支出将保留在您的设备里；它们不会被重新上传</li>
+    <li>当删除群组时若选择"移除记录"，该群组的所有收据照片也会从 Firebase Storage 中删除。若选择"保留记录"，照片将保留在 Firebase Storage 中，原群组成员仍可在自己的设备上查看。</li>
     <li>从群组支出中移除收据照片（通过编辑界面）会将底层文件从 Firebase Storage 中删除。</li>
     <li>删除逐项（Pick &amp; Pay）支出时，会连同该支出一并移除逐项明细。</li>
     <li>从编辑界面删除自动附加的 Pick &amp; Pay 收据照片时，会同时移除本地副本以及 Firebase Storage 中其他群组成员可见的副本。</li>
-    <li>更新个人头像会覆盖 Firebase Storage 中的旧照片。选择"移除照片"会将其从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有 iPhone 可能在下次同步前仍保留缓存副本。</li>
+    <li>更新个人头像会覆盖 Firebase Storage 中的旧照片。选择"移除照片"会将其从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
     <li>更新或移除群组头像的方式相同：更新会覆盖 Firebase Storage 中的现有照片，选择"移除照片"则会将其删除。此操作仅限群组管理员执行。群组本身被删除时，无论选择哪种删除选项，群组头像也会一并从 Firebase Storage 中删除。</li>
     <li>群组管理员可直接在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组。群组需在停止活动超过 6 个月且所有债务已结清后，方可进行清理。管理员发起删除时，所有受影响的群组成员将收到推送通知，通知中包含删除群组的管理员姓名。管理员可在将群组从 Firebase 移除前，选择导出群组支出、保留至本地，或全部删除。</li>
-    <li>卸载 Node Expense 将删除 iPhone 上存储的所有本地数据</li>
+    <li>卸载 Node Expense 将删除设备上存储的所有本地数据</li>
   </ul>
   <p>注意：Firebase 群组数据可能会保留，直到通过应用内删除流程正式删除群组。</p>
 
@@ -899,7 +899,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-07-31 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-07-31 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -918,7 +918,7 @@
         <li>Pick &amp; Pay でアイテム別に割り勘するためにスキャンしたレシート画像（Google Gemini API による AI 処理のため送信されます。PRO サブスクリプション機能）</li>
         <li>任意のプロフィール写真。参加するすべてのグループのメンバーに表示されます（PRO サブスクリプション機能）</li>
         <li>任意のグループ写真。グループ管理者が設定し、そのグループの全メンバーに表示されます（PRO サブスクリプション機能）</li>
-        <li>台湾の電子発票番号（台湾の電子発票をスキャンした際に取得。任意の統一発票くじ照合のため iPhone にローカル保存）</li>
+        <li>台湾の電子発票番号（台湾の電子発票をスキャンした際に取得。任意の統一発票くじ照合のためデバイスにローカル保存）</li>
         <li>任意の位置情報</li>
         <li>選択したカレンダーへのアクセス</li>
         <li>任意の Apple サインイン識別子（「デバイス間ライセンス同期」を有効にした場合のみ。安定したアプリ固有の識別子で、お客様のデバイス間で PRO ライセンスを照合する目的にのみ使用します。氏名やメールアドレスは要求しません）</li>
@@ -928,9 +928,9 @@
       <div class="card-label">自動収集されるデータ</div>
       <ul>
         <li>匿名の利用分析（Firebase）</li>
-        <li>匿名の iPhone 識別子</li>
+        <li>匿名のデバイス識別子</li>
         <li>クラッシュログと診断情報</li>
-        <li>iPhone とアプリのパフォーマンス情報</li>
+        <li>デバイスとアプリのパフォーマンス情報</li>
         <li>プッシュ通知トークン（有効時）</li>
       </ul>
     </div>
@@ -938,10 +938,10 @@
   <p>自動収集されるデータは、Node Expense の安定性、パフォーマンス、およびユーザー体験の向上にのみ使用されます。</p>
 
   <h3>サブスクリプションと支払い</h3>
-  <p>購入とサブスクリプションは Apple と RevenueCat によって処理されます。当社はお客様のクレジットカードや支払い情報を受け取りません。RevenueCat は、サブスクリプションステータス、「ライフタイム」アクセス、および無料トライアル期間を管理するために匿名のサブスクライバー識別子を保存します。このデータは、iPhone の再インストール後も PRO 機能へのアクセスを確認するために必要な期間保持され、グループ支出のクラウドデータとは独立して処理されます。</p>
+  <p>購入とサブスクリプションは Apple と RevenueCat によって処理されます。当社はお客様のクレジットカードや支払い情報を受け取りません。RevenueCat は、サブスクリプションステータス、「ライフタイム」アクセス、および無料トライアル期間を管理するために匿名のサブスクライバー識別子を保存します。このデータは、デバイスの再インストール後も PRO 機能へのアクセスを確認するために必要な期間保持され、グループ支出のクラウドデータとは独立して処理されます。</p>
 
   <h3>デバイス間ライセンス同期（Apple でサインイン）</h3>
-  <p>Node Expense の利用に<strong>アカウントやサインインは不要</strong>です。同じ Apple アカウントでサインインした複数のデバイス（iPhone、iPad、Mac）で PRO をお持ちの場合、「サブスクリプション」画面で<strong>任意に</strong><strong>Apple でサインイン</strong>をタップすると、PRO ライセンスをそれらのデバイス間で同期できます。当社は<strong>氏名もメールアドレスも要求しません</strong>。Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子は、RevenueCat を通じて各デバイス上でお客様の PRO ライセンス（および利用済みの App Store オファーコード）を同一のサブスクライバー情報に照合する目的に<strong>のみ</strong>使用され、広告・トラッキング・プロファイリングには<strong>一切</strong>使用されません。デバイスの連携はいつでも「サブスクリプション」画面から解除でき、「iOS 設定 → お客様の Apple アカウント → Apple でサインイン」からサインインを完全に取り消すこともできます。</p>
+  <p>Node Expense の利用に<strong>アカウントやサインインは不要</strong>です。同じ Apple アカウントでサインインした複数のデバイス（デバイス、iPad、Mac）で PRO をお持ちの場合、「サブスクリプション」画面で<strong>任意に</strong><strong>Apple でサインイン</strong>をタップすると、PRO ライセンスをそれらのデバイス間で同期できます。当社は<strong>氏名もメールアドレスも要求しません</strong>。Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子は、RevenueCat を通じて各デバイス上でお客様の PRO ライセンス（および利用済みの App Store オファーコード）を同一のサブスクライバー情報に照合する目的に<strong>のみ</strong>使用され、広告・トラッキング・プロファイリングには<strong>一切</strong>使用されません。デバイスの連携はいつでも「サブスクリプション」画面から解除でき、「iOS 設定 → お客様の Apple アカウント → Apple でサインイン」からサインインを完全に取り消すこともできます。</p>
 
   <h2><span class="section-number">3</span>サードパーティサービス</h2>
   <table class="service-table">
@@ -993,23 +993,23 @@
 
     <h2><span class="section-number">5</span>台湾統一発票くじ</h2>
   <p>台湾の電子発票には、政府が2か月ごとに実施する統一発票くじの対象となる番号が記載されています。Node Expense には、スキャンした発票番号を公式の当選番号と照合し、当選の可能性をお知らせする任意の<strong>初期設定で無効</strong>の機能があります。</p>
-  <p><strong>iPhone 上でのみ実行。</strong>台湾の電子発票をスキャンすると、発票番号はその支出とともに iPhone にローカル保存されます。これは他の個人支出データとまったく同じ扱いで、当社のサーバーに<strong>アップロードされることはありません</strong>。</p>
-  <p><strong>照合の仕組み。</strong>この機能を有効にすると（設定 → 通知 → 台湾統一発票くじ）、アプリは当社の Firebase Firestore から<strong>公開情報</strong>である公式の当選番号をダウンロードし、<strong>すべて iPhone 上で</strong>お客様の発票番号と照合します。発票番号が iPhone から外部に送信されることはありません。この機能のために、お客様の発票・購入・身元に関する情報が当社や第三者に送信されることは一切ありません。</p>
-  <p><strong>通知。</strong>発票番号が一致した場合、アプリは iPhone 上にローカル通知を表示します。当選の可能性は台湾財政部で確認するまで正式なものではなく、賞金の受け取りには印刷された発票を保管しておく必要があります。</p>
+  <p><strong>デバイス上でのみ実行。</strong>台湾の電子発票をスキャンすると、発票番号はその支出とともにデバイスにローカル保存されます。これは他の個人支出データとまったく同じ扱いで、当社のサーバーに<strong>アップロードされることはありません</strong>。</p>
+  <p><strong>照合の仕組み。</strong>この機能を有効にすると（設定 → 通知 → 台湾統一発票くじ）、アプリは当社の Firebase Firestore から<strong>公開情報</strong>である公式の当選番号をダウンロードし、<strong>すべてデバイス上で</strong>お客様の発票番号と照合します。発票番号がデバイスから外部に送信されることはありません。この機能のために、お客様の発票・購入・身元に関する情報が当社や第三者に送信されることは一切ありません。</p>
+  <p><strong>通知。</strong>発票番号が一致した場合、アプリはデバイス上にローカル通知を表示します。当選の可能性は台湾財政部で確認するまで正式なものではなく、賞金の受け取りには印刷された発票を保管しておく必要があります。</p>
   <p><strong>お客様の選択。</strong>この機能は初期設定で無効であり、お客様ご自身による有効化が必要です。いつでも設定でオフにでき、オフにすると当選番号のダウンロードも照合も行われません。</p>
 
 <h2><span class="section-number">6</span>広告なし・アプリ間トラッキングなし</h2>
   <p>Node Expense は<strong>広告を一切表示しません</strong>。無料プランでも PRO サブスクリプションでも同様です。本アプリは他のアプリや Web サイトを横断してお客様を<strong>トラッキングせず</strong>、Apple の「App のトラッキング透明性」（App Tracking Transparency）フレームワークも使用せず、お客様のデータを広告ネットワークやデータブローカーに提供することもありません。アプリ内に広告 SDK は一切含まれていません。</p>
 
   <h2><span class="section-number">7</span>位置情報</h2>
-  <p>位置情報の収集は任意であり、設定で明示的に有効にした場合のみ収集されます。有効にすると、新しい支出に位置情報が記録されます。位置情報は iPhone にローカル保存され、クラウドサービスにアップロードされることはありません。iOS の設定からいつでも位置情報へのアクセスを無効にできます。</p>
+  <p>位置情報の収集は任意であり、設定で明示的に有効にした場合のみ収集されます。有効にすると、新しい支出に位置情報が記録されます。位置情報はデバイスにローカル保存され、クラウドサービスにアップロードされることはありません。iOS の設定からいつでも位置情報へのアクセスを無効にできます。</p>
 
   <h2><span class="section-number">8</span>カレンダーへのアクセス</h2>
   <p>Node Expense はお客様が選択したカレンダーのみにアクセスします。カレンダーへのアクセスは、支出をカレンダーイベントとして表示・同期する目的のみに使用されます。カレンダーデータがサードパーティと共有されることはありません。</p>
 
   <h2><span class="section-number">9</span>データの保存、保持、および暗号化</h2>
-  <h3>9.1 iPhone 上のストレージ</h3>
-  <p>以下のデータが iPhone に保存されています：</p>
+  <h3>9.1 デバイス上のストレージ</h3>
+  <p>以下のデータがデバイスに保存されています：</p>
   <ul>
     <li>個人（非グループ）の支出記録</li>
     <li>支出に添付された台湾の電子発票番号（任意の統一発票くじ照合にのみ使用）</li>
@@ -1018,7 +1018,7 @@
     <li>オフラインアクセス用のグループデータのローカルコピー</li>
     <li>オフライン表示用のグループ支出のキャッシュ</li>
   </ul>
-  <p>個人の支出データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、iPhone の外に出ることはありません。削除されたグループからの支出は、グループを削除した人が記録の保持を選択した場合にのみ、「削除済みグループ」のマーク付きで iPhone のローカルに保持されます。記録の削除を選択した場合、これらの支出はお客様の iPhone からも削除されます。</p>
+  <p>個人の支出データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。削除されたグループからの支出は、グループを削除した人が記録の保持を選択した場合にのみ、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。記録の削除を選択した場合、これらの支出はお客様のデバイスからも削除されます。</p>
 
   <h3>9.2 グループ機能のクラウドストレージ</h3>
   <p>グループ機能では、選択されたデータが Firebase Firestore（写真は Firebase Storage）に同期されます：</p>
@@ -1045,24 +1045,24 @@
     <li>バックアップファイルはお客様が選択した場所（iCloud Drive、この iPhone 上、またはその他の iOS ファイルの場所）にエクスポートされます</li>
     <li>バックアップ暗号化キーはお客様の iCloud キーチェーンにのみ保存され、当社のサーバーに送信されることはなく、開発者もアクセスできません</li>
   </ul>
-  <p><strong>バックアップ対象範囲：</strong>バックアップおよびエクスポートには、iPhone にローカル保存された個人支出記録とキャッシュされたグループメタデータが含まれます。Firebase Firestore に保存されているライブのグループ支出データは、ローカル iPhone のバックアップに<strong>含まれません</strong>。グループが存在し削除されていない限り、Firestore を通じてアクセスできます。</p>
+  <p><strong>バックアップ対象範囲：</strong>バックアップおよびエクスポートには、デバイスにローカル保存された個人支出記録とキャッシュされたグループメタデータが含まれます。Firebase Firestore に保存されているライブのグループ支出データは、ローカルデバイスのバックアップに<strong>含まれません</strong>。グループが存在し削除されていない限り、Firestore を通じてアクセスできます。</p>
 
   <h2><span class="section-number">10</span>データの移行</h2>
-  <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。エクスポートには iPhone にローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore からライブデータを直接取得するものではありません。</p>
+  <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。エクスポートにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore からライブデータを直接取得するものではありません。</p>
 
   <h2><span class="section-number">11</span>データの削除</h2>
   <ul>
     <li>Node Expense 内で個別または全ての個人支出を削除</li>
     <li>グループを退出または削除リクエスト — 全メンバーが同意した場合、グループデータは Firebase から削除されます。グループの支出、精算、アクティビティ履歴、コメント、リマインダータイマーは、当社のサーバーから直ちに削除されます（お客様が保持を選択した支出を除きます。詳細は下記）。その後 90 日間は、削除時にオフラインだった端末がグループの削除を認識してローカルのコピーを整理できるよう、小さな削除記録のみを保持します。この記録には、グループ名、メンバー一覧（表示名、識別子、登録された送金アカウント、プロフィール写真のリンク）、および削除者と削除日時が含まれます。この記録は 90 日後に自動的かつ完全に削除されます。</li>
-    <li>「削除時に保持」としてマークされたグループ支出は iPhone のローカルに残ります。再アップロードされることはありません</li>
-    <li>グループ削除時に「記録を削除」を選択した場合、そのグループのすべてのレシート写真も Firebase Storage から削除されます。「記録を保持」を選択した場合、写真は Firebase Storage に残り、元のメンバーは引き続き自分の iPhone で閲覧できます。</li>
+    <li>「削除時に保持」としてマークされたグループ支出はデバイスのローカルに残ります。再アップロードされることはありません</li>
+    <li>グループ削除時に「記録を削除」を選択した場合、そのグループのすべてのレシート写真も Firebase Storage から削除されます。「記録を保持」を選択した場合、写真は Firebase Storage に残り、元のメンバーは引き続き自分のデバイスで閲覧できます。</li>
     <li>編集画面からグループ支出のレシート写真を削除すると、Firebase Storage 上の元ファイルも削除されます。</li>
     <li>アイテム別（Pick &amp; Pay）支出を削除すると、その支出とともに項目明細も削除されます。</li>
     <li>編集画面から自動添付された Pick &amp; Pay のレシート写真を削除すると、ローカルのコピーと、他のグループメンバーが閲覧できる Firebase Storage 上のコピーの両方が削除されます。</li>
-    <li>プロフィール写真を更新すると、Firebase Storage 内の以前の写真が上書きされます。「写真を削除」を選択すると、Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存の iPhone では次回の同期までキャッシュが残る場合があります。</li>
+    <li>プロフィール写真を更新すると、Firebase Storage 内の以前の写真が上書きされます。「写真を削除」を選択すると、Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
     <li>グループ写真の更新・削除も同様の動作となります。更新すると Firebase Storage 内の既存の写真が上書きされ、「写真を削除」を選択するとファイルが削除されます。この操作はグループ管理者のみが行えます。グループ自体が削除された場合、どの削除オプションを選択したかにかかわらず、グループ写真も Firebase Storage から削除されます。</li>
     <li>グループ管理者は「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループを直接整理できます。対象グループは、6ヶ月以上活動がなく、すべての債務が精算済みである必要があります。管理者が削除を開始すると、影響を受けるすべてのグループメンバーに、グループを削除した管理者名を含むプッシュ通知が送信されます。管理者はグループを Firebase から削除する前に、グループ支出をエクスポート、ローカルに保持、または全削除を選択できます。</li>
-    <li>Node Expense をアンインストールすると、iPhone に保存されているすべてのローカルデータが削除されます</li>
+    <li>Node Expense をアンインストールすると、デバイスに保存されているすべてのローカルデータが削除されます</li>
   </ul>
   <p>注意：Firebase のグループデータは、アプリ内の削除フローを通じてグループが正式に削除されるまで残る場合があります。</p>
 
@@ -1091,7 +1091,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1110,7 +1110,7 @@
         <li>Belegbilder, die für die positionsweise Aufteilung über Pick &amp; Pay gescannt werden (werden zur KI-Verarbeitung an die Google Gemini API gesendet; PRO-Abonnementfunktion)</li>
         <li>Optionales Profilfoto, sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten (PRO-Abonnementfunktion)</li>
         <li>Optionales Gruppenfoto, vom Gruppen-Administrator festgelegt und für alle Mitglieder dieser Gruppe sichtbar (PRO-Abonnementfunktion)</li>
-        <li>Taiwanesische elektronische Rechnungsnummern (beim Scannen einer taiwanesischen elektronischen Rechnung erfasst; lokal auf Ihrem iPhone für die optionale Lotterieprüfung gespeichert)</li>
+        <li>Taiwanesische elektronische Rechnungsnummern (beim Scannen einer taiwanesischen elektronischen Rechnung erfasst; lokal auf Ihrem Gerät für die optionale Lotterieprüfung gespeichert)</li>
         <li>Optionale Standortdaten</li>
         <li>Zugriff auf ausgewählte Kalender</li>
         <li>Optionale Apple-Anmeldekennung (nur wenn Sie die geräteübergreifende Lizenzsynchronisierung aktivieren; eine stabile, app-spezifische Kennung, die ausschließlich dazu dient, Ihre PRO-Lizenz auf Ihren Geräten abzugleichen – es werden weder Name noch E-Mail-Adresse angefordert)</li>
@@ -1120,9 +1120,9 @@
       <div class="card-label">Automatisch erfasst</div>
       <ul>
         <li>Anonyme Nutzungsanalysen (Firebase)</li>
-        <li>Anonyme iPhone-Kennung</li>
+        <li>Anonyme Geräte-Kennung</li>
         <li>Absturzprotokolle und Diagnosedaten</li>
-        <li>iPhone- und App-Leistungsinformationen</li>
+        <li>Geräte- und App-Leistungsinformationen</li>
         <li>Push-Benachrichtigungs-Token (wenn aktiviert)</li>
       </ul>
     </div>
@@ -1133,7 +1133,7 @@
   <p>Käufe und Abonnements werden von Apple und RevenueCat abgewickelt. Wir erhalten keine Kredit- oder Zahlungsdaten von Ihnen. RevenueCat speichert anonyme Abonnentenidentifikatoren zur Verwaltung Ihres Abonnementstatus, des „Lifetime"-Zugangs und des kostenlosen Testzeitraums. Diese Daten werden so lange aufbewahrt, wie es zur Überprüfung des PRO-Funktionszugangs nach einer Neuinstallation erforderlich ist, und werden unabhängig von Ihren Gruppenausgaben-Cloud-Daten verarbeitet.</p>
 
   <h3>Geräteübergreifende Lizenzsynchronisierung (Mit Apple anmelden)</h3>
-  <p>Für die Nutzung von Node Expense sind <strong>kein Konto und keine Anmeldung erforderlich</strong>. Wenn Sie PRO auf mehreren Geräten (iPhone, iPad oder Mac) besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm <strong>optional</strong> auf <strong>Mit Apple anmelden</strong> tippen, um Ihre PRO-Lizenz geräteübergreifend zu synchronisieren. Wir fordern <strong>weder Name noch E-Mail-Adresse</strong> an – nur die stabile, app-spezifische Kennung, die Apple bereitstellt. Diese Kennung wird <strong>ausschließlich</strong> dazu verwendet, Ihre PRO-Lizenz (sowie eingelöste App-Store-Angebotscodes) über RevenueCat auf jedem Gerät demselben Abonnentenprofil zuzuordnen. Sie wird <strong>niemals</strong> für Werbung, Tracking oder Profilbildung verwendet. Sie können ein Gerät jederzeit über den Abonnement-Bildschirm trennen und die Anmeldung vollständig widerrufen unter „iOS-Einstellungen → Ihr Apple-Account → Mit Apple anmelden“.</p>
+  <p>Für die Nutzung von Node Expense sind <strong>kein Konto und keine Anmeldung erforderlich</strong>. Wenn Sie PRO auf mehreren Geräten (Gerät, iPad oder Mac) besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm <strong>optional</strong> auf <strong>Mit Apple anmelden</strong> tippen, um Ihre PRO-Lizenz geräteübergreifend zu synchronisieren. Wir fordern <strong>weder Name noch E-Mail-Adresse</strong> an – nur die stabile, app-spezifische Kennung, die Apple bereitstellt. Diese Kennung wird <strong>ausschließlich</strong> dazu verwendet, Ihre PRO-Lizenz (sowie eingelöste App-Store-Angebotscodes) über RevenueCat auf jedem Gerät demselben Abonnentenprofil zuzuordnen. Sie wird <strong>niemals</strong> für Werbung, Tracking oder Profilbildung verwendet. Sie können ein Gerät jederzeit über den Abonnement-Bildschirm trennen und die Anmeldung vollständig widerrufen unter „iOS-Einstellungen → Ihr Apple-Account → Mit Apple anmelden“.</p>
 
   <h2><span class="section-number">3</span>Drittanbieterdienste</h2>
   <table class="service-table">
@@ -1144,7 +1144,7 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>Anonyme Nutzungsanalysen</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisierung von Gruppendaten (Ausgaben, Mitglieder, Abrechnungen, Löschanfragen); öffentliche Gewinnzahlen der taiwanesischen Lotterie der einheitlichen Rechnung</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Speicherung von Belegfotos für Gruppenausgaben und Profilfotos der Nutzer (komprimiertes JPEG, für authentifizierte Nutzer zugänglich)</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Anmeldung (Keine Registrierung erforderlich). Lokale Daten werden sicher auf dem iPhone gespeichert. Die anonyme ID wird ausschließlich zur Gewährleistung der Abonnementkontinuität verwendet</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Anmeldung (Keine Registrierung erforderlich). Lokale Daten werden sicher auf dem Gerät gespeichert. Die anonyme ID wird ausschließlich zur Gewährleistung der Abonnementkontinuität verwendet</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Hintergrundaufgaben einschließlich Gruppenlöschung und Push-Benachrichtigungsversand</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push-Benachrichtigungen für Gruppenaktivitäten</td></tr>
       <tr><td><strong>Google Gemini API (über Firebase AI Logic)</strong></td><td>KI-gestützte OCR und Positionsextraktion aus Belegfotos, die über Pick &amp; Pay gescannt werden (PRO-Abonnementfunktion)</td></tr>
@@ -1185,23 +1185,23 @@
 
     <h2><span class="section-number">5</span>Taiwanesische Lotterie der einheitlichen Rechnung</h2>
   <p>Taiwanesische elektronische Rechnungen (電子發票) tragen eine Nummer, die zur Teilnahme an der alle zwei Monate stattfindenden staatlichen Lotterie der einheitlichen Rechnung (統一發票) berechtigt. Node Expense bietet eine optionale, <strong>standardmäßig deaktivierte</strong> Funktion, die Ihre gescannten Rechnungsnummern mit den offiziellen Gewinnzahlen abgleicht und Sie über einen möglichen Gewinn benachrichtigt.</p>
-  <p><strong>Nur auf dem iPhone.</strong> Wenn Sie eine taiwanesische elektronische Rechnung scannen, wird die Rechnungsnummer zusammen mit der Ausgabe lokal auf Ihrem iPhone gespeichert – genau wie Ihre übrigen persönlichen Ausgabendaten – und <strong>niemals</strong> auf unsere Server hochgeladen.</p>
-  <p><strong>So funktioniert der Abgleich.</strong> Wenn Sie die Funktion aktivieren (Einstellungen → Benachrichtigungen → Taiwanesische Lotterie der einheitlichen Rechnung), lädt die App die offiziellen Gewinnzahlen – die <strong>öffentliche Informationen</strong> sind – aus unserer Firebase Firestore herunter und vergleicht sie <strong>vollständig auf Ihrem iPhone</strong> mit Ihren Rechnungsnummern. Ihre Rechnungsnummern verlassen niemals Ihr iPhone; für diese Funktion werden keinerlei Informationen über Ihre Rechnungen, Einkäufe oder Identität an uns oder Dritte gesendet.</p>
-  <p><strong>Benachrichtigungen.</strong> Bei einer Übereinstimmung zeigt die App eine lokale Benachrichtigung auf Ihrem iPhone an. Ein möglicher Gewinn ist inoffiziell, bis Sie ihn beim taiwanesischen Finanzministerium bestätigen, und Sie müssen die gedruckte Rechnung aufbewahren, um einen Preis einzulösen.</p>
+  <p><strong>Nur auf dem Gerät.</strong> Wenn Sie eine taiwanesische elektronische Rechnung scannen, wird die Rechnungsnummer zusammen mit der Ausgabe lokal auf Ihrem Gerät gespeichert – genau wie Ihre übrigen persönlichen Ausgabendaten – und <strong>niemals</strong> auf unsere Server hochgeladen.</p>
+  <p><strong>So funktioniert der Abgleich.</strong> Wenn Sie die Funktion aktivieren (Einstellungen → Benachrichtigungen → Taiwanesische Lotterie der einheitlichen Rechnung), lädt die App die offiziellen Gewinnzahlen – die <strong>öffentliche Informationen</strong> sind – aus unserer Firebase Firestore herunter und vergleicht sie <strong>vollständig auf Ihrem Gerät</strong> mit Ihren Rechnungsnummern. Ihre Rechnungsnummern verlassen niemals Ihr Gerät; für diese Funktion werden keinerlei Informationen über Ihre Rechnungen, Einkäufe oder Identität an uns oder Dritte gesendet.</p>
+  <p><strong>Benachrichtigungen.</strong> Bei einer Übereinstimmung zeigt die App eine lokale Benachrichtigung auf Ihrem Gerät an. Ein möglicher Gewinn ist inoffiziell, bis Sie ihn beim taiwanesischen Finanzministerium bestätigen, und Sie müssen die gedruckte Rechnung aufbewahren, um einen Preis einzulösen.</p>
   <p><strong>Ihre Wahl.</strong> Die Funktion ist standardmäßig deaktiviert und erfordert Ihre Zustimmung. Sie können sie jederzeit in den Einstellungen deaktivieren; danach werden keine Gewinnzahlen heruntergeladen und keine Abgleiche durchgeführt.</p>
 
 <h2><span class="section-number">6</span>Keine Werbung, kein app-übergreifendes Tracking</h2>
   <p>Node Expense zeigt <strong>keine Werbung</strong> – weder im kostenlosen Tarif noch mit einem PRO-Abonnement. Die App <strong>verfolgt Sie nicht</strong> über andere Apps oder Websites hinweg, verwendet nicht das „App-Tracking-Transparency“-Framework von Apple und gibt Ihre Daten nicht an Werbenetzwerke oder Datenhändler weiter. In der App ist kein Werbe-SDK enthalten.</p>
 
   <h2><span class="section-number">7</span>Standortdaten</h2>
-  <p>Standortdaten sind optional und werden nur erfasst, wenn Sie dies in den Einstellungen explizit aktivieren. Wenn aktiviert, wird Ihr Standort mit neuen Ausgaben gespeichert. Standortdaten werden lokal auf Ihrem iPhone gespeichert und nicht in Cloud-Dienste hochgeladen. Sie können den Standortzugriff jederzeit in den iOS-Einstellungen deaktivieren.</p>
+  <p>Standortdaten sind optional und werden nur erfasst, wenn Sie dies in den Einstellungen explizit aktivieren. Wenn aktiviert, wird Ihr Standort mit neuen Ausgaben gespeichert. Standortdaten werden lokal auf Ihrem Gerät gespeichert und nicht in Cloud-Dienste hochgeladen. Sie können den Standortzugriff jederzeit in den iOS-Einstellungen deaktivieren.</p>
 
   <h2><span class="section-number">8</span>Kalenderzugriff</h2>
   <p>Node Expense greift nur auf die von Ihnen ausgewählten Kalender zu. Der Kalenderzugriff dient ausschließlich dazu, Ausgabeneinträge als Kalenderereignisse anzuzeigen und zu synchronisieren. Kalenderdaten werden niemals an Dritte weitergegeben.</p>
 
   <h2><span class="section-number">9</span>Datenspeicherung, -aufbewahrung &amp; Verschlüsselung</h2>
-  <h3>9.1 Lokale iPhone-Speicherung</h3>
-  <p>Die folgenden Daten sind auf deinem iPhone gespeichert:</p>
+  <h3>9.1 Lokale Geräte-Speicherung</h3>
+  <p>Die folgenden Daten sind auf deinem Gerät gespeichert:</p>
   <ul>
     <li>Persönliche (nicht gruppenspezifische) Ausgabeneinträge</li>
     <li>An Ausgaben angehängte taiwanesische elektronische Rechnungsnummern (nur für die optionale Lotterieprüfung verwendet)</li>
@@ -1210,7 +1210,7 @@
     <li>Lokale Kopien von Gruppendaten für den Offline-Zugriff</li>
     <li>Zwischengespeicherte Gruppenausgaben zur Offline-Ansicht</li>
   </ul>
-  <p>Persönliche Ausgabendaten — einschließlich angehängter Belegfotos — verlassen Ihr iPhone nicht, es sei denn, Sie exportieren oder sichern diese explizit. Ausgaben aus gelöschten Gruppen werden nur dann lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt, wenn die Person, die die Gruppe gelöscht hat, sich für das Behalten der Datensätze entschieden hat. Wurde das Entfernen gewählt, werden diese Ausgaben auch von Ihrem iPhone gelöscht.</p>
+  <p>Persönliche Ausgabendaten — einschließlich angehängter Belegfotos — verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Ausgaben aus gelöschten Gruppen werden nur dann lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt, wenn die Person, die die Gruppe gelöscht hat, sich für das Behalten der Datensätze entschieden hat. Wurde das Entfernen gewählt, werden diese Ausgaben auch von Ihrem Gerät gelöscht.</p>
 
   <h3>9.2 Cloud-Speicher für Gruppenfunktionen</h3>
   <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore (und Fotos mit Firebase Storage) synchronisiert:</p>
@@ -1237,7 +1237,7 @@
     <li>Backup-Dateien werden an einen von Ihnen gewählten Ort exportiert (iCloud Drive, Auf diesem iPhone oder andere iOS-Dateispeicherorte)</li>
     <li>Backup-Verschlüsselungsschlüssel werden ausschließlich in Ihrem iCloud-Schlüsselbund gespeichert, niemals an unsere Server übertragen und sind für uns als Entwickler nicht zugänglich</li>
   </ul>
-  <p><strong>Backup-Umfang:</strong> Backups und Exporte umfassen Ihre lokal gespeicherten persönlichen Ausgabeneinträge und gecachten Gruppenmetadaten. In Firebase Firestore gespeicherte Live-Gruppenausgabendaten sind <strong>nicht</strong> in lokalen iPhones-Backups enthalten — sie bleiben über Firestore zugänglich, solange die Gruppe existiert und nicht gelöscht wurde.</p>
+  <p><strong>Backup-Umfang:</strong> Backups und Exporte umfassen Ihre lokal gespeicherten persönlichen Ausgabeneinträge und gecachten Gruppenmetadaten. In Firebase Firestore gespeicherte Live-Gruppenausgabendaten sind <strong>nicht</strong> in lokalen Geräte-Backups enthalten — sie bleiben über Firestore zugänglich, solange die Gruppe existiert und nicht gelöscht wurde.</p>
 
   <h2><span class="section-number">10</span>Datenmigration</h2>
   <p>Benutzer mit Funktionszugang (PRO-Abonnement oder aktive kostenlose Testversion) können ihre Daten als JSON, CSV oder PDF exportieren und Daten im JSON-Format importieren. Node Expense hat keinen Zugriff auf Ihre exportierten Dateien. Exportierte Dateien werden an einem von Ihnen gewählten Ort gespeichert. Exporte enthalten lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Daten werden nicht direkt aus Firebase Firestore abgerufen.</p>
@@ -1246,15 +1246,15 @@
   <ul>
     <li>Einzelne oder alle persönlichen Ausgaben innerhalb von Node Expense löschen</li>
     <li>Eine Gruppe verlassen oder deren Löschung beantragen — Gruppendaten werden aus Firebase entfernt, wenn alle Mitglieder zustimmen. Ausgaben, Abrechnungen, Aktivitätsverlauf, Kommentare und Erinnerungs-Timer der Gruppe werden sofort von unseren Servern gelöscht (ausgenommen Ausgaben, die Sie behalten möchten, siehe unten). Danach bewahren wir 90 Tage lang lediglich einen kleinen Löschvermerk auf, damit Geräte, die zu diesem Zeitpunkt offline waren, die Löschung erkennen und ihre lokale Kopie bereinigen können; er enthält den Gruppennamen, die Mitgliederliste (Anzeigenamen, Kennungen, etwaige Zahlungs-Handles und Links zu Profilfotos) sowie wer die Gruppe wann gelöscht hat. Dieser Vermerk wird nach 90 Tagen automatisch und dauerhaft gelöscht.</li>
-    <li>Gruppenausgaben, die als „Bei Löschung behalten" markiert sind, verbleiben lokal auf Ihrem iPhone und werden nicht erneut hochgeladen</li>
-    <li>Wenn beim Löschen einer Gruppe „Datensätze entfernen" gewählt wird, werden auch alle Belegfotos dieser Gruppe aus Firebase Storage gelöscht. Bei „Datensätze behalten" verbleiben die Fotos in Firebase Storage, sodass die ursprünglichen Mitglieder sie weiterhin auf ihren eigenen iPhones anzeigen können.</li>
+    <li>Gruppenausgaben, die als „Bei Löschung behalten" markiert sind, verbleiben lokal auf Ihrem Gerät und werden nicht erneut hochgeladen</li>
+    <li>Wenn beim Löschen einer Gruppe „Datensätze entfernen" gewählt wird, werden auch alle Belegfotos dieser Gruppe aus Firebase Storage gelöscht. Bei „Datensätze behalten" verbleiben die Fotos in Firebase Storage, sodass die ursprünglichen Mitglieder sie weiterhin auf ihren eigenen Geräte anzeigen können.</li>
     <li>Das Entfernen eines Belegfotos aus einer Gruppenausgabe (über den Bearbeitungsbildschirm) löscht die zugrunde liegende Datei aus Firebase Storage.</li>
     <li>Das Löschen einer positionsweise aufgeteilten Ausgabe (Pick &amp; Pay) entfernt zusammen mit der Ausgabe auch die Positionsdetails.</li>
     <li>Das Löschen des automatisch angehängten Pick &amp; Pay-Belegfotos (über den Bearbeitungsbildschirm) entfernt sowohl die lokale Kopie als auch die für andere Gruppenmitglieder sichtbare Kopie in Firebase Storage.</li>
-    <li>Beim Aktualisieren Ihres Profilfotos wird das vorherige Foto in Firebase Storage überschrieben. Bei „Foto entfernen" wird es aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende iPhones können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
+    <li>Beim Aktualisieren Ihres Profilfotos wird das vorherige Foto in Firebase Storage überschrieben. Bei „Foto entfernen" wird es aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
     <li>Das Aktualisieren oder Entfernen eines Gruppenfotos funktioniert auf dieselbe Weise: Beim Aktualisieren wird das vorhandene Foto in Firebase Storage überschrieben, bei „Foto entfernen" wird es gelöscht. Nur der Gruppen-Administrator kann diese Aktionen ausführen. Das Gruppenfoto wird auch dann aus Firebase Storage gelöscht, wenn die Gruppe selbst gelöscht wird – unabhängig davon, welche Löschoption gewählt wurde.</li>
     <li>Gruppen-Administratoren können inaktive Gruppen direkt unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen. Eine Gruppe kommt für die Bereinigung in Frage, wenn sie seit über 6 Monaten inaktiv ist und alle Schulden beglichen wurden. Wenn ein Administrator die Löschung einleitet, erhalten alle betroffenen Gruppenmitglieder eine Push-Benachrichtigung mit dem Namen des Administrators. Der Administrator kann wählen, ob er die Gruppenausgaben exportieren, lokal behalten oder vollständig löschen möchte, bevor die Gruppe aus Firebase entfernt wird.</li>
-    <li>Die Deinstallation von Node Expense entfernt alle lokal gespeicherten Daten von Ihrem iPhone</li>
+    <li>Die Deinstallation von Node Expense entfernt alle lokal gespeicherten Daten von Ihrem Gerät</li>
   </ul>
   <p>Hinweis: Firebase-Gruppendaten können bestehen bleiben, bis die Gruppe über den gruppeninternen Löschvorgang formal gelöscht wird.</p>
 
@@ -1283,7 +1283,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1302,7 +1302,7 @@
         <li>Imágenes de recibos escaneadas para dividir por artículos mediante Pick &amp; Pay (se envían a la API de Google Gemini para su procesamiento por IA; función de suscripción PRO)</li>
         <li>Foto de perfil opcional, visible para todos los miembros de cualquier grupo al que se una (función de suscripción PRO)</li>
         <li>Foto de grupo opcional, establecida por el administrador del grupo y visible para todos los miembros de ese grupo (función de suscripción PRO)</li>
-        <li>Números de factura electrónica de Taiwán (capturados al escanear una factura electrónica de Taiwán; guardados localmente en su iPhone para la comprobación opcional de la lotería)</li>
+        <li>Números de factura electrónica de Taiwán (capturados al escanear una factura electrónica de Taiwán; guardados localmente en su dispositivo para la comprobación opcional de la lotería)</li>
         <li>Datos de ubicación opcionales</li>
         <li>Acceso al calendario seleccionado</li>
         <li>Identificador opcional de inicio de sesión de Apple (solo si activa la Sincronización de licencia entre dispositivos; un identificador estable y específico de la app que se usa únicamente para asociar su licencia PRO en sus dispositivos; no se solicita nombre ni correo electrónico)</li>
@@ -1312,9 +1312,9 @@
       <div class="card-label">Recopilados automáticamente</div>
       <ul>
         <li>Análisis de uso anónimo (Firebase)</li>
-        <li>Identificador de iPhone anónimo</li>
+        <li>Identificador de dispositivo anónimo</li>
         <li>Registros de fallos y diagnósticos</li>
-        <li>Información de rendimiento del iPhone y la app</li>
+        <li>Información de rendimiento del dispositivo y la app</li>
         <li>Tokens de notificaciones push (cuando están habilitados)</li>
       </ul>
     </div>
@@ -1322,10 +1322,10 @@
   <p>Los datos recopilados automáticamente se utilizan únicamente para mejorar la estabilidad, el rendimiento y la experiencia de usuario.</p>
 
   <h3>Suscripciones &amp; pagos</h3>
-  <p>Las compras y suscripciones son procesadas por Apple y RevenueCat. No recibimos sus datos de tarjeta de crédito ni información de pago. RevenueCat almacena identificadores de suscriptor anónimos para gestionar el estado de su suscripción, el acceso "Lifetime" y el período de prueba gratuito. Estos datos se conservan el tiempo necesario para verificar el acceso a las funciones PRO tras reinstalaciones del iPhone y se procesan independientemente de los datos en la nube de gastos de grupo.</p>
+  <p>Las compras y suscripciones son procesadas por Apple y RevenueCat. No recibimos sus datos de tarjeta de crédito ni información de pago. RevenueCat almacena identificadores de suscriptor anónimos para gestionar el estado de su suscripción, el acceso "Lifetime" y el período de prueba gratuito. Estos datos se conservan el tiempo necesario para verificar el acceso a las funciones PRO tras reinstalaciones del dispositivo y se procesan independientemente de los datos en la nube de gastos de grupo.</p>
 
   <h3>Sincronización de licencia entre dispositivos (Iniciar sesión con Apple)</h3>
-  <p>No se requiere cuenta ni inicio de sesión para usar Node Expense. Si tiene PRO en más de un dispositivo (iPhone, iPad o Mac) con la sesión iniciada en la misma cuenta de Apple, puede <strong>opcionalmente</strong> tocar <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO entre ellos. <strong>No solicitamos ni nombre ni correo electrónico</strong>: solo el identificador estable y específico de la app que proporciona Apple. Ese identificador se usa <strong>únicamente</strong> para asociar su licencia PRO (y cualquier código de oferta de la App Store que haya canjeado) al mismo perfil de suscriptor en cada dispositivo, a través de RevenueCat. <strong>Nunca</strong> se usa para publicidad, seguimiento ni elaboración de perfiles. Puede desconectar un dispositivo en cualquier momento desde la pantalla de Suscripción, y puede revocar el inicio de sesión por completo en Configuración de iOS → su cuenta de Apple → Iniciar sesión con Apple.</p>
+  <p>No se requiere cuenta ni inicio de sesión para usar Node Expense. Si tiene PRO en más de un dispositivo (dispositivo, iPad o Mac) con la sesión iniciada en la misma cuenta de Apple, puede <strong>opcionalmente</strong> tocar <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO entre ellos. <strong>No solicitamos ni nombre ni correo electrónico</strong>: solo el identificador estable y específico de la app que proporciona Apple. Ese identificador se usa <strong>únicamente</strong> para asociar su licencia PRO (y cualquier código de oferta de la App Store que haya canjeado) al mismo perfil de suscriptor en cada dispositivo, a través de RevenueCat. <strong>Nunca</strong> se usa para publicidad, seguimiento ni elaboración de perfiles. Puede desconectar un dispositivo en cualquier momento desde la pantalla de Suscripción, y puede revocar el inicio de sesión por completo en Configuración de iOS → su cuenta de Apple → Iniciar sesión con Apple.</p>
 
   <h2><span class="section-number">3</span>Servicios de terceros</h2>
   <table class="service-table">
@@ -1377,23 +1377,23 @@
 
     <h2><span class="section-number">5</span>Lotería de la factura unificada de Taiwán</h2>
   <p>Las facturas electrónicas de Taiwán (電子發票) llevan un número que participa en la lotería de la factura unificada (統一發票) que el gobierno celebra cada dos meses. Node Expense incluye una función opcional y <strong>desactivada de forma predeterminada</strong> que compara los números de sus facturas escaneadas con los números premiados oficiales y le avisa de un posible premio.</p>
-  <p><strong>Solo en el iPhone.</strong> Cuando escanea una factura electrónica de Taiwán, el número de la factura se guarda localmente en su iPhone junto con el gasto, exactamente igual que el resto de sus datos de gastos personales, y <strong>nunca se sube</strong> a nuestros servidores.</p>
-  <p><strong>Cómo funciona la comprobación.</strong> Si activa la función (Configuración → Notificaciones → Lotería de la factura unificada de Taiwán), la app descarga los números premiados oficiales —que son <strong>información pública</strong>— desde nuestro Firebase Firestore y los compara con los números de sus facturas <strong>íntegramente en su iPhone</strong>. Los números de sus facturas nunca salen de su iPhone; para esta función no se envía a nosotros ni a terceros ninguna información sobre sus facturas, compras o identidad.</p>
-  <p><strong>Notificaciones.</strong> Si un número coincide, la app muestra una notificación local en su iPhone. Un posible premio no es oficial hasta que lo verifique con el Ministerio de Finanzas de Taiwán, y debe conservar la factura impresa para cobrar cualquier premio.</p>
+  <p><strong>Solo en el dispositivo.</strong> Cuando escanea una factura electrónica de Taiwán, el número de la factura se guarda localmente en su dispositivo junto con el gasto, exactamente igual que el resto de sus datos de gastos personales, y <strong>nunca se sube</strong> a nuestros servidores.</p>
+  <p><strong>Cómo funciona la comprobación.</strong> Si activa la función (Configuración → Notificaciones → Lotería de la factura unificada de Taiwán), la app descarga los números premiados oficiales —que son <strong>información pública</strong>— desde nuestro Firebase Firestore y los compara con los números de sus facturas <strong>íntegramente en su dispositivo</strong>. Los números de sus facturas nunca salen de su dispositivo; para esta función no se envía a nosotros ni a terceros ninguna información sobre sus facturas, compras o identidad.</p>
+  <p><strong>Notificaciones.</strong> Si un número coincide, la app muestra una notificación local en su dispositivo. Un posible premio no es oficial hasta que lo verifique con el Ministerio de Finanzas de Taiwán, y debe conservar la factura impresa para cobrar cualquier premio.</p>
   <p><strong>Su elección.</strong> La función está desactivada de forma predeterminada y requiere que usted la active. Puede desactivarla en cualquier momento en Configuración; después no se descargará ningún número premiado ni se realizará ninguna comprobación.</p>
 
 <h2><span class="section-number">6</span>Sin publicidad ni seguimiento entre apps</h2>
   <p>Node Expense <strong>no muestra ningún anuncio</strong>, ni en el nivel gratuito ni con una suscripción PRO. La app <strong>no</strong> le realiza seguimiento a través de otras apps o sitios web, no utiliza el marco de Transparencia de seguimiento en apps (App Tracking Transparency) de Apple y no comparte sus datos con redes publicitarias ni intermediarios de datos. La app no incluye ningún SDK de publicidad.</p>
 
   <h2><span class="section-number">7</span>Datos de ubicación</h2>
-  <p>Los datos de ubicación son opcionales y solo se recopilan si los habilita explícitamente en Configuración. Cuando está habilitada, su ubicación se registra junto con los nuevos gastos. Los datos de ubicación se almacenan localmente en su iPhone y no se cargan en servicios en la nube. Puede deshabilitar el acceso a la ubicación en cualquier momento en los Ajustes de iOS.</p>
+  <p>Los datos de ubicación son opcionales y solo se recopilan si los habilita explícitamente en Configuración. Cuando está habilitada, su ubicación se registra junto con los nuevos gastos. Los datos de ubicación se almacenan localmente en su dispositivo y no se cargan en servicios en la nube. Puede deshabilitar el acceso a la ubicación en cualquier momento en los Ajustes de iOS.</p>
 
   <h2><span class="section-number">8</span>Acceso al calendario</h2>
   <p>Node Expense solo accede a los calendarios que usted seleccione. El acceso al calendario se utiliza exclusivamente para mostrar y sincronizar entradas de gastos como eventos del calendario. Los datos del calendario nunca se comparten con terceros.</p>
 
   <h2><span class="section-number">9</span>Almacenamiento, retención y cifrado de datos</h2>
-  <h3>9.1 Almacenamiento en el iPhone</h3>
-  <p>Los siguientes datos están guardados en tu iPhone:</p>
+  <h3>9.1 Almacenamiento en el dispositivo</h3>
+  <p>Los siguientes datos están guardados en tu dispositivo:</p>
   <ul>
     <li>Registros de gastos personales (no de grupo)</li>
     <li>Números de factura electrónica de Taiwán adjuntos a los gastos (utilizados solo para la comprobación opcional de la lotería)</li>
@@ -1402,7 +1402,7 @@
     <li>Copias locales de datos de grupo para acceso sin conexión</li>
     <li>Gastos de grupo en caché para visualización sin conexión</li>
   </ul>
-  <p>Los datos de gastos personales — incluidas las fotos de recibos adjuntas — nunca salen de su iPhone a menos que los exporte o respalde explícitamente. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado" solo si quien eliminó el grupo optó por conservar los registros. Si optó por eliminarlos, esos gastos también se borran de su iPhone.</p>
+  <p>Los datos de gastos personales — incluidas las fotos de recibos adjuntas — nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado" solo si quien eliminó el grupo optó por conservar los registros. Si optó por eliminarlos, esos gastos también se borran de su dispositivo.</p>
 
   <h3>9.2 Almacenamiento en la nube para funciones de grupo</h3>
   <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore (y las fotos con Firebase Storage):</p>
@@ -1429,7 +1429,7 @@
     <li>Los archivos de copia de seguridad se exportan a una ubicación de su elección (iCloud Drive, En este iPhone u otras ubicaciones de archivos de iOS)</li>
     <li>Las claves de cifrado de las copias de seguridad se almacenan exclusivamente en su llavero de iCloud, nunca se transmiten a nuestros servidores y no son accesibles para nosotros como desarrolladores</li>
   </ul>
-  <p><strong>Alcance de las copias de seguridad:</strong> Las copias de seguridad y exportaciones abarcan sus registros de gastos personales almacenados localmente y los metadatos de grupo en caché. Los datos de gastos de grupo en tiempo real almacenados en Firebase Firestore <strong>no</strong> se incluyen en las copias de seguridad del iPhone local; permanecen accesibles a través de Firestore mientras el grupo exista y no haya sido eliminado.</p>
+  <p><strong>Alcance de las copias de seguridad:</strong> Las copias de seguridad y exportaciones abarcan sus registros de gastos personales almacenados localmente y los metadatos de grupo en caché. Los datos de gastos de grupo en tiempo real almacenados en Firebase Firestore <strong>no</strong> se incluyen en las copias de seguridad del dispositivo local; permanecen accesibles a través de Firestore mientras el grupo exista y no haya sido eliminado.</p>
 
   <h2><span class="section-number">10</span>Migración de datos</h2>
   <p>Los usuarios con acceso a funciones (suscripción PRO o prueba gratuita activa) pueden exportar sus datos en formato JSON, CSV o PDF, e importar datos en formato JSON. Node Expense no tiene acceso a sus archivos exportados. Los archivos exportados se guardan en una ubicación de su elección. Las exportaciones incluyen registros de gastos personales almacenados localmente y datos de grupo en caché; no se obtienen datos en tiempo real directamente de Firebase Firestore.</p>
@@ -1438,15 +1438,15 @@
   <ul>
     <li>Eliminar gastos personales individuales o todos desde Node Expense</li>
     <li>Abandonar o solicitar la eliminación de un grupo — los datos del grupo se eliminan de Firebase cuando todos los miembros están de acuerdo. Los gastos, liquidaciones, historial de actividad, comentarios y temporizadores de recordatorio del grupo se eliminan de nuestros servidores de inmediato (salvo los gastos que hayas elegido conservar, descritos más abajo). Después conservamos únicamente un pequeño registro de eliminación durante 90 días, para que los dispositivos que estaban sin conexión en ese momento puedan detectar la eliminación y limpiar su copia local; contiene el nombre del grupo, la lista de miembros (nombres visibles, identificadores, cualquier alias de pago y enlaces a fotos de perfil), y quién lo eliminó y cuándo. Ese registro se elimina automática y permanentemente a los 90 días.</li>
-    <li>Los gastos de grupo marcados como "conservar al eliminar" permanecen localmente en su iPhone; no se vuelven a cargar</li>
-    <li>Cuando se elimina un grupo eligiendo "eliminar registros", todas las fotos de recibos de ese grupo también se eliminan de Firebase Storage. Cuando se elige "conservar registros", las fotos permanecen en Firebase Storage para que los miembros originales puedan seguir viéndolas en sus propios iPhones.</li>
+    <li>Los gastos de grupo marcados como "conservar al eliminar" permanecen localmente en su dispositivo; no se vuelven a cargar</li>
+    <li>Cuando se elimina un grupo eligiendo "eliminar registros", todas las fotos de recibos de ese grupo también se eliminan de Firebase Storage. Cuando se elige "conservar registros", las fotos permanecen en Firebase Storage para que los miembros originales puedan seguir viéndolas en sus propios dispositivos.</li>
     <li>Eliminar una foto de recibo de un gasto de grupo (a través de la pantalla de Editar) borra el archivo subyacente de Firebase Storage.</li>
     <li>Eliminar un gasto dividido por artículos (Pick &amp; Pay) borra los detalles de los artículos junto con el gasto.</li>
     <li>Eliminar la foto de recibo adjuntada automáticamente por Pick &amp; Pay (a través de la pantalla de Editar) borra tanto la copia local como la copia en Firebase Storage que pueden ver los demás miembros del grupo.</li>
-    <li>Actualizar su foto de perfil sobrescribe la foto anterior en Firebase Storage. Al elegir «Eliminar foto», esta se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los iPhones existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
+    <li>Actualizar su foto de perfil sobrescribe la foto anterior en Firebase Storage. Al elegir «Eliminar foto», esta se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
     <li>Actualizar o eliminar la foto de grupo funciona de la misma manera: actualizar sobrescribe la foto existente en Firebase Storage, y elegir «Eliminar foto» la borra. Solo el administrador del grupo puede realizar estas acciones. La foto de grupo también se elimina de Firebase Storage cuando el propio grupo se elimina, independientemente de la opción de eliminación elegida.</li>
     <li>Los administradores de grupo pueden depurar grupos inactivos directamente desde Ajustes → Datos y privacidad → Grupos inactivos. Un grupo es elegible para su depuración tras 6 meses de inactividad con todas las deudas saldadas. Cuando un administrador inicia la eliminación, todos los miembros afectados del grupo reciben una notificación push con el nombre de quien eliminó el grupo. El administrador puede elegir exportar los gastos del grupo, conservarlos localmente o eliminarlos por completo antes de que el grupo se retire de Firebase.</li>
-    <li>Desinstalar Node Expense elimina todos los datos almacenados localmente de su iPhone</li>
+    <li>Desinstalar Node Expense elimina todos los datos almacenados localmente de su dispositivo</li>
   </ul>
   <p>Nota: Los datos de grupo de Firebase pueden persistir hasta que el grupo se elimine formalmente a través del proceso de eliminación en la app.</p>
 
@@ -1475,7 +1475,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-07-31 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1494,7 +1494,7 @@
         <li>Images de reçus scannées pour le partage par article via Pick &amp; Pay (envoyées à l'API Google Gemini pour traitement par IA ; fonctionnalité d'abonnement PRO)</li>
         <li>Photo de profil optionnelle, visible par tous les membres de chaque groupe que vous rejoignez (fonctionnalité d'abonnement PRO)</li>
         <li>Photo de groupe optionnelle, définie par l'admin du groupe et visible par tous les membres de ce groupe (fonctionnalité d'abonnement PRO)</li>
-        <li>Numéros de facture électronique taïwanaise (capturés lors du scan d'une facture électronique taïwanaise ; enregistrés localement sur votre iPhone pour la vérification facultative de la loterie)</li>
+        <li>Numéros de facture électronique taïwanaise (capturés lors du scan d'une facture électronique taïwanaise ; enregistrés localement sur votre appareil pour la vérification facultative de la loterie)</li>
         <li>Données de localisation optionnelles</li>
         <li>Accès au calendrier sélectionné</li>
         <li>Identifiant de connexion Apple optionnel (uniquement si vous activez la Synchronisation de licence entre appareils ; un identifiant stable et propre à l'app, utilisé uniquement pour associer votre licence PRO sur vos appareils — aucun nom ni e-mail n'est demandé)</li>
@@ -1504,9 +1504,9 @@
       <div class="card-label">Collectées automatiquement</div>
       <ul>
         <li>Analyses d'utilisation anonymes (Firebase)</li>
-        <li>Identifiant d'iPhone anonyme</li>
+        <li>Identifiant d'appareil anonyme</li>
         <li>Journaux de plantage et diagnostics</li>
-        <li>Informations de performances de l'iPhone et de l'app</li>
+        <li>Informations de performances de l'appareil et de l'app</li>
         <li>Jetons de notification push (lorsqu'activés)</li>
       </ul>
     </div>
@@ -1517,7 +1517,7 @@
   <p>Les achats et abonnements sont traités par Apple et RevenueCat. Nous ne recevons pas vos données de carte de crédit ni vos informations de paiement. RevenueCat stocke des identifiants d'abonné anonymes pour gérer votre statut d'abonnement, l'accès « Lifetime » et la période d'essai gratuite. Ces données sont conservées le temps nécessaire à la vérification de l'accès aux fonctionnalités PRO après une réinstallation et sont traitées indépendamment de vos données cloud de dépenses de groupe.</p>
 
   <h3>Synchronisation de licence entre appareils (Se connecter avec Apple)</h3>
-  <p>Aucun compte ni aucune connexion n'est requis pour utiliser Node Expense. Si vous possédez PRO sur plusieurs appareils (iPhone, iPad ou Mac) connectés au même compte Apple, vous pouvez <strong>facultativement</strong> toucher <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre eux. Nous ne demandons <strong>ni nom ni e-mail</strong> — uniquement l'identifiant stable et propre à l'app fourni par Apple. Cet identifiant sert <strong>uniquement</strong> à associer votre licence PRO (ainsi que tout code promotionnel App Store que vous avez utilisé) au même profil d'abonné sur chaque appareil, via RevenueCat. Il n'est <strong>jamais</strong> utilisé à des fins de publicité, de suivi ou de profilage. Vous pouvez déconnecter un appareil à tout moment depuis l'écran Abonnement, et révoquer entièrement la connexion dans Réglages iOS → votre compte Apple → Se connecter avec Apple.</p>
+  <p>Aucun compte ni aucune connexion n'est requis pour utiliser Node Expense. Si vous possédez PRO sur plusieurs appareils (appareil, iPad ou Mac) connectés au même compte Apple, vous pouvez <strong>facultativement</strong> toucher <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre eux. Nous ne demandons <strong>ni nom ni e-mail</strong> — uniquement l'identifiant stable et propre à l'app fourni par Apple. Cet identifiant sert <strong>uniquement</strong> à associer votre licence PRO (ainsi que tout code promotionnel App Store que vous avez utilisé) au même profil d'abonné sur chaque appareil, via RevenueCat. Il n'est <strong>jamais</strong> utilisé à des fins de publicité, de suivi ou de profilage. Vous pouvez déconnecter un appareil à tout moment depuis l'écran Abonnement, et révoquer entièrement la connexion dans Réglages iOS → votre compte Apple → Se connecter avec Apple.</p>
 
   <h2><span class="section-number">3</span>Services tiers</h2>
   <table class="service-table">
@@ -1528,7 +1528,7 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>Analyses d'utilisation anonymes</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisation des données de groupe (dépenses, membres, remboursements, demandes de suppression) ; numéros gagnants publics de la loterie de la facture unifiée de Taïwan</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Stockage des photos de reçus pour les dépenses de groupe et des photos de profil utilisateur (JPEG compressé, accessible aux utilisateurs authentifiés)</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>Connexion anonyme (Aucune inscription requise). Les données locales sont stockées en toute sécurité dans l'iPhone. L'identifiant anonyme est uniquement utilisé pour garantir la continuité de l'abonnement</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Connexion anonyme (Aucune inscription requise). Les données locales sont stockées en toute sécurité dans l'appareil. L'identifiant anonyme est uniquement utilisé pour garantir la continuité de l'abonnement</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe et la livraison de notifications push</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notifications push pour l'activité de groupe</td></tr>
       <tr><td><strong>API Google Gemini (via Firebase AI Logic)</strong></td><td>OCR alimenté par IA et extraction de lignes d'articles à partir de photos de reçus scannées via Pick &amp; Pay (fonctionnalité d'abonnement PRO)</td></tr>
@@ -1569,23 +1569,23 @@
 
     <h2><span class="section-number">5</span>Loterie de la facture unifiée de Taïwan</h2>
   <p>Les factures électroniques taïwanaises (電子發票) portent un numéro éligible à la loterie de la facture unifiée (統一發票) organisée tous les deux mois par le gouvernement. Node Expense propose une fonctionnalité facultative et <strong>désactivée par défaut</strong> qui compare les numéros de vos factures scannées aux numéros gagnants officiels et vous avertit d'un gain possible.</p>
-  <p><strong>Uniquement sur l'iPhone.</strong> Lorsque vous scannez une facture électronique taïwanaise, le numéro de la facture est enregistré localement sur votre iPhone avec la dépense, exactement comme vos autres données de dépenses personnelles, et n'est <strong>jamais téléversé</strong> vers nos serveurs.</p>
-  <p><strong>Fonctionnement de la vérification.</strong> Si vous activez la fonctionnalité (Réglages → Notifications → Loterie de la facture unifiée de Taïwan), l'app télécharge les numéros gagnants officiels — qui sont des <strong>informations publiques</strong> — depuis notre Firebase Firestore et les compare à vos numéros de factures <strong>entièrement sur votre iPhone</strong>. Vos numéros de factures ne quittent jamais votre iPhone ; pour cette fonctionnalité, aucune information sur vos factures, vos achats ou votre identité n'est envoyée à nous ou à un tiers.</p>
-  <p><strong>Notifications.</strong> En cas de correspondance, l'app affiche une notification locale sur votre iPhone. Un gain possible n'est pas officiel tant que vous ne l'avez pas vérifié auprès du ministère des Finances de Taïwan, et vous devez conserver la facture imprimée pour encaisser un prix.</p>
+  <p><strong>Uniquement sur l'appareil.</strong> Lorsque vous scannez une facture électronique taïwanaise, le numéro de la facture est enregistré localement sur votre appareil avec la dépense, exactement comme vos autres données de dépenses personnelles, et n'est <strong>jamais téléversé</strong> vers nos serveurs.</p>
+  <p><strong>Fonctionnement de la vérification.</strong> Si vous activez la fonctionnalité (Réglages → Notifications → Loterie de la facture unifiée de Taïwan), l'app télécharge les numéros gagnants officiels — qui sont des <strong>informations publiques</strong> — depuis notre Firebase Firestore et les compare à vos numéros de factures <strong>entièrement sur votre appareil</strong>. Vos numéros de factures ne quittent jamais votre appareil ; pour cette fonctionnalité, aucune information sur vos factures, vos achats ou votre identité n'est envoyée à nous ou à un tiers.</p>
+  <p><strong>Notifications.</strong> En cas de correspondance, l'app affiche une notification locale sur votre appareil. Un gain possible n'est pas officiel tant que vous ne l'avez pas vérifié auprès du ministère des Finances de Taïwan, et vous devez conserver la facture imprimée pour encaisser un prix.</p>
   <p><strong>Votre choix.</strong> La fonctionnalité est désactivée par défaut et nécessite votre consentement. Vous pouvez la désactiver à tout moment dans les Réglages ; ensuite, aucun numéro gagnant n'est téléchargé et aucune vérification n'est effectuée.</p>
 
 <h2><span class="section-number">6</span>Aucune publicité ni suivi inter-apps</h2>
   <p>Node Expense n'affiche <strong>aucune publicité</strong> — ni dans le niveau gratuit, ni avec un abonnement PRO. L'app <strong>ne vous suit pas</strong> à travers d'autres apps ou sites web, n'utilise pas le cadre de Transparence du suivi des apps (App Tracking Transparency) d'Apple et ne partage pas vos données avec des réseaux publicitaires ou des courtiers en données. L'app ne contient aucun SDK publicitaire.</p>
 
   <h2><span class="section-number">7</span>Données de localisation</h2>
-  <p>Les données de localisation sont optionnelles et ne sont collectées que si vous les activez explicitement dans les Réglages. Lorsqu'elles sont activées, votre position est enregistrée avec les nouvelles dépenses. Les données de localisation sont stockées localement sur votre iPhone et ne sont pas téléversées vers des services cloud. Vous pouvez désactiver l'accès à la localisation à tout moment dans les Réglages iOS.</p>
+  <p>Les données de localisation sont optionnelles et ne sont collectées que si vous les activez explicitement dans les Réglages. Lorsqu'elles sont activées, votre position est enregistrée avec les nouvelles dépenses. Les données de localisation sont stockées localement sur votre appareil et ne sont pas téléversées vers des services cloud. Vous pouvez désactiver l'accès à la localisation à tout moment dans les Réglages iOS.</p>
 
   <h2><span class="section-number">8</span>Accès au calendrier</h2>
   <p>Node Expense n'accède qu'aux calendriers que vous sélectionnez. L'accès au calendrier est utilisé uniquement pour afficher et synchroniser les entrées de dépenses en tant qu'événements de calendrier. Les données du calendrier ne sont jamais partagées avec des tiers.</p>
 
   <h2><span class="section-number">9</span>Stockage, conservation &amp; chiffrement des données</h2>
-  <h3>9.1 Stockage sur l'iPhone</h3>
-  <p>Les données suivantes sont stockées sur votre iPhone :</p>
+  <h3>9.1 Stockage sur l'appareil</h3>
+  <p>Les données suivantes sont stockées sur votre appareil :</p>
   <ul>
     <li>Enregistrements de dépenses personnelles (hors groupe)</li>
     <li>Numéros de facture électronique taïwanaise joints aux dépenses (utilisés uniquement pour la vérification facultative de la loterie)</li>
@@ -1594,7 +1594,7 @@
     <li>Copies locales des données de groupe pour un accès hors ligne</li>
     <li>Dépenses de groupe en cache pour une consultation hors ligne</li>
   </ul>
-  <p>Les données de dépenses personnelles — y compris les photos de reçus jointes — ne quittent jamais votre iPhone à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés ne sont conservées localement avec un marqueur « groupe supprimé » que si la personne ayant supprimé le groupe a choisi de conserver les enregistrements. Si elle a choisi de les supprimer, ces dépenses sont également effacées de votre iPhone.</p>
+  <p>Les données de dépenses personnelles — y compris les photos de reçus jointes — ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. Les dépenses des groupes supprimés ne sont conservées localement avec un marqueur « groupe supprimé » que si la personne ayant supprimé le groupe a choisi de conserver les enregistrements. Si elle a choisi de les supprimer, ces dépenses sont également effacées de votre appareil.</p>
 
   <h3>9.2 Stockage cloud pour les fonctionnalités de groupe</h3>
   <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore (et les photos avec Firebase Storage) :</p>
@@ -1621,7 +1621,7 @@
     <li>Les fichiers de sauvegarde sont exportés vers un emplacement de votre choix (iCloud Drive, Sur mon iPhone ou d'autres emplacements de fichiers iOS)</li>
     <li>Les clés de chiffrement des sauvegardes sont stockées exclusivement dans votre trousseau iCloud, ne sont jamais transmises à nos serveurs et ne sont pas accessibles par nous en tant que développeurs</li>
   </ul>
-  <p><strong>Périmètre des sauvegardes :</strong> Les sauvegardes et exportations couvrent vos enregistrements de dépenses personnelles stockés localement et les métadonnées de groupe en cache. Les données de dépenses de groupe en temps réel stockées dans Firebase Firestore ne sont <strong>pas</strong> incluses dans les sauvegardes locales de l'iPhone — elles restent accessibles via Firestore tant que le groupe existe et n'a pas été supprimé.</p>
+  <p><strong>Périmètre des sauvegardes :</strong> Les sauvegardes et exportations couvrent vos enregistrements de dépenses personnelles stockés localement et les métadonnées de groupe en cache. Les données de dépenses de groupe en temps réel stockées dans Firebase Firestore ne sont <strong>pas</strong> incluses dans les sauvegardes locales de l'appareil — elles restent accessibles via Firestore tant que le groupe existe et n'a pas été supprimé.</p>
 
   <h2><span class="section-number">10</span>Migration des données</h2>
   <p>Les utilisateurs ayant accès aux fonctionnalités (abonnement PRO ou essai gratuit actif) peuvent exporter leurs données en JSON, CSV ou PDF, et importer des données au format JSON. Node Expense n'a pas accès à vos fichiers exportés. Les fichiers exportés sont enregistrés à un emplacement de votre choix. Les exportations comprennent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; elles ne récupèrent pas de données en temps réel directement depuis Firebase Firestore.</p>
@@ -1630,15 +1630,15 @@
   <ul>
     <li>Supprimer des dépenses personnelles individuelles ou toutes depuis Node Expense</li>
     <li>Quitter ou demander la suppression d'un groupe — les données du groupe sont supprimées de Firebase lorsque tous les membres sont d'accord. Les dépenses, règlements, historique d'activité, commentaires et minuteurs de rappel du groupe sont supprimés de nos serveurs immédiatement (à l'exception des dépenses que vous avez choisi de conserver, décrites ci-dessous). Nous conservons ensuite uniquement un petit enregistrement de suppression pendant 90 jours, afin que les appareils hors ligne à ce moment-là puissent constater la suppression et nettoyer leur copie locale ; il contient le nom du groupe, la liste des membres (noms affichés, identifiants, éventuels identifiants de paiement et liens vers les photos de profil), ainsi que l'auteur et la date de la suppression. Cet enregistrement est supprimé automatiquement et définitivement au bout de 90 jours.</li>
-    <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre iPhone ; elles ne sont pas retéléversées</li>
-    <li>Lorsqu'un groupe est supprimé en choisissant « supprimer les enregistrements », toutes les photos de reçus de ce groupe sont également supprimées de Firebase Storage. Lorsque « conserver les enregistrements » est choisi, les photos restent dans Firebase Storage afin que les membres d'origine puissent continuer à les consulter sur leurs propres iPhone.</li>
+    <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre appareil ; elles ne sont pas retéléversées</li>
+    <li>Lorsqu'un groupe est supprimé en choisissant « supprimer les enregistrements », toutes les photos de reçus de ce groupe sont également supprimées de Firebase Storage. Lorsque « conserver les enregistrements » est choisi, les photos restent dans Firebase Storage afin que les membres d'origine puissent continuer à les consulter sur leurs propres appareil.</li>
     <li>Supprimer une photo de reçu d'une dépense de groupe (via l'écran d'édition) supprime le fichier sous-jacent de Firebase Storage.</li>
     <li>Supprimer une dépense partagée par article (Pick &amp; Pay) supprime le détail des articles avec la dépense.</li>
     <li>Supprimer la photo de reçu Pick &amp; Pay attachée automatiquement (via l'écran d'édition) supprime à la fois la copie locale et la copie dans Firebase Storage que les autres membres du groupe peuvent voir.</li>
-    <li>La mise à jour de votre photo de profil écrase la photo précédente dans Firebase Storage. Choisir « Supprimer la photo » l'efface de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les iPhone existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
+    <li>La mise à jour de votre photo de profil écrase la photo précédente dans Firebase Storage. Choisir « Supprimer la photo » l'efface de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareil existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
     <li>La mise à jour ou la suppression d'une photo de groupe fonctionne de la même façon : la mise à jour écrase la photo existante dans Firebase Storage, et choisir « Supprimer la photo » la supprime. Seul l'admin du groupe peut effectuer ces actions. La photo de groupe est également supprimée de Firebase Storage lorsque le groupe lui-même est supprimé, quelle que soit l'option de suppression choisie.</li>
     <li>Les administrateurs de groupe peuvent supprimer les groupes inactifs directement depuis Réglages → Données et confidentialité → Groupes inactifs. Un groupe est éligible à la suppression après 6 mois d'inactivité avec toutes les dettes réglées. Lorsqu'un administrateur initie la suppression, tous les membres concernés reçoivent une notification push indiquant qui a supprimé le groupe. L'administrateur peut choisir d'exporter les dépenses du groupe, de les conserver localement ou de les supprimer entièrement avant que le groupe ne soit retiré de Firebase.</li>
-    <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre iPhone</li>
+    <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre appareil</li>
   </ul>
   <p>Remarque : Les données de groupe Firebase peuvent persister jusqu'à ce que le groupe soit formellement supprimé via le processus de suppression intégré à l'app.</p>
 
@@ -1668,7 +1668,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-07-31 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1687,7 +1687,7 @@
         <li>Pick &amp; Pay 를 통한 항목별 분할용으로 스캔된 영수증 이미지 (AI 처리를 위해 Google Gemini API 로 전송됨; PRO 구독 기능)</li>
         <li>선택적 프로필 사진 — 참가하는 모든 그룹의 멤버에게 표시됨 (PRO 구독 기능)</li>
         <li>선택적 그룹 사진 — 그룹 관리자가 설정하며 해당 그룹의 모든 멤버에게 표시됨 (PRO 구독 기능)</li>
-        <li>대만 전자영수증 번호(대만 전자영수증을 스캔할 때 캡처되며, 선택적 통일발표 복권 대조를 위해 iPhone에 로컬로 저장됨)</li>
+        <li>대만 전자영수증 번호(대만 전자영수증을 스캔할 때 캡처되며, 선택적 통일발표 복권 대조를 위해 기기에 로컬로 저장됨)</li>
         <li>선택적 위치 데이터</li>
         <li>선택한 캘린더 접근 권한</li>
         <li>선택적 Apple 로그인 식별자(‘기기 간 라이선스 동기화’를 켠 경우에만 해당; 안정적이고 앱에 한정된 식별자로, 귀하의 기기 간에 PRO 라이선스를 대조하는 용도로만 사용되며 이름이나 이메일은 요청하지 않습니다)</li>
@@ -1697,9 +1697,9 @@
       <div class="card-label">자동으로 수집되는 정보</div>
       <ul>
         <li>익명 사용 분석 (Firebase)</li>
-        <li>익명 iPhone 식별자</li>
+        <li>익명 기기 식별자</li>
         <li>충돌 로그 및 진단 정보</li>
-        <li>iPhone 및 앱 성능 정보</li>
+        <li>기기 및 앱 성능 정보</li>
         <li>푸시 알림 토큰 (활성화 시)</li>
       </ul>
     </div>
@@ -1710,7 +1710,7 @@
   <p>구매 및 구독은 Apple과 RevenueCat을 통해 처리됩니다. 당사는 귀하의 신용카드나 결제 정보를 받지 않습니다. RevenueCat은 구독 상태, '평생' 접근 권한 및 무료 체험 기간을 관리하기 위해 익명 구독자 식별자를 저장합니다. 해당 데이터는 재설치 후 PRO 기능 접근 확인에 필요한 기간 동안 보관되며, 그룹 지출 클라우드 데이터와는 별도로 처리됩니다.</p>
 
   <h3>기기 간 라이선스 동기화 (Apple로 로그인)</h3>
-  <p>Node Expense 사용에는 <strong>계정이나 로그인이 필요하지 않습니다</strong>. 동일한 Apple 계정으로 로그인한 여러 기기(iPhone, iPad, Mac)에서 PRO를 보유하고 있다면, 구독 화면에서 <strong>선택적으로</strong> <strong>Apple로 로그인</strong>을 탭하여 PRO 라이선스를 기기 간에 동기화할 수 있습니다. 당사는 <strong>이름이나 이메일을 요청하지 않으며</strong>, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 RevenueCat을 통해 각 기기에서 귀하의 PRO 라이선스(및 귀하가 사용한 App Store 오퍼 코드)를 동일한 구독자 프로필에 대조하는 용도로만 사용되며, 광고·추적·프로파일링에는 <strong>절대</strong> 사용되지 않습니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있고, 「iOS 설정 → 귀하의 Apple 계정 → Apple로 로그인」에서 로그인을 완전히 취소할 수 있습니다.</p>
+  <p>Node Expense 사용에는 <strong>계정이나 로그인이 필요하지 않습니다</strong>. 동일한 Apple 계정으로 로그인한 여러 기기(기기, iPad, Mac)에서 PRO를 보유하고 있다면, 구독 화면에서 <strong>선택적으로</strong> <strong>Apple로 로그인</strong>을 탭하여 PRO 라이선스를 기기 간에 동기화할 수 있습니다. 당사는 <strong>이름이나 이메일을 요청하지 않으며</strong>, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 RevenueCat을 통해 각 기기에서 귀하의 PRO 라이선스(및 귀하가 사용한 App Store 오퍼 코드)를 동일한 구독자 프로필에 대조하는 용도로만 사용되며, 광고·추적·프로파일링에는 <strong>절대</strong> 사용되지 않습니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있고, 「iOS 설정 → 귀하의 Apple 계정 → Apple로 로그인」에서 로그인을 완전히 취소할 수 있습니다.</p>
 
   <h2><span class="section-number">3</span>제3자 서비스</h2>
   <table class="service-table">
@@ -1762,23 +1762,23 @@
 
     <h2><span class="section-number">5</span>대만 통일발표 복권</h2>
   <p>대만 전자영수증(電子發票)에는 정부가 2개월마다 시행하는 통일발표 복권(統一發票)의 대상이 되는 번호가 기재되어 있습니다. Node Expense는 스캔한 영수증 번호를 공식 당첨 번호와 대조하여 당첨 가능성을 알려주는 선택적이고 <strong>기본적으로 꺼져 있는</strong> 기능을 제공합니다.</p>
-  <p><strong>iPhone에서만 처리.</strong> 대만 전자영수증을 스캔하면 영수증 번호가 해당 지출과 함께 iPhone에 로컬로 저장되며, 이는 다른 개인 지출 데이터와 완전히 동일하게 처리되어 당사 서버에 <strong>업로드되지 않습니다</strong>.</p>
-  <p><strong>대조 방식.</strong> 이 기능을 켜면(설정 → 알림 → 대만 통일발표 복권) 앱이 <strong>공개 정보</strong>인 공식 당첨 번호를 당사 Firebase Firestore에서 다운로드하여 <strong>전적으로 iPhone에서</strong> 귀하의 영수증 번호와 대조합니다. 귀하의 영수증 번호는 iPhone을 벗어나지 않으며, 이 기능을 위해 귀하의 영수증, 구매 또는 신원에 관한 어떠한 정보도 당사나 제3자에게 전송되지 않습니다.</p>
-  <p><strong>알림.</strong> 번호가 일치하면 앱이 iPhone에 로컬 알림을 표시합니다. 당첨 가능성은 대만 재정부에서 확인하기 전까지 공식적인 것이 아니며, 상금을 수령하려면 인쇄된 영수증을 보관해야 합니다.</p>
+  <p><strong>기기에서만 처리.</strong> 대만 전자영수증을 스캔하면 영수증 번호가 해당 지출과 함께 기기에 로컬로 저장되며, 이는 다른 개인 지출 데이터와 완전히 동일하게 처리되어 당사 서버에 <strong>업로드되지 않습니다</strong>.</p>
+  <p><strong>대조 방식.</strong> 이 기능을 켜면(설정 → 알림 → 대만 통일발표 복권) 앱이 <strong>공개 정보</strong>인 공식 당첨 번호를 당사 Firebase Firestore에서 다운로드하여 <strong>전적으로 기기에서</strong> 귀하의 영수증 번호와 대조합니다. 귀하의 영수증 번호는 기기를 벗어나지 않으며, 이 기능을 위해 귀하의 영수증, 구매 또는 신원에 관한 어떠한 정보도 당사나 제3자에게 전송되지 않습니다.</p>
+  <p><strong>알림.</strong> 번호가 일치하면 앱이 기기에 로컬 알림을 표시합니다. 당첨 가능성은 대만 재정부에서 확인하기 전까지 공식적인 것이 아니며, 상금을 수령하려면 인쇄된 영수증을 보관해야 합니다.</p>
   <p><strong>귀하의 선택.</strong> 이 기능은 기본적으로 꺼져 있으며 귀하가 직접 켜야 합니다. 언제든지 설정에서 끌 수 있으며, 끄면 당첨 번호가 다운로드되지 않고 어떠한 대조도 수행되지 않습니다.</p>
 
 <h2><span class="section-number">6</span>광고 없음 · 앱 간 추적 없음</h2>
   <p>Node Expense는 무료 등급에서도, PRO 구독에서도 <strong>어떠한 광고도 표시하지 않습니다</strong>. 이 앱은 다른 앱이나 웹사이트에 걸쳐 귀하를 <strong>추적하지 않으며</strong>, Apple의 앱 추적 투명성(App Tracking Transparency) 프레임워크를 사용하지 않고, 귀하의 데이터를 광고 네트워크나 데이터 브로커와 공유하지 않습니다. 앱에는 어떠한 광고 SDK도 포함되어 있지 않습니다.</p>
 
   <h2><span class="section-number">7</span>위치 데이터</h2>
-  <p>위치 데이터는 선택 사항이며 설정에서 명시적으로 활성화한 경우에만 수집됩니다. 활성화 시, 새로운 지출과 함께 위치가 기록됩니다. 위치 데이터는 iPhone 에 로컬로 저장되며 클라우드 서비스에 업로드되지 않습니다. iOS 설정에서 언제든지 위치 접근을 비활성화할 수 있습니다.</p>
+  <p>위치 데이터는 선택 사항이며 설정에서 명시적으로 활성화한 경우에만 수집됩니다. 활성화 시, 새로운 지출과 함께 위치가 기록됩니다. 위치 데이터는 기기에 로컬로 저장되며 클라우드 서비스에 업로드되지 않습니다. iOS 설정에서 언제든지 위치 접근을 비활성화할 수 있습니다.</p>
 
   <h2><span class="section-number">8</span>캘린더 접근</h2>
   <p>Node Expense는 귀하가 선택한 캘린더에만 접근합니다. 캘린더 접근은 지출 항목을 캘린더 이벤트로 표시하고 동기화하는 데만 사용됩니다. 캘린더 데이터는 제3자와 절대 공유되지 않습니다.</p>
 
   <h2><span class="section-number">9</span>데이터 저장, 보관 및 암호화</h2>
-  <h3>9.1 iPhone 저장</h3>
-  <p>다음 데이터가 iPhone 에 저장되어 있습니다:</p>
+  <h3>9.1 기기 저장</h3>
+  <p>다음 데이터가 기기에 저장되어 있습니다:</p>
   <ul>
     <li>개인(비그룹) 지출 기록</li>
     <li>지출에 첨부된 대만 전자영수증 번호(선택적 통일발표 복권 대조에만 사용)</li>
@@ -1787,7 +1787,7 @@
     <li>오프라인 접근을 위한 그룹 데이터 로컬 복사본</li>
     <li>오프라인 조회를 위해 캐시된 그룹 지출</li>
   </ul>
-  <p>개인 지출 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 iPhone 를 절대 벗어나지 않습니다. 삭제된 그룹의 지출은 그룹을 삭제한 사람이 기록 보관을 선택한 경우에만 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다. 기록 삭제를 선택한 경우 해당 지출은 귀하의 iPhone 에서도 삭제됩니다.</p>
+  <p>개인 지출 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 삭제된 그룹의 지출은 그룹을 삭제한 사람이 기록 보관을 선택한 경우에만 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다. 기록 삭제를 선택한 경우 해당 지출은 귀하의 기기에서도 삭제됩니다.</p>
 
   <h3>9.2 그룹 기능을 위한 클라우드 저장</h3>
   <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다(사진은 Firebase Storage):</p>
@@ -1814,7 +1814,7 @@
     <li>백업 파일은 귀하가 선택한 위치로 내보내집니다 (iCloud Drive, 내 iPhone 또는 기타 iOS 파일 위치)</li>
     <li>백업 암호화 키는 귀하의 iCloud 키체인에만 저장되며, 당사 서버로 전송되거나 개발자가 접근할 수 없습니다</li>
   </ul>
-  <p><strong>백업 범위:</strong> 백업 및 내보내기는 iPhone 에 로컬로 저장된 개인 지출 기록과 캐시된 그룹 메타데이터를 포함합니다. Firebase Firestore에 저장된 실시간 그룹 지출 데이터는 로컬 iPhone 백업에 <strong>포함되지 않습니다</strong>. 그룹이 존재하고 삭제되지 않은 한 Firestore를 통해 접근할 수 있습니다.</p>
+  <p><strong>백업 범위:</strong> 백업 및 내보내기는 기기에 로컬로 저장된 개인 지출 기록과 캐시된 그룹 메타데이터를 포함합니다. Firebase Firestore에 저장된 실시간 그룹 지출 데이터는 로컬 기기 백업에 <strong>포함되지 않습니다</strong>. 그룹이 존재하고 삭제되지 않은 한 Firestore를 통해 접근할 수 있습니다.</p>
 
   <h2><span class="section-number">10</span>데이터 마이그레이션</h2>
   <p>기능 접근 권한(PRO 구독 또는 활성 무료 체험)이 있는 사용자는 JSON, CSV 또는 PDF 형식으로 데이터를 내보내고, JSON 형식으로 데이터를 가져올 수 있습니다. Node Expense는 내보낸 파일에 접근할 수 없습니다. 내보낸 파일은 귀하가 선택한 위치에 저장됩니다. 내보내기에는 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터가 포함되며, Firebase Firestore에서 실시간 데이터를 직접 가져오지 않습니다.</p>
@@ -1823,15 +1823,15 @@
   <ul>
     <li>Node Expense에서 개별 개인 지출 또는 모든 지출 삭제</li>
     <li>그룹 탈퇴 또는 삭제 요청 — 모든 멤버가 동의하면 그룹 데이터가 Firebase에서 삭제됩니다. 그룹의 지출, 정산, 활동 기록, 댓글 및 알림 타이머는 당사 서버에서 즉시 삭제됩니다(보관을 선택한 지출은 제외하며, 아래에서 설명합니다). 이후 90일 동안은 당시 오프라인 상태였던 기기가 삭제 사실을 확인하고 로컬 사본을 정리할 수 있도록 작은 삭제 기록만 보관합니다. 이 기록에는 그룹 이름, 멤버 목록(표시 이름, 식별자, 등록된 결제 계정, 프로필 사진 링크), 삭제한 사람과 삭제 시각이 포함됩니다. 이 기록은 90일 후 자동으로 영구 삭제됩니다.</li>
-    <li>'삭제 시 보관'으로 표시된 그룹 지출은 iPhone 에 로컬로 남으며, 재업로드되지 않음</li>
-    <li>그룹을 삭제할 때 '기록 제거'를 선택하면 해당 그룹의 모든 영수증 사진도 Firebase Storage에서 삭제됩니다. '기록 보관'을 선택하면 사진은 Firebase Storage에 그대로 남아 원래 멤버들이 자신의 iPhone 에서 계속 볼 수 있습니다.</li>
+    <li>'삭제 시 보관'으로 표시된 그룹 지출은 기기에 로컬로 남으며, 재업로드되지 않음</li>
+    <li>그룹을 삭제할 때 '기록 제거'를 선택하면 해당 그룹의 모든 영수증 사진도 Firebase Storage에서 삭제됩니다. '기록 보관'을 선택하면 사진은 Firebase Storage에 그대로 남아 원래 멤버들이 자신의 기기에서 계속 볼 수 있습니다.</li>
     <li>편집 화면에서 그룹 지출의 영수증 사진을 제거하면 Firebase Storage에 있는 원본 파일도 삭제됩니다.</li>
     <li>항목별(Pick &amp; Pay) 지출을 삭제하면 지출과 함께 항목별 세부 내역도 삭제됩니다.</li>
     <li>편집 화면에서 자동 첨부된 Pick &amp; Pay 영수증 사진을 삭제하면, 로컬 사본과 다른 그룹 멤버가 볼 수 있는 Firebase Storage 의 사본이 모두 삭제됩니다.</li>
-    <li>프로필 사진을 업데이트하면 Firebase Storage의 이전 사진이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 iPhone 는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
+    <li>프로필 사진을 업데이트하면 Firebase Storage의 이전 사진이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
     <li>그룹 사진의 업데이트 또는 제거도 동일한 방식으로 작동합니다. 업데이트하면 Firebase Storage의 기존 사진이 덮어쓰기되고, "사진 제거"를 선택하면 삭제됩니다. 이 작업은 그룹 관리자만 수행할 수 있습니다. 그룹 자체가 삭제될 때에도 선택한 삭제 옵션에 관계없이 그룹 사진이 Firebase Storage에서 삭제됩니다.</li>
     <li>그룹 관리자는 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹을 직접 정리할 수 있습니다. 6개월 이상 활동이 없고 모든 채무가 정산된 그룹이 정리 대상입니다. 관리자가 삭제를 시작하면 영향을 받는 모든 그룹 멤버에게 그룹을 삭제한 관리자 이름이 포함된 푸시 알림이 전송됩니다. 관리자는 그룹을 Firebase에서 제거하기 전에 그룹 지출을 내보내거나, 로컬에 보관하거나, 전체 삭제 중에서 선택할 수 있습니다.</li>
-    <li>Node Expense 삭제 시 iPhone 에 로컬로 저장된 모든 데이터가 제거됨</li>
+    <li>Node Expense 삭제 시 기기에 로컬로 저장된 모든 데이터가 제거됨</li>
   </ul>
   <p>참고: Firebase 그룹 데이터는 앱 내 삭제 프로세스를 통해 그룹이 공식적으로 삭제될 때까지 유지될 수 있습니다.</p>
 
