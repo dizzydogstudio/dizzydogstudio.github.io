@@ -513,6 +513,15 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        Why does it say my receipt photo is too large?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Receipt photos are compressed automatically before they are attached, so almost every photo simply works — in testing, every real receipt fitted at the first compression level.<br><br>Each receipt is kept under 1 MB. If a photo is unusually large or busy, the app lowers the image quality first and only then the dimensions, because a receipt is high-contrast text that survives compression better than it survives lost pixels.<br><br>Very occasionally a photo still cannot be made small enough. You are told the moment you attach it, not after saving, so you can retake it while the receipt is still in front of you. Your expense is saved either way, and if you were replacing an existing receipt, the previous one is kept.<br><br>If it happens, retake the shot with less of the background in frame — filling more of the picture with the receipt itself is usually enough.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         How do I export my expenses?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -837,6 +846,15 @@
       </button>
       <div class="faq-answer">
         點選 <strong>+</strong> 按鈕新增費用 <span class="arrow">→</span> 點選金額欄位旁的<strong>相機圖示</strong> <span class="arrow">→</span> 將相機對準收據。畫面底部將顯示偵測到的金額，點選其中一個即可自動填入金額欄位。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        為什麼會顯示「收據照片過大」？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        收據照片在附加前會自動壓縮，因此幾乎所有照片都能順利附加——實測中，所有真實收據都在第一段壓縮就已符合大小。<br><br>每張收據都會控制在 1 MB 以內。若照片特別大或畫面較雜，App 會先降低影像品質，之後才縮小尺寸，因為收據是高對比的文字，對壓縮的耐受度高於對解析度下降的耐受度。<br><br>極少數情況下，照片仍無法壓縮到足夠小。你會在附加當下就收到提示，而不是儲存之後，因此可以趁收據還在手邊時重拍。無論如何支出都會照常儲存；若你原本要取代既有的收據，原本那張會被保留。<br><br>若遇到這種情況，請重拍並減少背景範圍——讓收據本身佔滿更多畫面，通常就足夠了。
       </div>
     </div>
     <div class="faq-item">
@@ -1169,6 +1187,15 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        为什么会显示"收据照片过大"？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        收据照片在附加前会自动压缩，因此几乎所有照片都能顺利附加——实测中，所有真实收据都在第一段压缩就已符合大小。<br><br>每张收据都会控制在 1 MB 以内。若照片特别大或画面较杂，App 会先降低图像质量，之后才缩小尺寸，因为收据是高对比的文字，对压缩的耐受度高于对分辨率下降的耐受度。<br><br>极少数情况下，照片仍无法压缩到足够小。你会在附加当下就收到提示，而不是保存之后，因此可以趁收据还在手边时重拍。无论如何支出都会照常保存；若你原本要替换既有的收据，原本那张会被保留。<br><br>若遇到这种情况，请重拍并减少背景范围——让收据本身占满更多画面，通常就足够了。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         如何导出支出记录？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -1493,6 +1520,15 @@
       </button>
       <div class="faq-answer">
         <strong>+</strong> ボタンをタップして新しい支出を追加 <span class="arrow">→</span> 金額フィールド横の<strong>カメラアイコン</strong>をタップ <span class="arrow">→</span> カメラをレシートに向ける。検出された金額が下部に表示されます — タップすると金額フィールドに自動入力されます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        「レシート画像が大きすぎます」と表示されるのはなぜですか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        レシート画像は添付前に自動で圧縮されるため、ほとんどの写真はそのまま添付できます。テストしたかぎり、実際のレシートはすべて最初の圧縮段階で収まりました。<br><br>1枚あたり 1 MB 未満に収めています。写真が非常に大きい、または背景が込み入っている場合は、先に画質を下げ、その後でサイズを縮小します。レシートは高コントラストの文字なので、解像度を落とすより圧縮する方が読みやすさを保てるためです。<br><br>ごくまれに、それでも十分に小さくできないことがあります。その場合は保存後ではなく添付した時点でお知らせしますので、レシートが手元にあるうちに撮り直せます。支出はいずれの場合も保存され、既存のレシートを差し替えようとしていた場合は、元のレシートがそのまま残ります。<br><br>その際は、背景を減らして撮り直してください。レシート自体が画面いっぱいに写るようにすれば、たいてい十分です。
       </div>
     </div>
     <div class="faq-item">
@@ -1835,6 +1871,15 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        Warum heißt es, mein Belegfoto sei zu groß?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Belegfotos werden vor dem Anhängen automatisch komprimiert, daher funktionieren fast alle Fotos ohne Weiteres — in Tests passte jeder echte Beleg bereits in der ersten Komprimierungsstufe.<br><br>Jeder Beleg bleibt unter 1 MB. Ist ein Foto ungewöhnlich groß oder unruhig, senkt die App zuerst die Bildqualität und erst danach die Abmessungen, denn ein Beleg besteht aus kontrastreichem Text, der Komprimierung besser verträgt als verlorene Bildpunkte.<br><br>Sehr selten lässt sich ein Foto trotzdem nicht klein genug machen. Sie erfahren das direkt beim Anhängen und nicht erst nach dem Speichern, sodass Sie es neu aufnehmen können, solange der Beleg noch vor Ihnen liegt. Ihre Ausgabe wird in jedem Fall gespeichert, und wenn Sie einen vorhandenen Beleg ersetzen wollten, bleibt der bisherige erhalten.<br><br>Nehmen Sie das Foto in diesem Fall mit weniger Hintergrund neu auf — meist genügt es, wenn der Beleg mehr vom Bild ausfüllt.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         Wie exportiere ich meine Ausgaben?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -2169,6 +2214,15 @@
       </button>
       <div class="faq-answer">
         Toque el botón <strong>+</strong> para agregar un nuevo gasto <span class="arrow">→</span> toque el <strong>ícono de cámara</strong> junto al campo de monto <span class="arrow">→</span> apunte su cámara al recibo. Los montos detectados aparecerán en la parte inferior — toque uno para completar el campo de monto automáticamente.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Por qué dice que la foto del recibo es demasiado grande?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Las fotos de recibos se comprimen automáticamente antes de adjuntarse, así que casi todas funcionan sin más: en las pruebas, todos los recibos reales encajaron ya en el primer nivel de compresión.<br><br>Cada recibo se mantiene por debajo de 1 MB. Si una foto es especialmente grande o recargada, la app baja primero la calidad de imagen y solo después las dimensiones, porque un recibo es texto de alto contraste que tolera mejor la compresión que la pérdida de píxeles.<br><br>Muy de vez en cuando una foto aun así no se puede reducir lo suficiente. Se le avisa en el momento de adjuntarla, no después de guardar, para que pueda repetirla mientras todavía tiene el recibo delante. Su gasto se guarda igualmente y, si estaba sustituyendo un recibo existente, se conserva el anterior.<br><br>Si ocurre, repita la foto con menos fondo: normalmente basta con que el recibo ocupe más parte de la imagen.
       </div>
     </div>
     <div class="faq-item">
@@ -2511,6 +2565,15 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        Pourquoi ma photo de reçu est-elle jugée trop volumineuse ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Les photos de reçus sont compressées automatiquement avant d’être jointes, si bien que presque toutes passent sans problème : lors des tests, tous les reçus réels tenaient dès le premier niveau de compression.<br><br>Chaque reçu reste sous 1 Mo. Si une photo est particulièrement lourde ou chargée, l’app réduit d’abord la qualité d’image et seulement ensuite les dimensions, car un reçu est du texte très contrasté qui supporte mieux la compression que la perte de pixels.<br><br>Très rarement, une photo ne peut malgré tout pas être suffisamment réduite. Vous en êtes informé au moment où vous la joignez, et non après l’enregistrement, ce qui vous permet de la reprendre tant que le reçu est encore devant vous. Votre dépense est enregistrée dans tous les cas et, si vous remplaciez un reçu existant, l’ancien est conservé.<br><br>Dans ce cas, reprenez la photo avec moins d’arrière-plan : il suffit généralement que le reçu occupe une plus grande partie de l’image.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         Comment exporter mes dépenses ?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -2739,6 +2802,10 @@
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">영수증을 어떻게 스캔하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="faq-answer"><strong>+</strong> 버튼 <span class="arrow">→</span> 금액 필드 옆 <strong>카메라 아이콘</strong> <span class="arrow">→</span> 영수증에 카메라를 향하세요. 감지된 금액을 탭하면 자동 입력됩니다.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">영수증 사진이 너무 크다고 나오는 이유는 무엇인가요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">영수증 사진은 첨부 전에 자동으로 압축되므로 대부분의 사진은 그대로 첨부됩니다. 테스트한 실제 영수증은 모두 첫 번째 압축 단계에서 크기가 맞았습니다.<br><br>영수증 한 장은 1 MB 미만으로 유지됩니다. 사진이 유난히 크거나 배경이 복잡하면 앱이 먼저 화질을 낮추고 그다음에 크기를 줄입니다. 영수증은 대비가 뚜렷한 글자라서 해상도가 떨어질 때보다 압축될 때 가독성이 덜 손상되기 때문입니다.<br><br>아주 드물게 그래도 충분히 작아지지 않는 경우가 있습니다. 저장한 뒤가 아니라 첨부하는 순간 알려 드리므로, 영수증이 손에 있을 때 다시 찍을 수 있습니다. 지출 내역은 어느 경우든 저장되며, 기존 영수증을 교체하려던 것이라면 이전 영수증이 그대로 유지됩니다.<br><br>이런 경우에는 배경을 줄여 다시 찍어 보세요. 영수증이 화면을 더 많이 채우도록 하면 대개 충분합니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">지출을 어떻게 내보내나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
