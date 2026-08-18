@@ -323,7 +323,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-08-14 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -337,7 +337,7 @@
         <li>Group data (name, members, settings)</li>
         <li>Group expenses and settlements</li>
         <li>Display name</li>
-        <li>Optional payment handles (Venmo, Cash App, PayPal.me)</li>
+        <li>Optional payment handles (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Optional receipt photos attached to expenses (PRO subscription feature)</li>
         <li>Receipt images scanned for itemised splitting via Pick &amp; Pay (sent to Google's Gemini API for AI processing; PRO subscription feature)</li>
         <li>Optional profile photo, visible to all members of any group you join (PRO subscription feature)</li>
@@ -456,11 +456,11 @@
     <li>Group deletion requests and member votes</li>
     <li>Trial start dates (for reinstall recovery)</li>
     <li>Push notification tokens (FCM)</li>
-    <li>Optional payment handles for settle-up deep links (Venmo, Cash App, PayPal.me usernames)</li>
+    <li>Optional payment handles for settle-up deep links (Venmo, Cash App and PayPal.me usernames; an Apple Cash phone number, which opens Messages rather than a payment app; and a Zelle phone number or email, a LINE ID and a WeChat ID, which open nothing at all and are simply shown to group members to copy)</li>
     <li><strong>Pick &amp; Pay scan tracking</strong> — a small per-account record of how many scans you've made this month and whether your trial freebie has been used. Used to enforce per-account monthly limits and to show you your remaining scans in Settings. Contains no information about the contents of any receipt.</li>
     <li><strong>Group activity history</strong> — a record of every action performed in the group (expenses added, edited, refunded, or deleted; members who joined, left, or were removed). This data is stored in Firebase Firestore and is <strong>automatically and permanently deleted after 90 days</strong>. Activity older than 90 days cannot be recovered.</li>
   </ul>
-  <div class="highlight-box">Payment handles are <strong>public usernames only</strong> (e.g., your <code>@venmo</code> or <code>$cashtag</code>), provided by you so group members can tap to open the Venmo, Cash App, or PayPal app and pay you directly. These handles are <strong>not</strong> payment credentials, bank details, or account numbers, and no money flows through Node Expense — all payments happen inside the third-party app you choose to open.</div>
+  <div class="highlight-box">Payment handles are <strong>public identifiers only</strong> (e.g., your <code>@venmo</code> or <code>$cashtag</code>, the phone number you choose to use for Apple Cash or Zelle, an email address you use for Zelle, or your LINE or WeChat ID), provided by you so group members can tap to open the Venmo, Cash App, or PayPal app — or Messages, for Apple Cash — and pay you directly. Zelle, LINE and WeChat open nothing: those details are shown to group members to copy, and the payment happens in an app you both already use. These handles are <strong>not</strong> payment credentials, bank details, or account numbers, and no money flows through Node Expense — all payments happen inside the third-party app you choose to open.</div>
 
   <h3>9.3 Encryption &amp; Backups</h3>
   <ul>
@@ -515,7 +515,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-08-14 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-08-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -529,7 +529,7 @@
         <li>群組資料（名稱、成員、設定）</li>
         <li>群組費用與結算</li>
         <li>顯示名稱</li>
-        <li>選填的付款帳號（Venmo、Cash App、PayPal.me）</li>
+        <li>選填的付款帳號（Venmo、Cash App、PayPal.me、Apple Cash、Zelle、LINE、WeChat）</li>
         <li>選填的費用收據照片（PRO 訂閱功能）</li>
         <li>透過 Pick &amp; Pay 進行逐項分帳所掃描的收據圖片（將傳送至 Google Gemini API 進行 AI 處理；PRO 訂閱功能）</li>
         <li>選填的個人頭像，您加入的所有群組的成員皆可見（PRO 訂閱功能）</li>
@@ -648,11 +648,11 @@
     <li>群組刪除請求及成員投票</li>
     <li>試用開始日期（用於重新安裝後的復原）</li>
     <li>推播通知權杖（FCM）</li>
-    <li>用於結算深度連結的選填付款帳號（Venmo、Cash App、PayPal.me 使用者名稱）</li>
+    <li>用於結算深度連結的選填付款帳號（Venmo、Cash App、PayPal.me 使用者名稱；Apple Cash 電話號碼，開啟的是「訊息」而非付款應用程式；以及 Zelle 手機號碼或電子郵件、LINE ID 與微信號，這些完全不會開啟任何程式，僅顯示給群組成員複製）</li>
     <li><strong>Pick &amp; Pay 掃描追蹤</strong>——記錄您本月已進行的掃描次數及試用免費額度是否已使用的小型每帳戶記錄。用於執行每帳戶每月限制，並在「設定」中向您顯示剩餘掃描次數。不包含任何收據內容的資訊。</li>
     <li><strong>群組活動記錄</strong>——群組內所有操作的記錄（費用的新增、編輯、退款或刪除；成員的加入、離開或移除）。此資料儲存於 Firebase Firestore，並於 <strong>90 天後自動永久刪除</strong>。超過 90 天的活動記錄無法復原。</li>
   </ul>
-  <div class="highlight-box">付款帳號為<strong>公開用戶名稱</strong>（例如您的 <code>@venmo</code> 或 <code>$cashtag</code>），由您提供，讓群組成員可點擊直接開啟 Venmo、Cash App 或 PayPal 應用程式向您付款。這些帳號<strong>並非</strong>付款憑證、銀行資訊或帳號密碼，也沒有任何款項透過 Node Expense 轉移——所有付款皆在您所選擇開啟的第三方應用程式中完成。</div>
+  <div class="highlight-box">付款帳號僅為<strong>公開識別資訊</strong>（例如您的 <code>@venmo</code>、<code>$cashtag</code>，您選擇用於 Apple Cash 或 Zelle 的電話號碼，用於 Zelle 的電子郵件，或您的 LINE ID 與微信號），由您提供，讓群組成員可點擊直接開啟 Venmo、Cash App 或 PayPal 應用程式（Apple Cash 則開啟「訊息」）向您付款。Zelle、LINE 與微信不會開啟任何程式：這些資訊僅顯示給群組成員複製，付款在雙方原本就使用的 App 中完成。這些帳號<strong>並非</strong>付款憑證、銀行資訊或帳號密碼，也沒有任何款項透過 Node Expense 轉移——所有付款皆在您所選擇開啟的第三方應用程式中完成。</div>
 
   <h3>9.3 加密與備份</h3>
   <ul>
@@ -707,7 +707,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-08-14 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-08-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -721,7 +721,7 @@
         <li>群组数据（名称、成员、设置）</li>
         <li>群组支出与结算</li>
         <li>显示名称</li>
-        <li>可选的付款账号（Venmo、Cash App、PayPal.me）</li>
+        <li>可选的付款账号（Venmo、Cash App、PayPal.me、Apple Cash、Zelle、LINE、WeChat）</li>
         <li>可选的支出收据照片（PRO 订阅功能）</li>
         <li>通过 Pick &amp; Pay 进行逐项分账所扫描的收据图片（将发送至 Google Gemini API 进行 AI 处理；PRO 订阅功能）</li>
         <li>可选的个人头像，您加入的所有群组的成员均可见（PRO 订阅功能）</li>
@@ -840,11 +840,11 @@
     <li>群组删除申请和成员投票</li>
     <li>试用开始日期（用于重新安装恢复）</li>
     <li>推送通知令牌（FCM）</li>
-    <li>用于结算深度链接的可选付款账号（Venmo、Cash App、PayPal.me 用户名）</li>
+    <li>用于结算深度链接的可选付款账号（Venmo、Cash App、PayPal.me 用户名；Apple Cash 电话号码，打开的是「信息」而非付款应用；以及 Zelle 手机号或邮箱、LINE ID 与微信号，这些完全不会打开任何应用，仅显示给群组成员复制）</li>
     <li><strong>Pick &amp; Pay 扫描跟踪</strong>——记录您本月已进行的扫描次数及试用免费额度是否已使用的小型每账户记录。用于执行每账户每月限制，并在「设置」中向您显示剩余扫描次数。不包含任何收据内容的信息。</li>
     <li><strong>群组活动记录</strong>——群组内所有操作的记录（支出的添加、编辑、退款或删除；成员的加入、离开或移除）。此数据存储于 Firebase Firestore，并于 <strong>90 天后自动永久删除</strong>。超过 90 天的活动记录无法恢复。</li>
   </ul>
-  <div class="highlight-box">付款账号<strong>仅为公开用户名</strong>（例如您的 <code>@venmo</code> 或 <code>$cashtag</code>），由您提供，以便群组成员可点击直接打开 Venmo、Cash App 或 PayPal 应用向您付款。这些账号<strong>不是</strong>支付凭证、银行信息或账号密码，也没有任何资金通过 Node Expense 流转——所有付款均在您所选择打开的第三方应用中完成。</div>
+  <div class="highlight-box">付款账号<strong>仅为公开识别信息</strong>（例如您的 <code>@venmo</code>、<code>$cashtag</code>，您选择用于 Apple Cash 或 Zelle 的电话号码，用于 Zelle 的邮箱，或您的 LINE ID 与微信号），由您提供，以便群组成员可点击直接打开 Venmo、Cash App 或 PayPal 应用（Apple Cash 则打开「信息」）向您付款。Zelle、LINE 与微信不会打开任何应用：这些信息仅显示给群组成员复制，付款在双方原本就使用的 App 中完成。这些账号<strong>不是</strong>支付凭证、银行信息或账号密码，也没有任何资金通过 Node Expense 流转——所有付款均在您所选择打开的第三方应用中完成。</div>
 
   <h3>9.3 加密与备份</h3>
   <ul>
@@ -899,7 +899,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-08-14 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-08-18 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -913,7 +913,7 @@
         <li>グループデータ（名前、メンバー、設定）</li>
         <li>グループ支出と精算</li>
         <li>表示名</li>
-        <li>任意の支払いハンドル（Venmo、Cash App、PayPal.me）</li>
+        <li>任意の支払いハンドル（Venmo、Cash App、PayPal.me、Apple Cash、Zelle、LINE、WeChat）</li>
         <li>任意の支出に添付されるレシート写真（PRO サブスクリプション機能）</li>
         <li>Pick &amp; Pay でアイテム別に割り勘するためにスキャンしたレシート画像（Google Gemini API による AI 処理のため送信されます。PRO サブスクリプション機能）</li>
         <li>任意のプロフィール写真。参加するすべてのグループのメンバーに表示されます（PRO サブスクリプション機能）</li>
@@ -1032,11 +1032,11 @@
     <li>グループ削除リクエストとメンバーの投票</li>
     <li>トライアル開始日（再インストール後の復元用）</li>
     <li>プッシュ通知トークン（FCM）</li>
-    <li>精算用ディープリンクのための任意の支払いハンドル（Venmo、Cash App、PayPal.me のユーザー名）</li>
+    <li>精算用ディープリンクのための任意の支払いハンドル（Venmo、Cash App、PayPal.me のユーザー名、Apple Cash の電話番号（決済アプリではなくメッセージを開きます）、および Zelle の電話番号またはメールアドレス、LINE ID、WeChat ID。後者の 3 つは何も開かず、グループメンバーがコピーできるよう表示されるだけです）</li>
     <li><strong>Pick &amp; Pay スキャン追跡</strong>——今月実行したスキャン数と、トライアルの無料利用が消費されたかどうかを記録する、アカウントごとの小さな記録です。アカウントごとの月次上限を適用し、「設定」画面で残りのスキャン数を表示するために使用されます。レシートの内容に関する情報は含まれていません。</li>
     <li><strong>グループアクティビティ履歴</strong>——グループ内で行われたすべての操作の記録（支出の追加・編集・返金・削除、メンバーの参加・退出・除名）。このデータは Firebase Firestore に保存され、<strong>90日後に自動的かつ永続的に削除</strong>されます。90日以上前のアクティビティは復元できません。</li>
   </ul>
-  <div class="highlight-box">支払いハンドルは<strong>公開ユーザー名のみ</strong>（例：<code>@venmo</code> や <code>$cashtag</code>）で、グループメンバーがタップして Venmo、Cash App、PayPal アプリを直接開いてお客様へ送金できるようにするためにお客様自身が提供する情報です。これらのハンドルは支払い認証情報、銀行情報、口座番号<strong>ではありません</strong>。また、Node Expense を経由して送金が行われることはなく、すべての支払いはお客様が選択して開いた第三者アプリ内で完結します。</div>
+  <div class="highlight-box">支払いハンドルは<strong>公開されている識別情報のみ</strong>（例：<code>@venmo</code>、<code>$cashtag</code>、Apple Cash や Zelle に使用する電話番号、Zelle に使用するメールアドレス、LINE ID、WeChat ID）で、グループメンバーがタップして Venmo、Cash App、PayPal アプリ（Apple Cash の場合はメッセージ）を直接開いてお客様へ送金できるようにするためにお客様自身が提供する情報です。Zelle、LINE、WeChat は何も開きません。これらの情報はグループメンバーがコピーできるよう表示されるだけで、送金はお互いが既に使っているアプリ内で行われます。これらのハンドルは支払い認証情報、銀行情報、口座番号<strong>ではありません</strong>。また、Node Expense を経由して送金が行われることはなく、すべての支払いはお客様が選択して開いた第三者アプリ内で完結します。</div>
 
   <h3>9.3 暗号化とバックアップ</h3>
   <ul>
@@ -1091,7 +1091,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-08-14 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1105,7 +1105,7 @@
         <li>Gruppendaten (Name, Mitglieder, Einstellungen)</li>
         <li>Gruppenausgaben und Abrechnungen</li>
         <li>Anzeigename</li>
-        <li>Optionale Zahlungshandles (Venmo, Cash App, PayPal.me)</li>
+        <li>Optionale Zahlungshandles (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Optionale Belegfotos, die an Ausgaben angehängt werden (PRO-Abonnementfunktion)</li>
         <li>Belegbilder, die für die positionsweise Aufteilung über Pick &amp; Pay gescannt werden (werden zur KI-Verarbeitung an die Google Gemini API gesendet; PRO-Abonnementfunktion)</li>
         <li>Optionales Profilfoto, sichtbar für alle Mitglieder jeder Gruppe, der Sie beitreten (PRO-Abonnementfunktion)</li>
@@ -1224,11 +1224,11 @@
     <li>Gruppen-Löschanfragen und Mitgliederabstimmungen</li>
     <li>Teststart-Daten (zur Wiederherstellung nach Neuinstallation)</li>
     <li>Push-Benachrichtigungs-Token (FCM)</li>
-    <li>Optionale Zahlungshandles für Abrechnungs-Deeplinks (Venmo, Cash App, PayPal.me-Benutzernamen)</li>
+    <li>Optionale Zahlungshandles für Abrechnungs-Deeplinks (Venmo-, Cash App- und PayPal.me-Benutzernamen; eine Apple Cash-Telefonnummer, die Nachrichten statt einer Zahlungs-App öffnet; sowie eine Zelle-Telefonnummer oder -E-Mail, eine LINE-ID und eine WeChat-ID, die gar nichts öffnen und Gruppenmitgliedern nur zum Kopieren angezeigt werden)</li>
     <li><strong>Pick &amp; Pay-Scan-Erfassung</strong> — ein kleiner kontobezogener Datensatz, der protokolliert, wie viele Scans Sie in diesem Monat durchgeführt haben und ob Ihre Testversion-Gratisnutzung verwendet wurde. Wird verwendet, um die monatlichen Limits pro Konto durchzusetzen und Ihnen die verbleibenden Scans in den Einstellungen anzuzeigen. Enthält keine Informationen über den Inhalt eines Belegs.</li>
     <li><strong>Gruppenaktivitätsverlauf</strong> — eine Aufzeichnung aller in der Gruppe durchgeführten Aktionen (Ausgaben hinzugefügt, bearbeitet, erstattet oder gelöscht; Mitglieder beigetreten, ausgetreten oder entfernt). Diese Daten werden in Firebase Firestore gespeichert und nach <strong>90 Tagen automatisch und dauerhaft gelöscht</strong>. Aktivitäten, die älter als 90 Tage sind, können nicht wiederhergestellt werden.</li>
   </ul>
-  <div class="highlight-box">Zahlungshandles sind <strong>ausschließlich öffentliche Benutzernamen</strong> (z. B. Ihr <code>@venmo</code> oder <code>$cashtag</code>), die Sie bereitstellen, damit Gruppenmitglieder tippen können, um die Venmo-, Cash App- oder PayPal-App zu öffnen und Sie direkt zu bezahlen. Diese Handles sind <strong>keine</strong> Zahlungsdaten, Bankdaten oder Kontonummern, und kein Geld fließt über Node Expense — alle Zahlungen erfolgen innerhalb der Drittanbieter-App, die Sie öffnen.</div>
+  <div class="highlight-box">Zahlungshandles sind <strong>ausschließlich öffentliche Kennungen</strong> (z. B. Ihr <code>@venmo</code> oder <code>$cashtag</code>, die Telefonnummer, die Sie für Apple Cash oder Zelle verwenden, eine E-Mail-Adresse für Zelle oder Ihre LINE- bzw. WeChat-ID), die Sie bereitstellen, damit Gruppenmitglieder tippen können, um die Venmo-, Cash App- oder PayPal-App — bei Apple Cash die App Nachrichten — zu öffnen und Sie direkt zu bezahlen. Zelle, LINE und WeChat öffnen nichts: Diese Angaben werden Gruppenmitgliedern nur zum Kopieren angezeigt, und die Zahlung erfolgt in einer App, die Sie beide ohnehin nutzen. Diese Handles sind <strong>keine</strong> Zahlungsdaten, Bankdaten oder Kontonummern, und kein Geld fließt über Node Expense — alle Zahlungen erfolgen innerhalb der Drittanbieter-App, die Sie öffnen.</div>
 
   <h3>9.3 Verschlüsselung &amp; Backups</h3>
   <ul>
@@ -1283,7 +1283,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-08-14 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1297,7 +1297,7 @@
         <li>Datos del grupo (nombre, miembros, configuración)</li>
         <li>Gastos y liquidaciones del grupo</li>
         <li>Nombre para mostrar</li>
-        <li>Identificadores de pago opcionales (Venmo, Cash App, PayPal.me)</li>
+        <li>Identificadores de pago opcionales (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Fotos de recibos opcionales adjuntas a los gastos (función de suscripción PRO)</li>
         <li>Imágenes de recibos escaneadas para dividir por artículos mediante Pick &amp; Pay (se envían a la API de Google Gemini para su procesamiento por IA; función de suscripción PRO)</li>
         <li>Foto de perfil opcional, visible para todos los miembros de cualquier grupo al que se una (función de suscripción PRO)</li>
@@ -1416,11 +1416,11 @@
     <li>Solicitudes de eliminación de grupo y votos de miembros</li>
     <li>Fechas de inicio de prueba (para recuperación tras reinstalación)</li>
     <li>Tokens de notificaciones push (FCM)</li>
-    <li>Identificadores de pago opcionales para enlaces directos de liquidación (nombres de usuario de Venmo, Cash App, PayPal.me)</li>
+    <li>Identificadores de pago opcionales para enlaces directos de liquidación (nombres de usuario de Venmo, Cash App y PayPal.me; un número de teléfono de Apple Cash, que abre Mensajes en lugar de una app de pago; y un teléfono o correo de Zelle, un ID de LINE y un ID de WeChat, que no abren nada y solo se muestran a los miembros del grupo para copiarlos)</li>
     <li><strong>Seguimiento de escaneos de Pick &amp; Pay</strong> — un pequeño registro por cuenta del número de escaneos que ha realizado este mes y si se ha utilizado su prueba gratuita. Se usa para aplicar los límites mensuales por cuenta y para mostrarle los escaneos restantes en Ajustes. No contiene ninguna información sobre el contenido de ningún recibo.</li>
     <li><strong>Historial de actividad del grupo</strong> — un registro de todas las acciones realizadas en el grupo (gastos añadidos, editados, reembolsados o eliminados; miembros que se unieron, abandonaron o fueron eliminados). Estos datos se almacenan en Firebase Firestore y se <strong>eliminan automática y permanentemente después de 90 días</strong>. La actividad anterior a 90 días no puede recuperarse.</li>
   </ul>
-  <div class="highlight-box">Los identificadores de pago son <strong>únicamente nombres de usuario públicos</strong> (p. ej., su <code>@venmo</code> o <code>$cashtag</code>), proporcionados por usted para que los miembros del grupo puedan pulsar para abrir la app de Venmo, Cash App o PayPal y pagarle directamente. Estos identificadores <strong>no</strong> son credenciales de pago, datos bancarios ni números de cuenta, y ningún dinero fluye a través de Node Expense; todos los pagos se realizan dentro de la app de terceros que elija abrir.</div>
+  <div class="highlight-box">Los identificadores de pago son <strong>únicamente identificadores públicos</strong> (p. ej., su <code>@venmo</code> o <code>$cashtag</code>, el número de teléfono que elija usar para Apple Cash o Zelle, un correo electrónico que use para Zelle, o su ID de LINE o de WeChat), proporcionados por usted para que los miembros del grupo puedan pulsar para abrir la app de Venmo, Cash App o PayPal —o Mensajes, en el caso de Apple Cash— y pagarle directamente. Zelle, LINE y WeChat no abren nada: esos datos se muestran a los miembros del grupo para que los copien, y el pago se realiza en una app que ambos ya usan. Estos identificadores <strong>no</strong> son credenciales de pago, datos bancarios ni números de cuenta, y ningún dinero fluye a través de Node Expense; todos los pagos se realizan dentro de la app de terceros que elija abrir.</div>
 
   <h3>9.3 Cifrado &amp; copias de seguridad</h3>
   <ul>
@@ -1475,7 +1475,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-08-14 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1489,7 +1489,7 @@
         <li>Données de groupe (nom, membres, paramètres)</li>
         <li>Dépenses et remboursements de groupe</li>
         <li>Nom d'affichage</li>
-        <li>Identifiants de paiement optionnels (Venmo, Cash App, PayPal.me)</li>
+        <li>Identifiants de paiement optionnels (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Photos de reçus optionnelles attachées aux dépenses (fonctionnalité d'abonnement PRO)</li>
         <li>Images de reçus scannées pour le partage par article via Pick &amp; Pay (envoyées à l'API Google Gemini pour traitement par IA ; fonctionnalité d'abonnement PRO)</li>
         <li>Photo de profil optionnelle, visible par tous les membres de chaque groupe que vous rejoignez (fonctionnalité d'abonnement PRO)</li>
@@ -1608,11 +1608,11 @@
     <li>Demandes de suppression de groupe et votes des membres</li>
     <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
     <li>Jetons de notification push (FCM)</li>
-    <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App, PayPal.me)</li>
+    <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App et PayPal.me ; un numéro de téléphone Apple Cash, qui ouvre Messages et non une application de paiement ; ainsi qu'un numéro de téléphone ou e-mail Zelle, un identifiant LINE et un identifiant WeChat, qui n'ouvrent rien du tout et sont simplement affichés aux membres du groupe pour être copiés)</li>
     <li><strong>Suivi des scans Pick &amp; Pay</strong> — un petit enregistrement par compte du nombre de scans que vous avez effectués ce mois-ci et si votre essai gratuit a été utilisé. Sert à appliquer les plafonds mensuels par compte et à vous montrer vos scans restants dans les Réglages. Ne contient aucune information sur le contenu d'un reçu.</li>
     <li><strong>Historique des activités du groupe</strong> — un enregistrement de toutes les actions effectuées dans le groupe (dépenses ajoutées, modifiées, remboursées ou supprimées ; membres ayant rejoint, quitté ou été retirés). Ces données sont stockées dans Firebase Firestore et sont <strong>automatiquement et définitivement supprimées après 90 jours</strong>. Les activités antérieures à 90 jours ne peuvent pas être récupérées.</li>
   </ul>
-  <div class="highlight-box">Les identifiants de paiement sont <strong>uniquement des noms d'utilisateur publics</strong> (par ex. votre <code>@venmo</code> ou <code>$cashtag</code>), fournis par vous pour que les membres du groupe puissent appuyer pour ouvrir l'application Venmo, Cash App ou PayPal et vous payer directement. Ces identifiants ne sont <strong>pas</strong> des identifiants de paiement, des coordonnées bancaires ou des numéros de compte, et aucun argent ne transite par Node Expense — tous les paiements s'effectuent dans l'application tierce que vous choisissez d'ouvrir.</div>
+  <div class="highlight-box">Les identifiants de paiement sont <strong>uniquement des identifiants publics</strong> (par ex. votre <code>@venmo</code> ou <code>$cashtag</code>, le numéro de téléphone que vous choisissez d'utiliser pour Apple Cash ou Zelle, une adresse e-mail que vous utilisez pour Zelle, ou votre identifiant LINE ou WeChat), fournis par vous pour que les membres du groupe puissent appuyer pour ouvrir l'application Venmo, Cash App ou PayPal — ou Messages, pour Apple Cash — et vous payer directement. Zelle, LINE et WeChat n'ouvrent rien : ces informations sont affichées aux membres du groupe pour être copiées, et le paiement s'effectue dans une application que vous utilisez déjà tous les deux. Ces identifiants ne sont <strong>pas</strong> des identifiants de paiement, des coordonnées bancaires ou des numéros de compte, et aucun argent ne transite par Node Expense — tous les paiements s'effectuent dans l'application tierce que vous choisissez d'ouvrir.</div>
 
   <h3>9.3 Chiffrement &amp; sauvegardes</h3>
   <ul>
@@ -1668,7 +1668,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-08-14 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1682,7 +1682,7 @@
         <li>그룹 데이터 (이름, 멤버, 설정)</li>
         <li>그룹 지출 및 정산 내역</li>
         <li>표시 이름</li>
-        <li>선택적 결제 식별자 (Venmo, Cash App, PayPal.me)</li>
+        <li>선택적 결제 식별자 (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>지출에 첨부하는 선택적 영수증 사진 (PRO 구독 기능)</li>
         <li>Pick &amp; Pay 를 통한 항목별 분할용으로 스캔된 영수증 이미지 (AI 처리를 위해 Google Gemini API 로 전송됨; PRO 구독 기능)</li>
         <li>선택적 프로필 사진 — 참가하는 모든 그룹의 멤버에게 표시됨 (PRO 구독 기능)</li>
@@ -1801,11 +1801,11 @@
     <li>그룹 삭제 요청 및 멤버 투표</li>
     <li>체험 시작일 (재설치 후 복구용)</li>
     <li>푸시 알림 토큰 (FCM)</li>
-    <li>정산 딥링크를 위한 선택적 결제 식별자 (Venmo, Cash App, PayPal.me 사용자명)</li>
+    <li>정산 딥링크를 위한 선택적 결제 식별자 (Venmo, Cash App, PayPal.me 사용자명, 결제 앱이 아닌 메시지를 여는 Apple Cash 전화번호, 그리고 아무것도 열지 않고 그룹 멤버가 복사할 수 있도록 표시되기만 하는 Zelle 전화번호 또는 이메일, LINE ID, WeChat ID)</li>
     <li><strong>Pick &amp; Pay 스캔 추적</strong> — 이번 달 수행한 스캔 횟수와 체험 무료 사용 여부를 기록하는 계정별 소규모 기록입니다. 계정당 월간 한도를 적용하고 설정에 남은 스캔 횟수를 표시하는 데 사용됩니다. 영수증 내용에 관한 어떤 정보도 포함하지 않습니다.</li>
     <li><strong>그룹 활동 기록</strong> — 그룹에서 수행된 모든 작업의 기록 (지출 추가, 수정, 환불 또는 삭제; 멤버 가입, 탈퇴 또는 제거). 이 데이터는 Firebase Firestore에 저장되며 <strong>90일 후 자동으로 영구 삭제</strong>됩니다. 90일이 지난 활동은 복구할 수 없습니다.</li>
   </ul>
-  <div class="highlight-box">결제 식별자는 <strong>공개 사용자명에 불과합니다</strong>(예: 귀하의 <code>@venmo</code> 또는 <code>$cashtag</code>). 이 식별자는 결제 자격증명, 은행 세부정보 또는 계좌 번호가 <strong>아니며</strong>, Node Expense를 통해 어떠한 금액도 이동하지 않습니다. 모든 결제는 귀하가 선택하여 연 제3자 앱 내에서 이루어집니다.</div>
+  <div class="highlight-box">결제 식별자는 <strong>공개 식별자에 불과합니다</strong>(예: 귀하의 <code>@venmo</code>, <code>$cashtag</code>, Apple Cash 또는 Zelle에 사용하는 전화번호, Zelle에 사용하는 이메일 주소, LINE ID 또는 WeChat ID. Apple Cash는 결제 앱이 아닌 메시지를 열며, Zelle · LINE · WeChat은 아무것도 열지 않고 그룹 멤버가 복사하도록 표시되기만 합니다). 이 식별자는 결제 자격증명, 은행 세부정보 또는 계좌 번호가 <strong>아니며</strong>, Node Expense를 통해 어떠한 금액도 이동하지 않습니다. 모든 결제는 귀하가 선택하여 연 제3자 앱 내에서 이루어집니다.</div>
 
   <h3>9.3 암호화 및 백업</h3>
   <ul>

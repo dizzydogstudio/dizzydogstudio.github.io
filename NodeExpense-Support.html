@@ -309,7 +309,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-08-11 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -352,27 +352,32 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        How do I set up Venmo, Cash App, or PayPal.Me for Settle Up?
+        How do I set up Venmo, Cash App, PayPal.Me, Apple Cash, Zelle, LINE, or WeChat for Settle Up?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tap <strong>Settings</strong> <span class="arrow">→</span> scroll to <strong>Payment Handles</strong>. Enter just your username (no leading <code>@</code> or <code>$</code>):
+        Tap <strong>Settings</strong> <span class="arrow">→</span> <strong>Payment Methods</strong>. Enter just the identifier for each service you use (no leading <code>@</code> or <code>$</code>):
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Venmo</strong> — your username (e.g. <code>alice</code>). US accounts only.</li>
           <li><strong>Cash App</strong> — your $cashtag (e.g. <code>bob</code>). US accounts only.</li>
           <li><strong>PayPal.Me</strong> — your PayPal.Me link name (e.g. <code>alice</code>). Works globally.</li>
+          <li><strong>Apple Cash</strong> — your phone number. US only. Tapping opens Messages rather than a payment app, and you send the payment there.</li>
+          <li><strong>Zelle</strong> — the phone number or email registered with your bank. US only.</li>
+          <li><strong>LINE</strong> — your LINE ID. Members add you on LINE and pay you there with LINE Pay, where it is available.</li>
+          <li><strong>WeChat</strong> — your WeChat ID. Members add you on WeChat and pay you there with WeChat Pay, where it is available.</li>
+          <li>The last three open nothing: members see the details and copy them, then pay you in the app you both use.</li>
         </ul>
         Leave any field blank to skip that method. Your handles are shared privately with members of your groups so they can pay you back in one tap — they are never shared publicly or with advertisers.
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        How do I pay someone back with Venmo, Cash App, or PayPal?
+        How do I pay someone back with Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, or WeChat?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         Open the group <span class="arrow">→</span> <strong>Balances</strong> tab <span class="arrow">→</span> tap the <strong>Pay</strong> button on any debt you owe <span class="arrow">→</span> choose <strong>Venmo</strong>, <strong>Cash App</strong>, or <strong>PayPal.Me</strong>. The selected app opens with the amount and note prefilled — confirm and send the payment inside that app. Then return to Node Expense and tap <strong>Record a Payment</strong> to log the settlement so both sides can mark it confirmed.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">The <strong>Pay</strong> button only appears when the recipient has registered at least one payment handle. Amounts never transfer automatically — all payments happen inside the third-party app.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">The <strong>Pay</strong> button only appears when the recipient has registered at least one payment method. Amounts never transfer automatically — all payments happen inside the third-party app.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -673,7 +678,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-08-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-08-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -716,27 +721,32 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何設定 Venmo、Cash App 或 PayPal.Me 以一鍵結算？
+        如何設定 Venmo、Cash App、PayPal.Me、Apple Cash、Zelle、LINE 或 WeChat 以一鍵結算？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> 捲動至<strong>付款帳號</strong>。只需輸入使用者名稱（無需 <code>@</code> 或 <code>$</code> 前綴）：
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>收款方式</strong>。各項服務只需輸入識別資訊（無需 <code>@</code> 或 <code>$</code> 前綴）：
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Venmo</strong> — 您的使用者名稱（例如 <code>alice</code>）。僅限美國帳戶。</li>
           <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。僅限美國帳戶。</li>
           <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 連結名稱（例如 <code>alice</code>）。全球適用。</li>
+          <li><strong>Apple Cash</strong> — 您的電話號碼。僅限美國。點按會開啟「訊息」而非付款應用程式，由您在那裡傳送付款。</li>
+          <li><strong>Zelle</strong> — 您在銀行登記的手機號碼或電子郵件。僅限美國。</li>
+          <li><strong>LINE</strong> — 您的 LINE ID。成員在 LINE 上加您為好友，並在支援 LINE Pay 的地區透過它向您付款。</li>
+          <li><strong>WeChat</strong> — 您的微信號。成員在微信上加您為好友，並在支援微信支付的地區透過它向您付款。</li>
+          <li>後三項不會開啟任何應用程式：成員會看到並複製這些資訊，再於雙方共同使用的 App 中向您付款。</li>
         </ul>
         留空任意欄位即可跳過該方式。您的帳號僅會私下分享給您所在群組的成員，方便他們一鍵向您付款——絕不會公開或與廣告商共享。
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何透過 Venmo、Cash App 或 PayPal 向他人付款？
+        如何透過 Venmo、Cash App、PayPal、Apple Cash、Zelle、LINE 或 WeChat 向他人付款？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         開啟群組 <span class="arrow">→</span> <strong>餘額</strong>分頁 <span class="arrow">→</span> 點選您所欠款項旁的<strong>付款</strong>按鈕 <span class="arrow">→</span> 選擇 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所選應用程式將開啟，並自動帶入金額與備註——在該應用程式中確認並傳送付款。隨後返回 Node Expense 並點選<strong>記錄付款</strong>以登記此筆結算，雙方即可將其標示為已確認。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">僅當收款人已註冊至少一個付款帳號時，<strong>付款</strong>按鈕才會顯示。金額絕不會自動轉帳——所有付款皆在第三方應用程式中完成。</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">僅當收款人已註冊至少一種收款方式時，<strong>付款</strong>按鈕才會顯示。金額絕不會自動轉帳——所有付款皆在第三方應用程式中完成。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1027,7 +1037,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-08-11 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-08-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1070,27 +1080,32 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何设置 Venmo、Cash App 或 PayPal.Me 以便一键结算？
+        如何设置 Venmo、Cash App、PayPal.Me、Apple Cash、Zelle、LINE 或 WeChat 以便一键结算？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        轻点<strong>设置</strong> <span class="arrow">→</span> 滚动至<strong>付款账号</strong>。只需输入用户名（无需 <code>@</code> 或 <code>$</code> 前缀）：
+        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>收款方式</strong>。各项服务只需输入识别信息（无需 <code>@</code> 或 <code>$</code> 前缀）：
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Venmo</strong> — 您的用户名（例如 <code>alice</code>）。仅限美国账户。</li>
           <li><strong>Cash App</strong> — 您的 $cashtag（例如 <code>bob</code>）。仅限美国账户。</li>
           <li><strong>PayPal.Me</strong> — 您的 PayPal.Me 链接名称（例如 <code>alice</code>）。全球可用。</li>
+          <li><strong>Apple Cash</strong> — 您的电话号码。仅限美国。点按会打开「信息」而非付款应用，由您在那里发送付款。</li>
+          <li><strong>Zelle</strong> — 您在银行登记的手机号或邮箱。仅限美国。</li>
+          <li><strong>LINE</strong> — 您的 LINE ID。成员在 LINE 上添加您为好友，并在支持 LINE Pay 的地区通过它向您付款。</li>
+          <li><strong>WeChat</strong> — 您的微信号。成员在微信上添加您为好友，并在支持微信支付的地区通过它向您付款。</li>
+          <li>后三项不会打开任何应用：成员会看到并复制这些信息，再在双方共同使用的 App 中向您付款。</li>
         </ul>
         留空任意字段即可跳过该方式。您的账号仅在您所在群组的成员之间私密共享，方便他们一键向您付款——绝不会公开或与广告商共享。
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何通过 Venmo、Cash App 或 PayPal 向他人付款？
+        如何通过 Venmo、Cash App、PayPal、Apple Cash、Zelle、LINE 或 WeChat 向他人付款？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         打开群组 <span class="arrow">→</span> <strong>余额</strong>标签页 <span class="arrow">→</span> 轻点您所欠款项旁的<strong>付款</strong>按钮 <span class="arrow">→</span> 选择 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所选应用会打开，并自动填入金额和备注——在该应用中确认并发送付款。随后返回 Node Expense 并轻点<strong>记录付款</strong>以登记此笔结算，双方即可将其标记为已确认。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">仅当收款人至少注册了一个付款账号时，<strong>付款</strong>按钮才会显示。金额绝不会自动转账——所有付款均在第三方应用中完成。</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">仅当收款人至少注册了一种收款方式时，<strong>付款</strong>按钮才会显示。金额绝不会自动转账——所有付款均在第三方应用中完成。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1381,7 +1396,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-08-11 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-08-18 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1424,27 +1439,32 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo、Cash App、PayPal.Me を設定してワンタップで精算するには？
+        Venmo、Cash App、PayPal.Me、Apple Cash、Zelle、LINE、WeChat を設定して精算するには？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>支払いハンドル</strong>までスクロール。ユーザー名のみを入力します（先頭の <code>@</code> や <code>$</code> は不要）：
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>受け取り方法</strong>。各サービスの識別情報のみを入力します（先頭の <code>@</code> や <code>$</code> は不要）：
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Venmo</strong> — ユーザー名（例：<code>alice</code>）。米国アカウントのみ対応。</li>
           <li><strong>Cash App</strong> — $cashtag（例：<code>bob</code>）。米国アカウントのみ対応。</li>
           <li><strong>PayPal.Me</strong> — PayPal.Me のリンク名（例：<code>alice</code>）。全世界で利用可能。</li>
+          <li><strong>Apple Cash</strong> — 電話番号。米国のみ対応。タップすると決済アプリではなくメッセージが開き、そこでご自身が送金します。</li>
+          <li><strong>Zelle</strong> — 銀行に登録している電話番号またはメールアドレス。米国のみ対応。</li>
+          <li><strong>LINE</strong> — あなたの LINE ID。メンバーは LINE で友だち追加し、LINE Pay が使える地域ではそこから送金します。</li>
+          <li><strong>WeChat</strong> — あなたの WeChat ID。メンバーは WeChat で友だち追加し、WeChat Pay が使える地域ではそこから送金します。</li>
+          <li>この 3 つは何も開きません。メンバーは情報を確認してコピーし、お互いが使っているアプリで送金します。</li>
         </ul>
         いずれかの欄を空欄にすると、その方法はスキップされます。入力したハンドルは、ご所属のグループのメンバーにのみ非公開で共有され、ワンタップで送金を受け取れます。公開されたり広告主と共有されたりすることはありません。
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        Venmo、Cash App、PayPal で相手に送金するには？
+        Venmo、Cash App、PayPal、Apple Cash、Zelle、LINE、WeChat で相手に送金するには？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         グループを開く <span class="arrow">→</span> <strong>残高</strong>タブ <span class="arrow">→</span> 支払うべき債務の横にある<strong>支払う</strong>ボタンをタップ <span class="arrow">→</span> <strong>Venmo</strong>、<strong>Cash App</strong>、または <strong>PayPal.Me</strong> を選択します。選択したアプリが金額とメモが自動入力された状態で開くので、そのアプリ内で確認し送金を実行してください。その後 Node Expense に戻り<strong>支払いを記録</strong>をタップして精算を記録すると、双方が確認済みとしてマークできます。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>支払う</strong>ボタンは、受取人が少なくとも 1 つの支払いハンドルを登録している場合にのみ表示されます。金額が自動で送金されることはなく、すべての支払いは第三者アプリ内で完結します。</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>支払う</strong>ボタンは、受取人が少なくとも 1 つの受け取り方法を登録している場合にのみ表示されます。金額が自動で送金されることはなく、すべての支払いは第三者アプリ内で完結します。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1735,7 +1755,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-08-11 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1778,27 +1798,32 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        Wie richte ich Venmo, Cash App oder PayPal.Me für die Abrechnung ein?
+        Wie richte ich Venmo, Cash App, PayPal.Me, Apple Cash, Zelle, LINE oder WeChat für die Abrechnung ein?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> scrollen Sie zu <strong>Zahlungskonten</strong>. Geben Sie nur Ihren Benutzernamen ein (ohne führendes <code>@</code> oder <code>$</code>):
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Zahlungsmethoden</strong>. Geben Sie für jeden Dienst nur die Kennung ein (ohne führendes <code>@</code> oder <code>$</code>):
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Venmo</strong> — Ihr Benutzername (z. B. <code>alice</code>). Nur US-Konten.</li>
           <li><strong>Cash App</strong> — Ihr $Cashtag (z. B. <code>bob</code>). Nur US-Konten.</li>
           <li><strong>PayPal.Me</strong> — Ihr PayPal.Me-Linkname (z. B. <code>alice</code>). Weltweit verfügbar.</li>
+          <li><strong>Apple Cash</strong> — Ihre Telefonnummer. Nur USA. Beim Tippen öffnet sich Nachrichten statt einer Zahlungs-App, und Sie senden die Zahlung dort.</li>
+          <li><strong>Zelle</strong> — die Telefonnummer oder E-Mail, die bei Ihrer Bank hinterlegt ist. Nur USA.</li>
+          <li><strong>LINE</strong> — Ihre LINE-ID. Mitglieder fügen Sie in LINE hinzu und bezahlen Sie dort mit LINE Pay, wo es verfügbar ist.</li>
+          <li><strong>WeChat</strong> — Ihre WeChat-ID. Mitglieder fügen Sie in WeChat hinzu und bezahlen Sie dort mit WeChat Pay, wo es verfügbar ist.</li>
+          <li>Die letzten drei öffnen nichts: Mitglieder sehen die Angaben, kopieren sie und bezahlen Sie in der App, die Sie beide nutzen.</li>
         </ul>
         Lassen Sie ein Feld leer, um diese Methode zu überspringen. Ihre Konten werden nur privat mit Mitgliedern Ihrer Gruppen geteilt, damit diese Sie mit einem Tipp bezahlen können – sie werden niemals öffentlich oder mit Werbepartnern geteilt.
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        Wie bezahle ich jemanden über Venmo, Cash App oder PayPal zurück?
+        Wie bezahle ich jemanden über Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE oder WeChat zurück?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         Öffnen Sie die Gruppe <span class="arrow">→</span> Tab <strong>Salden</strong> <span class="arrow">→</span> tippen Sie auf die Schaltfläche <strong>Bezahlen</strong> neben einer Schuld <span class="arrow">→</span> wählen Sie <strong>Venmo</strong>, <strong>Cash App</strong> oder <strong>PayPal.Me</strong>. Die ausgewählte App öffnet sich mit vorausgefülltem Betrag und Hinweis – bestätigen und senden Sie die Zahlung in dieser App. Kehren Sie dann zu Node Expense zurück und tippen Sie auf <strong>Zahlung erfassen</strong>, um die Abrechnung zu protokollieren, sodass beide Seiten sie als bestätigt markieren können.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Die Schaltfläche <strong>Bezahlen</strong> erscheint nur, wenn der Empfänger mindestens ein Zahlungskonto registriert hat. Beträge werden niemals automatisch überwiesen – alle Zahlungen finden in der Drittanbieter-App statt.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Die Schaltfläche <strong>Bezahlen</strong> erscheint nur, wenn der Empfänger mindestens eine Zahlungsmethode registriert hat. Beträge werden niemals automatisch überwiesen – alle Zahlungen finden in der Drittanbieter-App statt.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2099,7 +2124,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-08-11 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2142,27 +2167,32 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        ¿Cómo configuro Venmo, Cash App o PayPal.Me para liquidar cuentas?
+        ¿Cómo configuro Venmo, Cash App, PayPal.Me, Apple Cash, Zelle, LINE o WeChat para liquidar cuentas?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Toque <strong>Ajustes</strong> <span class="arrow">→</span> desplácese hasta <strong>Cuentas de pago</strong>. Ingrese solo su nombre de usuario (sin <code>@</code> ni <code>$</code> al inicio):
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Métodos de pago</strong>. Ingrese solo el identificador de cada servicio (sin <code>@</code> ni <code>$</code> al inicio):
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Venmo</strong> — su nombre de usuario (p. ej. <code>alice</code>). Solo cuentas de EE. UU.</li>
           <li><strong>Cash App</strong> — su $cashtag (p. ej. <code>bob</code>). Solo cuentas de EE. UU.</li>
           <li><strong>PayPal.Me</strong> — el nombre de su enlace PayPal.Me (p. ej. <code>alice</code>). Disponible globalmente.</li>
+          <li><strong>Apple Cash</strong> — su número de teléfono. Solo EE. UU. Al tocar se abre Mensajes en lugar de una app de pago, y usted envía el pago allí.</li>
+          <li><strong>Zelle</strong> — el teléfono o correo registrado en su banco. Solo EE. UU.</li>
+          <li><strong>LINE</strong> — su ID de LINE. Los miembros le agregan en LINE y le pagan allí con LINE Pay, donde esté disponible.</li>
+          <li><strong>WeChat</strong> — su ID de WeChat. Los miembros le agregan en WeChat y le pagan allí con WeChat Pay, donde esté disponible.</li>
+          <li>Los tres últimos no abren nada: los miembros ven los datos y los copian, y luego le pagan en la app que ambos usan.</li>
         </ul>
         Deje cualquier campo en blanco para omitir ese método. Sus cuentas se comparten de forma privada solo con los miembros de sus grupos para que puedan pagarle con un toque — nunca se comparten públicamente ni con anunciantes.
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        ¿Cómo le pago a alguien con Venmo, Cash App o PayPal?
+        ¿Cómo le pago a alguien con Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE o WeChat?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         Abra el grupo <span class="arrow">→</span> pestaña <strong>Saldos</strong> <span class="arrow">→</span> toque el botón <strong>Pagar</strong> junto a cualquier deuda que deba <span class="arrow">→</span> elija <strong>Venmo</strong>, <strong>Cash App</strong> o <strong>PayPal.Me</strong>. La aplicación seleccionada se abre con el monto y la nota ya completados — confirme y envíe el pago dentro de esa aplicación. Luego regrese a Node Expense y toque <strong>Registrar un pago</strong> para registrar la liquidación y que ambas partes puedan marcarla como confirmada.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">El botón <strong>Pagar</strong> solo aparece cuando el destinatario ha registrado al menos una cuenta de pago. Los montos nunca se transfieren automáticamente — todos los pagos ocurren dentro de la aplicación de terceros.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">El botón <strong>Pagar</strong> solo aparece cuando el destinatario ha registrado al menos un método de pago. Los montos nunca se transfieren automáticamente — todos los pagos ocurren dentro de la aplicación de terceros.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2463,7 +2493,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-08-11 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2506,27 +2536,32 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        Comment configurer Venmo, Cash App ou PayPal.Me pour régler les dettes ?
+        Comment configurer Venmo, Cash App, PayPal.Me, Apple Cash, Zelle, LINE ou WeChat pour régler les dettes ?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> faites défiler jusqu'à <strong>Coordonnées de paiement</strong>. Saisissez uniquement votre nom d'utilisateur (sans <code>@</code> ni <code>$</code> au début) :
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Méthodes de paiement</strong>. Saisissez uniquement l'identifiant de chaque service (sans <code>@</code> ni <code>$</code> au début) :
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Venmo</strong> — votre nom d'utilisateur (ex. <code>alice</code>). Comptes américains uniquement.</li>
           <li><strong>Cash App</strong> — votre $cashtag (ex. <code>bob</code>). Comptes américains uniquement.</li>
           <li><strong>PayPal.Me</strong> — le nom de votre lien PayPal.Me (ex. <code>alice</code>). Disponible dans le monde entier.</li>
+          <li><strong>Apple Cash</strong> — votre numéro de téléphone. États-Unis uniquement. Toucher ouvre Messages plutôt qu'une application de paiement, et vous y envoyez le paiement.</li>
+          <li><strong>Zelle</strong> — le téléphone ou l'e-mail enregistré auprès de votre banque. États-Unis uniquement.</li>
+          <li><strong>LINE</strong> — votre identifiant LINE. Les membres vous ajoutent sur LINE et vous paient là-bas avec LINE Pay, là où il est disponible.</li>
+          <li><strong>WeChat</strong> — votre identifiant WeChat. Les membres vous ajoutent sur WeChat et vous paient là-bas avec WeChat Pay, là où il est disponible.</li>
+          <li>Les trois derniers n'ouvrent rien : les membres voient les informations, les copient, puis vous paient dans l'application que vous utilisez tous les deux.</li>
         </ul>
         Laissez un champ vide pour ignorer cette méthode. Vos identifiants sont partagés de façon privée uniquement avec les membres de vos groupes pour qu'ils puissent vous rembourser en un seul geste — ils ne sont jamais partagés publiquement ni avec des annonceurs.
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        Comment rembourser quelqu'un via Venmo, Cash App ou PayPal ?
+        Comment rembourser quelqu'un via Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE ou WeChat ?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         Ouvrez le groupe <span class="arrow">→</span> onglet <strong>Soldes</strong> <span class="arrow">→</span> appuyez sur le bouton <strong>Payer</strong> à côté de la dette concernée <span class="arrow">→</span> choisissez <strong>Venmo</strong>, <strong>Cash App</strong> ou <strong>PayPal.Me</strong>. L'application sélectionnée s'ouvre avec le montant et la note préremplis — confirmez et envoyez le paiement dans cette application. Revenez ensuite dans Node Expense et appuyez sur <strong>Enregistrer un paiement</strong> pour consigner le règlement afin que les deux parties puissent le marquer comme confirmé.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Le bouton <strong>Payer</strong> n'apparaît que lorsque le destinataire a enregistré au moins une coordonnée de paiement. Les montants ne sont jamais transférés automatiquement — tous les paiements s'effectuent dans l'application tierce.</div>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Le bouton <strong>Payer</strong> n'apparaît que lorsque le destinataire a enregistré au moins une méthode de paiement. Les montants ne sont jamais transférés automatiquement — tous les paiements s'effectuent dans l'application tierce.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2828,7 +2863,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-08-11 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2855,11 +2890,11 @@
       <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭 <span class="arrow">→</span> <strong>결제 기록</strong>을 탭하세요.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">정산을 위해 Venmo, Cash App 또는 PayPal.Me를 어떻게 설정하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer"><strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>결제 계정</strong>으로 스크롤하세요. 사용자명만 입력하세요 (<code>@</code> 또는 <code>$</code> 없이). Venmo / Cash App은 미국 계정만 가능, PayPal.Me는 전 세계 사용 가능.</div>
+      <button class="faq-question" onclick="toggleFaq(this)">정산을 위해 Venmo, Cash App, PayPal.Me, Apple Cash, Zelle, LINE, WeChat을 어떻게 설정하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>설정</strong>을 탭하세요 <span class="arrow">→</span> <strong>결제 수단</strong>으로 스크롤하세요. 사용자명만 입력하세요 (<code>@</code> 또는 <code>$</code> 없이). Venmo / Cash App은 미국 계정만 가능, PayPal.Me는 전 세계 사용 가능. Apple Cash는 전화번호를 입력하며 미국에서만 사용할 수 있고, 누르면 결제 앱이 아닌 메시지가 열려 거기서 직접 송금합니다. Zelle(은행에 등록된 전화번호 또는 이메일, 미국 전용), LINE(LINE ID), WeChat(WeChat ID)은 아무것도 열지 않습니다. 멤버가 정보를 보고 복사한 뒤 서로 사용하는 앱에서 송금합니다.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">Venmo, Cash App 또는 PayPal로 상대방에게 송금하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="faq-question" onclick="toggleFaq(this)">Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, WeChat으로 상대방에게 송금하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>잔액</strong> 탭 <span class="arrow">→</span> <strong>결제</strong> 버튼을 탭하세요 <span class="arrow">→</span> 결제 앱을 선택하세요. 앱에서 결제 후 Node Expense로 돌아와 <strong>결제 기록</strong>을 탭하세요.</div>
     </div>
     <div class="faq-item">
