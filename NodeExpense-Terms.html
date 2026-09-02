@@ -1495,7 +1495,19 @@
   }
 
   // Auto-detect browser language on load
-  const browserLang = navigator.language || navigator.userLanguage || 'en';
+  // An explicit `?lang=` from the app wins over browser detection. Safari
+  // reports only the SYSTEM language in navigator.language, so a user who set a
+  // per-app language (iOS Settings -> Node Expense -> Language) would otherwise
+  // be handed a document in a language they did not pick. An absent or
+  // unrecognised value leaves browserLang set, so the detection below runs
+  // exactly as it always has, and English stays the final fallback.
+  const requestedLang = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+  const requestedTab = requestedLang
+    ? Array.from(document.querySelectorAll('.lang-tab')).find(tab => (tab.getAttribute('onclick') || '').includes(`'${requestedLang}'`))
+    : null;
+  if (requestedTab) { requestedTab.click(); }
+
+  const browserLang = requestedTab ? '' : (navigator.language || navigator.userLanguage || 'en');
   if (browserLang.toLowerCase().includes('zh-hant') || browserLang.toLowerCase().includes('zh-tw') || browserLang.toLowerCase().includes('zh-hk')) {
     document.querySelector('[onclick="switchLang(\'zh-hant\')"]').click();
   } else if (browserLang.toLowerCase().includes('zh')) {
