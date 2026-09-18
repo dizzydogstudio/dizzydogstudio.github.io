@@ -323,7 +323,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -464,7 +464,7 @@
 
   <h3>9.3 Encryption &amp; Backups</h3>
   <ul>
-    <li>Users with feature access may enable AES-256-GCM encryption for <strong>Data Retention backups</strong>. This setting applies only to the backup written before a retention clean-up; Data Migration exports are not encrypted (see section 10)</li>
+    <li>Users with feature access may enable AES-256-GCM encryption for backup files. The setting covers the backup written before a retention clean-up, the export offered before an inactive group is pruned, and the JSON file produced by Data Migration; CSV and PDF exports are never encrypted (see section 10)</li>
     <li>You control how long your expense records are retained (all time or a limited number of years). <strong>Retention applies only to your own personal expenses.</strong> It never deletes group expenses, nor expenses kept from a group that was deleted or that you have left; those remain on your device with their original split intact</li>
     <li>Backup files are exported to a location you choose (iCloud Drive, On My iPhone, or other iOS Files locations)</li>
     <li>Backup encryption keys are stored exclusively in your iCloud Keychain, never transmitted to our servers, and are not accessible to us as developers</li>
@@ -472,7 +472,7 @@
   <p><strong>Backup scope:</strong> Backups and exports cover the data held on your device: your personal expense records, and your device's local copy of the group expenses and group details you have access to. Nothing is fetched from Firebase Firestore at the moment you export, so anything that has not yet synced to your device is not in the file. Exporting does not alter the copy in Firestore, which remains accessible as long as the group exists and has not been deleted.</p>
 
   <h2><span class="section-number">10</span>Data Migration</h2>
-  <p>Users with feature access (PRO subscription or active free trial) may export their data as JSON, CSV, or PDF, and import data in JSON format. Node Expense does not have access to your exported files. Exported files are saved to a location you choose. Note that exports include locally stored personal expense records and cached group data; they do not pull live data directly from Firebase Firestore. <strong>Data Migration exports are not encrypted.</strong> The Encrypt Backup Files setting in Data Retention does not apply to them — JSON, CSV and PDF exports are written in plain, readable form, so store and share them accordingly.</p>
+  <p>Users with feature access (PRO subscription or active free trial) may export their data as JSON, CSV, or PDF, and import data in JSON format. Node Expense does not have access to your exported files. Exported files are saved to a location you choose. Note that exports include locally stored personal expense records and cached group data; they do not pull live data directly from Firebase Firestore. <strong>JSON exports follow the Encrypt Backup Files setting in Data Retention.</strong> When that setting is on, the JSON file is encrypted with AES-256-GCM and can be read back only by importing it into Node Expense on a device with access to your iCloud Keychain. <strong>CSV and PDF exports are never encrypted</strong> and are always written in plain, readable form, so store and share them accordingly.</p>
 
   <h2><span class="section-number">11</span>Data Deletion</h2>
   <ul>
@@ -515,7 +515,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-08-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-09-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -656,7 +656,7 @@
 
   <h3>9.3 加密與備份</h3>
   <ul>
-    <li>具有功能存取權限的使用者可為<strong>「資料保留」備份</strong>啟用 AES-256-GCM 加密。此設定僅適用於清理前所產生的備份檔案；「資料遷移」的匯出檔案不會加密（請參閱第 10 節）</li>
+    <li>具有功能存取權限的使用者可為備份檔案啟用 AES-256-GCM 加密。此設定適用於清理前所產生的備份檔案、清除閒置群組前所提供的匯出檔案，以及「資料遷移」所產生的 JSON 檔案；CSV 與 PDF 匯出檔案一律不會加密（請參閱第 10 節）</li>
     <li>您可控制費用記錄的保留時間（全部時間或指定年數）。<strong>保留期限僅適用於您個人的費用。</strong>保留期限絕不會刪除群組費用，也不會刪除您從已刪除或已退出的群組中保留下來的費用；這些記錄會連同原本的分攤內容一併留在您的裝置上</li>
     <li>備份檔案會匯出至您所選擇的位置（iCloud 雲碟、本機 iPhone 或其他 iOS 檔案位置）</li>
     <li>備份加密金鑰僅儲存於您的 iCloud 鑰匙圈中，絕不會傳輸至我們的伺服器，也不會被我們開發者存取</li>
@@ -664,7 +664,7 @@
   <p><strong>備份範圍：</strong>備份與匯出涵蓋您裝置上所儲存的資料：您的個人費用記錄，以及您裝置本機所保存的群組費用與群組資訊副本。匯出當下不會向 Firebase Firestore 擷取任何資料，因此尚未同步至您裝置的內容不會出現在檔案中。匯出不會變動 Firestore 上的資料，只要群組存在且未被刪除，即可繼續透過 Firestore 存取。</p>
 
   <h2><span class="section-number">10</span>資料遷移</h2>
-  <p>具有功能存取權限的使用者（PRO 訂閱或有效免費試用）可將資料匯出為 JSON、CSV 或 PDF 格式，並支援以 JSON 格式匯入資料。Node Expense 無法存取您的匯出檔案。匯出檔案會儲存至您所選擇的位置。請注意，匯出內容包含本機儲存的個人費用記錄及已快取的群組資料；並非直接從 Firebase Firestore 擷取即時資料。<strong>「資料遷移」的匯出檔案不會加密。</strong>「資料保留」中的「加密備份檔案」設定並不適用於這些檔案，JSON、CSV 與 PDF 匯出檔案皆以未加密的可讀形式寫入，請您據此妥善保存與分享。</p>
+  <p>具有功能存取權限的使用者（PRO 訂閱或有效免費試用）可將資料匯出為 JSON、CSV 或 PDF 格式，並支援以 JSON 格式匯入資料。Node Expense 無法存取您的匯出檔案。匯出檔案會儲存至您所選擇的位置。請注意，匯出內容包含本機儲存的個人費用記錄及已快取的群組資料；並非直接從 Firebase Firestore 擷取即時資料。<strong>JSON 匯出檔案會依循「資料保留」中的「加密備份檔案」設定。</strong>該設定開啟時，JSON 檔案會以 AES-256-GCM 加密，僅能在可存取您 iCloud 鑰匙圈的裝置上匯入 Node Expense 才能讀取。<strong>CSV 與 PDF 匯出檔案一律不會加密</strong>，皆以可讀形式寫入，請您據此妥善保存與分享。</p>
 
   <h2><span class="section-number">11</span>資料刪除</h2>
   <ul>
@@ -707,7 +707,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-08-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-09-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -848,7 +848,7 @@
 
   <h3>9.3 加密与备份</h3>
   <ul>
-    <li>拥有功能访问权限的用户可以为<strong>“数据保留”备份</strong>启用 AES-256-GCM 加密。该设置仅适用于清理前生成的备份文件；“数据迁移”的导出文件不会加密（请参阅第 10 节）</li>
+    <li>拥有功能访问权限的用户可以为备份文件启用 AES-256-GCM 加密。该设置适用于清理前生成的备份文件、清除闲置群组前提供的导出文件，以及“数据迁移”生成的 JSON 文件；CSV 和 PDF 导出文件一律不会加密（请参阅第 10 节）</li>
     <li>您可以控制支出记录的保留时长（永久或有限年限）。<strong>保留期限仅适用于您个人的支出。</strong>保留期限绝不会删除群组支出，也不会删除您从已删除或已退出的群组中保留下来的支出；这些记录会连同原本的分摊内容一并留在您的设备上</li>
     <li>备份文件会导出到您选择的位置（iCloud 云盘、我的 iPhone 或其他 iOS 文件位置）</li>
     <li>备份加密密钥仅存储在您的 iCloud 钥匙串中，绝不会传输到我们的服务器，开发者也无法访问</li>
@@ -856,7 +856,7 @@
   <p><strong>备份范围：</strong>备份与导出涵盖您设备上存储的数据：您的个人支出记录，以及您设备本地保存的群组支出和群组信息副本。导出时不会从 Firebase Firestore 获取任何数据，因此尚未同步到您设备的内容不会出现在文件中。导出不会改动 Firestore 上的数据，只要群组存在且未被删除，即可继续通过 Firestore 访问。</p>
 
   <h2><span class="section-number">10</span>数据迁移</h2>
-  <p>拥有功能访问权限的用户（专业版订阅或处于有效免费试用期）可将数据导出为 JSON、CSV 或 PDF 格式，并支持以 JSON 格式导入数据。Node Expense 无法访问您导出的文件。导出文件将保存到您选择的位置。请注意，导出内容包含本地存储的个人支出记录及已缓存的群组数据；并非直接从 Firebase Firestore 获取即时数据。<strong>“数据迁移”的导出文件不会加密。</strong>“数据保留”中的“加密备份文件”设置并不适用于这些文件，JSON、CSV 和 PDF 导出文件均以未加密的可读形式写入，请您据此妥善保存与分享。</p>
+  <p>拥有功能访问权限的用户（专业版订阅或处于有效免费试用期）可将数据导出为 JSON、CSV 或 PDF 格式，并支持以 JSON 格式导入数据。Node Expense 无法访问您导出的文件。导出文件将保存到您选择的位置。请注意，导出内容包含本地存储的个人支出记录及已缓存的群组数据；并非直接从 Firebase Firestore 获取即时数据。<strong>JSON 导出文件会遵循“数据保留”中的“加密备份文件”设置。</strong>该设置开启时，JSON 文件会以 AES-256-GCM 加密，只能在可访问您 iCloud 钥匙串的设备上导入 Node Expense 才能读取。<strong>CSV 和 PDF 导出文件一律不会加密</strong>，均以可读形式写入，请您据此妥善保存与分享。</p>
 
   <h2><span class="section-number">11</span>数据删除</h2>
   <ul>
@@ -899,7 +899,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-08-18 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-09-18 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -1040,7 +1040,7 @@
 
   <h3>9.3 暗号化とバックアップ</h3>
   <ul>
-    <li>機能へのアクセス権を持つユーザーは、<strong>「データ保存期間」のバックアップ</strong>に AES-256-GCM 暗号化を適用できます。この設定が適用されるのは、削除前に作成されるバックアップファイルのみです。「データの移行」によるエクスポートファイルは暗号化されません（第 10 条をご参照ください）</li>
+    <li>機能へのアクセス権を持つユーザーは、バックアップファイルに AES-256-GCM 暗号化を適用できます。この設定は、削除前に作成されるバックアップファイル、使用されていないグループの整理前に提供されるエクスポートファイル、および「データの移行」で作成される JSON ファイルに適用されます。CSV と PDF のエクスポートファイルは暗号化されません（第 10 条をご参照ください）</li>
     <li>支出記録の保持期間を制御できます（全期間または指定した年数）。<strong>保存期間が適用されるのは、お客様ご自身の個人支出のみです。</strong>グループの支出が保存期間によって削除されることはありません。削除されたグループや退出したグループから引き継いだ支出も同様で、これらは元の分担内容とともにお客様のデバイスに残ります</li>
     <li>バックアップファイルはお客様が選択した場所（iCloud Drive、この iPhone 上、またはその他の iOS ファイルの場所）にエクスポートされます</li>
     <li>バックアップ暗号化キーはお客様の iCloud キーチェーンにのみ保存され、当社のサーバーに送信されることはなく、開発者もアクセスできません</li>
@@ -1048,7 +1048,7 @@
   <p><strong>バックアップ対象範囲：</strong>バックアップおよびエクスポートの対象は、お客様のデバイスに保存されているデータです。すなわち、個人支出記録と、お客様がアクセスできるグループの支出およびグループ情報について、デバイスが保持しているローカルの複製が含まれます。エクスポートの時点で Firebase Firestore からデータを取得することはないため、お客様のデバイスにまだ同期されていない内容はファイルに含まれません。エクスポートを行っても Firestore 上のデータは変更されず、グループが存在し削除されていない限り、引き続き Firestore を通じてアクセスできます。</p>
 
   <h2><span class="section-number">10</span>データの移行</h2>
-  <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。エクスポートにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore からライブデータを直接取得するものではありません。<strong>「データの移行」によるエクスポートファイルは暗号化されません。</strong>「データ保存期間」の「バックアップファイルを暗号化」の設定はこれらのファイルには適用されず、JSON、CSV、PDF のいずれも暗号化されない可読の形式で書き出されます。保管や共有の際はご留意ください。</p>
+  <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。エクスポートにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore からライブデータを直接取得するものではありません。<strong>JSON のエクスポートファイルは、「データ保存期間」の「バックアップファイルを暗号化」の設定に従います。</strong>この設定がオンの場合、JSON ファイルは AES-256-GCM で暗号化され、お客様の iCloud キーチェーンにアクセスできるデバイスで Node Expense にインポートした場合にのみ読み取れます。<strong>CSV と PDF のエクスポートファイルは暗号化されず</strong>、常に可読の形式で書き出されます。保管や共有の際はご留意ください。</p>
 
   <h2><span class="section-number">11</span>データの削除</h2>
   <ul>
@@ -1091,7 +1091,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1232,7 +1232,7 @@
 
   <h3>9.3 Verschlüsselung &amp; Backups</h3>
   <ul>
-    <li>Benutzer mit Funktionszugang können die AES-256-GCM-Verschlüsselung für <strong>Backups der Datenspeicherung</strong> aktivieren. Diese Einstellung gilt ausschließlich für die Backup-Datei, die vor einer Bereinigung erstellt wird; Exporte der Datenmigration werden nicht verschlüsselt (siehe Abschnitt 10)</li>
+    <li>Benutzer mit Funktionszugang können die AES-256-GCM-Verschlüsselung für Backup-Dateien aktivieren. Die Einstellung gilt für die Backup-Datei, die vor einer Bereinigung erstellt wird, für den Export, der vor dem Entfernen einer inaktiven Gruppe angeboten wird, und für die JSON-Datei der Datenmigration; CSV- und PDF-Exporte werden nie verschlüsselt (siehe Abschnitt 10)</li>
     <li>Sie steuern, wie lange Ausgabeneinträge aufbewahrt werden (dauerhaft oder eine begrenzte Anzahl von Jahren). <strong>Die Aufbewahrungsfrist gilt ausschließlich für Ihre eigenen persönlichen Ausgaben.</strong> Gruppenausgaben werden dadurch niemals gelöscht, ebenso wenig Ausgaben aus einer gelöschten oder von Ihnen verlassenen Gruppe; diese verbleiben mit ihrer ursprünglichen Aufteilung auf Ihrem Gerät</li>
     <li>Backup-Dateien werden an einen von Ihnen gewählten Ort exportiert (iCloud Drive, Auf diesem iPhone oder andere iOS-Dateispeicherorte)</li>
     <li>Backup-Verschlüsselungsschlüssel werden ausschließlich in Ihrem iCloud-Schlüsselbund gespeichert, niemals an unsere Server übertragen und sind für uns als Entwickler nicht zugänglich</li>
@@ -1240,7 +1240,7 @@
   <p><strong>Backup-Umfang:</strong> Backups und Exporte umfassen die auf Ihrem Gerät gespeicherten Daten: Ihre persönlichen Ausgabeneinträge sowie die lokale Kopie der Gruppenausgaben und Gruppendetails, auf die Sie Zugriff haben. Beim Export werden keine Daten aus Firebase Firestore abgerufen; was noch nicht mit Ihrem Gerät synchronisiert wurde, ist daher nicht in der Datei enthalten. Ein Export verändert die in Firestore gespeicherte Kopie nicht — sie bleibt zugänglich, solange die Gruppe existiert und nicht gelöscht wurde.</p>
 
   <h2><span class="section-number">10</span>Datenmigration</h2>
-  <p>Benutzer mit Funktionszugang (PRO-Abonnement oder aktive kostenlose Testversion) können ihre Daten als JSON, CSV oder PDF exportieren und Daten im JSON-Format importieren. Node Expense hat keinen Zugriff auf Ihre exportierten Dateien. Exportierte Dateien werden an einem von Ihnen gewählten Ort gespeichert. Exporte enthalten lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Daten werden nicht direkt aus Firebase Firestore abgerufen. <strong>Exporte der Datenmigration werden nicht verschlüsselt.</strong> Die Einstellung „Backup-Dateien verschlüsseln“ in der Datenspeicherung gilt nicht für sie — JSON-, CSV- und PDF-Exporte werden in unverschlüsselter, lesbarer Form geschrieben. Bitte bewahren Sie sie entsprechend auf und geben Sie sie entsprechend weiter.</p>
+  <p>Benutzer mit Funktionszugang (PRO-Abonnement oder aktive kostenlose Testversion) können ihre Daten als JSON, CSV oder PDF exportieren und Daten im JSON-Format importieren. Node Expense hat keinen Zugriff auf Ihre exportierten Dateien. Exportierte Dateien werden an einem von Ihnen gewählten Ort gespeichert. Exporte enthalten lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Daten werden nicht direkt aus Firebase Firestore abgerufen. <strong>JSON-Exporte folgen der Einstellung „Backup-Dateien verschlüsseln“ in der Datenspeicherung.</strong> Ist sie aktiviert, wird die JSON-Datei mit AES-256-GCM verschlüsselt und lässt sich nur lesen, indem Sie sie auf einem Gerät mit Zugriff auf Ihren iCloud-Schlüsselbund wieder in Node Expense importieren. <strong>CSV- und PDF-Exporte werden nie verschlüsselt</strong> und immer in lesbarer Form geschrieben. Bitte bewahren Sie sie entsprechend auf und geben Sie sie entsprechend weiter.</p>
 
   <h2><span class="section-number">11</span>Datenlöschung</h2>
   <ul>
@@ -1283,7 +1283,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1424,7 +1424,7 @@
 
   <h3>9.3 Cifrado &amp; copias de seguridad</h3>
   <ul>
-    <li>Los usuarios con acceso a funciones pueden habilitar el cifrado AES-256-GCM para las <strong>copias de seguridad de Retención de datos</strong>. Este ajuste se aplica únicamente al archivo de copia de seguridad que se crea antes de una limpieza; las exportaciones de Migración de datos no se cifran (consulte la sección 10)</li>
+    <li>Los usuarios con acceso a funciones pueden habilitar el cifrado AES-256-GCM para los archivos de copia de seguridad. El ajuste se aplica al archivo que se crea antes de una limpieza, a la exportación que se ofrece antes de eliminar un grupo inactivo y al archivo JSON que genera Migración de datos; las exportaciones CSV y PDF nunca se cifran (consulte la sección 10)</li>
     <li>Usted controla durante cuánto tiempo se conservan los registros de gastos (siempre o un número limitado de años). <strong>La retención se aplica únicamente a sus propios gastos personales.</strong> Nunca elimina los gastos de grupo, ni los gastos conservados de un grupo que se haya eliminado o del que usted haya salido; estos permanecen en su dispositivo con su división original intacta</li>
     <li>Los archivos de copia de seguridad se exportan a una ubicación de su elección (iCloud Drive, En este iPhone u otras ubicaciones de archivos de iOS)</li>
     <li>Las claves de cifrado de las copias de seguridad se almacenan exclusivamente en su llavero de iCloud, nunca se transmiten a nuestros servidores y no son accesibles para nosotros como desarrolladores</li>
@@ -1432,7 +1432,7 @@
   <p><strong>Alcance de las copias de seguridad:</strong> Las copias de seguridad y exportaciones abarcan los datos guardados en su dispositivo: sus registros de gastos personales y la copia local que su dispositivo conserva de los gastos de grupo y de los datos de los grupos a los que tiene acceso. En el momento de exportar no se obtiene nada de Firebase Firestore, por lo que aquello que aún no se haya sincronizado con su dispositivo no estará en el archivo. Exportar no modifica la copia almacenada en Firestore, que permanece accesible mientras el grupo exista y no haya sido eliminado.</p>
 
   <h2><span class="section-number">10</span>Migración de datos</h2>
-  <p>Los usuarios con acceso a funciones (suscripción PRO o prueba gratuita activa) pueden exportar sus datos en formato JSON, CSV o PDF, e importar datos en formato JSON. Node Expense no tiene acceso a sus archivos exportados. Los archivos exportados se guardan en una ubicación de su elección. Las exportaciones incluyen registros de gastos personales almacenados localmente y datos de grupo en caché; no se obtienen datos en tiempo real directamente de Firebase Firestore. <strong>Las exportaciones de Migración de datos no se cifran.</strong> El ajuste «Cifrar archivos de copia de seguridad» de Retención de datos no se les aplica: los archivos JSON, CSV y PDF se escriben sin cifrar, en formato legible, por lo que le recomendamos guardarlos y compartirlos en consecuencia.</p>
+  <p>Los usuarios con acceso a funciones (suscripción PRO o prueba gratuita activa) pueden exportar sus datos en formato JSON, CSV o PDF, e importar datos en formato JSON. Node Expense no tiene acceso a sus archivos exportados. Los archivos exportados se guardan en una ubicación de su elección. Las exportaciones incluyen registros de gastos personales almacenados localmente y datos de grupo en caché; no se obtienen datos en tiempo real directamente de Firebase Firestore. <strong>Las exportaciones JSON siguen el ajuste «Cifrar archivos de copia de seguridad» de Retención de datos.</strong> Cuando está activado, el archivo JSON se cifra con AES-256-GCM y solo puede leerse importándolo de nuevo en Node Expense desde un dispositivo con acceso a su llavero de iCloud. <strong>Las exportaciones CSV y PDF nunca se cifran</strong> y siempre se escriben en formato legible, por lo que le recomendamos guardarlas y compartirlas en consecuencia.</p>
 
   <h2><span class="section-number">11</span>Eliminación de datos</h2>
   <ul>
@@ -1475,7 +1475,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-08-18 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1616,7 +1616,7 @@
 
   <h3>9.3 Chiffrement &amp; sauvegardes</h3>
   <ul>
-    <li>Les utilisateurs ayant accès aux fonctionnalités peuvent activer le chiffrement AES-256-GCM pour les <strong>sauvegardes de la Rétention des données</strong>. Ce réglage ne s'applique qu'au fichier de sauvegarde créé avant un nettoyage ; les exportations de la Migration des données ne sont pas chiffrées (voir la section 10)</li>
+    <li>Les utilisateurs ayant accès aux fonctionnalités peuvent activer le chiffrement AES-256-GCM pour les fichiers de sauvegarde. Ce réglage s'applique au fichier de sauvegarde créé avant un nettoyage, à l'exportation proposée avant la suppression d'un groupe inactif et au fichier JSON produit par la Migration des données ; les exportations CSV et PDF ne sont jamais chiffrées (voir la section 10)</li>
     <li>Vous contrôlez la durée de conservation des enregistrements de dépenses (toujours ou un nombre limité d'années). <strong>La conservation ne s'applique qu'à vos propres dépenses personnelles.</strong> Elle ne supprime jamais les dépenses de groupe, ni les dépenses conservées d'un groupe supprimé ou que vous avez quitté ; celles-ci restent sur votre appareil avec leur répartition d'origine</li>
     <li>Les fichiers de sauvegarde sont exportés vers un emplacement de votre choix (iCloud Drive, Sur mon iPhone ou d'autres emplacements de fichiers iOS)</li>
     <li>Les clés de chiffrement des sauvegardes sont stockées exclusivement dans votre trousseau iCloud, ne sont jamais transmises à nos serveurs et ne sont pas accessibles par nous en tant que développeurs</li>
@@ -1624,7 +1624,7 @@
   <p><strong>Périmètre des sauvegardes :</strong> Les sauvegardes et exportations couvrent les données présentes sur votre appareil : vos enregistrements de dépenses personnelles, ainsi que la copie locale que votre appareil conserve des dépenses de groupe et des informations des groupes auxquels vous avez accès. Aucune donnée n'est récupérée depuis Firebase Firestore au moment de l'exportation ; ce qui n'a pas encore été synchronisé sur votre appareil ne figure donc pas dans le fichier. Une exportation ne modifie pas la copie conservée dans Firestore, qui reste accessible tant que le groupe existe et n'a pas été supprimé.</p>
 
   <h2><span class="section-number">10</span>Migration des données</h2>
-  <p>Les utilisateurs ayant accès aux fonctionnalités (abonnement PRO ou essai gratuit actif) peuvent exporter leurs données en JSON, CSV ou PDF, et importer des données au format JSON. Node Expense n'a pas accès à vos fichiers exportés. Les fichiers exportés sont enregistrés à un emplacement de votre choix. Les exportations comprennent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; elles ne récupèrent pas de données en temps réel directement depuis Firebase Firestore. <strong>Les exportations de la Migration des données ne sont pas chiffrées.</strong> Le réglage « Chiffrer les fichiers de sauvegarde » de la Rétention des données ne s'y applique pas : les fichiers JSON, CSV et PDF sont écrits en clair, sous une forme lisible. Conservez-les et partagez-les en conséquence.</p>
+  <p>Les utilisateurs ayant accès aux fonctionnalités (abonnement PRO ou essai gratuit actif) peuvent exporter leurs données en JSON, CSV ou PDF, et importer des données au format JSON. Node Expense n'a pas accès à vos fichiers exportés. Les fichiers exportés sont enregistrés à un emplacement de votre choix. Les exportations comprennent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; elles ne récupèrent pas de données en temps réel directement depuis Firebase Firestore. <strong>Les exportations JSON suivent le réglage « Chiffrer les fichiers de sauvegarde » de la Rétention des données.</strong> Lorsqu'il est activé, le fichier JSON est chiffré en AES-256-GCM et ne peut être lu qu'en le réimportant dans Node Expense depuis un appareil ayant accès à votre trousseau iCloud. <strong>Les exportations CSV et PDF ne sont jamais chiffrées</strong> et sont toujours écrites sous une forme lisible. Conservez-les et partagez-les en conséquence.</p>
 
   <h2><span class="section-number">11</span>Suppression des données</h2>
   <ul>
@@ -1668,7 +1668,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-08-18 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1809,7 +1809,7 @@
 
   <h3>9.3 암호화 및 백업</h3>
   <ul>
-    <li>기능 접근 권한이 있는 사용자는 <strong>데이터 보존 백업</strong>에 AES-256-GCM 암호화를 적용할 수 있습니다. 이 설정은 정리 전에 생성되는 백업 파일에만 적용되며, 데이터 마이그레이션으로 내보낸 파일은 암호화되지 않습니다 (제10조 참조)</li>
+    <li>기능 접근 권한이 있는 사용자는 백업 파일에 AES-256-GCM 암호화를 적용할 수 있습니다. 이 설정은 정리 전에 생성되는 백업 파일, 비활성 그룹을 정리하기 전에 제공되는 내보내기 파일, 그리고 데이터 마이그레이션으로 생성되는 JSON 파일에 적용됩니다. CSV와 PDF 내보내기 파일은 암호화되지 않습니다 (제10조 참조)</li>
     <li>지출 기록 보관 기간을 직접 제어할 수 있습니다 (전체 또는 제한된 연수). <strong>보존 기간은 본인의 개인 지출에만 적용됩니다.</strong> 그룹 지출은 보존 기간으로 삭제되지 않으며, 삭제된 그룹이나 탈퇴한 그룹에서 보관된 지출도 마찬가지로 원래의 분담 내역과 함께 기기에 남아 있습니다</li>
     <li>백업 파일은 귀하가 선택한 위치로 내보내집니다 (iCloud Drive, 내 iPhone 또는 기타 iOS 파일 위치)</li>
     <li>백업 암호화 키는 귀하의 iCloud 키체인에만 저장되며, 당사 서버로 전송되거나 개발자가 접근할 수 없습니다</li>
@@ -1817,7 +1817,7 @@
   <p><strong>백업 범위:</strong> 백업 및 내보내기는 기기에 저장된 데이터, 즉 개인 지출 기록과 함께 접근 권한이 있는 그룹 지출 및 그룹 정보에 대해 기기가 보관 중인 로컬 사본을 포함합니다. 내보내는 시점에 Firebase Firestore에서 데이터를 가져오지는 않으므로, 아직 기기에 동기화되지 않은 내용은 파일에 포함되지 않습니다. 내보내기를 하더라도 Firestore에 저장된 사본은 변경되지 않으며, 그룹이 존재하고 삭제되지 않은 한 계속 접근할 수 있습니다.</p>
 
   <h2><span class="section-number">10</span>데이터 마이그레이션</h2>
-  <p>기능 접근 권한(PRO 구독 또는 활성 무료 체험)이 있는 사용자는 JSON, CSV 또는 PDF 형식으로 데이터를 내보내고, JSON 형식으로 데이터를 가져올 수 있습니다. Node Expense는 내보낸 파일에 접근할 수 없습니다. 내보낸 파일은 귀하가 선택한 위치에 저장됩니다. 내보내기에는 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터가 포함되며, Firebase Firestore에서 실시간 데이터를 직접 가져오지 않습니다. <strong>데이터 마이그레이션으로 내보낸 파일은 암호화되지 않습니다.</strong> 데이터 보존의 &lsquo;백업 파일 암호화&rsquo; 설정은 이러한 파일에 적용되지 않으며, JSON, CSV, PDF 파일은 모두 암호화되지 않은 읽을 수 있는 형태로 저장되므로 보관과 공유에 유의하시기 바랍니다.</p>
+  <p>기능 접근 권한(PRO 구독 또는 활성 무료 체험)이 있는 사용자는 JSON, CSV 또는 PDF 형식으로 데이터를 내보내고, JSON 형식으로 데이터를 가져올 수 있습니다. Node Expense는 내보낸 파일에 접근할 수 없습니다. 내보낸 파일은 귀하가 선택한 위치에 저장됩니다. 내보내기에는 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터가 포함되며, Firebase Firestore에서 실시간 데이터를 직접 가져오지 않습니다. <strong>JSON 내보내기 파일은 데이터 보존의 &lsquo;백업 파일 암호화&rsquo; 설정을 따릅니다.</strong> 이 설정이 켜져 있으면 JSON 파일은 AES-256-GCM으로 암호화되며, iCloud 키체인에 접근할 수 있는 기기에서 Node Expense로 가져와야만 읽을 수 있습니다. <strong>CSV와 PDF 내보내기 파일은 암호화되지 않으며</strong> 항상 읽을 수 있는 형태로 저장되므로 보관과 공유에 유의하시기 바랍니다.</p>
 
   <h2><span class="section-number">11</span>데이터 삭제</h2>
   <ul>

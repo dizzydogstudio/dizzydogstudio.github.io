@@ -309,7 +309,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-09-17 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -563,7 +563,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tap <strong>Settings</strong> <span class="arrow">→</span> <strong>Export Data</strong>. Choose from <strong>JSON</strong> (for re-importing), <strong>CSV</strong> (for spreadsheets), or <strong>PDF</strong> (for printing or sharing). Export requires a PRO subscription or active free trial.
+        Tap <strong>Settings</strong> <span class="arrow">→</span> <strong>Data &amp; Privacy</strong> <span class="arrow">→</span> <strong>Data Migration</strong> <span class="arrow">→</span> <strong>Export All Data</strong>. Choose from <strong>JSON</strong> (for re-importing), <strong>CSV</strong> (for spreadsheets), or <strong>PDF</strong> (for printing or sharing). Export requires a PRO subscription or active free trial.<br><br>JSON backups follow the <strong>Encrypt Backup Files</strong> setting under <strong>Data &amp; Privacy</strong> <span class="arrow">→</span> <strong>Data Retention</strong>. While it is on, the JSON file is encrypted and will not open in a text editor — restore it by importing it back into Node Expense on a device signed in to the same iCloud Keychain. CSV and PDF are never encrypted.
       </div>
     </div>
     <div class="faq-item">
@@ -579,11 +579,11 @@
         </ul>
         <strong>Export formats:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — the only format that can carry photo data, and only when <strong>Include Receipt Photos</strong> is enabled under Settings → Data &amp; Privacy. Personal photos travel as embedded image data; group photos travel as a cloud link.</li>
+          <li><strong>JSON</strong> — the only format that carries photo data, and it always does. Personal photos travel as embedded image data; group photos travel as a cloud link.</li>
           <li><strong>CSV</strong> — flags each row with <strong>Yes/No</strong> for whether a photo is attached. No image data is included.</li>
           <li><strong>PDF</strong> — marks expenses with a 📎 next to the note. No image is embedded.</li>
         </ul>
-        <strong>Include Receipt Photos</strong> is off by default to keep exports small. While off, JSON exports skip photo bytes — if you later restore only from JSON, group photos can still be retrieved from the cloud, but personal photos cannot be recovered. Keep your device backup enabled, or turn the toggle on before exporting, to preserve personal photos.
+        There is no setting to leave photos out — a JSON backup always includes them. This matters most for <strong>personal</strong> receipts: deleting an expense also deletes its receipt photo from the device, and the app keeps no other copy, so a JSON backup is the only thing that can bring one back. Group photos are different — they live in the cloud and can be fetched again for as long as the group exists. So when you are backing up rather than reporting, choose JSON.
       </div>
     </div>
     <div class="faq-item">
@@ -702,7 +702,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-09-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-09-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -946,7 +946,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> <strong>匯出資料</strong>。可選擇 <strong>JSON</strong>（用於重新匯入）、<strong>CSV</strong>（用於試算表）或 <strong>PDF</strong>（用於列印或分享）。匯出功能需要 PRO 訂閱或有效的免費試用期。
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>資料與隱私</strong> <span class="arrow">→</span> <strong>資料遷移</strong> <span class="arrow">→</span> <strong>匯出所有資料</strong>。可選擇 <strong>JSON</strong>（用於重新匯入）、<strong>CSV</strong>（用於試算表）或 <strong>PDF</strong>（用於列印或分享）。匯出功能需要 PRO 訂閱或有效的免費試用期。<br><br>JSON 備份會依循<strong>資料與隱私</strong> <span class="arrow">→</span> <strong>資料保留</strong>中的<strong>加密備份檔案</strong>設定。開啟時，JSON 檔案會加密，無法以文字編輯器開啟——請在登入相同 iCloud 鑰匙圈的裝置上匯入 Node Expense 來還原。CSV 與 PDF 一律不會加密。
       </div>
     </div>
     <div class="faq-item">
@@ -962,11 +962,11 @@
         </ul>
         <strong>匯出格式：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — 唯一可包含照片資料的格式，且僅在「設定 → 資料與隱私」中啟用<strong>包含收據照片</strong>時才會包含。個人照片以嵌入影像資料形式匯出，群組照片則以雲端連結形式匯出。</li>
+          <li><strong>JSON</strong> — 唯一會包含照片資料的格式，且一律包含。個人照片以嵌入影像資料形式匯出，群組照片則以雲端連結形式匯出。</li>
           <li><strong>CSV</strong> — 每列僅以<strong>是／否</strong>標示是否附有照片，不包含影像資料。</li>
           <li><strong>PDF</strong> — 在備註旁標示 📎 圖示，但不嵌入影像。</li>
         </ul>
-        為了讓匯出檔案保持精簡，<strong>包含收據照片</strong>預設為關閉。在關閉狀態下，JSON 匯出不會包含照片資料——若日後僅從 JSON 還原，群組照片仍可從雲端取得，但個人照片將無法復原。請保持裝置備份已啟用，或在匯出前開啟此選項，以保留個人照片。
+        沒有可排除照片的選項——JSON 備份一律包含照片。這對<strong>個人</strong>收據最為重要：刪除支出時，其收據照片也會從裝置刪除，App 不會保留其他副本，因此 JSON 備份是唯一能將照片找回的方式。群組照片則不同，它們存放在雲端，只要群組還在就能再次取得。因此，當你的目的是備份而非製作報表時，請選擇 JSON。
       </div>
     </div>
     <div class="faq-item">
@@ -1085,7 +1085,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-09-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-09-18 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1329,7 +1329,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>导出数据</strong>。可选择 <strong>JSON</strong>（用于重新导入）、<strong>CSV</strong>（用于电子表格）或 <strong>PDF</strong>（用于打印或分享）。导出功能需要专业版订阅或有效的免费试用期。
+        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>数据与隐私</strong> <span class="arrow">→</span> <strong>数据迁移</strong> <span class="arrow">→</span> <strong>导出所有数据</strong>。可选择 <strong>JSON</strong>（用于重新导入）、<strong>CSV</strong>（用于电子表格）或 <strong>PDF</strong>（用于打印或分享）。导出功能需要专业版订阅或有效的免费试用期。<br><br>JSON 备份会遵循<strong>数据与隐私</strong> <span class="arrow">→</span> <strong>数据保留</strong>中的<strong>加密备份文件</strong>设置。开启时，JSON 文件会加密，无法用文本编辑器打开——请在登录相同 iCloud 钥匙串的设备上导入 Node Expense 来还原。CSV 和 PDF 一律不会加密。
       </div>
     </div>
     <div class="faq-item">
@@ -1345,11 +1345,11 @@
         </ul>
         <strong>导出格式：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — 唯一可以包含照片数据的格式，且仅在"设置 → 数据与隐私"中启用<strong>包含收据照片</strong>时才会包含。个人照片以嵌入图像数据形式导出，群组照片则以云端链接形式导出。</li>
+          <li><strong>JSON</strong> — 唯一会包含照片数据的格式，且始终包含。个人照片以嵌入图像数据形式导出，群组照片则以云端链接形式导出。</li>
           <li><strong>CSV</strong> — 每行仅以<strong>是／否</strong>标记是否附有照片，不包含图像数据。</li>
           <li><strong>PDF</strong> — 在备注旁标记 📎 图标，但不嵌入图像。</li>
         </ul>
-        为了让导出文件保持精简，<strong>包含收据照片</strong>默认为关闭。在关闭状态下，JSON 导出不会包含照片数据——如果之后仅从 JSON 还原，群组照片仍可从云端获取，但个人照片将无法恢复。请保持设备备份已启用，或在导出前打开此选项，以保留个人照片。
+        没有可排除照片的选项——JSON 备份始终包含照片。这对<strong>个人</strong>收据最为重要：删除支出时，其收据照片也会从设备删除，App 不会保留其他副本，因此 JSON 备份是唯一能将照片找回的方式。群组照片则不同，它们存放在云端，只要群组还在就能再次获取。因此，当你的目的是备份而非制作报表时，请选择 JSON。
       </div>
     </div>
     <div class="faq-item">
@@ -1468,7 +1468,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-09-17 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-09-18 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1712,7 +1712,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>データをエクスポート</strong>。<strong>JSON</strong>（再インポート用）、<strong>CSV</strong>（スプレッドシート用）、または <strong>PDF</strong>（印刷や共有用）から選択。エクスポートには PRO サブスクリプションまたは有効な無料トライアルが必要です。
+        <strong>設定</strong>をタップ <span class="arrow">→</span> <strong>データとプライバシー</strong> <span class="arrow">→</span> <strong>データ移行</strong> <span class="arrow">→</span> <strong>すべてのデータを書き出し</strong>。<strong>JSON</strong>（再インポート用）、<strong>CSV</strong>（スプレッドシート用）、または <strong>PDF</strong>（印刷や共有用）から選択。エクスポートには PRO サブスクリプションまたは有効な無料トライアルが必要です。<br><br>JSON バックアップは<strong>データとプライバシー</strong> <span class="arrow">→</span> <strong>データ保存期間</strong>の<strong>バックアップファイルを暗号化</strong>の設定に従います。オンの場合、JSON ファイルは暗号化されてテキストエディタでは開けません。同じ iCloud キーチェーンにサインインしたデバイスで Node Expense にインポートして復元してください。CSV と PDF は暗号化されません。
       </div>
     </div>
     <div class="faq-item">
@@ -1728,11 +1728,11 @@
         </ul>
         <strong>エクスポート形式：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — 写真データを含められる唯一の形式で、「設定 → データとプライバシー」の<strong>レシート写真を含める</strong>を有効にした場合のみ含まれます。個人写真は埋め込み画像データとして、グループ写真はクラウドリンクとしてエクスポートされます。</li>
+          <li><strong>JSON</strong> — 写真データを含む唯一の形式で、常に含まれます。個人写真は埋め込み画像データとして、グループ写真はクラウドリンクとしてエクスポートされます。</li>
           <li><strong>CSV</strong> — 各行に写真の有無を<strong>はい／いいえ</strong>で示すのみで、画像データは含まれません。</li>
           <li><strong>PDF</strong> — メモの横に 📎 を表示しますが、画像は埋め込まれません。</li>
         </ul>
-        エクスポートファイルを小さく保つため、<strong>レシート写真を含める</strong>は初期設定でオフになっています。オフの状態では、JSON エクスポートに写真データは含まれません。後で JSON のみから復元した場合、グループ写真はクラウドから取得できますが、個人写真は復元できません。個人写真を保全するには、デバイスのバックアップを有効にしておくか、エクスポート前にこのトグルをオンにしてください。
+        写真を除外する設定はありません。JSON バックアップには常に写真が含まれます。これが最も重要になるのは<strong>個人</strong>のレシートです。支出を削除すると、そのレシート写真もデバイスから削除され、アプリに他のコピーは残らないため、写真を取り戻せるのは JSON バックアップだけです。グループ写真は異なり、クラウドに保存されているのでグループが存在する限り再取得できます。レポートではなくバックアップが目的の場合は、JSON を選んでください。
       </div>
     </div>
     <div class="faq-item">
@@ -1851,7 +1851,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-09-17 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2105,7 +2105,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Daten exportieren</strong>. Wählen Sie zwischen <strong>JSON</strong> (zum Reimportieren), <strong>CSV</strong> (für Tabellenkalkulationen) oder <strong>PDF</strong> (zum Drucken oder Teilen). Der Export erfordert ein PRO-Abonnement oder eine aktive kostenlose Testversion.
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Daten &amp; Datenschutz</strong> <span class="arrow">→</span> <strong>Datenmigration</strong> <span class="arrow">→</span> <strong>Alle Daten exportieren</strong>. Wählen Sie zwischen <strong>JSON</strong> (zum Reimportieren), <strong>CSV</strong> (für Tabellenkalkulationen) oder <strong>PDF</strong> (zum Drucken oder Teilen). Der Export erfordert ein PRO-Abonnement oder eine aktive kostenlose Testversion.<br><br>JSON-Backups folgen der Einstellung <strong>Backup-Dateien verschlüsseln</strong> unter <strong>Daten &amp; Datenschutz</strong> <span class="arrow">→</span> <strong>Datenspeicherung</strong>. Ist sie aktiviert, wird die JSON-Datei verschlüsselt und lässt sich nicht in einem Texteditor öffnen — stellen Sie sie wieder her, indem Sie sie auf einem Gerät mit demselben iCloud-Schlüsselbund zurück in Node Expense importieren. CSV und PDF werden nie verschlüsselt.
       </div>
     </div>
     <div class="faq-item">
@@ -2121,11 +2121,11 @@
         </ul>
         <strong>Exportformate:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — das einzige Format, das Fotodaten enthalten kann, und nur, wenn <strong>Belegfotos einschließen</strong> unter Einstellungen → Daten &amp; Datenschutz aktiviert ist. Persönliche Fotos werden als eingebettete Bilddaten exportiert; Gruppenfotos werden als Cloud-Link exportiert.</li>
+          <li><strong>JSON</strong> — das einzige Format, das Fotodaten enthält, und es enthält sie immer. Persönliche Fotos werden als eingebettete Bilddaten exportiert; Gruppenfotos werden als Cloud-Link exportiert.</li>
           <li><strong>CSV</strong> — markiert jede Zeile mit <strong>Ja/Nein</strong>, ob ein Foto angehängt ist. Keine Bilddaten enthalten.</li>
           <li><strong>PDF</strong> — kennzeichnet Ausgaben mit einem 📎 neben der Notiz. Es wird kein Bild eingebettet.</li>
         </ul>
-        <strong>Belegfotos einschließen</strong> ist standardmäßig deaktiviert, damit Exporte klein bleiben. Im deaktivierten Zustand enthalten JSON-Exporte keine Fotodaten — bei einer späteren Wiederherstellung nur aus JSON können Gruppenfotos weiterhin aus der Cloud abgerufen werden, persönliche Fotos jedoch nicht. Halten Sie Ihr Geräte-Backup aktiviert oder schalten Sie die Option vor dem Export ein, um persönliche Fotos zu erhalten.
+        Es gibt keine Einstellung, um Fotos wegzulassen — ein JSON-Backup enthält sie immer. Am wichtigsten ist das bei <strong>persönlichen</strong> Belegen: Beim Löschen einer Ausgabe wird auch ihr Belegfoto vom Gerät entfernt, und die App behält keine weitere Kopie. Ein JSON-Backup ist also das Einzige, was ein solches Foto zurückbringen kann. Bei Gruppenfotos ist es anders — sie liegen in der Cloud und lassen sich erneut abrufen, solange die Gruppe existiert. Wählen Sie daher JSON, wenn Sie sichern und nicht auswerten möchten.
       </div>
     </div>
     <div class="faq-item">
@@ -2244,7 +2244,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-09-17 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2498,7 +2498,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Exportar datos</strong>. Elija entre <strong>JSON</strong> (para reimportar), <strong>CSV</strong> (para hojas de cálculo) o <strong>PDF</strong> (para imprimir o compartir). La exportación requiere una suscripción PRO o una prueba gratuita activa.
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Datos y privacidad</strong> <span class="arrow">→</span> <strong>Migración de datos</strong> <span class="arrow">→</span> <strong>Exportar todos los datos</strong>. Elija entre <strong>JSON</strong> (para reimportar), <strong>CSV</strong> (para hojas de cálculo) o <strong>PDF</strong> (para imprimir o compartir). La exportación requiere una suscripción PRO o una prueba gratuita activa.<br><br>Las copias JSON siguen el ajuste <strong>Cifrar archivos de copia de seguridad</strong> en <strong>Datos y privacidad</strong> <span class="arrow">→</span> <strong>Retención de datos</strong>. Mientras esté activado, el archivo JSON se cifra y no se abre en un editor de texto: restaurélo importándolo de nuevo en Node Expense desde un dispositivo con el mismo llavero de iCloud. CSV y PDF nunca se cifran.
       </div>
     </div>
     <div class="faq-item">
@@ -2514,11 +2514,11 @@
         </ul>
         <strong>Formatos de exportación:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — el único formato que puede contener datos de fotos, y solo cuando <strong>Incluir fotos de recibos</strong> está activado en Ajustes → Datos y privacidad. Las fotos personales viajan como datos de imagen incrustados; las fotos de grupo viajan como un enlace a la nube.</li>
+          <li><strong>JSON</strong> — el único formato que contiene datos de fotos, y siempre los incluye. Las fotos personales viajan como datos de imagen incrustados; las fotos de grupo viajan como un enlace a la nube.</li>
           <li><strong>CSV</strong> — marca cada fila con <strong>Sí/No</strong> según si tiene foto adjunta. No incluye datos de imagen.</li>
           <li><strong>PDF</strong> — señala los gastos con un 📎 junto a la nota. No incrusta imágenes.</li>
         </ul>
-        <strong>Incluir fotos de recibos</strong> está desactivado de forma predeterminada para mantener exportaciones pequeñas. Mientras esté desactivado, las exportaciones JSON no contienen datos de fotos — si más adelante restaura solo desde JSON, las fotos de grupo seguirán recuperándose desde la nube, pero las fotos personales no podrán recuperarse. Mantenga activada la copia de seguridad de su dispositivo, o active la opción antes de exportar, para conservar las fotos personales.
+        No hay ningún ajuste para dejar las fotos fuera: una copia de seguridad JSON siempre las incluye. Esto importa sobre todo en los recibos <strong>personales</strong>: al eliminar un gasto también se borra su foto del recibo del dispositivo, y la app no conserva ninguna otra copia, así que una copia JSON es lo único que puede recuperarla. Con las fotos de grupo es distinto: están en la nube y pueden volver a obtenerse mientras el grupo exista. Por eso, cuando su objetivo sea respaldar y no informar, elija JSON.
       </div>
     </div>
     <div class="faq-item">
@@ -2637,7 +2637,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-09-17 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-09-18 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2891,7 +2891,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Exporter les données</strong>. Choisissez entre <strong>JSON</strong> (pour la réimportation), <strong>CSV</strong> (pour les tableurs) ou <strong>PDF</strong> (pour l'impression ou le partage). L'exportation nécessite un abonnement PRO ou un essai gratuit actif.
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Données et confidentialité</strong> <span class="arrow">→</span> <strong>Migration des données</strong> <span class="arrow">→</span> <strong>Exporter toutes les données</strong>. Choisissez entre <strong>JSON</strong> (pour la réimportation), <strong>CSV</strong> (pour les tableurs) ou <strong>PDF</strong> (pour l'impression ou le partage). L'exportation nécessite un abonnement PRO ou un essai gratuit actif.<br><br>Les sauvegardes JSON suivent le réglage <strong>Chiffrer les fichiers de sauvegarde</strong> dans <strong>Données et confidentialité</strong> <span class="arrow">→</span> <strong>Rétention des données</strong>. Lorsqu'il est activé, le fichier JSON est chiffré et ne s'ouvre pas dans un éditeur de texte : restaurez-le en le réimportant dans Node Expense depuis un appareil disposant du même trousseau iCloud. CSV et PDF ne sont jamais chiffrés.
       </div>
     </div>
     <div class="faq-item">
@@ -2907,11 +2907,11 @@
         </ul>
         <strong>Formats d'export :</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — le seul format pouvant contenir les données des photos, et uniquement lorsque <strong>Inclure les photos de reçus</strong> est activé dans Réglages → Données et confidentialité. Les photos personnelles sont exportées sous forme de données image intégrées ; les photos de groupe sont exportées sous forme de lien cloud.</li>
+          <li><strong>JSON</strong> — le seul format contenant les données des photos, et il les contient toujours. Les photos personnelles sont exportées sous forme de données image intégrées ; les photos de groupe sont exportées sous forme de lien cloud.</li>
           <li><strong>CSV</strong> — indique pour chaque ligne <strong>Oui/Non</strong> selon la présence d'une photo. Aucune donnée image n'est incluse.</li>
           <li><strong>PDF</strong> — marque les dépenses avec un 📎 à côté de la note. Aucune image n'est intégrée.</li>
         </ul>
-        <strong>Inclure les photos de reçus</strong> est désactivé par défaut afin que les exports restent légers. Tant que l'option est désactivée, les exports JSON ne contiennent pas les données des photos — si vous restaurez ensuite uniquement depuis JSON, les photos de groupe peuvent toujours être récupérées depuis le cloud, mais les photos personnelles ne peuvent pas être récupérées. Gardez la sauvegarde de votre appareil activée, ou activez l'option avant d'exporter, pour préserver les photos personnelles.
+        Aucun réglage ne permet d'exclure les photos : une sauvegarde JSON les contient toujours. C'est surtout vrai pour les reçus <strong>personnels</strong> : supprimer une dépense supprime aussi la photo de son reçu de l'appareil, et l'app n'en conserve aucune autre copie ; une sauvegarde JSON est donc la seule chose capable de la restituer. Les photos de groupe sont différentes : elles se trouvent dans le cloud et peuvent être récupérées tant que le groupe existe. Choisissez donc JSON lorsque votre objectif est de sauvegarder et non d'établir un rapport.
       </div>
     </div>
     <div class="faq-item">
@@ -3031,7 +3031,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-09-17 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-09-18 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -3148,7 +3148,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">지출을 어떻게 내보내나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>데이터 내보내기</strong>. JSON, CSV 또는 PDF를 선택하세요. PRO 구독 또는 활성 무료 체험이 필요합니다.</div>
+      <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>데이터 및 개인정보</strong> <span class="arrow">→</span> <strong>데이터 마이그레이션</strong> <span class="arrow">→</span> <strong>모든 데이터 내보내기</strong>. JSON, CSV 또는 PDF를 선택하세요. PRO 구독 또는 활성 무료 체험이 필요합니다.<br><br>JSON 백업은 <strong>데이터 및 개인정보</strong> <span class="arrow">→</span> <strong>데이터 보존</strong>의 <strong>백업 파일 암호화</strong> 설정을 따릅니다. 켜져 있으면 JSON 파일은 암호화되어 텍스트 편집기로 열리지 않으므로, 동일한 iCloud 키체인에 로그인된 기기에서 Node Expense로 가져와 복원하세요. CSV와 PDF는 암호화되지 않습니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">백업이나 내보내기 시 영수증 사진은 어떻게 되나요? 어떤 내보내기 형식이 사진 데이터를 포함하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -3160,11 +3160,11 @@
         </ul>
         <strong>내보내기 형식:</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>JSON</strong> — 사진 데이터를 포함할 수 있는 유일한 형식이며, 설정 → 데이터 및 개인정보 보호에서 <strong>영수증 사진 포함</strong>을 활성화한 경우에만 포함됩니다. 개인 사진은 임베디드 이미지 데이터로, 그룹 사진은 클라우드 링크로 내보내집니다.</li>
+          <li><strong>JSON</strong> — 사진 데이터를 포함하는 유일한 형식이며, 항상 포함됩니다. 개인 사진은 임베디드 이미지 데이터로, 그룹 사진은 클라우드 링크로 내보내집니다.</li>
           <li><strong>CSV</strong> — 각 행에 사진 첨부 여부를 <strong>예/아니오</strong>로만 표시하며, 이미지 데이터는 포함되지 않습니다.</li>
           <li><strong>PDF</strong> — 메모 옆에 📎 표시만 추가하며, 이미지는 포함되지 않습니다.</li>
         </ul>
-        내보내기 파일을 작게 유지하기 위해 <strong>영수증 사진 포함</strong>은 기본적으로 꺼져 있습니다. 꺼진 상태에서는 JSON 내보내기에 사진 데이터가 포함되지 않으며, 나중에 JSON에서만 복원하면 그룹 사진은 클라우드에서 다시 가져올 수 있지만 개인 사진은 복구할 수 없습니다. 개인 사진을 보존하려면 기기 백업을 활성화 상태로 유지하거나, 내보내기 전에 이 옵션을 켜세요.
+        사진을 제외하는 설정은 없으며, JSON 백업에는 항상 사진이 포함됩니다. 이는 <strong>개인</strong> 영수증에서 특히 중요합니다. 지출을 삭제하면 해당 영수증 사진도 기기에서 함께 삭제되고 앱에 다른 사본이 남지 않으므로, 사진을 되찾을 수 있는 방법은 JSON 백업뿐입니다. 그룹 사진은 다릅니다. 클라우드에 저장되어 있어 그룹이 남아 있는 한 다시 가져올 수 있습니다. 따라서 보고서가 아니라 백업이 목적이라면 JSON을 선택하세요.
       </div>
     </div>
     <div class="faq-item">
