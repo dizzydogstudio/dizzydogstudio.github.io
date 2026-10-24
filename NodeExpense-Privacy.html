@@ -323,7 +323,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-10-01 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -384,7 +384,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote feature configuration (e.g., per-account monthly scan caps) without requiring an app update</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Fraud and abuse prevention for backend API calls</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Crash reporting and stability diagnostics</td></tr>
-      <tr><td><strong>Apple Maps (MapKit)</strong></td><td>Suggests matching places as you type an address or place name, turns your device's position into an address, and turns a typed address or place name into map coordinates, when Location Tracking is on</td></tr>
+      <tr><td><strong>Apple Maps (MapKit)</strong></td><td>Suggests matching places as you type an address or place name, turns your device's position into an address, turns a typed address or place name into map coordinates, and finds a scanned receipt's store from the address, name or phone number printed on it, when Location Tracking is on</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Exchange rates for currency conversion; only a currency code is sent</td></tr>
     </tbody>
   </table>
@@ -433,7 +433,7 @@
   <ul>
     <li><strong>Personal expenses:</strong> the location is stored only on your device.</li>
     <li><strong>Group expenses:</strong> the location is part of the expense and is synced through Firebase Firestore, so every member of the group can see it (see section 9.2).</li>
-    <li><strong>Looking up places:</strong> to suggest matching places as you type, to turn your current position into an address, or to turn a typed address or place name into a point on the map, the app sends that text or position to Apple's Maps service. For a typed place name, it also sends the general area of your other located expenses from around the same date, so suggestions and results favour where you actually were. Nothing else about you or your expenses is sent, and Apple handles these requests under its own privacy policy.</li>
+    <li><strong>Looking up places:</strong> to suggest matching places as you type, to turn your current position into an address, or to turn a typed address or place name into a point on the map, the app sends that text or position to Apple's Maps service. For a typed place name, it also sends the general area of your other located expenses from around the same date, so suggestions and results favour where you actually were. When you scan a receipt, the store's address, name or phone number printed on it is sent the same way to find the store. Nothing else about you or your expenses is sent, and Apple handles these requests under its own privacy policy.</li>
   </ul>
   <p>You can turn Location Tracking off at any time in the app, and withdraw location access in iOS/iPadOS Settings (System Settings on Mac).</p>
 
@@ -526,7 +526,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-10-01 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-10-24 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -587,7 +587,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>無需更新應用程式即可遠端配置功能參數（例如每帳戶每月掃描上限）</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>後端 API 呼叫的詐欺與濫用防護</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>當機回報與穩定性診斷</td></tr>
-      <tr><td><strong>Apple 地圖（MapKit）</strong></td><td>在開啟「位置追蹤」時，隨您輸入地址或地點名稱建議相符的地點、將您裝置的位置轉換成地址，並將輸入的地址或地點名稱轉換成地圖座標</td></tr>
+      <tr><td><strong>Apple 地圖（MapKit）</strong></td><td>在開啟「位置追蹤」時，隨您輸入地址或地點名稱建議相符的地點、將您裝置的位置轉換成地址，將輸入的地址或地點名稱轉換成地圖座標，並依收據上印的地址、名稱或電話號碼找出掃描收據的店家</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>提供貨幣換算所需的匯率；僅傳送貨幣代碼</td></tr>
     </tbody>
   </table>
@@ -636,7 +636,7 @@
   <ul>
     <li><strong>個人費用：</strong>位置只儲存在您的裝置裡。</li>
     <li><strong>群組費用：</strong>位置是費用的一部分，會透過 Firebase Firestore 同步，因此群組內的所有成員都能看到（請參閱第 9.2 節）。</li>
-    <li><strong>查詢地點：</strong>為了在您輸入時建議相符的地點、將您目前的位置轉換成地址，或將您輸入的地址或地點名稱轉換成地圖上的位置，Node Expense 會將該位置或文字傳送至 Apple 的地圖服務。查詢輸入的地點名稱時，也會一併傳送您在相近日期其他含有位置之費用的大致區域，讓建議與結果更貼近您實際所在的地方。除此之外，不會傳送任何關於您或您費用的資訊；Apple 會依其自身的隱私權政策處理這些請求。</li>
+    <li><strong>查詢地點：</strong>為了在您輸入時建議相符的地點、將您目前的位置轉換成地址，或將您輸入的地址或地點名稱轉換成地圖上的位置，Node Expense 會將該位置或文字傳送至 Apple 的地圖服務。查詢輸入的地點名稱時，也會一併傳送您在相近日期其他含有位置之費用的大致區域，讓建議與結果更貼近您實際所在的地方。掃描收據時，收據上印的店家地址、名稱或電話號碼也會以同樣方式傳送，用來找出該店家。除此之外，不會傳送任何關於您或您費用的資訊；Apple 會依其自身的隱私權政策處理這些請求。</li>
   </ul>
   <p>您可以隨時在 Node Expense 中關閉「位置追蹤」，也可以在 iOS/iPadOS 設定（Mac 上為系統設定）中撤銷位置存取權限。</p>
 
@@ -729,7 +729,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-10-01 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-10-24 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -790,7 +790,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>无需更新应用即可远程配置功能参数（例如每账户每月扫描上限）</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>后端 API 调用的欺诈和滥用防护</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>崩溃报告与稳定性诊断</td></tr>
-      <tr><td><strong>Apple 地图（MapKit）</strong></td><td>在开启“位置追踪”时，随您输入地址或地点名称推荐匹配的地点、将您设备的位置转换为地址，并将输入的地址或地点名称转换为地图坐标</td></tr>
+      <tr><td><strong>Apple 地图（MapKit）</strong></td><td>在开启“位置追踪”时，随您输入地址或地点名称推荐匹配的地点、将您设备的位置转换为地址，将输入的地址或地点名称转换为地图坐标，并依据收据上印的地址、名称或电话号码找出所扫描收据的商家</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>提供货币换算所需的汇率；仅发送货币代码</td></tr>
     </tbody>
   </table>
@@ -839,7 +839,7 @@
   <ul>
     <li><strong>个人支出：</strong>位置只存储在您的设备里。</li>
     <li><strong>群组支出：</strong>位置是支出的一部分，会通过 Firebase Firestore 同步，因此群组内的所有成员都能看到（请参阅第 9.2 节）。</li>
-    <li><strong>查询地点：</strong>为了在您输入时推荐匹配的地点、将您当前的位置转换为地址，或将您输入的地址或地点名称转换为地图上的位置，Node Expense 会将该位置或文字发送至 Apple 的地图服务。查询输入的地点名称时，还会一并发送您在相近日期其他带有位置的支出的大致区域，使推荐和结果更贴近您实际所在的地方。除此之外，不会发送任何关于您或您支出的信息；Apple 会按照其自身的隐私政策处理这些请求。</li>
+    <li><strong>查询地点：</strong>为了在您输入时推荐匹配的地点、将您当前的位置转换为地址，或将您输入的地址或地点名称转换为地图上的位置，Node Expense 会将该位置或文字发送至 Apple 的地图服务。查询输入的地点名称时，还会一并发送您在相近日期其他带有位置的支出的大致区域，使推荐和结果更贴近您实际所在的地方。扫描收据时，收据上印的商家地址、名称或电话号码也会以同样方式发送，用来找出该商家。除此之外，不会发送任何关于您或您支出的信息；Apple 会按照其自身的隐私政策处理这些请求。</li>
   </ul>
   <p>您可以随时在 Node Expense 中关闭“位置追踪”，也可以在 iOS/iPadOS 设置（Mac 上为系统设置）中撤销位置访问权限。</p>
 
@@ -932,7 +932,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-10-01 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-10-24 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -993,7 +993,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>アプリの更新を必要としない機能設定のリモート構成（例: アカウントごとの月間スキャン上限）</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>バックエンド API 呼び出しの不正使用防止</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>クラッシュレポートと安定性診断</td></tr>
-      <tr><td><strong>Apple マップ（MapKit）</strong></td><td>「位置情報の追跡」がオンのとき、住所や場所の名前の入力中に一致する場所を候補として表示し、デバイスの位置を住所に、入力された住所や場所の名前を地図上の座標に変換します</td></tr>
+      <tr><td><strong>Apple マップ（MapKit）</strong></td><td>「位置情報の追跡」がオンのとき、住所や場所の名前の入力中に一致する場所を候補として表示し、デバイスの位置を住所に、入力された住所や場所の名前を地図上の座標に変換し、レシートに印字された住所・名前・電話番号からスキャンした店舗を見つけます</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>通貨換算用の為替レート。送信されるのは通貨コードのみです</td></tr>
     </tbody>
   </table>
@@ -1042,7 +1042,7 @@
   <ul>
     <li><strong>個人の支出：</strong>位置情報はお客様のデバイスにのみ保存されます。</li>
     <li><strong>グループの支出：</strong>位置情報は支出の一部として Firebase Firestore を通じて同期されるため、グループのすべてのメンバーが閲覧できます（第 9.2 条をご参照ください）。</li>
-    <li><strong>場所の検索：</strong>入力中に一致する場所を候補として表示したり、現在地を住所に変換したり、入力された住所や場所の名前を地図上の地点に変換したりするため、Node Expense はその位置情報またはテキストを Apple のマップサービスに送信します。入力された場所の名前を検索する際は、実際にいた場所に近い候補や結果が得られるよう、近い日付に位置情報付きで記録された他の支出のおおよそのエリアも送信します。それ以外にお客様や支出に関する情報は送信されません。これらのリクエストは、Apple が自社のプライバシーポリシーに基づいて処理します。</li>
+    <li><strong>場所の検索：</strong>入力中に一致する場所を候補として表示したり、現在地を住所に変換したり、入力された住所や場所の名前を地図上の地点に変換したりするため、Node Expense はその位置情報またはテキストを Apple のマップサービスに送信します。入力された場所の名前を検索する際は、実際にいた場所に近い候補や結果が得られるよう、近い日付に位置情報付きで記録された他の支出のおおよそのエリアも送信します。レシートをスキャンしたときは、レシートに印字された店舗の住所、名前、電話番号も、店舗を見つけるために同じ方法で送信されます。それ以外にお客様や支出に関する情報は送信されません。これらのリクエストは、Apple が自社のプライバシーポリシーに基づいて処理します。</li>
   </ul>
   <p>「位置情報の追跡」は Node Expense 内でいつでもオフにでき、iOS/iPadOS の設定（Mac ではシステム設定）から位置情報へのアクセスを取り消すこともできます。</p>
 
@@ -1135,7 +1135,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-10-01 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1196,7 +1196,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote-Konfiguration von Funktionsparametern (z. B. monatliche Scan-Limits pro Konto) ohne App-Update</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Schutz vor Betrug und Missbrauch für Backend-API-Aufrufe</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Absturzberichte und Stabilitätsdiagnose</td></tr>
-      <tr><td><strong>Apple Karten (MapKit)</strong></td><td>Schlägt bei eingeschalteter Standortverfolgung während der Eingabe einer Adresse oder eines Ortsnamens passende Orte vor und wandelt die Position Ihres Geräts in eine Adresse sowie eine eingegebene Adresse oder einen Ortsnamen in Kartenkoordinaten um</td></tr>
+      <tr><td><strong>Apple Karten (MapKit)</strong></td><td>Schlägt bei eingeschalteter Standortverfolgung während der Eingabe einer Adresse oder eines Ortsnamens passende Orte vor und wandelt die Position Ihres Geräts in eine Adresse sowie eine eingegebene Adresse oder einen Ortsnamen in Kartenkoordinaten um und findet anhand der aufgedruckten Adresse, des Namens oder der Telefonnummer das Geschäft eines gescannten Belegs</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Wechselkurse für die Währungsumrechnung; es wird nur ein Währungscode gesendet</td></tr>
     </tbody>
   </table>
@@ -1245,7 +1245,7 @@
   <ul>
     <li><strong>Persönliche Ausgaben:</strong> Der Standort wird nur auf Ihrem Gerät gespeichert.</li>
     <li><strong>Gruppenausgaben:</strong> Der Standort ist Teil der Ausgabe und wird über Firebase Firestore synchronisiert, sodass alle Mitglieder der Gruppe ihn sehen können (siehe Abschnitt 9.2).</li>
-    <li><strong>Orte nachschlagen:</strong> Um während der Eingabe passende Orte vorzuschlagen oder Ihre aktuelle Position in eine Adresse oder eine eingegebene Adresse bzw. einen Ortsnamen in einen Punkt auf der Karte umzuwandeln, sendet Node Expense diese Position bzw. diesen Text an den Kartendienst von Apple. Bei einem eingegebenen Ortsnamen wird zusätzlich der ungefähre Bereich Ihrer anderen Ausgaben mit Standort aus demselben Zeitraum gesendet, damit Vorschläge und Ergebnisse dort liegen, wo Sie tatsächlich waren. Andere Informationen über Sie oder Ihre Ausgaben werden nicht gesendet; Apple verarbeitet diese Anfragen gemäß seiner eigenen Datenschutzrichtlinie.</li>
+    <li><strong>Orte nachschlagen:</strong> Um während der Eingabe passende Orte vorzuschlagen oder Ihre aktuelle Position in eine Adresse oder eine eingegebene Adresse bzw. einen Ortsnamen in einen Punkt auf der Karte umzuwandeln, sendet Node Expense diese Position bzw. diesen Text an den Kartendienst von Apple. Bei einem eingegebenen Ortsnamen wird zusätzlich der ungefähre Bereich Ihrer anderen Ausgaben mit Standort aus demselben Zeitraum gesendet, damit Vorschläge und Ergebnisse dort liegen, wo Sie tatsächlich waren. Beim Scannen eines Belegs werden die aufgedruckte Adresse, der Name oder die Telefonnummer des Geschäfts auf dieselbe Weise gesendet, um das Geschäft zu finden. Andere Informationen über Sie oder Ihre Ausgaben werden nicht gesendet; Apple verarbeitet diese Anfragen gemäß seiner eigenen Datenschutzrichtlinie.</li>
   </ul>
   <p>Sie können die Standortverfolgung jederzeit in Node Expense ausschalten und den Standortzugriff in den iOS-/iPadOS-Einstellungen (Systemeinstellungen auf dem Mac) widerrufen.</p>
 
@@ -1338,7 +1338,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-10-01 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1399,7 +1399,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuración remota de parámetros de funciones (por ejemplo, límites mensuales de escaneo por cuenta) sin necesidad de actualizar la app</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Prevención de fraude y abuso para las llamadas a la API del backend</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Informes de fallos y diagnóstico de estabilidad</td></tr>
-      <tr><td><strong>Mapas de Apple (MapKit)</strong></td><td>Sugiere lugares coincidentes mientras escribe una dirección o un nombre de lugar, convierte la posición de su dispositivo en una dirección, y convierte una dirección o un nombre de lugar escrito en coordenadas del mapa, cuando Seguimiento de ubicación está activado</td></tr>
+      <tr><td><strong>Mapas de Apple (MapKit)</strong></td><td>Sugiere lugares coincidentes mientras escribe una dirección o un nombre de lugar, convierte la posición de su dispositivo en una dirección, convierte una dirección o un nombre de lugar escrito en coordenadas del mapa, y encuentra el comercio de un recibo escaneado a partir de la dirección, el nombre o el teléfono impresos en él, cuando Seguimiento de ubicación está activado</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Tipos de cambio para la conversión de divisas; solo se envía un código de divisa</td></tr>
     </tbody>
   </table>
@@ -1448,7 +1448,7 @@
   <ul>
     <li><strong>Gastos personales:</strong> la ubicación se almacena solo en su dispositivo.</li>
     <li><strong>Gastos de grupo:</strong> la ubicación forma parte del gasto y se sincroniza mediante Firebase Firestore, por lo que todos los miembros del grupo pueden verla (consulte la sección 9.2).</li>
-    <li><strong>Búsqueda de lugares:</strong> para sugerir lugares coincidentes mientras escribe, para convertir su posición actual en una dirección, o una dirección o un nombre de lugar escrito en un punto del mapa, Node Expense envía esa posición o ese texto al servicio de mapas de Apple. Al buscar un nombre de lugar escrito, también envía la zona aproximada de sus otros gastos con ubicación de fechas cercanas, para que las sugerencias y los resultados favorezcan el lugar donde realmente estuvo. No se envía ninguna otra información sobre usted ni sobre sus gastos, y Apple trata estas solicitudes conforme a su propia política de privacidad.</li>
+    <li><strong>Búsqueda de lugares:</strong> para sugerir lugares coincidentes mientras escribe, para convertir su posición actual en una dirección, o una dirección o un nombre de lugar escrito en un punto del mapa, Node Expense envía esa posición o ese texto al servicio de mapas de Apple. Al buscar un nombre de lugar escrito, también envía la zona aproximada de sus otros gastos con ubicación de fechas cercanas, para que las sugerencias y los resultados favorezcan el lugar donde realmente estuvo. Al escanear un recibo, la dirección, el nombre o el teléfono del comercio impresos en él se envían de la misma forma para encontrar el comercio. No se envía ninguna otra información sobre usted ni sobre sus gastos, y Apple trata estas solicitudes conforme a su propia política de privacidad.</li>
   </ul>
   <p>Puede desactivar Seguimiento de ubicación en cualquier momento en Node Expense y retirar el acceso a la ubicación en los Ajustes de iOS/iPadOS (Ajustes del Sistema en Mac).</p>
 
@@ -1541,7 +1541,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-10-01 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1602,7 +1602,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuration à distance de paramètres de fonctionnalités (par ex. plafonds mensuels de scans par compte) sans nécessiter de mise à jour de l'app</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>Prévention de la fraude et des abus pour les appels d'API backend</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Rapports de plantage et diagnostics de stabilité</td></tr>
-      <tr><td><strong>Plans d'Apple (MapKit)</strong></td><td>Suggère des lieux correspondants pendant que vous saisissez une adresse ou un nom de lieu, convertit la position de votre appareil en adresse, et convertit une adresse ou un nom de lieu saisi en coordonnées sur la carte, lorsque Suivi de localisation est activé</td></tr>
+      <tr><td><strong>Plans d'Apple (MapKit)</strong></td><td>Suggère des lieux correspondants pendant que vous saisissez une adresse ou un nom de lieu, convertit la position de votre appareil en adresse, convertit une adresse ou un nom de lieu saisi en coordonnées sur la carte, et retrouve le commerce d'un reçu numérisé à partir de l'adresse, du nom ou du téléphone imprimés dessus, lorsque Suivi de localisation est activé</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Taux de change pour la conversion des devises ; seul un code de devise est envoyé</td></tr>
     </tbody>
   </table>
@@ -1651,7 +1651,7 @@
   <ul>
     <li><strong>Dépenses personnelles :</strong> la localisation est stockée uniquement sur votre appareil.</li>
     <li><strong>Dépenses de groupe :</strong> la localisation fait partie de la dépense et est synchronisée via Firebase Firestore ; tous les membres du groupe peuvent donc la voir (voir la section 9.2).</li>
-    <li><strong>Recherche de lieux :</strong> pour suggérer des lieux correspondants pendant la saisie, pour convertir votre position actuelle en adresse, ou une adresse ou un nom de lieu saisi en point sur la carte, Node Expense envoie cette position ou ce texte au service de cartes d'Apple. Pour un nom de lieu saisi, il envoie aussi la zone approximative de vos autres dépenses localisées à des dates proches, afin que les suggestions et les résultats privilégient l'endroit où vous étiez réellement. Aucune autre information vous concernant ou concernant vos dépenses n'est envoyée, et Apple traite ces demandes conformément à sa propre politique de confidentialité.</li>
+    <li><strong>Recherche de lieux :</strong> pour suggérer des lieux correspondants pendant la saisie, pour convertir votre position actuelle en adresse, ou une adresse ou un nom de lieu saisi en point sur la carte, Node Expense envoie cette position ou ce texte au service de cartes d'Apple. Pour un nom de lieu saisi, il envoie aussi la zone approximative de vos autres dépenses localisées à des dates proches, afin que les suggestions et les résultats privilégient l'endroit où vous étiez réellement. Lorsque vous numérisez un reçu, l'adresse, le nom ou le numéro de téléphone du commerce imprimés dessus sont envoyés de la même manière pour retrouver le commerce. Aucune autre information vous concernant ou concernant vos dépenses n'est envoyée, et Apple traite ces demandes conformément à sa propre politique de confidentialité.</li>
   </ul>
   <p>Vous pouvez désactiver Suivi de localisation à tout moment dans Node Expense et retirer l'accès à la localisation dans les Réglages iOS/iPadOS (Réglages Système sur Mac).</p>
 
@@ -1745,7 +1745,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-10-01 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1806,7 +1806,7 @@
       <tr><td><strong>Firebase Remote Config</strong></td><td>앱 업데이트 없이 기능 매개변수를 원격으로 구성 (예: 계정당 월간 스캔 한도)</td></tr>
       <tr><td><strong>Firebase App Check</strong></td><td>백엔드 API 호출에 대한 사기 및 남용 방지</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>충돌 보고 및 안정성 진단</td></tr>
-      <tr><td><strong>Apple 지도 (MapKit)</strong></td><td>위치 추적이 켜져 있을 때 주소나 장소 이름을 입력하는 동안 일치하는 장소를 제안하고, 기기의 위치를 주소로, 입력한 주소나 장소 이름을 지도 좌표로 변환</td></tr>
+      <tr><td><strong>Apple 지도 (MapKit)</strong></td><td>위치 추적이 켜져 있을 때 주소나 장소 이름을 입력하는 동안 일치하는 장소를 제안하고, 기기의 위치를 주소로, 입력한 주소나 장소 이름을 지도 좌표로 변환하며, 스캔한 영수증에 인쇄된 주소·이름·전화번호로 매장을 찾음</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>통화 환산을 위한 환율 (통화 코드만 전송)</td></tr>
     </tbody>
   </table>
@@ -1855,7 +1855,7 @@
   <ul>
     <li><strong>개인 지출:</strong> 위치는 귀하의 기기에만 저장됩니다.</li>
     <li><strong>그룹 지출:</strong> 위치는 지출의 일부로 Firebase Firestore를 통해 동기화되므로 그룹의 모든 멤버가 볼 수 있습니다 (제9.2조 참조).</li>
-    <li><strong>장소 검색:</strong> 입력하는 동안 일치하는 장소를 제안하거나, 현재 위치를 주소로, 또는 입력한 주소나 장소 이름을 지도상의 위치로 변환하기 위해 Node Expense는 해당 위치나 텍스트를 Apple의 지도 서비스로 전송합니다. 입력한 장소 이름을 검색할 때는 실제로 있었던 곳에 가까운 제안과 결과가 나오도록, 비슷한 날짜에 위치가 기록된 다른 지출의 대략적인 지역도 함께 전송합니다. 그 밖에 귀하나 귀하의 지출에 관한 정보는 전송되지 않으며, Apple은 자체 개인정보 처리방침에 따라 이러한 요청을 처리합니다.</li>
+    <li><strong>장소 검색:</strong> 입력하는 동안 일치하는 장소를 제안하거나, 현재 위치를 주소로, 또는 입력한 주소나 장소 이름을 지도상의 위치로 변환하기 위해 Node Expense는 해당 위치나 텍스트를 Apple의 지도 서비스로 전송합니다. 입력한 장소 이름을 검색할 때는 실제로 있었던 곳에 가까운 제안과 결과가 나오도록, 비슷한 날짜에 위치가 기록된 다른 지출의 대략적인 지역도 함께 전송합니다. 영수증을 스캔할 때는 영수증에 인쇄된 매장의 주소, 이름 또는 전화번호도 매장을 찾기 위해 같은 방식으로 전송됩니다. 그 밖에 귀하나 귀하의 지출에 관한 정보는 전송되지 않으며, Apple은 자체 개인정보 처리방침에 따라 이러한 요청을 처리합니다.</li>
   </ul>
   <p>위치 추적은 Node Expense에서 언제든지 끌 수 있으며, iOS/iPadOS 설정(Mac에서는 시스템 설정)에서 위치 접근 권한을 철회할 수도 있습니다.</p>
 
