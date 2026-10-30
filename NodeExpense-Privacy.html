@@ -323,7 +323,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -352,7 +352,7 @@
     <div class="data-card">
       <div class="card-label">Automatically Collected</div>
       <ul>
-        <li>Anonymous usage analytics (Firebase)</li>
+        <li>Usage analytics (Firebase), tied to a random identifier the app creates for you — never your name or email</li>
         <li>Anonymous device identifier</li>
         <li>Crash logs and diagnostics</li>
         <li>device & app performance info</li>
@@ -374,9 +374,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Subscription &amp; in-app purchase management, free trial tracking</td></tr>
       <tr><td><strong>Sign in with Apple</strong></td><td>Optional cross-device sync of your PRO license (only if you enable it); provides a stable, app-specific identifier — no name or email</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>Anonymous usage analytics</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>Usage analytics, tied to a random identifier the app creates (no name or email)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Group data syncing (expenses, members, settlements, deletion requests); public Taiwan uniform-invoice lottery winning numbers</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>Receipt photo storage for group expenses and user profile photos (compressed JPEG, accessible to authenticated users)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Receipt photos for group expenses, profile photos and group photos (compressed JPEG; who can see each is described in section 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonymous user identification to maintain subscription continuity without requiring a user sign-in or account creation</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Background tasks including group deletion and push notification delivery</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push notifications for group activity</td></tr>
@@ -464,7 +464,7 @@
     <li>Group settlements (payment records between members)</li>
     <li>Group deletion requests and member votes</li>
     <li>Trial start dates (for reinstall recovery)</li>
-    <li>Push notification tokens (FCM)</li>
+    <li>Push notification tokens (FCM), together with your notification settings (which kinds of notifications you want, and which groups you have turned off) and an unread badge count</li>
     <li>Optional payment handles for settle-up deep links (Venmo, Cash App and PayPal.me usernames; an Apple Cash phone number, which opens Messages rather than a payment app; and a Zelle phone number or email, a LINE ID and a WeChat ID, which open nothing at all and are simply shown to group members to copy)</li>
     <li><strong>Pick &amp; Pay scan tracking</strong> — a small per-account record of how many scans you've made this month and whether your trial freebie has been used. Used to enforce per-account monthly limits and to show you your remaining scans in Settings. Contains no information about the contents of any receipt.</li>
     <li><strong>Group activity history</strong> — a record of every action performed in the group (expenses added, edited, refunded, or deleted; members who joined, left, or were removed). This data is stored in Firebase Firestore and is <strong>automatically and permanently deleted after 90 days</strong>. Activity older than 90 days cannot be recovered.</li>
@@ -526,7 +526,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-10-24 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-10-30 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -555,7 +555,7 @@
     <div class="data-card">
       <div class="card-label">自動收集的資料</div>
       <ul>
-        <li>匿名使用分析（Firebase）</li>
+        <li>使用分析（Firebase），與應用程式為您產生的隨機識別碼相關聯，絕不包含您的姓名或電子郵件</li>
         <li>匿名裝置識別碼</li>
         <li>當機記錄與診斷資訊</li>
         <li>裝置與應用程式效能資訊</li>
@@ -577,9 +577,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>訂閱與應用程式內購管理，包括免費試用追蹤</td></tr>
       <tr><td><strong>透過 Apple 登入</strong></td><td>選用的 PRO 授權跨裝置同步（僅在您啟用時）；提供穩定、僅限本應用程式的識別碼——不含姓名或電子郵件</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>使用分析，與應用程式產生的隨機識別碼相關聯（不含姓名或電子郵件）</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群組資料同步（費用、成員、結算、刪除請求）；公開的台灣統一發票中獎號碼</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>群組費用的收據照片儲存與使用者個人頭像（壓縮 JPEG，可由已驗證使用者存取）</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>群組費用的收據照片、使用者個人頭像與群組頭像的儲存（壓縮 JPEG；各自的可見對象請參閱第 9.2 節）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td> 匿名用戶識別以保持訂閱連續性，無需用戶登入或建立帳戶</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>背景工作，包括群組刪除及推播通知傳送</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群組活動的推播通知</td></tr>
@@ -667,7 +667,7 @@
     <li>群組結算（成員之間的付款記錄）</li>
     <li>群組刪除請求及成員投票</li>
     <li>試用開始日期（用於重新安裝後的復原）</li>
-    <li>推播通知權杖（FCM）</li>
+    <li>推播通知權杖（FCM），以及您的通知設定（想接收哪些類型的通知、已關閉哪些群組的通知）和未讀標記數</li>
     <li>用於結算深度連結的選填付款帳號（Venmo、Cash App、PayPal.me 使用者名稱；Apple Cash 電話號碼，開啟的是「訊息」而非付款應用程式；以及 Zelle 手機號碼或電子郵件、LINE ID 與微信號，這些完全不會開啟任何程式，僅顯示給群組成員複製）</li>
     <li><strong>Pick &amp; Pay 掃描追蹤</strong>——記錄您本月已進行的掃描次數及試用免費額度是否已使用的小型每帳戶記錄。用於執行每帳戶每月限制，並在「設定」中向您顯示剩餘掃描次數。不包含任何收據內容的資訊。</li>
     <li><strong>群組活動記錄</strong>——群組內所有操作的記錄（費用的新增、編輯、退款或刪除；成員的加入、離開或移除）。此資料儲存於 Firebase Firestore，並於 <strong>90 天後自動永久刪除</strong>。超過 90 天的活動記錄無法復原。</li>
@@ -729,7 +729,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-10-24 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-10-30 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -758,7 +758,7 @@
     <div class="data-card">
       <div class="card-label">自动收集的数据</div>
       <ul>
-        <li>匿名使用分析（Firebase）</li>
+        <li>使用分析（Firebase），与应用为您生成的随机标识符相关联，绝不包含您的姓名或电子邮件</li>
         <li>匿名设备标识符</li>
         <li>崩溃日志与诊断信息</li>
         <li>设备与应用性能信息</li>
@@ -780,9 +780,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>订阅和应用内购买管理，包括免费试用跟踪</td></tr>
       <tr><td><strong>通过 Apple 登录</strong></td><td>可选的 PRO 授权跨设备同步（仅在您启用时）；提供稳定、仅限本应用的标识符——不含姓名或电子邮件</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>匿名使用分析</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>使用分析，与应用生成的随机标识符相关联（不含姓名或电子邮件）</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群组数据同步（支出、成员、结算、删除申请）；公开的台湾统一发票中奖号码</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>群组支出的收据照片存储与用户个人头像（压缩 JPEG，已认证用户可访问）</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>群组支出的收据照片、用户个人头像与群组头像的存储（压缩 JPEG；各自的可见范围请参阅第 9.2 节）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>匿名用户识别以保持订阅连续性，无需用户登录或创建账户</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>后台任务，包括群组删除和推送通知发送</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群组活动的推送通知</td></tr>
@@ -870,7 +870,7 @@
     <li>群组结算（成员间的付款记录）</li>
     <li>群组删除申请和成员投票</li>
     <li>试用开始日期（用于重新安装恢复）</li>
-    <li>推送通知令牌（FCM）</li>
+    <li>推送通知令牌（FCM），以及您的通知设置（想接收哪些类型的通知、已关闭哪些群组的通知）和未读角标数</li>
     <li>用于结算深度链接的可选付款账号（Venmo、Cash App、PayPal.me 用户名；Apple Cash 电话号码，打开的是「信息」而非付款应用；以及 Zelle 手机号或邮箱、LINE ID 与微信号，这些完全不会打开任何应用，仅显示给群组成员复制）</li>
     <li><strong>Pick &amp; Pay 扫描跟踪</strong>——记录您本月已进行的扫描次数及试用免费额度是否已使用的小型每账户记录。用于执行每账户每月限制，并在「设置」中向您显示剩余扫描次数。不包含任何收据内容的信息。</li>
     <li><strong>群组活动记录</strong>——群组内所有操作的记录（支出的添加、编辑、退款或删除；成员的加入、离开或移除）。此数据存储于 Firebase Firestore，并于 <strong>90 天后自动永久删除</strong>。超过 90 天的活动记录无法恢复。</li>
@@ -932,7 +932,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-10-24 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-10-30 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -961,7 +961,7 @@
     <div class="data-card">
       <div class="card-label">自動収集されるデータ</div>
       <ul>
-        <li>匿名の利用分析（Firebase）</li>
+        <li>利用分析（Firebase）。アプリが生成するランダムな識別子にひも付けられ、氏名やメールアドレスは含まれません</li>
         <li>匿名のデバイス識別子</li>
         <li>クラッシュログと診断情報</li>
         <li>デバイスとアプリのパフォーマンス情報</li>
@@ -983,9 +983,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>サブスクリプションとアプリ内購入の管理、無料トライアルの追跡</td></tr>
       <tr><td><strong>Apple でサインイン</strong></td><td>任意の PRO ライセンスのデバイス間同期（有効にした場合のみ）。安定したアプリ固有の識別子を提供。氏名・メールアドレスは含みません</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>匿名の利用分析</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>利用分析（アプリが生成するランダムな識別子にひも付け。氏名やメールアドレスは含まない）</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>グループデータの同期（支出、メンバー、精算、削除リクエスト）、公開されている台湾統一発票の当選番号</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>グループ支出のレシート写真およびユーザープロフィール写真の保存（圧縮 JPEG、認証済みユーザーがアクセス可能）</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>グループ支出のレシート写真、ユーザープロフィール写真、グループ写真の保存（圧縮 JPEG。それぞれを閲覧できる人は第 9.2 条をご参照ください）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>ユーザーのサインインやアカウント作成を必要とせず、サブスクリプションの継続性を維持するための匿名ユーザー識別</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>グループ削除やプッシュ通知配信を含むバックグラウンドタスク</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>グループアクティビティのプッシュ通知</td></tr>
@@ -1073,7 +1073,7 @@
     <li>グループ精算（メンバー間の支払い記録）</li>
     <li>グループ削除リクエストとメンバーの投票</li>
     <li>トライアル開始日（再インストール後の復元用）</li>
-    <li>プッシュ通知トークン（FCM）</li>
+    <li>プッシュ通知トークン（FCM）と、通知の設定（受け取る通知の種類、通知をオフにしたグループ）、および未読バッジの数</li>
     <li>精算用ディープリンクのための任意の支払いハンドル（Venmo、Cash App、PayPal.me のユーザー名、Apple Cash の電話番号（決済アプリではなくメッセージを開きます）、および Zelle の電話番号またはメールアドレス、LINE ID、WeChat ID。後者の 3 つは何も開かず、グループメンバーがコピーできるよう表示されるだけです）</li>
     <li><strong>Pick &amp; Pay スキャン追跡</strong>——今月実行したスキャン数と、トライアルの無料利用が消費されたかどうかを記録する、アカウントごとの小さな記録です。アカウントごとの月次上限を適用し、「設定」画面で残りのスキャン数を表示するために使用されます。レシートの内容に関する情報は含まれていません。</li>
     <li><strong>グループアクティビティ履歴</strong>——グループ内で行われたすべての操作の記録（支出の追加・編集・返金・削除、メンバーの参加・退出・除名）。このデータは Firebase Firestore に保存され、<strong>90日後に自動的かつ永続的に削除</strong>されます。90日以上前のアクティビティは復元できません。</li>
@@ -1135,7 +1135,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1164,7 +1164,7 @@
     <div class="data-card">
       <div class="card-label">Automatisch erfasst</div>
       <ul>
-        <li>Anonyme Nutzungsanalysen (Firebase)</li>
+        <li>Nutzungsanalysen (Firebase), verknüpft mit einer zufälligen Kennung, die die App für Sie erstellt – nie mit Ihrem Namen oder Ihrer E-Mail-Adresse</li>
         <li>Anonyme Geräte-Kennung</li>
         <li>Absturzprotokolle und Diagnosedaten</li>
         <li>Geräte- und App-Leistungsinformationen</li>
@@ -1186,9 +1186,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Verwaltung von Abonnements und In-App-Käufen, Verfolgung kostenloser Testzeiträume</td></tr>
       <tr><td><strong>Mit Apple anmelden</strong></td><td>Optionale geräteübergreifende Synchronisierung Ihrer PRO-Lizenz (nur wenn Sie sie aktivieren); stellt eine stabile, app-spezifische Kennung bereit – ohne Name oder E-Mail-Adresse</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>Anonyme Nutzungsanalysen</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>Nutzungsanalysen, verknüpft mit einer zufälligen, von der App erzeugten Kennung (kein Name, keine E-Mail-Adresse)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisierung von Gruppendaten (Ausgaben, Mitglieder, Abrechnungen, Löschanfragen); öffentliche Gewinnzahlen der taiwanesischen Lotterie der einheitlichen Rechnung</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>Speicherung von Belegfotos für Gruppenausgaben und Profilfotos der Nutzer (komprimiertes JPEG, für authentifizierte Nutzer zugänglich)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Speicherung von Belegfotos für Gruppenausgaben, Profilfotos der Nutzer und Gruppenfotos (komprimiertes JPEG; wer welches Foto sehen kann, steht in Abschnitt 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Anmeldung (Keine Registrierung erforderlich). Lokale Daten werden sicher auf dem Gerät gespeichert. Die anonyme ID wird ausschließlich zur Gewährleistung der Abonnementkontinuität verwendet</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Hintergrundaufgaben einschließlich Gruppenlöschung und Push-Benachrichtigungsversand</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push-Benachrichtigungen für Gruppenaktivitäten</td></tr>
@@ -1276,7 +1276,7 @@
     <li>Gruppenabrechnungen (Zahlungsaufzeichnungen zwischen Mitgliedern)</li>
     <li>Gruppen-Löschanfragen und Mitgliederabstimmungen</li>
     <li>Teststart-Daten (zur Wiederherstellung nach Neuinstallation)</li>
-    <li>Push-Benachrichtigungs-Token (FCM)</li>
+    <li>Push-Benachrichtigungs-Token (FCM) sowie Ihre Benachrichtigungseinstellungen (welche Arten von Benachrichtigungen Sie erhalten möchten und für welche Gruppen Sie sie ausgeschaltet haben) und die Anzahl ungelesener Mitteilungen am App-Symbol</li>
     <li>Optionale Zahlungshandles für Abrechnungs-Deeplinks (Venmo-, Cash App- und PayPal.me-Benutzernamen; eine Apple Cash-Telefonnummer, die Nachrichten statt einer Zahlungs-App öffnet; sowie eine Zelle-Telefonnummer oder -E-Mail, eine LINE-ID und eine WeChat-ID, die gar nichts öffnen und Gruppenmitgliedern nur zum Kopieren angezeigt werden)</li>
     <li><strong>Pick &amp; Pay-Scan-Erfassung</strong> — ein kleiner kontobezogener Datensatz, der protokolliert, wie viele Scans Sie in diesem Monat durchgeführt haben und ob Ihre Testversion-Gratisnutzung verwendet wurde. Wird verwendet, um die monatlichen Limits pro Konto durchzusetzen und Ihnen die verbleibenden Scans in den Einstellungen anzuzeigen. Enthält keine Informationen über den Inhalt eines Belegs.</li>
     <li><strong>Gruppenaktivitätsverlauf</strong> — eine Aufzeichnung aller in der Gruppe durchgeführten Aktionen (Ausgaben hinzugefügt, bearbeitet, erstattet oder gelöscht; Mitglieder beigetreten, ausgetreten oder entfernt). Diese Daten werden in Firebase Firestore gespeichert und nach <strong>90 Tagen automatisch und dauerhaft gelöscht</strong>. Aktivitäten, die älter als 90 Tage sind, können nicht wiederhergestellt werden.</li>
@@ -1338,7 +1338,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1367,7 +1367,7 @@
     <div class="data-card">
       <div class="card-label">Recopilados automáticamente</div>
       <ul>
-        <li>Análisis de uso anónimo (Firebase)</li>
+        <li>Análisis de uso (Firebase), vinculado a un identificador aleatorio que la app crea para usted, nunca a su nombre ni a su correo electrónico</li>
         <li>Identificador de dispositivo anónimo</li>
         <li>Registros de fallos y diagnósticos</li>
         <li>Información de rendimiento del dispositivo y la app</li>
@@ -1389,9 +1389,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Gestión de suscripciones y compras dentro de la app, seguimiento de período de prueba gratuito</td></tr>
       <tr><td><strong>Iniciar sesión con Apple</strong></td><td>Sincronización opcional de su licencia PRO entre dispositivos (solo si la activa); proporciona un identificador estable y específico de la app, sin nombre ni correo electrónico</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>Análisis de uso anónimo</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>Análisis de uso, vinculado a un identificador aleatorio generado por la app (sin nombre ni correo electrónico)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Sincronización de datos de grupo (gastos, miembros, liquidaciones, solicitudes de eliminación); números premiados públicos de la lotería de la factura unificada de Taiwán</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>Almacenamiento de fotos de recibos para gastos de grupo y fotos de perfil de usuario (JPEG comprimido, accesible para usuarios autenticados)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Almacenamiento de fotos de recibos para gastos de grupo, fotos de perfil de usuario y fotos de grupo (JPEG comprimido; quién puede ver cada una se indica en la sección 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Identificación anónima de usuario para mantener la continuidad de la suscripción sin requerir el inicio de sesión del usuario ni la creación de una cuenta</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tareas en segundo plano, incluida la eliminación de grupos y el envío de notificaciones push</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notificaciones push para actividad de grupo</td></tr>
@@ -1479,7 +1479,7 @@
     <li>Liquidaciones de grupo (registros de pago entre miembros)</li>
     <li>Solicitudes de eliminación de grupo y votos de miembros</li>
     <li>Fechas de inicio de prueba (para recuperación tras reinstalación)</li>
-    <li>Tokens de notificaciones push (FCM)</li>
+    <li>Tokens de notificaciones push (FCM), junto con su configuración de notificaciones (qué tipos de notificaciones desea recibir y qué grupos ha desactivado) y el número de la insignia de no leídos</li>
     <li>Identificadores de pago opcionales para enlaces directos de liquidación (nombres de usuario de Venmo, Cash App y PayPal.me; un número de teléfono de Apple Cash, que abre Mensajes en lugar de una app de pago; y un teléfono o correo de Zelle, un ID de LINE y un ID de WeChat, que no abren nada y solo se muestran a los miembros del grupo para copiarlos)</li>
     <li><strong>Seguimiento de escaneos de Pick &amp; Pay</strong> — un pequeño registro por cuenta del número de escaneos que ha realizado este mes y si se ha utilizado su prueba gratuita. Se usa para aplicar los límites mensuales por cuenta y para mostrarle los escaneos restantes en Ajustes. No contiene ninguna información sobre el contenido de ningún recibo.</li>
     <li><strong>Historial de actividad del grupo</strong> — un registro de todas las acciones realizadas en el grupo (gastos añadidos, editados, reembolsados o eliminados; miembros que se unieron, abandonaron o fueron eliminados). Estos datos se almacenan en Firebase Firestore y se <strong>eliminan automática y permanentemente después de 90 días</strong>. La actividad anterior a 90 días no puede recuperarse.</li>
@@ -1541,7 +1541,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1570,7 +1570,7 @@
     <div class="data-card">
       <div class="card-label">Collectées automatiquement</div>
       <ul>
-        <li>Analyses d'utilisation anonymes (Firebase)</li>
+        <li>Analyses d'utilisation (Firebase), liées à un identifiant aléatoire que l'app crée pour vous, jamais à votre nom ni à votre adresse e-mail</li>
         <li>Identifiant d'appareil anonyme</li>
         <li>Journaux de plantage et diagnostics</li>
         <li>Informations de performances de l'appareil et de l'app</li>
@@ -1592,9 +1592,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>Gestion des abonnements et achats intégrés, suivi de la période d'essai gratuite</td></tr>
       <tr><td><strong>Se connecter avec Apple</strong></td><td>Synchronisation optionnelle de votre licence PRO entre appareils (uniquement si vous l'activez) ; fournit un identifiant stable et propre à l'app — sans nom ni e-mail</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>Analyses d'utilisation anonymes</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>Analyses d'utilisation, liées à un identifiant aléatoire généré par l'app (sans nom ni adresse e-mail)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisation des données de groupe (dépenses, membres, remboursements, demandes de suppression) ; numéros gagnants publics de la loterie de la facture unifiée de Taïwan</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>Stockage des photos de reçus pour les dépenses de groupe et des photos de profil utilisateur (JPEG compressé, accessible aux utilisateurs authentifiés)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>Stockage des photos de reçus pour les dépenses de groupe, des photos de profil utilisateur et des photos de groupe (JPEG compressé ; qui peut voir chacune est précisé à la section 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Connexion anonyme (Aucune inscription requise). Les données locales sont stockées en toute sécurité dans l'appareil. L'identifiant anonyme est uniquement utilisé pour garantir la continuité de l'abonnement</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe et la livraison de notifications push</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notifications push pour l'activité de groupe</td></tr>
@@ -1682,7 +1682,7 @@
     <li>Remboursements de groupe (enregistrements de paiement entre membres)</li>
     <li>Demandes de suppression de groupe et votes des membres</li>
     <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
-    <li>Jetons de notification push (FCM)</li>
+    <li>Jetons de notification push (FCM), avec vos réglages de notification (les types de notifications que vous souhaitez recevoir et les groupes que vous avez désactivés) et le nombre affiché sur la pastille de non-lus</li>
     <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App et PayPal.me ; un numéro de téléphone Apple Cash, qui ouvre Messages et non une application de paiement ; ainsi qu'un numéro de téléphone ou e-mail Zelle, un identifiant LINE et un identifiant WeChat, qui n'ouvrent rien du tout et sont simplement affichés aux membres du groupe pour être copiés)</li>
     <li><strong>Suivi des scans Pick &amp; Pay</strong> — un petit enregistrement par compte du nombre de scans que vous avez effectués ce mois-ci et si votre essai gratuit a été utilisé. Sert à appliquer les plafonds mensuels par compte et à vous montrer vos scans restants dans les Réglages. Ne contient aucune information sur le contenu d'un reçu.</li>
     <li><strong>Historique des activités du groupe</strong> — un enregistrement de toutes les actions effectuées dans le groupe (dépenses ajoutées, modifiées, remboursées ou supprimées ; membres ayant rejoint, quitté ou été retirés). Ces données sont stockées dans Firebase Firestore et sont <strong>automatiquement et définitivement supprimées après 90 jours</strong>. Les activités antérieures à 90 jours ne peuvent pas être récupérées.</li>
@@ -1745,7 +1745,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1774,7 +1774,7 @@
     <div class="data-card">
       <div class="card-label">자동으로 수집되는 정보</div>
       <ul>
-        <li>익명 사용 분석 (Firebase)</li>
+        <li>사용 분석 (Firebase), 앱이 생성한 무작위 식별자와 연결되며 이름이나 이메일은 포함되지 않음</li>
         <li>익명 기기 식별자</li>
         <li>충돌 로그 및 진단 정보</li>
         <li>기기 및 앱 성능 정보</li>
@@ -1796,9 +1796,9 @@
     <tbody>
       <tr><td><strong>RevenueCat</strong></td><td>구독 및 인앱 구매 관리, 무료 체험 기간 추적</td></tr>
       <tr><td><strong>Apple로 로그인</strong></td><td>선택적 PRO 라이선스 기기 간 동기화(활성화한 경우에만); 안정적이고 앱에 한정된 식별자 제공 — 이름이나 이메일 없음</td></tr>
-      <tr><td><strong>Firebase Analytics</strong></td><td>익명 사용 분석</td></tr>
+      <tr><td><strong>Firebase Analytics</strong></td><td>사용 분석, 앱이 생성한 무작위 식별자와 연결 (이름이나 이메일 없음)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>그룹 데이터 동기화 (지출, 멤버, 정산, 삭제 요청); 공개된 대만 통일발표 복권 당첨 번호</td></tr>
-      <tr><td><strong>Firebase Storage</strong></td><td>그룹 지출의 영수증 사진 및 사용자 프로필 사진 저장 (압축 JPEG, 인증된 사용자가 접근 가능)</td></tr>
+      <tr><td><strong>Firebase Storage</strong></td><td>그룹 지출의 영수증 사진, 사용자 프로필 사진 및 그룹 사진 저장 (압축 JPEG, 각각을 볼 수 있는 사람은 제9.2조 참조)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>사용자의 로그인이나 계정 생성을 요구하지 않고 구독 연속성을 유지하기 위한 익명 사용자 식별</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>그룹 삭제 및 푸시 알림 발송 등 백그라운드 작업</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>그룹 활동에 대한 푸시 알림</td></tr>
@@ -1886,7 +1886,7 @@
     <li>그룹 정산 (멤버 간 결제 기록)</li>
     <li>그룹 삭제 요청 및 멤버 투표</li>
     <li>체험 시작일 (재설치 후 복구용)</li>
-    <li>푸시 알림 토큰 (FCM)</li>
+    <li>푸시 알림 토큰 (FCM)과 알림 설정(받을 알림 유형, 알림을 끈 그룹) 및 읽지 않은 배지 수</li>
     <li>정산 딥링크를 위한 선택적 결제 식별자 (Venmo, Cash App, PayPal.me 사용자명, 결제 앱이 아닌 메시지를 여는 Apple Cash 전화번호, 그리고 아무것도 열지 않고 그룹 멤버가 복사할 수 있도록 표시되기만 하는 Zelle 전화번호 또는 이메일, LINE ID, WeChat ID)</li>
     <li><strong>Pick &amp; Pay 스캔 추적</strong> — 이번 달 수행한 스캔 횟수와 체험 무료 사용 여부를 기록하는 계정별 소규모 기록입니다. 계정당 월간 한도를 적용하고 설정에 남은 스캔 횟수를 표시하는 데 사용됩니다. 영수증 내용에 관한 어떤 정보도 포함하지 않습니다.</li>
     <li><strong>그룹 활동 기록</strong> — 그룹에서 수행된 모든 작업의 기록 (지출 추가, 수정, 환불 또는 삭제; 멤버 가입, 탈퇴 또는 제거). 이 데이터는 Firebase Firestore에 저장되며 <strong>90일 후 자동으로 영구 삭제</strong>됩니다. 90일이 지난 활동은 복구할 수 없습니다.</li>

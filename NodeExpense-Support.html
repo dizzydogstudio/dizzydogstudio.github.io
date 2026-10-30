@@ -309,7 +309,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -338,7 +338,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Open the group <span class="arrow">→</span> tap the <strong>Members</strong> tab <span class="arrow">→</span> tap <strong>Share Invite Link</strong>.
+        Open the group <span class="arrow">→</span> tap the <strong>Settings</strong> tab <span class="arrow">→</span> tap <strong>Share Invite Link</strong>. The group admin can also tap <strong>Invite More Members</strong> on the <strong>Members</strong> tab.
       </div>
     </div>
     <div class="faq-item">
@@ -347,7 +347,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Open the group <span class="arrow">→</span> tap the <strong>Expenses</strong> tab <span class="arrow">→</span> tap <strong>Record a Payment</strong>.
+        Open the group <span class="arrow">→</span> tap the <strong>Expenses</strong> tab <span class="arrow">→</span> tap <strong>Record Payment</strong> at the bottom of the <strong>Balances</strong> card.
       </div>
     </div>
     <div class="faq-item">
@@ -376,8 +376,8 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Open the group <span class="arrow">→</span> <strong>Balances</strong> tab <span class="arrow">→</span> tap the <strong>Pay</strong> button on any debt you owe <span class="arrow">→</span> choose <strong>Venmo</strong>, <strong>Cash App</strong>, or <strong>PayPal.Me</strong>. The selected app opens with the amount and note prefilled — confirm and send the payment inside that app. Then return to Node Expense and tap <strong>Record a Payment</strong> to log the settlement so both sides can mark it confirmed.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">The <strong>Pay</strong> button only appears when the recipient has registered at least one payment method. Amounts never transfer automatically — all payments happen inside the third-party app.</div>
+        Open the group <span class="arrow">→</span> tap the <strong>Expenses</strong> tab <span class="arrow">→</span> in the <strong>Balances</strong> card at the top, tap <strong>Pay</strong> next to a debt you owe <span class="arrow">→</span> choose how to pay. <strong>Venmo</strong>, <strong>Cash App</strong>, and <strong>PayPal.Me</strong> open with the amount and note prefilled — confirm and send the payment inside that app. <strong>Apple Cash</strong> opens Messages, where you send the payment yourself; for <strong>Zelle</strong>, <strong>LINE</strong>, and <strong>WeChat</strong> you copy the details and pay in that app. Then return to Node Expense and tap <strong>Record Payment</strong> to log the settlement so both sides can mark it confirmed.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">If the person you owe hasn't set up a payment method yet, the button shows <strong>Remind</strong> instead — tap it and choose <strong>Send a reminder</strong>, or pay another way and log it with <strong>Record Payment</strong>. Amounts never transfer automatically — all payments happen inside the third-party app.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -406,7 +406,7 @@
         <ol style="margin:8px 0 8px 18px; padding:0;">
           <li>Tap <strong>Pay</strong> on the debt, then tap <strong>Copy</strong> next to Zelle, LINE or WeChat.</li>
           <li>Open the app you use with that person — your own bank app for Zelle, or LINE or WeChat — and send the payment there. For LINE and WeChat you have to be contacts first.</li>
-          <li>Come back to Node Expense and tap <strong>Record a Payment</strong> so both of you see the debt settled.</li>
+          <li>Come back to Node Expense and tap <strong>Record Payment</strong> so both of you see the debt settled.</li>
         </ol>
         <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Nothing transfers automatically, for these or for any other method. Node Expense never moves money — it only shows you where to send it and records that you did.</div>
       </div>
@@ -463,19 +463,31 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        How do I turn off notifications from one group?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tap <strong>Settings</strong> <span class="arrow">→</span> <strong>Notifications</strong> <span class="arrow">→</span> under <strong>Notifications by group</strong>, switch off the group you don't want to hear from. Every group you belong to has its own switch, and all of them are on by default.
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>A switched-off group stops sending you notifications. Your other groups are not affected.</li><li>Votes to delete a group and notices that you've been removed from a group still come through, so you never miss a decision about your data.</li><li>To choose which kinds of group notifications you get, such as <strong>Comments</strong> or <strong>Member &amp; group changes</strong>, use <strong>Group notification types</strong> on the same screen.</li></ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         How do I edit, delete, or refund an expense?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         On any expense row in the list:
         <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Tap</strong> the row to open the expense.</li>
+          <li><strong>Long-press</strong> it (right-click on Mac) for a menu with <strong>View Details</strong>, <strong>Edit</strong>, <strong>Refund</strong> (when the expense is refundable), and <strong>Delete</strong>.</li>
           <li><strong>Swipe right</strong> to reveal <strong>Edit</strong> (blue) and, when the expense is refundable, <strong>Refund</strong> (green).</li>
           <li><strong>Swipe left</strong> to reveal <strong>Delete</strong> (red).</li>
         </ul>
         Who is eligible:
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Personal expense</strong> — you can edit, delete, and refund any expense in your own list.</li>
-          <li><strong>Group expense</strong> — only the <strong>group admin</strong> or the member who <strong>originally recorded</strong> the expense can edit, delete, or refund it. Other members can view the row but won't see the swipe options.</li>
+          <li><strong>Group expense</strong> — only the <strong>group admin</strong> or the member who <strong>originally recorded</strong> the expense can edit, delete, or refund it. Other members can open the expense to view it, but won't see Edit, Refund, or Delete.</li>
         </ul>
         The <strong>Refund</strong> action is hidden on refunds themselves and on expenses that are already fully refunded.
       </div>
@@ -486,7 +498,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>Swipe right</strong> on the expense row and tap <strong>Refund</strong> (fastest), or tap the expense to open it and scroll down to <strong>Record Refund</strong> <span class="arrow">→</span> enter the refund amount (it defaults to the full remaining refundable) <span class="arrow">→</span> optionally adjust the date and add a note <span class="arrow">→</span> tap <strong>Record Refund</strong> to confirm. The refund inherits the original expense's split, participants, currency, and category, and is credited back to whoever paid the original. You can record multiple partial refunds as long as the total doesn't exceed the original amount. Refunds appear in your expense list with a green <strong>Refund</strong> badge and subtract from your monthly chart and daily calendar totals. Deleting the original expense also removes its linked refunds. For group expenses, only the <strong>group admin</strong> or the <strong>original recorder</strong> may issue a refund.
+        <strong>Swipe right</strong> on the expense row and tap <strong>Refund</strong> (fastest), long-press the row (right-click on Mac) and choose <strong>Refund</strong>, or tap the expense to open it and scroll down to <strong>Record Refund</strong> <span class="arrow">→</span> enter the refund amount (it defaults to the full remaining refundable) <span class="arrow">→</span> optionally adjust the date and add a note <span class="arrow">→</span> tap <strong>Record Refund</strong> to confirm. The refund inherits the original expense's split, participants, currency, and category, and is credited back to whoever paid the original. You can record multiple partial refunds as long as the total doesn't exceed the original amount. Refunds appear in your expense list with a green <strong>Refund</strong> badge and subtract from your monthly chart and daily calendar totals. Deleting the original expense also removes its linked refunds. For group expenses, only the <strong>group admin</strong> or the <strong>original recorder</strong> may issue a refund.
       </div>
     </div>
     <div class="faq-item">
@@ -546,6 +558,18 @@
       </button>
       <div class="faq-answer">
         Tap the <strong>+</strong> button to add a new expense <span class="arrow">→</span> tap the <strong>camera icon</strong> next to the amount field <span class="arrow">→</span> point your camera at the receipt and hold steady; it is captured automatically. On the <strong>Confirm Receipt</strong> screen, the likely total is marked <strong>Suggested</strong>. Tap <strong>Use</strong> next to the amount you want. The merchant is added to the note, and the date and currency are filled in when they can be read.
+        On Mac, the button next to the amount opens your photos instead: choose a picture of the receipt, or drag a receipt image onto the <strong>Add Expense</strong> window.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I split a receipt item by item with Pick &amp; Pay?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Pick &amp; Pay reads a group receipt line by line, so everyone pays only for what they had. Tap <strong>+</strong> to add an expense <span class="arrow">→</span> choose a group <span class="arrow">→</span> under <strong>Split</strong>, choose <strong>Pick &amp; Pay</strong> <span class="arrow">→</span> choose <strong>Take Photo</strong> or <strong>Photo Library</strong> (on Mac, Photo Library only). Then, on the <strong>Pick Items</strong> screen:
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>Tap a person at the top, then tap each item they had. Up to 4 people can share one item, and its cost is split evenly between them.</li><li>For an item with a quantity, such as 3 drinks, tap <strong>Assign exact quantities</strong> to give each person their own count.</li><li>Tap <strong>Guest</strong> to add someone who doesn't have the app.</li><li>Tax is read from the receipt. Choose a tip, then tap <strong>Split</strong> at the bottom.</li><li>If you added guests, <strong>Share Bill</strong> opens so you can send each guest their share by <strong>Message</strong> or <strong>QR Code</strong>.</li></ul>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay is a <strong>PRO</strong> feature with a monthly number of scans. The free trial includes 1 scan.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -617,7 +641,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        In the <strong>Groups</strong> tab, tap the <strong>+</strong> button and select <strong>Create Group</strong> <span class="arrow">→</span> tap the circular avatar in the <strong>Appearance</strong> section <span class="arrow">→</span> choose <strong>Take Photo</strong> or <strong>Choose from Library</strong> <span class="arrow">→</span> enter a group name <span class="arrow">→</span> tap <strong>Save</strong>. The photo will then appear next to your group name.
+        In the <strong>Groups</strong> tab, tap the <strong>+</strong> button and select <strong>Create Group</strong> <span class="arrow">→</span> tap the circular avatar in the <strong>Appearance</strong> section <span class="arrow">→</span> choose <strong>Take Photo</strong> or <strong>Choose from Library</strong> <span class="arrow">→</span> enter a group name <span class="arrow">→</span> tap <strong>Save</strong>. The photo will then appear next to your group name. To change the photo of an existing group, open the group <span class="arrow">→</span> tap the <strong>Settings</strong> tab <span class="arrow">→</span> <strong>Edit Group</strong> <span class="arrow">→</span> tap the avatar <span class="arrow">→</span> choose a photo <span class="arrow">→</span> tap <strong>Save</strong>.
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>Only the <strong>group admin</strong> can add or change a group photo.</li>
           <li>Group photos are a <strong>PRO subscription feature</strong>. Free users see only the initials avatar.</li>
@@ -660,7 +684,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Open <strong>Charts</strong> <span class="arrow">→</span> <strong>Location</strong> to see your <strong>Top Locations</strong>, then tap <strong>View on map</strong> for the <strong>Spending Map</strong>. Each pin is sized by how much you spent there and coloured by category. Tap a pin to see what you bought there.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Tap the <strong>•••</strong> button for <strong>Filters</strong> (a time range and categories) and the map style.</li><li>Tap a place in <strong>Top Locations</strong> to see everything you spent there. With more than 10 places you can search by label or address, switch between your <strong>Top 10</strong> and <strong>All</strong>, and sort by <strong>Spending</strong> or <strong>Visits</strong>. Places paid in different currencies are ranked together in your default currency.</li><li>To give a place your own name, like "Tokyo Tower" instead of the street address, swipe its row right (or long-press it; right-click on Mac) and choose <strong>Add a label</strong>. Swipe left to remove a label. The name appears in Top Locations and on the map. Labels are saved on this device and included in JSON backups.</li><li>For group expenses, the map counts your share, not the whole bill.</li></ul>
+        Open <strong>Charts</strong> <span class="arrow">→</span> <strong>Location</strong> to see your <strong>Top Locations</strong>, then tap <strong>View on map</strong> for the <strong>Spending Map</strong>. Each pin is sized by how much you spent there and coloured by category. Tap a pin to see what you bought there.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Tap the <strong>•••</strong> button for <strong>Filters</strong> (a time range and categories) and the map style.</li><li>Tap a place in <strong>Top Locations</strong> to see everything you spent there. With more than 10 places you can search by label or address, switch between your <strong>Top 10</strong> and <strong>All</strong>, and sort by <strong>Spending</strong> or <strong>Visits</strong>. Places paid in different currencies are ranked together in your default currency.</li><li>To give a place your own name, like "Tokyo Tower" instead of the street address, swipe its row right (or long-press it; right-click on Mac) and choose <strong>Add a label</strong>. Swipe left to remove a label. The name appears in Top Locations and on the map. Labels are saved on this device and included in JSON backups.</li><li>For group expenses, the map counts your share, not the whole bill.</li><li>Refunds come off the place where you made the purchase, in Top Locations and on the map. A place you were fully refunded for is no longer listed.</li></ul>
       </div>
     </div>
     <div class="faq-item">
@@ -729,7 +753,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-10-24 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-10-30 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -758,7 +782,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> 點選<strong>成員</strong>分頁 <span class="arrow">→</span> 點選<strong>分享邀請連結</strong>。
+        開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>分享邀請連結</strong>。群組管理員也可以在<strong>成員</strong>分頁點選<strong>邀請更多成員</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -767,7 +791,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> 點選<strong>費用</strong>分頁 <span class="arrow">→</span> 點選<strong>記錄付款</strong>。
+        開啟群組 <span class="arrow">→</span> 點選<strong>支出</strong>分頁 <span class="arrow">→</span> 點選頂部卡片底部的<strong>記錄付款</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -796,8 +820,8 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> <strong>餘額</strong>分頁 <span class="arrow">→</span> 點選您所欠款項旁的<strong>付款</strong>按鈕 <span class="arrow">→</span> 選擇 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所選應用程式將開啟，並自動帶入金額與備註——在該應用程式中確認並傳送付款。隨後返回 Node Expense 並點選<strong>記錄付款</strong>以登記此筆結算，雙方即可將其標示為已確認。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">僅當收款人已註冊至少一種收款方式時，<strong>付款</strong>按鈕才會顯示。金額絕不會自動轉帳——所有付款皆在第三方應用程式中完成。</div>
+        開啟群組 <span class="arrow">→</span> 點選<strong>支出</strong>分頁 <span class="arrow">→</span> 在頂部卡片中，點選您所欠款項旁的<strong>付款</strong> <span class="arrow">→</span> 選擇付款方式。<strong>Venmo</strong>、<strong>Cash App</strong> 和 <strong>PayPal.Me</strong> 會開啟並自動帶入金額與備註——在該 App 中確認並傳送付款。<strong>Apple Cash</strong> 會開啟訊息 App，由您自行傳送付款；<strong>Zelle</strong>、<strong>LINE</strong> 和 <strong>WeChat</strong> 則請複製資訊，再到該 App 中付款。隨後返回 Node Expense 並點選<strong>記錄付款</strong>以登記此筆結算，雙方即可將其標示為已確認。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">若收款人尚未設定收款方式，按鈕會改為顯示<strong>提醒</strong>——點選後選擇<strong>傳送提醒</strong>，或以其他方式付款後再用<strong>記錄付款</strong>登記。金額絕不會自動轉帳——所有付款皆在第三方應用程式中完成。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -883,20 +907,30 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何編輯或刪除費用？
+        如何關閉單一群組的通知？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選您想要編輯／刪除的費用 <span class="arrow">→</span> 向左滑動以查看<strong>編輯</strong>和<strong>刪除</strong>選項。
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>通知</strong> <span class="arrow">→</span> 在<strong>依群組設定通知</strong>中，關閉您不想接收通知的群組。您加入的每個群組都有各自的開關，預設全部開啟。
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>關閉的群組將不再傳送通知給您，其他群組不受影響。</li><li>刪除群組的投票，以及您被移出群組的通知，仍會照常送達，讓您不會錯過與您資料有關的決定。</li><li>若要選擇接收哪些類型的群組通知（例如<strong>留言</strong>或<strong>成員與群組變更</strong>），請使用同一畫面中的<strong>群組通知類型</strong>。</li></ul>
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何為費用記錄退款？
+        如何編輯、刪除支出或為支出退款？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選費用以開啟詳情 <span class="arrow">→</span> 向下捲動並點選<strong>記錄退款</strong> <span class="arrow">→</span> 輸入退款金額（預設為剩餘可退款金額） <span class="arrow">→</span> 可選擇調整日期並新增備註 <span class="arrow">→</span> 再次點選<strong>記錄退款</strong>以確認。退款會繼承原費用的分攤方式、參與者、貨幣和類別，並退還給支付原費用的人。只要退款總額不超過原金額，您可以記錄多筆部分退款。退款會在費用列表中以綠色<strong>退款</strong>標記顯示，並從月度圖表和每日日曆彙總中扣除。刪除原費用時，其關聯的退款也會一併刪除。
+        在列表中的任一支出列上：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>點選</strong>即可開啟該筆支出。</li><li><strong>長按</strong>（在 Mac 上按右鍵）可開啟選單，包含<strong>檢視詳情</strong>、<strong>編輯</strong>、<strong>退款</strong>（可退款時）和<strong>刪除</strong>。</li><li><strong>向右滑動</strong>可顯示<strong>編輯</strong>（藍色），可退款時還會顯示<strong>退款</strong>（綠色）。</li><li><strong>向左滑動</strong>可顯示<strong>刪除</strong>（紅色）。</li></ul>誰可以操作：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>個人支出</strong>——您可以編輯、刪除自己列表中的任何支出，或為其退款。</li><li><strong>群組支出</strong>——只有<strong>群組管理員</strong>或<strong>最初記錄</strong>該筆支出的成員可以編輯、刪除或退款。其他成員可以開啟查看，但不會看到編輯、退款或刪除。</li></ul>退款本身以及已全額退款的支出，不會顯示<strong>退款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何為支出記錄退款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        在支出列上<strong>向右滑動</strong>並點選<strong>退款</strong>（最快），或長按該列（在 Mac 上按右鍵）並選擇<strong>退款</strong>，也可以點選支出開啟詳情，向下捲動至<strong>記錄退款</strong> <span class="arrow">→</span> 輸入退款金額（預設為剩餘可退款金額） <span class="arrow">→</span> 可選擇調整日期並新增備註 <span class="arrow">→</span> 點選<strong>記錄退款</strong>以確認。退款會繼承原支出的分攤方式、參與者、貨幣和類別，並退還給支付原支出的人。只要退款總額不超過原金額，您可以記錄多筆部分退款。退款會在支出列表中以綠色<strong>退款</strong>標記顯示，並從月度圖表和每日日曆彙總中扣除。刪除原支出時，其關聯的退款也會一併刪除。群組支出只有<strong>群組管理員</strong>或<strong>最初記錄者</strong>可以退款。
       </div>
     </div>
     <div class="faq-item">
@@ -955,7 +989,18 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選 <strong>+</strong> 按鈕新增費用 <span class="arrow">→</span> 點選金額欄位旁的<strong>相機圖示</strong> <span class="arrow">→</span> 將相機對準收據並保持穩定，系統會自動拍攝。在<strong>確認收據</strong>畫面中，最可能的總金額會標示為<strong>建議</strong>，點選所需金額旁的<strong>使用</strong>即可。商家名稱會加入備註；若能辨識，日期與貨幣也會自動填入。
+        點選 <strong>+</strong> 按鈕新增費用 <span class="arrow">→</span> 點選金額欄位旁的<strong>相機圖示</strong> <span class="arrow">→</span> 將相機對準收據並保持穩定，系統會自動拍攝。在<strong>確認收據</strong>畫面中，最可能的總金額會標示為<strong>建議</strong>，點選所需金額旁的<strong>使用</strong>即可。商家名稱會加入備註；若能辨識，日期與貨幣也會自動填入。在 Mac 上，金額旁的按鈕會改為開啟照片：選擇收據的照片，或將收據圖片拖放到<strong>新增支出</strong>視窗中。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何用 Pick &amp; Pay 逐項分攤收據？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Pick &amp; Pay 會逐行讀取群組收據，讓每個人只為自己點的東西付錢。點選 <strong>+</strong> 新增支出 <span class="arrow">→</span> 選擇群組 <span class="arrow">→</span> 在<strong>分帳</strong>中選擇 <strong>Pick &amp; Pay</strong> <span class="arrow">→</span> 選擇<strong>拍照</strong>或<strong>照片圖庫</strong>（在 Mac 上僅能使用照片圖庫）。接著在<strong>選擇項目</strong>畫面中：
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>點選上方的某位成員，再點選此人點的每個項目。一個項目最多可由 4 人共享，費用會平均分攤。</li><li>對於有數量的項目（例如 3 杯飲料），點選<strong>分配精確數量</strong>即可為每個人指定各自的數量。</li><li>點選<strong>訪客</strong>可新增沒有安裝 App 的人。</li><li>稅金取自收據。選擇小費後，點選底部的<strong>分攤</strong>。</li><li>若新增了訪客，會開啟<strong>分享帳單</strong>，讓您透過<strong>訊息</strong>或 <strong>QR 碼</strong>將每位訪客應付的金額傳給對方。</li></ul>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay 為 <strong>PRO</strong> 功能，每月可掃描一定次數；免費試用期間可掃描 1 次。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1027,7 +1072,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        在<strong>群組</strong>分頁中，點選<strong>+</strong>按鈕並選擇<strong>建立群組</strong> <span class="arrow">→</span> 點選<strong>外觀</strong>區域中的圓形頭像 <span class="arrow">→</span> 選擇<strong>拍照</strong>或<strong>從相簿選擇</strong> <span class="arrow">→</span> 輸入群組名稱 <span class="arrow">→</span> 點選<strong>儲存</strong>。照片隨後會顯示在您的群組名稱旁。
+        在<strong>群組</strong>分頁中，點選<strong>+</strong>按鈕並選擇<strong>建立群組</strong> <span class="arrow">→</span> 點選<strong>外觀</strong>區域中的圓形頭像 <span class="arrow">→</span> 選擇<strong>拍照</strong>或<strong>從相簿選擇</strong> <span class="arrow">→</span> 輸入群組名稱 <span class="arrow">→</span> 點選<strong>儲存</strong>。照片隨後會顯示在您的群組名稱旁。若要變更現有群組的照片，請開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> <strong>編輯群組</strong> <span class="arrow">→</span> 點選頭像 <span class="arrow">→</span> 選擇照片 <span class="arrow">→</span> 點選<strong>儲存</strong>。
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>只有<strong>群組管理員</strong>可以新增或變更群組頭像。</li>
           <li>群組頭像為 <strong>PRO 訂閱功能</strong>。免費使用者僅會顯示姓名首字母頭像。</li>
@@ -1070,7 +1115,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        開啟<strong>圖表</strong> <span class="arrow">→</span> <strong>地點</strong>即可查看<strong>熱門地點</strong>，再點選<strong>在地圖上查看</strong>開啟<strong>消費地圖</strong>。圖釘的大小代表您在該處的花費，顏色代表分類。點選圖釘即可查看您在那裡買了什麼。<ul style="margin:8px 0 8px 18px; padding:0;"><li>點選 <strong>•••</strong> 按鈕可使用<strong>篩選</strong>（時間範圍和分類）及切換地圖樣式。</li><li>點選<strong>熱門地點</strong>中的任一地點，即可查看您在那裡的所有消費。地點超過 10 個時，可依標籤或地址搜尋、在<strong>前 10 個</strong>與<strong>全部</strong>之間切換，並依<strong>消費</strong>或<strong>造訪次數</strong>排序；以不同貨幣付款的地點會換算成預設貨幣一起排名。</li><li>要為地點自訂名稱，例如用東京鐵塔取代街道地址，請將該列向右滑動（或長按；在 Mac 上按右鍵），再選擇<strong>加入標籤</strong>；向左滑動可移除標籤。名稱會顯示在熱門地點和地圖上。標籤儲存在此裝置上，並包含在 JSON 備份中。</li><li>群組支出在地圖上計算的是您的分攤金額，而非整筆帳單。</li></ul>
+        開啟<strong>圖表</strong> <span class="arrow">→</span> <strong>地點</strong>即可查看<strong>熱門地點</strong>，再點選<strong>在地圖上查看</strong>開啟<strong>消費地圖</strong>。圖釘的大小代表您在該處的花費，顏色代表分類。點選圖釘即可查看您在那裡買了什麼。<ul style="margin:8px 0 8px 18px; padding:0;"><li>點選 <strong>•••</strong> 按鈕可使用<strong>篩選</strong>（時間範圍和分類）及切換地圖樣式。</li><li>點選<strong>熱門地點</strong>中的任一地點，即可查看您在那裡的所有消費。地點超過 10 個時，可依標籤或地址搜尋、在<strong>前 10 個</strong>與<strong>全部</strong>之間切換，並依<strong>消費</strong>或<strong>造訪次數</strong>排序；以不同貨幣付款的地點會換算成預設貨幣一起排名。</li><li>要為地點自訂名稱，例如用東京鐵塔取代街道地址，請將該列向右滑動（或長按；在 Mac 上按右鍵），再選擇<strong>加入標籤</strong>；向左滑動可移除標籤。名稱會顯示在熱門地點和地圖上。標籤儲存在此裝置上，並包含在 JSON 備份中。</li><li>群組支出在地圖上計算的是您的分攤金額，而非整筆帳單。</li><li>退款會從原購買地點的金額中扣除，熱門地點和地圖都是如此；已全額退款的地點不再列出。</li></ul>
       </div>
     </div>
     <div class="faq-item">
@@ -1139,7 +1184,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-10-24 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-10-30 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1168,7 +1213,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> 轻点<strong>成员</strong>标签页 <span class="arrow">→</span> 轻点<strong>分享邀请链接</strong>。
+        打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> 轻点<strong>分享邀请链接</strong>。群组管理员也可以在<strong>成员</strong>标签页轻点<strong>邀请更多成员</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -1177,7 +1222,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 轻点<strong>记录付款</strong>。
+        打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 轻点顶部卡片底部的<strong>记录付款</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -1206,8 +1251,8 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> <strong>余额</strong>标签页 <span class="arrow">→</span> 轻点您所欠款项旁的<strong>付款</strong>按钮 <span class="arrow">→</span> 选择 <strong>Venmo</strong>、<strong>Cash App</strong> 或 <strong>PayPal.Me</strong>。所选应用会打开，并自动填入金额和备注——在该应用中确认并发送付款。随后返回 Node Expense 并轻点<strong>记录付款</strong>以登记此笔结算，双方即可将其标记为已确认。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">仅当收款人至少注册了一种收款方式时，<strong>付款</strong>按钮才会显示。金额绝不会自动转账——所有付款均在第三方应用中完成。</div>
+        打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 在顶部卡片中，轻点您所欠款项旁的<strong>付款</strong> <span class="arrow">→</span> 选择付款方式。<strong>Venmo</strong>、<strong>Cash App</strong> 和 <strong>PayPal.Me</strong> 会打开并自动填入金额和备注——在该应用中确认并发送付款。<strong>Apple Cash</strong> 会打开信息 App，由您自行发送付款；<strong>Zelle</strong>、<strong>LINE</strong> 和 <strong>WeChat</strong> 则请复制信息，再到该 App 中付款。随后返回 Node Expense 并轻点<strong>记录付款</strong>以登记此笔结算，双方即可将其标记为已确认。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">如果收款人尚未设置收款方式，按钮会改为显示<strong>提醒</strong>——轻点后选择<strong>发送提醒</strong>，或用其他方式付款后再用<strong>记录付款</strong>登记。金额绝不会自动转账——所有付款均在第三方应用中完成。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1293,11 +1338,21 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何编辑或删除支出？
+        如何关闭单个群组的通知？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        轻点您想要编辑／删除的支出 <span class="arrow">→</span> 向左滑动即可看到<strong>编辑</strong>和<strong>删除</strong>选项。
+        轻点<strong>设置</strong> <span class="arrow">→</span> <strong>通知</strong> <span class="arrow">→</span> 在<strong>按群组设置通知</strong>中，关闭您不想接收通知的群组。您加入的每个群组都有各自的开关，默认全部开启。
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>关闭的群组将不再向您发送通知，其他群组不受影响。</li><li>删除群组的投票，以及您被移出群组的通知，仍会照常送达，让您不会错过与您数据有关的决定。</li><li>如需选择接收哪些类型的群组通知（例如<strong>评论</strong>或<strong>成员与群组变更</strong>），请使用同一界面中的<strong>群组通知类型</strong>。</li></ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何编辑、删除支出或为支出退款？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        在列表中的任一支出行上：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>轻点</strong>即可打开该笔支出。</li><li><strong>长按</strong>（在 Mac 上右键点按）可打开菜单，包含<strong>查看详情</strong>、<strong>编辑</strong>、<strong>退款</strong>（可退款时）和<strong>删除</strong>。</li><li><strong>向右滑动</strong>可显示<strong>编辑</strong>（蓝色），可退款时还会显示<strong>退款</strong>（绿色）。</li><li><strong>向左滑动</strong>可显示<strong>删除</strong>（红色）。</li></ul>谁可以操作：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>个人支出</strong>——您可以编辑、删除自己列表中的任何支出，或为其退款。</li><li><strong>群组支出</strong>——只有<strong>群组管理员</strong>或<strong>最初记录</strong>该笔支出的成员可以编辑、删除或退款。其他成员可以打开查看，但不会看到编辑、退款或删除。</li></ul>退款本身以及已全额退款的支出，不会显示<strong>退款</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -1306,7 +1361,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        轻点支出以打开详情 <span class="arrow">→</span> 向下滑动并轻点<strong>记录退款</strong> <span class="arrow">→</span> 输入退款金额（默认为剩余可退款金额） <span class="arrow">→</span> 可选择调整日期并添加备注 <span class="arrow">→</span> 再次轻点<strong>记录退款</strong>以确认。退款会继承原支出的分摊方式、参与者、货币和类别，并退还给支付原支出的人。只要退款总额不超过原金额，您可以记录多笔部分退款。退款会在支出列表中以绿色<strong>退款</strong>标记显示，并从月度图表和每日日历汇总中扣除。删除原支出时，其关联的退款也会一并删除。
+        在支出行上<strong>向右滑动</strong>并轻点<strong>退款</strong>（最快），或长按该行（在 Mac 上右键点按）并选择<strong>退款</strong>，也可以轻点支出打开详情，向下滚动至<strong>记录退款</strong> <span class="arrow">→</span> 输入退款金额（默认为剩余可退款金额） <span class="arrow">→</span> 可选择调整日期并添加备注 <span class="arrow">→</span> 轻点<strong>记录退款</strong>以确认。退款会继承原支出的分摊方式、参与者、货币和类别，并退还给支付原支出的人。只要退款总额不超过原金额，您可以记录多笔部分退款。退款会在支出列表中以绿色<strong>退款</strong>标记显示，并从月度图表和每日日历汇总中扣除。删除原支出时，其关联的退款也会一并删除。群组支出只有<strong>群组管理员</strong>或<strong>最初记录者</strong>可以退款。
       </div>
     </div>
     <div class="faq-item">
@@ -1365,7 +1420,18 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        轻点 <strong>+</strong> 按钮添加新支出 <span class="arrow">→</span> 轻点金额输入框旁的<strong>相机图标</strong> <span class="arrow">→</span> 将相机对准收据并保持稳定，系统会自动拍摄。在<strong>确认小票</strong>界面中，最可能的总金额会标记为<strong>建议</strong>，轻点所需金额旁的<strong>使用</strong>即可。商家名称会加入备注；若能识别，日期和货币也会自动填入。
+        轻点 <strong>+</strong> 按钮添加新支出 <span class="arrow">→</span> 轻点金额输入框旁的<strong>相机图标</strong> <span class="arrow">→</span> 将相机对准收据并保持稳定，系统会自动拍摄。在<strong>确认小票</strong>界面中，最可能的总金额会标记为<strong>建议</strong>，轻点所需金额旁的<strong>使用</strong>即可。商家名称会加入备注；若能识别，日期和货币也会自动填入。在 Mac 上，金额旁的按钮会改为打开照片：选择收据的照片，或将收据图片拖放到<strong>添加支出</strong>窗口中。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何用 Pick &amp; Pay 逐项分摊收据？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Pick &amp; Pay 会逐行读取群组收据，让每个人只为自己点的东西付钱。轻点 <strong>+</strong> 添加支出 <span class="arrow">→</span> 选择群组 <span class="arrow">→</span> 在<strong>分账</strong>中选择 <strong>Pick &amp; Pay</strong> <span class="arrow">→</span> 选择<strong>拍照</strong>或<strong>照片图库</strong>（在 Mac 上仅能使用照片图库）。接着在<strong>选择项目</strong>界面中：
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>轻点上方的某位成员，再轻点此人点的每个项目。一个项目最多可由 4 人共享，费用会平均分摊。</li><li>对于有数量的项目（例如 3 杯饮料），轻点<strong>分配精确数量</strong>即可为每个人指定各自的数量。</li><li>轻点<strong>访客</strong>可添加没有安装 App 的人。</li><li>税费取自收据。选择小费后，轻点底部的<strong>分摊</strong>。</li><li>如果添加了访客，会打开<strong>分享账单</strong>，让您通过<strong>短信</strong>或<strong>二维码</strong>把每位访客应付的金额发给对方。</li></ul>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay 为 <strong>PRO</strong> 功能，每月可扫描一定次数；免费试用期间可扫描 1 次。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1437,7 +1503,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        在<strong>群组</strong>标签页中，轻点<strong>+</strong>按钮并选择<strong>创建群组</strong> <span class="arrow">→</span> 轻点<strong>外观</strong>区域中的圆形头像 <span class="arrow">→</span> 选择<strong>拍照</strong>或<strong>从相册选择</strong> <span class="arrow">→</span> 输入群组名称 <span class="arrow">→</span> 轻点<strong>保存</strong>。照片随后会显示在您的群组名称旁。
+        在<strong>群组</strong>标签页中，轻点<strong>+</strong>按钮并选择<strong>创建群组</strong> <span class="arrow">→</span> 轻点<strong>外观</strong>区域中的圆形头像 <span class="arrow">→</span> 选择<strong>拍照</strong>或<strong>从相册选择</strong> <span class="arrow">→</span> 输入群组名称 <span class="arrow">→</span> 轻点<strong>保存</strong>。照片随后会显示在您的群组名称旁。如需更改现有群组的头像，请打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> <strong>编辑群组</strong> <span class="arrow">→</span> 轻点头像 <span class="arrow">→</span> 选择照片 <span class="arrow">→</span> 轻点<strong>保存</strong>。
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>只有<strong>群组管理员</strong>可以添加或更改群组头像。</li>
           <li>群组头像为 <strong>PRO 订阅功能</strong>。免费用户仅显示姓名首字母头像。</li>
@@ -1480,7 +1546,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        打开<strong>图表</strong> <span class="arrow">→</span> <strong>地点</strong>即可查看<strong>热门地点</strong>，再轻点<strong>在地图上查看</strong>打开<strong>消费地图</strong>。图钉的大小代表您在该处的花费，颜色代表分类。轻点图钉即可查看您在那里买了什么。<ul style="margin:8px 0 8px 18px; padding:0;"><li>轻点 <strong>•••</strong> 按钮可使用<strong>筛选</strong>（时间范围和分类）及切换地图样式。</li><li>轻点<strong>热门地点</strong>中的任一地点，即可查看您在那里的所有消费。地点超过 10 个时，可按标签或地址搜索、在<strong>前 10 个</strong>与<strong>全部</strong>之间切换，并按<strong>消费</strong>或<strong>到访次数</strong>排序；以不同货币付款的地点会换算成默认货币一起排名。</li><li>要为地点自定名称，例如用东京塔代替街道地址，请将该行向右滑动（或长按；在 Mac 上右键点按），再选择<strong>添加标签</strong>；向左滑动可移除标签。名称会显示在热门地点和地图上。标签保存在此设备上，并包含在 JSON 备份中。</li><li>群组支出在地图上计算的是您的分摊金额，而不是整笔账单。</li></ul>
+        打开<strong>图表</strong> <span class="arrow">→</span> <strong>地点</strong>即可查看<strong>热门地点</strong>，再轻点<strong>在地图上查看</strong>打开<strong>消费地图</strong>。图钉的大小代表您在该处的花费，颜色代表分类。轻点图钉即可查看您在那里买了什么。<ul style="margin:8px 0 8px 18px; padding:0;"><li>轻点 <strong>•••</strong> 按钮可使用<strong>筛选</strong>（时间范围和分类）及切换地图样式。</li><li>轻点<strong>热门地点</strong>中的任一地点，即可查看您在那里的所有消费。地点超过 10 个时，可按标签或地址搜索、在<strong>前 10 个</strong>与<strong>全部</strong>之间切换，并按<strong>消费</strong>或<strong>到访次数</strong>排序；以不同货币付款的地点会换算成默认货币一起排名。</li><li>要为地点自定名称，例如用东京塔代替街道地址，请将该行向右滑动（或长按；在 Mac 上右键点按），再选择<strong>添加标签</strong>；向左滑动可移除标签。名称会显示在热门地点和地图上。标签保存在此设备上，并包含在 JSON 备份中。</li><li>群组支出在地图上计算的是您的分摊金额，而不是整笔账单。</li><li>退款会从原购买地点的金额中扣除，热门地点和地图都是如此；已全额退款的地点不再列出。</li></ul>
       </div>
     </div>
     <div class="faq-item">
@@ -1549,7 +1615,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-10-24 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-10-30 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1578,7 +1644,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>メンバー</strong>タブをタップ <span class="arrow">→</span> <strong>招待リンクを共有</strong>をタップ。
+        グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>招待リンクを共有</strong>をタップ。グループ管理者は<strong>メンバー</strong>タブの<strong>さらにメンバーを招待</strong>からも招待できます。
       </div>
     </div>
     <div class="faq-item">
@@ -1587,7 +1653,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> <strong>支払いを記録</strong>をタップ。
+        グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> 上部のカードの下にある<strong>支払いを記録</strong>をタップ。
       </div>
     </div>
     <div class="faq-item">
@@ -1616,8 +1682,8 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>残高</strong>タブ <span class="arrow">→</span> 支払うべき債務の横にある<strong>支払う</strong>ボタンをタップ <span class="arrow">→</span> <strong>Venmo</strong>、<strong>Cash App</strong>、または <strong>PayPal.Me</strong> を選択します。選択したアプリが金額とメモが自動入力された状態で開くので、そのアプリ内で確認し送金を実行してください。その後 Node Expense に戻り<strong>支払いを記録</strong>をタップして精算を記録すると、双方が確認済みとしてマークできます。
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;"><strong>支払う</strong>ボタンは、受取人が少なくとも 1 つの受け取り方法を登録している場合にのみ表示されます。金額が自動で送金されることはなく、すべての支払いは第三者アプリ内で完結します。</div>
+        グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> 上部のカードで、支払うべき債務の横にある<strong>支払う</strong>をタップ <span class="arrow">→</span> 支払い方法を選択します。<strong>Venmo</strong>、<strong>Cash App</strong>、<strong>PayPal.Me</strong> は金額とメモが自動入力された状態で開くので、そのアプリ内で確認し送金を実行してください。<strong>Apple Cash</strong> はメッセージが開き、そこからご自身で送金します。<strong>Zelle</strong>、<strong>LINE</strong>、<strong>WeChat</strong> は情報をコピーして、そのアプリで支払います。その後 Node Expense に戻り<strong>支払いを記録</strong>をタップして精算を記録すると、双方が確認済みとしてマークできます。
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">相手がまだ受け取り方法を設定していない場合、ボタンは<strong>リマインド</strong>と表示されます。タップして<strong>リマインダーを送信</strong>を選ぶか、別の方法で支払ってから<strong>支払いを記録</strong>で記録してください。金額が自動で送金されることはなく、すべての支払いは第三者アプリ内で完結します。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1703,20 +1769,30 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        支出を編集または削除するには？
+        特定のグループの通知をオフにするには？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        編集または削除したい支出をタップ <span class="arrow">→</span> 左にスワイプして<strong>編集</strong>と<strong>削除</strong>オプションを表示。
+        <strong>設定</strong> <span class="arrow">→</span> <strong>通知</strong> <span class="arrow">→</span> <strong>グループ別の通知</strong>で、通知を受け取りたくないグループのスイッチをオフにします。参加しているグループごとにスイッチがあり、最初はすべてオンです。
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>オフにしたグループからは通知が届かなくなります。ほかのグループには影響しません。</li><li>グループ削除の投票と、グループから削除されたことのお知らせは引き続き届くので、データに関わる決定を見逃すことはありません。</li><li><strong>コメント</strong>や<strong>メンバーとグループの変更</strong>など、受け取るグループ通知の種類は、同じ画面の<strong>グループ通知の種類</strong>で選べます。</li></ul>
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        支出の払い戻しを記録するには？
+        支出を編集・削除・返金するには？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        支出をタップして開く <span class="arrow">→</span> 下にスクロールして<strong>払い戻しを記録</strong>をタップ <span class="arrow">→</span> 払い戻し金額を入力（デフォルトは残りの払い戻し可能額） <span class="arrow">→</span> 必要に応じて日付を調整しメモを追加 <span class="arrow">→</span> 再度<strong>払い戻しを記録</strong>をタップして確定。払い戻しは元の支出の分割方法、参加者、通貨、カテゴリを引き継ぎ、元の支払者に返金されます。合計が元の金額を超えない限り、複数回の部分払い戻しを記録できます。払い戻しは支出リストに緑色の<strong>払い戻し</strong>バッジとともに表示され、月間グラフと日次カレンダーの合計から差し引かれます。元の支出を削除すると、紐付いた払い戻しも削除されます。
+        リスト内の支出の行で：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>タップ</strong>すると支出が開きます。</li><li><strong>長押し</strong>（Mac では右クリック）すると、<strong>詳細を表示</strong>、<strong>編集</strong>、<strong>返金</strong>（返金できる場合）、<strong>削除</strong>のメニューが表示されます。</li><li><strong>右にスワイプ</strong>すると<strong>編集</strong>（青）と、返金できる場合は<strong>返金</strong>（緑）が表示されます。</li><li><strong>左にスワイプ</strong>すると<strong>削除</strong>（赤）が表示されます。</li></ul>操作できる人：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>個人の支出</strong>——自分のリストにある支出はすべて編集・削除・返金できます。</li><li><strong>グループの支出</strong>——編集・削除・返金できるのは<strong>グループ管理者</strong>か、その支出を<strong>最初に記録した</strong>メンバーだけです。ほかのメンバーは開いて見ることはできますが、編集・返金・削除は表示されません。</li></ul>返金そのものと、すでに全額返金された支出には<strong>返金</strong>は表示されません。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        支出の返金を記録するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        支出の行を<strong>右にスワイプ</strong>して<strong>返金</strong>をタップ（最も簡単）、または行を長押し（Mac では右クリック）して<strong>返金</strong>を選択します。支出をタップして開き、下にスクロールして<strong>返金を記録</strong>をタップすることもできます <span class="arrow">→</span> 返金額を入力（デフォルトは残りの返金可能額） <span class="arrow">→</span> 必要に応じて日付を調整しメモを追加 <span class="arrow">→</span> <strong>返金を記録</strong>をタップして確定。返金は元の支出の分割方法、参加者、通貨、カテゴリを引き継ぎ、元の支払者に返金されます。合計が元の金額を超えない限り、複数回の部分返金を記録できます。返金は支出リストに緑色の<strong>返金</strong>バッジとともに表示され、月間グラフと日次カレンダーの合計から差し引かれます。元の支出を削除すると、紐付いた返金も削除されます。グループの支出を返金できるのは<strong>グループ管理者</strong>か<strong>最初に記録した人</strong>だけです。
       </div>
     </div>
     <div class="faq-item">
@@ -1775,7 +1851,18 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>+</strong> ボタンをタップして新しい支出を追加 <span class="arrow">→</span> 金額フィールド横の<strong>カメラアイコン</strong>をタップ <span class="arrow">→</span> カメラをレシートに向けて静止させると、自動的に撮影されます。<strong>レシートを確認</strong>画面では、合計と思われる金額に<strong>候補</strong>と表示されます。使いたい金額の横にある<strong>使用</strong>をタップしてください。店名はメモに追加され、読み取れた場合は日付と通貨も自動入力されます。
+        <strong>+</strong> ボタンをタップして新しい支出を追加 <span class="arrow">→</span> 金額フィールド横の<strong>カメラアイコン</strong>をタップ <span class="arrow">→</span> カメラをレシートに向けて静止させると、自動的に撮影されます。<strong>レシートを確認</strong>画面では、合計と思われる金額に<strong>候補</strong>と表示されます。使いたい金額の横にある<strong>使用</strong>をタップしてください。店名はメモに追加され、読み取れた場合は日付と通貨も自動入力されます。Mac では、金額の横のボタンを押すと写真が開きます。レシートの写真を選ぶか、レシートの画像を<strong>支出を追加</strong>ウインドウにドラッグしてください。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Pick &amp; Pay でレシートを品目ごとに分けるには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Pick &amp; Pay はグループのレシートを 1 行ずつ読み取るので、各自が自分の分だけを支払えます。<strong>+</strong> をタップして支出を追加 <span class="arrow">→</span> グループを選択 <span class="arrow">→</span> <strong>割り勘</strong>で <strong>Pick &amp; Pay</strong> を選択 <span class="arrow">→</span> <strong>写真を撮る</strong>または<strong>フォトライブラリ</strong>を選択します（Mac ではフォトライブラリのみ）。続いて<strong>アイテムを選択</strong>画面で：
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>上部で人を選んでから、その人が頼んだ品目をタップします。1 つの品目は最大 4 人で分けられ、金額は均等に割られます。</li><li>ドリンク 3 杯のように数量がある品目は、<strong>正確な数量を割り当てる</strong>をタップすると、人ごとに数を指定できます。</li><li><strong>ゲスト</strong>をタップすると、アプリを持っていない人を追加できます。</li><li>税金はレシートから読み取られます。チップを選んだら、下部の<strong>分割</strong>をタップします。</li><li>ゲストを追加した場合は<strong>請求書を共有</strong>が開き、各ゲストに<strong>メッセージ</strong>や<strong>QRコード</strong>で支払額を送れます。</li></ul>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay は <strong>PRO</strong> 機能で、毎月スキャンできる回数が決まっています。無料トライアルでは 1 回スキャンできます。</div>
       </div>
     </div>
     <div class="faq-item">
@@ -1847,7 +1934,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>グループ</strong>タブで<strong>+</strong>ボタンをタップし<strong>グループを作成</strong>を選択 <span class="arrow">→</span> <strong>外観</strong>セクションの丸いアバターをタップ <span class="arrow">→</span> <strong>写真を撮る</strong>または<strong>ライブラリから選ぶ</strong>を選択 <span class="arrow">→</span> グループ名を入力 <span class="arrow">→</span> <strong>保存</strong>をタップ。写真はグループ名の横に表示されます。
+        <strong>グループ</strong>タブで<strong>+</strong>ボタンをタップし<strong>グループを作成</strong>を選択 <span class="arrow">→</span> <strong>外観</strong>セクションの丸いアバターをタップ <span class="arrow">→</span> <strong>写真を撮る</strong>または<strong>ライブラリから選ぶ</strong>を選択 <span class="arrow">→</span> グループ名を入力 <span class="arrow">→</span> <strong>保存</strong>をタップ。写真はグループ名の横に表示されます。既存のグループの写真を変更するには、グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>グループを編集</strong> <span class="arrow">→</span> アバターをタップ <span class="arrow">→</span> 写真を選択 <span class="arrow">→</span> <strong>保存</strong>をタップします。
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>グループ写真を追加・変更できるのは<strong>グループ管理者</strong>のみです。</li>
           <li>グループ写真は <strong>PRO サブスクリプション機能</strong>です。無料ユーザーには頭文字のみのアバターが表示されます。</li>
@@ -1890,7 +1977,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>グラフ</strong> <span class="arrow">→</span> <strong>場所</strong>を開くと<strong>人気の場所</strong>が表示されます。<strong>マップで見る</strong>をタップすると<strong>支出マップ</strong>が開きます。ピンの大きさはその場所での支出額、色はカテゴリーを表します。ピンをタップすると、そこで何を買ったかを確認できます。<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>•••</strong> ボタンをタップすると、<strong>フィルター</strong>（期間とカテゴリー）とマップのスタイルを変更できます。</li><li><strong>人気の場所</strong>で場所をタップすると、そこでの支出をすべて確認できます。場所が 11 件以上ある場合は、ラベルまたは住所で検索したり、<strong>上位 10 件</strong>と<strong>すべて</strong>を切り替えたり、<strong>支出</strong>または<strong>訪問回数</strong>で並べ替えたりできます。異なる通貨で支払った場所は、デフォルト通貨に換算してまとめて順位付けされます。</li><li>場所に住所の代わりに東京タワーのような好きな名前を付けるには、その行を右にスワイプ（または長押し。Mac では右クリック）して<strong>ラベルを追加</strong>を選びます。左にスワイプするとラベルを削除できます。名前は人気の場所とマップに表示されます。ラベルはこのデバイスに保存され、JSON バックアップにも含まれます。</li><li>グループの支出は、支払い全額ではなく自分の負担分がマップに反映されます。</li></ul>
+        <strong>グラフ</strong> <span class="arrow">→</span> <strong>場所</strong>を開くと<strong>人気の場所</strong>が表示されます。<strong>マップで見る</strong>をタップすると<strong>支出マップ</strong>が開きます。ピンの大きさはその場所での支出額、色はカテゴリーを表します。ピンをタップすると、そこで何を買ったかを確認できます。<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>•••</strong> ボタンをタップすると、<strong>フィルター</strong>（期間とカテゴリー）とマップのスタイルを変更できます。</li><li><strong>人気の場所</strong>で場所をタップすると、そこでの支出をすべて確認できます。場所が 11 件以上ある場合は、ラベルまたは住所で検索したり、<strong>上位 10 件</strong>と<strong>すべて</strong>を切り替えたり、<strong>支出</strong>または<strong>訪問回数</strong>で並べ替えたりできます。異なる通貨で支払った場所は、デフォルト通貨に換算してまとめて順位付けされます。</li><li>場所に住所の代わりに東京タワーのような好きな名前を付けるには、その行を右にスワイプ（または長押し。Mac では右クリック）して<strong>ラベルを追加</strong>を選びます。左にスワイプするとラベルを削除できます。名前は人気の場所とマップに表示されます。ラベルはこのデバイスに保存され、JSON バックアップにも含まれます。</li><li>グループの支出は、支払い全額ではなく自分の負担分がマップに反映されます。</li><li>返金は、購入した場所の金額から差し引かれます（人気の場所とマップの両方）。全額返金された場所は表示されなくなります。</li></ul>
       </div>
     </div>
     <div class="faq-item">
@@ -1959,7 +2046,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1988,7 +2075,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Mitglieder</strong> <span class="arrow">→</span> tippen Sie auf <strong>Einladungslink teilen</strong>.
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Einstellungen</strong> <span class="arrow">→</span> tippen Sie auf <strong>Einladungslink teilen</strong>. Der Gruppen-Administrator kann außerdem im Tab <strong>Mitglieder</strong> auf <strong>Weitere Mitglieder einladen</strong> tippen.
       </div>
     </div>
     <div class="faq-item">
@@ -1997,7 +2084,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Ausgaben</strong> <span class="arrow">→</span> tippen Sie auf <strong>Zahlung erfassen</strong>.
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Ausgaben</strong> <span class="arrow">→</span> tippen Sie unten in der Karte <strong>Salden</strong> auf <strong>Zahlung erfassen</strong>.
       </div>
     </div>
     <div class="faq-item">
@@ -2026,8 +2113,8 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Öffnen Sie die Gruppe <span class="arrow">→</span> Tab <strong>Salden</strong> <span class="arrow">→</span> tippen Sie auf die Schaltfläche <strong>Bezahlen</strong> neben einer Schuld <span class="arrow">→</span> wählen Sie <strong>Venmo</strong>, <strong>Cash App</strong> oder <strong>PayPal.Me</strong>. Die ausgewählte App öffnet sich mit vorausgefülltem Betrag und Hinweis – bestätigen und senden Sie die Zahlung in dieser App. Kehren Sie dann zu Node Expense zurück und tippen Sie auf <strong>Zahlung erfassen</strong>, um die Abrechnung zu protokollieren, sodass beide Seiten sie als bestätigt markieren können.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Die Schaltfläche <strong>Bezahlen</strong> erscheint nur, wenn der Empfänger mindestens eine Zahlungsmethode registriert hat. Beträge werden niemals automatisch überwiesen – alle Zahlungen finden in der Drittanbieter-App statt.</div>
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Ausgaben</strong> <span class="arrow">→</span> tippen Sie oben in der Karte <strong>Salden</strong> neben einer Schuld auf <strong>Bezahlen</strong> <span class="arrow">→</span> wählen Sie, wie Sie zahlen möchten. <strong>Venmo</strong>, <strong>Cash App</strong> und <strong>PayPal.Me</strong> öffnen sich mit vorausgefülltem Betrag und Hinweis – bestätigen und senden Sie die Zahlung in dieser App. <strong>Apple Cash</strong> öffnet Nachrichten, wo Sie die Zahlung selbst senden; bei <strong>Zelle</strong>, <strong>LINE</strong> und <strong>WeChat</strong> kopieren Sie die Angaben und zahlen in der jeweiligen App. Kehren Sie dann zu Node Expense zurück und tippen Sie auf <strong>Zahlung erfassen</strong>, um die Abrechnung zu protokollieren, sodass beide Seiten sie als bestätigt markieren können.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Hat die Person, der Sie Geld schulden, noch keine Zahlungsmethode eingerichtet, zeigt die Schaltfläche stattdessen <strong>Erinnern</strong> – tippen Sie darauf und wählen Sie <strong>Erinnerung senden</strong>, oder zahlen Sie auf anderem Weg und erfassen Sie es mit <strong>Zahlung erfassen</strong>. Beträge werden niemals automatisch überwiesen – alle Zahlungen finden in der Drittanbieter-App statt.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2113,19 +2200,31 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        Wie schalte ich Benachrichtigungen für eine einzelne Gruppe aus?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tippen Sie auf <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Benachrichtigungen</strong> <span class="arrow">→</span> schalten Sie unter <strong>Benachrichtigungen nach Gruppe</strong> die Gruppe aus, von der Sie nichts mehr hören möchten. Jede Gruppe, der Sie angehören, hat einen eigenen Schalter; alle sind standardmäßig eingeschaltet.
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>Eine ausgeschaltete Gruppe sendet Ihnen keine Benachrichtigungen mehr. Ihre anderen Gruppen sind davon nicht betroffen.</li><li>Abstimmungen über das Löschen einer Gruppe und Hinweise, dass Sie aus einer Gruppe entfernt wurden, erhalten Sie weiterhin – so verpassen Sie keine Entscheidung über Ihre Daten.</li><li>Welche Arten von Gruppenbenachrichtigungen Sie erhalten, etwa <strong>Kommentare</strong> oder <strong>Mitglieder &amp; Gruppenänderungen</strong>, legen Sie auf demselben Bildschirm unter <strong>Arten von Gruppenbenachrichtigungen</strong> fest.</li></ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         Wie bearbeite, lösche oder erstatte ich eine Ausgabe?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         Bei jeder Ausgabe in der Liste:
         <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Tippen</strong>, um die Ausgabe zu öffnen.</li>
+          <li><strong>Lange drücken</strong> (auf dem Mac per Rechtsklick), um ein Menü mit <strong>Details anzeigen</strong>, <strong>Bearbeiten</strong>, <strong>Erstatten</strong> (sofern die Ausgabe erstattungsfähig ist) und <strong>Löschen</strong> zu öffnen.</li>
           <li><strong>Nach rechts wischen</strong>, um <strong>Bearbeiten</strong> (blau) und – sofern die Ausgabe erstattungsfähig ist – <strong>Erstatten</strong> (grün) anzuzeigen.</li>
           <li><strong>Nach links wischen</strong>, um <strong>Löschen</strong> (rot) anzuzeigen.</li>
         </ul>
         Wer ist berechtigt:
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Persönliche Ausgabe</strong> — Sie können jede Ausgabe in Ihrer eigenen Liste bearbeiten, löschen und erstatten.</li>
-          <li><strong>Gruppenausgabe</strong> — nur der <strong>Gruppen-Administrator</strong> oder das Mitglied, das die Ausgabe <strong>ursprünglich erfasst</strong> hat, kann sie bearbeiten, löschen oder erstatten. Andere Mitglieder sehen die Zeile, aber keine Wisch-Optionen.</li>
+          <li><strong>Gruppenausgabe</strong> — nur der <strong>Gruppen-Administrator</strong> oder das Mitglied, das die Ausgabe <strong>ursprünglich erfasst</strong> hat, kann sie bearbeiten, löschen oder erstatten. Andere Mitglieder können die Ausgabe öffnen und ansehen, sehen aber weder Bearbeiten noch Erstatten oder Löschen.</li>
         </ul>
         Die Aktion <strong>Erstatten</strong> wird bei Erstattungen selbst sowie bei bereits vollständig erstatteten Ausgaben ausgeblendet.
       </div>
@@ -2136,7 +2235,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>Wischen Sie nach rechts</strong> auf der Ausgabezeile und tippen Sie auf <strong>Erstatten</strong> (am schnellsten), oder tippen Sie auf die Ausgabe, um sie zu öffnen, und scrollen Sie nach unten zu <strong>Erstattung erfassen</strong> <span class="arrow">→</span> geben Sie den Erstattungsbetrag ein (voreingestellt ist der vollständig erstattbare Restbetrag) <span class="arrow">→</span> passen Sie optional das Datum an und fügen Sie eine Notiz hinzu <span class="arrow">→</span> tippen Sie auf <strong>Erstattung erfassen</strong>, um zu bestätigen. Die Erstattung übernimmt die Aufteilung, Teilnehmer, Währung und Kategorie der ursprünglichen Ausgabe und wird der Person gutgeschrieben, die die ursprüngliche Ausgabe bezahlt hat. Sie können mehrere Teilerstattungen erfassen, solange der Gesamtbetrag den ursprünglichen Betrag nicht überschreitet. Erstattungen erscheinen in Ihrer Ausgabenliste mit einem grünen <strong>Erstattung</strong>-Abzeichen und werden von den monatlichen Diagramm- und täglichen Kalendersummen abgezogen. Beim Löschen der ursprünglichen Ausgabe werden auch die zugehörigen Erstattungen entfernt. Bei Gruppenausgaben können nur der <strong>Gruppen-Administrator</strong> oder das <strong>ursprünglich erfassende Mitglied</strong> eine Erstattung ausstellen.
+        <strong>Wischen Sie nach rechts</strong> auf der Ausgabezeile und tippen Sie auf <strong>Erstatten</strong> (am schnellsten), halten Sie die Zeile gedrückt (auf dem Mac per Rechtsklick) und wählen Sie <strong>Erstatten</strong>, oder tippen Sie auf die Ausgabe, um sie zu öffnen, und scrollen Sie nach unten zu <strong>Erstattung erfassen</strong> <span class="arrow">→</span> geben Sie den Erstattungsbetrag ein (voreingestellt ist der vollständig erstattbare Restbetrag) <span class="arrow">→</span> passen Sie optional das Datum an und fügen Sie eine Notiz hinzu <span class="arrow">→</span> tippen Sie auf <strong>Erstattung erfassen</strong>, um zu bestätigen. Die Erstattung übernimmt die Aufteilung, Teilnehmer, Währung und Kategorie der ursprünglichen Ausgabe und wird der Person gutgeschrieben, die die ursprüngliche Ausgabe bezahlt hat. Sie können mehrere Teilerstattungen erfassen, solange der Gesamtbetrag den ursprünglichen Betrag nicht überschreitet. Erstattungen erscheinen in Ihrer Ausgabenliste mit einem grünen <strong>Erstattung</strong>-Abzeichen und werden von den monatlichen Diagramm- und täglichen Kalendersummen abgezogen. Beim Löschen der ursprünglichen Ausgabe werden auch die zugehörigen Erstattungen entfernt. Bei Gruppenausgaben können nur der <strong>Gruppen-Administrator</strong> oder das <strong>ursprünglich erfassende Mitglied</strong> eine Erstattung ausstellen.
       </div>
     </div>
     <div class="faq-item">
@@ -2196,6 +2295,18 @@
       </button>
       <div class="faq-answer">
         Tippen Sie auf die Schaltfläche <strong>+</strong>, um eine neue Ausgabe hinzuzufügen <span class="arrow">→</span> tippen Sie auf das <strong>Kamerasymbol</strong> neben dem Betragsfeld <span class="arrow">→</span> richten Sie Ihre Kamera auf den Kassenbon und halten Sie sie ruhig; die Aufnahme erfolgt automatisch. Auf dem Bildschirm <strong>Beleg bestätigen</strong> ist der wahrscheinliche Gesamtbetrag mit <strong>Vorschlag</strong> markiert. Tippen Sie neben dem gewünschten Betrag auf <strong>Übernehmen</strong>. Der Händler wird in die Notiz übernommen, und Datum und Währung werden ausgefüllt, sofern sie lesbar sind.
+        Auf dem Mac öffnet die Schaltfläche neben dem Betrag stattdessen Ihre Fotos: Wählen Sie ein Bild des Kassenbons, oder ziehen Sie ein Bild des Kassenbons in das Fenster <strong>Ausgabe hinzufügen</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie teile ich einen Kassenbon mit Pick &amp; Pay Posten für Posten auf?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Pick &amp; Pay liest einen Gruppenbeleg Zeile für Zeile, sodass alle nur bezahlen, was sie tatsächlich hatten. Tippen Sie auf <strong>+</strong>, um eine Ausgabe hinzuzufügen <span class="arrow">→</span> wählen Sie eine Gruppe <span class="arrow">→</span> wählen Sie unter <strong>Aufteilen</strong> die Option <strong>Pick &amp; Pay</strong> <span class="arrow">→</span> wählen Sie <strong>Foto aufnehmen</strong> oder <strong>Fotomediathek</strong> (auf dem Mac nur Fotomediathek). Dann auf dem Bildschirm <strong>Artikel auswählen</strong>:
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>Tippen Sie oben auf eine Person und dann auf jeden Artikel, den sie hatte. Bis zu 4 Personen können sich einen Artikel teilen; die Kosten werden gleichmäßig aufgeteilt.</li><li>Bei Artikeln mit Menge, etwa 3 Getränken, tippen Sie auf <strong>Genaue Mengen zuweisen</strong>, um jeder Person ihre eigene Anzahl zu geben.</li><li>Tippen Sie auf <strong>Gast</strong>, um jemanden ohne die App hinzuzufügen.</li><li>Die Steuer wird vom Kassenbon übernommen. Wählen Sie ein Trinkgeld und tippen Sie dann unten auf die Schaltfläche zum Aufteilen.</li><li>Wenn Sie Gäste hinzugefügt haben, öffnet sich <strong>Rechnung teilen</strong>, damit Sie jedem Gast seinen Betrag per <strong>Nachricht</strong> oder <strong>QR-Code</strong> schicken können.</li></ul>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay ist eine <strong>PRO</strong>-Funktion mit einer monatlichen Anzahl an Scans. Die kostenlose Testphase enthält 1 Scan.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2267,7 +2378,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tippen Sie im Tab <strong>Gruppen</strong> auf die Schaltfläche <strong>+</strong> und wählen Sie <strong>Gruppe erstellen</strong> <span class="arrow">→</span> tippen Sie auf den runden Avatar im Bereich <strong>Darstellung</strong> <span class="arrow">→</span> wählen Sie <strong>Foto aufnehmen</strong> oder <strong>Aus Bibliothek wählen</strong> <span class="arrow">→</span> geben Sie einen Gruppennamen ein <span class="arrow">→</span> tippen Sie auf <strong>Speichern</strong>. Das Foto erscheint dann neben Ihrem Gruppennamen.
+        Tippen Sie im Tab <strong>Gruppen</strong> auf die Schaltfläche <strong>+</strong> und wählen Sie <strong>Gruppe erstellen</strong> <span class="arrow">→</span> tippen Sie auf den runden Avatar im Bereich <strong>Darstellung</strong> <span class="arrow">→</span> wählen Sie <strong>Foto aufnehmen</strong> oder <strong>Aus Bibliothek wählen</strong> <span class="arrow">→</span> geben Sie einen Gruppennamen ein <span class="arrow">→</span> tippen Sie auf <strong>Speichern</strong>. Das Foto erscheint dann neben Ihrem Gruppennamen. Um das Foto einer bestehenden Gruppe zu ändern, öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Einstellungen</strong> <span class="arrow">→</span> <strong>Gruppe bearbeiten</strong> <span class="arrow">→</span> tippen Sie auf den Avatar <span class="arrow">→</span> wählen Sie ein Foto <span class="arrow">→</span> tippen Sie auf <strong>Speichern</strong>.
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>Nur der <strong>Gruppen-Administrator</strong> kann ein Gruppenfoto hinzufügen oder ändern.</li>
           <li>Gruppenfotos sind eine <strong>PRO-Abonnementfunktion</strong>. Kostenlose Nutzer sehen nur den Initialen-Avatar.</li>
@@ -2310,7 +2421,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Öffnen Sie <strong>Diagramme</strong> <span class="arrow">→</span> <strong>Standort</strong>, um Ihre <strong>Top-Standorte</strong> zu sehen, und tippen Sie dann auf <strong>Auf Karte anzeigen</strong> für die <strong>Ausgabenkarte</strong>. Die Größe jeder Stecknadel zeigt, wie viel Sie dort ausgegeben haben, die Farbe die Kategorie. Tippen Sie auf eine Stecknadel, um zu sehen, was Sie dort gekauft haben.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Über die Taste <strong>•••</strong> erreichen Sie die <strong>Filter</strong> (Zeitraum und Kategorien) und den Kartenstil.</li><li>Tippen Sie in den <strong>Top-Standorten</strong> auf einen Ort, um alles zu sehen, was Sie dort ausgegeben haben. Bei mehr als 10 Orten können Sie nach Etikett oder Adresse suchen, zwischen den <strong>Top 10</strong> und <strong>Alle</strong> wechseln und nach <strong>Ausgaben</strong> oder <strong>Besuche</strong> sortieren. Orte, an denen Sie in verschiedenen Währungen bezahlt haben, werden gemeinsam in Ihrer Standardwährung eingestuft.</li><li>Um einem Ort einen eigenen Namen zu geben, etwa Tokyo Tower statt der Straßenadresse, wischen Sie seine Zeile nach rechts (oder halten Sie sie gedrückt; auf dem Mac per Rechtsklick) und wählen Sie <strong>Etikett hinzufügen</strong>. Nach links wischen entfernt das Etikett. Der Name erscheint in den Top-Standorten und auf der Karte. Etiketten werden auf diesem Gerät gespeichert und sind in JSON-Backups enthalten.</li><li>Bei Gruppenausgaben zählt die Karte Ihren Anteil, nicht die ganze Rechnung.</li></ul>
+        Öffnen Sie <strong>Diagramme</strong> <span class="arrow">→</span> <strong>Standort</strong>, um Ihre <strong>Top-Standorte</strong> zu sehen, und tippen Sie dann auf <strong>Auf Karte anzeigen</strong> für die <strong>Ausgabenkarte</strong>. Die Größe jeder Stecknadel zeigt, wie viel Sie dort ausgegeben haben, die Farbe die Kategorie. Tippen Sie auf eine Stecknadel, um zu sehen, was Sie dort gekauft haben.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Über die Taste <strong>•••</strong> erreichen Sie die <strong>Filter</strong> (Zeitraum und Kategorien) und den Kartenstil.</li><li>Tippen Sie in den <strong>Top-Standorten</strong> auf einen Ort, um alles zu sehen, was Sie dort ausgegeben haben. Bei mehr als 10 Orten können Sie nach Etikett oder Adresse suchen, zwischen den <strong>Top 10</strong> und <strong>Alle</strong> wechseln und nach <strong>Ausgaben</strong> oder <strong>Besuche</strong> sortieren. Orte, an denen Sie in verschiedenen Währungen bezahlt haben, werden gemeinsam in Ihrer Standardwährung eingestuft.</li><li>Um einem Ort einen eigenen Namen zu geben, etwa Tokyo Tower statt der Straßenadresse, wischen Sie seine Zeile nach rechts (oder halten Sie sie gedrückt; auf dem Mac per Rechtsklick) und wählen Sie <strong>Etikett hinzufügen</strong>. Nach links wischen entfernt das Etikett. Der Name erscheint in den Top-Standorten und auf der Karte. Etiketten werden auf diesem Gerät gespeichert und sind in JSON-Backups enthalten.</li><li>Bei Gruppenausgaben zählt die Karte Ihren Anteil, nicht die ganze Rechnung.</li><li>Erstattungen werden von dem Ort abgezogen, an dem Sie gekauft haben – in den Top-Standorten und auf der Karte. Ein vollständig erstatteter Ort wird nicht mehr aufgeführt.</li></ul>
       </div>
     </div>
     <div class="faq-item">
@@ -2379,7 +2490,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2408,7 +2519,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Miembros</strong> <span class="arrow">→</span> toque <strong>Compartir enlace de invitación</strong>.
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Ajustes</strong> <span class="arrow">→</span> toque <strong>Compartir enlace de invitación</strong>. El administrador del grupo también puede tocar <strong>Invitar más miembros</strong> en la pestaña <strong>Miembros</strong>.
       </div>
     </div>
     <div class="faq-item">
@@ -2417,7 +2528,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Gastos</strong> <span class="arrow">→</span> toque <strong>Registrar un pago</strong>.
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Gastos</strong> <span class="arrow">→</span> toque <strong>Registrar pago</strong> en la parte inferior de la tarjeta <strong>Saldos</strong>.
       </div>
     </div>
     <div class="faq-item">
@@ -2446,8 +2557,8 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Abra el grupo <span class="arrow">→</span> pestaña <strong>Saldos</strong> <span class="arrow">→</span> toque el botón <strong>Pagar</strong> junto a cualquier deuda que deba <span class="arrow">→</span> elija <strong>Venmo</strong>, <strong>Cash App</strong> o <strong>PayPal.Me</strong>. La aplicación seleccionada se abre con el monto y la nota ya completados — confirme y envíe el pago dentro de esa aplicación. Luego regrese a Node Expense y toque <strong>Registrar un pago</strong> para registrar la liquidación y que ambas partes puedan marcarla como confirmada.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">El botón <strong>Pagar</strong> solo aparece cuando el destinatario ha registrado al menos un método de pago. Los montos nunca se transfieren automáticamente — todos los pagos ocurren dentro de la aplicación de terceros.</div>
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Gastos</strong> <span class="arrow">→</span> en la tarjeta <strong>Saldos</strong> de arriba, toque <strong>Pagar</strong> junto a una deuda que deba <span class="arrow">→</span> elija cómo pagar. <strong>Venmo</strong>, <strong>Cash App</strong> y <strong>PayPal.Me</strong> se abren con el monto y la nota ya completados — confirme y envíe el pago dentro de esa aplicación. <strong>Apple Cash</strong> abre Mensajes, donde usted mismo envía el pago; con <strong>Zelle</strong>, <strong>LINE</strong> y <strong>WeChat</strong> copia los datos y paga en esa aplicación. Luego regrese a Node Expense y toque <strong>Registrar pago</strong> para registrar la liquidación y que ambas partes puedan marcarla como confirmada.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Si la persona a quien le debe aún no ha configurado un método de pago, el botón muestra <strong>Recordar</strong> — tóquelo y elija <strong>Enviar recordatorio</strong>, o pague de otra forma y regístrelo con <strong>Registrar pago</strong>. Los montos nunca se transfieren automáticamente — todos los pagos ocurren dentro de la aplicación de terceros.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2476,7 +2587,7 @@
         <ol style="margin:8px 0 8px 18px; padding:0;">
           <li>Toque <strong>Pagar</strong> en la deuda y luego toque <strong>Copiar</strong> junto a Zelle, LINE o WeChat.</li>
           <li>Abra la app que usa con esa persona — la app de su propio banco para Zelle, o LINE o WeChat — y envíe el pago allí. Para LINE y WeChat deben ser contactos primero.</li>
-          <li>Vuelva a Node Expense y toque <strong>Registrar un pago</strong> para que ambos vean la deuda saldada.</li>
+          <li>Vuelva a Node Expense y toque <strong>Registrar pago</strong> para que ambos vean la deuda saldada.</li>
         </ol>
         <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Nada se transfiere automáticamente, ni con estos métodos ni con los demás. Node Expense nunca mueve dinero: solo le indica dónde enviarlo y registra que lo hizo.</div>
       </div>
@@ -2533,19 +2644,31 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo desactivo las notificaciones de un solo grupo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Toque <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Notificaciones</strong> <span class="arrow">→</span> en <strong>Notificaciones por grupo</strong>, desactive el grupo del que no quiera recibir avisos. Cada grupo al que pertenece tiene su propio interruptor, y todos están activados de forma predeterminada.
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>Un grupo desactivado deja de enviarle notificaciones. Sus demás grupos no se ven afectados.</li><li>Las votaciones para eliminar un grupo y los avisos de que ya no forma parte de un grupo le seguirán llegando, para que nunca se pierda una decisión sobre sus datos.</li><li>Para elegir qué tipos de notificaciones de grupo recibe, como <strong>Comentarios</strong> o <strong>Cambios de miembros y grupo</strong>, use <strong>Tipos de notificaciones del grupo</strong> en la misma pantalla.</li></ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         ¿Cómo edito, elimino o reembolso un gasto?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         En cualquier fila de gasto de la lista:
         <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Tóquela</strong> para abrir el gasto.</li>
+          <li><strong>Manténgala pulsada</strong> (clic derecho en Mac) para ver un menú con <strong>Ver detalles</strong>, <strong>Editar</strong>, <strong>Reembolsar</strong> (si el gasto es reembolsable) y <strong>Eliminar</strong>.</li>
           <li><strong>Deslice hacia la derecha</strong> para mostrar <strong>Editar</strong> (azul) y, cuando el gasto sea reembolsable, <strong>Reembolsar</strong> (verde).</li>
           <li><strong>Deslice hacia la izquierda</strong> para mostrar <strong>Eliminar</strong> (rojo).</li>
         </ul>
         Quién puede hacerlo:
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Gasto personal</strong> — puede editar, eliminar y reembolsar cualquier gasto de su propia lista.</li>
-          <li><strong>Gasto de grupo</strong> — solo el <strong>administrador del grupo</strong> o el miembro que <strong>registró originalmente</strong> el gasto puede editarlo, eliminarlo o reembolsarlo. Los demás miembros pueden ver la fila, pero no verán las opciones al deslizar.</li>
+          <li><strong>Gasto de grupo</strong> — solo el <strong>administrador del grupo</strong> o el miembro que <strong>registró originalmente</strong> el gasto puede editarlo, eliminarlo o reembolsarlo. Los demás miembros pueden abrir el gasto para verlo, pero no verán Editar, Reembolsar ni Eliminar.</li>
         </ul>
         La acción <strong>Reembolsar</strong> se oculta en los reembolsos mismos y en gastos que ya se han reembolsado por completo.
       </div>
@@ -2556,7 +2679,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>Deslice hacia la derecha</strong> en la fila del gasto y toque <strong>Reembolsar</strong> (la forma más rápida), o toque el gasto para abrirlo y desplácese hacia abajo hasta <strong>Registrar reembolso</strong> <span class="arrow">→</span> introduzca el importe del reembolso (el valor predeterminado es el importe reembolsable restante) <span class="arrow">→</span> opcionalmente ajuste la fecha y añada una nota <span class="arrow">→</span> toque <strong>Registrar reembolso</strong> para confirmar. El reembolso hereda la división, los participantes, la moneda y la categoría del gasto original, y se acredita a quien pagó el gasto original. Puede registrar varios reembolsos parciales siempre que el total no supere el importe original. Los reembolsos aparecen en su lista de gastos con una etiqueta verde <strong>Reembolso</strong> y se restan de los totales del gráfico mensual y del calendario diario. Al eliminar el gasto original también se eliminan sus reembolsos vinculados. En gastos de grupo, solo el <strong>administrador del grupo</strong> o el <strong>miembro que registró originalmente</strong> el gasto puede emitir un reembolso.
+        <strong>Deslice hacia la derecha</strong> en la fila del gasto y toque <strong>Reembolsar</strong> (la forma más rápida), mantenga pulsada la fila (clic derecho en Mac) y elija <strong>Reembolsar</strong>, o toque el gasto para abrirlo y desplácese hacia abajo hasta <strong>Registrar reembolso</strong> <span class="arrow">→</span> introduzca el importe del reembolso (el valor predeterminado es el importe reembolsable restante) <span class="arrow">→</span> opcionalmente ajuste la fecha y añada una nota <span class="arrow">→</span> toque <strong>Registrar reembolso</strong> para confirmar. El reembolso hereda la división, los participantes, la moneda y la categoría del gasto original, y se acredita a quien pagó el gasto original. Puede registrar varios reembolsos parciales siempre que el total no supere el importe original. Los reembolsos aparecen en su lista de gastos con una etiqueta verde <strong>Reembolso</strong> y se restan de los totales del gráfico mensual y del calendario diario. Al eliminar el gasto original también se eliminan sus reembolsos vinculados. En gastos de grupo, solo el <strong>administrador del grupo</strong> o el <strong>miembro que registró originalmente</strong> el gasto puede emitir un reembolso.
       </div>
     </div>
     <div class="faq-item">
@@ -2616,6 +2739,18 @@
       </button>
       <div class="faq-answer">
         Toque el botón <strong>+</strong> para agregar un nuevo gasto <span class="arrow">→</span> toque el <strong>ícono de cámara</strong> junto al campo de monto <span class="arrow">→</span> apunte su cámara al recibo y manténgala quieta; se captura automáticamente. En la pantalla <strong>Confirmar recibo</strong>, el total probable aparece marcado como <strong>Sugerido</strong>. Toque <strong>Usar</strong> junto al monto que desee. El comercio se añade a la nota, y la fecha y la moneda se completan cuando se pueden leer.
+        En Mac, el botón junto al monto abre sus fotos: elija una imagen del recibo o arrastre una imagen del recibo a la ventana <strong>Agregar gasto</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo divido un recibo artículo por artículo con Pick &amp; Pay?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Pick &amp; Pay lee un recibo de grupo línea por línea, para que cada persona pague solo lo que consumió. Toque <strong>+</strong> para agregar un gasto <span class="arrow">→</span> elija un grupo <span class="arrow">→</span> en <strong>Dividir</strong>, elija <strong>Pick &amp; Pay</strong> <span class="arrow">→</span> elija <strong>Tomar foto</strong> o <strong>Biblioteca de fotos</strong> (en Mac, solo Biblioteca de fotos). Después, en la pantalla <strong>Seleccionar artículos</strong>:
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>Toque una persona arriba y luego cada artículo que consumió. Hasta 4 personas pueden compartir un artículo, y su costo se divide a partes iguales.</li><li>Para un artículo con cantidad, como 3 bebidas, toque <strong>Asignar cantidades exactas</strong> para dar a cada persona su propia cantidad.</li><li>Toque <strong>Invitado</strong> para añadir a alguien que no tiene la app.</li><li>Los impuestos se toman del recibo. Elija una propina y luego toque <strong>Dividir</strong> abajo.</li><li>Si añadió invitados, se abre <strong>Compartir cuenta</strong> para que envíe a cada invitado su parte por <strong>Mensaje</strong> o <strong>Código QR</strong>.</li></ul>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay es una función <strong>PRO</strong> con un número mensual de escaneos. La prueba gratuita incluye 1 escaneo.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2687,7 +2822,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        En la pestaña <strong>Grupos</strong>, toque el botón <strong>+</strong> y seleccione <strong>Crear grupo</strong> <span class="arrow">→</span> toque el avatar circular en la sección <strong>Apariencia</strong> <span class="arrow">→</span> elija <strong>Tomar foto</strong> o <strong>Elegir de la biblioteca</strong> <span class="arrow">→</span> ingrese un nombre de grupo <span class="arrow">→</span> toque <strong>Guardar</strong>. La foto aparecerá junto al nombre de su grupo.
+        En la pestaña <strong>Grupos</strong>, toque el botón <strong>+</strong> y seleccione <strong>Crear grupo</strong> <span class="arrow">→</span> toque el avatar circular en la sección <strong>Apariencia</strong> <span class="arrow">→</span> elija <strong>Tomar foto</strong> o <strong>Elegir de la biblioteca</strong> <span class="arrow">→</span> ingrese un nombre de grupo <span class="arrow">→</span> toque <strong>Guardar</strong>. La foto aparecerá junto al nombre de su grupo. Para cambiar la foto de un grupo existente, abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Ajustes</strong> <span class="arrow">→</span> <strong>Editar grupo</strong> <span class="arrow">→</span> toque el avatar <span class="arrow">→</span> elija una foto <span class="arrow">→</span> toque <strong>Guardar</strong>.
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>Solo el <strong>administrador del grupo</strong> puede añadir o cambiar la foto del grupo.</li>
           <li>Las fotos de grupo son una <strong>función de suscripción PRO</strong>. Los usuarios gratuitos solo ven el avatar de iniciales.</li>
@@ -2730,7 +2865,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Abre <strong>Gráficos</strong> <span class="arrow">→</span> <strong>Ubicación</strong> para ver tus <strong>Ubicaciones principales</strong> y toca <strong>Ver en el mapa</strong> para abrir el <strong>Mapa de gastos</strong>. El tamaño de cada marcador indica cuánto gastaste allí y el color, la categoría. Toca un marcador para ver qué compraste allí.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Toca el botón <strong>•••</strong> para los <strong>Filtros</strong> (periodo y categorías) y el estilo del mapa.</li><li>Toca un lugar en <strong>Ubicaciones principales</strong> para ver todo lo que gastaste allí. Con más de 10 lugares puedes buscar por etiqueta o dirección, alternar entre <strong>Top 10</strong> y <strong>Todas</strong>, y ordenar por <strong>Gastos</strong> o <strong>Visitas</strong>. Los lugares pagados en distintas monedas se ordenan juntos en tu moneda predeterminada.</li><li>Para ponerle a un lugar tu propio nombre, como Torre de Tokio en lugar de la dirección, desliza su fila hacia la derecha (o mantenla pulsada; clic derecho en Mac) y elige <strong>Añadir etiqueta</strong>. Desliza hacia la izquierda para quitar la etiqueta. El nombre aparece en Ubicaciones principales y en el mapa. Las etiquetas se guardan en este dispositivo y se incluyen en las copias de seguridad JSON.</li><li>En los gastos de grupo, el mapa cuenta tu parte, no la cuenta completa.</li></ul>
+        Abre <strong>Gráficos</strong> <span class="arrow">→</span> <strong>Ubicación</strong> para ver tus <strong>Ubicaciones principales</strong> y toca <strong>Ver en el mapa</strong> para abrir el <strong>Mapa de gastos</strong>. El tamaño de cada marcador indica cuánto gastaste allí y el color, la categoría. Toca un marcador para ver qué compraste allí.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Toca el botón <strong>•••</strong> para los <strong>Filtros</strong> (periodo y categorías) y el estilo del mapa.</li><li>Toca un lugar en <strong>Ubicaciones principales</strong> para ver todo lo que gastaste allí. Con más de 10 lugares puedes buscar por etiqueta o dirección, alternar entre <strong>Top 10</strong> y <strong>Todas</strong>, y ordenar por <strong>Gastos</strong> o <strong>Visitas</strong>. Los lugares pagados en distintas monedas se ordenan juntos en tu moneda predeterminada.</li><li>Para ponerle a un lugar tu propio nombre, como Torre de Tokio en lugar de la dirección, desliza su fila hacia la derecha (o mantenla pulsada; clic derecho en Mac) y elige <strong>Añadir etiqueta</strong>. Desliza hacia la izquierda para quitar la etiqueta. El nombre aparece en Ubicaciones principales y en el mapa. Las etiquetas se guardan en este dispositivo y se incluyen en las copias de seguridad JSON.</li><li>En los gastos de grupo, el mapa cuenta tu parte, no la cuenta completa.</li><li>Los reembolsos se descuentan del lugar donde hiciste la compra, en Ubicaciones principales y en el mapa. Un lugar reembolsado por completo deja de aparecer.</li></ul>
       </div>
     </div>
     <div class="faq-item">
@@ -2799,7 +2934,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-10-24 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-10-30 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2828,7 +2963,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Membres</strong> <span class="arrow">→</span> appuyez sur <strong>Partager le lien d'invitation</strong>.
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Réglages</strong> <span class="arrow">→</span> appuyez sur <strong>Partager le lien d'invitation</strong>. L'admin du groupe peut aussi appuyer sur <strong>Inviter plus de membres</strong> dans l'onglet <strong>Membres</strong>.
       </div>
     </div>
     <div class="faq-item">
@@ -2837,7 +2972,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Dépenses</strong> <span class="arrow">→</span> appuyez sur <strong>Enregistrer un paiement</strong>.
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Dépenses</strong> <span class="arrow">→</span> appuyez sur <strong>Enregistrer un paiement</strong> en bas de la carte <strong>Soldes</strong>.
       </div>
     </div>
     <div class="faq-item">
@@ -2866,8 +3001,8 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Ouvrez le groupe <span class="arrow">→</span> onglet <strong>Soldes</strong> <span class="arrow">→</span> appuyez sur le bouton <strong>Payer</strong> à côté de la dette concernée <span class="arrow">→</span> choisissez <strong>Venmo</strong>, <strong>Cash App</strong> ou <strong>PayPal.Me</strong>. L'application sélectionnée s'ouvre avec le montant et la note préremplis — confirmez et envoyez le paiement dans cette application. Revenez ensuite dans Node Expense et appuyez sur <strong>Enregistrer un paiement</strong> pour consigner le règlement afin que les deux parties puissent le marquer comme confirmé.
-        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Le bouton <strong>Payer</strong> n'apparaît que lorsque le destinataire a enregistré au moins une méthode de paiement. Les montants ne sont jamais transférés automatiquement — tous les paiements s'effectuent dans l'application tierce.</div>
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Dépenses</strong> <span class="arrow">→</span> dans la carte <strong>Soldes</strong> en haut, appuyez sur <strong>Payer</strong> à côté d'une dette <span class="arrow">→</span> choisissez comment payer. <strong>Venmo</strong>, <strong>Cash App</strong> et <strong>PayPal.Me</strong> s'ouvrent avec le montant et la note préremplis — confirmez et envoyez le paiement dans cette application. <strong>Apple Cash</strong> ouvre Messages, où vous envoyez le paiement vous-même ; pour <strong>Zelle</strong>, <strong>LINE</strong> et <strong>WeChat</strong>, vous copiez les informations et payez dans l'application concernée. Revenez ensuite dans Node Expense et appuyez sur <strong>Enregistrer un paiement</strong> pour consigner le règlement afin que les deux parties puissent le marquer comme confirmé.
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Si la personne à qui vous devez de l'argent n'a pas encore configuré de méthode de paiement, le bouton affiche <strong>Rappeler</strong> — appuyez dessus et choisissez <strong>Envoyer un rappel</strong>, ou payez autrement et consignez-le avec <strong>Enregistrer un paiement</strong>. Les montants ne sont jamais transférés automatiquement — tous les paiements s'effectuent dans l'application tierce.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -2953,19 +3088,31 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
+        Comment désactiver les notifications d'un seul groupe ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Appuyez sur <strong>Réglages</strong> <span class="arrow">→</span> <strong>Notifications</strong> <span class="arrow">→</span> sous <strong>Notifications par groupe</strong>, désactivez le groupe dont vous ne voulez plus recevoir de notifications. Chaque groupe dont vous faites partie a son propre interrupteur, activé par défaut.
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>Un groupe désactivé ne vous envoie plus de notifications. Vos autres groupes ne sont pas concernés.</li><li>Les votes de suppression d'un groupe et les avis de retrait d'un groupe vous parviendront toujours, pour que vous ne manquiez aucune décision concernant vos données.</li><li>Pour choisir les types de notifications de groupe que vous recevez, comme <strong>Commentaires</strong> ou <strong>Changements de membres et de groupe</strong>, utilisez <strong>Types de notifications de groupe</strong> sur le même écran.</li></ul>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
         Comment modifier, supprimer ou rembourser une dépense ?
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         Sur n'importe quelle ligne de dépense dans la liste :
         <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>Appuyez</strong> sur la ligne pour ouvrir la dépense.</li>
+          <li><strong>Appuyez longuement</strong> (clic droit sur Mac) pour afficher un menu avec <strong>Voir les détails</strong>, <strong>Modifier</strong>, <strong>Rembourser</strong> (si la dépense est remboursable) et <strong>Supprimer</strong>.</li>
           <li><strong>Glissez vers la droite</strong> pour afficher <strong>Modifier</strong> (bleu) et, si la dépense est remboursable, <strong>Rembourser</strong> (vert).</li>
           <li><strong>Glissez vers la gauche</strong> pour afficher <strong>Supprimer</strong> (rouge).</li>
         </ul>
         Qui peut effectuer ces actions :
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Dépense personnelle</strong> — vous pouvez modifier, supprimer et rembourser toute dépense de votre propre liste.</li>
-          <li><strong>Dépense de groupe</strong> — seuls l'<strong>admin du groupe</strong> ou le membre qui a <strong>enregistré la dépense à l'origine</strong> peuvent la modifier, la supprimer ou la rembourser. Les autres membres voient la ligne mais n'ont pas accès aux options de glissement.</li>
+          <li><strong>Dépense de groupe</strong> — seuls l'<strong>admin du groupe</strong> ou le membre qui a <strong>enregistré la dépense à l'origine</strong> peuvent la modifier, la supprimer ou la rembourser. Les autres membres peuvent ouvrir la dépense pour la consulter, mais ne voient ni Modifier, ni Rembourser, ni Supprimer.</li>
         </ul>
         L'action <strong>Rembourser</strong> est masquée sur les remboursements eux-mêmes et sur les dépenses déjà entièrement remboursées.
       </div>
@@ -2976,7 +3123,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>Glissez vers la droite</strong> sur la ligne de dépense et appuyez sur <strong>Rembourser</strong> (le plus rapide), ou appuyez sur la dépense pour l'ouvrir et faites défiler jusqu'à <strong>Enregistrer un remboursement</strong> <span class="arrow">→</span> saisissez le montant du remboursement (par défaut, le montant total remboursable restant) <span class="arrow">→</span> ajustez éventuellement la date et ajoutez une note <span class="arrow">→</span> appuyez sur <strong>Enregistrer un remboursement</strong> pour confirmer. Le remboursement hérite de la répartition, des participants, de la devise et de la catégorie de la dépense originale, et est crédité à la personne qui a payé l'original. Vous pouvez enregistrer plusieurs remboursements partiels tant que le total ne dépasse pas le montant original. Les remboursements apparaissent dans votre liste de dépenses avec un badge <strong>Remboursement</strong> vert et sont déduits des totaux du graphique mensuel et du calendrier quotidien. La suppression de la dépense originale supprime également les remboursements associés. Pour les dépenses de groupe, seuls l'<strong>admin du groupe</strong> ou le <strong>membre ayant enregistré la dépense</strong> peuvent émettre un remboursement.
+        <strong>Glissez vers la droite</strong> sur la ligne de dépense et appuyez sur <strong>Rembourser</strong> (le plus rapide), appuyez longuement sur la ligne (clic droit sur Mac) et choisissez <strong>Rembourser</strong>, ou appuyez sur la dépense pour l'ouvrir et faites défiler jusqu'à <strong>Enregistrer un remboursement</strong> <span class="arrow">→</span> saisissez le montant du remboursement (par défaut, le montant total remboursable restant) <span class="arrow">→</span> ajustez éventuellement la date et ajoutez une note <span class="arrow">→</span> appuyez sur <strong>Enregistrer un remboursement</strong> pour confirmer. Le remboursement hérite de la répartition, des participants, de la devise et de la catégorie de la dépense originale, et est crédité à la personne qui a payé l'original. Vous pouvez enregistrer plusieurs remboursements partiels tant que le total ne dépasse pas le montant original. Les remboursements apparaissent dans votre liste de dépenses avec un badge <strong>Remboursement</strong> vert et sont déduits des totaux du graphique mensuel et du calendrier quotidien. La suppression de la dépense originale supprime également les remboursements associés. Pour les dépenses de groupe, seuls l'<strong>admin du groupe</strong> ou le <strong>membre ayant enregistré la dépense</strong> peuvent émettre un remboursement.
       </div>
     </div>
     <div class="faq-item">
@@ -3036,6 +3183,18 @@
       </button>
       <div class="faq-answer">
         Appuyez sur le bouton <strong>+</strong> pour ajouter une nouvelle dépense <span class="arrow">→</span> appuyez sur l'<strong>icône appareil photo</strong> à côté du champ de montant <span class="arrow">→</span> pointez votre caméra vers le reçu et restez immobile ; la capture est automatique. Sur l'écran <strong>Confirmer le reçu</strong>, le total probable est marqué <strong>Suggéré</strong>. Appuyez sur <strong>Utiliser</strong> à côté du montant souhaité. Le commerçant est ajouté à la note, et la date et la devise sont remplies lorsqu'elles peuvent être lues.
+        Sur Mac, le bouton à côté du montant ouvre plutôt vos photos : choisissez une image du reçu, ou faites glisser une image du reçu dans la fenêtre <strong>Ajouter une dépense</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment partager un reçu article par article avec Pick &amp; Pay ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Pick &amp; Pay lit un reçu de groupe ligne par ligne, pour que chacun paie seulement ce qu'il a consommé. Appuyez sur <strong>+</strong> pour ajouter une dépense <span class="arrow">→</span> choisissez un groupe <span class="arrow">→</span> sous <strong>Partager</strong>, choisissez <strong>Pick &amp; Pay</strong> <span class="arrow">→</span> choisissez <strong>Prendre une photo</strong> ou <strong>Photothèque</strong> (sur Mac, Photothèque uniquement). Ensuite, sur l'écran <strong>Sélectionner les articles</strong> :
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>Appuyez sur une personne en haut, puis sur chaque article qu'elle a pris. Jusqu'à 4 personnes peuvent partager un article, dont le coût est réparti à parts égales.</li><li>Pour un article en plusieurs exemplaires, comme 3 boissons, appuyez sur <strong>Attribuer des quantités exactes</strong> pour donner à chacun sa propre quantité.</li><li>Appuyez sur <strong>Invité</strong> pour ajouter une personne qui n'a pas l'app.</li><li>La taxe est reprise du reçu. Choisissez un pourboire, puis appuyez sur <strong>Diviser</strong> en bas.</li><li>Si vous avez ajouté des invités, <strong>Partager l'addition</strong> s'ouvre pour envoyer à chaque invité sa part par <strong>Message</strong> ou <strong>Code QR</strong>.</li></ul>
+        <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay est une fonctionnalité <strong>PRO</strong> avec un nombre mensuel de scans. L'essai gratuit comprend 1 scan.</div>
       </div>
     </div>
     <div class="faq-item">
@@ -3107,7 +3266,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Dans l'onglet <strong>Groupes</strong>, appuyez sur le bouton <strong>+</strong> et sélectionnez <strong>Créer un groupe</strong> <span class="arrow">→</span> appuyez sur l'avatar circulaire dans la section <strong>Apparence</strong> <span class="arrow">→</span> choisissez <strong>Prendre une photo</strong> ou <strong>Choisir dans la bibliothèque</strong> <span class="arrow">→</span> saisissez un nom de groupe <span class="arrow">→</span> appuyez sur <strong>Enregistrer</strong>. La photo apparaîtra ensuite à côté du nom de votre groupe.
+        Dans l'onglet <strong>Groupes</strong>, appuyez sur le bouton <strong>+</strong> et sélectionnez <strong>Créer un groupe</strong> <span class="arrow">→</span> appuyez sur l'avatar circulaire dans la section <strong>Apparence</strong> <span class="arrow">→</span> choisissez <strong>Prendre une photo</strong> ou <strong>Choisir dans la bibliothèque</strong> <span class="arrow">→</span> saisissez un nom de groupe <span class="arrow">→</span> appuyez sur <strong>Enregistrer</strong>. La photo apparaîtra ensuite à côté du nom de votre groupe. Pour changer la photo d'un groupe existant, ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Réglages</strong> <span class="arrow">→</span> <strong>Modifier le groupe</strong> <span class="arrow">→</span> appuyez sur l'avatar <span class="arrow">→</span> choisissez une photo <span class="arrow">→</span> appuyez sur <strong>Enregistrer</strong>.
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>Seul l'<strong>admin du groupe</strong> peut ajouter ou modifier la photo du groupe.</li>
           <li>Les photos de groupe sont une <strong>fonctionnalité d'abonnement PRO</strong>. Les utilisateurs gratuits ne voient que l'avatar avec les initiales.</li>
@@ -3150,7 +3309,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Ouvrez <strong>Graphiques</strong> <span class="arrow">→</span> <strong>Lieu</strong> pour voir vos <strong>Principaux lieux</strong>, puis appuyez sur <strong>Voir sur la carte</strong> pour ouvrir la <strong>Carte des dépenses</strong>. La taille de chaque épingle indique combien vous avez dépensé à cet endroit, et sa couleur la catégorie. Appuyez sur une épingle pour voir ce que vous y avez acheté.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Le bouton <strong>•••</strong> donne accès aux <strong>Filtres</strong> (période et catégories) et au style de carte.</li><li>Appuyez sur un lieu dans <strong>Principaux lieux</strong> pour voir tout ce que vous y avez dépensé. Au-delà de 10 lieux, vous pouvez rechercher par étiquette ou adresse, passer de <strong>Top 10</strong> à <strong>Tous</strong> et trier par <strong>Dépenses</strong> ou <strong>Visites</strong>. Les lieux payés dans plusieurs devises sont classés ensemble dans votre devise par défaut.</li><li>Pour donner à un lieu votre propre nom, comme tour de Tokyo au lieu de l'adresse, balayez sa ligne vers la droite (ou appuyez dessus de manière prolongée ; clic droit sur Mac) et choisissez <strong>Ajouter une étiquette</strong>. Balayez vers la gauche pour retirer l'étiquette. Ce nom apparaît dans Principaux lieux et sur la carte. Les étiquettes sont enregistrées sur cet appareil et incluses dans les sauvegardes JSON.</li><li>Pour les dépenses de groupe, la carte compte votre part, pas la note entière.</li></ul>
+        Ouvrez <strong>Graphiques</strong> <span class="arrow">→</span> <strong>Lieu</strong> pour voir vos <strong>Principaux lieux</strong>, puis appuyez sur <strong>Voir sur la carte</strong> pour ouvrir la <strong>Carte des dépenses</strong>. La taille de chaque épingle indique combien vous avez dépensé à cet endroit, et sa couleur la catégorie. Appuyez sur une épingle pour voir ce que vous y avez acheté.<ul style="margin:8px 0 8px 18px; padding:0;"><li>Le bouton <strong>•••</strong> donne accès aux <strong>Filtres</strong> (période et catégories) et au style de carte.</li><li>Appuyez sur un lieu dans <strong>Principaux lieux</strong> pour voir tout ce que vous y avez dépensé. Au-delà de 10 lieux, vous pouvez rechercher par étiquette ou adresse, passer de <strong>Top 10</strong> à <strong>Tous</strong> et trier par <strong>Dépenses</strong> ou <strong>Visites</strong>. Les lieux payés dans plusieurs devises sont classés ensemble dans votre devise par défaut.</li><li>Pour donner à un lieu votre propre nom, comme tour de Tokyo au lieu de l'adresse, balayez sa ligne vers la droite (ou appuyez dessus de manière prolongée ; clic droit sur Mac) et choisissez <strong>Ajouter une étiquette</strong>. Balayez vers la gauche pour retirer l'étiquette. Ce nom apparaît dans Principaux lieux et sur la carte. Les étiquettes sont enregistrées sur cet appareil et incluses dans les sauvegardes JSON.</li><li>Pour les dépenses de groupe, la carte compte votre part, pas la note entière.</li><li>Les remboursements sont déduits du lieu où vous avez fait l'achat, dans Principaux lieux et sur la carte. Un lieu entièrement remboursé n'apparaît plus.</li></ul>
       </div>
     </div>
     <div class="faq-item">
@@ -3220,7 +3379,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-10-24 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-10-30 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -3240,11 +3399,11 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">그룹에 친구를 초대하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>멤버</strong> 탭 <span class="arrow">→</span> <strong>초대 링크 공유</strong>를 탭하세요.</div>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭 <span class="arrow">→</span> <strong>초대 링크 공유</strong>를 탭하세요. 그룹 관리자는 <strong>멤버</strong> 탭의 <strong>더 많은 멤버 초대</strong>로도 초대할 수 있습니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">결제를 어떻게 기록하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭 <span class="arrow">→</span> <strong>결제 기록</strong>을 탭하세요.</div>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭 <span class="arrow">→</span> <strong>잔액</strong> 카드 하단의 <strong>결제 기록</strong>을 탭하세요.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">정산을 위해 Venmo, Cash App, PayPal.Me, Apple Cash, Zelle, LINE, WeChat을 어떻게 설정하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -3252,7 +3411,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, WeChat으로 상대방에게 송금하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>잔액</strong> 탭 <span class="arrow">→</span> <strong>결제</strong> 버튼을 탭하세요 <span class="arrow">→</span> 결제 앱을 선택하세요. 앱에서 결제 후 Node Expense로 돌아와 <strong>결제 기록</strong>을 탭하세요.</div>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭 <span class="arrow">→</span> 상단 <strong>잔액</strong> 카드에서 갚아야 할 금액 옆의 <strong>결제</strong>를 탭하세요 <span class="arrow">→</span> 결제 수단을 선택하세요. 앱에서 결제 후 Node Expense로 돌아와 <strong>결제 기록</strong>을 탭하세요. 상대방이 아직 결제 수단을 설정하지 않았다면 버튼에 <strong>알림</strong>이 표시되며, 탭한 뒤 <strong>알림 보내기</strong>를 선택할 수 있습니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Venmo, Cash App 또는 PayPal 버튼이 작동하지 않을 때 무엇을 확인해야 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -3300,12 +3459,16 @@
       <div class="faq-answer">그룹 삭제는 되돌릴 수 없으며 모든 멤버에게 영향을 줍니다. 목록에서 치우고 싶은 것뿐이라면 위의 보관을 이용하세요.<br><br>그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭 <span class="arrow">→</span> <strong>그룹 삭제</strong>를 탭하세요.<br><br><strong>누가 시작할 수 있나요:</strong> 관리자는 언제든 가능합니다. 6개월 넘게 새로운 지출이 없고 모든 정산이 끝난 비활성 그룹이라면 어떤 멤버든 시작할 수 있습니다.<br><br><strong>모두가 동의해야 합니다.</strong> 즉시 삭제되는 경우는 멤버가 나 혼자일 때, 또는 관리자이면서 지출이 하나도 없을 때뿐입니다. 그 외에는 다른 모든 멤버가 찬성해야 합니다. 요청을 시작한 사람은 제출과 동시에 자동으로 찬성 처리되며, 한 명이라도 거절하면 즉시 취소됩니다. 투표 기간은 7일이며, 기간 안에 전원 찬성이 모이지 않으면 요청은 실패하고 처음부터 다시 시작해야 합니다. 침묵은 절대 동의로 간주되지 않습니다. 완료 전에는 관리자나 요청을 시작한 사람이 언제든 취소할 수 있습니다.<br><br><strong>지출 기록:</strong> 요청을 시작할 때 지출 기록을 삭제할지 남길지 선택합니다. 삭제하면 모든 기기에서 영구히 사라지며 복구할 수 없습니다. 남기면 삭제된 그룹의 기록으로 표시되어 각 멤버의 기기에 그대로 남고, 그룹 이름과 날짜, 내 분담액이 함께 표시됩니다.<br><br>투표를 시작하거나 참여하려면 알림이 켜져 있어야 합니다.<br><br>관리자는 <strong>설정</strong> <span class="arrow">→</span> <strong>데이터 및 개인정보</strong> <span class="arrow">→</span> <strong>비활성 그룹</strong>에서 오래된 그룹을 정리할 수도 있습니다. 6개월 동안 사용되지 않고 정산이 끝난 그룹이 대상입니다. 이 화면에서는 <strong>보관</strong>이 먼저 제시되며, 삭제는 항상 직접 탭해야 하고 자동으로 실행되지 않습니다.</div>
     </div>
     <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">특정 그룹의 알림만 끄려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>설정</strong> <span class="arrow">→</span> <strong>알림</strong> <span class="arrow">→</span> <strong>그룹별 알림</strong>에서 알림을 받고 싶지 않은 그룹을 끄세요. 그룹마다 스위치가 있으며 기본값은 모두 켜짐입니다. 그룹 삭제 투표와 그룹에서 제외되었다는 알림은 계속 받습니다. 받을 그룹 알림 종류(<strong>댓글</strong>, <strong>멤버 및 그룹 변경</strong> 등)는 같은 화면의 <strong>그룹 알림 유형</strong>에서 고를 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">지출을 편집, 삭제 또는 환불하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer"><strong>오른쪽으로 스와이프</strong> — 편집(파란색) / 환불(녹색). <strong>왼쪽으로 스와이프</strong> — 삭제(빨간색). 그룹 지출은 관리자 또는 원래 기록자만 수정 가능합니다.</div>
+      <div class="faq-answer"><strong>탭</strong>하면 지출이 열립니다. <strong>길게 누르면</strong>(Mac에서는 오른쪽 클릭) <strong>세부 정보 보기</strong> / <strong>편집</strong> / <strong>환불</strong> / <strong>삭제</strong> 메뉴가 나타납니다. <strong>오른쪽으로 스와이프</strong> — 편집(파란색) / 환불(녹색). <strong>왼쪽으로 스와이프</strong> — 삭제(빨간색). 그룹 지출은 관리자 또는 원래 기록자만 수정 가능합니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">지출에 대한 환불을 어떻게 기록하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer">지출 행을 <strong>오른쪽으로 스와이프</strong>하고 <strong>환불</strong>을 탭하거나, 지출을 열고 <strong>환불 기록</strong>으로 스크롤하세요. 금액을 입력하고 확인하세요.</div>
+      <div class="faq-answer">지출 행을 <strong>오른쪽으로 스와이프</strong>하고 <strong>환불</strong>을 탭하거나, 행을 길게 눌러(Mac에서는 오른쪽 클릭) <strong>환불</strong>을 선택하거나, 지출을 열고 <strong>환불 기록</strong>으로 스크롤하세요. 금액을 입력하고 확인하세요.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">환불을 만든 후 편집할 수 있나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -3329,7 +3492,11 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">영수증을 어떻게 스캔하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer"><strong>+</strong> 버튼 <span class="arrow">→</span> 금액 필드 옆 <strong>카메라 아이콘</strong> <span class="arrow">→</span> 영수증에 카메라를 향하고 움직이지 마세요. 자동으로 촬영됩니다. <strong>영수증 확인</strong> 화면에서 총액으로 보이는 금액에는 <strong>추천</strong> 표시가 붙습니다. 원하는 금액 옆의 <strong>사용</strong>을 탭하세요. 가맹점 이름은 메모에 추가되며, 날짜와 통화도 읽을 수 있으면 자동으로 입력됩니다.</div>
+      <div class="faq-answer"><strong>+</strong> 버튼 <span class="arrow">→</span> 금액 필드 옆 <strong>카메라 아이콘</strong> <span class="arrow">→</span> 영수증에 카메라를 향하고 움직이지 마세요. 자동으로 촬영됩니다. <strong>영수증 확인</strong> 화면에서 총액으로 보이는 금액에는 <strong>추천</strong> 표시가 붙습니다. 원하는 금액 옆의 <strong>사용</strong>을 탭하세요. 가맹점 이름은 메모에 추가되며, 날짜와 통화도 읽을 수 있으면 자동으로 입력됩니다. Mac에서는 금액 옆 버튼을 누르면 사진이 열립니다. 영수증 사진을 선택하거나 영수증 이미지를 <strong>지출 추가</strong> 창으로 끌어다 놓으세요.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Pick &amp; Pay로 영수증을 항목별로 나누려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer"><strong>+</strong> 버튼 <span class="arrow">→</span> 그룹 선택 <span class="arrow">→</span> <strong>분담</strong>에서 <strong>Pick &amp; Pay</strong> 선택 <span class="arrow">→</span> <strong>사진 촬영</strong> 또는 <strong>사진 보관함</strong>(Mac은 사진 보관함만). <strong>항목 선택</strong> 화면에서 위쪽의 사람을 탭한 뒤 그 사람이 주문한 항목을 탭하세요. 한 항목은 최대 4명이 나눌 수 있고 금액은 균등하게 나뉩니다. 수량이 있는 항목은 <strong>정확한 수량 할당</strong>으로 사람마다 수량을 정할 수 있습니다. 앱이 없는 사람은 <strong>게스트</strong>로 추가하고, 게스트가 있으면 <strong>청구서 공유</strong>에서 <strong>메시지</strong>나 <strong>QR 코드</strong>로 금액을 보낼 수 있습니다. Pick &amp; Pay는 <strong>PRO</strong> 기능이며 매월 스캔 횟수가 정해져 있습니다(무료 체험에 1회 포함).</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">영수증 사진이 너무 크다고 나오는 이유는 무엇인가요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -3381,8 +3548,7 @@
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">그룹 사진을 추가하거나 변경하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="faq-answer">
-        <strong>그룹</strong> 탭에서 <strong>+</strong> 버튼을 탭하고 <strong>그룹 만들기</strong>를 선택합니다 <span class="arrow">→</span> <strong>외관</strong> 섹션의 원형 아바타를 탭합니다 <span class="arrow">→</span> <strong>사진 촬영</strong> 또는 <strong>라이브러리에서 선택</strong>을 선택합니다 <span class="arrow">→</span> 그룹 이름을 입력합니다 <span class="arrow">→</span> <strong>저장</strong>을 탭합니다. 그러면 사진이 그룹 이름 옆에 표시됩니다.
-        <ul style="margin:8px 0 8px 18px; padding:0;">
+        <strong>그룹</strong> 탭에서 <strong>+</strong> 버튼을 탭하고 <strong>그룹 만들기</strong>를 선택합니다 <span class="arrow">→</span> <strong>외관</strong> 섹션의 원형 아바타를 탭합니다 <span class="arrow">→</span> <strong>사진 촬영</strong> 또는 <strong>라이브러리에서 선택</strong>을 선택합니다 <span class="arrow">→</span> 그룹 이름을 입력합니다 <span class="arrow">→</span> <strong>저장</strong>을 탭합니다. 그러면 사진이 그룹 이름 옆에 표시됩니다. 기존 그룹의 사진을 바꾸려면 그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭 <span class="arrow">→</span> <strong>그룹 편집</strong> <span class="arrow">→</span> 아바타를 탭 <span class="arrow">→</span> 사진 선택 <span class="arrow">→</span> <strong>저장</strong>을 탭하세요.<ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>그룹 관리자</strong>만 그룹 사진을 추가하거나 변경할 수 있습니다.</li>
           <li>그룹 사진은 <strong>PRO 구독 기능</strong>입니다. 무료 사용자는 이니셜 아바타만 표시됩니다.</li>
           <li>사진은 그룹의 <strong>모든 멤버</strong>에게 표시됩니다. 낯선 사람이 보는 것을 원하지 않는 내용은 업로드하지 마세요 — 그룹에 초대한 모든 사람, 또는 그룹 공유 코드를 아는 사람은 누구나 이를 볼 수 있습니다.</li>
@@ -3414,7 +3580,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>차트</strong> <span class="arrow">→</span> <strong>위치</strong>를 열면 <strong>주요 장소</strong>가 표시되고, <strong>지도에서 보기</strong>를 탭하면 <strong>지출 지도</strong>가 열립니다. 핀의 크기는 그곳에서 쓴 금액을, 색상은 카테고리를 나타냅니다. 핀을 탭하면 그곳에서 무엇을 샀는지 볼 수 있습니다.<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>•••</strong> 버튼을 탭하면 <strong>필터</strong>(기간 및 카테고리)와 지도 스타일을 바꿀 수 있습니다.</li><li><strong>주요 장소</strong>에서 장소를 탭하면 그곳에서 쓴 지출을 모두 볼 수 있습니다. 장소가 10곳을 넘으면 레이블이나 주소로 검색하고, <strong>상위 10개</strong>와 <strong>전체</strong>를 전환하고, <strong>지출</strong> 또는 <strong>방문 횟수</strong>로 정렬할 수 있습니다. 서로 다른 통화로 결제한 장소는 기본 통화로 환산해 함께 순위가 매겨집니다.</li><li>장소에 도로명 주소 대신 도쿄 타워처럼 원하는 이름을 붙이려면 해당 행을 오른쪽으로 쓸어넘기거나(또는 길게 누르기, Mac에서는 오른쪽 클릭) <strong>레이블 추가</strong>를 선택하세요. 왼쪽으로 쓸어넘기면 레이블이 삭제됩니다. 이름은 주요 장소와 지도에 표시됩니다. 레이블은 이 기기에 저장되며 JSON 백업에도 포함됩니다.</li><li>그룹 지출은 전체 금액이 아니라 내 몫이 지도에 반영됩니다.</li></ul>
+        <strong>차트</strong> <span class="arrow">→</span> <strong>위치</strong>를 열면 <strong>주요 장소</strong>가 표시되고, <strong>지도에서 보기</strong>를 탭하면 <strong>지출 지도</strong>가 열립니다. 핀의 크기는 그곳에서 쓴 금액을, 색상은 카테고리를 나타냅니다. 핀을 탭하면 그곳에서 무엇을 샀는지 볼 수 있습니다.<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>•••</strong> 버튼을 탭하면 <strong>필터</strong>(기간 및 카테고리)와 지도 스타일을 바꿀 수 있습니다.</li><li><strong>주요 장소</strong>에서 장소를 탭하면 그곳에서 쓴 지출을 모두 볼 수 있습니다. 장소가 10곳을 넘으면 레이블이나 주소로 검색하고, <strong>상위 10개</strong>와 <strong>전체</strong>를 전환하고, <strong>지출</strong> 또는 <strong>방문 횟수</strong>로 정렬할 수 있습니다. 서로 다른 통화로 결제한 장소는 기본 통화로 환산해 함께 순위가 매겨집니다.</li><li>장소에 도로명 주소 대신 도쿄 타워처럼 원하는 이름을 붙이려면 해당 행을 오른쪽으로 쓸어넘기거나(또는 길게 누르기, Mac에서는 오른쪽 클릭) <strong>레이블 추가</strong>를 선택하세요. 왼쪽으로 쓸어넘기면 레이블이 삭제됩니다. 이름은 주요 장소와 지도에 표시됩니다. 레이블은 이 기기에 저장되며 JSON 백업에도 포함됩니다.</li><li>그룹 지출은 전체 금액이 아니라 내 몫이 지도에 반영됩니다.</li><li>환불은 구매한 장소의 금액에서 차감되며, 주요 장소와 지도 모두에 반영됩니다. 전액 환불된 장소는 더 이상 표시되지 않습니다.</li></ul>
       </div>
     </div>
     <div class="faq-item">
