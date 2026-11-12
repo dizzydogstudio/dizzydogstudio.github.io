@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["3FXJV357ZW.com.dizzydogstudio.ExpenseTracker"],
+        "components": [
+          { "/": "/join", "comment": "Node Expense group invite" },
+          { "/": "/join/*", "comment": "Node Expense group invite" }
+        ]
+      }
+    ]
+  }
+}
