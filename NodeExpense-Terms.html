@@ -283,7 +283,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-10-30&nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-11-17&nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
 <h2><span class="section-number">1</span>Acceptance of Terms</h2>
   <p>By downloading, installing, or using Node Expense: Track Together, you agree to be bound by these Terms of Service. If you do not agree, do not use the app.</p>
@@ -293,10 +293,13 @@
   <ul>
     <li>Track individual personal expenses</li>
     <li>Track and split group expenses with other members in real time</li>
+    <li>Add people to a group by name, for friends who don't use the app, who can claim their place when they join</li>
+    <li>Optionally settle a group up in one currency, with each expense converted at the exchange rate on the day it is saved</li>
     <li>Optionally record your location with expenses</li>
     <li>Sync expenses with selected iOS calendars</li>
     <li>Back up and optionally encrypt your data (PRO subscription feature). Backups cover locally stored personal expense records and cached group data; live group expense data in Firebase Firestore is not included in local backups. JSON backups also include your custom categories, budgets and place labels.</li>
     <li>Export expense data as JSON, CSV, or PDF, and import data in JSON format (PRO subscription feature)</li>
+    <li>Import a group's expenses and payments from a Splitwise export (PRO subscription or free trial). Splitwise is a trademark of its owner; Node Expense is not affiliated with Splitwise</li>
     <li>Scan receipts using your device camera to auto-fill expense details (on Mac, from a photo of the receipt)</li>
     <li>Attach receipt photos to expenses (PRO subscription feature). Personal expense photos stay on your device; group expense photos are stored in Firebase Storage and visible to all members of the group.</li>
     <li>Use <strong>Pick &amp; Pay</strong> to photograph a receipt and let Google Gemini AI identify and itemise individual line items, which you can then convert into expenses (PRO subscription feature; trial users receive one complimentary scan)</li>
@@ -315,6 +318,8 @@
     <li>No advertisements</li>
     <li>Manual calendar sync for the last 7 days</li>
     <li>Monthly and per-category budgets with alerts</li>
+    <li>Join any group you are invited to: see its expenses and balances, record and confirm payments, and comment</li>
+    <li>Add group expenses when a PRO member covers you (see Group Access below), up to a monthly limit shown in the app</li>
   </ul>
   <h3>Free Trial</h3>
   <ul>
@@ -326,11 +331,12 @@
   <p>PRO subscribers receive unlimited access to:</p>
   <ul>
     <li>Unlimited individual expense tracking (no monthly limit)</li>
-    <li>Group Expenses — create and join groups, split bills, record settlements</li>
+    <li>Group Expenses — create groups and add expenses with no monthly limit, and cover free members in the groups you belong to</li>
     <li>Data Retention — automatic retention policies with optional AES-256-GCM encrypted backups</li>
     <li>Data Migration — export data as JSON, CSV, or PDF, and import data in JSON format</li>
     <li><strong>Pick &amp; Pay</strong> — AI-powered receipt scanning via Google Gemini that identifies and itemises individual line items for expense entry</li>
   </ul>
+  <p><strong>Group Access.</strong> Each PRO member covers up to 4 free members in each group they belong to, given out in the order members joined. Free-trial members can add expenses without using a spot. If a PRO member leaves the group or their PRO ends, the members they covered can still view the group and settle up, but cannot add expenses until a spot opens. The number of members covered and the monthly limit may change; the current rules are always shown in each group under Group Access Rules.</p>
   <p>Subscriptions renew automatically unless canceled via Apple App Store Settings at least 24 hours before the end of the current billing period.</p>
   <p><strong>Cross-Device License Sync (optional).</strong> No account or sign-in is required to use Node Expense. If you own PRO on more than one device signed in to the same Apple Account, you may optionally use <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across your iPhone, iPad, and Mac. We request no name or email — only a stable, app-specific identifier used solely to match your license across your devices. You can disconnect any device at any time from the Subscription screen. See our Privacy Policy for details.</p>
   <h3>Lifetime Subscription</h3>
@@ -343,8 +349,9 @@
     <li>Your display name, profile photo (if set), and expense data are visible to all members of the group</li>
     <li>Any receipt photos you attach to a group expense are uploaded to Firebase Storage and visible to all members of the group</li>
     <li>The group admin may set a group photo that is visible to all members of the group; this photo is stored in Firebase Storage and is deleted when the group is deleted</li>
-    <li>Any member can add expenses to the group (subject to permissions set by the group admin)</li>
-    <li>Group deletion requires unanimous consent from all members within a 7-day voting window, unless you are the only member, or you are the admin and the group has no expenses — then it is deleted immediately</li>
+    <li>Every member can view the group, record and confirm payments, and comment; members with PRO, the free trial or a covered spot can also add expenses (see Group Access in section 3)</li>
+    <li>Any member can add people by name. A person added by name can claim that place when they join; a later claim needs approval from the group creator or the member who added them. Once claimed, the claimer's account replaces the name in the group's expenses and payments</li>
+    <li>Group deletion requires unanimous consent from all members (people added by name do not vote) within a 7-day voting window, unless you are the only member, or you are the admin and the group has no expenses — then it is deleted immediately</li>
     <li>Group admins can proactively prune eligible inactive groups from Settings → Data &amp; Privacy → Inactive Groups. When an admin initiates deletion this way, all affected group members immediately receive a push notification identifying who deleted the group. The admin chooses to export group expenses, keep them locally, or delete them entirely before the group is removed from Firebase.</li>
     <li>The group admin may remove members or transfer data at any time</li>
     <li>Expenses you choose to keep after group deletion remain on your device locally, marked as from a deleted group; receipt photos for those expenses remain accessible from Firebase Storage. If the deletion is performed with "remove records", every receipt photo for the group is deleted from Firebase Storage and cannot be recovered.</li>
@@ -360,16 +367,17 @@
     <li>The accuracy of your expense data</li>
     <li>Your display name and how it appears to other group members</li>
     <li>Protecting access to your device and the app</li>
-    <li>Ensuring group members you invite consent to having their data processed as described in our Privacy Policy</li>
+    <li>Ensuring group members you invite, and people you add by name, consent to having their data processed as described in our Privacy Policy</li>
+    <li>The content of any file you import, such as a Splitwise export</li>
     <li>Maintaining access to the iCloud Keychain linked to your Apple ID — encrypted backups cannot be recovered if iCloud Keychain access is lost</li>
     <li>The accuracy of any payment handles or usernames you enter for peer payment apps and services (e.g., Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, WeChat). Entering an incorrect handle may result in money being sent to an unintended recipient. Node Expense has no ability to reverse or intercept such transactions, and all liability for misdirected payments rests solely with you</li>
     <li>The accuracy and content of receipt images you submit for <strong>Pick &amp; Pay</strong> scanning. Images are processed by Google's Gemini API under its paid-tier terms and are <strong>not used to train Google's models</strong>; Node Expense does not retain the submitted image beyond attaching the resulting receipt photo to your group expense</li>
   </ul>
 
   <h3>6.1 User-Generated Content (Profile Photos, Group Photos &amp; Display Names)</h3>
-  <p>Profile photos, group photos, and display names are user-generated content visible to other members of any group you join. By using these features you agree that:</p>
+  <p>Profile photos, group photos, display names, and the names you give people you add by name are user-generated content visible to other members of any group you join. By using these features you agree that:</p>
   <ul>
-    <li>You will not upload a profile photo, set a group photo, or set a display name that is obscene, sexually explicit, harassing, hateful, threatening, defamatory, infringing, deceptive (such as impersonating another person), or otherwise objectionable.</li>
+    <li>You will not upload a profile photo, set a group photo, or set a display name (or a name for someone you add) that is obscene, sexually explicit, harassing, hateful, threatening, defamatory, infringing, deceptive (such as impersonating another person), or otherwise objectionable.</li>
     <li>You own — or have the right to use — any image you upload as your profile photo or as a group photo. You grant Node Expense a non-exclusive licence to host, distribute, and display that photo for the sole purpose of operating the app's group features.</li>
     <li>Other group members may report your profile photo or display name from within the app. If the group admin has set an inappropriate group photo, any member may report it by long-pressing the admin's name on the Members tab and choosing <strong>Report Member</strong>. We may, at our sole discretion and without notice, remove any reported content, suspend access to profile-photo, group-photo, or group features, or terminate the account of users who repeatedly violate these rules.</li>
     <li>You may report another member's profile photo or display name by long-pressing their entry in the Members tab and choosing <strong>Report Member</strong>. This opens an email to our support address with the relevant context pre-populated. Reports are reviewed manually within a reasonable time.</li>
@@ -397,7 +405,7 @@
     <li>For Lifetime Access: the Developer's total liability shall not exceed the actual amount paid by the user for said subscription</li>
     <li>Inaccurate, incomplete, or misinterpreted results from <strong>Pick &amp; Pay</strong> AI receipt scanning. Google Gemini may misread amounts, item names, or currencies — you are responsible for verifying all extracted data before saving</li>
     <li>Inaccurate, missed, or delayed Taiwan uniform-invoice lottery (統一發票) results. The in-app check is provided as a convenience only — a possible win is unofficial until you verify it with Taiwan's Ministry of Finance, and you must retain the printed invoice to claim any prize. We do not guarantee that a winning number will be detected or reported, and we are not responsible for any prize that is missed, expires, or cannot be claimed</li>
-    <li>Inaccurate currency conversions in reports or summaries. Exchange rates are retrieved from a third-party provider for convenience, are approximate, and may not reflect the rate on any given transaction date — you are responsible for verifying converted amounts before relying on them</li>
+    <li>Inaccurate currency conversions in reports, summaries or settle-up amounts. Exchange rates are retrieved from a third-party provider for convenience, are approximate, and may not reflect the rate on any given transaction date — you are responsible for verifying converted amounts, including what you pay or accept when a group settles up in one currency, before relying on them</li>
     <li>Reliance on exported expense or reimbursement reports. Reports are provided as a convenience and are not certified accounting or tax documents. You are responsible for their accuracy and for compliance with any employer, reimbursement, or tax-reporting requirements</li>
   </ul>
   <p><strong>No Payment Processing:</strong> Node Expense is not a payment processor and does not transmit, hold, or process money of any kind. The deep-link feature launches third-party apps (Venmo, Cash App, PayPal) — or Messages, in the case of Apple Cash, where you send the payment yourself — solely as a convenience. For Zelle, LINE and WeChat nothing is launched at all: the details you publish are simply displayed to group members, who pay you elsewhere; all transactions occur entirely within those apps and are subject to their respective terms of service and privacy policies. Node Expense bears no responsibility for any payment made through those platforms.</p>
@@ -431,7 +439,7 @@
 
 <!-- ========== GERMAN ========== -->
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-10-30&nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-11-17&nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
 <h2><span class="section-number">1</span>Annahme der Nutzungsbedingungen</h2>
   <p>Durch das Herunterladen, Installieren oder Verwenden von Node Expense: Track Together erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie nicht zustimmen, verwenden Sie die App bitte nicht.</p>
@@ -441,10 +449,13 @@
   <ul>
     <li>Persönliche Ausgaben verfolgen</li>
     <li>Gruppenausgaben in Echtzeit mit anderen Mitgliedern verfolgen und aufteilen</li>
+    <li>Personen per Name zu einer Gruppe hinzufügen, für Freunde, die die App nicht nutzen; sie können ihren Platz übernehmen, wenn sie beitreten</li>
+    <li>Eine Gruppe optional in einer Währung abrechnen, wobei jede Ausgabe zum Wechselkurs des Tages umgerechnet wird, an dem sie gespeichert wird</li>
     <li>Optional Ihren Standort bei Ausgaben erfassen</li>
     <li>Ausgaben mit ausgewählten iOS-Kalendern synchronisieren</li>
     <li>Ihre Daten sichern und optional verschlüsseln (PRO-Abonnement-Funktion). Backups umfassen lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Gruppenausgabendaten in Firebase Firestore sind nicht in lokalen Backups enthalten. JSON-Backups enthalten außerdem Ihre benutzerdefinierten Kategorien, Budgets und Etiketten für Orte.</li>
     <li>Ausgabendaten als JSON, CSV oder PDF exportieren und im JSON-Format importieren (PRO-Abonnement-Funktion)</li>
+    <li>Die Ausgaben und Zahlungen einer Gruppe aus einem Splitwise-Export importieren (PRO-Abonnement oder kostenlose Testversion). Splitwise ist eine Marke ihres Inhabers; Node Expense ist nicht mit Splitwise verbunden</li>
     <li>Belege mit der Geräte-Kamera scannen, um Ausgabendetails automatisch auszufüllen (auf dem Mac anhand eines Belegfotos)</li>
     <li>Belegfotos an Ausgaben anhängen (PRO-Abonnement-Funktion). Fotos persönlicher Ausgaben verbleiben auf Ihrem Gerät; Fotos von Gruppenausgaben werden in Firebase Storage gespeichert und sind für alle Mitglieder der Gruppe sichtbar.</li>
     <li>Verwenden Sie <strong>Pick &amp; Pay</strong>, um einen Beleg zu fotografieren und Google Gemini AI die einzelnen Positionen identifizieren und auflisten zu lassen, die Sie dann als Ausgaben übernehmen können (PRO-Abonnement-Funktion; Testnutzer erhalten einen kostenlosen Scan)</li>
@@ -463,6 +474,8 @@
     <li>Keine Werbung</li>
     <li>Manuelle Kalendersynchronisierung für die letzten 7 Tage</li>
     <li>Monats- und Kategorienbudgets mit Benachrichtigungen</li>
+    <li>Jeder Gruppe beitreten, zu der Sie eingeladen werden: ihre Ausgaben und Salden ansehen, Zahlungen erfassen und bestätigen sowie kommentieren</li>
+    <li>Gruppenausgaben hinzufügen, wenn ein PRO-Mitglied Sie abdeckt (siehe Gruppenzugang unten), bis zu einem in der App angezeigten Monatslimit</li>
   </ul>
   <h3>Kostenlose Testversion</h3>
   <ul>
@@ -474,11 +487,12 @@
   <p>PRO-Abonnenten erhalten unbegrenzten Zugriff auf:</p>
   <ul>
     <li>Unbegrenzte Verfolgung individueller Ausgaben (kein monatliches Limit)</li>
-    <li>Gruppenausgaben – Gruppen erstellen und beitreten, Rechnungen aufteilen, Ausgleiche erfassen</li>
+    <li>Gruppenausgaben – Gruppen erstellen und Ausgaben ohne Monatslimit hinzufügen sowie Mitglieder ohne PRO in Ihren Gruppen abdecken</li>
     <li>Datenspeicherung – automatische Aufbewahrungsrichtlinien mit optionalen AES-256-GCM-verschlüsselten Backups</li>
     <li>Datenmigration – Daten als JSON, CSV oder PDF exportieren und im JSON-Format importieren</li>
     <li><strong>Pick &amp; Pay</strong> — KI-gestützte Belegerfassung über Google Gemini, die einzelne Positionen erkennt und auflistet für die Ausgabenerfassung</li>
   </ul>
+  <p><strong>Gruppenzugang.</strong> Jedes PRO-Mitglied deckt in jeder Gruppe, der es angehört, bis zu 4 Mitglieder ohne PRO ab, vergeben in der Reihenfolge, in der die Mitglieder beigetreten sind. Mitglieder in der kostenlosen Testversion können Ausgaben hinzufügen, ohne einen Platz zu belegen. Verlässt ein PRO-Mitglied die Gruppe oder endet sein PRO, können die von ihm abgedeckten Mitglieder die Gruppe weiterhin ansehen und abrechnen, aber keine Ausgaben hinzufügen, bis ein Platz frei wird. Die Zahl der abgedeckten Mitglieder und das Monatslimit können sich ändern; die aktuellen Regeln werden in jeder Gruppe unter Gruppenzugangsregeln angezeigt.</p>
   <p>Abonnements verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ende des aktuellen Abrechnungszeitraums über die Apple-App-Store-Einstellungen gekündigt werden.</p>
   <p><strong>Geräteübergreifende Lizenzsynchronisierung (optional).</strong> Für die Nutzung von Node Expense sind kein Konto und keine Anmeldung erforderlich. Wenn Sie PRO auf mehreren Geräten besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm optional <strong>Mit Apple anmelden</strong> verwenden, um Ihre PRO-Lizenz auf iPhone, iPad und Mac zu synchronisieren. Wir fordern weder Name noch E-Mail-Adresse an – nur eine stabile, app-spezifische Kennung, die ausschließlich zum Abgleich Ihrer Lizenz auf Ihren Geräten dient. Sie können jedes Gerät jederzeit über den Abonnement-Bildschirm trennen. Einzelheiten finden Sie in unserer Datenschutzerklärung.</p>
   <h3>Lifetime-Abonnement</h3>
@@ -491,8 +505,9 @@
     <li>Ihr Anzeigename, Ihr Profilfoto (sofern festgelegt) und Ihre Ausgabendaten für alle Mitglieder der Gruppe sichtbar sind</li>
     <li>Belegfotos, die Sie an eine Gruppenausgabe anhängen, in Firebase Storage hochgeladen werden und für alle Mitglieder der Gruppe sichtbar sind</li>
     <li>Der Gruppenadministrator ein Gruppenfoto festlegen kann, das für alle Mitglieder der Gruppe sichtbar ist; dieses Foto wird in Firebase Storage gespeichert und bei der Löschung der Gruppe gelöscht</li>
-    <li>Jedes Mitglied Ausgaben zur Gruppe hinzufügen kann (vorbehaltlich der vom Gruppenadministrator festgelegten Berechtigungen)</li>
-    <li>Die Löschung einer Gruppe die einstimmige Zustimmung aller Mitglieder innerhalb eines 7-tägigen Abstimmungsfensters erfordert, es sei denn, Sie sind das einzige Mitglied oder Sie sind Administrator und die Gruppe hat keine Ausgaben – dann wird sie sofort gelöscht</li>
+    <li>Jedes Mitglied die Gruppe ansehen, Zahlungen erfassen und bestätigen sowie kommentieren kann; Mitglieder mit PRO, der kostenlosen Testversion oder einem abgedeckten Platz auch Ausgaben hinzufügen können (siehe Gruppenzugang in Abschnitt 3)</li>
+    <li>Jedes Mitglied Personen per Name hinzufügen kann. Eine per Name hinzugefügte Person kann diesen Platz beim Beitritt übernehmen; eine spätere Übernahme muss vom Ersteller der Gruppe oder von dem Mitglied, das sie hinzugefügt hat, genehmigt werden. Nach der Übernahme ersetzt das Konto der Person den Namen in den Ausgaben und Zahlungen der Gruppe</li>
+    <li>Die Löschung einer Gruppe die einstimmige Zustimmung aller Mitglieder (per Name hinzugefügte Personen stimmen nicht mit ab) innerhalb eines 7-tägigen Abstimmungsfensters erfordert, es sei denn, Sie sind das einzige Mitglied oder Sie sind Administrator und die Gruppe hat keine Ausgaben – dann wird sie sofort gelöscht</li>
     <li>Gruppen-Administratoren können berechtigte inaktive Gruppen proaktiv unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen. Wenn ein Administrator die Löschung auf diesem Weg einleitet, erhalten alle betroffenen Gruppenmitglieder sofort eine Push-Benachrichtigung mit dem Namen des Administrators. Der Administrator wählt, ob er die Gruppenausgaben exportieren, lokal behalten oder vollständig löschen möchte, bevor die Gruppe aus Firebase entfernt wird.</li>
     <li>Der Gruppenadministrator Mitglieder jederzeit entfernen oder Daten übertragen kann</li>
     <li>Ausgaben, die Sie nach der Gruppenlöschung behalten möchten, lokal auf Ihrem Gerät verbleiben, gekennzeichnet als aus einer gelöschten Gruppe stammend; Belegfotos für diese Ausgaben bleiben weiterhin über Firebase Storage zugänglich. Wenn die Löschung mit „Datensätze entfernen" durchgeführt wird, werden alle Belegfotos der Gruppe aus Firebase Storage gelöscht und können nicht wiederhergestellt werden.</li>
@@ -508,16 +523,17 @@
     <li>Die Richtigkeit Ihrer Ausgabendaten</li>
     <li>Ihren Anzeigenamen und wie er anderen Gruppenmitgliedern angezeigt wird</li>
     <li>Den Schutz des Zugriffs auf Ihr Gerät und die App</li>
-    <li>Die Sicherstellung, dass eingeladene Gruppenmitglieder der Verarbeitung ihrer Daten gemäß unserer Datenschutzrichtlinie zustimmen</li>
+    <li>Die Sicherstellung, dass eingeladene Gruppenmitglieder und Personen, die Sie per Name hinzufügen, der Verarbeitung ihrer Daten gemäß unserer Datenschutzrichtlinie zustimmen</li>
+    <li>Den Inhalt jeder Datei, die Sie importieren, etwa eines Splitwise-Exports</li>
     <li>Die Aufrechterhaltung des Zugriffs auf den mit Ihrer Apple-ID verknüpften iCloud-Schlüsselbund – verschlüsselte Backups können nicht wiederhergestellt werden, wenn der Zugriff auf den iCloud-Schlüsselbund verloren geht</li>
     <li>Die Richtigkeit aller Zahlungskonten oder Benutzernamen, die Sie für Peer-Payment-Apps und -Dienste (z. B. Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, WeChat) eingeben. Die Eingabe eines falschen Kontos kann dazu führen, dass Geld an einen unbeabsichtigten Empfänger gesendet wird. Node Expense hat keine Möglichkeit, solche Transaktionen rückgängig zu machen oder abzufangen, und die gesamte Haftung für fehlgeleitete Zahlungen liegt allein bei Ihnen</li>
     <li>Die Genauigkeit und den Inhalt von Belegbildern, die Sie für die <strong>Pick &amp; Pay</strong>-Erfassung einreichen. Die Bilder werden gemäß den Bedingungen des kostenpflichtigen Tarifs der Google Gemini API verarbeitet und <strong>nicht zum Trainieren von Googles Modellen verwendet</strong>; Node Expense speichert das übermittelte Bild nicht über das Anhängen des daraus entstehenden Belegfotos an Ihre Gruppenausgabe hinaus</li>
   </ul>
 
   <h3>6.1 Nutzergenerierte Inhalte (Profilfotos, Gruppenfotos und Anzeigenamen)</h3>
-  <p>Profilfotos, Gruppenfotos und Anzeigenamen sind nutzergenerierte Inhalte, die für andere Mitglieder jeder Gruppe sichtbar sind, der Sie beitreten. Mit der Nutzung dieser Funktionen erklären Sie sich damit einverstanden, dass:</p>
+  <p>Profilfotos, Gruppenfotos, Anzeigenamen und die Namen, die Sie per Name hinzugefügten Personen geben, sind nutzergenerierte Inhalte, die für andere Mitglieder jeder Gruppe sichtbar sind, der Sie beitreten. Mit der Nutzung dieser Funktionen erklären Sie sich damit einverstanden, dass:</p>
   <ul>
-    <li>Sie kein Profilfoto hochladen, kein Gruppenfoto festlegen und keinen Anzeigenamen festlegen, das/der obszön, sexuell explizit, belästigend, hasserfüllt, bedrohlich, diffamierend, rechtsverletzend, irreführend (z. B. Identitätstäuschung) oder anderweitig anstößig ist.</li>
+    <li>Sie kein Profilfoto hochladen, kein Gruppenfoto festlegen und keinen Anzeigenamen (oder Namen für eine hinzugefügte Person) festlegen, das/der obszön, sexuell explizit, belästigend, hasserfüllt, bedrohlich, diffamierend, rechtsverletzend, irreführend (z. B. Identitätstäuschung) oder anderweitig anstößig ist.</li>
     <li>Sie das Eigentum an oder das Recht zur Nutzung jedes Bildes besitzen, das Sie als Profilfoto oder Gruppenfoto hochladen. Sie gewähren Node Expense eine nicht-exklusive Lizenz zum Hosten, Verteilen und Anzeigen dieses Fotos – ausschließlich zum Zweck des Betriebs der Gruppenfunktionen der App.</li>
     <li>Andere Gruppenmitglieder können Ihr Profilfoto oder Ihren Anzeigenamen über die App melden. Hat der Gruppenadministrator ein unangemessenes Gruppenfoto festgelegt, kann jedes Mitglied dies melden, indem es den Namen des Administrators im Tab „Mitglieder" lange drückt und <strong>Mitglied melden</strong> wählt. Wir können nach eigenem Ermessen und ohne Vorankündigung gemeldete Inhalte entfernen, den Zugriff auf Profilfoto-, Gruppenfoto- oder Gruppenfunktionen aussetzen oder das Konto von Nutzern, die wiederholt gegen diese Regeln verstoßen, kündigen.</li>
     <li>Sie können das Profilfoto oder den Anzeigenamen eines anderen Mitglieds melden, indem Sie dessen Eintrag im Tab „Mitglieder" lange drücken und <strong>Mitglied melden</strong> wählen. Dadurch wird eine E-Mail an unsere Support-Adresse mit den relevanten Kontextinformationen vorausgefüllt geöffnet. Meldungen werden innerhalb einer angemessenen Frist manuell überprüft.</li>
@@ -545,7 +561,7 @@
     <li>Für Lifetime-Zugang: Die Gesamthaftung des Entwicklers übersteigt nicht den tatsächlich vom Nutzer für das betreffende Abonnement gezahlten Betrag</li>
     <li>Ungenaue, unvollständige oder falsch interpretierte Ergebnisse des <strong>Pick &amp; Pay</strong>-KI-Beleg-Scans. Google Gemini kann Beträge, Artikelbezeichnungen oder Währungen falsch lesen — Sie sind verantwortlich, alle extrahierten Daten vor dem Speichern zu überprüfen</li>
     <li>Ungenaue, übersehene oder verzögerte Ergebnisse der taiwanesischen Lotterie der einheitlichen Rechnung (統一發票). Die In-App-Prüfung dient lediglich der Bequemlichkeit – ein möglicher Gewinn ist inoffiziell, bis Sie ihn beim taiwanesischen Finanzministerium bestätigen, und Sie müssen die gedruckte Rechnung aufbewahren, um einen Preis einzulösen. Wir garantieren nicht, dass eine Gewinnzahl erkannt oder gemeldet wird, und übernehmen keine Verantwortung für einen Preis, der übersehen wird, verfällt oder nicht eingelöst werden kann</li>
-    <li>Ungenaue Währungsumrechnungen in Berichten oder Übersichten. Wechselkurse werden zur Bequemlichkeit von einem Drittanbieter abgerufen, sind ungefähr und spiegeln möglicherweise nicht den Kurs am jeweiligen Transaktionsdatum wider — Sie sind dafür verantwortlich, umgerechnete Beträge zu überprüfen, bevor Sie sich darauf verlassen</li>
+    <li>Ungenaue Währungsumrechnungen in Berichten, Übersichten oder Abrechnungsbeträgen. Wechselkurse werden zur Bequemlichkeit von einem Drittanbieter abgerufen, sind ungefähr und spiegeln möglicherweise nicht den Kurs am jeweiligen Transaktionsdatum wider — Sie sind dafür verantwortlich, umgerechnete Beträge zu überprüfen, bevor Sie sich darauf verlassen, auch das, was Sie zahlen oder annehmen, wenn eine Gruppe in einer Währung abrechnet</li>
     <li>Vertrauen auf exportierte Ausgaben- oder Spesenabrechnungen. Berichte werden zur Bequemlichkeit bereitgestellt und sind keine zertifizierten Buchhaltungs- oder Steuerdokumente. Sie sind für deren Richtigkeit und für die Einhaltung etwaiger Arbeitgeber-, Erstattungs- oder Steuermeldepflichten verantwortlich</li>
   </ul>
   <p><strong>Kein Zahlungsdienstleister:</strong> Node Expense ist kein Zahlungsdienstleister und überträgt, hält oder verarbeitet in keiner Form Geld. Die Deeplink-Funktion startet Drittanbieter-Apps (Venmo, Cash App, PayPal) — bei Apple Cash die App Nachrichten, in der Sie die Zahlung selbst senden — ausschließlich zur Bequemlichkeit. Bei Zelle, LINE und WeChat wird gar nichts gestartet: Die von Ihnen angegebenen Daten werden Gruppenmitgliedern lediglich angezeigt, und die Zahlung erfolgt anderswo; alle Transaktionen finden vollständig innerhalb dieser Apps statt und unterliegen deren jeweiligen Nutzungsbedingungen und Datenschutzrichtlinien. Node Expense übernimmt keine Verantwortung für Zahlungen, die über diese Plattformen getätigt werden.</p>
@@ -580,7 +596,7 @@
 
 <!-- ========== SPANISH ========== -->
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-10-30&nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-11-17&nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
 <h2><span class="section-number">1</span>Aceptación de los Términos</h2>
   <p>Al descargar, instalar o usar Node Expense: Track Together, acepta quedar vinculado por estos Términos de Servicio. Si no está de acuerdo, no utilice la aplicación.</p>
@@ -590,10 +606,13 @@
   <ul>
     <li>Registrar gastos personales individuales</li>
     <li>Rastrear y dividir gastos de grupo con otros miembros en tiempo real</li>
+    <li>Añadir personas a un grupo por nombre, para amigos que no usan la app, que pueden reclamar su lugar cuando se unan</li>
+    <li>Liquidar opcionalmente un grupo en una sola moneda, convirtiendo cada gasto al tipo de cambio del día en que se guarda</li>
     <li>Registrar opcionalmente su ubicación con los gastos</li>
     <li>Sincronizar gastos con calendarios de iOS seleccionados</li>
     <li>Hacer copias de seguridad y cifrar opcionalmente sus datos (función de suscripción PRO). Las copias de seguridad abarcan los registros de gastos personales almacenados localmente y los datos de grupo en caché; los datos de gastos de grupo en tiempo real en Firebase Firestore no están incluidos en las copias de seguridad locales. Las copias de seguridad JSON también incluyen sus categorías personalizadas, presupuestos y etiquetas de lugares.</li>
     <li>Exportar datos de gastos en formato JSON, CSV o PDF, e importar datos en formato JSON (función de suscripción PRO)</li>
+    <li>Importar los gastos y pagos de un grupo desde una exportación de Splitwise (suscripción PRO o prueba gratuita). Splitwise es una marca de su titular; Node Expense no está afiliada a Splitwise</li>
     <li>Escanear recibos con la cámara del dispositivo para rellenar automáticamente los detalles del gasto (en Mac, a partir de una foto del recibo)</li>
     <li>Adjuntar fotos de recibos a los gastos (función de suscripción PRO). Las fotos de gastos personales permanecen en su dispositivo; las fotos de gastos de grupo se almacenan en Firebase Storage y son visibles para todos los miembros del grupo.</li>
     <li>Utilice <strong>Pick &amp; Pay</strong> para fotografiar un recibo y dejar que Google Gemini AI identifique y detalle las partidas individuales, que luego puede convertir en gastos (función de suscripción PRO; los usuarios de prueba reciben un escaneo gratuito)</li>
@@ -612,6 +631,8 @@
     <li>Sin publicidad</li>
     <li>Sincronización manual del calendario de los últimos 7 días</li>
     <li>Presupuestos mensuales y por categoría con alertas</li>
+    <li>Unirse a cualquier grupo al que le inviten: ver sus gastos y saldos, registrar y confirmar pagos y comentar</li>
+    <li>Añadir gastos de grupo cuando un miembro PRO le cubra (véase Acceso al grupo más abajo), hasta un límite mensual que se muestra en la app</li>
   </ul>
   <h3>Prueba Gratuita</h3>
   <ul>
@@ -623,11 +644,12 @@
   <p>Los suscriptores PRO reciben acceso ilimitado a:</p>
   <ul>
     <li>Seguimiento ilimitado de gastos individuales (sin límite mensual)</li>
-    <li>Gastos de Grupo – crear y unirse a grupos, dividir facturas, registrar liquidaciones</li>
+    <li>Gastos de Grupo – crear grupos y añadir gastos sin límite mensual, y cubrir a miembros gratuitos en los grupos a los que pertenece</li>
     <li>Retención de Datos – políticas de retención automáticas con copias de seguridad cifradas AES-256-GCM opcionales</li>
     <li>Migración de Datos – exportar datos como JSON, CSV o PDF, e importar datos en formato JSON</li>
     <li><strong>Pick &amp; Pay</strong> — escaneo de recibos con IA a través de Google Gemini que identifica y desglosa las partidas individuales para registrar gastos</li>
   </ul>
+  <p><strong>Acceso al grupo.</strong> Cada miembro PRO cubre hasta 4 miembros gratuitos en cada grupo al que pertenece, asignados en el orden en que se unieron. Los miembros en la prueba gratuita pueden añadir gastos sin ocupar un lugar. Si un miembro PRO sale del grupo o su PRO termina, los miembros que cubría pueden seguir viendo el grupo y liquidando cuentas, pero no pueden añadir gastos hasta que se libere un lugar. El número de miembros cubiertos y el límite mensual pueden cambiar; las reglas vigentes siempre se muestran en cada grupo, en Reglas de acceso al grupo.</p>
   <p>Las suscripciones se renuevan automáticamente a menos que se cancelen a través de la Configuración de Apple App Store al menos 24 horas antes del final del período de facturación actual.</p>
   <p><strong>Sincronización de licencia entre dispositivos (opcional).</strong> No se requiere cuenta ni inicio de sesión para usar Node Expense. Si tiene PRO en más de un dispositivo con la sesión iniciada en la misma cuenta de Apple, puede usar opcionalmente <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO en su iPhone, iPad y Mac. No solicitamos nombre ni correo electrónico: solo un identificador estable y específico de la app que se usa únicamente para asociar su licencia en sus dispositivos. Puede desconectar cualquier dispositivo en cualquier momento desde la pantalla de Suscripción. Consulte nuestra Política de Privacidad para más detalles.</p>
   <h3>Suscripción de por Vida</h3>
@@ -640,8 +662,9 @@
     <li>Su nombre para mostrar, su foto de perfil (si está establecida) y los datos de gastos son visibles para todos los miembros del grupo</li>
     <li>Cualquier foto de recibo que adjunte a un gasto de grupo se carga en Firebase Storage y es visible para todos los miembros del grupo</li>
     <li>El administrador del grupo puede establecer una foto de grupo visible para todos los miembros del grupo; esta foto se almacena en Firebase Storage y se elimina cuando se elimina el grupo</li>
-    <li>Cualquier miembro puede añadir gastos al grupo (sujeto a los permisos establecidos por el administrador del grupo)</li>
-    <li>La eliminación del grupo requiere el consentimiento unánime de todos los miembros dentro de un período de votación de 7 días, salvo que usted sea el único miembro, o sea el administrador y el grupo no tenga gastos; en ese caso se elimina de inmediato</li>
+    <li>Todos los miembros pueden ver el grupo, registrar y confirmar pagos y comentar; los miembros con PRO, la prueba gratuita o un lugar cubierto también pueden añadir gastos (véase Acceso al grupo en la sección 3)</li>
+    <li>Cualquier miembro puede añadir personas por nombre. Una persona añadida por nombre puede reclamar ese lugar al unirse; reclamarlo más tarde requiere la aprobación del creador del grupo o del miembro que la añadió. Una vez reclamado, la cuenta de quien lo reclama sustituye al nombre en los gastos y pagos del grupo</li>
+    <li>La eliminación del grupo requiere el consentimiento unánime de todos los miembros (las personas añadidas por nombre no votan) dentro de un período de votación de 7 días, salvo que usted sea el único miembro, o sea el administrador y el grupo no tenga gastos; en ese caso se elimina de inmediato</li>
     <li>Los administradores del grupo pueden eliminar proactivamente grupos inactivos elegibles desde Ajustes → Datos y privacidad → Grupos inactivos. Cuando un administrador inicia la eliminación de esta forma, todos los miembros afectados reciben inmediatamente una notificación push identificando quién eliminó el grupo. El administrador elige exportar los gastos del grupo, conservarlos localmente o eliminarlos por completo antes de retirar el grupo de Firebase.</li>
     <li>El administrador del grupo puede eliminar miembros o transferir datos en cualquier momento</li>
     <li>Los gastos que elija conservar tras la eliminación del grupo permanecen localmente en su dispositivo, marcados como provenientes de un grupo eliminado; las fotos de recibos de esos gastos siguen siendo accesibles desde Firebase Storage. Si la eliminación se realiza con «eliminar registros», todas las fotos de recibos del grupo se eliminan de Firebase Storage y no podrán recuperarse.</li>
@@ -657,16 +680,17 @@
     <li>La exactitud de sus datos de gastos</li>
     <li>Su nombre para mostrar y cómo aparece ante otros miembros del grupo</li>
     <li>Proteger el acceso a su dispositivo y a la aplicación</li>
-    <li>Garantizar que los miembros del grupo que invite consientan el tratamiento de sus datos tal como se describe en nuestra Política de Privacidad</li>
+    <li>Garantizar que los miembros del grupo que invite, y las personas que añada por nombre, consientan el tratamiento de sus datos tal como se describe en nuestra Política de Privacidad</li>
+    <li>El contenido de cualquier archivo que importe, como una exportación de Splitwise</li>
     <li>Mantener el acceso al llavero de iCloud vinculado a su Apple ID – las copias de seguridad cifradas no se pueden recuperar si se pierde el acceso al llavero de iCloud</li>
     <li>La exactitud de los identificadores de pago o nombres de usuario que introduzca en aplicaciones de pago entre particulares (p. ej., Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, WeChat). Introducir un identificador incorrecto puede resultar en que el dinero se envíe a un destinatario no deseado. Node Expense no tiene capacidad para revertir o interceptar dichas transacciones, y toda responsabilidad por pagos mal dirigidos recae exclusivamente en usted</li>
     <li>La exactitud y el contenido de las imágenes de recibos que envíe para el escaneo de <strong>Pick &amp; Pay</strong>. Las imágenes se procesan conforme a los términos del nivel de pago de la API de Google Gemini y <strong>no se utilizan para entrenar los modelos de Google</strong>; Node Expense no conserva la imagen enviada más allá de adjuntar la foto de recibo resultante a su gasto de grupo</li>
   </ul>
 
   <h3>6.1 Contenido generado por el usuario (fotos de perfil, fotos de grupo y nombres para mostrar)</h3>
-  <p>Las fotos de perfil, las fotos de grupo y los nombres para mostrar son contenido generado por el usuario, visible para los miembros de cualquier grupo al que se una. Al utilizar estas funciones, acepta que:</p>
+  <p>Las fotos de perfil, las fotos de grupo, los nombres para mostrar y los nombres que dé a las personas que añada por nombre son contenido generado por el usuario, visible para los miembros de cualquier grupo al que se una. Al utilizar estas funciones, acepta que:</p>
   <ul>
-    <li>No subirá una foto de perfil, no establecerá una foto de grupo ni establecerá un nombre para mostrar que sea obsceno, sexualmente explícito, acosador, de odio, amenazante, difamatorio, infractor, engañoso (como suplantar a otra persona) o de otro modo objetable.</li>
+    <li>No subirá una foto de perfil, no establecerá una foto de grupo ni establecerá un nombre para mostrar (o un nombre para alguien que añada) que sea obsceno, sexualmente explícito, acosador, de odio, amenazante, difamatorio, infractor, engañoso (como suplantar a otra persona) o de otro modo objetable.</li>
     <li>Es propietario — o tiene derecho a usar — cualquier imagen que cargue como su foto de perfil o como foto de grupo. Otorga a Node Expense una licencia no exclusiva para alojar, distribuir y mostrar dicha foto con el único propósito de operar las funciones de grupo de la aplicación.</li>
     <li>Otros miembros del grupo pueden reportar su foto de perfil o nombre para mostrar desde la aplicación. Si el administrador del grupo ha establecido una foto de grupo inapropiada, cualquier miembro puede reportarla manteniendo pulsado el nombre del administrador en la pestaña de Miembros y eligiendo <strong>Reportar miembro</strong>. Podemos, a nuestra entera discreción y sin previo aviso, eliminar cualquier contenido reportado, suspender el acceso a las funciones de foto de perfil, foto de grupo o de grupo, o terminar la cuenta de los usuarios que infrinjan repetidamente estas reglas.</li>
     <li>Puede reportar la foto de perfil o el nombre para mostrar de otro miembro manteniendo pulsada su entrada en la pestaña de Miembros y eligiendo <strong>Reportar miembro</strong>. Esto abrirá un correo electrónico a nuestra dirección de soporte con el contexto relevante predefinido. Los reportes se revisan manualmente en un tiempo razonable.</li>
@@ -694,7 +718,7 @@
     <li>Para el Acceso de por Vida: la responsabilidad total del Desarrollador no superará el importe real pagado por el usuario por dicha suscripción</li>
     <li>Resultados inexactos, incompletos o mal interpretados del escaneo de recibos con IA de <strong>Pick &amp; Pay</strong>. Google Gemini puede leer incorrectamente importes, nombres de artículos o monedas — usted es responsable de verificar todos los datos extraídos antes de guardarlos</li>
     <li>Resultados inexactos, omitidos o tardíos de la lotería de la factura unificada de Taiwán (統一發票). La comprobación dentro de la app se ofrece solo por comodidad: un posible premio no es oficial hasta que lo verifique con el Ministerio de Finanzas de Taiwán, y debe conservar la factura impresa para cobrar cualquier premio. No garantizamos que se detecte o notifique un número premiado, y no somos responsables de ningún premio que se omita, caduque o no pueda cobrarse</li>
-    <li>Conversiones de divisas inexactas en informes o resúmenes. Los tipos de cambio se obtienen de un proveedor externo por comodidad, son aproximados y pueden no reflejar el tipo de la fecha de cada transacción: usted es responsable de verificar los importes convertidos antes de basarse en ellos</li>
+    <li>Conversiones de divisas inexactas en informes, resúmenes o importes de liquidación. Los tipos de cambio se obtienen de un proveedor externo por comodidad, son aproximados y pueden no reflejar el tipo de la fecha de cada transacción: usted es responsable de verificar los importes convertidos antes de basarse en ellos, incluido lo que paga o acepta cuando un grupo liquida en una sola moneda</li>
     <li>Confianza en los informes de gastos o de reembolso exportados. Los informes se proporcionan por comodidad y no son documentos contables ni fiscales certificados. Usted es responsable de su exactitud y del cumplimiento de los requisitos de su empleador, de reembolso o de declaración fiscal</li>
   </ul>
   <p><strong>No Procesamos Pagos:</strong> Node Expense no es un procesador de pagos y no transmite, retiene ni procesa dinero de ningún tipo. La función de enlace profundo lanza aplicaciones de terceros (Venmo, Cash App, PayPal) —o Mensajes, en el caso de Apple Cash, donde usted mismo envía el pago— únicamente por conveniencia. En el caso de Zelle, LINE y WeChat no se lanza nada: los datos que usted publique simplemente se muestran a los miembros del grupo, que le pagan en otro lugar; todas las transacciones ocurren enteramente dentro de esas aplicaciones y están sujetas a sus respectivos términos de servicio y políticas de privacidad. Node Expense no asume ninguna responsabilidad por los pagos realizados a través de esas plataformas.</p>
@@ -729,7 +753,7 @@
 
 <!-- ========== SIMPLIFIED CHINESE ========== -->
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-10-30&nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-11-17&nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
 <h2><span class="section-number">1</span>接受条款</h2>
   <p>通过下载、安装或使用 Node Expense: Track Together，您同意受本服务条款的约束。如果您不同意，请勿使用本应用。</p>
@@ -739,10 +763,13 @@
   <ul>
     <li>追踪个人支出</li>
     <li>与其他成员实时追踪并分摊群组支出</li>
+    <li>按名字将朋友添加到群组（适用于不使用 App 的朋友），他们加入时可以认领自己的位置</li>
+    <li>可选择让群组以单一货币结算，每笔支出按保存当天的汇率换算</li>
     <li>可选在支出中记录您的位置</li>
     <li>将支出与选定的 iOS 日历同步</li>
     <li>备份并可选加密您的数据（专业版订阅功能）。备份涵盖本地存储的个人支出记录和已缓存的群组数据；Firebase Firestore 中的即时群组支出数据不包含在本地备份中。JSON 备份还会包含您的自定义分类、预算和地点标签。</li>
     <li>以 JSON、CSV 或 PDF 格式导出支出数据，并以 JSON 格式导入数据（专业版订阅功能）</li>
+    <li>从 Splitwise 导出文件导入群组的支出和付款（专业版订阅或免费试用）。Splitwise 是其所有者的商标；Node Expense 与 Splitwise 没有关联</li>
     <li>使用设备摄像头扫描收据，自动填写支出信息（在 Mac 上则使用收据照片）</li>
     <li>为支出附加收据照片（专业版订阅功能）。个人支出照片保留在您的设备上；群组支出照片存储在 Firebase Storage 中，群组所有成员均可查看。</li>
     <li>使用 <strong>Pick &amp; Pay</strong> 拍摄收据，让 Google Gemini AI 识别并列出各个明细项目，然后您可以将其转换为支出记录（专业版订阅功能；试用用户可享受一次免费扫描）</li>
@@ -761,6 +788,8 @@
     <li>无广告</li>
     <li>过去 7 天的手动日历同步</li>
     <li>每月预算和类别预算，并提供提醒</li>
+    <li>加入您受邀的任何群组：查看其支出和余额、记录及确认付款，以及留言</li>
+    <li>当有专业版成员为您提供名额时添加群组支出（见下方群组权限），以 App 中显示的每月上限为限</li>
   </ul>
   <h3>免费试用</h3>
   <ul>
@@ -772,11 +801,12 @@
   <p>专业版订阅者可无限次使用：</p>
   <ul>
     <li>无限个人支出追踪（无每月限制）</li>
-    <li>群组支出——创建和加入群组、分摊账单、记录结算</li>
+    <li>群组支出——创建群组并添加支出，不受每月上限限制，并可为您所在群组中的免费成员提供名额</li>
     <li>数据保留——带有可选 AES-256-GCM 加密备份的自动保留政策</li>
     <li>数据迁移——以 JSON、CSV 或 PDF 格式导出数据，并以 JSON 格式导入数据</li>
     <li><strong>Pick &amp; Pay</strong> — 由 Google Gemini 驱动的 AI 收据扫描，自动识别并列出各个明细项目以便录入支出</li>
   </ul>
+  <p><strong>群组权限。</strong>每位专业版成员可在其所在的每个群组中为最多 4 位免费成员提供名额，按成员加入的顺序分配。免费试用中的成员添加支出时不占用名额。如果专业版成员退出群组或其专业版到期，使用其名额的成员仍可查看群组和结算，但在有名额空出之前无法添加支出。提供名额的人数和每月上限可能会变更；当前规则始终显示在各群组的群组权限规则中。</p>
   <p>除非在当前计费周期结束前至少 24 小时通过 Apple App Store 设置取消，否则订阅将自动续订。</p>
   <p><strong>跨设备授权同步（可选）。</strong>使用 Node Expense 无需账户或登录。若您在多台使用同一 Apple 账户的设备上拥有专业版，您可以在"订阅"页面选择性地使用<strong>通过 Apple 登录</strong>，将您的专业版授权同步至 iPhone、iPad 和 Mac。我们不会索取您的姓名或电子邮件——仅获取稳定、仅限本应用的标识符，且该标识符仅用于在您的设备间比对您的授权。您可随时在"订阅"页面断开任一设备的连接。详情请参阅我们的隐私政策。</p>
   <h3>终身订阅</h3>
@@ -789,8 +819,9 @@
     <li>您的显示名称、个人头像（若已设置）和支出数据对群组所有成员可见</li>
     <li>您附加到群组支出的任何收据照片都会上传至 Firebase Storage，并对群组所有成员可见</li>
     <li>群组管理员可设置对所有成员可见的群组头像；该头像存储在 Firebase Storage 中，群组删除时一并删除</li>
-    <li>任何成员都可以向群组添加支出（受群组管理员设置的权限约束）</li>
-    <li>删除群组需要在 7 天投票期内获得所有成员的一致同意；如果您是唯一成员，或您是管理员且群组中没有支出，则会立即删除</li>
+    <li>每位成员都可以查看群组、记录及确认付款，以及留言；拥有专业版、免费试用或名额的成员还可以添加支出（见第 3 节的群组权限）</li>
+    <li>任何成员都可以按名字添加人员。按名字添加的人员可以在加入时认领该位置；之后再认领则需要群组创建者或添加该人员的成员批准。认领后，认领者的账户会取代该名字在群组支出和付款中的位置</li>
+    <li>删除群组需要在 7 天投票期内获得所有成员（按名字添加的人员不参与投票）的一致同意；如果您是唯一成员，或您是管理员且群组中没有支出，则会立即删除</li>
     <li>群组管理员可在"设置 → 数据与隐私 → 闲置群组"中主动清理符合条件的闲置群组。当管理员以此方式发起删除时，所有受影响的群组成员将立即收到推送通知，通知中注明是谁删除了该群组。管理员可选择在将群组从 Firebase 移除前导出群组支出、保留至本地或全部删除。</li>
     <li>群组管理员可以随时移除成员或转移数据</li>
     <li>您在群组删除后选择保留的支出将保留在您的设备里，并标记为来自已删除群组；这些支出的收据照片仍可通过 Firebase Storage 访问。如果删除时选择"移除记录"，该群组的所有收据照片将从 Firebase Storage 中删除且无法恢复。</li>
@@ -806,16 +837,17 @@
     <li>支出数据的准确性</li>
     <li>您的显示名称及其在其他群组成员面前的显示方式</li>
     <li>保护对您的设备和应用的访问权限</li>
-    <li>确保您邀请的群组成员同意按照我们的隐私政策处理其数据</li>
+    <li>确保您邀请的群组成员，以及您按名字添加的人员，同意按照我们的隐私政策处理其数据</li>
+    <li>您导入的任何文件（例如 Splitwise 导出文件）的内容</li>
     <li>维护对链接到您 Apple ID 的 iCloud 钥匙串的访问——如果丢失 iCloud 钥匙串访问权限，加密备份将无法恢复</li>
     <li>您为点对点支付应用（如 Venmo、Cash App、PayPal、Apple Cash、Zelle、LINE、WeChat）输入的付款账号、用户名、电话号码或电子邮件的准确性。账号输入有误可能导致款项被发送至非预期收款人。Node Expense 无法撤销或拦截此类交易，错误转账的全部责任由您自行承担</li>
     <li>您为 <strong>Pick &amp; Pay</strong> 扫描提交的收据图片的准确性和内容。图片依 Google Gemini API 的付费方案条款处理，且<strong>不会用于训练 Google 的模型</strong>；除了将生成的收据照片附加到您的群组支出外，Node Expense 不会保留所提交的图片</li>
   </ul>
 
   <h3>6.1 用户生成的内容（个人头像、群组头像与显示名称）</h3>
-  <p>个人头像、群组头像与显示名称属于用户生成的内容，您加入的所有群组成员均可见。使用此功能即表示您同意：</p>
+  <p>个人头像、群组头像、显示名称，以及您为按名字添加的人员所取的名字，属于用户生成的内容，您加入的所有群组成员均可见。使用此功能即表示您同意：</p>
   <ul>
-    <li>您不得上传猥亵、色情、骚扰、仇恨、威胁、诽谤、侵权、欺诈性（如冒充他人）或其他不当的个人头像或群组头像，或设置上述性质的显示名称。</li>
+    <li>您不得上传猥亵、色情、骚扰、仇恨、威胁、诽谤、侵权、欺诈性（如冒充他人）或其他不当的个人头像或群组头像，或设置上述性质的显示名称（包括您为添加的人员所取的名字）。</li>
     <li>您拥有上传作为个人头像或群组头像之图像的所有权或使用权。您授予 Node Expense 一项非排他性许可，仅为运行应用群组功能之目的，得存储、分发及显示该照片。</li>
     <li>其他群组成员可在应用内举报您的个人头像或显示名称。若群组管理员设置了不当的群组头像，任何成员均可长按"成员"标签页中管理员的名称并选择<strong>举报成员</strong>来举报。我们可自行决定且无需事先通知，移除任何被举报的内容、暂停个人头像、群组头像或群组功能的访问，或终止屡次违反这些规定的用户账户。</li>
     <li>您可长按"成员"标签页中的某位成员并选择<strong>举报成员</strong>来举报其个人头像或显示名称。此操作会以预填了相关背景信息的电子邮件发送至我们的支持邮箱。举报将在合理时间内由人工审核。</li>
@@ -843,7 +875,7 @@
     <li>针对终身访问：开发者对"终身"订阅的总责任不得超过用户为该订阅实际支付的金额</li>
     <li><strong>Pick &amp; Pay</strong> AI 收据扫描结果不准确、不完整或解析有误。Google Gemini 可能会误读金额、商品名称或货币 — 您有责任在保存前核实所有提取的数据</li>
     <li>不准确、遗漏或延迟的台湾统一发票（统一发票）对奖结果。应用程序内的对奖仅为便利功能——在您向财政部核对之前，可能中奖均非正式结果，且您必须保留纸质发票才能兑奖。我们不保证一定会检测或报告中奖号码，对于任何遗漏、逾期或无法兑领的奖项概不负责</li>
-    <li>报告或汇总中的货币换算不准确。汇率为方便起见从第三方提供商获取，仅为近似值，可能无法反映任何特定交易日期的汇率——您有责任在依赖换算金额之前对其进行核实</li>
+    <li>报告、汇总或结算金额中的货币换算不准确。汇率为方便起见从第三方提供商获取，仅为近似值，可能无法反映任何特定交易日期的汇率——您有责任在依赖换算金额之前对其进行核实，包括群组以单一货币结算时您支付或接受的金额</li>
     <li>对导出的支出或报销报告的依赖。报告仅为便利功能提供，并非经认证的会计或税务文件。您有责任确保其准确性，并遵守任何雇主、报销或税务申报要求</li>
   </ul>
   <p><strong>非支付处理方声明：</strong>Node Expense 不是支付处理方，不以任何形式传输、持有或处理资金。深度链接功能仅为方便用户而启动第三方应用（Venmo、Cash App、PayPal）；若为 Apple Cash，则打开「信息」，由您自行发送款项；对于 Zelle、LINE 和 WeChat，本应用不会启动任何程序，仅向群组成员显示您提供的信息，付款在别处完成；所有交易均完全在上述第三方应用内完成，并受其各自的服务条款和隐私政策约束。Node Expense 对通过上述平台进行的任何付款概不负责。</p>
@@ -877,7 +909,7 @@
 
 <!-- ========== TRADITIONAL CHINESE ========== -->
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-10-30&nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-11-17&nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
 <h2><span class="section-number">1</span>條款接受</h2>
   <p>下載、安裝或使用 Node Expense: Track Together，即表示您同意受本服務條款約束。若您不同意，請勿使用本應用程式。</p>
@@ -887,10 +919,13 @@
   <ul>
     <li>追蹤個人費用</li>
     <li>即時追蹤並與其他成員分攤群組費用</li>
+    <li>以名字將朋友新增至群組（適用於沒有使用 App 的朋友），他們加入時可以認領自己的位置</li>
+    <li>可選擇讓群組以單一貨幣結算，每筆費用按儲存當天的匯率換算</li>
     <li>選擇性地記錄費用時的位置</li>
     <li>將費用與所選的 iOS 行事曆同步</li>
     <li>備份並選擇性地加密您的資料（PRO 訂閱功能）。備份涵蓋本機儲存的個人費用記錄及已快取的群組資料；Firebase Firestore 中的即時群組費用資料不包含在本機備份中。JSON 備份還會包含您的自訂類別、預算和地點標籤。</li>
     <li>以 JSON、CSV 或 PDF 格式匯出費用資料，並以 JSON 格式匯入資料（PRO 訂閱功能）</li>
+    <li>從 Splitwise 匯出檔案匯入群組的費用與付款（PRO 訂閱或免費試用）。Splitwise 為其所有者的商標；Node Expense 與 Splitwise 並無關聯</li>
     <li>使用裝置相機掃描收據，自動填入費用詳情（在 Mac 上則使用收據照片）</li>
     <li>為費用附加收據照片（PRO 訂閱功能）。個人費用照片保留在您的裝置上；群組費用照片儲存於 Firebase Storage，群組所有成員皆可檢視。</li>
     <li>使用 <strong>Pick &amp; Pay</strong> 拍攝收據，讓 Google Gemini AI 識別並列出各個明細項目，然後可將其轉換為費用記錄（PRO 訂閱功能；試用使用者可享有一次免費掃描）</li>
@@ -909,6 +944,8 @@
     <li>無廣告</li>
     <li>最近 7 天的手動行事曆同步</li>
     <li>每月預算與類別預算，並提供提醒</li>
+    <li>加入您受邀的任何群組：檢視其費用與餘額、記錄及確認付款，以及留言</li>
+    <li>當有 PRO 成員為您提供名額時新增群組費用（見下方群組權限），以 App 中顯示的每月上限為限</li>
   </ul>
   <h3>免費試用</h3>
   <ul>
@@ -920,11 +957,12 @@
   <p>PRO 訂閱者可無限制存取以下功能：</p>
   <ul>
     <li>無限個人費用追蹤（無每月上限）</li>
-    <li>群組費用 — 建立及加入群組、分攤費用、記錄結算</li>
+    <li>群組費用 — 建立群組並新增費用，不受每月上限限制，並可為您所屬群組中的免費成員提供名額</li>
     <li>資料保留 — 自動保留政策，可選配 AES-256-GCM 加密備份</li>
     <li>資料遷移 — 以 JSON、CSV 或 PDF 格式匯出資料，並以 JSON 格式匯入資料</li>
     <li><strong>Pick &amp; Pay</strong> — 由 Google Gemini 驅動的 AI 收據掃描，自動識別並列出各個明細項目以便登錄費用</li>
   </ul>
+  <p><strong>群組權限。</strong>每位 PRO 成員可在其所屬的每個群組中為最多 4 位免費成員提供名額，按成員加入的順序分配。免費試用中的成員新增費用時不佔用名額。如果 PRO 成員退出群組或其 PRO 到期，使用其名額的成員仍可檢視群組和結算，但在有名額空出之前無法新增費用。提供名額的人數與每月上限可能會變更；目前的規則一律顯示在各群組的群組權限規則中。</p>
   <p>訂閱將自動續訂，除非您在當前計費期結束前至少 24 小時透過 Apple App Store 設定取消。</p>
   <p><strong>跨裝置授權同步（選用）。</strong>使用 Node Expense 無需帳戶或登入。若您在多台使用同一 Apple 帳戶的裝置上擁有 PRO，您可以在「訂閱」頁面選擇性地使用<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至 iPhone、iPad 和 Mac。我們不會索取您的姓名或電子郵件——僅取得穩定、僅限本應用程式的識別碼，且該識別碼僅用於在您的裝置間比對您的授權。您可隨時在「訂閱」頁面中斷任一裝置的連結。詳情請參閱我們的隱私權政策。</p>
   <h3>終身訂閱</h3>
@@ -937,8 +975,9 @@
     <li>您的顯示名稱、個人頭像（如已設定）及費用資料對群組所有成員可見</li>
     <li>您附加至群組費用的任何收據照片皆會上傳至 Firebase Storage，並對群組所有成員可見</li>
     <li>群組管理員可設定對所有成員可見的群組頭像；該頭像儲存於 Firebase Storage，群組刪除時一併刪除</li>
-    <li>任何成員均可新增費用至群組（受群組管理員設定的權限約束）</li>
-    <li>群組刪除需要所有成員在 7 天投票期限內一致同意；若您是唯一成員，或您是管理員且群組沒有任何費用，則會立即刪除</li>
+    <li>每位成員都可以檢視群組、記錄及確認付款，以及留言；擁有 PRO、免費試用或名額的成員還可以新增費用（見第 3 節的群組權限）</li>
+    <li>任何成員都可以以名字新增人員。以名字新增的人員可以在加入時認領該位置；之後才認領則需要群組建立者或新增該人員的成員核准。認領後，認領者的帳號會取代該名字在群組費用與付款中的位置</li>
+    <li>群組刪除需要所有成員（以名字新增的人員不參與投票）在 7 天投票期限內一致同意；若您是唯一成員，或您是管理員且群組沒有任何費用，則會立即刪除</li>
     <li>群組管理員可在「設定 → 資料與隱私 → 閒置群組」中主動清理符合條件的閒置群組。當管理員以此方式發起刪除時，所有受影響的群組成員將立即收到推播通知，通知中說明是誰刪除了該群組。管理員可選擇在將群組從 Firebase 移除前匯出群組費用、保留至本機或全部刪除。</li>
     <li>群組管理員可隨時移除成員或轉移資料</li>
     <li>您選擇在群組刪除後保留的費用將保留在您的裝置裡，並標示為來自已刪除群組；這些費用的收據照片仍可透過 Firebase Storage 存取。若刪除時選擇「移除記錄」，該群組的所有收據照片將從 Firebase Storage 中刪除且無法復原。</li>
@@ -954,16 +993,17 @@
     <li>費用資料的準確性</li>
     <li>您的顯示名稱及其在其他群組成員面前的呈現方式</li>
     <li>保護您的裝置及應用程式的存取安全</li>
-    <li>確保您邀請的群組成員同意按照我們的隱私權政策處理其資料</li>
+    <li>確保您邀請的群組成員，以及您以名字新增的人員，同意按照我們的隱私權政策處理其資料</li>
+    <li>您匯入的任何檔案（例如 Splitwise 匯出檔案）的內容</li>
     <li>維持與您 Apple ID 關聯的 iCloud 鑰匙圈的存取權限 — 若失去存取權限，加密備份將無法復原</li>
     <li>您為點對點付款應用程式（如 Venmo、Cash App、PayPal、Apple Cash、Zelle、LINE、WeChat）輸入的付款帳號、用戶名稱、電話號碼或電子郵件之正確性。帳號輸入錯誤可能導致款項被轉至非預期的收款人。Node Expense 無法撤銷或攔截此類交易，因轉帳錯誤所產生的一切責任由您自行承擔</li>
     <li>您為 <strong>Pick &amp; Pay</strong> 掃描提交之收據圖像的準確性與內容。圖像依 Google Gemini API 的付費方案條款處理，且<strong>不會用於訓練 Google 的模型</strong>；除了將產生的收據照片附加至您的群組費用外，Node Expense 不會保留所提交的圖像</li>
   </ul>
 
   <h3>6.1 使用者產生的內容（個人頭像、群組頭像與顯示名稱）</h3>
-  <p>個人頭像、群組頭像與顯示名稱屬於使用者產生的內容，您加入的所有群組成員皆可見。使用此功能即表示您同意：</p>
+  <p>個人頭像、群組頭像、顯示名稱，以及您為以名字新增的人員所取的名字，屬於使用者產生的內容，您加入的所有群組成員皆可見。使用此功能即表示您同意：</p>
   <ul>
-    <li>您不得上傳猥褻、色情、騷擾、仇恨、威脅、誹謗、侵權、欺騙性（例如冒充他人）或其他不當的個人頭像或群組頭像，或設置上述性質的顯示名稱。</li>
+    <li>您不得上傳猥褻、色情、騷擾、仇恨、威脅、誹謗、侵權、欺騙性（例如冒充他人）或其他不當的個人頭像或群組頭像，或設置上述性質的顯示名稱（包括您為新增人員所取的名字）。</li>
     <li>您擁有上傳作為個人頭像或群組頭像之圖像的所有權，或擁有使用該圖像的權利。您授予 Node Expense 一項非專屬授權，僅為運作應用程式群組功能之目的，得儲存、分發及顯示該照片。</li>
     <li>其他群組成員可在應用程式內檢舉您的個人頭像或顯示名稱。若群組管理員設定了不當的群組頭像，任何成員均可長按「成員」分頁中管理員的名稱並選擇<strong>檢舉成員</strong>來檢舉。我們可自行決定且無需事先通知，移除任何被檢舉的內容、暫停個人頭像、群組頭像或群組功能的存取，或終止屢次違反這些規定使用者的帳戶。</li>
     <li>您可長按「成員」分頁中的某位成員，並選擇<strong>檢舉成員</strong>來檢舉其個人頭像或顯示名稱。此操作會以已預填相關背景資訊的電子郵件，寄至我們的支援信箱。檢舉將於合理時間內由人工審核。</li>
@@ -991,7 +1031,7 @@
     <li>專就終身使用權而言：開發者的總責任不得超過使用者為該訂閱實際支付的金額</li>
     <li><strong>Pick &amp; Pay</strong> AI 收據掃描結果不準確、不完整或解析有誤。Google Gemini 可能會誤讀金額、品項名稱或貨幣 — 您有責任在儲存前核實所有擷取的資料</li>
     <li>不準確、遺漏或延遲的台灣統一發票（統一發票）對獎結果。應用程式內的對獎僅為便利功能——在您向財政部核對之前，可能中獎均非正式結果，且您必須保留紙本發票才能兌獎。我們不保證一定會偵測或回報中獎號碼，對於任何遺漏、逾期或無法兌領的獎項概不負責</li>
-    <li>報告或彙總中的貨幣換算不準確。匯率為方便起見自第三方提供商取得，僅為近似值，可能無法反映任何特定交易日期的匯率——您有責任在依賴換算金額之前加以核實</li>
+    <li>報告、彙總或結算金額中的貨幣換算不準確。匯率為方便起見自第三方提供商取得，僅為近似值，可能無法反映任何特定交易日期的匯率——您有責任在依賴換算金額之前加以核實，包括群組以單一貨幣結算時您支付或接受的金額</li>
     <li>對匯出的費用或報支報告的依賴。報告僅為便利功能提供，並非經認證的會計或稅務文件。您有責任確保其正確性，並遵守任何雇主、報支或稅務申報要求</li>
   </ul>
   <p><strong>非支付處理方聲明：</strong>Node Expense 並非支付處理方，不以任何形式傳輸、持有或處理資金。深度連結功能僅為方便使用者而啟動第三方應用程式（Venmo、Cash App、PayPal）；若為 Apple Cash，則開啟「訊息」，由您自行傳送款項；至於 Zelle、LINE 和 WeChat，本應用程式不會啟動任何程式，僅向群組成員顯示您提供的資訊，付款在他處完成；所有交易均完全在上述第三方應用程式內完成，並受其各自的服務條款及隱私權政策規範。Node Expense 對透過上述平台進行的任何付款概不負責。</p>
@@ -1026,7 +1066,7 @@
 
 <!-- ========== JAPANESE ========== -->
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-10-30&nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-11-17&nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
 <h2><span class="section-number">1</span>利用規約への同意</h2>
   <p>Node Expense: Track Together をダウンロード、インストール、または使用することにより、本利用規約に同意したものとみなされます。同意されない場合は、本アプリをご使用にならないでください。</p>
@@ -1036,10 +1076,13 @@
   <ul>
     <li>個人の支出を記録・管理</li>
     <li>グループメンバーとリアルタイムでグループ支出を追跡・割り勘</li>
+    <li>アプリを使っていない友達を名前だけでグループに追加（参加したときに自分の位置を引き継げます）</li>
+    <li>グループを 1 つの通貨で精算する設定（任意。各支出は保存した日の為替レートで換算されます）</li>
     <li>支出に位置情報を記録（任意）</li>
     <li>選択した iOS カレンダーと支出を同期</li>
     <li>データのバックアップおよび暗号化（PRO サブスクリプション機能）。バックアップにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore 内のライブグループ支出データはローカルバックアップに含まれません。JSON 形式のバックアップには、カスタムカテゴリー、予算、場所のラベルも含まれます。</li>
     <li>支出データを JSON、CSV、PDF 形式でエクスポート、および JSON 形式でインポート（PRO サブスクリプション機能）</li>
+    <li>Splitwise のエクスポートからグループの支出と支払いを読み込み（PRO サブスクリプションまたは無料トライアル）。Splitwise はその所有者の商標であり、Node Expense は Splitwise とは提携していません</li>
     <li>デバイスのカメラでレシートをスキャンして支出情報を自動入力（Mac ではレシートの写真から）</li>
     <li>支出にレシート写真を添付（PRO サブスクリプション機能）。個人支出の写真はデバイスにのみ保存されます。グループ支出の写真は Firebase Storage に保存され、グループの全メンバーが閲覧できます。</li>
     <li><strong>Pick &amp; Pay</strong> を使ってレシートを撮影し、Google Gemini AI が個別の項目を識別・一覧化します。その後、各項目を支出として登録できます（PRO サブスクリプション機能。トライアルユーザーは1回無料スキャン可）</li>
@@ -1058,6 +1101,8 @@
     <li>広告なし</li>
     <li>過去7日間の手動カレンダー同期</li>
     <li>月次予算とカテゴリ予算（アラート付き）</li>
+    <li>招待されたグループへの参加：支出と残高の閲覧、支払いの記録と確認、コメント</li>
+    <li>PRO メンバーの枠を利用してのグループ支出の追加（下記のグループの利用権限を参照）。アプリに表示される月間上限まで</li>
   </ul>
   <h3>無料トライアル</h3>
   <ul>
@@ -1069,11 +1114,12 @@
   <p>PRO 登録者は以下の機能に無制限でアクセスできます：</p>
   <ul>
     <li>個人支出の無制限追跡（月次上限なし）</li>
-    <li>グループ支出 — グループの作成・参加、割り勘、精算の記録</li>
+    <li>グループ支出 — グループの作成、月間上限なしでの支出の追加、所属するグループの無料メンバーへの枠の提供</li>
     <li>データ保持 — AES-256-GCM 暗号化バックアップを含む自動保持ポリシー</li>
     <li>データ移行 — JSON、CSV、PDF 形式でのエクスポート、および JSON 形式でのインポート</li>
     <li><strong>Pick &amp; Pay</strong> — Google Gemini による AI レシートスキャン機能。個別の明細項目を識別・一覧化し、支出として登録できます</li>
   </ul>
+  <p><strong>グループの利用権限。</strong>各 PRO メンバーは、所属する各グループで最大 4 人の無料メンバーに枠を提供でき、枠はメンバーが参加した順に割り当てられます。無料トライアル中のメンバーは枠を使わずに支出を追加できます。PRO メンバーがグループを退出するか PRO が終了すると、その枠を利用していたメンバーは引き続きグループの閲覧と精算はできますが、枠が空くまで支出を追加できません。枠を提供できる人数と月間上限は変更されることがあります。現在のルールは、各グループのグループ利用ルールに常に表示されます。</p>
   <p>現在の請求期間終了の少なくとも 24 時間前に Apple App Store 設定からキャンセルしない限り、サブスクリプションは自動的に更新されます。</p>
   <p><strong>デバイス間ライセンス同期（任意）。</strong>Node Expense の利用にアカウントやサインインは不要です。同じ Apple アカウントでサインインした複数のデバイスで PRO をお持ちの場合、「サブスクリプション」画面で任意に<strong>Apple でサインイン</strong>を使用して、PRO ライセンスをiPhone、iPad、Mac 間で同期できます。当社は氏名もメールアドレスも要求せず、Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子はお客様のデバイス間でライセンスを照合する目的にのみ使用されます。デバイスの連携はいつでも「サブスクリプション」画面から解除できます。詳細はプライバシーポリシーをご覧ください。</p>
   <h3>ライフタイムサブスクリプション</h3>
@@ -1086,8 +1132,9 @@
     <li>あなたの表示名、プロフィール写真（設定している場合）、および支出データはグループの全メンバーに表示されます</li>
     <li>グループ支出に添付したレシート写真は Firebase Storage にアップロードされ、グループの全メンバーが閲覧できます</li>
     <li>グループ管理者は、グループの全メンバーに表示されるグループ写真を設定できます。この写真は Firebase Storage に保存され、グループが削除されると合わせて削除されます</li>
-    <li>どのメンバーもグループに支出を追加できます（グループ管理者が設定した権限に従います）</li>
-    <li>グループの削除には、7日間の投票期間内にすべてのメンバーの同意が必要です。ただし、メンバーが自分だけの場合、または自分が管理者でグループに支出がない場合は、すぐに削除されます</li>
+    <li>すべてのメンバーがグループの閲覧、支払いの記録と確認、コメントを行えます。PRO、無料トライアル、または枠を持つメンバーは支出も追加できます（第 3 節のグループの利用権限を参照）</li>
+    <li>どのメンバーも名前だけで人を追加できます。名前だけで追加された人は、参加するときにその位置を引き継げます。後から引き継ぐ場合は、グループの作成者かその人を追加したメンバーの承認が必要です。引き継ぐと、その人のアカウントがグループの支出と支払いで名前の位置を引き継ぎます</li>
+    <li>グループの削除には、7日間の投票期間内にすべてのメンバー（名前だけで追加された人は投票しません）の同意が必要です。ただし、メンバーが自分だけの場合、または自分が管理者でグループに支出がない場合は、すぐに削除されます</li>
     <li>グループ管理者は「設定 → データとプライバシー → 非アクティブなグループ」から対象の非アクティブグループを積極的に整理できます。管理者がこの方法で削除を開始すると、影響を受けるすべてのグループメンバーに、誰がグループを削除したかを示すプッシュ通知が即座に送信されます。管理者はグループを Firebase から削除する前に、グループ支出のエクスポート、ローカル保持、または全削除を選択できます。</li>
     <li>グループ管理者はいつでもメンバーを削除したりデータを移行したりできます</li>
     <li>グループ削除後に保持を選択した支出は、デバイスのローカルに「削除済みグループ」のマーク付きで残ります。これらの支出のレシート写真は引き続き Firebase Storage から閲覧できます。削除時に「記録を削除」を選択した場合、グループのすべてのレシート写真は Firebase Storage から削除され、復元できません。</li>
@@ -1103,16 +1150,17 @@
     <li>支出データの正確性</li>
     <li>表示名および他のグループメンバーへの表示方法</li>
     <li>デバイスとアプリへのアクセスの保護</li>
-    <li>招待するグループメンバーが、プライバシーポリシーに従ったデータ処理に同意していることの確認</li>
+    <li>招待するグループメンバー、および名前だけで追加する人が、プライバシーポリシーに従ったデータ処理に同意していることの確認</li>
+    <li>読み込むファイル（Splitwise のエクスポートなど）の内容</li>
     <li>Apple ID にリンクされた iCloud キーチェーンへのアクセスの維持 — iCloud キーチェーンへのアクセスを失った場合、暗号化バックアップは復元できません</li>
     <li>Venmo・Cash App・PayPal・Apple Cash・Zelle・LINE・WeChat などの個人間送金アプリおよびサービスに入力する送金先のハンドル名、ユーザー名、電話番号またはメールアドレスの正確性。誤ったハンドル名を入力した場合、意図しない相手に送金される可能性があります。Node Expense はそのような取引を取り消したり差し止めたりする手段を持たず、誤送金に関する一切の責任はお客様のみが負うものとします</li>
     <li><strong>Pick &amp; Pay</strong> スキャンに送信するレシート画像の正確性と内容。画像は Google Gemini API の有料プランの規約に基づいて処理され、<strong>Google のモデルの学習には使用されません</strong>。Node Expense は、生成されたレシート写真をグループ支出に添付する以外に、送信された画像を保持しません</li>
   </ul>
 
   <h3>6.1 ユーザー生成コンテンツ（プロフィール写真、グループ写真と表示名）</h3>
-  <p>プロフィール写真、グループ写真と表示名はユーザーが生成するコンテンツであり、参加するすべてのグループのメンバーに表示されます。これらの機能を利用することにより、お客様は以下に同意するものとします：</p>
+  <p>プロフィール写真、グループ写真、表示名、および名前だけで追加する人に付ける名前はユーザーが生成するコンテンツであり、参加するすべてのグループのメンバーに表示されます。これらの機能を利用することにより、お客様は以下に同意するものとします：</p>
   <ul>
-    <li>わいせつ、性的に露骨、嫌がらせ、憎悪、脅迫的、名誉毀損的、権利を侵害する、欺瞞的（他人へのなりすましなど）、その他不適切なプロフィール写真やグループ写真をアップロードしたり、不適切な表示名を設定したりしないこと。</li>
+    <li>わいせつ、性的に露骨、嫌がらせ、憎悪、脅迫的、名誉毀損的、権利を侵害する、欺瞞的（他人へのなりすましなど）、その他不適切なプロフィール写真やグループ写真をアップロードしたり、不適切な表示名（追加する人に付ける名前を含む）を設定したりしないこと。</li>
     <li>プロフィール写真またはグループ写真としてアップロードする画像の所有権または使用権を有していること。お客様は、アプリのグループ機能の運営の目的に限り、当該写真をホスト・配信・表示するための非独占的ライセンスを Node Expense に付与するものとします。</li>
     <li>他のグループメンバーは、アプリ内からお客様のプロフィール写真または表示名を報告できます。グループ管理者が不適切なグループ写真を設定した場合、任意のメンバーがメンバータブで管理者の名前を長押しして<strong>メンバーを報告</strong>を選択することで報告できます。当社は独自の裁量で、事前通知なく、報告されたコンテンツの削除、プロフィール写真機能、グループ写真機能またはグループ機能へのアクセス停止、または規定に繰り返し違反するユーザーのアカウント終了を行うことができます。</li>
     <li>お客様は、メンバータブのメンバーを長押しして<strong>メンバーを報告</strong>を選択することで、そのメンバーのプロフィール写真または表示名を報告できます。これにより、関連情報があらかじめ入力された電子メールが当社のサポート宛てに開きます。報告は合理的な時間内に手動で確認されます。</li>
@@ -1140,7 +1188,7 @@
     <li>ライフタイムアクセスについて：開発者の総責任は、ユーザーが当該サブスクリプションに実際に支払った金額を超えないものとします</li>
     <li><strong>Pick &amp; Pay</strong> AI レシートスキャンによる不正確・不完全・誤認識の結果。Google Gemini は金額・品目名・通貨を誤読する場合があります。保存前に抽出されたすべてのデータを確認する責任はお客様にあります</li>
     <li>不正確、見落とし、または遅延した台湾統一発票（統一發票）くじの結果。アプリ内の照合は利便性のための機能にすぎません。台湾財政部で確認するまで当選の可能性は正式なものではなく、賞金の受け取りには印刷された発票を保管する必要があります。当社は当選番号の検出または通知を保証せず、見落とし・期限切れ・受け取り不能となった賞金について一切責任を負いません</li>
-    <li>レポートまたは集計における不正確な通貨換算。為替レートは利便性のために第三者プロバイダーから取得され、概算であり、各取引日のレートを反映しない場合があります。換算後の金額に依拠する前に確認する責任はお客様にあります</li>
+    <li>レポート、集計、または精算額における不正確な通貨換算。為替レートは利便性のために第三者プロバイダーから取得され、概算であり、各取引日のレートを反映しない場合があります。グループを 1 つの通貨で精算する場合に支払う額や受け取る額を含め、換算後の金額に依拠する前に確認する責任はお客様にあります</li>
     <li>書き出した経費精算レポートへの依拠。レポートは利便性のために提供されるものであり、認証された会計・税務書類ではありません。その正確性、および雇用主・精算・税務報告に関する要件の遵守については、お客様が責任を負います</li>
   </ul>
   <p><strong>決済処理業者ではない旨の免責：</strong>Node Expense は決済処理業者ではなく、いかなる形でも資金の送受信・保管・処理を行いません。ディープリンク機能はあくまで利便性のために第三方アプリ（Venmo・Cash App・PayPal）を起動するものであり、Apple Cash の場合はメッセージを開き、お客様ご自身が送金します。Zelle・LINE・WeChat については何も起動されず、お客様が登録した情報がグループメンバーに表示されるだけで、送金は別のアプリで行われます。すべての取引はそれぞれのアプリ内で完結し、各アプリの利用規約およびプライバシーポリシーに従います。Node Expense はそれらのプラットフォームを通じて行われた支払いについて一切の責任を負いません。</p>
@@ -1174,7 +1222,7 @@
 
 <!-- ========== FRENCH ========== -->
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-10-30&nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-11-17&nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
 <h2><span class="section-number">1</span>Acceptation des Conditions</h2>
   <p>En téléchargeant, installant ou utilisant Node Expense : Track Together, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'acceptez pas, n'utilisez pas l'application.</p>
@@ -1184,10 +1232,13 @@
   <ul>
     <li>Suivre vos dépenses personnelles individuelles</li>
     <li>Suivre et partager des dépenses de groupe avec d'autres membres en temps réel</li>
+    <li>Ajouter des personnes à un groupe par leur nom, pour les amis qui n'utilisent pas l'app, qui peuvent revendiquer leur place en rejoignant le groupe</li>
+    <li>Régler éventuellement un groupe dans une seule devise, chaque dépense étant convertie au taux de change du jour de son enregistrement</li>
     <li>Enregistrer optionnellement votre localisation avec les dépenses</li>
     <li>Synchroniser les dépenses avec des calendriers iOS sélectionnés</li>
     <li>Sauvegarder et chiffrer optionnellement vos données (fonctionnalité d'abonnement PRO). Les sauvegardes couvrent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; les données de dépenses de groupe en temps réel dans Firebase Firestore ne sont pas incluses dans les sauvegardes locales. Les sauvegardes JSON incluent aussi vos catégories personnalisées, vos budgets et vos étiquettes de lieux.</li>
     <li>Exporter les données de dépenses en JSON, CSV ou PDF, et importer des données au format JSON (fonctionnalité d'abonnement PRO)</li>
+    <li>Importer les dépenses et paiements d'un groupe depuis un export Splitwise (abonnement PRO ou essai gratuit). Splitwise est une marque de son titulaire ; Node Expense n'est pas affilié à Splitwise</li>
     <li>Scanner des reçus avec la caméra de l'appareil pour remplir automatiquement les détails de la dépense (sur Mac, à partir d'une photo du reçu)</li>
     <li>Joindre des photos de reçus aux dépenses (fonctionnalité d'abonnement PRO). Les photos des dépenses personnelles restent sur votre appareil ; les photos des dépenses de groupe sont stockées dans Firebase Storage et visibles par tous les membres du groupe.</li>
     <li>Utilisez <strong>Pick &amp; Pay</strong> pour photographier un reçu et laisser Google Gemini AI identifier et lister les postes individuels, que vous pouvez ensuite convertir en dépenses (fonctionnalité d'abonnement PRO ; les utilisateurs en essai reçoivent un scan gratuit)</li>
@@ -1206,6 +1257,8 @@
     <li>Aucune publicité</li>
     <li>Synchronisation manuelle du calendrier pour les 7 derniers jours</li>
     <li>Budgets mensuels et par catégorie avec alertes</li>
+    <li>Rejoindre tout groupe auquel vous êtes invité : voir ses dépenses et ses soldes, enregistrer et confirmer des paiements, et commenter</li>
+    <li>Ajouter des dépenses de groupe lorsqu'un membre PRO vous couvre (voir Accès au groupe ci-dessous), dans la limite mensuelle indiquée dans l'app</li>
   </ul>
   <h3>Essai Gratuit</h3>
   <ul>
@@ -1217,11 +1270,12 @@
   <p>Les abonnés PRO bénéficient d'un accès illimité à :</p>
   <ul>
     <li>Suivi illimité des dépenses individuelles (sans limite mensuelle)</li>
-    <li>Dépenses de Groupe — créer et rejoindre des groupes, partager les factures, enregistrer les remboursements</li>
+    <li>Dépenses de Groupe — créer des groupes et ajouter des dépenses sans limite mensuelle, et couvrir des membres gratuits dans les groupes dont vous faites partie</li>
     <li>Conservation des Données — politiques de rétention automatiques avec sauvegardes chiffrées AES-256-GCM optionnelles</li>
     <li>Migration des Données — exporter les données en JSON, CSV ou PDF, et importer des données au format JSON</li>
     <li><strong>Pick &amp; Pay</strong> — numérisation de reçus par IA via Google Gemini, qui identifie et liste les postes individuels pour la saisie des dépenses</li>
   </ul>
+  <p><strong>Accès au groupe.</strong> Chaque membre PRO couvre jusqu'à 4 membres gratuits dans chaque groupe dont il fait partie, attribués dans l'ordre où les membres ont rejoint le groupe. Les membres en essai gratuit peuvent ajouter des dépenses sans occuper de place. Si un membre PRO quitte le groupe ou que son PRO prend fin, les membres qu'il couvrait peuvent toujours consulter le groupe et régler les comptes, mais ne peuvent plus ajouter de dépenses jusqu'à ce qu'une place se libère. Le nombre de membres couverts et la limite mensuelle peuvent changer ; les règles en vigueur sont toujours affichées dans chaque groupe, sous Règles d'accès au groupe.</p>
   <p>Les abonnements se renouvellent automatiquement sauf annulation via les Paramètres de l'App Store Apple au moins 24 heures avant la fin de la période de facturation en cours.</p>
   <p><strong>Synchronisation de licence entre appareils (optionnelle).</strong> Aucun compte ni aucune connexion n'est requis pour utiliser Node Expense. Si vous possédez PRO sur plusieurs appareils connectés au même compte Apple, vous pouvez facultativement utiliser <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre votre iPhone, votre iPad et votre Mac. Nous ne demandons ni nom ni e-mail — uniquement un identifiant stable et propre à l'app, utilisé uniquement pour associer votre licence entre vos appareils. Vous pouvez déconnecter n'importe quel appareil à tout moment depuis l'écran Abonnement. Consultez notre Politique de Confidentialité pour plus de détails.</p>
   <h3>Abonnement à Vie</h3>
@@ -1234,8 +1288,9 @@
     <li>Votre nom d'affichage, votre photo de profil (si définie) et vos données de dépenses sont visibles par tous les membres du groupe</li>
     <li>Toute photo de reçu que vous joignez à une dépense de groupe est téléversée vers Firebase Storage et visible par tous les membres du groupe</li>
     <li>L'administrateur du groupe peut définir une photo de groupe visible par tous les membres du groupe ; cette photo est stockée dans Firebase Storage et supprimée lors de la suppression du groupe</li>
-    <li>Tout membre peut ajouter des dépenses au groupe (sous réserve des autorisations définies par l'administrateur du groupe)</li>
-    <li>La suppression d'un groupe nécessite le consentement unanime de tous les membres dans un délai de vote de 7 jours, sauf si vous êtes le seul membre, ou si vous êtes l'administrateur et que le groupe ne contient aucune dépense : il est alors supprimé immédiatement</li>
+    <li>Chaque membre peut consulter le groupe, enregistrer et confirmer des paiements, et commenter ; les membres disposant de PRO, de l'essai gratuit ou d'une place couverte peuvent aussi ajouter des dépenses (voir Accès au groupe à la section 3)</li>
+    <li>Tout membre peut ajouter des personnes par leur nom. Une personne ajoutée par son nom peut revendiquer cette place en rejoignant le groupe ; une revendication ultérieure doit être approuvée par le créateur du groupe ou par le membre qui l'a ajoutée. Une fois la place revendiquée, le compte de cette personne remplace le nom dans les dépenses et paiements du groupe</li>
+    <li>La suppression d'un groupe nécessite le consentement unanime de tous les membres (les personnes ajoutées par leur nom ne votent pas) dans un délai de vote de 7 jours, sauf si vous êtes le seul membre, ou si vous êtes l'administrateur et que le groupe ne contient aucune dépense : il est alors supprimé immédiatement</li>
     <li>Les administrateurs de groupe peuvent proactivement supprimer les groupes inactifs éligibles depuis Réglages → Données et confidentialité → Groupes inactifs. Lorsqu'un administrateur initie la suppression de cette façon, tous les membres concernés reçoivent immédiatement une notification push indiquant qui a supprimé le groupe. L'administrateur choisit d'exporter les dépenses du groupe, de les conserver localement ou de les supprimer entièrement avant que le groupe ne soit retiré de Firebase.</li>
     <li>L'administrateur du groupe peut supprimer des membres ou transférer des données à tout moment</li>
     <li>Les dépenses que vous choisissez de conserver après la suppression du groupe restent localement sur votre appareil, marquées comme provenant d'un groupe supprimé ; les photos de reçus de ces dépenses restent accessibles via Firebase Storage. Si la suppression est effectuée avec « supprimer les enregistrements », toutes les photos de reçus du groupe sont supprimées de Firebase Storage et ne pourront pas être récupérées.</li>
@@ -1251,16 +1306,17 @@
     <li>L'exactitude de vos données de dépenses</li>
     <li>Votre nom d'affichage et la manière dont il apparaît aux autres membres du groupe</li>
     <li>La protection de l'accès à votre appareil et à l'application</li>
-    <li>S'assurer que les membres du groupe que vous invitez consentent au traitement de leurs données comme décrit dans notre Politique de Confidentialité</li>
+    <li>S'assurer que les membres du groupe que vous invitez, et les personnes que vous ajoutez par leur nom, consentent au traitement de leurs données comme décrit dans notre Politique de Confidentialité</li>
+    <li>Le contenu de tout fichier que vous importez, comme un export Splitwise</li>
     <li>Maintenir l'accès au trousseau iCloud lié à votre identifiant Apple — les sauvegardes chiffrées ne peuvent pas être récupérées si l'accès au trousseau iCloud est perdu</li>
     <li>L'exactitude des identifiants de paiement ou noms d'utilisateur que vous saisissez pour les applications de paiement entre particuliers (par ex., Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, WeChat). La saisie d'un identifiant incorrect peut entraîner l'envoi d'argent à un destinataire non souhaité. Node Expense n'a aucune capacité à annuler ou intercepter de telles transactions, et toute responsabilité pour les paiements mal dirigés vous incombe entièrement</li>
     <li>L'exactitude et le contenu des images de reçus que vous soumettez pour la numérisation <strong>Pick &amp; Pay</strong>. Les images sont traitées conformément aux conditions du palier payant de l'API Google Gemini et <strong>ne sont pas utilisées pour entraîner les modèles de Google</strong> ; Node Expense ne conserve pas l'image soumise au-delà de l'ajout de la photo de reçu obtenue à votre dépense de groupe</li>
   </ul>
 
   <h3>6.1 Contenu généré par l'utilisateur (photos de profil, photos de groupe et noms d'affichage)</h3>
-  <p>Les photos de profil, les photos de groupe et les noms d'affichage sont du contenu généré par l'utilisateur, visible par les autres membres de chaque groupe que vous rejoignez. En utilisant ces fonctionnalités, vous acceptez que :</p>
+  <p>Les photos de profil, les photos de groupe, les noms d'affichage et les noms que vous donnez aux personnes ajoutées par leur nom sont du contenu généré par l'utilisateur, visible par les autres membres de chaque groupe que vous rejoignez. En utilisant ces fonctionnalités, vous acceptez que :</p>
   <ul>
-    <li>Vous ne téléverserez pas de photo de profil, ne définirez pas de photo de groupe et ne définirez pas de nom d'affichage qui soit obscène, sexuellement explicite, harcelant, haineux, menaçant, diffamatoire, contrefaisant, trompeur (par exemple usurpant l'identité d'une autre personne) ou autrement répréhensible.</li>
+    <li>Vous ne téléverserez pas de photo de profil, ne définirez pas de photo de groupe et ne définirez pas de nom d'affichage (ou de nom pour une personne que vous ajoutez) qui soit obscène, sexuellement explicite, harcelant, haineux, menaçant, diffamatoire, contrefaisant, trompeur (par exemple usurpant l'identité d'une autre personne) ou autrement répréhensible.</li>
     <li>Vous êtes propriétaire — ou avez le droit d'utiliser — toute image que vous téléversez comme photo de profil ou photo de groupe. Vous accordez à Node Expense une licence non exclusive pour héberger, distribuer et afficher cette photo dans le seul but d'exploiter les fonctionnalités de groupe de l'application.</li>
     <li>Les autres membres du groupe peuvent signaler votre photo de profil ou nom d'affichage depuis l'application. Si l'administrateur du groupe a défini une photo de groupe inappropriée, tout membre peut la signaler en appuyant longuement sur le nom de l'administrateur dans l'onglet Membres et en choisissant <strong>Signaler le membre</strong>. Nous pouvons, à notre seule discrétion et sans préavis, supprimer tout contenu signalé, suspendre l'accès aux fonctionnalités de photo de profil, de photo de groupe ou de groupe, ou résilier le compte des utilisateurs qui enfreignent à plusieurs reprises ces règles.</li>
     <li>Vous pouvez signaler la photo de profil ou le nom d'affichage d'un autre membre en appuyant longuement sur son entrée dans l'onglet Membres et en choisissant <strong>Signaler le membre</strong>. Cela ouvre un e-mail à notre adresse de support avec le contexte pertinent prérempli. Les signalements sont examinés manuellement dans un délai raisonnable.</li>
@@ -1288,7 +1344,7 @@
     <li>Pour l'Accès à Vie : la responsabilité totale du Développeur ne dépassera pas le montant réellement payé par l'utilisateur pour ledit abonnement</li>
     <li>Les résultats inexacts, incomplets ou mal interprétés de la numérisation de reçus IA <strong>Pick &amp; Pay</strong>. Google Gemini peut mal lire les montants, noms d'articles ou devises — vous êtes responsable de vérifier toutes les données extraites avant de les enregistrer</li>
     <li>Résultats inexacts, manqués ou tardifs de la loterie de la facture unifiée de Taïwan (統一發票). La vérification dans l'app est fournie uniquement par commodité — un gain possible n'est pas officiel tant que vous ne l'avez pas vérifié auprès du ministère des Finances de Taïwan, et vous devez conserver la facture imprimée pour encaisser un prix. Nous ne garantissons pas qu'un numéro gagnant sera détecté ou signalé, et nous ne sommes pas responsables d'un prix manqué, expiré ou ne pouvant être réclamé</li>
-    <li>Conversions de devises inexactes dans les rapports ou les récapitulatifs. Les taux de change sont obtenus auprès d'un fournisseur tiers par commodité, sont approximatifs et peuvent ne pas refléter le taux à la date de chaque transaction — il vous incombe de vérifier les montants convertis avant de vous y fier</li>
+    <li>Conversions de devises inexactes dans les rapports, les récapitulatifs ou les montants de règlement. Les taux de change sont obtenus auprès d'un fournisseur tiers par commodité, sont approximatifs et peuvent ne pas refléter le taux à la date de chaque transaction — il vous incombe de vérifier les montants convertis avant de vous y fier, y compris ce que vous payez ou acceptez lorsqu'un groupe règle ses comptes dans une seule devise</li>
     <li>Recours aux rapports de dépenses ou de remboursement exportés. Les rapports sont fournis par commodité et ne constituent pas des documents comptables ou fiscaux certifiés. Vous êtes responsable de leur exactitude et du respect de toute exigence de votre employeur, de remboursement ou de déclaration fiscale</li>
   </ul>
   <p><strong>Aucun Traitement de Paiement :</strong> Node Expense n'est pas un prestataire de services de paiement et ne transmet, ne détient ni ne traite de l'argent sous quelque forme que ce soit. La fonctionnalité de lien profond lance des applications tierces (Venmo, Cash App, PayPal) — ou Messages, dans le cas d'Apple Cash, où vous envoyez vous-même le paiement — uniquement par commodité. Pour Zelle, LINE et WeChat, rien n'est lancé du tout : les informations que vous publiez sont simplement affichées aux membres du groupe, qui vous paient ailleurs ; toutes les transactions se produisent entièrement dans ces applications et sont soumises à leurs conditions d'utilisation et politiques de confidentialité respectives. Node Expense n'assume aucune responsabilité pour tout paiement effectué via ces plateformes.</p>
@@ -1323,7 +1379,7 @@
 
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-10-30&nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-11-17&nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>약관 동의</h2>
   <p>Node Expense: Track Together를 다운로드, 설치 또는 사용함으로써 본 이용약관에 동의하게 됩니다. 동의하지 않는 경우 앱을 사용하지 마십시오.</p>
@@ -1333,10 +1389,13 @@
   <ul>
     <li>개인 지출 추적</li>
     <li>다른 멤버와 실시간으로 그룹 지출 추적 및 공유</li>
+    <li>앱을 사용하지 않는 친구를 이름으로 그룹에 추가 (참가할 때 자신의 자리를 이어받을 수 있음)</li>
+    <li>그룹을 한 가지 통화로 정산하는 선택 기능 (각 지출은 저장한 날의 환율로 환산)</li>
     <li>선택적으로 지출과 함께 위치 기록</li>
     <li>선택한 iOS 캘린더와 지출 동기화</li>
     <li>선택적으로 데이터 백업 및 암호화 (PRO 구독 기능). 백업은 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터를 포함합니다. Firebase Firestore의 실시간 그룹 지출 데이터는 로컬 백업에 포함되지 않습니다. JSON 백업에는 사용자 정의 카테고리, 예산, 장소 레이블도 포함됩니다.</li>
     <li>지출 데이터를 JSON, CSV 또는 PDF로 내보내기 및 JSON 형식으로 가져오기 (PRO 구독 기능)</li>
+    <li>Splitwise 내보내기 파일에서 그룹의 지출과 송금 내역 가져오기 (PRO 구독 또는 무료 체험). Splitwise는 해당 소유자의 상표이며, Node Expense는 Splitwise와 제휴 관계가 없습니다</li>
     <li>기기 카메라로 영수증을 스캔하여 지출 내역 자동 입력 (Mac에서는 영수증 사진 사용)</li>
     <li>지출에 영수증 사진 첨부 (PRO 구독 기능). 개인 지출 사진은 기기에 보관됩니다. 그룹 지출 사진은 Firebase Storage에 저장되며 그룹의 모든 멤버가 볼 수 있습니다.</li>
     <li><strong>Pick &amp; Pay</strong>를 사용하여 영수증을 촬영하고 Google Gemini AI가 개별 항목을 식별하고 목록화하면, 이를 지출로 변환할 수 있습니다 (PRO 구독 기능; 체험 사용자는 무료 스캔 1회 제공)</li>
@@ -1355,6 +1414,8 @@
     <li>광고 없음</li>
     <li>최근 7일간의 캘린더 수동 동기화</li>
     <li>알림이 포함된 월별 예산 및 카테고리 예산</li>
+    <li>초대받은 그룹에 참가: 지출과 잔액 보기, 송금 기록 및 확인, 댓글 작성</li>
+    <li>PRO 멤버가 자리를 제공하면 그룹 지출 추가 (아래 그룹 이용 권한 참조), 앱에 표시되는 월간 한도까지</li>
   </ul>
   <h3>무료 체험</h3>
   <ul>
@@ -1366,11 +1427,12 @@
   <p>PRO 구독자는 다음에 대한 무제한 접근 권한을 받습니다:</p>
   <ul>
     <li>무제한 개인 지출 추적 (월별 한도 없음)</li>
-    <li>그룹 지출 — 그룹 생성 및 참여, 청구서 분할, 정산 기록</li>
+    <li>그룹 지출 — 그룹 생성, 월간 한도 없이 지출 추가, 속한 그룹의 무료 멤버에게 자리 제공</li>
     <li>데이터 보관 — 선택적 AES-256-GCM 암호화 백업을 포함한 자동 보관 정책</li>
     <li>데이터 마이그레이션 — JSON, CSV 또는 PDF로 내보내기 및 JSON 형식으로 가져오기</li>
     <li><strong>Pick &amp; Pay</strong> — Google Gemini를 통한 AI 영수증 스캔으로 개별 항목을 식별하고 목록화하여 지출 입력에 활용</li>
   </ul>
+  <p><strong>그룹 이용 권한.</strong> 각 PRO 멤버는 자신이 속한 각 그룹에서 최대 4명의 무료 멤버에게 자리를 제공하며, 자리는 멤버가 참가한 순서대로 배정됩니다. 무료 체험 중인 멤버는 자리를 차지하지 않고 지출을 추가할 수 있습니다. PRO 멤버가 그룹을 나가거나 PRO가 끝나면, 그 멤버의 자리를 이용하던 멤버는 계속 그룹을 보고 정산할 수 있지만 자리가 날 때까지 지출을 추가할 수 없습니다. 자리를 제공하는 인원과 월간 한도는 변경될 수 있으며, 현재 규칙은 각 그룹의 그룹 이용 규칙에 항상 표시됩니다.</p>
   <p>구독은 현재 결제 기간 종료 24시간 전에 Apple App Store 설정을 통해 취소하지 않으면 자동으로 갱신됩니다.</p>
   <p><strong>기기 간 라이선스 동기화(선택 사항).</strong> Node Expense 사용에는 계정이나 로그인이 필요하지 않습니다. 동일한 Apple 계정으로 로그인한 여러 기기에서 PRO를 보유하고 있다면, 구독 화면에서 선택적으로 <strong>Apple로 로그인</strong>을 사용하여 PRO 라이선스를 iPhone, iPad, Mac 간에 동기화할 수 있습니다. 당사는 이름이나 이메일을 요청하지 않으며, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 귀하의 기기 간에 라이선스를 대조하는 용도로만 사용됩니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있습니다. 자세한 내용은 개인정보처리방침을 참조하세요.</p>
   <h3>평생 구독</h3>
@@ -1383,8 +1445,9 @@
     <li>귀하의 표시 이름, 프로필 사진(설정한 경우), 지출 데이터가 모든 그룹 멤버에게 표시됩니다</li>
     <li>그룹 지출에 첨부한 영수증 사진은 Firebase Storage에 업로드되며 그룹의 모든 멤버에게 표시됩니다</li>
     <li>그룹 관리자는 그룹의 모든 멤버에게 표시되는 그룹 사진을 설정할 수 있습니다. 이 사진은 Firebase Storage에 저장되며 그룹이 삭제될 때 함께 삭제됩니다</li>
-    <li>모든 멤버가 그룹에 지출을 추가할 수 있습니다 (그룹 관리자가 설정한 권한 적용)</li>
-    <li>그룹 삭제는 7일 투표 기간 내에 모든 멤버의 동의가 필요합니다. 단, 멤버가 본인뿐이거나 본인이 관리자이고 그룹에 지출이 없으면 즉시 삭제됩니다</li>
+    <li>모든 멤버는 그룹을 보고, 송금을 기록 및 확인하고, 댓글을 달 수 있습니다. PRO, 무료 체험 또는 자리를 가진 멤버는 지출도 추가할 수 있습니다 (3항의 그룹 이용 권한 참조)</li>
+    <li>모든 멤버는 이름으로 사람을 추가할 수 있습니다. 이름으로 추가된 사람은 참가할 때 그 자리를 이어받을 수 있으며, 나중에 이어받으려면 그룹 생성자 또는 그 사람을 추가한 멤버의 승인이 필요합니다. 이어받으면 그 사람의 계정이 그룹의 지출과 송금에서 이름의 자리를 대신합니다</li>
+    <li>그룹 삭제는 7일 투표 기간 내에 모든 멤버(이름으로 추가된 사람은 투표하지 않음)의 동의가 필요합니다. 단, 멤버가 본인뿐이거나 본인이 관리자이고 그룹에 지출이 없으면 즉시 삭제됩니다</li>
     <li>그룹 관리자는 설정 → 데이터 및 개인정보 → 비활성 그룹에서 조건을 충족하는 비활성 그룹을 직접 정리할 수 있습니다. 관리자가 이 방법으로 삭제를 시작하면, 영향을 받는 모든 그룹 멤버에게 누가 그룹을 삭제했는지 알리는 푸시 알림이 즉시 전송됩니다. 관리자는 그룹을 Firebase에서 제거하기 전에 그룹 지출을 내보내거나, 로컬에 보관하거나, 전체 삭제 중 선택할 수 있습니다.</li>
     <li>그룹 관리자는 언제든지 멤버를 삭제하거나 데이터를 이전할 수 있습니다</li>
     <li>그룹 삭제 후 보관을 선택한 지출은 삭제된 그룹으로 표시되어 기기에 로컬로 유지되며, 해당 지출의 영수증 사진은 Firebase Storage에서 계속 접근할 수 있습니다. 삭제 시 "기록 제거"를 선택하면 그룹의 모든 영수증 사진이 Firebase Storage에서 삭제되며 복구할 수 없습니다.</li>
@@ -1400,16 +1463,17 @@
     <li>지출 데이터의 정확성</li>
     <li>표시 이름 및 다른 그룹 멤버에게 표시되는 방식</li>
     <li>기기 및 앱 접근 보호</li>
-    <li>초대한 그룹 멤버가 개인정보처리방침에 설명된 대로 데이터 처리에 동의했는지 확인</li>
+    <li>초대한 그룹 멤버와 이름으로 추가한 사람이 개인정보처리방침에 설명된 대로 데이터 처리에 동의했는지 확인</li>
+    <li>가져오는 파일(예: Splitwise 내보내기 파일)의 내용</li>
     <li>Apple ID와 연결된 iCloud 키체인 접근 유지 — iCloud 키체인 접근이 손실되면 암호화된 백업을 복구할 수 없습니다</li>
     <li>개인 간 결제 앱 및 서비스(예: Venmo, Cash App, PayPal, Apple Cash, Zelle, LINE, WeChat)에 입력하는 결제 식별자, 사용자명, 전화번호 또는 이메일의 정확성. 잘못된 식별자를 입력하면 의도하지 않은 수신자에게 송금될 수 있습니다. Node Expense는 이러한 거래를 취소하거나 가로챌 능력이 없으며, 잘못 전송된 결제에 대한 모든 책임은 전적으로 귀하에게 있습니다</li>
     <li><strong>Pick &amp; Pay</strong> 스캔을 위해 제출하는 영수증 이미지의 정확성과 내용. 이미지는 Google Gemini API 유료 등급 약관에 따라 처리되며 <strong>Google 의 모델 학습에 사용되지 않습니다</strong>; Node Expense 는 생성된 영수증 사진을 그룹 지출에 첨부하는 것 외에는 제출된 이미지를 보관하지 않습니다</li>
   </ul>
 
   <h3>6.1 사용자 생성 콘텐츠 (프로필 사진, 그룹 사진 및 표시 이름)</h3>
-  <p>프로필 사진, 그룹 사진과 표시 이름은 사용자 생성 콘텐츠로, 귀하가 참가하는 모든 그룹의 다른 멤버에게 표시됩니다. 이러한 기능을 사용함으로써 귀하는 다음에 동의합니다:</p>
+  <p>프로필 사진, 그룹 사진, 표시 이름, 그리고 이름으로 추가한 사람에게 붙인 이름은 사용자 생성 콘텐츠로, 귀하가 참가하는 모든 그룹의 다른 멤버에게 표시됩니다. 이러한 기능을 사용함으로써 귀하는 다음에 동의합니다:</p>
   <ul>
-    <li>외설적, 성적으로 노골적, 괴롭힘, 혐오, 위협, 명예훼손, 권리 침해, 기만적(예: 다른 사람을 사칭) 또는 기타 부적절한 프로필 사진을 업로드하거나, 그룹 사진을 설정하거나, 표시 이름을 설정하지 않는다.</li>
+    <li>외설적, 성적으로 노골적, 괴롭힘, 혐오, 위협, 명예훼손, 권리 침해, 기만적(예: 다른 사람을 사칭) 또는 기타 부적절한 프로필 사진을 업로드하거나, 그룹 사진을 설정하거나, 표시 이름(추가한 사람에게 붙인 이름 포함)을 설정하지 않는다.</li>
     <li>프로필 사진 또는 그룹 사진으로 업로드하는 모든 이미지의 소유권 또는 사용 권한을 보유한다. 귀하는 Node Expense에 앱의 그룹 기능 운영을 유일한 목적으로 해당 사진을 호스팅, 배포 및 표시할 수 있는 비독점적 라이선스를 부여한다.</li>
     <li>다른 그룹 멤버는 앱 내에서 귀하의 프로필 사진이나 표시 이름을 신고할 수 있다. 그룹 관리자가 부적절한 그룹 사진을 설정한 경우, 모든 멤버는 멤버 탭에서 관리자의 이름을 길게 눌러 <strong>멤버 신고</strong>를 선택하여 신고할 수 있다. 당사는 자체 재량으로 사전 통지 없이 신고된 콘텐츠를 제거하거나, 프로필 사진, 그룹 사진 또는 그룹 기능 접근을 정지하거나, 이러한 규칙을 반복적으로 위반하는 사용자의 계정을 종료할 수 있다.</li>
     <li>멤버 탭에서 다른 멤버의 항목을 길게 눌러 <strong>멤버 신고</strong>를 선택하여 해당 멤버의 프로필 사진이나 표시 이름을 신고할 수 있다. 이렇게 하면 관련 컨텍스트가 미리 입력된 이메일이 당사 지원 주소로 열린다. 신고는 합리적인 시간 내에 수동으로 검토된다.</li>
@@ -1437,7 +1501,7 @@
     <li>평생 접근의 경우: 개발자의 총 책임은 해당 구독을 위해 사용자가 실제로 지불한 금액을 초과하지 않습니다</li>
     <li><strong>Pick &amp; Pay</strong> AI 영수증 스캔의 부정확하거나 불완전하거나 잘못 해석된 결과. Google Gemini는 금액, 상품명 또는 통화를 잘못 읽을 수 있습니다 — 저장하기 전에 추출된 모든 데이터를 확인할 책임은 귀하에게 있습니다</li>
     <li>부정확하거나 누락되거나 지연된 대만 통일발표 복권(統一發票) 결과. 앱 내 대조는 편의를 위한 기능일 뿐이며, 대만 재정부에서 확인하기 전까지 당첨 가능성은 공식적인 것이 아니고 상금을 수령하려면 인쇄된 영수증을 보관해야 합니다. 당사는 당첨 번호의 감지 또는 통지를 보장하지 않으며, 누락되거나 만료되거나 수령할 수 없는 상금에 대해 책임지지 않습니다</li>
-    <li>보고서 또는 요약의 부정확한 환율 변환. 환율은 편의를 위해 타사 제공업체로부터 가져온 것으로 근사치이며 특정 거래일의 환율을 반영하지 않을 수 있습니다. 변환된 금액에 의존하기 전에 이를 확인할 책임은 사용자에게 있습니다</li>
+    <li>보고서, 요약 또는 정산 금액의 부정확한 환율 변환. 환율은 편의를 위해 타사 제공업체로부터 가져온 것으로 근사치이며 특정 거래일의 환율을 반영하지 않을 수 있습니다. 그룹을 한 가지 통화로 정산할 때 지불하거나 받는 금액을 포함하여, 변환된 금액에 의존하기 전에 이를 확인할 책임은 사용자에게 있습니다</li>
     <li>내보낸 경비 또는 환급 보고서에 대한 의존. 보고서는 편의를 위해 제공되며 공인된 회계 또는 세무 문서가 아닙니다. 보고서의 정확성과 고용주, 환급 또는 세무 보고 요건의 준수에 대한 책임은 사용자에게 있습니다</li>
   </ul>
   <p><strong>결제 처리 없음:</strong> Node Expense는 결제 서비스 제공업체가 아니며 어떤 형태로도 금액을 전송, 보유 또는 처리하지 않습니다. 딥링크 기능은 편의를 위해 타사 앱(Venmo, Cash App, PayPal)을 실행할 뿐이며, Apple Cash의 경우 메시지를 열어 귀하가 직접 송금하며, Zelle · LINE · WeChat의 경우에는 아무것도 실행되지 않고 귀하가 등록한 정보가 그룹 멤버에게 표시될 뿐 결제는 다른 곳에서 이루어지며, 모든 거래는 해당 앱 내에서 이루어지고 각 앱의 이용약관 및 개인정보처리방침이 적용됩니다. Node Expense는 이러한 플랫폼을 통해 이루어진 결제에 대해 어떠한 책임도 지지 않습니다.</p>

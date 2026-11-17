@@ -317,7 +317,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-11-06 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -337,7 +337,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tap the <strong>Groups</strong> tab <span class="arrow">→</span> tap the <strong>+</strong> button in the top right corner <span class="arrow">→</span> tap <strong>Create Group</strong>.
+        Tap the <strong>Groups</strong> tab <span class="arrow">→</span> tap the <strong>+</strong> button in the top right corner <span class="arrow">→</span> tap <strong>Create Group</strong>. Creating a group needs PRO or the free trial; anyone can join one for free.
       </div>
     </div>
     <div class="faq-item">
@@ -346,7 +346,35 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Open the group <span class="arrow">→</span> tap the <strong>Settings</strong> tab <span class="arrow">→</span> tap <strong>Share Invite Link</strong>. The group admin can also tap <strong>Invite More Members</strong> on the <strong>Members</strong> tab.
+        Open the group <span class="arrow">→</span> tap the <strong>Settings</strong> tab <span class="arrow">→</span> tap <strong>Share Invite Link</strong>, or tap <strong>Show QR Code</strong> for friends who are with you. The link works even for friends who don't have the app yet: it shows them how to get it, then opens the group. The group admin can also tap <strong>Invite More Members</strong> on the <strong>Members</strong> tab.<br><br>To join, tap the link, scan the QR code with your camera, or tap the <strong>Groups</strong> tab <span class="arrow">→</span> tap <strong>+</strong> <span class="arrow">→</span> <strong>Join Group</strong> and paste the invite link or code. Joining is free.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Who can add expenses to a group?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Everyone in a group can see every expense and balance, record and confirm payments, and comment. Adding expenses (and editing or deleting your own) needs one of these:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>PRO</strong> or the <strong>free trial</strong> — no limit.</li>
+          <li>A <strong>covered spot</strong> — each PRO member covers up to 4 free members in the group, in the order they joined. Covered members can add a set number of group expenses a month; the app shows how many you have left.</li>
+        </ul>
+        If a PRO member leaves or their PRO ends, the people they covered can still view and settle up until a spot opens. To see who is covered in a group, open the group <span class="arrow">→</span> tap <strong>⋯</strong> <span class="arrow">→</span> <strong>Group Access Rules</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I add someone who doesn't use Node Expense?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Open the group <span class="arrow">→</span> tap the <strong>Members</strong> tab <span class="arrow">→</span> tap <strong>Add Someone by Name</strong> <span class="arrow">→</span> enter their name. You can split expenses with them and record their payments like anyone else; they show with a dashed ring, and on the <strong>Members</strong> tab their name reads <strong>Guest · Added by</strong> and the person who added them. Any member can do this, and they count toward the group's member limit.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>If they join later, the app asks who they are and they can pick their name, so their balance moves to their own account.</li>
+          <li>Already in the group? Tap <strong>⋯</strong> next to the name <span class="arrow">→</span> <strong>This Is Me</strong>. The group creator, or the member who added the name, approves the request.</li>
+          <li>To rename or remove someone added by name, tap <strong>⋯</strong> next to their name. You can't remove them while an expense or payment still names them.</li>
+        </ul>
       </div>
     </div>
     <div class="faq-item">
@@ -356,6 +384,24 @@
       </button>
       <div class="faq-answer">
         Open the group <span class="arrow">→</span> tap the <strong>Expenses</strong> tab <span class="arrow">→</span> tap <strong>Record Payment</strong> at the bottom of the <strong>Balances</strong> card.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I settle up a group in one currency?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        By default each currency is settled on its own: what's owed in euros is paid back in euros. The group admin can choose one currency instead: open the group <span class="arrow">→</span> tap the <strong>Settings</strong> tab <span class="arrow">→</span> tap <strong>Settle-Up Currency</strong>. Each expense is then converted at the rate on the day it's saved, and that rate never changes, so balances don't move with the market. Everyone must be settled up before the currency can change. Rates are approximate, so check converted amounts before you pay.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I import a group from Splitwise?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        In Splitwise, export the group as a CSV file. Then open the group in Node Expense <span class="arrow">→</span> tap <strong>⋯</strong> <span class="arrow">→</span> <strong>Import from Splitwise</strong> <span class="arrow">→</span> choose the file. Match each Splitwise name to a member, or add them by name, check the preview, and import. Nothing changes in Splitwise, imported expenses and payments don't send notifications, and importing the same file again never adds anything twice. Importing needs PRO or the free trial.
       </div>
     </div>
     <div class="faq-item">
@@ -495,7 +541,7 @@
         Who is eligible:
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Personal expense</strong> — you can edit, delete, and refund any expense in your own list.</li>
-          <li><strong>Group expense</strong> — only the <strong>group admin</strong> or the member who <strong>originally recorded</strong> the expense can edit, delete, or refund it. Other members can open the expense to view it, but won't see Edit, Refund, or Delete.</li>
+          <li><strong>Group expense</strong> — only the <strong>group admin</strong>, the member who <strong>paid</strong>, or the member who <strong>entered</strong> the expense can edit, delete, or refund it, and only if they can add expenses in that group (see Who can add expenses to a group?). Other members can open the expense to view it, but won't see Edit, Refund, or Delete.</li>
         </ul>
         The <strong>Refund</strong> action is hidden on refunds themselves and on expenses that are already fully refunded.
       </div>
@@ -761,7 +807,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-11-06 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-11-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -781,7 +827,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選<strong>群組</strong>分頁 <span class="arrow">→</span> 點選右上角的 <strong>+</strong> 按鈕 <span class="arrow">→</span> 點選<strong>建立群組</strong>。
+        點選<strong>群組</strong>分頁 <span class="arrow">→</span> 點選右上角的 <strong>+</strong> 按鈕 <span class="arrow">→</span> 點選<strong>建立群組</strong>。建立群組需要 PRO 或免費試用；任何人都可以免費加入群組。
       </div>
     </div>
     <div class="faq-item">
@@ -790,7 +836,35 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>分享邀請連結</strong>。群組管理員也可以在<strong>成員</strong>分頁點選<strong>邀請更多成員</strong>。
+        開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>分享邀請連結</strong>。群組管理員也可以在<strong>成員</strong>分頁點選<strong>邀請更多成員</strong>。朋友在身邊時，也可以點選<strong>顯示 QR 碼</strong>。即使朋友還沒有安裝 App，連結也能使用：它會告訴對方如何取得 App，然後開啟群組。<br><br>要加入群組，請點選連結、用相機掃描 QR 碼，或點選<strong>群組</strong>分頁 <span class="arrow">→</span> 點選 <strong>+</strong> <span class="arrow">→</span> <strong>加入群組</strong>，然後貼上邀請連結或邀請碼。加入群組是免費的。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        誰可以在群組中新增支出？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        群組中的每個人都可以檢視所有支出和餘額、記錄及確認付款，以及留言。新增支出（以及編輯或刪除自己的支出）需要具備以下其中一項：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>PRO</strong> 或<strong>免費試用</strong>——沒有上限。</li>
+          <li><strong>名額</strong>——每位 PRO 成員可為群組中最多 4 位免費成員提供名額，按加入順序分配。使用名額的成員每月可新增一定數量的群組支出，App 會顯示您還剩多少。</li>
+        </ul>
+        如果 PRO 成員退出或其 PRO 到期，使用其名額的成員在有名額空出之前仍可檢視和結算。要查看群組中誰使用了名額，請開啟群組 <span class="arrow">→</span> 點選 <strong>⋯</strong> <span class="arrow">→</span> <strong>群組權限規則</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何新增沒有使用 Node Expense 的人？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        開啟群組 <span class="arrow">→</span> 點選<strong>成員</strong>分頁 <span class="arrow">→</span> 點選<strong>以名字新增成員</strong> <span class="arrow">→</span> 輸入對方的名字。您可以像對待其他成員一樣與他們分攤支出並記錄他們的付款；他們會以虛線圓圈顯示，在<strong>成員</strong>分頁的名字下方會標示<strong>訪客 · 由 … 新增</strong>，註明是誰新增的。任何成員都可以這麼做，且他們會計入群組的成員上限。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>如果對方之後加入，App 會詢問他們是誰，他們可以選擇自己的名字，餘額就會移到他們自己的帳號。</li>
+          <li>已經在群組中了？點選名字旁的 <strong>⋯</strong> <span class="arrow">→</span> <strong>這是我</strong>。由群組建立者或新增該名字的成員核准請求。</li>
+          <li>要重新命名或移除以名字新增的人員，請點選其名字旁的 <strong>⋯</strong>。只要還有支出或付款涉及他們，就無法移除。</li>
+        </ul>
       </div>
     </div>
     <div class="faq-item">
@@ -800,6 +874,24 @@
       </button>
       <div class="faq-answer">
         開啟群組 <span class="arrow">→</span> 點選<strong>支出</strong>分頁 <span class="arrow">→</span> 點選頂部<strong>餘額</strong>卡片底部的<strong>記錄付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何讓群組以單一貨幣結算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        預設情況下，每種貨幣分別結算：欠的歐元就用歐元還。群組管理員也可以改為選擇單一貨幣：開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>結算貨幣</strong>。之後每筆支出會按儲存當天的匯率換算，且該匯率不再變動，因此餘額不會隨行情波動。所有人都結清後才能更改貨幣。匯率僅為近似值，付款前請先核對換算後的金額。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何從 Splitwise 匯入群組？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        在 Splitwise 中將群組匯出為 CSV 檔案。然後在 Node Expense 中開啟群組 <span class="arrow">→</span> 點選 <strong>⋯</strong> <span class="arrow">→</span> <strong>從 Splitwise 匯入</strong> <span class="arrow">→</span> 選擇檔案。將每個 Splitwise 名字對應到成員，或以名字新增，確認預覽後即可匯入。Splitwise 裡的資料不會有任何變動，匯入的支出和付款不會發送通知，同一個檔案再匯入一次也不會重複新增。匯入需要 PRO 或免費試用。
       </div>
     </div>
     <div class="faq-item">
@@ -929,7 +1021,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        在列表中的任一支出列上：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>點選</strong>即可開啟該筆支出。</li><li><strong>長按</strong>（在 Mac 上按右鍵）可開啟選單，包含<strong>檢視詳情</strong>、<strong>編輯</strong>、<strong>退款</strong>（可退款時）和<strong>刪除</strong>。</li><li><strong>向右滑動</strong>可顯示<strong>編輯</strong>（藍色），可退款時還會顯示<strong>退款</strong>（綠色）。</li><li><strong>向左滑動</strong>可顯示<strong>刪除</strong>（紅色）。</li></ul>誰可以操作：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>個人支出</strong>——您可以編輯、刪除自己列表中的任何支出，或為其退款。</li><li><strong>群組支出</strong>——只有<strong>群組管理員</strong>或<strong>最初記錄</strong>該筆支出的成員可以編輯、刪除或退款。其他成員可以開啟查看，但不會看到編輯、退款或刪除。</li></ul>退款本身以及已全額退款的支出，不會顯示<strong>退款</strong>。
+        在列表中的任一支出列上：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>點選</strong>即可開啟該筆支出。</li><li><strong>長按</strong>（在 Mac 上按右鍵）可開啟選單，包含<strong>檢視詳情</strong>、<strong>編輯</strong>、<strong>退款</strong>（可退款時）和<strong>刪除</strong>。</li><li><strong>向右滑動</strong>可顯示<strong>編輯</strong>（藍色），可退款時還會顯示<strong>退款</strong>（綠色）。</li><li><strong>向左滑動</strong>可顯示<strong>刪除</strong>（紅色）。</li></ul>誰可以操作：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>個人支出</strong>——您可以編輯、刪除自己列表中的任何支出，或為其退款。</li><li><strong>群組支出</strong>——只有<strong>群組管理員</strong>、<strong>付款</strong>的成員或<strong>輸入</strong>該筆支出的成員可以編輯、刪除或退款，且前提是他們可以在該群組中新增支出（見誰可以在群組中新增支出？）。其他成員可以開啟查看，但不會看到編輯、退款或刪除。</li></ul>退款本身以及已全額退款的支出，不會顯示<strong>退款</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -1192,7 +1284,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-11-06 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-11-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1212,7 +1304,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        轻点<strong>群组</strong>标签页 <span class="arrow">→</span> 轻点右上角的 <strong>+</strong> 按钮 <span class="arrow">→</span> 轻点<strong>创建群组</strong>。
+        轻点<strong>群组</strong>标签页 <span class="arrow">→</span> 轻点右上角的 <strong>+</strong> 按钮 <span class="arrow">→</span> 轻点<strong>创建群组</strong>。创建群组需要 PRO 或免费试用；任何人都可以免费加入群组。
       </div>
     </div>
     <div class="faq-item">
@@ -1221,7 +1313,35 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> 轻点<strong>分享邀请链接</strong>。群组管理员也可以在<strong>成员</strong>标签页轻点<strong>邀请更多成员</strong>。
+        打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> 轻点<strong>分享邀请链接</strong>。群组管理员也可以在<strong>成员</strong>标签页轻点<strong>邀请更多成员</strong>。朋友在身边时，也可以轻点<strong>显示二维码</strong>。即使朋友还没有安装 App，链接也能使用：它会告诉对方如何获取 App，然后打开群组。<br><br>要加入群组，请轻点链接、用相机扫描二维码，或轻点<strong>群组</strong>标签页 <span class="arrow">→</span> 轻点 <strong>+</strong> <span class="arrow">→</span> <strong>加入群组</strong>，然后粘贴邀请链接或邀请码。加入群组是免费的。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        谁可以在群组中添加支出？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        群组中的每个人都可以查看所有支出和余额、记录及确认付款，以及留言。添加支出（以及编辑或删除自己的支出）需要具备以下其中一项：
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>PRO</strong> 或<strong>免费试用</strong>——没有上限。</li>
+          <li><strong>名额</strong>——每位 PRO 成员可为群组中最多 4 位免费成员提供名额，按加入顺序分配。使用名额的成员每月可添加一定数量的群组支出，App 会显示您还剩多少。</li>
+        </ul>
+        如果 PRO 成员退出或其 PRO 到期，使用其名额的成员在有名额空出之前仍可查看和结算。要查看群组中谁使用了名额，请打开群组 <span class="arrow">→</span> 轻点 <strong>⋯</strong> <span class="arrow">→</span> <strong>群组权限规则</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何添加不使用 Node Expense 的人？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        打开群组 <span class="arrow">→</span> 轻点<strong>成员</strong>标签页 <span class="arrow">→</span> 轻点<strong>按名字添加成员</strong> <span class="arrow">→</span> 输入对方的名字。您可以像对待其他成员一样与他们分摊支出并记录他们的付款；他们会以虚线圆圈显示，在<strong>成员</strong>标签页的名字下方会标示<strong>访客 · 由 … 添加</strong>，注明是谁添加的。任何成员都可以这样做，且他们会计入群组的成员上限。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>如果对方之后加入，App 会询问他们是谁，他们可以选择自己的名字，余额就会转到他们自己的账户。</li>
+          <li>已经在群组中了？轻点名字旁的 <strong>⋯</strong> <span class="arrow">→</span> <strong>这是我</strong>。由群组创建者或添加该名字的成员批准请求。</li>
+          <li>要重命名或移除按名字添加的人员，请轻点其名字旁的 <strong>⋯</strong>。只要还有支出或付款涉及他们，就无法移除。</li>
+        </ul>
       </div>
     </div>
     <div class="faq-item">
@@ -1231,6 +1351,24 @@
       </button>
       <div class="faq-answer">
         打开群组 <span class="arrow">→</span> 轻点<strong>支出</strong>标签页 <span class="arrow">→</span> 轻点顶部<strong>余额</strong>卡片底部的<strong>记录付款</strong>。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何让群组以单一货币结算？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        默认情况下，每种货币分别结算：欠的欧元就用欧元还。群组管理员也可以改为选择单一货币：打开群组 <span class="arrow">→</span> 轻点<strong>设置</strong>标签页 <span class="arrow">→</span> 轻点<strong>结算货币</strong>。之后每笔支出按保存当天的汇率换算，且该汇率不再变动，因此余额不会随行情波动。所有人都结清后才能更改货币。汇率仅为近似值，付款前请先核对换算后的金额。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        如何从 Splitwise 导入群组？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        在 Splitwise 中将群组导出为 CSV 文件。然后在 Node Expense 中打开群组 <span class="arrow">→</span> 轻点 <strong>⋯</strong> <span class="arrow">→</span> <strong>从 Splitwise 导入</strong> <span class="arrow">→</span> 选择文件。将每个 Splitwise 名字对应到成员，或按名字添加，确认预览后即可导入。Splitwise 里的数据不会有任何改动，导入的支出和付款不会发送通知，同一个文件再导入一次也不会重复添加。导入需要 PRO 或免费试用。
       </div>
     </div>
     <div class="faq-item">
@@ -1360,7 +1498,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        在列表中的任一支出行上：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>轻点</strong>即可打开该笔支出。</li><li><strong>长按</strong>（在 Mac 上右键点按）可打开菜单，包含<strong>查看详情</strong>、<strong>编辑</strong>、<strong>退款</strong>（可退款时）和<strong>删除</strong>。</li><li><strong>向右滑动</strong>可显示<strong>编辑</strong>（蓝色），可退款时还会显示<strong>退款</strong>（绿色）。</li><li><strong>向左滑动</strong>可显示<strong>删除</strong>（红色）。</li></ul>谁可以操作：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>个人支出</strong>——您可以编辑、删除自己列表中的任何支出，或为其退款。</li><li><strong>群组支出</strong>——只有<strong>群组管理员</strong>或<strong>最初记录</strong>该笔支出的成员可以编辑、删除或退款。其他成员可以打开查看，但不会看到编辑、退款或删除。</li></ul>退款本身以及已全额退款的支出，不会显示<strong>退款</strong>。
+        在列表中的任一支出行上：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>轻点</strong>即可打开该笔支出。</li><li><strong>长按</strong>（在 Mac 上右键点按）可打开菜单，包含<strong>查看详情</strong>、<strong>编辑</strong>、<strong>退款</strong>（可退款时）和<strong>删除</strong>。</li><li><strong>向右滑动</strong>可显示<strong>编辑</strong>（蓝色），可退款时还会显示<strong>退款</strong>（绿色）。</li><li><strong>向左滑动</strong>可显示<strong>删除</strong>（红色）。</li></ul>谁可以操作：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>个人支出</strong>——您可以编辑、删除自己列表中的任何支出，或为其退款。</li><li><strong>群组支出</strong>——只有<strong>群组管理员</strong>、<strong>付款</strong>的成员或<strong>输入</strong>该笔支出的成员可以编辑、删除或退款，且前提是他们可以在该群组中添加支出（见谁可以在群组中添加支出？）。其他成员可以打开查看，但不会看到编辑、退款或删除。</li></ul>退款本身以及已全额退款的支出，不会显示<strong>退款</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -1623,7 +1761,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-11-06 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-11-17 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -1643,7 +1781,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>グループ</strong>タブをタップ <span class="arrow">→</span> 右上の <strong>+</strong> ボタンをタップ <span class="arrow">→</span> <strong>グループを作成</strong>をタップ。
+        <strong>グループ</strong>タブをタップ <span class="arrow">→</span> 右上の <strong>+</strong> ボタンをタップ <span class="arrow">→</span> <strong>グループを作成</strong>をタップ。グループの作成には PRO または無料トライアルが必要です。グループへの参加は誰でも無料です。
       </div>
     </div>
     <div class="faq-item">
@@ -1652,7 +1790,35 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>招待リンクを共有</strong>をタップ。グループ管理者は<strong>メンバー</strong>タブの<strong>さらにメンバーを招待</strong>からも招待できます。
+        グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>招待リンクを共有</strong>をタップ。グループ管理者は<strong>メンバー</strong>タブの<strong>さらにメンバーを招待</strong>からも招待できます。近くにいる友達には、<strong>QRコードを表示</strong>をタップする方法もあります。リンクはアプリをまだ持っていない友達にも使えます。アプリの入手方法を案内してから、グループを開きます。<br><br>参加するには、リンクをタップするか、カメラで QR コードを読み取るか、<strong>グループ</strong>タブ <span class="arrow">→</span> <strong>+</strong> をタップ <span class="arrow">→</span> <strong>グループに参加</strong>で招待リンクまたはコードを貼り付けます。参加は無料です。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        グループに支出を追加できるのは誰ですか？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループのメンバーは全員、すべての支出と残高の閲覧、支払いの記録と確認、コメントができます。支出の追加（と自分の支出の編集・削除）には、次のいずれかが必要です。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>PRO</strong> または<strong>無料トライアル</strong> — 上限なし。</li>
+          <li><strong>枠</strong> — 各 PRO メンバーは、グループ内の最大 4 人の無料メンバーに参加順で枠を提供します。枠を利用するメンバーは毎月一定数のグループ支出を追加でき、残りの数はアプリに表示されます。</li>
+        </ul>
+        PRO メンバーが退出するか PRO が終了しても、その枠を利用していたメンバーは枠が空くまで閲覧と精算ができます。グループで誰が枠を利用しているかは、グループを開く <span class="arrow">→</span> <strong>⋯</strong> をタップ <span class="arrow">→</span> <strong>グループ利用ルール</strong>で確認できます。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Node Expense を使っていない人を追加するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        グループを開く <span class="arrow">→</span> <strong>メンバー</strong>タブをタップ <span class="arrow">→</span> <strong>名前だけで追加</strong>をタップ <span class="arrow">→</span> 名前を入力します。ほかのメンバーと同じように支出を分けたり、支払いを記録したりでき、点線の円で表示され、<strong>メンバー</strong>タブでは名前の下に<strong>ゲスト · … が追加</strong>と、追加した人が表示されます。どのメンバーでも追加でき、グループのメンバー数の上限に含まれます。
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>その人が後から参加すると、アプリが誰なのかを尋ね、自分の名前を選べば残高が本人のアカウントに移ります。</li>
+          <li>すでにグループにいる場合は、名前の横の <strong>⋯</strong> <span class="arrow">→</span> <strong>これは自分です</strong>をタップします。グループの作成者か、その名前を追加したメンバーがリクエストを承認します。</li>
+          <li>名前だけで追加された人の名前の変更や削除は、名前の横の <strong>⋯</strong> から行えます。その人が関わる支出や支払いが残っている間は削除できません。</li>
+        </ul>
       </div>
     </div>
     <div class="faq-item">
@@ -1662,6 +1828,24 @@
       </button>
       <div class="faq-answer">
         グループを開く <span class="arrow">→</span> <strong>支出</strong>タブをタップ <span class="arrow">→</span> 上部の<strong>残高</strong>カードの下にある<strong>支払いを記録</strong>をタップ。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        グループを 1 つの通貨で精算するには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        通常は通貨ごとに個別に精算します。ユーロでの借りはユーロで返します。グループ管理者は 1 つの通貨を選ぶこともできます。グループを開く <span class="arrow">→</span> <strong>設定</strong>タブをタップ <span class="arrow">→</span> <strong>精算通貨</strong>をタップします。各支出は保存した日のレートで換算され、そのレートは変わらないため、残高が相場で変動することはありません。通貨を変更するには、全員の精算が済んでいる必要があります。レートは概算なので、支払う前に換算後の金額を確認してください。
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Splitwise からグループを読み込むには？
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Splitwise でグループを CSV ファイルとしてエクスポートします。次に Node Expense でグループを開く <span class="arrow">→</span> <strong>⋯</strong> をタップ <span class="arrow">→</span> <strong>Splitwiseから読み込む</strong> <span class="arrow">→</span> ファイルを選びます。Splitwise の各名前をメンバーに対応させるか名前だけで追加し、プレビューを確認して読み込みます。Splitwise 側は何も変わらず、読み込んだ支出と支払いでは通知は送られません。同じファイルをもう一度読み込んでも二重に追加されることはありません。読み込みには PRO または無料トライアルが必要です。
       </div>
     </div>
     <div class="faq-item">
@@ -1791,7 +1975,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        リスト内の支出の行で：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>タップ</strong>すると支出が開きます。</li><li><strong>長押し</strong>（Mac では右クリック）すると、<strong>詳細を表示</strong>、<strong>編集</strong>、<strong>返金</strong>（返金できる場合）、<strong>削除</strong>のメニューが表示されます。</li><li><strong>右にスワイプ</strong>すると<strong>編集</strong>（青）と、返金できる場合は<strong>返金</strong>（緑）が表示されます。</li><li><strong>左にスワイプ</strong>すると<strong>削除</strong>（赤）が表示されます。</li></ul>操作できる人：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>個人の支出</strong>——自分のリストにある支出はすべて編集・削除・返金できます。</li><li><strong>グループの支出</strong>——編集・削除・返金できるのは<strong>グループ管理者</strong>か、その支出を<strong>最初に記録した</strong>メンバーだけです。ほかのメンバーは開いて見ることはできますが、編集・返金・削除は表示されません。</li></ul>返金そのものと、すでに全額返金された支出には<strong>返金</strong>は表示されません。
+        リスト内の支出の行で：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>タップ</strong>すると支出が開きます。</li><li><strong>長押し</strong>（Mac では右クリック）すると、<strong>詳細を表示</strong>、<strong>編集</strong>、<strong>返金</strong>（返金できる場合）、<strong>削除</strong>のメニューが表示されます。</li><li><strong>右にスワイプ</strong>すると<strong>編集</strong>（青）と、返金できる場合は<strong>返金</strong>（緑）が表示されます。</li><li><strong>左にスワイプ</strong>すると<strong>削除</strong>（赤）が表示されます。</li></ul>操作できる人：<ul style="margin:8px 0 8px 18px; padding:0;"><li><strong>個人の支出</strong>——自分のリストにある支出はすべて編集・削除・返金できます。</li><li><strong>グループの支出</strong>——編集・削除・返金できるのは<strong>グループ管理者</strong>、その支出を<strong>支払った</strong>メンバー、または<strong>入力した</strong>メンバーだけで、そのグループで支出を追加できる場合に限ります（グループに支出を追加できるのは誰ですか？を参照）。ほかのメンバーは開いて見ることはできますが、編集・返金・削除は表示されません。</li></ul>返金そのものと、すでに全額返金された支出には<strong>返金</strong>は表示されません。
       </div>
     </div>
     <div class="faq-item">
@@ -2054,7 +2238,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-11-06 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2074,7 +2258,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Tippen Sie auf den Tab <strong>Gruppen</strong> <span class="arrow">→</span> tippen Sie auf die Schaltfläche <strong>+</strong> oben rechts <span class="arrow">→</span> tippen Sie auf <strong>Gruppe erstellen</strong>.
+        Tippen Sie auf den Tab <strong>Gruppen</strong> <span class="arrow">→</span> tippen Sie auf die Schaltfläche <strong>+</strong> oben rechts <span class="arrow">→</span> tippen Sie auf <strong>Gruppe erstellen</strong>. Zum Erstellen einer Gruppe brauchen Sie PRO oder die kostenlose Testversion; beitreten kann jeder kostenlos.
       </div>
     </div>
     <div class="faq-item">
@@ -2083,7 +2267,35 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Einstellungen</strong> <span class="arrow">→</span> tippen Sie auf <strong>Einladungslink teilen</strong>. Der Gruppen-Administrator kann außerdem im Tab <strong>Mitglieder</strong> auf <strong>Weitere Mitglieder einladen</strong> tippen.
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Einstellungen</strong> <span class="arrow">→</span> tippen Sie auf <strong>Einladungslink teilen</strong>. Der Gruppen-Administrator kann außerdem im Tab <strong>Mitglieder</strong> auf <strong>Weitere Mitglieder einladen</strong> tippen. Für Freunde, die bei Ihnen sind, können Sie auch auf <strong>QR-Code anzeigen</strong> tippen. Der Link funktioniert auch für Freunde, die die App noch nicht haben: Er zeigt ihnen, wie sie sie bekommen, und öffnet dann die Gruppe.<br><br>Zum Beitreten tippen Sie auf den Link, scannen den QR-Code mit der Kamera oder tippen auf den Tab <strong>Gruppen</strong> <span class="arrow">→</span> tippen auf <strong>+</strong> <span class="arrow">→</span> <strong>Gruppe beitreten</strong> und fügen den Einladungslink oder Code ein. Der Beitritt ist kostenlos.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wer kann einer Gruppe Ausgaben hinzufügen?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Alle in einer Gruppe können jede Ausgabe und jeden Saldo sehen, Zahlungen erfassen und bestätigen sowie kommentieren. Zum Hinzufügen von Ausgaben (und zum Bearbeiten oder Löschen eigener Ausgaben) brauchen Sie eines davon:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>PRO</strong> oder die <strong>kostenlose Testversion</strong> – ohne Limit.</li>
+          <li>Einen <strong>abgedeckten Platz</strong> – jedes PRO-Mitglied deckt bis zu 4 Mitglieder ohne PRO in der Gruppe ab, in der Reihenfolge ihres Beitritts. Abgedeckte Mitglieder können pro Monat eine bestimmte Zahl an Gruppenausgaben hinzufügen; die App zeigt, wie viele noch übrig sind.</li>
+        </ul>
+        Verlässt ein PRO-Mitglied die Gruppe oder endet sein PRO, können die von ihm abgedeckten Personen weiterhin alles sehen und abrechnen, bis ein Platz frei wird. Wer in einer Gruppe abgedeckt ist, sehen Sie so: Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf <strong>⋯</strong> <span class="arrow">→</span> <strong>Gruppenzugangsregeln</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie füge ich jemanden hinzu, der Node Expense nicht nutzt?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Mitglieder</strong> <span class="arrow">→</span> tippen Sie auf <strong>Person per Name hinzufügen</strong> <span class="arrow">→</span> geben Sie den Namen ein. Sie können mit dieser Person Ausgaben teilen und ihre Zahlungen erfassen wie bei allen anderen; sie wird mit einem gestrichelten Ring angezeigt, und im Tab <strong>Mitglieder</strong> steht unter ihrem Namen <strong>Gast · Hinzugefügt von</strong> und wer sie hinzugefügt hat. Jedes Mitglied kann das tun, und solche Personen zählen zum Mitgliederlimit der Gruppe.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>Tritt die Person später bei, fragt die App, wer sie ist; wählt sie ihren Namen, geht ihr Saldo auf ihr eigenes Konto über.</li>
+          <li>Schon in der Gruppe? Tippen Sie neben dem Namen auf <strong>⋯</strong> <span class="arrow">→</span> <strong>Das bin ich</strong>. Der Ersteller der Gruppe oder das Mitglied, das den Namen hinzugefügt hat, genehmigt die Anfrage.</li>
+          <li>Zum Umbenennen oder Entfernen einer per Name hinzugefügten Person tippen Sie neben ihrem Namen auf <strong>⋯</strong>. Solange eine Ausgabe oder Zahlung sie nennt, kann sie nicht entfernt werden.</li>
+        </ul>
       </div>
     </div>
     <div class="faq-item">
@@ -2093,6 +2305,24 @@
       </button>
       <div class="faq-answer">
         Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Ausgaben</strong> <span class="arrow">→</span> tippen Sie unten in der Karte <strong>Salden</strong> auf <strong>Zahlung erfassen</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie rechne ich eine Gruppe in einer Währung ab?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Standardmäßig wird jede Währung für sich beglichen: Was in Euro geschuldet wird, wird in Euro zurückgezahlt. Der Gruppen-Administrator kann stattdessen eine Währung wählen: Öffnen Sie die Gruppe <span class="arrow">→</span> tippen Sie auf den Tab <strong>Einstellungen</strong> <span class="arrow">→</span> tippen Sie auf <strong>Abrechnungswährung</strong>. Jede Ausgabe wird dann zum Kurs des Tages umgerechnet, an dem sie gespeichert wird, und dieser Kurs ändert sich nie – Salden schwanken also nicht mit dem Markt. Alle müssen ausgeglichen sein, bevor sich die Währung ändern lässt. Die Kurse sind ungefähr, prüfen Sie umgerechnete Beträge also vor dem Bezahlen.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Wie importiere ich eine Gruppe aus Splitwise?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Exportieren Sie die Gruppe in Splitwise als CSV-Datei. Öffnen Sie dann die Gruppe in Node Expense <span class="arrow">→</span> tippen Sie auf <strong>⋯</strong> <span class="arrow">→</span> <strong>Aus Splitwise importieren</strong> <span class="arrow">→</span> wählen Sie die Datei. Ordnen Sie jeden Splitwise-Namen einem Mitglied zu oder fügen Sie ihn per Name hinzu, prüfen Sie die Vorschau und importieren Sie. In Splitwise ändert sich nichts, importierte Ausgaben und Zahlungen senden keine Mitteilungen, und wird dieselbe Datei erneut importiert, wird nichts doppelt hinzugefügt. Für den Import brauchen Sie PRO oder die kostenlose Testversion.
       </div>
     </div>
     <div class="faq-item">
@@ -2232,7 +2462,7 @@
         Wer ist berechtigt:
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Persönliche Ausgabe</strong> — Sie können jede Ausgabe in Ihrer eigenen Liste bearbeiten, löschen und erstatten.</li>
-          <li><strong>Gruppenausgabe</strong> — nur der <strong>Gruppen-Administrator</strong> oder das Mitglied, das die Ausgabe <strong>ursprünglich erfasst</strong> hat, kann sie bearbeiten, löschen oder erstatten. Andere Mitglieder können die Ausgabe öffnen und ansehen, sehen aber weder Bearbeiten noch Erstatten oder Löschen.</li>
+          <li><strong>Gruppenausgabe</strong> — nur der <strong>Gruppen-Administrator</strong>, das Mitglied, das sie <strong>bezahlt</strong> hat, oder das Mitglied, das sie <strong>eingegeben</strong> hat, kann sie bearbeiten, löschen oder erstatten, und nur, wenn es in dieser Gruppe Ausgaben hinzufügen kann (siehe Wer kann einer Gruppe Ausgaben hinzufügen?). Andere Mitglieder können die Ausgabe öffnen und ansehen, sehen aber weder Bearbeiten noch Erstatten oder Löschen.</li>
         </ul>
         Die Aktion <strong>Erstatten</strong> wird bei Erstattungen selbst sowie bei bereits vollständig erstatteten Ausgaben ausgeblendet.
       </div>
@@ -2498,7 +2728,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-11-06 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2518,7 +2748,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Toque la pestaña <strong>Grupos</strong> <span class="arrow">→</span> toque el botón <strong>+</strong> en la esquina superior derecha <span class="arrow">→</span> toque <strong>Crear grupo</strong>.
+        Toque la pestaña <strong>Grupos</strong> <span class="arrow">→</span> toque el botón <strong>+</strong> en la esquina superior derecha <span class="arrow">→</span> toque <strong>Crear grupo</strong>. Crear un grupo requiere PRO o la prueba gratuita; cualquiera puede unirse a uno gratis.
       </div>
     </div>
     <div class="faq-item">
@@ -2527,7 +2757,35 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Ajustes</strong> <span class="arrow">→</span> toque <strong>Compartir enlace de invitación</strong>. El administrador del grupo también puede tocar <strong>Invitar más miembros</strong> en la pestaña <strong>Miembros</strong>.
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Ajustes</strong> <span class="arrow">→</span> toque <strong>Compartir enlace de invitación</strong>. El administrador del grupo también puede tocar <strong>Invitar más miembros</strong> en la pestaña <strong>Miembros</strong>. Para amigos que estén con usted, también puede tocar <strong>Mostrar código QR</strong>. El enlace funciona incluso para amigos que aún no tienen la app: les muestra cómo conseguirla y luego abre el grupo.<br><br>Para unirse, toque el enlace, escanee el código QR con la cámara, o toque la pestaña <strong>Grupos</strong> <span class="arrow">→</span> toque <strong>+</strong> <span class="arrow">→</span> <strong>Unirse al grupo</strong> y pegue el enlace de invitación o el código. Unirse es gratis.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Quién puede añadir gastos a un grupo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Todos en un grupo pueden ver cada gasto y cada saldo, registrar y confirmar pagos y comentar. Para añadir gastos (y editar o eliminar los suyos) se necesita una de estas opciones:
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>PRO</strong> o la <strong>prueba gratuita</strong>: sin límite.</li>
+          <li>Un <strong>lugar cubierto</strong>: cada miembro PRO cubre hasta 4 miembros gratuitos del grupo, en el orden en que se unieron. Los miembros cubiertos pueden añadir un número determinado de gastos de grupo al mes; la app muestra cuántos le quedan.</li>
+        </ul>
+        Si un miembro PRO sale o su PRO termina, las personas que cubría pueden seguir viendo y liquidando cuentas hasta que se libere un lugar. Para ver quién está cubierto en un grupo, abra el grupo <span class="arrow">→</span> toque <strong>⋯</strong> <span class="arrow">→</span> <strong>Reglas de acceso al grupo</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo añado a alguien que no usa Node Expense?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Miembros</strong> <span class="arrow">→</span> toque <strong>Añadir a alguien por nombre</strong> <span class="arrow">→</span> escriba su nombre. Puede dividir gastos con esa persona y registrar sus pagos como con cualquier otro miembro; aparece con un anillo discontinuo y, en la pestaña <strong>Miembros</strong>, bajo su nombre se lee <strong>Invitado · Añadido por</strong> y quién la añadió. Cualquier miembro puede hacerlo, y estas personas cuentan para el límite de miembros del grupo.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>Si se une más tarde, la app le pregunta quién es y puede elegir su nombre, de modo que su saldo pasa a su propia cuenta.</li>
+          <li>¿Ya está en el grupo? Toque <strong>⋯</strong> junto al nombre <span class="arrow">→</span> <strong>Soy yo</strong>. El creador del grupo, o el miembro que añadió el nombre, aprueba la solicitud.</li>
+          <li>Para cambiar el nombre o eliminar a alguien añadido por nombre, toque <strong>⋯</strong> junto a su nombre. No se puede eliminar mientras algún gasto o pago lo mencione.</li>
+        </ul>
       </div>
     </div>
     <div class="faq-item">
@@ -2537,6 +2795,24 @@
       </button>
       <div class="faq-answer">
         Abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Gastos</strong> <span class="arrow">→</span> toque <strong>Registrar pago</strong> en la parte inferior de la tarjeta <strong>Saldos</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo liquido un grupo en una sola moneda?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        De forma predeterminada, cada moneda se liquida por separado: lo que se debe en euros se devuelve en euros. El administrador del grupo puede elegir una sola moneda: abra el grupo <span class="arrow">→</span> toque la pestaña <strong>Ajustes</strong> <span class="arrow">→</span> toque <strong>Moneda de liquidación</strong>. Cada gasto se convierte entonces al tipo del día en que se guarda, y ese tipo no cambia nunca, así que los saldos no se mueven con el mercado. Todos deben estar a mano antes de poder cambiar la moneda. Los tipos son aproximados, así que revise los importes convertidos antes de pagar.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        ¿Cómo importo un grupo desde Splitwise?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        En Splitwise, exporte el grupo como archivo CSV. Luego abra el grupo en Node Expense <span class="arrow">→</span> toque <strong>⋯</strong> <span class="arrow">→</span> <strong>Importar de Splitwise</strong> <span class="arrow">→</span> elija el archivo. Asigne cada nombre de Splitwise a un miembro, o añádalo por nombre, revise la vista previa e importe. En Splitwise no cambia nada, los gastos y pagos importados no envían notificaciones, e importar el mismo archivo otra vez nunca añade nada dos veces. Importar requiere PRO o la prueba gratuita.
       </div>
     </div>
     <div class="faq-item">
@@ -2676,7 +2952,7 @@
         Quién puede hacerlo:
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Gasto personal</strong> — puede editar, eliminar y reembolsar cualquier gasto de su propia lista.</li>
-          <li><strong>Gasto de grupo</strong> — solo el <strong>administrador del grupo</strong> o el miembro que <strong>registró originalmente</strong> el gasto puede editarlo, eliminarlo o reembolsarlo. Los demás miembros pueden abrir el gasto para verlo, pero no verán Editar, Reembolsar ni Eliminar.</li>
+          <li><strong>Gasto de grupo</strong> — solo el <strong>administrador del grupo</strong>, el miembro que lo <strong>pagó</strong> o el miembro que lo <strong>introdujo</strong> puede editarlo, eliminarlo o reembolsarlo, y solo si puede añadir gastos en ese grupo (véase ¿Quién puede añadir gastos a un grupo?). Los demás miembros pueden abrir el gasto para verlo, pero no verán Editar, Reembolsar ni Eliminar.</li>
         </ul>
         La acción <strong>Reembolsar</strong> se oculta en los reembolsos mismos y en gastos que ya se han reembolsado por completo.
       </div>
@@ -2942,7 +3218,7 @@
 </div>
 </div>
 <div class="lang-content" id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-11-06 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -2962,7 +3238,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Appuyez sur l'onglet <strong>Groupes</strong> <span class="arrow">→</span> appuyez sur le bouton <strong>+</strong> en haut à droite <span class="arrow">→</span> appuyez sur <strong>Créer un groupe</strong>.
+        Appuyez sur l'onglet <strong>Groupes</strong> <span class="arrow">→</span> appuyez sur le bouton <strong>+</strong> en haut à droite <span class="arrow">→</span> appuyez sur <strong>Créer un groupe</strong>. Créer un groupe nécessite PRO ou l'essai gratuit ; tout le monde peut en rejoindre un gratuitement.
       </div>
     </div>
     <div class="faq-item">
@@ -2971,7 +3247,35 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Réglages</strong> <span class="arrow">→</span> appuyez sur <strong>Partager le lien d'invitation</strong>. L'admin du groupe peut aussi appuyer sur <strong>Inviter plus de membres</strong> dans l'onglet <strong>Membres</strong>.
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Réglages</strong> <span class="arrow">→</span> appuyez sur <strong>Partager le lien d'invitation</strong>. L'admin du groupe peut aussi appuyer sur <strong>Inviter plus de membres</strong> dans l'onglet <strong>Membres</strong>. Pour des amis qui sont avec vous, vous pouvez aussi appuyer sur <strong>Afficher le code QR</strong>. Le lien fonctionne même pour les amis qui n'ont pas encore l'app : il leur indique comment l'obtenir, puis ouvre le groupe.<br><br>Pour rejoindre un groupe, appuyez sur le lien, scannez le code QR avec l'appareil photo, ou appuyez sur l'onglet <strong>Groupes</strong> <span class="arrow">→</span> appuyez sur <strong>+</strong> <span class="arrow">→</span> <strong>Rejoindre le groupe</strong> et collez le lien d'invitation ou le code. Rejoindre un groupe est gratuit.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Qui peut ajouter des dépenses à un groupe ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Tous les membres d'un groupe peuvent voir chaque dépense et chaque solde, enregistrer et confirmer des paiements, et commenter. Pour ajouter des dépenses (et modifier ou supprimer les vôtres), il faut l'un des éléments suivants :
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li><strong>PRO</strong> ou l'<strong>essai gratuit</strong> — sans limite.</li>
+          <li>Une <strong>place couverte</strong> — chaque membre PRO couvre jusqu'à 4 membres gratuits du groupe, dans l'ordre où ils l'ont rejoint. Les membres couverts peuvent ajouter un certain nombre de dépenses de groupe par mois ; l'app indique combien il vous en reste.</li>
+        </ul>
+        Si un membre PRO quitte le groupe ou que son PRO prend fin, les personnes qu'il couvrait peuvent toujours consulter et régler les comptes jusqu'à ce qu'une place se libère. Pour voir qui est couvert dans un groupe, ouvrez le groupe <span class="arrow">→</span> appuyez sur <strong>⋯</strong> <span class="arrow">→</span> <strong>Règles d'accès au groupe</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment ajouter quelqu'un qui n'utilise pas Node Expense ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Membres</strong> <span class="arrow">→</span> appuyez sur <strong>Ajouter quelqu'un par son nom</strong> <span class="arrow">→</span> saisissez son nom. Vous pouvez partager des dépenses avec cette personne et enregistrer ses paiements comme pour n'importe qui ; elle apparaît avec un cercle en pointillés et, dans l'onglet <strong>Membres</strong>, sous son nom s'affiche <strong>Invité · Ajouté par</strong> suivi de la personne qui l'a ajoutée. Tout membre peut le faire, et ces personnes comptent dans la limite de membres du groupe.
+        <ul style="margin:8px 0 8px 18px; padding:0;">
+          <li>Si elle rejoint le groupe plus tard, l'app lui demande qui elle est ; en choisissant son nom, son solde passe sur son propre compte.</li>
+          <li>Déjà dans le groupe ? Appuyez sur <strong>⋯</strong> à côté du nom <span class="arrow">→</span> <strong>C'est moi</strong>. Le créateur du groupe, ou le membre qui a ajouté le nom, approuve la demande.</li>
+          <li>Pour renommer ou retirer une personne ajoutée par son nom, appuyez sur <strong>⋯</strong> à côté de son nom. Impossible de la retirer tant qu'une dépense ou un paiement la mentionne.</li>
+        </ul>
       </div>
     </div>
     <div class="faq-item">
@@ -2981,6 +3285,24 @@
       </button>
       <div class="faq-answer">
         Ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Dépenses</strong> <span class="arrow">→</span> appuyez sur <strong>Enregistrer un paiement</strong> en bas de la carte <strong>Soldes</strong>.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment régler un groupe dans une seule devise ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Par défaut, chaque devise se règle séparément : ce qui est dû en euros se rembourse en euros. L'admin du groupe peut choisir une seule devise : ouvrez le groupe <span class="arrow">→</span> appuyez sur l'onglet <strong>Réglages</strong> <span class="arrow">→</span> appuyez sur <strong>Devise de règlement</strong>. Chaque dépense est alors convertie au taux du jour où elle est enregistrée, et ce taux ne change jamais : les soldes ne bougent pas avec le marché. Tout le monde doit être à jour avant de pouvoir changer de devise. Les taux sont approximatifs, vérifiez donc les montants convertis avant de payer.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment importer un groupe depuis Splitwise ?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        Dans Splitwise, exportez le groupe au format CSV. Ouvrez ensuite le groupe dans Node Expense <span class="arrow">→</span> appuyez sur <strong>⋯</strong> <span class="arrow">→</span> <strong>Importer depuis Splitwise</strong> <span class="arrow">→</span> choisissez le fichier. Associez chaque nom Splitwise à un membre, ou ajoutez-le par son nom, vérifiez l'aperçu, puis importez. Rien ne change dans Splitwise, les dépenses et paiements importés n'envoient pas de notifications, et réimporter le même fichier n'ajoute jamais rien en double. L'import nécessite PRO ou l'essai gratuit.
       </div>
     </div>
     <div class="faq-item">
@@ -3120,7 +3442,7 @@
         Qui peut effectuer ces actions :
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li><strong>Dépense personnelle</strong> — vous pouvez modifier, supprimer et rembourser toute dépense de votre propre liste.</li>
-          <li><strong>Dépense de groupe</strong> — seuls l'<strong>admin du groupe</strong> ou le membre qui a <strong>enregistré la dépense à l'origine</strong> peuvent la modifier, la supprimer ou la rembourser. Les autres membres peuvent ouvrir la dépense pour la consulter, mais ne voient ni Modifier, ni Rembourser, ni Supprimer.</li>
+          <li><strong>Dépense de groupe</strong> — seuls l'<strong>admin du groupe</strong>, le membre qui l'a <strong>payée</strong> ou le membre qui l'a <strong>saisie</strong> peuvent la modifier, la supprimer ou la rembourser, et seulement s'ils peuvent ajouter des dépenses dans ce groupe (voir Qui peut ajouter des dépenses à un groupe ?). Les autres membres peuvent ouvrir la dépense pour la consulter, mais ne voient ni Modifier, ni Rembourser, ni Supprimer.</li>
         </ul>
         L'action <strong>Rembourser</strong> est masquée sur les remboursements eux-mêmes et sur les dépenses déjà entièrement remboursées.
       </div>
@@ -3387,7 +3709,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-11-06 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <div class="contact-card">
     <div class="contact-icon">✉️</div>
@@ -3403,15 +3725,31 @@
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">그룹을 어떻게 만드나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer"><strong>그룹</strong> 탭을 탭하세요 <span class="arrow">→</span> 오른쪽 상단의 <strong>+</strong> 버튼 <span class="arrow">→</span> <strong>그룹 만들기</strong>를 탭하세요.</div>
+      <div class="faq-answer"><strong>그룹</strong> 탭을 탭하세요 <span class="arrow">→</span> 오른쪽 상단의 <strong>+</strong> 버튼 <span class="arrow">→</span> <strong>그룹 만들기</strong>를 탭하세요. 그룹을 만들려면 PRO 또는 무료 체험이 필요하며, 그룹 참가는 누구나 무료입니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">그룹에 친구를 초대하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭 <span class="arrow">→</span> <strong>초대 링크 공유</strong>를 탭하세요. 그룹 관리자는 <strong>멤버</strong> 탭의 <strong>더 많은 멤버 초대</strong>로도 초대할 수 있습니다.</div>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭 <span class="arrow">→</span> <strong>초대 링크 공유</strong>를 탭하세요. 그룹 관리자는 <strong>멤버</strong> 탭의 <strong>더 많은 멤버 초대</strong>로도 초대할 수 있습니다. 함께 있는 친구에게는 <strong>QR 코드 보기</strong>를 탭할 수도 있습니다. 링크는 아직 앱이 없는 친구도 사용할 수 있으며, 앱을 받는 방법을 안내한 뒤 그룹을 엽니다. 참가하려면 링크를 탭하거나, 카메라로 QR 코드를 스캔하거나, <strong>그룹</strong> 탭 <span class="arrow">→</span> <strong>+</strong> <span class="arrow">→</span> <strong>그룹 참가</strong>에서 초대 링크나 코드를 붙여넣으세요. 참가는 무료입니다.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">그룹에 지출을 추가할 수 있는 사람은 누구인가요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">그룹의 모든 멤버는 모든 지출과 잔액을 보고, 송금을 기록·확인하고, 댓글을 달 수 있습니다. 지출을 추가하려면(본인 지출의 편집·삭제 포함) <strong>PRO</strong> 또는 <strong>무료 체험</strong>(한도 없음)이나, PRO 멤버가 제공하는 <strong>자리</strong>가 필요합니다. 각 PRO 멤버는 그룹의 무료 멤버 최대 4명에게 참가 순서대로 자리를 제공하며, 자리를 이용하는 멤버는 매월 정해진 수의 그룹 지출을 추가할 수 있습니다(남은 수는 앱에 표시). PRO 멤버가 나가거나 PRO가 끝나도 자리가 날 때까지 보기와 정산은 계속할 수 있습니다. 누가 자리를 이용하는지는 그룹을 열어주세요 <span class="arrow">→</span> <strong>⋯</strong> <span class="arrow">→</span> <strong>그룹 이용 규칙</strong>에서 확인하세요.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Node Expense를 사용하지 않는 사람은 어떻게 추가하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>멤버</strong> 탭 <span class="arrow">→</span> <strong>이름으로 추가</strong>를 탭하고 이름을 입력하세요. 다른 멤버처럼 지출을 나누고 송금을 기록할 수 있으며, 점선 원으로 표시되며, <strong>멤버</strong> 탭에서는 이름 아래에 <strong>게스트 · … 님이 추가</strong>라고 추가한 사람이 표시됩니다. 어떤 멤버든 추가할 수 있고, 그룹 멤버 수 한도에 포함됩니다. 나중에 그 사람이 참가하면 앱이 누구인지 묻고, 자기 이름을 고르면 잔액이 본인 계정으로 옮겨집니다. 이미 그룹에 있다면 이름 옆의 <strong>⋯</strong> <span class="arrow">→</span> <strong>본인입니다</strong>를 탭하세요. 그룹 생성자 또는 그 이름을 추가한 멤버가 요청을 승인합니다. 이름 변경이나 제거는 이름 옆의 <strong>⋯</strong>에서 할 수 있으며, 그 사람이 포함된 지출이나 송금이 남아 있으면 제거할 수 없습니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">결제를 어떻게 기록하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="faq-answer">그룹을 열어주세요 <span class="arrow">→</span> <strong>지출</strong> 탭 <span class="arrow">→</span> <strong>잔액</strong> 카드 하단의 <strong>결제 기록</strong>을 탭하세요.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">그룹을 한 가지 통화로 정산하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">기본적으로 통화마다 따로 정산합니다. 유로로 진 빚은 유로로 갚습니다. 그룹 관리자는 한 가지 통화를 선택할 수도 있습니다. 그룹을 열어주세요 <span class="arrow">→</span> <strong>설정</strong> 탭 <span class="arrow">→</span> <strong>정산 통화</strong>를 탭하세요. 그러면 각 지출은 저장한 날의 환율로 환산되며 그 환율은 바뀌지 않으므로, 잔액이 시세에 따라 변하지 않습니다. 통화를 변경하려면 모두 정산이 끝나 있어야 합니다. 환율은 근사치이므로 송금 전에 환산 금액을 확인하세요.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Splitwise에서 그룹을 가져오려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="faq-answer">Splitwise에서 그룹을 CSV 파일로 내보내세요. 그다음 Node Expense에서 그룹을 열어주세요 <span class="arrow">→</span> <strong>⋯</strong> <span class="arrow">→</span> <strong>Splitwise에서 가져오기</strong> <span class="arrow">→</span> 파일을 선택하세요. 각 Splitwise 이름을 멤버와 연결하거나 이름으로 추가하고, 미리보기를 확인한 뒤 가져오세요. Splitwise에는 아무 변화도 없고, 가져온 지출과 송금은 알림을 보내지 않으며, 같은 파일을 다시 가져와도 중복으로 추가되지 않습니다. 가져오기에는 PRO 또는 무료 체험이 필요합니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">정산을 위해 Venmo, Cash App, PayPal.Me, Apple Cash, Zelle, LINE, WeChat을 어떻게 설정하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -3472,7 +3810,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">지출을 편집, 삭제 또는 환불하려면 어떻게 하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="faq-answer"><strong>탭</strong>하면 지출이 열립니다. <strong>길게 누르면</strong>(Mac에서는 오른쪽 클릭) <strong>세부 정보 보기</strong> / <strong>편집</strong> / <strong>환불</strong> / <strong>삭제</strong> 메뉴가 나타납니다. <strong>오른쪽으로 스와이프</strong> — 편집(파란색) / 환불(녹색). <strong>왼쪽으로 스와이프</strong> — 삭제(빨간색). 그룹 지출은 관리자 또는 원래 기록자만 수정 가능합니다.</div>
+      <div class="faq-answer"><strong>탭</strong>하면 지출이 열립니다. <strong>길게 누르면</strong>(Mac에서는 오른쪽 클릭) <strong>세부 정보 보기</strong> / <strong>편집</strong> / <strong>환불</strong> / <strong>삭제</strong> 메뉴가 나타납니다. <strong>오른쪽으로 스와이프</strong> — 편집(파란색) / 환불(녹색). <strong>왼쪽으로 스와이프</strong> — 삭제(빨간색). 그룹 지출은 관리자, 결제한 사람 또는 입력한 사람만 수정할 수 있으며, 그 그룹에서 지출을 추가할 수 있는 경우에 한합니다.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">지출에 대한 환불을 어떻게 기록하나요?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
