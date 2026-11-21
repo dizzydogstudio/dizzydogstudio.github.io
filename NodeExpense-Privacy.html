@@ -332,7 +332,7 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
   <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
@@ -343,6 +343,7 @@
       <div class="card-label">You Provide</div>
       <ul>
         <li>Expense records (amounts, notes, categories)</li>
+        <li>Income records (amounts, sources, notes), kept only on your device</li>
         <li>Group data (name, members, settings)</li>
         <li>Names of people you add to a group by name, for friends who don't use Node Expense (visible to all members of that group)</li>
         <li>Group expenses and settlements</li>
@@ -374,10 +375,10 @@
 
   <h3>Subscriptions &amp; Payments</h3>
   <p>Purchases and subscriptions are processed by Apple and RevenueCat. We do not receive your credit card or payment details. RevenueCat stores anonymous subscriber identifiers to manage your subscription status, "Lifetime" access, and free trial period. This data is retained as long as necessary to verify PRO feature access across device reinstalls.</p>
-  <p><strong>Group access.</strong> Whether you can add expenses to a group depends on PRO, the free trial, or a spot covered by a PRO member, so the app shares your PRO status with the groups you belong to. When you buy PRO, create a group or open the app, it sends the App Store's signed record of your purchase to our servers, where we check Apple's signature and keep the purchase's transaction identifier, product, expiry date and whether it was refunded, linked to the app identifier of each device that holds it. RevenueCat also tells our servers when a subscription renews, ends or is refunded. Each member's PRO and free-trial end dates are then saved in every group they belong to, and members see a PRO label and who is covered. We never receive your name, email, Apple Account or payment details, and purchase records are never shown to other members.</p>
+  <p><strong>Group access.</strong> Whether you can add expenses to a group depends on PRO, the free trial, or a spot covered by a PRO member, so the app shares your PRO status with the groups you belong to. When you buy PRO, create a group or open the app, it sends the App Store's signed record of your purchase to our servers, where we check Apple's signature and keep the purchase's transaction identifier, product, expiry date and whether it was refunded, linked to the app identifier of each device that holds it. Devices that hold the same purchase count as one PRO member. RevenueCat also tells our servers when a subscription renews, ends or is refunded. Each member's PRO and free-trial end dates are then saved in every group they belong to, and members see a PRO label and who is covered. We never receive your name, email or payment details (we receive an identifier for your Apple Account only if you use Sign in with Apple, described below), and purchase records are never shown to other members.</p>
 
   <h3>Cross-Device License Sync (Sign in with Apple)</h3>
-  <p>No account or sign-in is required to use Node Expense. If you own PRO on more than one device (iPhone, iPad, or Mac) signed in to the same Apple Account, you can <strong>optionally</strong> tap <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across them. We request <strong>no name and no email</strong> — only the stable, app-specific identifier Apple provides. That identifier is used <strong>solely</strong> to match your PRO license (and any App Store offer codes you have redeemed) to the same subscriber profile on each device, through RevenueCat. It is <strong>never</strong> used for advertising, tracking, or profiling. You can disconnect a device at any time from the Subscription screen, and you can revoke the sign-in entirely in iOS/iPadOS Settings (System Settings on Mac) → your Apple Account → Sign in with Apple.</p>
+  <p>No account or sign-in is required to use Node Expense. If you own PRO on more than one device (iPhone, iPad, or Mac) signed in to the same Apple Account, you can <strong>optionally</strong> tap <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across them. We request <strong>no name and no email</strong> — only the stable, app-specific identifier Apple provides. That identifier is used <strong>solely</strong> to match your PRO license (and any App Store offer codes you have redeemed) to the same subscriber profile on each device, through RevenueCat, and to count a purchase your devices share as one PRO member in groups. For that, our servers check Apple's sign-in token and keep only a one-way hash of the identifier, together with the app identifiers of your signed-in devices (up to 10); disconnecting a device removes it from that list. It is <strong>never</strong> used for advertising, tracking, or profiling. You can disconnect a device at any time from the Subscription screen, and you can revoke the sign-in entirely in iOS/iPadOS Settings (System Settings on Mac) → your Apple Account → Sign in with Apple.</p>
 
   <h2><span class="section-number">3</span>Third-Party Services</h2>
   <table class="service-table">
@@ -389,7 +390,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>Group data syncing (expenses, members, settlements, deletion requests); public Taiwan uniform-invoice lottery winning numbers</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Receipt photos for group expenses, profile photos and group photos (compressed JPEG; who can see each is described in section 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonymous user identification to maintain subscription continuity without requiring a user sign-in or account creation</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Background tasks including group deletion, push notification delivery, adding and claiming people added by name, and checking App Store purchases for group access</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Background tasks including group deletion, push notification delivery, adding and claiming people added by name, checking App Store purchases for group access, and linking devices signed in with Apple</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push notifications for group activity</td></tr>
       <tr><td><strong>Google Gemini API (via Firebase AI Logic)</strong></td><td>AI-powered OCR and line-item extraction from receipt photos scanned via Pick &amp; Pay (PRO subscription feature)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote feature configuration (e.g., per-account monthly scan caps) without requiring an app update</td></tr>
@@ -450,20 +451,21 @@
   <p>You can turn Location Tracking off at any time in the app, and withdraw location access in iOS/iPadOS Settings (System Settings on Mac).</p>
 
   <h2><span class="section-number">8</span>Calendar Access</h2>
-  <p>Node Expense only accesses the calendars you select. Calendar access is used solely to display and sync expense entries as calendar events. Calendar data is never shared with third parties.</p>
+  <p>Node Expense only accesses the calendars you select. Calendar access is used solely to display and sync expense and income entries as calendar events. Calendar data is never shared with third parties.</p>
 
   <h2><span class="section-number">9</span>Data Storage, Retention &amp; Encryption</h2>
   <h3>9.1 On-device Storage</h3>
   <p>The following data is stored in your device:</p>
   <ul>
     <li>Personal (non-group) expense records</li>
+    <li>Income records (income is always personal: it is never added to a group or uploaded)</li>
     <li>Taiwan electronic invoice numbers attached to expenses (used only for the optional uniform-invoice lottery check)</li>
     <li>Personal expense receipt photos (PRO subscription feature; never uploaded to any cloud service)</li>
     <li>App settings and preferences</li>
     <li>Local copies of group data for offline access</li>
     <li>Cached group expenses for offline viewing</li>
   </ul>
-  <p>Personal expense data — including any attached receipt photos — never leaves your device unless you explicitly export or back it up, apart from the location lookups described in section 7. Expenses from deleted groups are retained locally with a 'deleted group' marker, but only if whoever deleted the group chose to keep the records. If they chose to remove them, those expenses are deleted from your device as well.</p>
+  <p>Personal expense and income data — including any attached receipt photos — never leaves your device unless you explicitly export or back it up, apart from the location lookups described in section 7. Expenses from deleted groups are retained locally with a 'deleted group' marker, but only if whoever deleted the group chose to keep the records. If they chose to remove them, those expenses are deleted from your device as well.</p>
 
   <h3>9.2 Cloud Storage for Group Features</h3>
   <p>For group features, selected data is synced to Firebase Firestore (and Firebase Storage for photos):</p>
@@ -477,7 +479,7 @@
     <li>Group settlements (payment records between members)</li>
     <li>Group deletion requests and member votes</li>
     <li>Trial start dates (for reinstall recovery)</li>
-    <li>Group access: each member's PRO and free-trial end dates, saved in every group they belong to; and App Store purchase records (transaction identifier, product, expiry date, whether refunded, and the app identifiers of the devices that hold the purchase), which are never shown to other members (see section 2)</li>
+    <li>Group access: each member's PRO and free-trial end dates, saved in every group they belong to; and App Store purchase records (transaction identifier, product, expiry date, whether refunded, and the app identifiers of the devices that hold the purchase), which are never shown to other members (see section 2); and, only if you use Sign in with Apple, a one-way hash of Apple's identifier with the app identifiers of your signed-in devices</li>
     <li>Push notification tokens (FCM), together with your notification settings (which kinds of notifications you want, and which groups you have turned off) and an unread badge count</li>
     <li>Optional payment handles for settle-up deep links (Venmo, Cash App and PayPal.me usernames; an Apple Cash phone number, which opens Messages rather than a payment app; and a Zelle phone number or email, a LINE ID and a WeChat ID, which open nothing at all and are simply shown to group members to copy)</li>
     <li><strong>Pick &amp; Pay scan tracking</strong> — a small per-account record of how many scans you've made this month and whether your trial freebie has been used. Used to enforce per-account monthly limits and to show you your remaining scans in Settings. Contains no information about the contents of any receipt.</li>
@@ -490,18 +492,19 @@
   <h3>9.3 Encryption &amp; Backups</h3>
   <ul>
     <li>Users with feature access may enable AES-256-GCM encryption for backup files. The setting covers the backup written before a retention clean-up, the export offered before an inactive group is pruned, and the JSON file produced by Data Migration; CSV and PDF exports are never encrypted (see section 10)</li>
-    <li>You control how long your expense records are retained (all time or a limited number of years). <strong>Retention applies only to your own personal expenses.</strong> It never deletes group expenses, nor expenses kept from a group that was deleted or that you have left; those remain on your device with their original split intact. Recurring expenses that are still active are kept together with their past entries, so they continue to be logged automatically</li>
+    <li>You control how long your expense and income records are retained (all time or a limited number of years). <strong>Retention applies only to your own personal expenses and income.</strong> It never deletes group expenses, nor expenses kept from a group that was deleted or that you have left; those remain on your device with their original split intact. Recurring expenses and income that are still active are kept together with their past entries, so they continue to be logged automatically</li>
     <li>Backup files are exported to a location you choose (iCloud Drive, On My iPhone, or other iOS Files locations)</li>
     <li>Backup encryption keys are stored exclusively in your iCloud Keychain, never transmitted to our servers, and are not accessible to us as developers</li>
   </ul>
-  <p><strong>Backup scope:</strong> Backups and exports cover the data held on your device: your personal expense records, and your device's local copy of the group expenses and group details you have access to. JSON backups also include your custom categories, budgets and place labels. Nothing is fetched from Firebase Firestore at the moment you export, so anything that has not yet synced to your device is not in the file. Exporting does not alter the copy in Firestore, which remains accessible as long as the group exists and has not been deleted.</p>
+  <p><strong>Backup scope:</strong> Backups and exports cover the data held on your device: your personal expense and income records, and your device's local copy of the group expenses and group details you have access to. JSON backups also include your custom categories, custom income sources, budgets and place labels. Nothing is fetched from Firebase Firestore at the moment you export, so anything that has not yet synced to your device is not in the file. Exporting does not alter the copy in Firestore, which remains accessible as long as the group exists and has not been deleted.</p>
 
   <h2><span class="section-number">10</span>Data Migration</h2>
-  <p>Users with feature access (PRO subscription or active free trial) may export their data as JSON, CSV, or PDF, and import data in JSON format. They can also import a group's expenses and payments from a Splitwise export (a CSV file): the file is read on your device, nothing is sent to Splitwise, and what you import, including any people added by name, is saved to the group just like expenses entered by hand. Node Expense does not have access to your exported files. Exported files are saved to a location you choose. Note that exports include locally stored personal expense records and cached group data; they do not pull live data directly from Firebase Firestore. <strong>JSON exports follow the Encrypt Backup Files setting in Data Retention.</strong> When that setting is on, the JSON file is encrypted with AES-256-GCM and can be read back only by importing it into Node Expense on a device with access to your iCloud Keychain. <strong>CSV and PDF exports are never encrypted</strong> and are always written in plain, readable form, so store and share them accordingly.</p>
+  <p>Users with feature access (PRO subscription or active free trial) may export their data as JSON, CSV, or PDF, and import data in JSON format. They can also import a group's expenses and payments from a Splitwise export (a CSV file): the file is read on your device, nothing is sent to Splitwise, and what you import, including any people added by name, is saved to the group just like expenses entered by hand. Node Expense does not have access to your exported files. Exported files are saved to a location you choose. Note that exports include locally stored personal expense and income records and cached group data; they do not pull live data directly from Firebase Firestore. <strong>JSON exports follow the Encrypt Backup Files setting in Data Retention.</strong> When that setting is on, the JSON file is encrypted with AES-256-GCM and can be read back only by importing it into Node Expense on a device with access to your iCloud Keychain. <strong>CSV and PDF exports are never encrypted</strong> and are always written in plain, readable form, so store and share them accordingly.</p>
 
   <h2><span class="section-number">11</span>Data Deletion</h2>
   <ul>
     <li>Delete individual or all personal expenses from within Node Expense</li>
+    <li>Delete individual income entries from within Node Expense; deleting a recurring income stops it repeating, and income already logged stays until you delete it</li>
     <li>Leave or request deletion of a group — group data is removed from Firebase when all members agree. The group's expenses, settlements, activity history, comments and reminder timers are deleted from our servers immediately (except expenses you chose to keep, described below). For 90 days afterwards we retain only a small deletion record, so that devices which were offline at the time can learn the group was deleted and clean up their local copy; it holds the group name, the member list (display names, identifiers, any payment handles and profile photo links), and who deleted it and when. That record is automatically and permanently deleted after 90 days.</li>
     <li>Any member can rename or remove a person added by name, as long as no expense, share or payment names them. When someone claims a person added by name, their own account takes that person's place in the group's expenses and payments, and the name-only entry is removed.</li>
     <li>Group expenses marked as 'keep on deletion' remain on your device locally; they are not re-uploaded</li>
@@ -541,7 +544,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-11-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-11-21 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
   <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
@@ -552,6 +555,7 @@
       <div class="card-label">您提供的資訊</div>
       <ul>
         <li>費用記錄（金額、備註、類別）</li>
+        <li>收入記錄（金額、來源、備註），僅儲存在您的裝置上</li>
         <li>群組資料（名稱、成員、設定）</li>
         <li>您以名字新增至群組的人員名稱（適用於沒有使用 Node Expense 的朋友；該群組所有成員皆可見）</li>
         <li>群組費用與結算</li>
@@ -583,10 +587,10 @@
 
   <h3>訂閱與付款</h3>
   <p>購買及訂閱由 Apple 與 RevenueCat 處理。我們不會收到您的信用卡或付款詳細資訊。RevenueCat 儲存匿名訂閱者識別碼，以管理您的訂閱狀態、「終身」使用權及免費試用期。此資料的保存期限以驗證您在重新安裝後存取 PRO 功能所需為限。</p>
-  <p><strong>群組權限。</strong>您能否在群組中新增費用，取決於 PRO、免費試用，或 PRO 成員提供的名額，因此 App 會將您的 PRO 狀態分享給您所屬的群組。當您購買 PRO、建立群組或開啟 App 時，App 會將 App Store 已簽署的購買記錄傳送至我們的伺服器；我們會驗證 Apple 的簽章，並保留該筆購買的交易識別碼、產品、到期日以及是否已退款，並與持有該購買的每台裝置的 App 識別碼建立關聯。RevenueCat 也會在訂閱續訂、結束或退款時通知我們的伺服器。每位成員的 PRO 與免費試用到期日會儲存在其所屬的每個群組中，成員可看到 PRO 標示及誰使用了誰的名額。我們絕不會收到您的姓名、電子郵件、Apple 帳號或付款資訊，購買記錄也絕不會向其他成員顯示。</p>
+  <p><strong>群組權限。</strong>您能否在群組中新增費用，取決於 PRO、免費試用，或 PRO 成員提供的名額，因此 App 會將您的 PRO 狀態分享給您所屬的群組。當您購買 PRO、建立群組或開啟 App 時，App 會將 App Store 已簽署的購買記錄傳送至我們的伺服器；我們會驗證 Apple 的簽章，並保留該筆購買的交易識別碼、產品、到期日以及是否已退款，並與持有該購買的每台裝置的 App 識別碼建立關聯。持有同一筆購買的裝置只算作一位 PRO 成員。RevenueCat 也會在訂閱續訂、結束或退款時通知我們的伺服器。每位成員的 PRO 與免費試用到期日會儲存在其所屬的每個群組中，成員可看到 PRO 標示及誰使用了誰的名額。我們絕不會收到您的姓名、電子郵件或付款資訊（只有在您使用下文所述的透過 Apple 登入時，我們才會收到您 Apple 帳號的識別碼），購買記錄也絕不會向其他成員顯示。</p>
 
   <h3>跨裝置授權同步（透過 Apple 登入）</h3>
-  <p>使用 Node Expense <strong>無需帳戶或登入</strong>。若您在多台使用同一 Apple 帳戶的裝置（iPhone、iPad 或 Mac）上擁有 PRO，您可以在「訂閱」頁面<strong>選擇性地</strong>點按<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至這些裝置。我們<strong>不會索取您的姓名或電子郵件</strong>——僅取得 Apple 提供的穩定、僅限本應用程式的識別碼。該識別碼<strong>僅</strong>用於透過 RevenueCat 在每台裝置上將您的 PRO 授權（以及您兌換過的任何 App Store 優惠代碼）比對至同一個訂閱者身分，<strong>絕不會</strong>用於廣告、追蹤或建立個人檔案。您可隨時在「訂閱」頁面中斷某台裝置的連結，也可以在「iOS/iPadOS 設定（Mac 上為系統設定） → 您的 Apple 帳戶 → 透過 Apple 登入」中完全撤銷授權。</p>
+  <p>使用 Node Expense <strong>無需帳戶或登入</strong>。若您在多台使用同一 Apple 帳戶的裝置（iPhone、iPad 或 Mac）上擁有 PRO，您可以在「訂閱」頁面<strong>選擇性地</strong>點按<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至這些裝置。我們<strong>不會索取您的姓名或電子郵件</strong>——僅取得 Apple 提供的穩定、僅限本應用程式的識別碼。該識別碼<strong>僅</strong>用於透過 RevenueCat 在每台裝置上將您的 PRO 授權（以及您兌換過的任何 App Store 優惠代碼）比對至同一個訂閱者身分，並讓您各裝置共用的購買在群組中只算作一位 PRO 成員，<strong>絕不會</strong>用於廣告、追蹤或建立個人檔案。為此，我們的伺服器會驗證 Apple 的登入權杖，並只保留該識別碼的單向雜湊值，以及您已登入裝置（最多 10 台）的 App 識別碼；中斷某台裝置的連結後，該裝置即會從清單中移除。您可隨時在「訂閱」頁面中斷某台裝置的連結，也可以在「iOS/iPadOS 設定（Mac 上為系統設定） → 您的 Apple 帳戶 → 透過 Apple 登入」中完全撤銷授權。</p>
 
   <h2><span class="section-number">3</span>第三方服務</h2>
   <table class="service-table">
@@ -598,7 +602,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>群組資料同步（費用、成員、結算、刪除請求）；公開的台灣統一發票中獎號碼</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>群組費用的收據照片、使用者個人頭像與群組頭像的儲存（壓縮 JPEG；各自的可見對象請參閱第 9.2 節）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td> 匿名用戶識別以保持訂閱連續性，無需用戶登入或建立帳戶</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>背景工作，包括群組刪除、推播通知傳送、新增與認領以名字新增的成員，以及驗證 App Store 購買以判斷群組權限</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>背景工作，包括群組刪除、推播通知傳送、新增與認領以名字新增的成員、驗證 App Store 購買以判斷群組權限，以及連結透過 Apple 登入的裝置</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群組活動的推播通知</td></tr>
       <tr><td><strong>Google Gemini API（透過 Firebase AI Logic）</strong></td><td>透過 Pick &amp; Pay 掃描收據照片進行 AI 驅動的 OCR 與逐項提取（PRO 訂閱功能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>無需更新應用程式即可遠端配置功能參數（例如每帳戶每月掃描上限）</td></tr>
@@ -659,20 +663,21 @@
   <p>您可以隨時在 Node Expense 中關閉「位置追蹤」，也可以在 iOS/iPadOS 設定（Mac 上為系統設定）中撤銷位置存取權限。</p>
 
   <h2><span class="section-number">8</span>行事曆存取</h2>
-  <p>Node Expense 僅存取您所選擇的行事曆。行事曆存取僅用於以行事曆事件的形式顯示及同步費用項目。行事曆資料絕不會與第三方共享。</p>
+  <p>Node Expense 僅存取您所選擇的行事曆。行事曆存取僅用於以行事曆事件的形式顯示及同步費用與收入項目。行事曆資料絕不會與第三方共享。</p>
 
   <h2><span class="section-number">9</span>資料儲存、保留與加密</h2>
   <h3>9.1 裝置本機儲存</h3>
   <p>以下資料儲存在您的裝置中：</p>
   <ul>
     <li>個人（非群組）費用記錄</li>
+    <li>收入記錄（收入一律屬於個人，絕不會加入群組或上傳）</li>
     <li>附加於費用的台灣電子發票號碼（僅供選用的統一發票對獎功能使用）</li>
     <li>個人費用的收據照片（PRO 訂閱功能；不會上傳至任何雲端服務）</li>
     <li>應用程式設定與偏好設定</li>
     <li>群組資料的本機副本（供離線存取）</li>
     <li>群組費用的快取（供離線檢視）</li>
   </ul>
-  <p>個人費用資料——包括所附加的收據照片——不會離開您的裝置，除非您明確匯出或備份。唯一的例外是第 7 節所述的地點查詢。若刪除群組的人選擇保留記錄，已刪除群組的費用才會在您的裝置裡保留，並標示為「已刪除群組」；若選擇移除記錄，這些費用也會從您的裝置刪除。</p>
+  <p>個人費用與收入資料——包括所附加的收據照片——不會離開您的裝置，除非您明確匯出或備份。唯一的例外是第 7 節所述的地點查詢。若刪除群組的人選擇保留記錄，已刪除群組的費用才會在您的裝置裡保留，並標示為「已刪除群組」；若選擇移除記錄，這些費用也會從您的裝置刪除。</p>
 
   <h3>9.2 群組功能的雲端儲存</h3>
   <p>針對群組功能，所選資料將同步至 Firebase Firestore（照片則同步至 Firebase Storage）：</p>
@@ -686,7 +691,7 @@
     <li>群組結算（成員之間的付款記錄）</li>
     <li>群組刪除請求及成員投票</li>
     <li>試用開始日期（用於重新安裝後的復原）</li>
-    <li>群組權限：每位成員的 PRO 與免費試用到期日，儲存在其所屬的每個群組中；以及 App Store 購買記錄（交易識別碼、產品、到期日、是否已退款，以及持有該購買的裝置的 App 識別碼），絕不會向其他成員顯示（見第 2 節）</li>
+    <li>群組權限：每位成員的 PRO 與免費試用到期日，儲存在其所屬的每個群組中；以及 App Store 購買記錄（交易識別碼、產品、到期日、是否已退款，以及持有該購買的裝置的 App 識別碼），絕不會向其他成員顯示（見第 2 節）；以及僅在您使用透過 Apple 登入時，Apple 識別碼的單向雜湊值與您已登入裝置的 App 識別碼</li>
     <li>推播通知權杖（FCM），以及您的通知設定（想接收哪些類型的通知、已關閉哪些群組的通知）和未讀標記數</li>
     <li>用於結算深度連結的選填付款帳號（Venmo、Cash App、PayPal.me 使用者名稱；Apple Cash 電話號碼，開啟的是「訊息」而非付款應用程式；以及 Zelle 手機號碼或電子郵件、LINE ID 與微信號，這些完全不會開啟任何程式，僅顯示給群組成員複製）</li>
     <li><strong>Pick &amp; Pay 掃描追蹤</strong>——記錄您本月已進行的掃描次數及試用免費額度是否已使用的小型每帳戶記錄。用於執行每帳戶每月限制，並在「設定」中向您顯示剩餘掃描次數。不包含任何收據內容的資訊。</li>
@@ -699,18 +704,19 @@
   <h3>9.3 加密與備份</h3>
   <ul>
     <li>具有功能存取權限的使用者可為備份檔案啟用 AES-256-GCM 加密。此設定適用於清理前所產生的備份檔案、清除閒置群組前所提供的匯出檔案，以及「資料遷移」所產生的 JSON 檔案；CSV 與 PDF 匯出檔案一律不會加密（請參閱第 10 節）</li>
-    <li>您可控制費用記錄的保留時間（全部時間或指定年數）。<strong>保留期限僅適用於您個人的費用。</strong>保留期限絕不會刪除群組費用，也不會刪除您從已刪除或已退出的群組中保留下來的費用；這些記錄會連同原本的分攤內容一併留在您的裝置上。仍在進行的定期支出會連同過往各期一併保留，以便繼續自動記帳</li>
+    <li>您可控制費用與收入記錄的保留時間（全部時間或指定年數）。<strong>保留期限僅適用於您個人的費用與收入。</strong>保留期限絕不會刪除群組費用，也不會刪除您從已刪除或已退出的群組中保留下來的費用；這些記錄會連同原本的分攤內容一併留在您的裝置上。仍在進行的定期支出與定期收入會連同過往各期一併保留，以便繼續自動記帳</li>
     <li>備份檔案會匯出至您所選擇的位置（iCloud 雲碟、本機 iPhone 或其他 iOS 檔案位置）</li>
     <li>備份加密金鑰僅儲存於您的 iCloud 鑰匙圈中，絕不會傳輸至我們的伺服器，也不會被我們開發者存取</li>
   </ul>
-  <p><strong>備份範圍：</strong>備份與匯出涵蓋您裝置上所儲存的資料：您的個人費用記錄，以及您裝置本機所保存的群組費用與群組資訊副本。JSON 備份還會包含您的自訂類別、預算和地點標籤。匯出當下不會向 Firebase Firestore 擷取任何資料，因此尚未同步至您裝置的內容不會出現在檔案中。匯出不會變動 Firestore 上的資料，只要群組存在且未被刪除，即可繼續透過 Firestore 存取。</p>
+  <p><strong>備份範圍：</strong>備份與匯出涵蓋您裝置上所儲存的資料：您的個人費用與收入記錄，以及您裝置本機所保存的群組費用與群組資訊副本。JSON 備份還會包含您的自訂類別、自訂收入來源、預算和地點標籤。匯出當下不會向 Firebase Firestore 擷取任何資料，因此尚未同步至您裝置的內容不會出現在檔案中。匯出不會變動 Firestore 上的資料，只要群組存在且未被刪除，即可繼續透過 Firestore 存取。</p>
 
   <h2><span class="section-number">10</span>資料遷移</h2>
-  <p>具有功能存取權限的使用者（PRO 訂閱或有效免費試用）可將資料匯出為 JSON、CSV 或 PDF 格式，並支援以 JSON 格式匯入資料。他們也可以從 Splitwise 匯出檔案（CSV 檔案）匯入群組的費用與付款：檔案會在您的裝置上讀取，不會傳送任何資料給 Splitwise，而您匯入的內容（包括以名字新增的人員）會像手動輸入的費用一樣儲存至群組。Node Expense 無法存取您的匯出檔案。匯出檔案會儲存至您所選擇的位置。請注意，匯出內容包含本機儲存的個人費用記錄及已快取的群組資料；並非直接從 Firebase Firestore 擷取即時資料。<strong>JSON 匯出檔案會依循「資料保留」中的「加密備份檔案」設定。</strong>該設定開啟時，JSON 檔案會以 AES-256-GCM 加密，僅能在可存取您 iCloud 鑰匙圈的裝置上匯入 Node Expense 才能讀取。<strong>CSV 與 PDF 匯出檔案一律不會加密</strong>，皆以可讀形式寫入，請您據此妥善保存與分享。</p>
+  <p>具有功能存取權限的使用者（PRO 訂閱或有效免費試用）可將資料匯出為 JSON、CSV 或 PDF 格式，並支援以 JSON 格式匯入資料。他們也可以從 Splitwise 匯出檔案（CSV 檔案）匯入群組的費用與付款：檔案會在您的裝置上讀取，不會傳送任何資料給 Splitwise，而您匯入的內容（包括以名字新增的人員）會像手動輸入的費用一樣儲存至群組。Node Expense 無法存取您的匯出檔案。匯出檔案會儲存至您所選擇的位置。請注意，匯出內容包含本機儲存的個人費用與收入記錄及已快取的群組資料；並非直接從 Firebase Firestore 擷取即時資料。<strong>JSON 匯出檔案會依循「資料保留」中的「加密備份檔案」設定。</strong>該設定開啟時，JSON 檔案會以 AES-256-GCM 加密，僅能在可存取您 iCloud 鑰匙圈的裝置上匯入 Node Expense 才能讀取。<strong>CSV 與 PDF 匯出檔案一律不會加密</strong>，皆以可讀形式寫入，請您據此妥善保存與分享。</p>
 
   <h2><span class="section-number">11</span>資料刪除</h2>
   <ul>
     <li>在 Node Expense 中刪除個別或全部個人費用</li>
+    <li>在 Node Expense 中刪除個別收入；刪除週期性收入會停止重複，已記錄的收入會保留，直到您刪除為止</li>
     <li>離開或請求刪除群組 — 當所有成員同意後，群組資料將從 Firebase 移除。群組的費用、結算、活動記錄、留言與提醒計時器會立即從我們的伺服器刪除（您選擇保留的費用除外，詳見下方）。之後我們僅保留一筆小型的刪除記錄 90 天，讓當時離線的裝置得知該群組已被刪除並清理本機副本；該記錄包含群組名稱、成員清單（顯示名稱、識別碼、任何付款帳號與個人頭像連結），以及由誰在何時刪除。該記錄會在 90 天後自動且永久刪除。</li>
     <li>任何成員都可以重新命名或移除以名字新增的人員，前提是沒有任何費用、分攤或付款涉及該人員。當有人認領以名字新增的人員時，其本人的帳號會取代該人員在群組費用與付款中的位置，該僅有名字的項目也會被移除。</li>
     <li>標示為「刪除時保留」的群組費用將保留於您的裝置裡；這些資料不會被重新上傳</li>
@@ -750,7 +756,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-11-17 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-11-21 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概述</h2>
   <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
@@ -761,6 +767,7 @@
       <div class="card-label">您提供的信息</div>
       <ul>
         <li>支出记录（金额、备注、分类）</li>
+        <li>收入记录（金额、来源、备注），仅存储在您的设备上</li>
         <li>群组数据（名称、成员、设置）</li>
         <li>您按名字添加到群组的人员名称（适用于不使用 Node Expense 的朋友；该群组所有成员均可见）</li>
         <li>群组支出与结算</li>
@@ -792,10 +799,10 @@
 
   <h3>订阅与付款</h3>
   <p>购买和订阅由 Apple 和 RevenueCat 处理。我们不会收到您的信用卡或付款详情。RevenueCat 存储匿名订阅者标识符，以管理您的订阅状态、"终身"访问权限和免费试用期。这些数据将根据需要保留，以便在重新安装设备时验证您的专业版功能访问权限。</p>
-  <p><strong>群组权限。</strong>您能否在群组中添加支出，取决于 PRO、免费试用，或 PRO 成员提供的名额，因此 App 会将您的 PRO 状态分享给您所在的群组。当您购买 PRO、创建群组或打开 App 时，App 会将 App Store 已签名的购买记录发送到我们的服务器；我们会验证 Apple 的签名，并保留该笔购买的交易标识符、产品、到期日以及是否已退款，并与持有该购买的每台设备的 App 标识符相关联。RevenueCat 也会在订阅续订、结束或退款时通知我们的服务器。每位成员的 PRO 和免费试用到期日会保存在其所在的每个群组中，成员可以看到 PRO 标识以及谁在使用谁的名额。我们绝不会收到您的姓名、电子邮件、Apple 账户或付款信息，购买记录也绝不会向其他成员显示。</p>
+  <p><strong>群组权限。</strong>您能否在群组中添加支出，取决于 PRO、免费试用，或 PRO 成员提供的名额，因此 App 会将您的 PRO 状态分享给您所在的群组。当您购买 PRO、创建群组或打开 App 时，App 会将 App Store 已签名的购买记录发送到我们的服务器；我们会验证 Apple 的签名，并保留该笔购买的交易标识符、产品、到期日以及是否已退款，并与持有该购买的每台设备的 App 标识符相关联。持有同一笔购买的设备只算作一位 PRO 成员。RevenueCat 也会在订阅续订、结束或退款时通知我们的服务器。每位成员的 PRO 和免费试用到期日会保存在其所在的每个群组中，成员可以看到 PRO 标识以及谁在使用谁的名额。我们绝不会收到您的姓名、电子邮件或付款信息（只有在您使用下文所述的通过 Apple 登录时，我们才会收到您 Apple 账户的标识符），购买记录也绝不会向其他成员显示。</p>
 
   <h3>跨设备授权同步（通过 Apple 登录）</h3>
-  <p>使用 Node Expense <strong>无需账户或登录</strong>。若您在多台使用同一 Apple 账户的设备（iPhone、iPad 或 Mac）上拥有 PRO，您可以在"订阅"页面<strong>选择性地</strong>点按<strong>通过 Apple 登录</strong>，将您的 PRO 授权同步至这些设备。我们<strong>不会索取您的姓名或电子邮件</strong>——仅获取 Apple 提供的稳定、仅限本应用的标识符。该标识符<strong>仅</strong>用于通过 RevenueCat 在每台设备上将您的 PRO 授权（以及您兑换过的任何 App Store 优惠代码）比对至同一个订阅者身份，<strong>绝不会</strong>用于广告、追踪或建立用户画像。您可随时在"订阅"页面断开某台设备的连接，也可以在"iOS/iPadOS 设置（Mac 上为系统设置） → 您的 Apple 账户 → 通过 Apple 登录"中完全撤销授权。</p>
+  <p>使用 Node Expense <strong>无需账户或登录</strong>。若您在多台使用同一 Apple 账户的设备（iPhone、iPad 或 Mac）上拥有 PRO，您可以在"订阅"页面<strong>选择性地</strong>点按<strong>通过 Apple 登录</strong>，将您的 PRO 授权同步至这些设备。我们<strong>不会索取您的姓名或电子邮件</strong>——仅获取 Apple 提供的稳定、仅限本应用的标识符。该标识符<strong>仅</strong>用于通过 RevenueCat 在每台设备上将您的 PRO 授权（以及您兑换过的任何 App Store 优惠代码）比对至同一个订阅者身份，并让您各设备共用的购买在群组中只算作一位 PRO 成员，<strong>绝不会</strong>用于广告、追踪或建立用户画像。为此，我们的服务器会验证 Apple 的登录令牌，并只保留该标识符的单向哈希值，以及您已登录设备（最多 10 台）的 App 标识符；断开某台设备的连接后，该设备即会从列表中移除。您可随时在"订阅"页面断开某台设备的连接，也可以在"iOS/iPadOS 设置（Mac 上为系统设置） → 您的 Apple 账户 → 通过 Apple 登录"中完全撤销授权。</p>
 
   <h2><span class="section-number">3</span>第三方服务</h2>
   <table class="service-table">
@@ -807,7 +814,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>群组数据同步（支出、成员、结算、删除申请）；公开的台湾统一发票中奖号码</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>群组支出的收据照片、用户个人头像与群组头像的存储（压缩 JPEG；各自的可见范围请参阅第 9.2 节）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>匿名用户识别以保持订阅连续性，无需用户登录或创建账户</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>后台任务，包括群组删除、推送通知发送、添加和认领按名字添加的成员，以及验证 App Store 购买以判断群组权限</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>后台任务，包括群组删除、推送通知发送、添加和认领按名字添加的成员、验证 App Store 购买以判断群组权限，以及关联通过 Apple 登录的设备</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群组活动的推送通知</td></tr>
       <tr><td><strong>Google Gemini API（通过 Firebase AI Logic）</strong></td><td>通过 Pick &amp; Pay 扫描收据照片进行 AI 驱动的 OCR 和逐项提取（PRO 订阅功能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>无需更新应用即可远程配置功能参数（例如每账户每月扫描上限）</td></tr>
@@ -868,20 +875,21 @@
   <p>您可以随时在 Node Expense 中关闭“位置追踪”，也可以在 iOS/iPadOS 设置（Mac 上为系统设置）中撤销位置访问权限。</p>
 
   <h2><span class="section-number">8</span>日历访问权限</h2>
-  <p>Node Expense 仅访问您选择的日历。日历访问权限仅用于将支出条目显示并同步为日历事件。日历数据绝不会与第三方共享。</p>
+  <p>Node Expense 仅访问您选择的日历。日历访问权限仅用于将支出和收入条目显示并同步为日历事件。日历数据绝不会与第三方共享。</p>
 
   <h2><span class="section-number">9</span>数据存储、保留与加密</h2>
   <h3>9.1 设备端存储</h3>
   <p>以下数据存储在您的设备中：</p>
   <ul>
     <li>个人（非群组）支出记录</li>
+    <li>收入记录（收入始终属于个人，绝不会加入群组或上传）</li>
     <li>附加于支出的台湾电子发票号码（仅供可选的统一发票对奖功能使用）</li>
     <li>个人支出的收据照片（PRO 订阅功能；不会上传到任何云端服务）</li>
     <li>应用设置与偏好</li>
     <li>用于离线访问的群组数据本地副本</li>
     <li>用于离线查看的缓存群组支出</li>
   </ul>
-  <p>除非您明确导出或备份，否则个人支出数据——包括所附加的收据照片——绝不会离开您的设备。唯一的例外是第 7 节所述的地点查询。只有当删除群组的人选择保留记录时，已删除群组的支出才会保留在您的设备里并带有"已删除群组"标记；若选择移除记录，这些支出也会从您的设备删除。</p>
+  <p>除非您明确导出或备份，否则个人支出和收入数据——包括所附加的收据照片——绝不会离开您的设备。唯一的例外是第 7 节所述的地点查询。只有当删除群组的人选择保留记录时，已删除群组的支出才会保留在您的设备里并带有"已删除群组"标记；若选择移除记录，这些支出也会从您的设备删除。</p>
 
   <h3>9.2 群组功能的云存储</h3>
   <p>对于群组功能，选定的数据将同步到 Firebase Firestore（照片同步至 Firebase Storage）：</p>
@@ -895,7 +903,7 @@
     <li>群组结算（成员间的付款记录）</li>
     <li>群组删除申请和成员投票</li>
     <li>试用开始日期（用于重新安装恢复）</li>
-    <li>群组权限：每位成员的 PRO 和免费试用到期日，保存在其所在的每个群组中；以及 App Store 购买记录（交易标识符、产品、到期日、是否已退款，以及持有该购买的设备的 App 标识符），绝不会向其他成员显示（见第 2 节）</li>
+    <li>群组权限：每位成员的 PRO 和免费试用到期日，保存在其所在的每个群组中；以及 App Store 购买记录（交易标识符、产品、到期日、是否已退款，以及持有该购买的设备的 App 标识符），绝不会向其他成员显示（见第 2 节）；以及仅在您使用通过 Apple 登录时，Apple 标识符的单向哈希值与您已登录设备的 App 标识符</li>
     <li>推送通知令牌（FCM），以及您的通知设置（想接收哪些类型的通知、已关闭哪些群组的通知）和未读角标数</li>
     <li>用于结算深度链接的可选付款账号（Venmo、Cash App、PayPal.me 用户名；Apple Cash 电话号码，打开的是「信息」而非付款应用；以及 Zelle 手机号或邮箱、LINE ID 与微信号，这些完全不会打开任何应用，仅显示给群组成员复制）</li>
     <li><strong>Pick &amp; Pay 扫描跟踪</strong>——记录您本月已进行的扫描次数及试用免费额度是否已使用的小型每账户记录。用于执行每账户每月限制，并在「设置」中向您显示剩余扫描次数。不包含任何收据内容的信息。</li>
@@ -908,18 +916,19 @@
   <h3>9.3 加密与备份</h3>
   <ul>
     <li>拥有功能访问权限的用户可以为备份文件启用 AES-256-GCM 加密。该设置适用于清理前生成的备份文件、清除闲置群组前提供的导出文件，以及“数据迁移”生成的 JSON 文件；CSV 和 PDF 导出文件一律不会加密（请参阅第 10 节）</li>
-    <li>您可以控制支出记录的保留时长（永久或有限年限）。<strong>保留期限仅适用于您个人的支出。</strong>保留期限绝不会删除群组支出，也不会删除您从已删除或已退出的群组中保留下来的支出；这些记录会连同原本的分摊内容一并留在您的设备上。仍在进行的定期支出会连同过往各期一并保留，以便继续自动记账</li>
+    <li>您可以控制支出和收入记录的保留时长（永久或有限年限）。<strong>保留期限仅适用于您个人的支出和收入。</strong>保留期限绝不会删除群组支出，也不会删除您从已删除或已退出的群组中保留下来的支出；这些记录会连同原本的分摊内容一并留在您的设备上。仍在进行的定期支出和定期收入会连同过往各期一并保留，以便继续自动记账</li>
     <li>备份文件会导出到您选择的位置（iCloud 云盘、我的 iPhone 或其他 iOS 文件位置）</li>
     <li>备份加密密钥仅存储在您的 iCloud 钥匙串中，绝不会传输到我们的服务器，开发者也无法访问</li>
   </ul>
-  <p><strong>备份范围：</strong>备份与导出涵盖您设备上存储的数据：您的个人支出记录，以及您设备本地保存的群组支出和群组信息副本。JSON 备份还会包含您的自定义分类、预算和地点标签。导出时不会从 Firebase Firestore 获取任何数据，因此尚未同步到您设备的内容不会出现在文件中。导出不会改动 Firestore 上的数据，只要群组存在且未被删除，即可继续通过 Firestore 访问。</p>
+  <p><strong>备份范围：</strong>备份与导出涵盖您设备上存储的数据：您的个人支出和收入记录，以及您设备本地保存的群组支出和群组信息副本。JSON 备份还会包含您的自定义分类、自定义收入来源、预算和地点标签。导出时不会从 Firebase Firestore 获取任何数据，因此尚未同步到您设备的内容不会出现在文件中。导出不会改动 Firestore 上的数据，只要群组存在且未被删除，即可继续通过 Firestore 访问。</p>
 
   <h2><span class="section-number">10</span>数据迁移</h2>
-  <p>拥有功能访问权限的用户（专业版订阅或处于有效免费试用期）可将数据导出为 JSON、CSV 或 PDF 格式，并支持以 JSON 格式导入数据。他们还可以从 Splitwise 导出文件（CSV 文件）导入群组的支出和付款：文件在您的设备上读取，不会向 Splitwise 发送任何数据，您导入的内容（包括按名字添加的人员）会像手动输入的支出一样保存到群组。Node Expense 无法访问您导出的文件。导出文件将保存到您选择的位置。请注意，导出内容包含本地存储的个人支出记录及已缓存的群组数据；并非直接从 Firebase Firestore 获取即时数据。<strong>JSON 导出文件会遵循“数据保留”中的“加密备份文件”设置。</strong>该设置开启时，JSON 文件会以 AES-256-GCM 加密，只能在可访问您 iCloud 钥匙串的设备上导入 Node Expense 才能读取。<strong>CSV 和 PDF 导出文件一律不会加密</strong>，均以可读形式写入，请您据此妥善保存与分享。</p>
+  <p>拥有功能访问权限的用户（专业版订阅或处于有效免费试用期）可将数据导出为 JSON、CSV 或 PDF 格式，并支持以 JSON 格式导入数据。他们还可以从 Splitwise 导出文件（CSV 文件）导入群组的支出和付款：文件在您的设备上读取，不会向 Splitwise 发送任何数据，您导入的内容（包括按名字添加的人员）会像手动输入的支出一样保存到群组。Node Expense 无法访问您导出的文件。导出文件将保存到您选择的位置。请注意，导出内容包含本地存储的个人支出和收入记录及已缓存的群组数据；并非直接从 Firebase Firestore 获取即时数据。<strong>JSON 导出文件会遵循“数据保留”中的“加密备份文件”设置。</strong>该设置开启时，JSON 文件会以 AES-256-GCM 加密，只能在可访问您 iCloud 钥匙串的设备上导入 Node Expense 才能读取。<strong>CSV 和 PDF 导出文件一律不会加密</strong>，均以可读形式写入，请您据此妥善保存与分享。</p>
 
   <h2><span class="section-number">11</span>数据删除</h2>
   <ul>
     <li>在 Node Expense 内删除单个或所有个人支出</li>
+    <li>在 Node Expense 内删除单笔收入；删除周期性收入会停止重复，已记录的收入会保留，直到您将其删除</li>
     <li>退出或申请删除群组——当所有成员同意时，群组数据将从 Firebase 中移除。群组的支出、结算、活动记录、留言和提醒计时器会立即从我们的服务器删除（您选择保留的支出除外，详见下方）。之后我们仅保留一条小型删除记录 90 天，让当时离线的设备得知该群组已被删除并清理本机副本；该记录包含群组名称、成员列表（显示名称、标识符、任何付款账号和头像链接），以及由谁在何时删除。该记录将在 90 天后自动且永久删除。</li>
     <li>任何成员都可以重命名或移除按名字添加的人员，前提是没有任何支出、分摊或付款涉及该人员。当有人认领按名字添加的人员时，其本人的账户会取代该人员在群组支出和付款中的位置，该仅有名字的条目也会被移除。</li>
     <li>标记为"删除时保留"的群组支出将保留在您的设备里；它们不会被重新上传</li>
@@ -959,7 +968,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-11-17 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-11-21 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
 
   <h2><span class="section-number">1</span>概要</h2>
   <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
@@ -970,6 +979,7 @@
       <div class="card-label">お客様が提供する情報</div>
       <ul>
         <li>支出記録（金額、メモ、カテゴリ）</li>
+        <li>収入記録（金額、収入源、メモ）。お客様のデバイスにのみ保存されます</li>
         <li>グループデータ（名前、メンバー、設定）</li>
         <li>名前だけでグループに追加した人の名前（Node Expense を使っていない友達向け。そのグループのすべてのメンバーに表示されます）</li>
         <li>グループ支出と精算</li>
@@ -1001,10 +1011,10 @@
 
   <h3>サブスクリプションと支払い</h3>
   <p>購入とサブスクリプションは Apple と RevenueCat によって処理されます。当社はお客様のクレジットカードや支払い情報を受け取りません。RevenueCat は、サブスクリプションステータス、「ライフタイム」アクセス、および無料トライアル期間を管理するために匿名のサブスクライバー識別子を保存します。このデータは、デバイスの再インストール後も PRO 機能へのアクセスを確認するために必要な期間保持されます。</p>
-  <p><strong>グループの利用権限。</strong>グループに支出を追加できるかどうかは、PRO、無料トライアル、または PRO メンバーの枠によって決まるため、アプリはお客様の PRO ステータスを所属するグループと共有します。お客様が PRO を購入したとき、グループを作成したとき、またはアプリを開いたときに、アプリは App Store が署名した購入記録を当社のサーバーに送信します。当社は Apple の署名を検証し、その購入の取引識別子、製品、有効期限、返金の有無を、購入を保持する各デバイスのアプリ識別子と紐づけて保持します。また、RevenueCat はサブスクリプションの更新、終了、返金を当社のサーバーに通知します。各メンバーの PRO と無料トライアルの終了日は、そのメンバーが所属するすべてのグループに保存され、メンバーには PRO の表示と、誰がどの枠を利用しているかが表示されます。当社がお客様の氏名、メールアドレス、Apple アカウント、支払い情報を受け取ることはなく、購入記録がほかのメンバーに表示されることもありません。</p>
+  <p><strong>グループの利用権限。</strong>グループに支出を追加できるかどうかは、PRO、無料トライアル、または PRO メンバーの枠によって決まるため、アプリはお客様の PRO ステータスを所属するグループと共有します。お客様が PRO を購入したとき、グループを作成したとき、またはアプリを開いたときに、アプリは App Store が署名した購入記録を当社のサーバーに送信します。当社は Apple の署名を検証し、その購入の取引識別子、製品、有効期限、返金の有無を、購入を保持する各デバイスのアプリ識別子と紐づけて保持します。同じ購入を保持するデバイスは、1人の PRO メンバーとして数えられます。また、RevenueCat はサブスクリプションの更新、終了、返金を当社のサーバーに通知します。各メンバーの PRO と無料トライアルの終了日は、そのメンバーが所属するすべてのグループに保存され、メンバーには PRO の表示と、誰がどの枠を利用しているかが表示されます。当社がお客様の氏名、メールアドレス、支払い情報を受け取ることはなく（Apple アカウントの識別子は、後述の Apple でサインインを使用した場合にのみ受け取ります）、購入記録がほかのメンバーに表示されることもありません。</p>
 
   <h3>デバイス間ライセンス同期（Apple でサインイン）</h3>
-  <p>Node Expense の利用に<strong>アカウントやサインインは不要</strong>です。同じ Apple アカウントでサインインした複数のデバイス（iPhone、iPad、Mac）で PRO をお持ちの場合、「サブスクリプション」画面で<strong>任意に</strong><strong>Apple でサインイン</strong>をタップすると、PRO ライセンスをそれらのデバイス間で同期できます。当社は<strong>氏名もメールアドレスも要求しません</strong>。Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子は、RevenueCat を通じて各デバイス上でお客様の PRO ライセンス（および利用済みの App Store オファーコード）を同一のサブスクライバー情報に照合する目的に<strong>のみ</strong>使用され、広告・トラッキング・プロファイリングには<strong>一切</strong>使用されません。デバイスの連携はいつでも「サブスクリプション」画面から解除でき、「iOS/iPadOS 設定（Mac ではシステム設定） → お客様の Apple アカウント → Apple でサインイン」からサインインを完全に取り消すこともできます。</p>
+  <p>Node Expense の利用に<strong>アカウントやサインインは不要</strong>です。同じ Apple アカウントでサインインした複数のデバイス（iPhone、iPad、Mac）で PRO をお持ちの場合、「サブスクリプション」画面で<strong>任意に</strong><strong>Apple でサインイン</strong>をタップすると、PRO ライセンスをそれらのデバイス間で同期できます。当社は<strong>氏名もメールアドレスも要求しません</strong>。Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子は、RevenueCat を通じて各デバイス上でお客様の PRO ライセンス（および利用済みの App Store オファーコード）を同一のサブスクライバー情報に照合し、お客様のデバイスが共有する購入をグループ内で1人の PRO メンバーとして数える目的に<strong>のみ</strong>使用され、広告・トラッキング・プロファイリングには<strong>一切</strong>使用されません。そのために当社のサーバーは Apple のサインイントークンを検証し、識別子の一方向ハッシュと、サインイン済みデバイス（最大 10 台）のアプリ識別子のみを保持します。デバイスの連携を解除すると、その一覧から削除されます。デバイスの連携はいつでも「サブスクリプション」画面から解除でき、「iOS/iPadOS 設定（Mac ではシステム設定） → お客様の Apple アカウント → Apple でサインイン」からサインインを完全に取り消すこともできます。</p>
 
   <h2><span class="section-number">3</span>サードパーティサービス</h2>
   <table class="service-table">
@@ -1016,7 +1026,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>グループデータの同期（支出、メンバー、精算、削除リクエスト）、公開されている台湾統一発票の当選番号</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>グループ支出のレシート写真、ユーザープロフィール写真、グループ写真の保存（圧縮 JPEG。それぞれを閲覧できる人は第 9.2 条をご参照ください）</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>ユーザーのサインインやアカウント作成を必要とせず、サブスクリプションの継続性を維持するための匿名ユーザー識別</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>グループ削除、プッシュ通知配信、名前だけで追加された人の追加と引き継ぎ、グループの利用権限のための App Store 購入の確認を含むバックグラウンドタスク</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>グループ削除、プッシュ通知配信、名前だけで追加された人の追加と引き継ぎ、グループの利用権限のための App Store 購入の確認、Apple でサインインしたデバイスの連携を含むバックグラウンドタスク</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>グループアクティビティのプッシュ通知</td></tr>
       <tr><td><strong>Google Gemini API（Firebase AI Logic 経由）</strong></td><td>Pick &amp; Pay でスキャンしたレシート写真の AI による OCR とアイテム抽出（PRO サブスクリプション機能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>アプリの更新を必要としない機能設定のリモート構成（例: アカウントごとの月間スキャン上限）</td></tr>
@@ -1077,20 +1087,21 @@
   <p>「位置情報の追跡」は Node Expense 内でいつでもオフにでき、iOS/iPadOS の設定（Mac ではシステム設定）から位置情報へのアクセスを取り消すこともできます。</p>
 
   <h2><span class="section-number">8</span>カレンダーへのアクセス</h2>
-  <p>Node Expense はお客様が選択したカレンダーのみにアクセスします。カレンダーへのアクセスは、支出をカレンダーイベントとして表示・同期する目的のみに使用されます。カレンダーデータがサードパーティと共有されることはありません。</p>
+  <p>Node Expense はお客様が選択したカレンダーのみにアクセスします。カレンダーへのアクセスは、支出と収入をカレンダーイベントとして表示・同期する目的のみに使用されます。カレンダーデータがサードパーティと共有されることはありません。</p>
 
   <h2><span class="section-number">9</span>データの保存、保持、および暗号化</h2>
   <h3>9.1 デバイス上のストレージ</h3>
   <p>以下のデータがデバイスに保存されています：</p>
   <ul>
     <li>個人（非グループ）の支出記録</li>
+    <li>収入記録（収入は常に個人のもので、グループに追加されたりアップロードされたりすることはありません）</li>
     <li>支出に添付された台湾の電子発票番号（任意の統一発票くじ照合にのみ使用）</li>
     <li>個人支出のレシート写真（PRO サブスクリプション機能。クラウドサービスにアップロードされることはありません）</li>
     <li>アプリの設定と環境設定</li>
     <li>オフラインアクセス用のグループデータのローカルコピー</li>
     <li>オフライン表示用のグループ支出のキャッシュ</li>
   </ul>
-  <p>個人の支出データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。唯一の例外は、第 7 条に記載の場所の検索です。削除されたグループからの支出は、グループを削除した人が記録の保持を選択した場合にのみ、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。記録の削除を選択した場合、これらの支出はお客様のデバイスからも削除されます。</p>
+  <p>個人の支出データと収入データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。唯一の例外は、第 7 条に記載の場所の検索です。削除されたグループからの支出は、グループを削除した人が記録の保持を選択した場合にのみ、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。記録の削除を選択した場合、これらの支出はお客様のデバイスからも削除されます。</p>
 
   <h3>9.2 グループ機能のクラウドストレージ</h3>
   <p>グループ機能では、選択されたデータが Firebase Firestore（写真は Firebase Storage）に同期されます：</p>
@@ -1104,7 +1115,7 @@
     <li>グループ精算（メンバー間の支払い記録）</li>
     <li>グループ削除リクエストとメンバーの投票</li>
     <li>トライアル開始日（再インストール後の復元用）</li>
-    <li>グループの利用権限：各メンバーの PRO と無料トライアルの終了日（所属するすべてのグループに保存）、および App Store の購入記録（取引識別子、製品、有効期限、返金の有無、購入を保持するデバイスのアプリ識別子）。購入記録がほかのメンバーに表示されることはありません（第 2 節を参照）</li>
+    <li>グループの利用権限：各メンバーの PRO と無料トライアルの終了日（所属するすべてのグループに保存）、および App Store の購入記録（取引識別子、製品、有効期限、返金の有無、購入を保持するデバイスのアプリ識別子）。購入記録がほかのメンバーに表示されることはありません（第 2 節を参照）。Apple でサインインを使用した場合のみ、Apple の識別子の一方向ハッシュとサインイン済みデバイスのアプリ識別子</li>
     <li>プッシュ通知トークン（FCM）と、通知の設定（受け取る通知の種類、通知をオフにしたグループ）、および未読バッジの数</li>
     <li>精算用ディープリンクのための任意の支払いハンドル（Venmo、Cash App、PayPal.me のユーザー名、Apple Cash の電話番号（決済アプリではなくメッセージを開きます）、および Zelle の電話番号またはメールアドレス、LINE ID、WeChat ID。後者の 3 つは何も開かず、グループメンバーがコピーできるよう表示されるだけです）</li>
     <li><strong>Pick &amp; Pay スキャン追跡</strong>——今月実行したスキャン数と、トライアルの無料利用が消費されたかどうかを記録する、アカウントごとの小さな記録です。アカウントごとの月次上限を適用し、「設定」画面で残りのスキャン数を表示するために使用されます。レシートの内容に関する情報は含まれていません。</li>
@@ -1117,18 +1128,19 @@
   <h3>9.3 暗号化とバックアップ</h3>
   <ul>
     <li>機能へのアクセス権を持つユーザーは、バックアップファイルに AES-256-GCM 暗号化を適用できます。この設定は、削除前に作成されるバックアップファイル、非アクティブなグループの整理前に提供されるエクスポートファイル、および「データの移行」で作成される JSON ファイルに適用されます。CSV と PDF のエクスポートファイルは暗号化されません（第 10 条をご参照ください）</li>
-    <li>支出記録の保持期間を制御できます（全期間または指定した年数）。<strong>保存期間が適用されるのは、お客様ご自身の個人支出のみです。</strong>グループの支出が保存期間によって削除されることはありません。削除されたグループや退出したグループから引き継いだ支出も同様で、これらは元の分担内容とともにお客様のデバイスに残ります。まだ有効な定期支出は、過去の分とあわせて保持されるため、引き続き自動で記録されます</li>
+    <li>支出記録と収入記録の保持期間を制御できます（全期間または指定した年数）。<strong>保存期間が適用されるのは、お客様ご自身の個人の支出と収入のみです。</strong>グループの支出が保存期間によって削除されることはありません。削除されたグループや退出したグループから引き継いだ支出も同様で、これらは元の分担内容とともにお客様のデバイスに残ります。まだ有効な定期支出と定期収入は、過去の分とあわせて保持されるため、引き続き自動で記録されます</li>
     <li>バックアップファイルはお客様が選択した場所（iCloud Drive、この iPhone 上、またはその他の iOS ファイルの場所）にエクスポートされます</li>
     <li>バックアップ暗号化キーはお客様の iCloud キーチェーンにのみ保存され、当社のサーバーに送信されることはなく、開発者もアクセスできません</li>
   </ul>
-  <p><strong>バックアップ対象範囲：</strong>バックアップおよびエクスポートの対象は、お客様のデバイスに保存されているデータです。すなわち、個人支出記録と、お客様がアクセスできるグループの支出およびグループ情報について、デバイスが保持しているローカルの複製が含まれます。JSON 形式のバックアップには、カスタムカテゴリー、予算、場所のラベルも含まれます。エクスポートの時点で Firebase Firestore からデータを取得することはないため、お客様のデバイスにまだ同期されていない内容はファイルに含まれません。エクスポートを行っても Firestore 上のデータは変更されず、グループが存在し削除されていない限り、引き続き Firestore を通じてアクセスできます。</p>
+  <p><strong>バックアップ対象範囲：</strong>バックアップおよびエクスポートの対象は、お客様のデバイスに保存されているデータです。すなわち、個人の支出記録と収入記録、および、お客様がアクセスできるグループの支出およびグループ情報について、デバイスが保持しているローカルの複製が含まれます。JSON 形式のバックアップには、カスタムカテゴリー、カスタム収入源、予算、場所のラベルも含まれます。エクスポートの時点で Firebase Firestore からデータを取得することはないため、お客様のデバイスにまだ同期されていない内容はファイルに含まれません。エクスポートを行っても Firestore 上のデータは変更されず、グループが存在し削除されていない限り、引き続き Firestore を通じてアクセスできます。</p>
 
   <h2><span class="section-number">10</span>データの移行</h2>
-  <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。また、Splitwise のエクスポート（CSV ファイル）からグループの支出と支払いを読み込むこともできます。ファイルはお客様のデバイス上で読み取られ、Splitwise には何も送信されません。読み込んだ内容（名前だけで追加された人を含む）は、手入力した支出と同様にグループに保存されます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。エクスポートにはデバイスにローカル保存された個人支出記録とキャッシュされたグループデータが含まれます。Firebase Firestore からライブデータを直接取得するものではありません。<strong>JSON のエクスポートファイルは、「データ保存期間」の「バックアップファイルを暗号化」の設定に従います。</strong>この設定がオンの場合、JSON ファイルは AES-256-GCM で暗号化され、お客様の iCloud キーチェーンにアクセスできるデバイスで Node Expense にインポートした場合にのみ読み取れます。<strong>CSV と PDF のエクスポートファイルは暗号化されず</strong>、常に可読の形式で書き出されます。保管や共有の際はご留意ください。</p>
+  <p>機能へのアクセス権を持つユーザー（PRO サブスクリプションまたは有効な無料トライアル中）は、データを JSON、CSV、または PDF 形式でエクスポートし、JSON 形式でインポートできます。また、Splitwise のエクスポート（CSV ファイル）からグループの支出と支払いを読み込むこともできます。ファイルはお客様のデバイス上で読み取られ、Splitwise には何も送信されません。読み込んだ内容（名前だけで追加された人を含む）は、手入力した支出と同様にグループに保存されます。Node Expense はお客様のエクスポートファイルにアクセスできません。エクスポートファイルはお客様が選択した場所に保存されます。エクスポートにはデバイスにローカル保存された個人の支出記録・収入記録とキャッシュされたグループデータが含まれます。Firebase Firestore からライブデータを直接取得するものではありません。<strong>JSON のエクスポートファイルは、「データ保存期間」の「バックアップファイルを暗号化」の設定に従います。</strong>この設定がオンの場合、JSON ファイルは AES-256-GCM で暗号化され、お客様の iCloud キーチェーンにアクセスできるデバイスで Node Expense にインポートした場合にのみ読み取れます。<strong>CSV と PDF のエクスポートファイルは暗号化されず</strong>、常に可読の形式で書き出されます。保管や共有の際はご留意ください。</p>
 
   <h2><span class="section-number">11</span>データの削除</h2>
   <ul>
     <li>Node Expense 内で個別または全ての個人支出を削除</li>
+    <li>Node Expense 内で個別の収入を削除。定期収入を削除すると繰り返しが止まり、記録済みの収入は削除するまで残ります</li>
     <li>グループを退出または削除リクエスト — 全メンバーが同意した場合、グループデータは Firebase から削除されます。グループの支出、精算、アクティビティ履歴、コメント、リマインダータイマーは、当社のサーバーから直ちに削除されます（お客様が保持を選択した支出を除きます。詳細は下記）。その後 90 日間は、削除時にオフラインだった端末がグループの削除を認識してローカルのコピーを整理できるよう、小さな削除記録のみを保持します。この記録には、グループ名、メンバー一覧（表示名、識別子、登録された送金アカウント、プロフィール写真のリンク）、および削除者と削除日時が含まれます。この記録は 90 日後に自動的かつ完全に削除されます。</li>
     <li>名前だけで追加された人は、その人が関わる支出、分担、支払いがない限り、どのメンバーでも名前の変更や削除ができます。名前だけで追加された人を誰かが引き継ぐと、その人自身のアカウントがグループの支出と支払いでその人の位置を引き継ぎ、名前だけの項目は削除されます。</li>
     <li>「削除時に保持」としてマークされたグループ支出はデバイスのローカルに残ります。再アップロードされることはありません</li>
@@ -1168,7 +1180,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
   <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
@@ -1179,6 +1191,7 @@
       <div class="card-label">Von Ihnen bereitgestellt</div>
       <ul>
         <li>Ausgabeneinträge (Beträge, Notizen, Kategorien)</li>
+        <li>Einnahmeneinträge (Beträge, Quellen, Notizen), die nur auf Ihrem Gerät gespeichert werden</li>
         <li>Gruppendaten (Name, Mitglieder, Einstellungen)</li>
         <li>Namen von Personen, die Sie per Name zu einer Gruppe hinzufügen, für Freunde, die Node Expense nicht nutzen (für alle Mitglieder dieser Gruppe sichtbar)</li>
         <li>Gruppenausgaben und Abrechnungen</li>
@@ -1210,10 +1223,10 @@
 
   <h3>Abonnements &amp; Zahlungen</h3>
   <p>Käufe und Abonnements werden von Apple und RevenueCat abgewickelt. Wir erhalten keine Kredit- oder Zahlungsdaten von Ihnen. RevenueCat speichert anonyme Abonnentenidentifikatoren zur Verwaltung Ihres Abonnementstatus, des „Lifetime"-Zugangs und des kostenlosen Testzeitraums. Diese Daten werden so lange aufbewahrt, wie es zur Überprüfung des PRO-Funktionszugangs nach einer Neuinstallation erforderlich ist.</p>
-  <p><strong>Gruppenzugang.</strong> Ob Sie einer Gruppe Ausgaben hinzufügen können, hängt von PRO, der kostenlosen Testversion oder einem von einem PRO-Mitglied abgedeckten Platz ab. Deshalb teilt die App Ihren PRO-Status mit den Gruppen, denen Sie angehören. Wenn Sie PRO kaufen, eine Gruppe erstellen oder die App öffnen, sendet sie den vom App Store signierten Kaufbeleg an unsere Server. Dort prüfen wir die Signatur von Apple und speichern die Transaktionskennung, das Produkt, das Ablaufdatum und ob der Kauf erstattet wurde, verknüpft mit der App-Kennung jedes Geräts, das den Kauf besitzt. Außerdem teilt RevenueCat unseren Servern mit, wenn ein Abonnement verlängert wird, endet oder erstattet wird. Die PRO- und Testende-Daten jedes Mitglieds werden dann in jeder Gruppe gespeichert, der es angehört, und Mitglieder sehen eine PRO-Kennzeichnung und wer abgedeckt ist. Wir erhalten niemals Ihren Namen, Ihre E-Mail-Adresse, Ihren Apple Account oder Ihre Zahlungsdaten, und Kaufbelege werden anderen Mitgliedern nie angezeigt.</p>
+  <p><strong>Gruppenzugang.</strong> Ob Sie einer Gruppe Ausgaben hinzufügen können, hängt von PRO, der kostenlosen Testversion oder einem von einem PRO-Mitglied abgedeckten Platz ab. Deshalb teilt die App Ihren PRO-Status mit den Gruppen, denen Sie angehören. Wenn Sie PRO kaufen, eine Gruppe erstellen oder die App öffnen, sendet sie den vom App Store signierten Kaufbeleg an unsere Server. Dort prüfen wir die Signatur von Apple und speichern die Transaktionskennung, das Produkt, das Ablaufdatum und ob der Kauf erstattet wurde, verknüpft mit der App-Kennung jedes Geräts, das den Kauf besitzt. Geräte, die denselben Kauf besitzen, zählen als ein PRO-Mitglied. Außerdem teilt RevenueCat unseren Servern mit, wenn ein Abonnement verlängert wird, endet oder erstattet wird. Die PRO- und Testende-Daten jedes Mitglieds werden dann in jeder Gruppe gespeichert, der es angehört, und Mitglieder sehen eine PRO-Kennzeichnung und wer abgedeckt ist. Wir erhalten niemals Ihren Namen, Ihre E-Mail-Adresse oder Ihre Zahlungsdaten (eine Kennung Ihres Apple Accounts erhalten wir nur, wenn Sie das unten beschriebene Mit Apple anmelden verwenden), und Kaufbelege werden anderen Mitgliedern nie angezeigt.</p>
 
   <h3>Geräteübergreifende Lizenzsynchronisierung (Mit Apple anmelden)</h3>
-  <p>Für die Nutzung von Node Expense sind <strong>kein Konto und keine Anmeldung erforderlich</strong>. Wenn Sie PRO auf mehreren Geräten (iPhone, iPad oder Mac) besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm <strong>optional</strong> auf <strong>Mit Apple anmelden</strong> tippen, um Ihre PRO-Lizenz geräteübergreifend zu synchronisieren. Wir fordern <strong>weder Name noch E-Mail-Adresse</strong> an – nur die stabile, app-spezifische Kennung, die Apple bereitstellt. Diese Kennung wird <strong>ausschließlich</strong> dazu verwendet, Ihre PRO-Lizenz (sowie eingelöste App-Store-Angebotscodes) über RevenueCat auf jedem Gerät demselben Abonnentenprofil zuzuordnen. Sie wird <strong>niemals</strong> für Werbung, Tracking oder Profilbildung verwendet. Sie können ein Gerät jederzeit über den Abonnement-Bildschirm trennen und die Anmeldung vollständig widerrufen unter „iOS-/iPadOS-Einstellungen (Systemeinstellungen auf dem Mac) → Ihr Apple-Account → Mit Apple anmelden“.</p>
+  <p>Für die Nutzung von Node Expense sind <strong>kein Konto und keine Anmeldung erforderlich</strong>. Wenn Sie PRO auf mehreren Geräten (iPhone, iPad oder Mac) besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm <strong>optional</strong> auf <strong>Mit Apple anmelden</strong> tippen, um Ihre PRO-Lizenz geräteübergreifend zu synchronisieren. Wir fordern <strong>weder Name noch E-Mail-Adresse</strong> an – nur die stabile, app-spezifische Kennung, die Apple bereitstellt. Diese Kennung wird <strong>ausschließlich</strong> dazu verwendet, Ihre PRO-Lizenz (sowie eingelöste App-Store-Angebotscodes) über RevenueCat auf jedem Gerät demselben Abonnentenprofil zuzuordnen und dafür zu sorgen, dass ein von Ihren Geräten geteilter Kauf in Gruppen als ein PRO-Mitglied zählt. Dazu prüfen unsere Server das Anmeldetoken von Apple und speichern nur einen Einweg-Hash der Kennung zusammen mit den App-Kennungen Ihrer angemeldeten Geräte (bis zu 10); wenn Sie ein Gerät trennen, wird es aus dieser Liste entfernt. Sie wird <strong>niemals</strong> für Werbung, Tracking oder Profilbildung verwendet. Sie können ein Gerät jederzeit über den Abonnement-Bildschirm trennen und die Anmeldung vollständig widerrufen unter „iOS-/iPadOS-Einstellungen (Systemeinstellungen auf dem Mac) → Ihr Apple-Account → Mit Apple anmelden“.</p>
 
   <h2><span class="section-number">3</span>Drittanbieterdienste</h2>
   <table class="service-table">
@@ -1225,7 +1238,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisierung von Gruppendaten (Ausgaben, Mitglieder, Abrechnungen, Löschanfragen); öffentliche Gewinnzahlen der taiwanesischen Lotterie der einheitlichen Rechnung</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Speicherung von Belegfotos für Gruppenausgaben, Profilfotos der Nutzer und Gruppenfotos (komprimiertes JPEG; wer welches Foto sehen kann, steht in Abschnitt 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Anmeldung (Keine Registrierung erforderlich). Lokale Daten werden sicher auf dem Gerät gespeichert. Die anonyme ID wird ausschließlich zur Gewährleistung der Abonnementkontinuität verwendet</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Hintergrundaufgaben einschließlich Gruppenlöschung, Push-Benachrichtigungsversand, Hinzufügen und Übernehmen per Name hinzugefügter Personen sowie Prüfung von App-Store-Käufen für den Gruppenzugang</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Hintergrundaufgaben einschließlich Gruppenlöschung, Push-Benachrichtigungsversand, Hinzufügen und Übernehmen per Name hinzugefügter Personen, Prüfung von App-Store-Käufen für den Gruppenzugang sowie Verknüpfung von Geräten, die mit Apple angemeldet sind</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push-Benachrichtigungen für Gruppenaktivitäten</td></tr>
       <tr><td><strong>Google Gemini API (über Firebase AI Logic)</strong></td><td>KI-gestützte OCR und Positionsextraktion aus Belegfotos, die über Pick &amp; Pay gescannt werden (PRO-Abonnementfunktion)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote-Konfiguration von Funktionsparametern (z. B. monatliche Scan-Limits pro Konto) ohne App-Update</td></tr>
@@ -1286,20 +1299,21 @@
   <p>Sie können die Standortverfolgung jederzeit in Node Expense ausschalten und den Standortzugriff in den iOS-/iPadOS-Einstellungen (Systemeinstellungen auf dem Mac) widerrufen.</p>
 
   <h2><span class="section-number">8</span>Kalenderzugriff</h2>
-  <p>Node Expense greift nur auf die von Ihnen ausgewählten Kalender zu. Der Kalenderzugriff dient ausschließlich dazu, Ausgabeneinträge als Kalenderereignisse anzuzeigen und zu synchronisieren. Kalenderdaten werden niemals an Dritte weitergegeben.</p>
+  <p>Node Expense greift nur auf die von Ihnen ausgewählten Kalender zu. Der Kalenderzugriff dient ausschließlich dazu, Ausgaben- und Einnahmeneinträge als Kalenderereignisse anzuzeigen und zu synchronisieren. Kalenderdaten werden niemals an Dritte weitergegeben.</p>
 
   <h2><span class="section-number">9</span>Datenspeicherung, -aufbewahrung &amp; Verschlüsselung</h2>
   <h3>9.1 Lokale Geräte-Speicherung</h3>
   <p>Die folgenden Daten sind auf deinem Gerät gespeichert:</p>
   <ul>
     <li>Persönliche (nicht gruppenspezifische) Ausgabeneinträge</li>
+    <li>Einnahmeneinträge (Einnahmen sind immer persönlich und werden nie einer Gruppe hinzugefügt oder hochgeladen)</li>
     <li>An Ausgaben angehängte taiwanesische elektronische Rechnungsnummern (nur für die optionale Lotterieprüfung verwendet)</li>
     <li>Belegfotos persönlicher Ausgaben (PRO-Abonnementfunktion; werden niemals in einen Cloud-Dienst hochgeladen)</li>
     <li>App-Einstellungen und Präferenzen</li>
     <li>Lokale Kopien von Gruppendaten für den Offline-Zugriff</li>
     <li>Zwischengespeicherte Gruppenausgaben zur Offline-Ansicht</li>
   </ul>
-  <p>Persönliche Ausgabendaten — einschließlich angehängter Belegfotos — verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Die einzige Ausnahme sind die in Abschnitt 7 beschriebenen Ortsabfragen. Ausgaben aus gelöschten Gruppen werden nur dann lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt, wenn die Person, die die Gruppe gelöscht hat, sich für das Behalten der Datensätze entschieden hat. Wurde das Entfernen gewählt, werden diese Ausgaben auch von Ihrem Gerät gelöscht.</p>
+  <p>Persönliche Ausgaben- und Einnahmendaten — einschließlich angehängter Belegfotos — verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Die einzige Ausnahme sind die in Abschnitt 7 beschriebenen Ortsabfragen. Ausgaben aus gelöschten Gruppen werden nur dann lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt, wenn die Person, die die Gruppe gelöscht hat, sich für das Behalten der Datensätze entschieden hat. Wurde das Entfernen gewählt, werden diese Ausgaben auch von Ihrem Gerät gelöscht.</p>
 
   <h3>9.2 Cloud-Speicher für Gruppenfunktionen</h3>
   <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore (und Fotos mit Firebase Storage) synchronisiert:</p>
@@ -1313,7 +1327,7 @@
     <li>Gruppenabrechnungen (Zahlungsaufzeichnungen zwischen Mitgliedern)</li>
     <li>Gruppen-Löschanfragen und Mitgliederabstimmungen</li>
     <li>Teststart-Daten (zur Wiederherstellung nach Neuinstallation)</li>
-    <li>Gruppenzugang: die PRO- und Testende-Daten jedes Mitglieds, gespeichert in jeder Gruppe, der es angehört; sowie App-Store-Kaufbelege (Transaktionskennung, Produkt, Ablaufdatum, ob erstattet und die App-Kennungen der Geräte, die den Kauf besitzen), die anderen Mitgliedern nie angezeigt werden (siehe Abschnitt 2)</li>
+    <li>Gruppenzugang: die PRO- und Testende-Daten jedes Mitglieds, gespeichert in jeder Gruppe, der es angehört; sowie App-Store-Kaufbelege (Transaktionskennung, Produkt, Ablaufdatum, ob erstattet und die App-Kennungen der Geräte, die den Kauf besitzen), die anderen Mitgliedern nie angezeigt werden (siehe Abschnitt 2); und nur wenn Sie Mit Apple anmelden verwenden, ein Einweg-Hash der Apple-Kennung mit den App-Kennungen Ihrer angemeldeten Geräte</li>
     <li>Push-Benachrichtigungs-Token (FCM) sowie Ihre Benachrichtigungseinstellungen (welche Arten von Benachrichtigungen Sie erhalten möchten und für welche Gruppen Sie sie ausgeschaltet haben) und die Anzahl ungelesener Mitteilungen am App-Symbol</li>
     <li>Optionale Zahlungshandles für Abrechnungs-Deeplinks (Venmo-, Cash App- und PayPal.me-Benutzernamen; eine Apple Cash-Telefonnummer, die Nachrichten statt einer Zahlungs-App öffnet; sowie eine Zelle-Telefonnummer oder -E-Mail, eine LINE-ID und eine WeChat-ID, die gar nichts öffnen und Gruppenmitgliedern nur zum Kopieren angezeigt werden)</li>
     <li><strong>Pick &amp; Pay-Scan-Erfassung</strong> — ein kleiner kontobezogener Datensatz, der protokolliert, wie viele Scans Sie in diesem Monat durchgeführt haben und ob Ihre Testversion-Gratisnutzung verwendet wurde. Wird verwendet, um die monatlichen Limits pro Konto durchzusetzen und Ihnen die verbleibenden Scans in den Einstellungen anzuzeigen. Enthält keine Informationen über den Inhalt eines Belegs.</li>
@@ -1326,18 +1340,19 @@
   <h3>9.3 Verschlüsselung &amp; Backups</h3>
   <ul>
     <li>Benutzer mit Funktionszugang können die AES-256-GCM-Verschlüsselung für Backup-Dateien aktivieren. Die Einstellung gilt für die Backup-Datei, die vor einer Bereinigung erstellt wird, für den Export, der vor dem Entfernen einer inaktiven Gruppe angeboten wird, und für die JSON-Datei der Datenmigration; CSV- und PDF-Exporte werden nie verschlüsselt (siehe Abschnitt 10)</li>
-    <li>Sie steuern, wie lange Ausgabeneinträge aufbewahrt werden (dauerhaft oder eine begrenzte Anzahl von Jahren). <strong>Die Aufbewahrungsfrist gilt ausschließlich für Ihre eigenen persönlichen Ausgaben.</strong> Gruppenausgaben werden dadurch niemals gelöscht, ebenso wenig Ausgaben aus einer gelöschten oder von Ihnen verlassenen Gruppe; diese verbleiben mit ihrer ursprünglichen Aufteilung auf Ihrem Gerät. Wiederkehrende Ausgaben, die noch aktiv sind, bleiben zusammen mit ihren bisherigen Einträgen erhalten, damit sie weiterhin automatisch erfasst werden</li>
+    <li>Sie steuern, wie lange Ausgaben- und Einnahmeneinträge aufbewahrt werden (dauerhaft oder eine begrenzte Anzahl von Jahren). <strong>Die Aufbewahrungsfrist gilt ausschließlich für Ihre eigenen persönlichen Ausgaben und Einnahmen.</strong> Gruppenausgaben werden dadurch niemals gelöscht, ebenso wenig Ausgaben aus einer gelöschten oder von Ihnen verlassenen Gruppe; diese verbleiben mit ihrer ursprünglichen Aufteilung auf Ihrem Gerät. Wiederkehrende Ausgaben und Einnahmen, die noch aktiv sind, bleiben zusammen mit ihren bisherigen Einträgen erhalten, damit sie weiterhin automatisch erfasst werden</li>
     <li>Backup-Dateien werden an einen von Ihnen gewählten Ort exportiert (iCloud Drive, Auf diesem iPhone oder andere iOS-Dateispeicherorte)</li>
     <li>Backup-Verschlüsselungsschlüssel werden ausschließlich in Ihrem iCloud-Schlüsselbund gespeichert, niemals an unsere Server übertragen und sind für uns als Entwickler nicht zugänglich</li>
   </ul>
-  <p><strong>Backup-Umfang:</strong> Backups und Exporte umfassen die auf Ihrem Gerät gespeicherten Daten: Ihre persönlichen Ausgabeneinträge sowie die lokale Kopie der Gruppenausgaben und Gruppendetails, auf die Sie Zugriff haben. JSON-Backups enthalten außerdem Ihre benutzerdefinierten Kategorien, Budgets und Etiketten für Orte. Beim Export werden keine Daten aus Firebase Firestore abgerufen; was noch nicht mit Ihrem Gerät synchronisiert wurde, ist daher nicht in der Datei enthalten. Ein Export verändert die in Firestore gespeicherte Kopie nicht — sie bleibt zugänglich, solange die Gruppe existiert und nicht gelöscht wurde.</p>
+  <p><strong>Backup-Umfang:</strong> Backups und Exporte umfassen die auf Ihrem Gerät gespeicherten Daten: Ihre persönlichen Ausgaben- und Einnahmeneinträge sowie die lokale Kopie der Gruppenausgaben und Gruppendetails, auf die Sie Zugriff haben. JSON-Backups enthalten außerdem Ihre benutzerdefinierten Kategorien und Einnahmequellen, Budgets und Etiketten für Orte. Beim Export werden keine Daten aus Firebase Firestore abgerufen; was noch nicht mit Ihrem Gerät synchronisiert wurde, ist daher nicht in der Datei enthalten. Ein Export verändert die in Firestore gespeicherte Kopie nicht — sie bleibt zugänglich, solange die Gruppe existiert und nicht gelöscht wurde.</p>
 
   <h2><span class="section-number">10</span>Datenmigration</h2>
-  <p>Benutzer mit Funktionszugang (PRO-Abonnement oder aktive kostenlose Testversion) können ihre Daten als JSON, CSV oder PDF exportieren und Daten im JSON-Format importieren. Sie können außerdem die Ausgaben und Zahlungen einer Gruppe aus einem Splitwise-Export (einer CSV-Datei) importieren: Die Datei wird auf Ihrem Gerät gelesen, an Splitwise wird nichts gesendet, und was Sie importieren, einschließlich per Name hinzugefügter Personen, wird wie von Hand eingegebene Ausgaben in der Gruppe gespeichert. Node Expense hat keinen Zugriff auf Ihre exportierten Dateien. Exportierte Dateien werden an einem von Ihnen gewählten Ort gespeichert. Exporte enthalten lokal gespeicherte persönliche Ausgabeneinträge und gecachte Gruppendaten; Live-Daten werden nicht direkt aus Firebase Firestore abgerufen. <strong>JSON-Exporte folgen der Einstellung „Backup-Dateien verschlüsseln“ in der Datenspeicherung.</strong> Ist sie aktiviert, wird die JSON-Datei mit AES-256-GCM verschlüsselt und lässt sich nur lesen, indem Sie sie auf einem Gerät mit Zugriff auf Ihren iCloud-Schlüsselbund wieder in Node Expense importieren. <strong>CSV- und PDF-Exporte werden nie verschlüsselt</strong> und immer in lesbarer Form geschrieben. Bitte bewahren Sie sie entsprechend auf und geben Sie sie entsprechend weiter.</p>
+  <p>Benutzer mit Funktionszugang (PRO-Abonnement oder aktive kostenlose Testversion) können ihre Daten als JSON, CSV oder PDF exportieren und Daten im JSON-Format importieren. Sie können außerdem die Ausgaben und Zahlungen einer Gruppe aus einem Splitwise-Export (einer CSV-Datei) importieren: Die Datei wird auf Ihrem Gerät gelesen, an Splitwise wird nichts gesendet, und was Sie importieren, einschließlich per Name hinzugefügter Personen, wird wie von Hand eingegebene Ausgaben in der Gruppe gespeichert. Node Expense hat keinen Zugriff auf Ihre exportierten Dateien. Exportierte Dateien werden an einem von Ihnen gewählten Ort gespeichert. Exporte enthalten lokal gespeicherte persönliche Ausgaben- und Einnahmeneinträge und gecachte Gruppendaten; Live-Daten werden nicht direkt aus Firebase Firestore abgerufen. <strong>JSON-Exporte folgen der Einstellung „Backup-Dateien verschlüsseln“ in der Datenspeicherung.</strong> Ist sie aktiviert, wird die JSON-Datei mit AES-256-GCM verschlüsselt und lässt sich nur lesen, indem Sie sie auf einem Gerät mit Zugriff auf Ihren iCloud-Schlüsselbund wieder in Node Expense importieren. <strong>CSV- und PDF-Exporte werden nie verschlüsselt</strong> und immer in lesbarer Form geschrieben. Bitte bewahren Sie sie entsprechend auf und geben Sie sie entsprechend weiter.</p>
 
   <h2><span class="section-number">11</span>Datenlöschung</h2>
   <ul>
     <li>Einzelne oder alle persönlichen Ausgaben innerhalb von Node Expense löschen</li>
+    <li>Einzelne Einnahmen innerhalb von Node Expense löschen; wenn Sie eine wiederkehrende Einnahme löschen, endet die Wiederholung, und bereits erfasste Einnahmen bleiben erhalten, bis Sie sie löschen</li>
     <li>Eine Gruppe verlassen oder deren Löschung beantragen — Gruppendaten werden aus Firebase entfernt, wenn alle Mitglieder zustimmen. Ausgaben, Abrechnungen, Aktivitätsverlauf, Kommentare und Erinnerungs-Timer der Gruppe werden sofort von unseren Servern gelöscht (ausgenommen Ausgaben, die Sie behalten möchten, siehe unten). Danach bewahren wir 90 Tage lang lediglich einen kleinen Löschvermerk auf, damit Geräte, die zu diesem Zeitpunkt offline waren, die Löschung erkennen und ihre lokale Kopie bereinigen können; er enthält den Gruppennamen, die Mitgliederliste (Anzeigenamen, Kennungen, etwaige Zahlungs-Handles und Links zu Profilfotos) sowie wer die Gruppe wann gelöscht hat. Dieser Vermerk wird nach 90 Tagen automatisch und dauerhaft gelöscht.</li>
     <li>Jedes Mitglied kann eine per Name hinzugefügte Person umbenennen oder entfernen, solange keine Ausgabe, kein Anteil und keine Zahlung sie nennt. Übernimmt jemand eine per Name hinzugefügte Person, tritt sein eigenes Konto in den Ausgaben und Zahlungen der Gruppe an ihre Stelle, und der reine Namenseintrag wird entfernt.</li>
     <li>Gruppenausgaben, die als „Bei Löschung behalten" markiert sind, verbleiben lokal auf Ihrem Gerät und werden nicht erneut hochgeladen</li>
@@ -1377,7 +1392,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
   <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
@@ -1388,6 +1403,7 @@
       <div class="card-label">Proporcionados por usted</div>
       <ul>
         <li>Registros de gastos (importes, notas, categorías)</li>
+        <li>Registros de ingresos (importes, fuentes, notas), guardados solo en su dispositivo</li>
         <li>Datos del grupo (nombre, miembros, configuración)</li>
         <li>Nombres de personas que añade a un grupo por nombre, para amigos que no usan Node Expense (visibles para todos los miembros de ese grupo)</li>
         <li>Gastos y liquidaciones del grupo</li>
@@ -1419,10 +1435,10 @@
 
   <h3>Suscripciones &amp; pagos</h3>
   <p>Las compras y suscripciones son procesadas por Apple y RevenueCat. No recibimos sus datos de tarjeta de crédito ni información de pago. RevenueCat almacena identificadores de suscriptor anónimos para gestionar el estado de su suscripción, el acceso "Lifetime" y el período de prueba gratuito. Estos datos se conservan el tiempo necesario para verificar el acceso a las funciones PRO tras reinstalaciones del dispositivo.</p>
-  <p><strong>Acceso al grupo.</strong> Que pueda añadir gastos a un grupo depende de PRO, de la prueba gratuita o de un lugar cubierto por un miembro PRO, por lo que la app comparte su estado PRO con los grupos a los que pertenece. Cuando compra PRO, crea un grupo o abre la app, esta envía a nuestros servidores el registro firmado de su compra emitido por el App Store; allí comprobamos la firma de Apple y conservamos el identificador de transacción, el producto, la fecha de vencimiento y si se reembolsó, vinculados al identificador de la app de cada dispositivo que tiene la compra. RevenueCat también avisa a nuestros servidores cuando una suscripción se renueva, termina o se reembolsa. Las fechas de fin de PRO y de la prueba gratuita de cada miembro se guardan en cada grupo al que pertenece, y los miembros ven una etiqueta PRO y quién está cubierto. Nunca recibimos su nombre, correo electrónico, cuenta de Apple ni datos de pago, y los registros de compra nunca se muestran a otros miembros.</p>
+  <p><strong>Acceso al grupo.</strong> Que pueda añadir gastos a un grupo depende de PRO, de la prueba gratuita o de un lugar cubierto por un miembro PRO, por lo que la app comparte su estado PRO con los grupos a los que pertenece. Cuando compra PRO, crea un grupo o abre la app, esta envía a nuestros servidores el registro firmado de su compra emitido por el App Store; allí comprobamos la firma de Apple y conservamos el identificador de transacción, el producto, la fecha de vencimiento y si se reembolsó, vinculados al identificador de la app de cada dispositivo que tiene la compra. Los dispositivos que tienen la misma compra cuentan como un solo miembro PRO. RevenueCat también avisa a nuestros servidores cuando una suscripción se renueva, termina o se reembolsa. Las fechas de fin de PRO y de la prueba gratuita de cada miembro se guardan en cada grupo al que pertenece, y los miembros ven una etiqueta PRO y quién está cubierto. Nunca recibimos su nombre, correo electrónico ni datos de pago (solo recibimos un identificador de su cuenta de Apple si usa Iniciar sesión con Apple, descrito más abajo), y los registros de compra nunca se muestran a otros miembros.</p>
 
   <h3>Sincronización de licencia entre dispositivos (Iniciar sesión con Apple)</h3>
-  <p>No se requiere cuenta ni inicio de sesión para usar Node Expense. Si tiene PRO en más de un dispositivo (iPhone, iPad o Mac) con la sesión iniciada en la misma cuenta de Apple, puede <strong>opcionalmente</strong> tocar <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO entre ellos. <strong>No solicitamos ni nombre ni correo electrónico</strong>: solo el identificador estable y específico de la app que proporciona Apple. Ese identificador se usa <strong>únicamente</strong> para asociar su licencia PRO (y cualquier código de oferta de la App Store que haya canjeado) al mismo perfil de suscriptor en cada dispositivo, a través de RevenueCat. <strong>Nunca</strong> se usa para publicidad, seguimiento ni elaboración de perfiles. Puede desconectar un dispositivo en cualquier momento desde la pantalla de Suscripción, y puede revocar el inicio de sesión por completo en Configuración de iOS/iPadOS (Ajustes del Sistema en Mac) → su cuenta de Apple → Iniciar sesión con Apple.</p>
+  <p>No se requiere cuenta ni inicio de sesión para usar Node Expense. Si tiene PRO en más de un dispositivo (iPhone, iPad o Mac) con la sesión iniciada en la misma cuenta de Apple, puede <strong>opcionalmente</strong> tocar <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO entre ellos. <strong>No solicitamos ni nombre ni correo electrónico</strong>: solo el identificador estable y específico de la app que proporciona Apple. Ese identificador se usa <strong>únicamente</strong> para asociar su licencia PRO (y cualquier código de oferta de la App Store que haya canjeado) al mismo perfil de suscriptor en cada dispositivo, a través de RevenueCat, y para que una compra que comparten sus dispositivos cuente como un solo miembro PRO en los grupos. Para ello, nuestros servidores comprueban el token de inicio de sesión de Apple y conservan solo un hash unidireccional del identificador, junto con los identificadores de la app de sus dispositivos con la sesión iniciada (hasta 10); al desconectar un dispositivo, se elimina de esa lista. <strong>Nunca</strong> se usa para publicidad, seguimiento ni elaboración de perfiles. Puede desconectar un dispositivo en cualquier momento desde la pantalla de Suscripción, y puede revocar el inicio de sesión por completo en Configuración de iOS/iPadOS (Ajustes del Sistema en Mac) → su cuenta de Apple → Iniciar sesión con Apple.</p>
 
   <h2><span class="section-number">3</span>Servicios de terceros</h2>
   <table class="service-table">
@@ -1434,7 +1450,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>Sincronización de datos de grupo (gastos, miembros, liquidaciones, solicitudes de eliminación); números premiados públicos de la lotería de la factura unificada de Taiwán</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Almacenamiento de fotos de recibos para gastos de grupo, fotos de perfil de usuario y fotos de grupo (JPEG comprimido; quién puede ver cada una se indica en la sección 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Identificación anónima de usuario para mantener la continuidad de la suscripción sin requerir el inicio de sesión del usuario ni la creación de una cuenta</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tareas en segundo plano, incluida la eliminación de grupos, el envío de notificaciones push, añadir y reclamar personas añadidas por nombre, y la comprobación de compras del App Store para el acceso al grupo</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tareas en segundo plano, incluida la eliminación de grupos, el envío de notificaciones push, añadir y reclamar personas añadidas por nombre, la comprobación de compras del App Store para el acceso al grupo y la vinculación de dispositivos con Iniciar sesión con Apple</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notificaciones push para actividad de grupo</td></tr>
       <tr><td><strong>Google Gemini API (a través de Firebase AI Logic)</strong></td><td>OCR con IA y extracción de líneas de artículos a partir de fotos de recibos escaneadas con Pick &amp; Pay (función de suscripción PRO)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuración remota de parámetros de funciones (por ejemplo, límites mensuales de escaneo por cuenta) sin necesidad de actualizar la app</td></tr>
@@ -1495,20 +1511,21 @@
   <p>Puede desactivar Seguimiento de ubicación en cualquier momento en Node Expense y retirar el acceso a la ubicación en los Ajustes de iOS/iPadOS (Ajustes del Sistema en Mac).</p>
 
   <h2><span class="section-number">8</span>Acceso al calendario</h2>
-  <p>Node Expense solo accede a los calendarios que usted seleccione. El acceso al calendario se utiliza exclusivamente para mostrar y sincronizar entradas de gastos como eventos del calendario. Los datos del calendario nunca se comparten con terceros.</p>
+  <p>Node Expense solo accede a los calendarios que usted seleccione. El acceso al calendario se utiliza exclusivamente para mostrar y sincronizar entradas de gastos e ingresos como eventos del calendario. Los datos del calendario nunca se comparten con terceros.</p>
 
   <h2><span class="section-number">9</span>Almacenamiento, retención y cifrado de datos</h2>
   <h3>9.1 Almacenamiento en el dispositivo</h3>
   <p>Los siguientes datos están guardados en tu dispositivo:</p>
   <ul>
     <li>Registros de gastos personales (no de grupo)</li>
+    <li>Registros de ingresos (los ingresos son siempre personales: nunca se añaden a un grupo ni se suben a la nube)</li>
     <li>Números de factura electrónica de Taiwán adjuntos a los gastos (utilizados solo para la comprobación opcional de la lotería)</li>
     <li>Fotos de recibos de gastos personales (función de suscripción PRO; nunca se cargan en ningún servicio en la nube)</li>
     <li>Configuración y preferencias de la app</li>
     <li>Copias locales de datos de grupo para acceso sin conexión</li>
     <li>Gastos de grupo en caché para visualización sin conexión</li>
   </ul>
-  <p>Los datos de gastos personales — incluidas las fotos de recibos adjuntas — nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. La única excepción son las búsquedas de ubicación descritas en la sección 7. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado" solo si quien eliminó el grupo optó por conservar los registros. Si optó por eliminarlos, esos gastos también se borran de su dispositivo.</p>
+  <p>Los datos de gastos e ingresos personales — incluidas las fotos de recibos adjuntas — nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. La única excepción son las búsquedas de ubicación descritas en la sección 7. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado" solo si quien eliminó el grupo optó por conservar los registros. Si optó por eliminarlos, esos gastos también se borran de su dispositivo.</p>
 
   <h3>9.2 Almacenamiento en la nube para funciones de grupo</h3>
   <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore (y las fotos con Firebase Storage):</p>
@@ -1522,7 +1539,7 @@
     <li>Liquidaciones de grupo (registros de pago entre miembros)</li>
     <li>Solicitudes de eliminación de grupo y votos de miembros</li>
     <li>Fechas de inicio de prueba (para recuperación tras reinstalación)</li>
-    <li>Acceso al grupo: las fechas de fin de PRO y de la prueba gratuita de cada miembro, guardadas en cada grupo al que pertenece; y los registros de compra del App Store (identificador de transacción, producto, fecha de vencimiento, si se reembolsó y los identificadores de la app de los dispositivos que tienen la compra), que nunca se muestran a otros miembros (véase la sección 2)</li>
+    <li>Acceso al grupo: las fechas de fin de PRO y de la prueba gratuita de cada miembro, guardadas en cada grupo al que pertenece; y los registros de compra del App Store (identificador de transacción, producto, fecha de vencimiento, si se reembolsó y los identificadores de la app de los dispositivos que tienen la compra), que nunca se muestran a otros miembros (véase la sección 2); y, solo si usa Iniciar sesión con Apple, un hash unidireccional del identificador de Apple con los identificadores de la app de sus dispositivos con la sesión iniciada</li>
     <li>Tokens de notificaciones push (FCM), junto con su configuración de notificaciones (qué tipos de notificaciones desea recibir y qué grupos ha desactivado) y el número de la insignia de no leídos</li>
     <li>Identificadores de pago opcionales para enlaces directos de liquidación (nombres de usuario de Venmo, Cash App y PayPal.me; un número de teléfono de Apple Cash, que abre Mensajes en lugar de una app de pago; y un teléfono o correo de Zelle, un ID de LINE y un ID de WeChat, que no abren nada y solo se muestran a los miembros del grupo para copiarlos)</li>
     <li><strong>Seguimiento de escaneos de Pick &amp; Pay</strong> — un pequeño registro por cuenta del número de escaneos que ha realizado este mes y si se ha utilizado su prueba gratuita. Se usa para aplicar los límites mensuales por cuenta y para mostrarle los escaneos restantes en Ajustes. No contiene ninguna información sobre el contenido de ningún recibo.</li>
@@ -1535,18 +1552,19 @@
   <h3>9.3 Cifrado &amp; copias de seguridad</h3>
   <ul>
     <li>Los usuarios con acceso a funciones pueden habilitar el cifrado AES-256-GCM para los archivos de copia de seguridad. El ajuste se aplica al archivo que se crea antes de una limpieza, a la exportación que se ofrece antes de eliminar un grupo inactivo y al archivo JSON que genera Migración de datos; las exportaciones CSV y PDF nunca se cifran (consulte la sección 10)</li>
-    <li>Usted controla durante cuánto tiempo se conservan los registros de gastos (siempre o un número limitado de años). <strong>La retención se aplica únicamente a sus propios gastos personales.</strong> Nunca elimina los gastos de grupo, ni los gastos conservados de un grupo que se haya eliminado o del que usted haya salido; estos permanecen en su dispositivo con su división original intacta. Los gastos recurrentes que siguen activos se conservan junto con sus entradas anteriores, para que se sigan registrando automáticamente</li>
+    <li>Usted controla durante cuánto tiempo se conservan los registros de gastos e ingresos (siempre o un número limitado de años). <strong>La retención se aplica únicamente a sus propios gastos e ingresos personales.</strong> Nunca elimina los gastos de grupo, ni los gastos conservados de un grupo que se haya eliminado o del que usted haya salido; estos permanecen en su dispositivo con su división original intacta. Los gastos e ingresos recurrentes que siguen activos se conservan junto con sus entradas anteriores, para que se sigan registrando automáticamente</li>
     <li>Los archivos de copia de seguridad se exportan a una ubicación de su elección (iCloud Drive, En este iPhone u otras ubicaciones de archivos de iOS)</li>
     <li>Las claves de cifrado de las copias de seguridad se almacenan exclusivamente en su llavero de iCloud, nunca se transmiten a nuestros servidores y no son accesibles para nosotros como desarrolladores</li>
   </ul>
-  <p><strong>Alcance de las copias de seguridad:</strong> Las copias de seguridad y exportaciones abarcan los datos guardados en su dispositivo: sus registros de gastos personales y la copia local que su dispositivo conserva de los gastos de grupo y de los datos de los grupos a los que tiene acceso. Las copias de seguridad JSON también incluyen sus categorías personalizadas, presupuestos y etiquetas de lugares. En el momento de exportar no se obtiene nada de Firebase Firestore, por lo que aquello que aún no se haya sincronizado con su dispositivo no estará en el archivo. Exportar no modifica la copia almacenada en Firestore, que permanece accesible mientras el grupo exista y no haya sido eliminado.</p>
+  <p><strong>Alcance de las copias de seguridad:</strong> Las copias de seguridad y exportaciones abarcan los datos guardados en su dispositivo: sus registros de gastos e ingresos personales y la copia local que su dispositivo conserva de los gastos de grupo y de los datos de los grupos a los que tiene acceso. Las copias de seguridad JSON también incluyen sus categorías y fuentes de ingresos personalizadas, presupuestos y etiquetas de lugares. En el momento de exportar no se obtiene nada de Firebase Firestore, por lo que aquello que aún no se haya sincronizado con su dispositivo no estará en el archivo. Exportar no modifica la copia almacenada en Firestore, que permanece accesible mientras el grupo exista y no haya sido eliminado.</p>
 
   <h2><span class="section-number">10</span>Migración de datos</h2>
-  <p>Los usuarios con acceso a funciones (suscripción PRO o prueba gratuita activa) pueden exportar sus datos en formato JSON, CSV o PDF, e importar datos en formato JSON. También pueden importar los gastos y pagos de un grupo desde una exportación de Splitwise (un archivo CSV): el archivo se lee en su dispositivo, no se envía nada a Splitwise y lo que importe, incluidas las personas añadidas por nombre, se guarda en el grupo igual que los gastos introducidos a mano. Node Expense no tiene acceso a sus archivos exportados. Los archivos exportados se guardan en una ubicación de su elección. Las exportaciones incluyen registros de gastos personales almacenados localmente y datos de grupo en caché; no se obtienen datos en tiempo real directamente de Firebase Firestore. <strong>Las exportaciones JSON siguen el ajuste «Cifrar archivos de copia de seguridad» de Retención de datos.</strong> Cuando está activado, el archivo JSON se cifra con AES-256-GCM y solo puede leerse importándolo de nuevo en Node Expense desde un dispositivo con acceso a su llavero de iCloud. <strong>Las exportaciones CSV y PDF nunca se cifran</strong> y siempre se escriben en formato legible, por lo que le recomendamos guardarlas y compartirlas en consecuencia.</p>
+  <p>Los usuarios con acceso a funciones (suscripción PRO o prueba gratuita activa) pueden exportar sus datos en formato JSON, CSV o PDF, e importar datos en formato JSON. También pueden importar los gastos y pagos de un grupo desde una exportación de Splitwise (un archivo CSV): el archivo se lee en su dispositivo, no se envía nada a Splitwise y lo que importe, incluidas las personas añadidas por nombre, se guarda en el grupo igual que los gastos introducidos a mano. Node Expense no tiene acceso a sus archivos exportados. Los archivos exportados se guardan en una ubicación de su elección. Las exportaciones incluyen registros de gastos e ingresos personales almacenados localmente y datos de grupo en caché; no se obtienen datos en tiempo real directamente de Firebase Firestore. <strong>Las exportaciones JSON siguen el ajuste «Cifrar archivos de copia de seguridad» de Retención de datos.</strong> Cuando está activado, el archivo JSON se cifra con AES-256-GCM y solo puede leerse importándolo de nuevo en Node Expense desde un dispositivo con acceso a su llavero de iCloud. <strong>Las exportaciones CSV y PDF nunca se cifran</strong> y siempre se escriben en formato legible, por lo que le recomendamos guardarlas y compartirlas en consecuencia.</p>
 
   <h2><span class="section-number">11</span>Eliminación de datos</h2>
   <ul>
     <li>Eliminar gastos personales individuales o todos desde Node Expense</li>
+    <li>Eliminar ingresos individuales desde Node Expense; al eliminar un ingreso recurrente deja de repetirse, y los ingresos ya registrados se conservan hasta que usted los elimine</li>
     <li>Abandonar o solicitar la eliminación de un grupo — los datos del grupo se eliminan de Firebase cuando todos los miembros están de acuerdo. Los gastos, liquidaciones, historial de actividad, comentarios y temporizadores de recordatorio del grupo se eliminan de nuestros servidores de inmediato (salvo los gastos que hayas elegido conservar, descritos más abajo). Después conservamos únicamente un pequeño registro de eliminación durante 90 días, para que los dispositivos que estaban sin conexión en ese momento puedan detectar la eliminación y limpiar su copia local; contiene el nombre del grupo, la lista de miembros (nombres visibles, identificadores, cualquier alias de pago y enlaces a fotos de perfil), y quién lo eliminó y cuándo. Ese registro se elimina automática y permanentemente a los 90 días.</li>
     <li>Cualquier miembro puede cambiar el nombre de una persona añadida por nombre o eliminarla, siempre que ningún gasto, parte o pago la mencione. Cuando alguien reclama a una persona añadida por nombre, su propia cuenta ocupa el lugar de esa persona en los gastos y pagos del grupo, y la entrada con solo el nombre se elimina.</li>
     <li>Los gastos de grupo marcados como "conservar al eliminar" permanecen localmente en su dispositivo; no se vuelven a cargar</li>
@@ -1586,7 +1604,7 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-11-17 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
   <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
@@ -1597,6 +1615,7 @@
       <div class="card-label">Fournies par vous</div>
       <ul>
         <li>Enregistrements de dépenses (montants, notes, catégories)</li>
+        <li>Enregistrements de revenus (montants, sources, notes), conservés uniquement sur votre appareil</li>
         <li>Données de groupe (nom, membres, paramètres)</li>
         <li>Noms des personnes que vous ajoutez à un groupe par leur nom, pour les amis qui n'utilisent pas Node Expense (visibles par tous les membres de ce groupe)</li>
         <li>Dépenses et remboursements de groupe</li>
@@ -1628,10 +1647,10 @@
 
   <h3>Abonnements &amp; paiements</h3>
   <p>Les achats et abonnements sont traités par Apple et RevenueCat. Nous ne recevons pas vos données de carte de crédit ni vos informations de paiement. RevenueCat stocke des identifiants d'abonné anonymes pour gérer votre statut d'abonnement, l'accès « Lifetime » et la période d'essai gratuite. Ces données sont conservées le temps nécessaire à la vérification de l'accès aux fonctionnalités PRO après une réinstallation.</p>
-  <p><strong>Accès au groupe.</strong> Pouvoir ajouter des dépenses à un groupe dépend de PRO, de l'essai gratuit ou d'une place couverte par un membre PRO ; l'app partage donc votre statut PRO avec les groupes dont vous êtes membre. Lorsque vous achetez PRO, créez un groupe ou ouvrez l'app, celle-ci envoie à nos serveurs le reçu signé de votre achat fourni par l'App Store ; nous y vérifions la signature d'Apple et conservons l'identifiant de transaction, le produit, la date d'expiration et l'éventuel remboursement, associés à l'identifiant d'app de chaque appareil qui détient l'achat. RevenueCat informe également nos serveurs lorsqu'un abonnement est renouvelé, prend fin ou est remboursé. Les dates de fin de PRO et d'essai gratuit de chaque membre sont ensuite enregistrées dans chaque groupe dont il fait partie, et les membres voient une mention PRO et qui est couvert. Nous ne recevons jamais votre nom, votre e-mail, votre compte Apple ni vos informations de paiement, et les reçus d'achat ne sont jamais montrés aux autres membres.</p>
+  <p><strong>Accès au groupe.</strong> Pouvoir ajouter des dépenses à un groupe dépend de PRO, de l'essai gratuit ou d'une place couverte par un membre PRO ; l'app partage donc votre statut PRO avec les groupes dont vous êtes membre. Lorsque vous achetez PRO, créez un groupe ou ouvrez l'app, celle-ci envoie à nos serveurs le reçu signé de votre achat fourni par l'App Store ; nous y vérifions la signature d'Apple et conservons l'identifiant de transaction, le produit, la date d'expiration et l'éventuel remboursement, associés à l'identifiant d'app de chaque appareil qui détient l'achat. Les appareils qui détiennent le même achat comptent comme un seul membre PRO. RevenueCat informe également nos serveurs lorsqu'un abonnement est renouvelé, prend fin ou est remboursé. Les dates de fin de PRO et d'essai gratuit de chaque membre sont ensuite enregistrées dans chaque groupe dont il fait partie, et les membres voient une mention PRO et qui est couvert. Nous ne recevons jamais votre nom, votre e-mail ni vos informations de paiement (nous ne recevons un identifiant de votre compte Apple que si vous utilisez Se connecter avec Apple, décrit ci-dessous), et les reçus d'achat ne sont jamais montrés aux autres membres.</p>
 
   <h3>Synchronisation de licence entre appareils (Se connecter avec Apple)</h3>
-  <p>Aucun compte ni aucune connexion n'est requis pour utiliser Node Expense. Si vous possédez PRO sur plusieurs appareils (iPhone, iPad ou Mac) connectés au même compte Apple, vous pouvez <strong>facultativement</strong> toucher <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre eux. Nous ne demandons <strong>ni nom ni e-mail</strong> — uniquement l'identifiant stable et propre à l'app fourni par Apple. Cet identifiant sert <strong>uniquement</strong> à associer votre licence PRO (ainsi que tout code promotionnel App Store que vous avez utilisé) au même profil d'abonné sur chaque appareil, via RevenueCat. Il n'est <strong>jamais</strong> utilisé à des fins de publicité, de suivi ou de profilage. Vous pouvez déconnecter un appareil à tout moment depuis l'écran Abonnement, et révoquer entièrement la connexion dans Réglages iOS/iPadOS (Réglages Système sur Mac) → votre compte Apple → Se connecter avec Apple.</p>
+  <p>Aucun compte ni aucune connexion n'est requis pour utiliser Node Expense. Si vous possédez PRO sur plusieurs appareils (iPhone, iPad ou Mac) connectés au même compte Apple, vous pouvez <strong>facultativement</strong> toucher <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre eux. Nous ne demandons <strong>ni nom ni e-mail</strong> — uniquement l'identifiant stable et propre à l'app fourni par Apple. Cet identifiant sert <strong>uniquement</strong> à associer votre licence PRO (ainsi que tout code promotionnel App Store que vous avez utilisé) au même profil d'abonné sur chaque appareil, via RevenueCat, et à faire compter un achat partagé par vos appareils comme un seul membre PRO dans les groupes. Pour cela, nos serveurs vérifient le jeton de connexion d'Apple et ne conservent qu'une empreinte à sens unique de l'identifiant, avec les identifiants d'app de vos appareils connectés (jusqu'à 10) ; déconnecter un appareil le retire de cette liste. Il n'est <strong>jamais</strong> utilisé à des fins de publicité, de suivi ou de profilage. Vous pouvez déconnecter un appareil à tout moment depuis l'écran Abonnement, et révoquer entièrement la connexion dans Réglages iOS/iPadOS (Réglages Système sur Mac) → votre compte Apple → Se connecter avec Apple.</p>
 
   <h2><span class="section-number">3</span>Services tiers</h2>
   <table class="service-table">
@@ -1643,7 +1662,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisation des données de groupe (dépenses, membres, remboursements, demandes de suppression) ; numéros gagnants publics de la loterie de la facture unifiée de Taïwan</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Stockage des photos de reçus pour les dépenses de groupe, des photos de profil utilisateur et des photos de groupe (JPEG compressé ; qui peut voir chacune est précisé à la section 9.2)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>Connexion anonyme (Aucune inscription requise). Les données locales sont stockées en toute sécurité dans l'appareil. L'identifiant anonyme est uniquement utilisé pour garantir la continuité de l'abonnement</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe, la livraison de notifications push, l'ajout et la revendication des personnes ajoutées par leur nom, et la vérification des achats App Store pour l'accès aux groupes</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe, la livraison de notifications push, l'ajout et la revendication des personnes ajoutées par leur nom, la vérification des achats App Store pour l'accès aux groupes et l'association des appareils connectés avec Apple</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notifications push pour l'activité de groupe</td></tr>
       <tr><td><strong>API Google Gemini (via Firebase AI Logic)</strong></td><td>OCR alimenté par IA et extraction de lignes d'articles à partir de photos de reçus scannées via Pick &amp; Pay (fonctionnalité d'abonnement PRO)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuration à distance de paramètres de fonctionnalités (par ex. plafonds mensuels de scans par compte) sans nécessiter de mise à jour de l'app</td></tr>
@@ -1704,20 +1723,21 @@
   <p>Vous pouvez désactiver Suivi de localisation à tout moment dans Node Expense et retirer l'accès à la localisation dans les Réglages iOS/iPadOS (Réglages Système sur Mac).</p>
 
   <h2><span class="section-number">8</span>Accès au calendrier</h2>
-  <p>Node Expense n'accède qu'aux calendriers que vous sélectionnez. L'accès au calendrier est utilisé uniquement pour afficher et synchroniser les entrées de dépenses en tant qu'événements de calendrier. Les données du calendrier ne sont jamais partagées avec des tiers.</p>
+  <p>Node Expense n'accède qu'aux calendriers que vous sélectionnez. L'accès au calendrier est utilisé uniquement pour afficher et synchroniser les entrées de dépenses et de revenus en tant qu'événements de calendrier. Les données du calendrier ne sont jamais partagées avec des tiers.</p>
 
   <h2><span class="section-number">9</span>Stockage, conservation &amp; chiffrement des données</h2>
   <h3>9.1 Stockage sur l'appareil</h3>
   <p>Les données suivantes sont stockées sur votre appareil :</p>
   <ul>
     <li>Enregistrements de dépenses personnelles (hors groupe)</li>
+    <li>Enregistrements de revenus (les revenus sont toujours personnels : ils ne sont jamais ajoutés à un groupe ni envoyés en ligne)</li>
     <li>Numéros de facture électronique taïwanaise joints aux dépenses (utilisés uniquement pour la vérification facultative de la loterie)</li>
     <li>Photos de reçus des dépenses personnelles (fonctionnalité d'abonnement PRO ; jamais téléversées vers un service cloud)</li>
     <li>Paramètres et préférences de l'app</li>
     <li>Copies locales des données de groupe pour un accès hors ligne</li>
     <li>Dépenses de groupe en cache pour une consultation hors ligne</li>
   </ul>
-  <p>Les données de dépenses personnelles — y compris les photos de reçus jointes — ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. La seule exception concerne les recherches de lieux décrites à la section 7. Les dépenses des groupes supprimés ne sont conservées localement avec un marqueur « groupe supprimé » que si la personne ayant supprimé le groupe a choisi de conserver les enregistrements. Si elle a choisi de les supprimer, ces dépenses sont également effacées de votre appareil.</p>
+  <p>Les données de dépenses et de revenus personnels — y compris les photos de reçus jointes — ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. La seule exception concerne les recherches de lieux décrites à la section 7. Les dépenses des groupes supprimés ne sont conservées localement avec un marqueur « groupe supprimé » que si la personne ayant supprimé le groupe a choisi de conserver les enregistrements. Si elle a choisi de les supprimer, ces dépenses sont également effacées de votre appareil.</p>
 
   <h3>9.2 Stockage cloud pour les fonctionnalités de groupe</h3>
   <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore (et les photos avec Firebase Storage) :</p>
@@ -1731,7 +1751,7 @@
     <li>Remboursements de groupe (enregistrements de paiement entre membres)</li>
     <li>Demandes de suppression de groupe et votes des membres</li>
     <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
-    <li>Accès au groupe : les dates de fin de PRO et d'essai gratuit de chaque membre, enregistrées dans chaque groupe dont il fait partie ; et les reçus d'achat App Store (identifiant de transaction, produit, date d'expiration, remboursement éventuel et identifiants d'app des appareils qui détiennent l'achat), jamais montrés aux autres membres (voir section 2)</li>
+    <li>Accès au groupe : les dates de fin de PRO et d'essai gratuit de chaque membre, enregistrées dans chaque groupe dont il fait partie ; et les reçus d'achat App Store (identifiant de transaction, produit, date d'expiration, remboursement éventuel et identifiants d'app des appareils qui détiennent l'achat), jamais montrés aux autres membres (voir section 2) ; et, uniquement si vous utilisez Se connecter avec Apple, une empreinte à sens unique de l'identifiant Apple avec les identifiants d'app de vos appareils connectés</li>
     <li>Jetons de notification push (FCM), avec vos réglages de notification (les types de notifications que vous souhaitez recevoir et les groupes que vous avez désactivés) et le nombre affiché sur la pastille de non-lus</li>
     <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App et PayPal.me ; un numéro de téléphone Apple Cash, qui ouvre Messages et non une application de paiement ; ainsi qu'un numéro de téléphone ou e-mail Zelle, un identifiant LINE et un identifiant WeChat, qui n'ouvrent rien du tout et sont simplement affichés aux membres du groupe pour être copiés)</li>
     <li><strong>Suivi des scans Pick &amp; Pay</strong> — un petit enregistrement par compte du nombre de scans que vous avez effectués ce mois-ci et si votre essai gratuit a été utilisé. Sert à appliquer les plafonds mensuels par compte et à vous montrer vos scans restants dans les Réglages. Ne contient aucune information sur le contenu d'un reçu.</li>
@@ -1744,18 +1764,19 @@
   <h3>9.3 Chiffrement &amp; sauvegardes</h3>
   <ul>
     <li>Les utilisateurs ayant accès aux fonctionnalités peuvent activer le chiffrement AES-256-GCM pour les fichiers de sauvegarde. Ce réglage s'applique au fichier de sauvegarde créé avant un nettoyage, à l'exportation proposée avant la suppression d'un groupe inactif et au fichier JSON produit par la Migration des données ; les exportations CSV et PDF ne sont jamais chiffrées (voir la section 10)</li>
-    <li>Vous contrôlez la durée de conservation des enregistrements de dépenses (toujours ou un nombre limité d'années). <strong>La conservation ne s'applique qu'à vos propres dépenses personnelles.</strong> Elle ne supprime jamais les dépenses de groupe, ni les dépenses conservées d'un groupe supprimé ou que vous avez quitté ; celles-ci restent sur votre appareil avec leur répartition d'origine. Les dépenses récurrentes encore actives sont conservées avec leurs entrées passées, afin qu'elles continuent d'être enregistrées automatiquement</li>
+    <li>Vous contrôlez la durée de conservation des enregistrements de dépenses et de revenus (toujours ou un nombre limité d'années). <strong>La conservation ne s'applique qu'à vos propres dépenses et revenus personnels.</strong> Elle ne supprime jamais les dépenses de groupe, ni les dépenses conservées d'un groupe supprimé ou que vous avez quitté ; celles-ci restent sur votre appareil avec leur répartition d'origine. Les dépenses et revenus récurrents encore actifs sont conservés avec leurs entrées passées, afin qu'ils continuent d'être enregistrés automatiquement</li>
     <li>Les fichiers de sauvegarde sont exportés vers un emplacement de votre choix (iCloud Drive, Sur mon iPhone ou d'autres emplacements de fichiers iOS)</li>
     <li>Les clés de chiffrement des sauvegardes sont stockées exclusivement dans votre trousseau iCloud, ne sont jamais transmises à nos serveurs et ne sont pas accessibles par nous en tant que développeurs</li>
   </ul>
-  <p><strong>Périmètre des sauvegardes :</strong> Les sauvegardes et exportations couvrent les données présentes sur votre appareil : vos enregistrements de dépenses personnelles, ainsi que la copie locale que votre appareil conserve des dépenses de groupe et des informations des groupes auxquels vous avez accès. Les sauvegardes JSON incluent aussi vos catégories personnalisées, vos budgets et vos étiquettes de lieux. Aucune donnée n'est récupérée depuis Firebase Firestore au moment de l'exportation ; ce qui n'a pas encore été synchronisé sur votre appareil ne figure donc pas dans le fichier. Une exportation ne modifie pas la copie conservée dans Firestore, qui reste accessible tant que le groupe existe et n'a pas été supprimé.</p>
+  <p><strong>Périmètre des sauvegardes :</strong> Les sauvegardes et exportations couvrent les données présentes sur votre appareil : vos enregistrements de dépenses et de revenus personnels, ainsi que la copie locale que votre appareil conserve des dépenses de groupe et des informations des groupes auxquels vous avez accès. Les sauvegardes JSON incluent aussi vos catégories et sources de revenus personnalisées, vos budgets et vos étiquettes de lieux. Aucune donnée n'est récupérée depuis Firebase Firestore au moment de l'exportation ; ce qui n'a pas encore été synchronisé sur votre appareil ne figure donc pas dans le fichier. Une exportation ne modifie pas la copie conservée dans Firestore, qui reste accessible tant que le groupe existe et n'a pas été supprimé.</p>
 
   <h2><span class="section-number">10</span>Migration des données</h2>
-  <p>Les utilisateurs ayant accès aux fonctionnalités (abonnement PRO ou essai gratuit actif) peuvent exporter leurs données en JSON, CSV ou PDF, et importer des données au format JSON. Ils peuvent aussi importer les dépenses et paiements d'un groupe depuis un export Splitwise (un fichier CSV) : le fichier est lu sur votre appareil, rien n'est envoyé à Splitwise, et ce que vous importez, y compris les personnes ajoutées par leur nom, est enregistré dans le groupe comme des dépenses saisies à la main. Node Expense n'a pas accès à vos fichiers exportés. Les fichiers exportés sont enregistrés à un emplacement de votre choix. Les exportations comprennent les enregistrements de dépenses personnelles stockés localement et les données de groupe en cache ; elles ne récupèrent pas de données en temps réel directement depuis Firebase Firestore. <strong>Les exportations JSON suivent le réglage « Chiffrer les fichiers de sauvegarde » de la Rétention des données.</strong> Lorsqu'il est activé, le fichier JSON est chiffré en AES-256-GCM et ne peut être lu qu'en le réimportant dans Node Expense depuis un appareil ayant accès à votre trousseau iCloud. <strong>Les exportations CSV et PDF ne sont jamais chiffrées</strong> et sont toujours écrites sous une forme lisible. Conservez-les et partagez-les en conséquence.</p>
+  <p>Les utilisateurs ayant accès aux fonctionnalités (abonnement PRO ou essai gratuit actif) peuvent exporter leurs données en JSON, CSV ou PDF, et importer des données au format JSON. Ils peuvent aussi importer les dépenses et paiements d'un groupe depuis un export Splitwise (un fichier CSV) : le fichier est lu sur votre appareil, rien n'est envoyé à Splitwise, et ce que vous importez, y compris les personnes ajoutées par leur nom, est enregistré dans le groupe comme des dépenses saisies à la main. Node Expense n'a pas accès à vos fichiers exportés. Les fichiers exportés sont enregistrés à un emplacement de votre choix. Les exportations comprennent les enregistrements de dépenses et de revenus personnels stockés localement et les données de groupe en cache ; elles ne récupèrent pas de données en temps réel directement depuis Firebase Firestore. <strong>Les exportations JSON suivent le réglage « Chiffrer les fichiers de sauvegarde » de la Rétention des données.</strong> Lorsqu'il est activé, le fichier JSON est chiffré en AES-256-GCM et ne peut être lu qu'en le réimportant dans Node Expense depuis un appareil ayant accès à votre trousseau iCloud. <strong>Les exportations CSV et PDF ne sont jamais chiffrées</strong> et sont toujours écrites sous une forme lisible. Conservez-les et partagez-les en conséquence.</p>
 
   <h2><span class="section-number">11</span>Suppression des données</h2>
   <ul>
     <li>Supprimer des dépenses personnelles individuelles ou toutes depuis Node Expense</li>
+    <li>Supprimer des revenus individuels depuis Node Expense ; supprimer un revenu récurrent arrête sa répétition, et les revenus déjà enregistrés sont conservés jusqu'à ce que vous les supprimiez</li>
     <li>Quitter ou demander la suppression d'un groupe — les données du groupe sont supprimées de Firebase lorsque tous les membres sont d'accord. Les dépenses, règlements, historique d'activité, commentaires et minuteurs de rappel du groupe sont supprimés de nos serveurs immédiatement (à l'exception des dépenses que vous avez choisi de conserver, décrites ci-dessous). Nous conservons ensuite uniquement un petit enregistrement de suppression pendant 90 jours, afin que les appareils hors ligne à ce moment-là puissent constater la suppression et nettoyer leur copie locale ; il contient le nom du groupe, la liste des membres (noms affichés, identifiants, éventuels identifiants de paiement et liens vers les photos de profil), ainsi que l'auteur et la date de la suppression. Cet enregistrement est supprimé automatiquement et définitivement au bout de 90 jours.</li>
     <li>Tout membre peut renommer ou retirer une personne ajoutée par son nom, tant qu'aucune dépense, part ou paiement ne la mentionne. Lorsque quelqu'un revendique une personne ajoutée par son nom, son propre compte prend la place de cette personne dans les dépenses et paiements du groupe, et l'entrée composée du seul nom est supprimée.</li>
     <li>Les dépenses de groupe marquées comme « conserver lors de la suppression » restent localement sur votre appareil ; elles ne sont pas retéléversées</li>
@@ -1796,7 +1817,7 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-11-17 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
 
   <h2><span class="section-number">1</span>개요</h2>
   <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
@@ -1807,6 +1828,7 @@
       <div class="card-label">귀하가 제공하는 정보</div>
       <ul>
         <li>지출 기록 (금액, 메모, 카테고리)</li>
+        <li>수입 기록 (금액, 수입원, 메모), 귀하의 기기에만 저장됨</li>
         <li>그룹 데이터 (이름, 멤버, 설정)</li>
         <li>이름으로 그룹에 추가한 사람의 이름 (Node Expense를 사용하지 않는 친구용, 해당 그룹의 모든 멤버에게 표시됨)</li>
         <li>그룹 지출 및 정산 내역</li>
@@ -1838,10 +1860,10 @@
 
   <h3>구독 및 결제</h3>
   <p>구매 및 구독은 Apple과 RevenueCat을 통해 처리됩니다. 당사는 귀하의 신용카드나 결제 정보를 받지 않습니다. RevenueCat은 구독 상태, '평생' 접근 권한 및 무료 체험 기간을 관리하기 위해 익명 구독자 식별자를 저장합니다. 해당 데이터는 재설치 후 PRO 기능 접근 확인에 필요한 기간 동안 보관됩니다.</p>
-  <p><strong>그룹 이용 권한.</strong> 그룹에 지출을 추가할 수 있는지는 PRO, 무료 체험 또는 PRO 멤버가 제공하는 자리에 따라 달라지므로, 앱은 귀하의 PRO 상태를 귀하가 속한 그룹과 공유합니다. 귀하가 PRO를 구매하거나 그룹을 만들거나 앱을 열면, 앱은 App Store가 서명한 구매 기록을 당사 서버로 보냅니다. 당사는 Apple의 서명을 확인한 뒤 해당 구매의 거래 식별자, 상품, 만료일, 환불 여부를 구매를 보유한 각 기기의 앱 식별자와 연결하여 보관합니다. 또한 RevenueCat은 구독이 갱신, 종료 또는 환불되면 당사 서버에 알립니다. 각 멤버의 PRO 및 무료 체험 종료일은 그 멤버가 속한 모든 그룹에 저장되며, 멤버들은 PRO 표시와 누가 누구의 자리를 이용하는지 볼 수 있습니다. 당사는 귀하의 이름, 이메일, Apple 계정 또는 결제 정보를 절대 받지 않으며, 구매 기록은 다른 멤버에게 표시되지 않습니다.</p>
+  <p><strong>그룹 이용 권한.</strong> 그룹에 지출을 추가할 수 있는지는 PRO, 무료 체험 또는 PRO 멤버가 제공하는 자리에 따라 달라지므로, 앱은 귀하의 PRO 상태를 귀하가 속한 그룹과 공유합니다. 귀하가 PRO를 구매하거나 그룹을 만들거나 앱을 열면, 앱은 App Store가 서명한 구매 기록을 당사 서버로 보냅니다. 당사는 Apple의 서명을 확인한 뒤 해당 구매의 거래 식별자, 상품, 만료일, 환불 여부를 구매를 보유한 각 기기의 앱 식별자와 연결하여 보관합니다. 같은 구매를 보유한 기기는 PRO 멤버 한 명으로 계산됩니다. 또한 RevenueCat은 구독이 갱신, 종료 또는 환불되면 당사 서버에 알립니다. 각 멤버의 PRO 및 무료 체험 종료일은 그 멤버가 속한 모든 그룹에 저장되며, 멤버들은 PRO 표시와 누가 누구의 자리를 이용하는지 볼 수 있습니다. 당사는 귀하의 이름, 이메일 또는 결제 정보를 절대 받지 않으며(Apple 계정의 식별자는 아래에 설명된 Apple로 로그인을 사용하는 경우에만 받습니다), 구매 기록은 다른 멤버에게 표시되지 않습니다.</p>
 
   <h3>기기 간 라이선스 동기화 (Apple로 로그인)</h3>
-  <p>Node Expense 사용에는 <strong>계정이나 로그인이 필요하지 않습니다</strong>. 동일한 Apple 계정으로 로그인한 여러 기기(iPhone, iPad, Mac)에서 PRO를 보유하고 있다면, 구독 화면에서 <strong>선택적으로</strong> <strong>Apple로 로그인</strong>을 탭하여 PRO 라이선스를 기기 간에 동기화할 수 있습니다. 당사는 <strong>이름이나 이메일을 요청하지 않으며</strong>, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 RevenueCat을 통해 각 기기에서 귀하의 PRO 라이선스(및 귀하가 사용한 App Store 오퍼 코드)를 동일한 구독자 프로필에 대조하는 용도로만 사용되며, 광고·추적·프로파일링에는 <strong>절대</strong> 사용되지 않습니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있고, 「iOS/iPadOS 설정(Mac에서는 시스템 설정) → 귀하의 Apple 계정 → Apple로 로그인」에서 로그인을 완전히 취소할 수 있습니다.</p>
+  <p>Node Expense 사용에는 <strong>계정이나 로그인이 필요하지 않습니다</strong>. 동일한 Apple 계정으로 로그인한 여러 기기(iPhone, iPad, Mac)에서 PRO를 보유하고 있다면, 구독 화면에서 <strong>선택적으로</strong> <strong>Apple로 로그인</strong>을 탭하여 PRO 라이선스를 기기 간에 동기화할 수 있습니다. 당사는 <strong>이름이나 이메일을 요청하지 않으며</strong>, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 RevenueCat을 통해 각 기기에서 귀하의 PRO 라이선스(및 귀하가 사용한 App Store 오퍼 코드)를 동일한 구독자 프로필에 대조하고, 귀하의 기기들이 공유하는 구매를 그룹에서 PRO 멤버 한 명으로 계산하는 용도로만 사용되며, 광고·추적·프로파일링에는 <strong>절대</strong> 사용되지 않습니다. 이를 위해 당사 서버는 Apple의 로그인 토큰을 확인하고, 식별자의 단방향 해시와 로그인한 기기(최대 10대)의 앱 식별자만 보관합니다. 기기 연결을 해제하면 해당 목록에서 삭제됩니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있고, 「iOS/iPadOS 설정(Mac에서는 시스템 설정) → 귀하의 Apple 계정 → Apple로 로그인」에서 로그인을 완전히 취소할 수 있습니다.</p>
 
   <h2><span class="section-number">3</span>제3자 서비스</h2>
   <table class="service-table">
@@ -1853,7 +1875,7 @@
       <tr><td><strong>Firebase Firestore</strong></td><td>그룹 데이터 동기화 (지출, 멤버, 정산, 삭제 요청); 공개된 대만 통일발표 복권 당첨 번호</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>그룹 지출의 영수증 사진, 사용자 프로필 사진 및 그룹 사진 저장 (압축 JPEG, 각각을 볼 수 있는 사람은 제9.2조 참조)</td></tr>
       <tr><td><strong>Firebase Authentication</strong></td><td>사용자의 로그인이나 계정 생성을 요구하지 않고 구독 연속성을 유지하기 위한 익명 사용자 식별</td></tr>
-      <tr><td><strong>Firebase Cloud Functions</strong></td><td>그룹 삭제, 푸시 알림 발송, 이름으로 추가된 사람의 추가 및 본인 확인, 그룹 이용 권한을 위한 App Store 구매 확인 등 백그라운드 작업</td></tr>
+      <tr><td><strong>Firebase Cloud Functions</strong></td><td>그룹 삭제, 푸시 알림 발송, 이름으로 추가된 사람의 추가 및 본인 확인, 그룹 이용 권한을 위한 App Store 구매 확인, Apple로 로그인한 기기 연결 등 백그라운드 작업</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>그룹 활동에 대한 푸시 알림</td></tr>
       <tr><td><strong>Google Gemini API (Firebase AI Logic 경유)</strong></td><td>Pick &amp; Pay 로 스캔한 영수증 사진의 AI 기반 OCR 및 항목 추출 (PRO 구독 기능)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>앱 업데이트 없이 기능 매개변수를 원격으로 구성 (예: 계정당 월간 스캔 한도)</td></tr>
@@ -1914,20 +1936,21 @@
   <p>위치 추적은 Node Expense에서 언제든지 끌 수 있으며, iOS/iPadOS 설정(Mac에서는 시스템 설정)에서 위치 접근 권한을 철회할 수도 있습니다.</p>
 
   <h2><span class="section-number">8</span>캘린더 접근</h2>
-  <p>Node Expense는 귀하가 선택한 캘린더에만 접근합니다. 캘린더 접근은 지출 항목을 캘린더 이벤트로 표시하고 동기화하는 데만 사용됩니다. 캘린더 데이터는 제3자와 절대 공유되지 않습니다.</p>
+  <p>Node Expense는 귀하가 선택한 캘린더에만 접근합니다. 캘린더 접근은 지출 및 수입 항목을 캘린더 이벤트로 표시하고 동기화하는 데만 사용됩니다. 캘린더 데이터는 제3자와 절대 공유되지 않습니다.</p>
 
   <h2><span class="section-number">9</span>데이터 저장, 보관 및 암호화</h2>
   <h3>9.1 기기 저장</h3>
   <p>다음 데이터가 기기에 저장되어 있습니다:</p>
   <ul>
     <li>개인(비그룹) 지출 기록</li>
+    <li>수입 기록 (수입은 항상 개인 기록이며 그룹에 추가되거나 업로드되지 않습니다)</li>
     <li>지출에 첨부된 대만 전자영수증 번호(선택적 통일발표 복권 대조에만 사용)</li>
     <li>개인 지출의 영수증 사진 (PRO 구독 기능; 어떠한 클라우드 서비스에도 업로드되지 않음)</li>
     <li>앱 설정 및 환경설정</li>
     <li>오프라인 접근을 위한 그룹 데이터 로컬 복사본</li>
     <li>오프라인 조회를 위해 캐시된 그룹 지출</li>
   </ul>
-  <p>개인 지출 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 유일한 예외는 제7조에 설명된 장소 검색입니다. 삭제된 그룹의 지출은 그룹을 삭제한 사람이 기록 보관을 선택한 경우에만 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다. 기록 삭제를 선택한 경우 해당 지출은 귀하의 기기에서도 삭제됩니다.</p>
+  <p>개인 지출 및 수입 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 유일한 예외는 제7조에 설명된 장소 검색입니다. 삭제된 그룹의 지출은 그룹을 삭제한 사람이 기록 보관을 선택한 경우에만 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다. 기록 삭제를 선택한 경우 해당 지출은 귀하의 기기에서도 삭제됩니다.</p>
 
   <h3>9.2 그룹 기능을 위한 클라우드 저장</h3>
   <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다(사진은 Firebase Storage):</p>
@@ -1941,7 +1964,7 @@
     <li>그룹 정산 (멤버 간 결제 기록)</li>
     <li>그룹 삭제 요청 및 멤버 투표</li>
     <li>체험 시작일 (재설치 후 복구용)</li>
-    <li>그룹 이용 권한: 각 멤버의 PRO 및 무료 체험 종료일 (속한 모든 그룹에 저장) 및 App Store 구매 기록 (거래 식별자, 상품, 만료일, 환불 여부, 구매를 보유한 기기의 앱 식별자). 구매 기록은 다른 멤버에게 표시되지 않습니다 (2항 참조)</li>
+    <li>그룹 이용 권한: 각 멤버의 PRO 및 무료 체험 종료일 (속한 모든 그룹에 저장) 및 App Store 구매 기록 (거래 식별자, 상품, 만료일, 환불 여부, 구매를 보유한 기기의 앱 식별자). 구매 기록은 다른 멤버에게 표시되지 않습니다 (2항 참조). Apple로 로그인을 사용하는 경우에만, Apple 식별자의 단방향 해시와 로그인한 기기의 앱 식별자</li>
     <li>푸시 알림 토큰 (FCM)과 알림 설정(받을 알림 유형, 알림을 끈 그룹) 및 읽지 않은 배지 수</li>
     <li>정산 딥링크를 위한 선택적 결제 식별자 (Venmo, Cash App, PayPal.me 사용자명, 결제 앱이 아닌 메시지를 여는 Apple Cash 전화번호, 그리고 아무것도 열지 않고 그룹 멤버가 복사할 수 있도록 표시되기만 하는 Zelle 전화번호 또는 이메일, LINE ID, WeChat ID)</li>
     <li><strong>Pick &amp; Pay 스캔 추적</strong> — 이번 달 수행한 스캔 횟수와 체험 무료 사용 여부를 기록하는 계정별 소규모 기록입니다. 계정당 월간 한도를 적용하고 설정에 남은 스캔 횟수를 표시하는 데 사용됩니다. 영수증 내용에 관한 어떤 정보도 포함하지 않습니다.</li>
@@ -1954,18 +1977,19 @@
   <h3>9.3 암호화 및 백업</h3>
   <ul>
     <li>기능 접근 권한이 있는 사용자는 백업 파일에 AES-256-GCM 암호화를 적용할 수 있습니다. 이 설정은 정리 전에 생성되는 백업 파일, 비활성 그룹을 정리하기 전에 제공되는 내보내기 파일, 그리고 데이터 마이그레이션으로 생성되는 JSON 파일에 적용됩니다. CSV와 PDF 내보내기 파일은 암호화되지 않습니다 (제10조 참조)</li>
-    <li>지출 기록 보관 기간을 직접 제어할 수 있습니다 (전체 또는 제한된 연수). <strong>보존 기간은 본인의 개인 지출에만 적용됩니다.</strong> 그룹 지출은 보존 기간으로 삭제되지 않으며, 삭제된 그룹이나 탈퇴한 그룹에서 보관된 지출도 마찬가지로 원래의 분담 내역과 함께 기기에 남아 있습니다. 아직 활성 상태인 정기 지출은 지난 항목과 함께 보관되어 계속 자동으로 기록됩니다</li>
+    <li>지출 및 수입 기록 보관 기간을 직접 제어할 수 있습니다 (전체 또는 제한된 연수). <strong>보존 기간은 본인의 개인 지출과 수입에만 적용됩니다.</strong> 그룹 지출은 보존 기간으로 삭제되지 않으며, 삭제된 그룹이나 탈퇴한 그룹에서 보관된 지출도 마찬가지로 원래의 분담 내역과 함께 기기에 남아 있습니다. 아직 활성 상태인 정기 지출과 정기 수입은 지난 항목과 함께 보관되어 계속 자동으로 기록됩니다</li>
     <li>백업 파일은 귀하가 선택한 위치로 내보내집니다 (iCloud Drive, 내 iPhone 또는 기타 iOS 파일 위치)</li>
     <li>백업 암호화 키는 귀하의 iCloud 키체인에만 저장되며, 당사 서버로 전송되거나 개발자가 접근할 수 없습니다</li>
   </ul>
-  <p><strong>백업 범위:</strong> 백업 및 내보내기는 기기에 저장된 데이터, 즉 개인 지출 기록과 함께 접근 권한이 있는 그룹 지출 및 그룹 정보에 대해 기기가 보관 중인 로컬 사본을 포함합니다. JSON 백업에는 사용자 정의 카테고리, 예산, 장소 레이블도 포함됩니다. 내보내는 시점에 Firebase Firestore에서 데이터를 가져오지는 않으므로, 아직 기기에 동기화되지 않은 내용은 파일에 포함되지 않습니다. 내보내기를 하더라도 Firestore에 저장된 사본은 변경되지 않으며, 그룹이 존재하고 삭제되지 않은 한 계속 접근할 수 있습니다.</p>
+  <p><strong>백업 범위:</strong> 백업 및 내보내기는 기기에 저장된 데이터, 즉 개인 지출 및 수입 기록과 함께 접근 권한이 있는 그룹 지출 및 그룹 정보에 대해 기기가 보관 중인 로컬 사본을 포함합니다. JSON 백업에는 사용자 정의 카테고리, 사용자 정의 수입원, 예산, 장소 레이블도 포함됩니다. 내보내는 시점에 Firebase Firestore에서 데이터를 가져오지는 않으므로, 아직 기기에 동기화되지 않은 내용은 파일에 포함되지 않습니다. 내보내기를 하더라도 Firestore에 저장된 사본은 변경되지 않으며, 그룹이 존재하고 삭제되지 않은 한 계속 접근할 수 있습니다.</p>
 
   <h2><span class="section-number">10</span>데이터 마이그레이션</h2>
-  <p>기능 접근 권한(PRO 구독 또는 활성 무료 체험)이 있는 사용자는 JSON, CSV 또는 PDF 형식으로 데이터를 내보내고, JSON 형식으로 데이터를 가져올 수 있습니다. 또한 Splitwise 내보내기 파일(CSV 파일)에서 그룹의 지출과 송금 내역을 가져올 수 있습니다. 파일은 귀하의 기기에서 읽히고 Splitwise로는 아무것도 전송되지 않으며, 가져온 내용(이름으로 추가된 사람 포함)은 직접 입력한 지출과 마찬가지로 그룹에 저장됩니다. Node Expense는 내보낸 파일에 접근할 수 없습니다. 내보낸 파일은 귀하가 선택한 위치에 저장됩니다. 내보내기에는 로컬에 저장된 개인 지출 기록과 캐시된 그룹 데이터가 포함되며, Firebase Firestore에서 실시간 데이터를 직접 가져오지 않습니다. <strong>JSON 내보내기 파일은 데이터 보존의 &lsquo;백업 파일 암호화&rsquo; 설정을 따릅니다.</strong> 이 설정이 켜져 있으면 JSON 파일은 AES-256-GCM으로 암호화되며, iCloud 키체인에 접근할 수 있는 기기에서 Node Expense로 가져와야만 읽을 수 있습니다. <strong>CSV와 PDF 내보내기 파일은 암호화되지 않으며</strong> 항상 읽을 수 있는 형태로 저장되므로 보관과 공유에 유의하시기 바랍니다.</p>
+  <p>기능 접근 권한(PRO 구독 또는 활성 무료 체험)이 있는 사용자는 JSON, CSV 또는 PDF 형식으로 데이터를 내보내고, JSON 형식으로 데이터를 가져올 수 있습니다. 또한 Splitwise 내보내기 파일(CSV 파일)에서 그룹의 지출과 송금 내역을 가져올 수 있습니다. 파일은 귀하의 기기에서 읽히고 Splitwise로는 아무것도 전송되지 않으며, 가져온 내용(이름으로 추가된 사람 포함)은 직접 입력한 지출과 마찬가지로 그룹에 저장됩니다. Node Expense는 내보낸 파일에 접근할 수 없습니다. 내보낸 파일은 귀하가 선택한 위치에 저장됩니다. 내보내기에는 로컬에 저장된 개인 지출 및 수입 기록과 캐시된 그룹 데이터가 포함되며, Firebase Firestore에서 실시간 데이터를 직접 가져오지 않습니다. <strong>JSON 내보내기 파일은 데이터 보존의 &lsquo;백업 파일 암호화&rsquo; 설정을 따릅니다.</strong> 이 설정이 켜져 있으면 JSON 파일은 AES-256-GCM으로 암호화되며, iCloud 키체인에 접근할 수 있는 기기에서 Node Expense로 가져와야만 읽을 수 있습니다. <strong>CSV와 PDF 내보내기 파일은 암호화되지 않으며</strong> 항상 읽을 수 있는 형태로 저장되므로 보관과 공유에 유의하시기 바랍니다.</p>
 
   <h2><span class="section-number">11</span>데이터 삭제</h2>
   <ul>
     <li>Node Expense에서 개별 개인 지출 또는 모든 지출 삭제</li>
+    <li>Node Expense에서 개별 수입 삭제. 정기 수입을 삭제하면 반복이 멈추며, 이미 기록된 수입은 직접 삭제할 때까지 남아 있습니다</li>
     <li>그룹 탈퇴 또는 삭제 요청 — 모든 멤버가 동의하면 그룹 데이터가 Firebase에서 삭제됩니다. 그룹의 지출, 정산, 활동 기록, 댓글 및 알림 타이머는 당사 서버에서 즉시 삭제됩니다(보관을 선택한 지출은 제외하며, 아래에서 설명합니다). 이후 90일 동안은 당시 오프라인 상태였던 기기가 삭제 사실을 확인하고 로컬 사본을 정리할 수 있도록 작은 삭제 기록만 보관합니다. 이 기록에는 그룹 이름, 멤버 목록(표시 이름, 식별자, 등록된 결제 계정, 프로필 사진 링크), 삭제한 사람과 삭제 시각이 포함됩니다. 이 기록은 90일 후 자동으로 영구 삭제됩니다.</li>
     <li>이름으로 추가된 사람은 그 사람이 포함된 지출, 분담 또는 송금이 없는 한 어떤 멤버든 이름을 바꾸거나 제거할 수 있습니다. 누군가 이름으로 추가된 사람을 본인으로 확인하면, 그 사람의 계정이 그룹의 지출과 송금에서 해당 이름의 자리를 대신하고, 이름만 있던 항목은 제거됩니다.</li>
     <li>'삭제 시 보관'으로 표시된 그룹 지출은 기기에 로컬로 남으며, 재업로드되지 않음</li>
