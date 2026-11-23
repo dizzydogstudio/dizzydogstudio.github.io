@@ -332,10 +332,10 @@
 
 <!-- ========== ENGLISH ========== -->
 <div class="lang-content active" id="lang-en">
-  <div class="meta"><strong>Last Updated:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Last Updated:</strong> 2026-11-23 &nbsp;·&nbsp; <strong>Platform:</strong> iOS, iPadOS, macOS, web</div>
 
   <h2><span class="section-number">1</span>Overview</h2>
-  <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense.</p>
+  <p>Node Expense: Track Together ("we", "our") respects your privacy. This Privacy Policy explains what data Node Expense collects, how it is used, and what choices you have when using Node Expense. This policy also covers the Node Expense website for group members (the "web companion", at expense-tracker-70311.web.app), which lets people without an iPhone, iPad or Mac join a group and view its expenses and balances in a web browser.</p>
 
   <h2><span class="section-number">2</span>Data We Collect</h2>
   <div class="data-grid">
@@ -349,6 +349,7 @@
         <li>Group expenses and settlements</li>
         <li>Comments you post on group expenses</li>
         <li>Display name</li>
+        <li>Web companion sign-in: the email address of the Google account or the email address you sign in with (and, for Google, the name and profile picture Google provides). Used only to sign you in; your email is never shown to other members</li>
         <li>Optional payment handles (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Optional receipt photos attached to expenses (PRO subscription feature)</li>
         <li>Receipt images scanned for itemised splitting via Pick &amp; Pay (sent to Google's Gemini API for AI processing; PRO subscription feature)</li>
@@ -365,6 +366,7 @@
       <ul>
         <li>Usage analytics (Firebase), tied to a random identifier the app creates for you — never your name or email</li>
         <li>Anonymous device identifier</li>
+        <li>On the web companion: your browser's language, and the fact that you use the website (members of your groups see a <strong>Web</strong> label next to your name)</li>
         <li>Crash logs and diagnostics</li>
         <li>device & app performance info</li>
         <li>Push notification tokens (when enabled)</li>
@@ -378,7 +380,14 @@
   <p><strong>Group access.</strong> Whether you can add expenses to a group depends on PRO, the free trial, or a spot covered by a PRO member, so the app shares your PRO status with the groups you belong to. When you buy PRO, create a group or open the app, it sends the App Store's signed record of your purchase to our servers, where we check Apple's signature and keep the purchase's transaction identifier, product, expiry date and whether it was refunded, linked to the app identifier of each device that holds it. Devices that hold the same purchase count as one PRO member. RevenueCat also tells our servers when a subscription renews, ends or is refunded. Each member's PRO and free-trial end dates are then saved in every group they belong to, and members see a PRO label and who is covered. We never receive your name, email or payment details (we receive an identifier for your Apple Account only if you use Sign in with Apple, described below), and purchase records are never shown to other members.</p>
 
   <h3>Cross-Device License Sync (Sign in with Apple)</h3>
-  <p>No account or sign-in is required to use Node Expense. If you own PRO on more than one device (iPhone, iPad, or Mac) signed in to the same Apple Account, you can <strong>optionally</strong> tap <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across them. We request <strong>no name and no email</strong> — only the stable, app-specific identifier Apple provides. That identifier is used <strong>solely</strong> to match your PRO license (and any App Store offer codes you have redeemed) to the same subscriber profile on each device, through RevenueCat, and to count a purchase your devices share as one PRO member in groups. For that, our servers check Apple's sign-in token and keep only a one-way hash of the identifier, together with the app identifiers of your signed-in devices (up to 10); disconnecting a device removes it from that list. It is <strong>never</strong> used for advertising, tracking, or profiling. You can disconnect a device at any time from the Subscription screen, and you can revoke the sign-in entirely in iOS/iPadOS Settings (System Settings on Mac) → your Apple Account → Sign in with Apple.</p>
+  <p>No account or sign-in is required to use the Node Expense app. If you own PRO on more than one device (iPhone, iPad, or Mac) signed in to the same Apple Account, you can <strong>optionally</strong> tap <strong>Sign in with Apple</strong> on the Subscription screen to sync your PRO license across them. We request <strong>no name and no email</strong> — only the stable, app-specific identifier Apple provides. That identifier is used <strong>solely</strong> to match your PRO license (and any App Store offer codes you have redeemed) to the same subscriber profile on each device, through RevenueCat, and to count a purchase your devices share as one PRO member in groups. For that, our servers check Apple's sign-in token and keep only a one-way hash of the identifier, together with the app identifiers of your signed-in devices (up to 10); disconnecting a device removes it from that list. It is <strong>never</strong> used for advertising, tracking, or profiling. You can disconnect a device at any time from the Subscription screen, and you can revoke the sign-in entirely in iOS/iPadOS Settings (System Settings on Mac) → your Apple Account → Sign in with Apple.</p>
+
+  <h3>Web companion (website)</h3>
+  <p>The app needs no account or sign-in. The web companion does: you sign in with a Google account or with a one-time link sent to your email address, through Firebase Authentication. Firebase keeps your email address (and, for Google, the name and profile picture Google provides) so you can sign in again; your email is never shown to other group members. The name you enter when you join is your display name in that group, like in the app.</p>
+  <p>When you sign in, the website records that a web client is in use, with your browser's language, so group features that need every member's device to be up to date keep working. Members of your groups see a <strong>Web</strong> label next to your name. The website currently lets you view groups, join a group, take over a place someone added for you by name, confirm or reject a payment someone recorded to you, vote on deleting a group, and leave a group; adding expenses and recording payments need the app.</p>
+  <p>To protect the service from abuse, the website uses Google reCAPTCHA Enterprise (through Firebase App Check), which looks at information about your browser and device. Its use is subject to Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a>. The website has no analytics and sets no cookies of its own; Google sign-in and reCAPTCHA may set their own cookies.</p>
+  <p>If you leave <strong>Keep me signed in on this computer</strong> ticked when you sign in, your browser keeps a copy of the group data you can see, so pages load when your connection drops, and your sign-in, so you stay signed in. If you untick it (for example on a shared computer), your sign-in lasts only until you close that browser tab and no copy of group data is kept; the browser remembers only that choice. While you sign in with an email link, the browser also keeps that email address until the link is used, and the page to return to afterwards. Signing out deletes the copy of group data and your sign-in from the browser.</p>
+  <p><strong>Deleting your web sign-in.</strong> Once you have left all your groups, choose <strong>Delete My Web Sign-in</strong> on the website's <strong>Your groups</strong> page. This deletes your email address (and the name and picture Google provided) from Firebase Authentication, together with the website's record that a web client is in use, and signs you out. Your name stays in the expenses and payments of groups you were in, like a member who leaves in the app, and in their activity history until it is deleted after 90 days.</p>
 
   <h2><span class="section-number">3</span>Third-Party Services</h2>
   <table class="service-table">
@@ -389,16 +398,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>Usage analytics, tied to a random identifier the app creates (no name or email)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Group data syncing (expenses, members, settlements, deletion requests); public Taiwan uniform-invoice lottery winning numbers</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Receipt photos for group expenses, profile photos and group photos (compressed JPEG; who can see each is described in section 9.2)</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>Anonymous user identification to maintain subscription continuity without requiring a user sign-in or account creation</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Anonymous user identification in the app, so subscriptions continue without a sign-in or account; on the web companion, sign-in with a Google account or an email link</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>Optional sign-in to the web companion with your Google account (email address, name and profile picture)</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Background tasks including group deletion, push notification delivery, adding and claiming people added by name, checking App Store purchases for group access, and linking devices signed in with Apple</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push notifications for group activity</td></tr>
       <tr><td><strong>Google Gemini API (via Firebase AI Logic)</strong></td><td>AI-powered OCR and line-item extraction from receipt photos scanned via Pick &amp; Pay (PRO subscription feature)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote feature configuration (e.g., per-account monthly scan caps) without requiring an app update</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>Fraud and abuse prevention for backend API calls</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Fraud and abuse prevention for backend API calls; on the web companion it uses Google reCAPTCHA Enterprise, which checks information about your browser and device</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Crash reporting and stability diagnostics</td></tr>
       <tr><td><strong>Apple Maps (MapKit)</strong></td><td>Suggests matching places as you type an address or place name, turns your device's position into an address, turns a typed address or place name into map coordinates, and finds a scanned receipt's store from the address, name or phone number printed on it, when Location Tracking is on</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Exchange rates for currency conversion; only a currency code is sent</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>Hosts our website, including the page a group invite link opens; the link carries the group's share code, and the page uses no cookies, analytics or third-party scripts</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>Hosts our website, including the page a group invite link opens; the link carries the group's share code, and the page uses no cookies, analytics or third-party scripts; it also links to the web companion for people without an Apple device</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>Hosts the web companion; an invite link opened there carries the group's share code in the part of the address that is never sent to a server</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase is used as a sync layer for group-related features only. Personal (non-group) expense data is <strong>never</strong> uploaded to cloud services, apart from the location lookups described in section 7.</div>
@@ -466,11 +477,12 @@
     <li>Cached group expenses for offline viewing</li>
   </ul>
   <p>Personal expense and income data — including any attached receipt photos — never leaves your device unless you explicitly export or back it up, apart from the location lookups described in section 7. Expenses from deleted groups are retained locally with a 'deleted group' marker, but only if whoever deleted the group chose to keep the records. If they chose to remove them, those expenses are deleted from your device as well.</p>
+  <p><strong>On the web companion</strong>, with <strong>Keep me signed in on this computer</strong> ticked, your browser stores a copy of the group data you can see (for offline viewing) and your sign-in; unticked, it keeps your sign-in only until the tab is closed and no group data. It also remembers that choice and, while you sign in with an email link, that email address (until the link is used) and the page to return to. Signing out deletes the copy of group data and your sign-in from the browser.</p>
 
   <h3>9.2 Cloud Storage for Group Features</h3>
   <p>For group features, selected data is synced to Firebase Firestore (and Firebase Storage for photos):</p>
   <ul>
-    <li>Group documents (name, description, icon, members, permissions, share code, settle-up currency and its exchange rates)</li>
+    <li>Group documents (name, description, icon, members — including whether a member joined from the web companion — permissions, share code, settle-up currency and its exchange rates)</li>
     <li>People added to a group by name (the name, and who added them), and requests to claim one (who says they are that person, who can approve, and when)</li>
     <li>Group expenses (amount, category, note, date, location if enabled, payer identity)</li>
     <li>Group expense receipt photos (compressed JPEG, stored in Firebase Storage and visible to all members of the group; PRO subscription feature)</li>
@@ -480,7 +492,7 @@
     <li>Group deletion requests and member votes</li>
     <li>Trial start dates (for reinstall recovery)</li>
     <li>Group access: each member's PRO and free-trial end dates, saved in every group they belong to; and App Store purchase records (transaction identifier, product, expiry date, whether refunded, and the app identifiers of the devices that hold the purchase), which are never shown to other members (see section 2); and, only if you use Sign in with Apple, a one-way hash of Apple's identifier with the app identifiers of your signed-in devices</li>
-    <li>Push notification tokens (FCM), together with your notification settings (which kinds of notifications you want, and which groups you have turned off) and an unread badge count</li>
+    <li>Push notification tokens (FCM), together with your notification settings (which kinds of notifications you want, and which groups you have turned off) and an unread badge count; for the web companion, a record that a web client is in use and your browser's language (no notification token)</li>
     <li>Optional payment handles for settle-up deep links (Venmo, Cash App and PayPal.me usernames; an Apple Cash phone number, which opens Messages rather than a payment app; and a Zelle phone number or email, a LINE ID and a WeChat ID, which open nothing at all and are simply shown to group members to copy)</li>
     <li><strong>Pick &amp; Pay scan tracking</strong> — a small per-account record of how many scans you've made this month and whether your trial freebie has been used. Used to enforce per-account monthly limits and to show you your remaining scans in Settings. Contains no information about the contents of any receipt.</li>
     <li><strong>Group activity history</strong> — a record of every action performed in the group (expenses added, edited, refunded, or deleted; members who joined, left, or were removed). This data is stored in Firebase Firestore and is <strong>automatically and permanently deleted after 90 days</strong>. Activity older than 90 days cannot be recovered.</li>
@@ -515,6 +527,9 @@
     <li>Updating your profile photo overwrites the previous photo in Firebase Storage. Choosing "Remove Photo" deletes it from Firebase Storage. The photo is also no longer visible to other members of any group you've joined once removed, though existing devices may retain a cached copy until next sync.</li>
     <li>Updating or removing a group photo works the same way: updating overwrites the existing photo in Firebase Storage, and choosing "Remove Photo" deletes it. Only the group admin can perform these actions. The photo is also deleted from Firebase Storage when the group itself is deleted, regardless of which deletion option is chosen.</li>
     <li>Group admins can prune inactive groups directly from Settings → Data &amp; Privacy → Inactive Groups. A group is eligible for pruning after 6 months of inactivity with all debts settled. When an admin initiates deletion, all affected group members receive a push notification identifying who deleted the group. The admin may choose to export group expenses, retain them locally, or delete them entirely before the group is removed from Firebase.</li>
+    <li>On the web companion, open a group's <strong>Members</strong> tab and choose <strong>Leave Group</strong> to leave it (once your balance is settled, as in the app).</li>
+    <li>Once you have left all your groups, <strong>Delete My Web Sign-in</strong> on the website's <strong>Your groups</strong> page deletes your sign-in email address from Firebase Authentication and signs you out (see section 2).</li>
+    <li>Signing out of the web companion deletes the copy of group data and your sign-in kept in that browser.</li>
     <li>Uninstalling Node Expense removes all locally stored data from your device</li>
   </ul>
   <p>Note: Firebase group data may persist until the group is formally deleted through the in-app deletion flow.</p>
@@ -532,6 +547,7 @@
     <li>As a group admin, prune inactive groups (6+ months inactive, all debts settled) from Settings → Data &amp; Privacy → Inactive Groups, with a choice to export, keep locally, or delete all group expenses</li>
     <li>Cancel your subscription at any time through Apple App Store settings</li>
     <li>Stop using backups or encrypted exports at any time</li>
+    <li>On the web companion, leave a group from its <strong>Members</strong> tab, delete your web sign-in from the <strong>Your groups</strong> page, and sign out at any time to clear that browser's copy</li>
   </ul>
 
   <h2><span class="section-number">14</span>Changes to This Policy</h2>
@@ -544,10 +560,10 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hant">
-  <div class="meta"><strong>最後更新：</strong>2026-11-21 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最後更新：</strong>2026-11-23 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS、網頁</div>
 
   <h2><span class="section-number">1</span>概覽</h2>
-  <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。</p>
+  <p>Node Expense: Track Together（以下簡稱「我們」）尊重您的隱私。本隱私權政策說明 Node Expense 所收集的資料、其使用方式，以及您在使用 Node Expense 時所擁有的選擇。本政策也適用於供群組成員使用的 Node Expense 網站（網頁版，網址為 expense-tracker-70311.web.app），讓沒有 iPhone、iPad 或 Mac 的人也能在網頁瀏覽器中加入群組，並查看群組的費用與餘額。</p>
 
   <h2><span class="section-number">2</span>我們收集的資料</h2>
   <div class="data-grid">
@@ -561,6 +577,7 @@
         <li>群組費用與結算</li>
         <li>您在群組費用上發表的留言</li>
         <li>顯示名稱</li>
+        <li>網頁版登入：您的 Google 帳戶電子郵件地址，或您用來登入的電子郵件地址（若使用 Google，另含 Google 提供的姓名與頭像）。僅用於讓您登入；您的電子郵件絕不會顯示給其他成員</li>
         <li>選填的付款帳號（Venmo、Cash App、PayPal.me、Apple Cash、Zelle、LINE、WeChat）</li>
         <li>選填的費用收據照片（PRO 訂閱功能）</li>
         <li>透過 Pick &amp; Pay 進行逐項分帳所掃描的收據圖片（將傳送至 Google Gemini API 進行 AI 處理；PRO 訂閱功能）</li>
@@ -577,6 +594,7 @@
       <ul>
         <li>使用分析（Firebase），與應用程式為您產生的隨機識別碼相關聯，絕不包含您的姓名或電子郵件</li>
         <li>匿名裝置識別碼</li>
+        <li>網頁版：您瀏覽器的語言，以及您使用網站這件事（您所在群組的成員會在您的名稱旁看到<strong>網頁版</strong>標籤）</li>
         <li>當機記錄與診斷資訊</li>
         <li>裝置與應用程式效能資訊</li>
         <li>推播通知權杖（啟用時）</li>
@@ -590,7 +608,14 @@
   <p><strong>群組權限。</strong>您能否在群組中新增費用，取決於 PRO、免費試用，或 PRO 成員提供的名額，因此 App 會將您的 PRO 狀態分享給您所屬的群組。當您購買 PRO、建立群組或開啟 App 時，App 會將 App Store 已簽署的購買記錄傳送至我們的伺服器；我們會驗證 Apple 的簽章，並保留該筆購買的交易識別碼、產品、到期日以及是否已退款，並與持有該購買的每台裝置的 App 識別碼建立關聯。持有同一筆購買的裝置只算作一位 PRO 成員。RevenueCat 也會在訂閱續訂、結束或退款時通知我們的伺服器。每位成員的 PRO 與免費試用到期日會儲存在其所屬的每個群組中，成員可看到 PRO 標示及誰使用了誰的名額。我們絕不會收到您的姓名、電子郵件或付款資訊（只有在您使用下文所述的透過 Apple 登入時，我們才會收到您 Apple 帳號的識別碼），購買記錄也絕不會向其他成員顯示。</p>
 
   <h3>跨裝置授權同步（透過 Apple 登入）</h3>
-  <p>使用 Node Expense <strong>無需帳戶或登入</strong>。若您在多台使用同一 Apple 帳戶的裝置（iPhone、iPad 或 Mac）上擁有 PRO，您可以在「訂閱」頁面<strong>選擇性地</strong>點按<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至這些裝置。我們<strong>不會索取您的姓名或電子郵件</strong>——僅取得 Apple 提供的穩定、僅限本應用程式的識別碼。該識別碼<strong>僅</strong>用於透過 RevenueCat 在每台裝置上將您的 PRO 授權（以及您兌換過的任何 App Store 優惠代碼）比對至同一個訂閱者身分，並讓您各裝置共用的購買在群組中只算作一位 PRO 成員，<strong>絕不會</strong>用於廣告、追蹤或建立個人檔案。為此，我們的伺服器會驗證 Apple 的登入權杖，並只保留該識別碼的單向雜湊值，以及您已登入裝置（最多 10 台）的 App 識別碼；中斷某台裝置的連結後，該裝置即會從清單中移除。您可隨時在「訂閱」頁面中斷某台裝置的連結，也可以在「iOS/iPadOS 設定（Mac 上為系統設定） → 您的 Apple 帳戶 → 透過 Apple 登入」中完全撤銷授權。</p>
+  <p>使用 Node Expense App <strong>無需帳戶或登入</strong>。若您在多台使用同一 Apple 帳戶的裝置（iPhone、iPad 或 Mac）上擁有 PRO，您可以在「訂閱」頁面<strong>選擇性地</strong>點按<strong>透過 Apple 登入</strong>，將您的 PRO 授權同步至這些裝置。我們<strong>不會索取您的姓名或電子郵件</strong>——僅取得 Apple 提供的穩定、僅限本應用程式的識別碼。該識別碼<strong>僅</strong>用於透過 RevenueCat 在每台裝置上將您的 PRO 授權（以及您兌換過的任何 App Store 優惠代碼）比對至同一個訂閱者身分，並讓您各裝置共用的購買在群組中只算作一位 PRO 成員，<strong>絕不會</strong>用於廣告、追蹤或建立個人檔案。為此，我們的伺服器會驗證 Apple 的登入權杖，並只保留該識別碼的單向雜湊值，以及您已登入裝置（最多 10 台）的 App 識別碼；中斷某台裝置的連結後，該裝置即會從清單中移除。您可隨時在「訂閱」頁面中斷某台裝置的連結，也可以在「iOS/iPadOS 設定（Mac 上為系統設定） → 您的 Apple 帳戶 → 透過 Apple 登入」中完全撤銷授權。</p>
+
+  <h3>網頁版（網站）</h3>
+  <p>App 無需帳戶或登入，網頁版則需要：您可以透過 Firebase Authentication，以 Google 帳戶或寄到您電子郵件地址的一次性連結登入。Firebase 會保存您的電子郵件地址（若使用 Google，另含 Google 提供的姓名與頭像），讓您日後可以再次登入；您的電子郵件絕不會顯示給其他群組成員。您加入群組時輸入的名稱，就是您在該群組中的顯示名稱，與 App 相同。</p>
+  <p>登入時，網站會記錄有網頁用戶端正在使用，以及您瀏覽器的語言，讓需要每位成員的裝置都保持最新的群組功能能繼續運作。您所在群組的成員會在您的名稱旁看到<strong>網頁版</strong>標籤。網站目前可讓您查看群組、加入群組、接手他人以名字為您新增的位置、確認或拒絕他人記錄給您的付款、對刪除群組投票，以及離開群組；新增費用與記錄付款仍需使用 App。</p>
+  <p>為防止濫用，網站透過 Firebase App Check 使用 Google reCAPTCHA Enterprise，它會檢查您瀏覽器與裝置的相關資訊。其使用受 Google 的<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隱私權政策</a>與<a href="https://policies.google.com/terms" target="_blank" rel="noopener">服務條款</a>約束。網站不使用分析工具，也不設定自己的 Cookie；Google 登入與 reCAPTCHA 可能會設定它們自己的 Cookie。</p>
+  <p>若您登入時保持勾選 <strong>Keep me signed in on this computer</strong>（在這台電腦上保持登入），瀏覽器會保留一份您可查看的群組資料副本，讓連線中斷時頁面仍可載入，並保留您的登入狀態，讓您維持登入。若取消勾選（例如在共用電腦上），您的登入只會持續到您關閉該瀏覽器分頁為止，也不會保留任何群組資料副本；瀏覽器只會記住這個選擇。使用電子郵件連結登入期間，瀏覽器也會保留該電子郵件地址直到連結被使用，以及登入後要返回的頁面。登出會從瀏覽器刪除群組資料副本與您的登入狀態。</p>
+  <p><strong>刪除您的網頁版登入。</strong>離開所有群組後，在網站的 <strong>Your groups</strong>（您的群組）頁面選擇 <strong>Delete My Web Sign-in</strong>（刪除我的網頁版登入）。這會從 Firebase Authentication 刪除您的電子郵件地址（以及 Google 提供的姓名與照片），連同網站記錄的網頁用戶端使用紀錄，並將您登出。您的名稱仍會保留在您曾加入的群組的費用與付款中（與在 App 中離開群組的成員相同），也會保留在這些群組的活動紀錄中，直到 90 天後被刪除為止。</p>
 
   <h2><span class="section-number">3</span>第三方服務</h2>
   <table class="service-table">
@@ -601,16 +626,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>使用分析，與應用程式產生的隨機識別碼相關聯（不含姓名或電子郵件）</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群組資料同步（費用、成員、結算、刪除請求）；公開的台灣統一發票中獎號碼</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>群組費用的收據照片、使用者個人頭像與群組頭像的儲存（壓縮 JPEG；各自的可見對象請參閱第 9.2 節）</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td> 匿名用戶識別以保持訂閱連續性，無需用戶登入或建立帳戶</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>App 中的匿名用戶識別，讓訂閱無需登入或帳戶即可延續；網頁版則以 Google 帳戶或電子郵件連結登入</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>以 Google 帳戶選擇性登入網頁版（電子郵件地址、姓名與頭像）</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>背景工作，包括群組刪除、推播通知傳送、新增與認領以名字新增的成員、驗證 App Store 購買以判斷群組權限，以及連結透過 Apple 登入的裝置</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群組活動的推播通知</td></tr>
       <tr><td><strong>Google Gemini API（透過 Firebase AI Logic）</strong></td><td>透過 Pick &amp; Pay 掃描收據照片進行 AI 驅動的 OCR 與逐項提取（PRO 訂閱功能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>無需更新應用程式即可遠端配置功能參數（例如每帳戶每月掃描上限）</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>後端 API 呼叫的詐欺與濫用防護</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>後端 API 呼叫的詐欺與濫用防護；在網頁版中使用 Google reCAPTCHA Enterprise，會檢查您瀏覽器與裝置的相關資訊</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>當機回報與穩定性診斷</td></tr>
       <tr><td><strong>Apple 地圖（MapKit）</strong></td><td>在開啟「位置追蹤」時，隨您輸入地址或地點名稱建議相符的地點、將您裝置的位置轉換成地址，將輸入的地址或地點名稱轉換成地圖座標，並依收據上印的地址、名稱或電話號碼找出掃描收據的店家</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>提供貨幣換算所需的匯率；僅傳送貨幣代碼</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>託管我們的網站，包括群組邀請連結開啟的頁面；連結中帶有群組的分享碼，該頁面不使用 Cookie、分析工具或第三方指令碼</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>託管我們的網站，包括群組邀請連結開啟的頁面；連結中帶有群組的分享碼，該頁面不使用 Cookie、分析工具或第三方指令碼；並為沒有 Apple 裝置的人提供網頁版連結</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>託管網頁版；在網頁版開啟的邀請連結會把群組的分享碼放在網址中絕不會傳送到伺服器的部分</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase 僅作為群組相關功能的同步層。個人（非群組）費用資料<strong>絕不會</strong>上傳至雲端服務。唯一的例外是第 7 節所述的地點查詢。</div>
@@ -678,11 +705,12 @@
     <li>群組費用的快取（供離線檢視）</li>
   </ul>
   <p>個人費用與收入資料——包括所附加的收據照片——不會離開您的裝置，除非您明確匯出或備份。唯一的例外是第 7 節所述的地點查詢。若刪除群組的人選擇保留記錄，已刪除群組的費用才會在您的裝置裡保留，並標示為「已刪除群組」；若選擇移除記錄，這些費用也會從您的裝置刪除。</p>
+  <p><strong>在網頁版中</strong>，若勾選 <strong>Keep me signed in on this computer</strong>，您的瀏覽器會儲存一份您可查看的群組資料副本（供離線查看）以及您的登入狀態；若取消勾選，只會保留您的登入狀態直到分頁關閉，且不保留任何群組資料。瀏覽器也會記住這個選擇；使用電子郵件連結登入期間，還會保留該電子郵件地址（直到連結被使用）以及要返回的頁面。登出會從瀏覽器刪除群組資料副本與您的登入狀態。</p>
 
   <h3>9.2 群組功能的雲端儲存</h3>
   <p>針對群組功能，所選資料將同步至 Firebase Firestore（照片則同步至 Firebase Storage）：</p>
   <ul>
-    <li>群組文件（名稱、說明、圖示、成員、權限、分享碼、結算貨幣及其匯率）</li>
+    <li>群組文件（名稱、說明、圖示、成員（包括成員是否從網頁版加入）、權限、分享碼、結算貨幣及其匯率）</li>
     <li>以名字新增至群組的人員（名稱及新增者），以及認領請求（誰表示自己是該人員、誰可以核准，以及時間）</li>
     <li>群組費用（金額、類別、備註、日期、位置（若已啟用）、付款人身份）</li>
     <li>群組費用收據照片（壓縮 JPEG，儲存於 Firebase Storage，所有群組成員皆可檢視；PRO 訂閱功能）</li>
@@ -692,7 +720,7 @@
     <li>群組刪除請求及成員投票</li>
     <li>試用開始日期（用於重新安裝後的復原）</li>
     <li>群組權限：每位成員的 PRO 與免費試用到期日，儲存在其所屬的每個群組中；以及 App Store 購買記錄（交易識別碼、產品、到期日、是否已退款，以及持有該購買的裝置的 App 識別碼），絕不會向其他成員顯示（見第 2 節）；以及僅在您使用透過 Apple 登入時，Apple 識別碼的單向雜湊值與您已登入裝置的 App 識別碼</li>
-    <li>推播通知權杖（FCM），以及您的通知設定（想接收哪些類型的通知、已關閉哪些群組的通知）和未讀標記數</li>
+    <li>推播通知權杖（FCM），以及您的通知設定（想接收哪些類型的通知、已關閉哪些群組的通知）和未讀標記數；網頁版則記錄有網頁用戶端正在使用以及您瀏覽器的語言（沒有通知權杖）</li>
     <li>用於結算深度連結的選填付款帳號（Venmo、Cash App、PayPal.me 使用者名稱；Apple Cash 電話號碼，開啟的是「訊息」而非付款應用程式；以及 Zelle 手機號碼或電子郵件、LINE ID 與微信號，這些完全不會開啟任何程式，僅顯示給群組成員複製）</li>
     <li><strong>Pick &amp; Pay 掃描追蹤</strong>——記錄您本月已進行的掃描次數及試用免費額度是否已使用的小型每帳戶記錄。用於執行每帳戶每月限制，並在「設定」中向您顯示剩餘掃描次數。不包含任何收據內容的資訊。</li>
     <li><strong>群組活動記錄</strong>——群組內所有操作的記錄（費用的新增、編輯、退款或刪除；成員的加入、離開或移除）。此資料儲存於 Firebase Firestore，並於 <strong>90 天後自動永久刪除</strong>。超過 90 天的活動記錄無法復原。</li>
@@ -727,6 +755,9 @@
     <li>更新個人頭像會覆寫 Firebase Storage 中的舊照片。選擇「移除照片」會將其從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
     <li>更新或移除群組頭像的運作方式相同：更新會覆寫 Firebase Storage 中的現有照片，選擇「移除照片」則會將其刪除。此操作僅限群組管理員執行。群組本身被刪除時，無論選擇哪種刪除選項，群組頭像也會一併從 Firebase Storage 中刪除。</li>
     <li>群組管理員可直接在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組。群組需在停止活動超過 6 個月且所有債務已結清後，方可進行清理。當管理員發起刪除請求時，所有受影響的群組成員將收到推播通知，通知內容包含刪除群組的管理員姓名。管理員可選擇在將群組從 Firebase 移除前，匯出群組費用、將其保留於本機，或全部刪除。</li>
+    <li>在網頁版中，開啟群組的 <strong>Members</strong> 分頁並選擇 <strong>Leave Group</strong> 即可離開群組（與 App 相同，需先結清餘額）。</li>
+    <li>離開所有群組後，在網站的 <strong>Your groups</strong> 頁面選擇 <strong>Delete My Web Sign-in</strong>，即可從 Firebase Authentication 刪除您的登入電子郵件地址並將您登出（見第 2 節）。</li>
+    <li>登出網頁版會刪除該瀏覽器中保留的群組資料副本與您的登入狀態。</li>
     <li>解除安裝 Node Expense 將移除您裝置上所有本機儲存的資料</li>
   </ul>
   <p>注意：Firebase 群組資料可能在群組透過應用程式內的刪除流程正式刪除之前持續存在。</p>
@@ -744,6 +775,7 @@
     <li>作為群組管理員，可在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組（停止活動超過 6 個月且所有債務已結清），並可選擇匯出、保留於本機或刪除所有群組費用</li>
     <li>隨時透過 Apple App Store 設定取消您的訂閱</li>
     <li>隨時停止使用備份或加密匯出功能</li>
+    <li>在網頁版中，從群組的 <strong>Members</strong> 分頁離開群組、在 <strong>Your groups</strong> 頁面刪除您的網頁版登入，並可隨時登出以清除該瀏覽器的副本</li>
   </ul>
 
   <h2><span class="section-number">14</span>本政策的變更</h2>
@@ -756,10 +788,10 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-zh-hans">
-  <div class="meta"><strong>最后更新日期：</strong>2026-11-21 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最后更新日期：</strong>2026-11-23 &nbsp;·&nbsp; <strong>平台：</strong>iOS、iPadOS、macOS、网页</div>
 
   <h2><span class="section-number">1</span>概述</h2>
-  <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。</p>
+  <p>Node Expense: Track Together（"我们"、"我们的"）尊重您的隐私。本隐私政策解释了 Node Expense 收集哪些数据、如何使用这些数据，以及您在使用 Node Expense 时有哪些选择。本政策也适用于供群组成员使用的 Node Expense 网站（网页版，网址为 expense-tracker-70311.web.app），让没有 iPhone、iPad 或 Mac 的人也能在网页浏览器中加入群组，并查看群组的支出和余额。</p>
 
   <h2><span class="section-number">2</span>我们收集的数据</h2>
   <div class="data-grid">
@@ -773,6 +805,7 @@
         <li>群组支出与结算</li>
         <li>您在群组支出上发表的留言</li>
         <li>显示名称</li>
+        <li>网页版登录：您的 Google 账户电子邮件地址，或您用来登录的电子邮件地址（若使用 Google，另含 Google 提供的姓名和头像）。仅用于让您登录；您的电子邮件绝不会显示给其他成员</li>
         <li>可选的付款账号（Venmo、Cash App、PayPal.me、Apple Cash、Zelle、LINE、WeChat）</li>
         <li>可选的支出收据照片（PRO 订阅功能）</li>
         <li>通过 Pick &amp; Pay 进行逐项分账所扫描的收据图片（将发送至 Google Gemini API 进行 AI 处理；PRO 订阅功能）</li>
@@ -789,6 +822,7 @@
       <ul>
         <li>使用分析（Firebase），与应用为您生成的随机标识符相关联，绝不包含您的姓名或电子邮件</li>
         <li>匿名设备标识符</li>
+        <li>网页版：您浏览器的语言，以及您使用网站这一事实（您所在群组的成员会在您的名称旁看到<strong>网页版</strong>标签）</li>
         <li>崩溃日志与诊断信息</li>
         <li>设备与应用性能信息</li>
         <li>推送通知令牌（启用时）</li>
@@ -802,7 +836,14 @@
   <p><strong>群组权限。</strong>您能否在群组中添加支出，取决于 PRO、免费试用，或 PRO 成员提供的名额，因此 App 会将您的 PRO 状态分享给您所在的群组。当您购买 PRO、创建群组或打开 App 时，App 会将 App Store 已签名的购买记录发送到我们的服务器；我们会验证 Apple 的签名，并保留该笔购买的交易标识符、产品、到期日以及是否已退款，并与持有该购买的每台设备的 App 标识符相关联。持有同一笔购买的设备只算作一位 PRO 成员。RevenueCat 也会在订阅续订、结束或退款时通知我们的服务器。每位成员的 PRO 和免费试用到期日会保存在其所在的每个群组中，成员可以看到 PRO 标识以及谁在使用谁的名额。我们绝不会收到您的姓名、电子邮件或付款信息（只有在您使用下文所述的通过 Apple 登录时，我们才会收到您 Apple 账户的标识符），购买记录也绝不会向其他成员显示。</p>
 
   <h3>跨设备授权同步（通过 Apple 登录）</h3>
-  <p>使用 Node Expense <strong>无需账户或登录</strong>。若您在多台使用同一 Apple 账户的设备（iPhone、iPad 或 Mac）上拥有 PRO，您可以在"订阅"页面<strong>选择性地</strong>点按<strong>通过 Apple 登录</strong>，将您的 PRO 授权同步至这些设备。我们<strong>不会索取您的姓名或电子邮件</strong>——仅获取 Apple 提供的稳定、仅限本应用的标识符。该标识符<strong>仅</strong>用于通过 RevenueCat 在每台设备上将您的 PRO 授权（以及您兑换过的任何 App Store 优惠代码）比对至同一个订阅者身份，并让您各设备共用的购买在群组中只算作一位 PRO 成员，<strong>绝不会</strong>用于广告、追踪或建立用户画像。为此，我们的服务器会验证 Apple 的登录令牌，并只保留该标识符的单向哈希值，以及您已登录设备（最多 10 台）的 App 标识符；断开某台设备的连接后，该设备即会从列表中移除。您可随时在"订阅"页面断开某台设备的连接，也可以在"iOS/iPadOS 设置（Mac 上为系统设置） → 您的 Apple 账户 → 通过 Apple 登录"中完全撤销授权。</p>
+  <p>使用 Node Expense App <strong>无需账户或登录</strong>。若您在多台使用同一 Apple 账户的设备（iPhone、iPad 或 Mac）上拥有 PRO，您可以在"订阅"页面<strong>选择性地</strong>点按<strong>通过 Apple 登录</strong>，将您的 PRO 授权同步至这些设备。我们<strong>不会索取您的姓名或电子邮件</strong>——仅获取 Apple 提供的稳定、仅限本应用的标识符。该标识符<strong>仅</strong>用于通过 RevenueCat 在每台设备上将您的 PRO 授权（以及您兑换过的任何 App Store 优惠代码）比对至同一个订阅者身份，并让您各设备共用的购买在群组中只算作一位 PRO 成员，<strong>绝不会</strong>用于广告、追踪或建立用户画像。为此，我们的服务器会验证 Apple 的登录令牌，并只保留该标识符的单向哈希值，以及您已登录设备（最多 10 台）的 App 标识符；断开某台设备的连接后，该设备即会从列表中移除。您可随时在"订阅"页面断开某台设备的连接，也可以在"iOS/iPadOS 设置（Mac 上为系统设置） → 您的 Apple 账户 → 通过 Apple 登录"中完全撤销授权。</p>
+
+  <h3>网页版（网站）</h3>
+  <p>App 无需账户或登录，网页版则需要：您可以通过 Firebase Authentication，使用 Google 账户或发送到您电子邮件地址的一次性链接登录。Firebase 会保存您的电子邮件地址（若使用 Google，另含 Google 提供的姓名和头像），以便您日后再次登录；您的电子邮件绝不会显示给其他群组成员。您加入群组时输入的名称，就是您在该群组中的显示名称，与 App 相同。</p>
+  <p>登录时，网站会记录有网页客户端正在使用，以及您浏览器的语言，使需要每位成员的设备都保持最新的群组功能能够继续运作。您所在群组的成员会在您的名称旁看到<strong>网页版</strong>标签。网站目前可让您查看群组、加入群组、接手他人按名字为您添加的位置、确认或拒绝他人记录给您的付款、对删除群组投票，以及离开群组；添加支出和记录付款仍需使用 App。</p>
+  <p>为防止滥用，网站通过 Firebase App Check 使用 Google reCAPTCHA Enterprise，它会检查您浏览器和设备的相关信息。其使用受 Google 的<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隐私政策</a>和<a href="https://policies.google.com/terms" target="_blank" rel="noopener">服务条款</a>约束。网站不使用分析工具，也不设置自己的 Cookie；Google 登录和 reCAPTCHA 可能会设置它们自己的 Cookie。</p>
+  <p>若您登录时保持勾选 <strong>Keep me signed in on this computer</strong>（在这台电脑上保持登录），浏览器会保留一份您可查看的群组数据副本，以便连接中断时页面仍可加载，并保留您的登录状态，让您保持登录。若取消勾选（例如在共用电脑上），您的登录只会持续到您关闭该浏览器标签页为止，也不会保留任何群组数据副本；浏览器只会记住这一选择。使用电子邮件链接登录期间，浏览器还会保留该电子邮件地址直到链接被使用，以及登录后要返回的页面。退出登录会从浏览器删除群组数据副本和您的登录状态。</p>
+  <p><strong>删除您的网页版登录。</strong>离开所有群组后，在网站的 <strong>Your groups</strong>（您的群组）页面选择 <strong>Delete My Web Sign-in</strong>（删除我的网页版登录）。这会从 Firebase Authentication 删除您的电子邮件地址（以及 Google 提供的姓名和照片），连同网站记录的网页客户端使用记录，并让您退出登录。您的名称仍会保留在您曾加入的群组的支出和付款中（与在 App 中离开群组的成员相同），也会保留在这些群组的活动记录中，直到 90 天后被删除为止。</p>
 
   <h2><span class="section-number">3</span>第三方服务</h2>
   <table class="service-table">
@@ -813,16 +854,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>使用分析，与应用生成的随机标识符相关联（不含姓名或电子邮件）</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>群组数据同步（支出、成员、结算、删除申请）；公开的台湾统一发票中奖号码</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>群组支出的收据照片、用户个人头像与群组头像的存储（压缩 JPEG；各自的可见范围请参阅第 9.2 节）</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>匿名用户识别以保持订阅连续性，无需用户登录或创建账户</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>App 中的匿名用户识别，使订阅无需登录或账户即可延续；网页版则使用 Google 账户或电子邮件链接登录</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>使用 Google 账户选择性登录网页版（电子邮件地址、姓名和头像）</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>后台任务，包括群组删除、推送通知发送、添加和认领按名字添加的成员、验证 App Store 购买以判断群组权限，以及关联通过 Apple 登录的设备</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>群组活动的推送通知</td></tr>
       <tr><td><strong>Google Gemini API（通过 Firebase AI Logic）</strong></td><td>通过 Pick &amp; Pay 扫描收据照片进行 AI 驱动的 OCR 和逐项提取（PRO 订阅功能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>无需更新应用即可远程配置功能参数（例如每账户每月扫描上限）</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>后端 API 调用的欺诈和滥用防护</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>后端 API 调用的欺诈和滥用防护；在网页版中使用 Google reCAPTCHA Enterprise，会检查您浏览器和设备的相关信息</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>崩溃报告与稳定性诊断</td></tr>
       <tr><td><strong>Apple 地图（MapKit）</strong></td><td>在开启“位置追踪”时，随您输入地址或地点名称推荐匹配的地点、将您设备的位置转换为地址，将输入的地址或地点名称转换为地图坐标，并依据收据上印的地址、名称或电话号码找出所扫描收据的商家</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>提供货币换算所需的汇率；仅发送货币代码</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>托管我们的网站，包括群组邀请链接打开的页面；链接中带有群组的共享代码，该页面不使用 Cookie、分析工具或第三方脚本</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>托管我们的网站，包括群组邀请链接打开的页面；链接中带有群组的共享代码，该页面不使用 Cookie、分析工具或第三方脚本；并为没有 Apple 设备的人提供网页版链接</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>托管网页版；在网页版打开的邀请链接会把群组的共享代码放在网址中绝不会发送到服务器的部分</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase 仅用作群组相关功能的同步层。个人（非群组）支出数据<strong>绝不会</strong>上传到云端服务。唯一的例外是第 7 节所述的地点查询。</div>
@@ -890,11 +933,12 @@
     <li>用于离线查看的缓存群组支出</li>
   </ul>
   <p>除非您明确导出或备份，否则个人支出和收入数据——包括所附加的收据照片——绝不会离开您的设备。唯一的例外是第 7 节所述的地点查询。只有当删除群组的人选择保留记录时，已删除群组的支出才会保留在您的设备里并带有"已删除群组"标记；若选择移除记录，这些支出也会从您的设备删除。</p>
+  <p><strong>在网页版中</strong>，若勾选 <strong>Keep me signed in on this computer</strong>，您的浏览器会存储一份您可查看的群组数据副本（供离线查看）以及您的登录状态；若取消勾选，只会保留您的登录状态直到标签页关闭，且不保留任何群组数据。浏览器还会记住这一选择；使用电子邮件链接登录期间，还会保留该电子邮件地址（直到链接被使用）以及要返回的页面。退出登录会从浏览器删除群组数据副本和您的登录状态。</p>
 
   <h3>9.2 群组功能的云存储</h3>
   <p>对于群组功能，选定的数据将同步到 Firebase Firestore（照片同步至 Firebase Storage）：</p>
   <ul>
-    <li>群组文档（名称、描述、图标、成员、权限、共享代码、结算货币及其汇率）</li>
+    <li>群组文档（名称、描述、图标、成员（包括成员是否从网页版加入）、权限、共享代码、结算货币及其汇率）</li>
     <li>按名字添加到群组的人员（名称及添加者），以及认领请求（谁表示自己是该人员、谁可以批准，以及时间）</li>
     <li>群组支出（金额、分类、备注、日期、位置（若启用）、付款人身份）</li>
     <li>群组支出的收据照片（压缩 JPEG，存储于 Firebase Storage，所有群组成员均可查看；PRO 订阅功能）</li>
@@ -904,7 +948,7 @@
     <li>群组删除申请和成员投票</li>
     <li>试用开始日期（用于重新安装恢复）</li>
     <li>群组权限：每位成员的 PRO 和免费试用到期日，保存在其所在的每个群组中；以及 App Store 购买记录（交易标识符、产品、到期日、是否已退款，以及持有该购买的设备的 App 标识符），绝不会向其他成员显示（见第 2 节）；以及仅在您使用通过 Apple 登录时，Apple 标识符的单向哈希值与您已登录设备的 App 标识符</li>
-    <li>推送通知令牌（FCM），以及您的通知设置（想接收哪些类型的通知、已关闭哪些群组的通知）和未读角标数</li>
+    <li>推送通知令牌（FCM），以及您的通知设置（想接收哪些类型的通知、已关闭哪些群组的通知）和未读角标数；网页版则记录有网页客户端正在使用以及您浏览器的语言（没有通知令牌）</li>
     <li>用于结算深度链接的可选付款账号（Venmo、Cash App、PayPal.me 用户名；Apple Cash 电话号码，打开的是「信息」而非付款应用；以及 Zelle 手机号或邮箱、LINE ID 与微信号，这些完全不会打开任何应用，仅显示给群组成员复制）</li>
     <li><strong>Pick &amp; Pay 扫描跟踪</strong>——记录您本月已进行的扫描次数及试用免费额度是否已使用的小型每账户记录。用于执行每账户每月限制，并在「设置」中向您显示剩余扫描次数。不包含任何收据内容的信息。</li>
     <li><strong>群组活动记录</strong>——群组内所有操作的记录（支出的添加、编辑、退款或删除；成员的加入、离开或移除）。此数据存储于 Firebase Firestore，并于 <strong>90 天后自动永久删除</strong>。超过 90 天的活动记录无法恢复。</li>
@@ -939,6 +983,9 @@
     <li>更新个人头像会覆盖 Firebase Storage 中的旧照片。选择"移除照片"会将其从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
     <li>更新或移除群组头像的方式相同：更新会覆盖 Firebase Storage 中的现有照片，选择"移除照片"则会将其删除。此操作仅限群组管理员执行。群组本身被删除时，无论选择哪种删除选项，群组头像也会一并从 Firebase Storage 中删除。</li>
     <li>群组管理员可直接在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组。群组需在停止活动超过 6 个月且所有债务已结清后，方可进行清理。管理员发起删除时，所有受影响的群组成员将收到推送通知，通知中包含删除群组的管理员姓名。管理员可在将群组从 Firebase 移除前，选择导出群组支出、保留至本地，或全部删除。</li>
+    <li>在网页版中，打开群组的 <strong>Members</strong> 标签页并选择 <strong>Leave Group</strong> 即可离开群组（与 App 相同，需先结清余额）。</li>
+    <li>离开所有群组后，在网站的 <strong>Your groups</strong> 页面选择 <strong>Delete My Web Sign-in</strong>，即可从 Firebase Authentication 删除您的登录电子邮件地址并让您退出登录（见第 2 节）。</li>
+    <li>退出网页版登录会删除该浏览器中保留的群组数据副本和您的登录状态。</li>
     <li>卸载 Node Expense 将删除设备上存储的所有本地数据</li>
   </ul>
   <p>注意：Firebase 群组数据可能会保留，直到通过应用内删除流程正式删除群组。</p>
@@ -956,6 +1003,7 @@
     <li>作为群组管理员，可在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组（停止活动超过 6 个月且所有债务已结清），并可选择导出、保留至本地或删除所有群组支出</li>
     <li>随时通过 Apple App Store 设置取消订阅</li>
     <li>随时停止使用备份或加密导出</li>
+    <li>在网页版中，从群组的 <strong>Members</strong> 标签页离开群组、在 <strong>Your groups</strong> 页面删除您的网页版登录，并可随时退出登录以清除该浏览器的副本</li>
   </ul>
 
   <h2><span class="section-number">14</span>本政策的变更</h2>
@@ -968,10 +1016,10 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-ja">
-  <div class="meta"><strong>最終更新日：</strong>2026-11-21 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS</div>
+  <div class="meta"><strong>最終更新日：</strong>2026-11-23 &nbsp;·&nbsp; <strong>プラットフォーム：</strong>iOS、iPadOS、macOS、Web</div>
 
   <h2><span class="section-number">1</span>概要</h2>
-  <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。</p>
+  <p>Node Expense: Track Together（以下「当社」）はお客様のプライバシーを尊重します。本プライバシーポリシーは、Node Expense が収集するデータ、その使用方法、および Node Expense を使用する際のお客様の選択肢について説明します。本ポリシーは、グループメンバー向けの Node Expense ウェブサイト（Web 版、expense-tracker-70311.web.app）にも適用されます。Web 版では、iPhone、iPad、Mac をお持ちでない方も、Web ブラウザでグループに参加し、グループの支出と残高を確認できます。</p>
 
   <h2><span class="section-number">2</span>収集するデータ</h2>
   <div class="data-grid">
@@ -985,6 +1033,7 @@
         <li>グループ支出と精算</li>
         <li>グループ支出に投稿したコメント</li>
         <li>表示名</li>
+        <li>Web 版のサインイン：Google アカウントのメールアドレス、またはサインインに使用するメールアドレス（Google の場合は、Google が提供する氏名とプロフィール写真も含む）。サインインのためだけに使用され、メールアドレスが他のメンバーに表示されることはありません</li>
         <li>任意の支払いハンドル（Venmo、Cash App、PayPal.me、Apple Cash、Zelle、LINE、WeChat）</li>
         <li>任意の支出に添付されるレシート写真（PRO サブスクリプション機能）</li>
         <li>Pick &amp; Pay でアイテム別に割り勘するためにスキャンしたレシート画像（Google Gemini API による AI 処理のため送信されます。PRO サブスクリプション機能）</li>
@@ -1001,6 +1050,7 @@
       <ul>
         <li>利用分析（Firebase）。アプリが生成するランダムな識別子にひも付けられ、氏名やメールアドレスは含まれません</li>
         <li>匿名のデバイス識別子</li>
+        <li>Web 版：ブラウザの言語と、ウェブサイトを使用していること（所属グループのメンバーには、お客様の名前の横に <strong>Web</strong> ラベルが表示されます）</li>
         <li>クラッシュログと診断情報</li>
         <li>デバイスとアプリのパフォーマンス情報</li>
         <li>プッシュ通知トークン（有効時）</li>
@@ -1014,7 +1064,14 @@
   <p><strong>グループの利用権限。</strong>グループに支出を追加できるかどうかは、PRO、無料トライアル、または PRO メンバーの枠によって決まるため、アプリはお客様の PRO ステータスを所属するグループと共有します。お客様が PRO を購入したとき、グループを作成したとき、またはアプリを開いたときに、アプリは App Store が署名した購入記録を当社のサーバーに送信します。当社は Apple の署名を検証し、その購入の取引識別子、製品、有効期限、返金の有無を、購入を保持する各デバイスのアプリ識別子と紐づけて保持します。同じ購入を保持するデバイスは、1人の PRO メンバーとして数えられます。また、RevenueCat はサブスクリプションの更新、終了、返金を当社のサーバーに通知します。各メンバーの PRO と無料トライアルの終了日は、そのメンバーが所属するすべてのグループに保存され、メンバーには PRO の表示と、誰がどの枠を利用しているかが表示されます。当社がお客様の氏名、メールアドレス、支払い情報を受け取ることはなく（Apple アカウントの識別子は、後述の Apple でサインインを使用した場合にのみ受け取ります）、購入記録がほかのメンバーに表示されることもありません。</p>
 
   <h3>デバイス間ライセンス同期（Apple でサインイン）</h3>
-  <p>Node Expense の利用に<strong>アカウントやサインインは不要</strong>です。同じ Apple アカウントでサインインした複数のデバイス（iPhone、iPad、Mac）で PRO をお持ちの場合、「サブスクリプション」画面で<strong>任意に</strong><strong>Apple でサインイン</strong>をタップすると、PRO ライセンスをそれらのデバイス間で同期できます。当社は<strong>氏名もメールアドレスも要求しません</strong>。Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子は、RevenueCat を通じて各デバイス上でお客様の PRO ライセンス（および利用済みの App Store オファーコード）を同一のサブスクライバー情報に照合し、お客様のデバイスが共有する購入をグループ内で1人の PRO メンバーとして数える目的に<strong>のみ</strong>使用され、広告・トラッキング・プロファイリングには<strong>一切</strong>使用されません。そのために当社のサーバーは Apple のサインイントークンを検証し、識別子の一方向ハッシュと、サインイン済みデバイス（最大 10 台）のアプリ識別子のみを保持します。デバイスの連携を解除すると、その一覧から削除されます。デバイスの連携はいつでも「サブスクリプション」画面から解除でき、「iOS/iPadOS 設定（Mac ではシステム設定） → お客様の Apple アカウント → Apple でサインイン」からサインインを完全に取り消すこともできます。</p>
+  <p>Node Expense アプリの利用に<strong>アカウントやサインインは不要</strong>です。同じ Apple アカウントでサインインした複数のデバイス（iPhone、iPad、Mac）で PRO をお持ちの場合、「サブスクリプション」画面で<strong>任意に</strong><strong>Apple でサインイン</strong>をタップすると、PRO ライセンスをそれらのデバイス間で同期できます。当社は<strong>氏名もメールアドレスも要求しません</strong>。Apple が提供する安定したアプリ固有の識別子のみを取得します。この識別子は、RevenueCat を通じて各デバイス上でお客様の PRO ライセンス（および利用済みの App Store オファーコード）を同一のサブスクライバー情報に照合し、お客様のデバイスが共有する購入をグループ内で1人の PRO メンバーとして数える目的に<strong>のみ</strong>使用され、広告・トラッキング・プロファイリングには<strong>一切</strong>使用されません。そのために当社のサーバーは Apple のサインイントークンを検証し、識別子の一方向ハッシュと、サインイン済みデバイス（最大 10 台）のアプリ識別子のみを保持します。デバイスの連携を解除すると、その一覧から削除されます。デバイスの連携はいつでも「サブスクリプション」画面から解除でき、「iOS/iPadOS 設定（Mac ではシステム設定） → お客様の Apple アカウント → Apple でサインイン」からサインインを完全に取り消すこともできます。</p>
+
+  <h3>Web 版（ウェブサイト）</h3>
+  <p>アプリにはアカウントもサインインも不要ですが、Web 版では必要です。Firebase Authentication を通じて、Google アカウント、またはメールアドレスに送られるワンタイムリンクでサインインします。Firebase は、再びサインインできるようにメールアドレス（Google の場合は、Google が提供する氏名とプロフィール写真も）を保持します。メールアドレスが他のグループメンバーに表示されることはありません。参加時に入力した名前は、アプリと同様に、そのグループでの表示名になります。</p>
+  <p>サインインすると、ウェブサイトは Web クライアントが使用されていることとブラウザの言語を記録します。これにより、すべてのメンバーのデバイスが最新であることを必要とするグループ機能が引き続き動作します。所属グループのメンバーには、お客様の名前の横に <strong>Web</strong> ラベルが表示されます。ウェブサイトでは現在、グループの閲覧、グループへの参加、名前だけで追加されたお客様の位置の引き継ぎ、お客様宛てに記録された支払いの確認または拒否、グループ削除への投票、グループからの退出ができます。支出の追加と支払いの記録にはアプリが必要です。</p>
+  <p>不正利用からサービスを守るため、ウェブサイトは（Firebase App Check を通じて）Google reCAPTCHA Enterprise を使用し、お客様のブラウザとデバイスに関する情報を確認します。その利用には Google の<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" target="_blank" rel="noopener">利用規約</a>が適用されます。ウェブサイトはアナリティクスを使用せず、独自の Cookie も設定しません。Google のサインインと reCAPTCHA は独自の Cookie を設定する場合があります。</p>
+  <p>サインイン時に <strong>Keep me signed in on this computer</strong>（このコンピュータでサインインしたままにする）をオンのままにすると、ブラウザは閲覧可能なグループデータのコピーを保持し（接続が切れてもページを読み込めるように）、サインイン状態も保持します（サインインしたままになります）。オフにすると（共用のコンピュータなど）、サインインはそのブラウザのタブを閉じるまでしか続かず、グループデータのコピーも保持されません。ブラウザが記憶するのはその選択だけです。メールのリンクでサインインする間は、リンクが使用されるまでそのメールアドレスと、サインイン後に戻るページもブラウザに保持されます。サインアウトすると、グループデータのコピーとサインイン状態がブラウザから削除されます。</p>
+  <p><strong>Web 版のサインインを削除する。</strong>すべてのグループから退出したら、ウェブサイトの <strong>Your groups</strong>（グループ一覧）ページで <strong>Delete My Web Sign-in</strong>（Web 版のサインインを削除）を選びます。これにより、メールアドレス（および Google が提供した氏名と写真）が Firebase Authentication から削除され、Web クライアントの使用記録も削除されて、サインアウトします。お客様の名前は、アプリで退出したメンバーと同様に、参加していたグループの支出と支払いに残り、各グループのアクティビティ履歴にも 90 日後に削除されるまで残ります。</p>
 
   <h2><span class="section-number">3</span>サードパーティサービス</h2>
   <table class="service-table">
@@ -1025,16 +1082,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>利用分析（アプリが生成するランダムな識別子にひも付け。氏名やメールアドレスは含まない）</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>グループデータの同期（支出、メンバー、精算、削除リクエスト）、公開されている台湾統一発票の当選番号</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>グループ支出のレシート写真、ユーザープロフィール写真、グループ写真の保存（圧縮 JPEG。それぞれを閲覧できる人は第 9.2 条をご参照ください）</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>ユーザーのサインインやアカウント作成を必要とせず、サブスクリプションの継続性を維持するための匿名ユーザー識別</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>アプリでは、サインインやアカウントなしでサブスクリプションを継続するための匿名ユーザー識別。Web 版では、Google アカウントまたはメールのリンクによるサインイン</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>Google アカウントによる Web 版への任意のサインイン（メールアドレス、氏名、プロフィール写真）</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>グループ削除、プッシュ通知配信、名前だけで追加された人の追加と引き継ぎ、グループの利用権限のための App Store 購入の確認、Apple でサインインしたデバイスの連携を含むバックグラウンドタスク</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>グループアクティビティのプッシュ通知</td></tr>
       <tr><td><strong>Google Gemini API（Firebase AI Logic 経由）</strong></td><td>Pick &amp; Pay でスキャンしたレシート写真の AI による OCR とアイテム抽出（PRO サブスクリプション機能）</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>アプリの更新を必要としない機能設定のリモート構成（例: アカウントごとの月間スキャン上限）</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>バックエンド API 呼び出しの不正使用防止</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>バックエンド API 呼び出しの不正使用防止。Web 版では Google reCAPTCHA Enterprise を使用し、ブラウザとデバイスに関する情報を確認します</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>クラッシュレポートと安定性診断</td></tr>
       <tr><td><strong>Apple マップ（MapKit）</strong></td><td>「位置情報の追跡」がオンのとき、住所や場所の名前の入力中に一致する場所を候補として表示し、デバイスの位置を住所に、入力された住所や場所の名前を地図上の座標に変換し、レシートに印字された住所・名前・電話番号からスキャンした店舗を見つけます</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>通貨換算用の為替レート。送信されるのは通貨コードのみです</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>当社のウェブサイトをホストします。グループの招待リンクで開くページも含まれます。リンクにはグループの招待コードが含まれ、このページは Cookie、アナリティクス、サードパーティのスクリプトを使用しません</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>当社のウェブサイトをホストします。グループの招待リンクで開くページも含まれます。リンクにはグループの招待コードが含まれ、このページは Cookie、アナリティクス、サードパーティのスクリプトを使用しません。Apple デバイスをお持ちでない方向けに Web 版へのリンクも表示します</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>Web 版をホストします。Web 版で開く招待リンクは、グループの招待コードを、サーバーに送信されることのないアドレスの部分に含めます</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase はグループ関連機能の同期レイヤーとしてのみ使用されます。個人（非グループ）の支出データはクラウドサービスに<strong>一切</strong>アップロードされません。唯一の例外は、第 7 条に記載の場所の検索です。</div>
@@ -1102,11 +1161,12 @@
     <li>オフライン表示用のグループ支出のキャッシュ</li>
   </ul>
   <p>個人の支出データと収入データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。唯一の例外は、第 7 条に記載の場所の検索です。削除されたグループからの支出は、グループを削除した人が記録の保持を選択した場合にのみ、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。記録の削除を選択した場合、これらの支出はお客様のデバイスからも削除されます。</p>
+  <p><strong>Web 版では</strong>、<strong>Keep me signed in on this computer</strong> をオンにすると、ブラウザは閲覧可能なグループデータのコピー（オフライン表示用）とサインイン状態を保存します。オフにすると、サインイン状態をタブを閉じるまでだけ保持し、グループデータは保持しません。ブラウザはその選択も記憶し、メールのリンクでサインインする間は、そのメールアドレス（リンクが使用されるまで）と戻るページも保持します。サインアウトすると、グループデータのコピーとサインイン状態がブラウザから削除されます。</p>
 
   <h3>9.2 グループ機能のクラウドストレージ</h3>
   <p>グループ機能では、選択されたデータが Firebase Firestore（写真は Firebase Storage）に同期されます：</p>
   <ul>
-    <li>グループドキュメント（名前、説明、アイコン、メンバー、権限、招待コード、精算通貨とその為替レート）</li>
+    <li>グループドキュメント（名前、説明、アイコン、メンバー（Web 版から参加したかどうかを含む）、権限、招待コード、精算通貨とその為替レート）</li>
     <li>名前だけでグループに追加された人（名前と追加した人）、および引き継ぎのリクエスト（その人だと名乗った人、承認できる人、日時）</li>
     <li>グループ支出（金額、カテゴリ、メモ、日付、位置情報（有効時）、支払者の情報）</li>
     <li>グループ支出のレシート写真（圧縮 JPEG、Firebase Storage に保存され、グループの全メンバーが閲覧可能。PRO サブスクリプション機能）</li>
@@ -1116,7 +1176,7 @@
     <li>グループ削除リクエストとメンバーの投票</li>
     <li>トライアル開始日（再インストール後の復元用）</li>
     <li>グループの利用権限：各メンバーの PRO と無料トライアルの終了日（所属するすべてのグループに保存）、および App Store の購入記録（取引識別子、製品、有効期限、返金の有無、購入を保持するデバイスのアプリ識別子）。購入記録がほかのメンバーに表示されることはありません（第 2 節を参照）。Apple でサインインを使用した場合のみ、Apple の識別子の一方向ハッシュとサインイン済みデバイスのアプリ識別子</li>
-    <li>プッシュ通知トークン（FCM）と、通知の設定（受け取る通知の種類、通知をオフにしたグループ）、および未読バッジの数</li>
+    <li>プッシュ通知トークン（FCM）と、通知の設定（受け取る通知の種類、通知をオフにしたグループ）、および未読バッジの数。Web 版では、Web クライアントが使用されていることとブラウザの言語の記録（通知トークンなし）</li>
     <li>精算用ディープリンクのための任意の支払いハンドル（Venmo、Cash App、PayPal.me のユーザー名、Apple Cash の電話番号（決済アプリではなくメッセージを開きます）、および Zelle の電話番号またはメールアドレス、LINE ID、WeChat ID。後者の 3 つは何も開かず、グループメンバーがコピーできるよう表示されるだけです）</li>
     <li><strong>Pick &amp; Pay スキャン追跡</strong>——今月実行したスキャン数と、トライアルの無料利用が消費されたかどうかを記録する、アカウントごとの小さな記録です。アカウントごとの月次上限を適用し、「設定」画面で残りのスキャン数を表示するために使用されます。レシートの内容に関する情報は含まれていません。</li>
     <li><strong>グループアクティビティ履歴</strong>——グループ内で行われたすべての操作の記録（支出の追加・編集・返金・削除、メンバーの参加・退出・除名）。このデータは Firebase Firestore に保存され、<strong>90日後に自動的かつ永続的に削除</strong>されます。90日以上前のアクティビティは復元できません。</li>
@@ -1151,6 +1211,9 @@
     <li>プロフィール写真を更新すると、Firebase Storage 内の以前の写真が上書きされます。「写真を削除」を選択すると、Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
     <li>グループ写真の更新・削除も同様の動作となります。更新すると Firebase Storage 内の既存の写真が上書きされ、「写真を削除」を選択するとファイルが削除されます。この操作はグループ管理者のみが行えます。グループ自体が削除された場合、どの削除オプションを選択したかにかかわらず、グループ写真も Firebase Storage から削除されます。</li>
     <li>グループ管理者は「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループを直接整理できます。対象グループは、6ヶ月以上活動がなく、すべての債務が精算済みである必要があります。管理者が削除を開始すると、影響を受けるすべてのグループメンバーに、グループを削除した管理者名を含むプッシュ通知が送信されます。管理者はグループを Firebase から削除する前に、グループ支出をエクスポート、ローカルに保持、または全削除を選択できます。</li>
+    <li>Web 版では、グループの <strong>Members</strong> タブを開いて <strong>Leave Group</strong> を選ぶとグループから退出できます（アプリと同様、残高の精算後）。</li>
+    <li>すべてのグループから退出した後、ウェブサイトの <strong>Your groups</strong> ページで <strong>Delete My Web Sign-in</strong> を選ぶと、サインイン用のメールアドレスが Firebase Authentication から削除され、サインアウトします（第 2 条を参照）。</li>
+    <li>Web 版からサインアウトすると、そのブラウザに保持されているグループデータのコピーとサインイン状態が削除されます。</li>
     <li>Node Expense をアンインストールすると、デバイスに保存されているすべてのローカルデータが削除されます</li>
   </ul>
   <p>注意：Firebase のグループデータは、アプリ内の削除フローを通じてグループが正式に削除されるまで残る場合があります。</p>
@@ -1168,6 +1231,7 @@
     <li>グループ管理者として、「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループ（6ヶ月以上非アクティブかつ全債務精算済み）を整理し、グループ支出をエクスポート、ローカル保持、または全削除を選択できます</li>
     <li>Apple App Store の設定からいつでもサブスクリプションをキャンセルする</li>
     <li>バックアップや暗号化エクスポートの使用をいつでも停止する</li>
+    <li>Web 版では、グループの <strong>Members</strong> タブからグループを退出し、<strong>Your groups</strong> ページで Web 版のサインインを削除し、いつでもサインアウトしてそのブラウザのコピーを消去する</li>
   </ul>
 
   <h2><span class="section-number">14</span>本ポリシーの変更</h2>
@@ -1180,10 +1244,10 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-de">
-  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Zuletzt aktualisiert:</strong> 2026-11-23 &nbsp;·&nbsp; <strong>Plattform:</strong> iOS, iPadOS, macOS, Web</div>
 
   <h2><span class="section-number">1</span>Übersicht</h2>
-  <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben.</p>
+  <p>Node Expense: Track Together („wir", „uns") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Daten Node Expense erfasst, wie sie verwendet werden und welche Möglichkeiten Sie bei der Nutzung von Node Expense haben. Diese Datenschutzerklärung gilt auch für die Node Expense-Website für Gruppenmitglieder (die Web-Version unter expense-tracker-70311.web.app), mit der Personen ohne iPhone, iPad oder Mac in einem Webbrowser einer Gruppe beitreten und deren Ausgaben und Salden ansehen können.</p>
 
   <h2><span class="section-number">2</span>Erfasste Daten</h2>
   <div class="data-grid">
@@ -1197,6 +1261,7 @@
         <li>Gruppenausgaben und Abrechnungen</li>
         <li>Kommentare, die Sie zu Gruppenausgaben verfassen</li>
         <li>Anzeigename</li>
+        <li>Anmeldung bei der Web-Version: die E-Mail-Adresse Ihres Google-Kontos oder die E-Mail-Adresse, mit der Sie sich anmelden (bei Google zusätzlich der Name und das Profilfoto, die Google bereitstellt). Wird nur für Ihre Anmeldung verwendet; Ihre E-Mail-Adresse wird anderen Mitgliedern nie angezeigt</li>
         <li>Optionale Zahlungshandles (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Optionale Belegfotos, die an Ausgaben angehängt werden (PRO-Abonnementfunktion)</li>
         <li>Belegbilder, die für die positionsweise Aufteilung über Pick &amp; Pay gescannt werden (werden zur KI-Verarbeitung an die Google Gemini API gesendet; PRO-Abonnementfunktion)</li>
@@ -1213,6 +1278,7 @@
       <ul>
         <li>Nutzungsanalysen (Firebase), verknüpft mit einer zufälligen Kennung, die die App für Sie erstellt – nie mit Ihrem Namen oder Ihrer E-Mail-Adresse</li>
         <li>Anonyme Geräte-Kennung</li>
+        <li>In der Web-Version: die Sprache Ihres Browsers und die Tatsache, dass Sie die Website nutzen (Mitglieder Ihrer Gruppen sehen neben Ihrem Namen die Kennzeichnung <strong>Web</strong>)</li>
         <li>Absturzprotokolle und Diagnosedaten</li>
         <li>Geräte- und App-Leistungsinformationen</li>
         <li>Push-Benachrichtigungs-Token (wenn aktiviert)</li>
@@ -1226,7 +1292,14 @@
   <p><strong>Gruppenzugang.</strong> Ob Sie einer Gruppe Ausgaben hinzufügen können, hängt von PRO, der kostenlosen Testversion oder einem von einem PRO-Mitglied abgedeckten Platz ab. Deshalb teilt die App Ihren PRO-Status mit den Gruppen, denen Sie angehören. Wenn Sie PRO kaufen, eine Gruppe erstellen oder die App öffnen, sendet sie den vom App Store signierten Kaufbeleg an unsere Server. Dort prüfen wir die Signatur von Apple und speichern die Transaktionskennung, das Produkt, das Ablaufdatum und ob der Kauf erstattet wurde, verknüpft mit der App-Kennung jedes Geräts, das den Kauf besitzt. Geräte, die denselben Kauf besitzen, zählen als ein PRO-Mitglied. Außerdem teilt RevenueCat unseren Servern mit, wenn ein Abonnement verlängert wird, endet oder erstattet wird. Die PRO- und Testende-Daten jedes Mitglieds werden dann in jeder Gruppe gespeichert, der es angehört, und Mitglieder sehen eine PRO-Kennzeichnung und wer abgedeckt ist. Wir erhalten niemals Ihren Namen, Ihre E-Mail-Adresse oder Ihre Zahlungsdaten (eine Kennung Ihres Apple Accounts erhalten wir nur, wenn Sie das unten beschriebene Mit Apple anmelden verwenden), und Kaufbelege werden anderen Mitgliedern nie angezeigt.</p>
 
   <h3>Geräteübergreifende Lizenzsynchronisierung (Mit Apple anmelden)</h3>
-  <p>Für die Nutzung von Node Expense sind <strong>kein Konto und keine Anmeldung erforderlich</strong>. Wenn Sie PRO auf mehreren Geräten (iPhone, iPad oder Mac) besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm <strong>optional</strong> auf <strong>Mit Apple anmelden</strong> tippen, um Ihre PRO-Lizenz geräteübergreifend zu synchronisieren. Wir fordern <strong>weder Name noch E-Mail-Adresse</strong> an – nur die stabile, app-spezifische Kennung, die Apple bereitstellt. Diese Kennung wird <strong>ausschließlich</strong> dazu verwendet, Ihre PRO-Lizenz (sowie eingelöste App-Store-Angebotscodes) über RevenueCat auf jedem Gerät demselben Abonnentenprofil zuzuordnen und dafür zu sorgen, dass ein von Ihren Geräten geteilter Kauf in Gruppen als ein PRO-Mitglied zählt. Dazu prüfen unsere Server das Anmeldetoken von Apple und speichern nur einen Einweg-Hash der Kennung zusammen mit den App-Kennungen Ihrer angemeldeten Geräte (bis zu 10); wenn Sie ein Gerät trennen, wird es aus dieser Liste entfernt. Sie wird <strong>niemals</strong> für Werbung, Tracking oder Profilbildung verwendet. Sie können ein Gerät jederzeit über den Abonnement-Bildschirm trennen und die Anmeldung vollständig widerrufen unter „iOS-/iPadOS-Einstellungen (Systemeinstellungen auf dem Mac) → Ihr Apple-Account → Mit Apple anmelden“.</p>
+  <p>Für die Nutzung der Node Expense-App sind <strong>kein Konto und keine Anmeldung erforderlich</strong>. Wenn Sie PRO auf mehreren Geräten (iPhone, iPad oder Mac) besitzen, die mit demselben Apple-Account angemeldet sind, können Sie auf dem Abonnement-Bildschirm <strong>optional</strong> auf <strong>Mit Apple anmelden</strong> tippen, um Ihre PRO-Lizenz geräteübergreifend zu synchronisieren. Wir fordern <strong>weder Name noch E-Mail-Adresse</strong> an – nur die stabile, app-spezifische Kennung, die Apple bereitstellt. Diese Kennung wird <strong>ausschließlich</strong> dazu verwendet, Ihre PRO-Lizenz (sowie eingelöste App-Store-Angebotscodes) über RevenueCat auf jedem Gerät demselben Abonnentenprofil zuzuordnen und dafür zu sorgen, dass ein von Ihren Geräten geteilter Kauf in Gruppen als ein PRO-Mitglied zählt. Dazu prüfen unsere Server das Anmeldetoken von Apple und speichern nur einen Einweg-Hash der Kennung zusammen mit den App-Kennungen Ihrer angemeldeten Geräte (bis zu 10); wenn Sie ein Gerät trennen, wird es aus dieser Liste entfernt. Sie wird <strong>niemals</strong> für Werbung, Tracking oder Profilbildung verwendet. Sie können ein Gerät jederzeit über den Abonnement-Bildschirm trennen und die Anmeldung vollständig widerrufen unter „iOS-/iPadOS-Einstellungen (Systemeinstellungen auf dem Mac) → Ihr Apple-Account → Mit Apple anmelden“.</p>
+
+  <h3>Web-Version (Website)</h3>
+  <p>Die App benötigt kein Konto und keine Anmeldung, die Web-Version schon: Sie melden sich über Firebase Authentication mit einem Google-Konto oder mit einem einmaligen Link an, der an Ihre E-Mail-Adresse gesendet wird. Firebase speichert Ihre E-Mail-Adresse (bei Google zusätzlich den Namen und das Profilfoto, die Google bereitstellt), damit Sie sich erneut anmelden können; Ihre E-Mail-Adresse wird anderen Gruppenmitgliedern nie angezeigt. Der Name, den Sie beim Beitritt eingeben, ist wie in der App Ihr Anzeigename in dieser Gruppe.</p>
+  <p>Wenn Sie sich anmelden, vermerkt die Website, dass ein Web-Client genutzt wird, zusammen mit der Sprache Ihres Browsers, damit Gruppenfunktionen weiter funktionieren, die voraussetzen, dass die Geräte aller Mitglieder auf dem neuesten Stand sind. Mitglieder Ihrer Gruppen sehen neben Ihrem Namen die Kennzeichnung <strong>Web</strong>. Auf der Website können Sie derzeit Gruppen ansehen, einer Gruppe beitreten, einen Platz übernehmen, den jemand per Name für Sie angelegt hat, eine für Sie erfasste Zahlung bestätigen oder ablehnen, über das Löschen einer Gruppe abstimmen und eine Gruppe verlassen; zum Hinzufügen von Ausgaben und Erfassen von Zahlungen ist die App erforderlich.</p>
+  <p>Zum Schutz des Dienstes vor Missbrauch verwendet die Website Google reCAPTCHA Enterprise (über Firebase App Check), das Informationen über Ihren Browser und Ihr Gerät prüft. Die Nutzung unterliegt der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung</a> und den <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Nutzungsbedingungen</a> von Google. Die Website verwendet keine Analyse und setzt keine eigenen Cookies; die Google-Anmeldung und reCAPTCHA können eigene Cookies setzen.</p>
+  <p>Wenn Sie bei der Anmeldung <strong>Keep me signed in on this computer</strong> (auf diesem Computer angemeldet bleiben) aktiviert lassen, speichert Ihr Browser eine Kopie der Gruppendaten, die Sie sehen können, damit Seiten auch bei unterbrochener Verbindung laden, sowie Ihre Anmeldung, damit Sie angemeldet bleiben. Wenn Sie die Option deaktivieren (zum Beispiel auf einem gemeinsam genutzten Computer), gilt Ihre Anmeldung nur, bis Sie diesen Browser-Tab schließen, und es wird keine Kopie der Gruppendaten gespeichert; der Browser merkt sich nur diese Auswahl. Während Sie sich mit einem E-Mail-Link anmelden, speichert der Browser außerdem diese E-Mail-Adresse, bis der Link verwendet wird, sowie die Seite, zu der Sie danach zurückkehren. Beim Abmelden werden die Kopie der Gruppendaten und Ihre Anmeldung aus dem Browser gelöscht.</p>
+  <p><strong>Ihre Web-Anmeldung löschen.</strong> Sobald Sie alle Ihre Gruppen verlassen haben, wählen Sie auf der Seite <strong>Your groups</strong> (Ihre Gruppen) der Website <strong>Delete My Web Sign-in</strong> (Meine Web-Anmeldung löschen). Dadurch werden Ihre E-Mail-Adresse (sowie der von Google bereitgestellte Name und das Bild) zusammen mit dem Vermerk der Website, dass ein Web-Client genutzt wird, aus Firebase Authentication gelöscht, und Sie werden abgemeldet. Ihr Name bleibt wie bei einem Mitglied, das eine Gruppe in der App verlässt, in den Ausgaben und Zahlungen der Gruppen erhalten, in denen Sie waren, und in deren Aktivitätsverlauf, bis dieser nach 90 Tagen gelöscht wird.</p>
 
   <h2><span class="section-number">3</span>Drittanbieterdienste</h2>
   <table class="service-table">
@@ -1237,16 +1310,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>Nutzungsanalysen, verknüpft mit einer zufälligen, von der App erzeugten Kennung (kein Name, keine E-Mail-Adresse)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisierung von Gruppendaten (Ausgaben, Mitglieder, Abrechnungen, Löschanfragen); öffentliche Gewinnzahlen der taiwanesischen Lotterie der einheitlichen Rechnung</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Speicherung von Belegfotos für Gruppenausgaben, Profilfotos der Nutzer und Gruppenfotos (komprimiertes JPEG; wer welches Foto sehen kann, steht in Abschnitt 9.2)</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Anmeldung (Keine Registrierung erforderlich). Lokale Daten werden sicher auf dem Gerät gespeichert. Die anonyme ID wird ausschließlich zur Gewährleistung der Abonnementkontinuität verwendet</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Anonyme Nutzererkennung in der App, damit Abonnements ohne Anmeldung oder Konto fortbestehen; in der Web-Version Anmeldung mit einem Google-Konto oder einem E-Mail-Link</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>Optionale Anmeldung bei der Web-Version mit Ihrem Google-Konto (E-Mail-Adresse, Name und Profilfoto)</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Hintergrundaufgaben einschließlich Gruppenlöschung, Push-Benachrichtigungsversand, Hinzufügen und Übernehmen per Name hinzugefügter Personen, Prüfung von App-Store-Käufen für den Gruppenzugang sowie Verknüpfung von Geräten, die mit Apple angemeldet sind</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Push-Benachrichtigungen für Gruppenaktivitäten</td></tr>
       <tr><td><strong>Google Gemini API (über Firebase AI Logic)</strong></td><td>KI-gestützte OCR und Positionsextraktion aus Belegfotos, die über Pick &amp; Pay gescannt werden (PRO-Abonnementfunktion)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Remote-Konfiguration von Funktionsparametern (z. B. monatliche Scan-Limits pro Konto) ohne App-Update</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>Schutz vor Betrug und Missbrauch für Backend-API-Aufrufe</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Schutz vor Betrug und Missbrauch für Backend-API-Aufrufe; in der Web-Version mit Google reCAPTCHA Enterprise, das Informationen über Ihren Browser und Ihr Gerät prüft</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Absturzberichte und Stabilitätsdiagnose</td></tr>
       <tr><td><strong>Apple Karten (MapKit)</strong></td><td>Schlägt bei eingeschalteter Standortverfolgung während der Eingabe einer Adresse oder eines Ortsnamens passende Orte vor und wandelt die Position Ihres Geräts in eine Adresse sowie eine eingegebene Adresse oder einen Ortsnamen in Kartenkoordinaten um und findet anhand der aufgedruckten Adresse, des Namens oder der Telefonnummer das Geschäft eines gescannten Belegs</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Wechselkurse für die Währungsumrechnung; es wird nur ein Währungscode gesendet</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>Hostet unsere Website, einschließlich der Seite, die ein Gruppen-Einladungslink öffnet; der Link enthält den Freigabecode der Gruppe, und die Seite verwendet keine Cookies, keine Analyse und keine Skripte von Drittanbietern</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>Hostet unsere Website, einschließlich der Seite, die ein Gruppen-Einladungslink öffnet; der Link enthält den Freigabecode der Gruppe, und die Seite verwendet keine Cookies, keine Analyse und keine Skripte von Drittanbietern; sie verlinkt außerdem auf die Web-Version für Personen ohne Apple-Gerät</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>Hostet die Web-Version; ein dort geöffneter Einladungslink enthält den Freigabecode der Gruppe in dem Teil der Adresse, der nie an einen Server gesendet wird</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase wird ausschließlich als Synchronisierungsschicht für gruppenspezifische Funktionen verwendet. Persönliche (nicht gruppen­bezogene) Ausgabendaten werden <strong>niemals</strong> in Cloud-Dienste hochgeladen. Die einzige Ausnahme sind die in Abschnitt 7 beschriebenen Ortsabfragen.</div>
@@ -1314,11 +1389,12 @@
     <li>Zwischengespeicherte Gruppenausgaben zur Offline-Ansicht</li>
   </ul>
   <p>Persönliche Ausgaben- und Einnahmendaten — einschließlich angehängter Belegfotos — verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Die einzige Ausnahme sind die in Abschnitt 7 beschriebenen Ortsabfragen. Ausgaben aus gelöschten Gruppen werden nur dann lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt, wenn die Person, die die Gruppe gelöscht hat, sich für das Behalten der Datensätze entschieden hat. Wurde das Entfernen gewählt, werden diese Ausgaben auch von Ihrem Gerät gelöscht.</p>
+  <p><strong>In der Web-Version</strong> speichert Ihr Browser bei aktiviertem <strong>Keep me signed in on this computer</strong> eine Kopie der Gruppendaten, die Sie sehen können (für die Offline-Ansicht), sowie Ihre Anmeldung; bei deaktivierter Option behält er Ihre Anmeldung nur, bis der Tab geschlossen wird, und keine Gruppendaten. Er merkt sich außerdem diese Auswahl und, während Sie sich mit einem E-Mail-Link anmelden, diese E-Mail-Adresse (bis der Link verwendet wird) und die Seite, zu der Sie zurückkehren. Beim Abmelden werden die Kopie der Gruppendaten und Ihre Anmeldung aus dem Browser gelöscht.</p>
 
   <h3>9.2 Cloud-Speicher für Gruppenfunktionen</h3>
   <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore (und Fotos mit Firebase Storage) synchronisiert:</p>
   <ul>
-    <li>Gruppendokumente (Name, Beschreibung, Symbol, Mitglieder, Berechtigungen, Freigabecode, Abrechnungswährung und ihre Wechselkurse)</li>
+    <li>Gruppendokumente (Name, Beschreibung, Symbol, Mitglieder – einschließlich der Angabe, ob ein Mitglied über die Web-Version beigetreten ist –, Berechtigungen, Freigabecode, Abrechnungswährung und ihre Wechselkurse)</li>
     <li>Per Name zu einer Gruppe hinzugefügte Personen (der Name und wer sie hinzugefügt hat) sowie Anfragen zur Übernahme (wer angibt, diese Person zu sein, wer zustimmen kann und wann)</li>
     <li>Gruppenausgaben (Betrag, Kategorie, Notiz, Datum, Standort falls aktiviert, Zahleridentität)</li>
     <li>Belegfotos von Gruppenausgaben (komprimiertes JPEG, in Firebase Storage gespeichert und für alle Mitglieder der Gruppe sichtbar; PRO-Abonnementfunktion)</li>
@@ -1328,7 +1404,7 @@
     <li>Gruppen-Löschanfragen und Mitgliederabstimmungen</li>
     <li>Teststart-Daten (zur Wiederherstellung nach Neuinstallation)</li>
     <li>Gruppenzugang: die PRO- und Testende-Daten jedes Mitglieds, gespeichert in jeder Gruppe, der es angehört; sowie App-Store-Kaufbelege (Transaktionskennung, Produkt, Ablaufdatum, ob erstattet und die App-Kennungen der Geräte, die den Kauf besitzen), die anderen Mitgliedern nie angezeigt werden (siehe Abschnitt 2); und nur wenn Sie Mit Apple anmelden verwenden, ein Einweg-Hash der Apple-Kennung mit den App-Kennungen Ihrer angemeldeten Geräte</li>
-    <li>Push-Benachrichtigungs-Token (FCM) sowie Ihre Benachrichtigungseinstellungen (welche Arten von Benachrichtigungen Sie erhalten möchten und für welche Gruppen Sie sie ausgeschaltet haben) und die Anzahl ungelesener Mitteilungen am App-Symbol</li>
+    <li>Push-Benachrichtigungs-Token (FCM) sowie Ihre Benachrichtigungseinstellungen (welche Arten von Benachrichtigungen Sie erhalten möchten und für welche Gruppen Sie sie ausgeschaltet haben) und die Anzahl ungelesener Mitteilungen am App-Symbol; für die Web-Version ein Vermerk, dass ein Web-Client genutzt wird, und die Sprache Ihres Browsers (kein Benachrichtigungs-Token)</li>
     <li>Optionale Zahlungshandles für Abrechnungs-Deeplinks (Venmo-, Cash App- und PayPal.me-Benutzernamen; eine Apple Cash-Telefonnummer, die Nachrichten statt einer Zahlungs-App öffnet; sowie eine Zelle-Telefonnummer oder -E-Mail, eine LINE-ID und eine WeChat-ID, die gar nichts öffnen und Gruppenmitgliedern nur zum Kopieren angezeigt werden)</li>
     <li><strong>Pick &amp; Pay-Scan-Erfassung</strong> — ein kleiner kontobezogener Datensatz, der protokolliert, wie viele Scans Sie in diesem Monat durchgeführt haben und ob Ihre Testversion-Gratisnutzung verwendet wurde. Wird verwendet, um die monatlichen Limits pro Konto durchzusetzen und Ihnen die verbleibenden Scans in den Einstellungen anzuzeigen. Enthält keine Informationen über den Inhalt eines Belegs.</li>
     <li><strong>Gruppenaktivitätsverlauf</strong> — eine Aufzeichnung aller in der Gruppe durchgeführten Aktionen (Ausgaben hinzugefügt, bearbeitet, erstattet oder gelöscht; Mitglieder beigetreten, ausgetreten oder entfernt). Diese Daten werden in Firebase Firestore gespeichert und nach <strong>90 Tagen automatisch und dauerhaft gelöscht</strong>. Aktivitäten, die älter als 90 Tage sind, können nicht wiederhergestellt werden.</li>
@@ -1363,6 +1439,9 @@
     <li>Beim Aktualisieren Ihres Profilfotos wird das vorherige Foto in Firebase Storage überschrieben. Bei „Foto entfernen" wird es aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
     <li>Das Aktualisieren oder Entfernen eines Gruppenfotos funktioniert auf dieselbe Weise: Beim Aktualisieren wird das vorhandene Foto in Firebase Storage überschrieben, bei „Foto entfernen" wird es gelöscht. Nur der Gruppen-Administrator kann diese Aktionen ausführen. Das Gruppenfoto wird auch dann aus Firebase Storage gelöscht, wenn die Gruppe selbst gelöscht wird – unabhängig davon, welche Löschoption gewählt wurde.</li>
     <li>Gruppen-Administratoren können inaktive Gruppen direkt unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen. Eine Gruppe kommt für die Bereinigung in Frage, wenn sie seit über 6 Monaten inaktiv ist und alle Schulden beglichen wurden. Wenn ein Administrator die Löschung einleitet, erhalten alle betroffenen Gruppenmitglieder eine Push-Benachrichtigung mit dem Namen des Administrators. Der Administrator kann wählen, ob er die Gruppenausgaben exportieren, lokal behalten oder vollständig löschen möchte, bevor die Gruppe aus Firebase entfernt wird.</li>
+    <li>In der Web-Version öffnen Sie den Tab <strong>Members</strong> einer Gruppe und wählen <strong>Leave Group</strong>, um sie zu verlassen (sobald Ihr Saldo ausgeglichen ist, wie in der App).</li>
+    <li>Sobald Sie alle Ihre Gruppen verlassen haben, löscht <strong>Delete My Web Sign-in</strong> auf der Seite <strong>Your groups</strong> der Website Ihre Anmelde-E-Mail-Adresse aus Firebase Authentication und meldet Sie ab (siehe Abschnitt 2).</li>
+    <li>Das Abmelden von der Web-Version löscht die in diesem Browser gespeicherte Kopie der Gruppendaten und Ihre Anmeldung.</li>
     <li>Die Deinstallation von Node Expense entfernt alle lokal gespeicherten Daten von Ihrem Gerät</li>
   </ul>
   <p>Hinweis: Firebase-Gruppendaten können bestehen bleiben, bis die Gruppe über den gruppeninternen Löschvorgang formal gelöscht wird.</p>
@@ -1380,6 +1459,7 @@
     <li>Als Gruppen-Administrator inaktive Gruppen (über 6 Monate inaktiv, alle Schulden beglichen) unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen, mit der Wahl zwischen Exportieren, lokal Behalten oder vollständigem Löschen aller Gruppenausgaben</li>
     <li>Ihr Abonnement jederzeit über die Apple App Store-Einstellungen kündigen</li>
     <li>Die Nutzung von Backups oder verschlüsselten Exporten jederzeit beenden</li>
+    <li>In der Web-Version eine Gruppe über ihren Tab <strong>Members</strong> verlassen, Ihre Web-Anmeldung auf der Seite <strong>Your groups</strong> löschen und sich jederzeit abmelden, um die Kopie in diesem Browser zu entfernen</li>
   </ul>
 
   <h2><span class="section-number">14</span>Änderungen dieser Richtlinie</h2>
@@ -1392,10 +1472,10 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-es">
-  <div class="meta"><strong>Última actualización:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Última actualización:</strong> 2026-11-23 &nbsp;·&nbsp; <strong>Plataforma:</strong> iOS, iPadOS, macOS, web</div>
 
   <h2><span class="section-number">1</span>Descripción general</h2>
-  <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense.</p>
+  <p>Node Expense: Track Together ("nosotros", "nuestro") respeta su privacidad. Esta Política de Privacidad explica qué datos recopila Node Expense, cómo se utilizan y qué opciones tiene al usar Node Expense. Esta política también cubre el sitio web de Node Expense para miembros de grupos (la versión web, en expense-tracker-70311.web.app), que permite a quienes no tienen iPhone, iPad ni Mac unirse a un grupo y ver sus gastos y saldos en un navegador web.</p>
 
   <h2><span class="section-number">2</span>Datos que recopilamos</h2>
   <div class="data-grid">
@@ -1409,6 +1489,7 @@
         <li>Gastos y liquidaciones del grupo</li>
         <li>Comentarios que publique en gastos de grupo</li>
         <li>Nombre para mostrar</li>
+        <li>Inicio de sesión en la versión web: la dirección de correo electrónico de su cuenta de Google o la dirección con la que inicia sesión (y, con Google, el nombre y la foto de perfil que proporciona Google). Se usa solo para iniciar su sesión; su correo electrónico nunca se muestra a otros miembros</li>
         <li>Identificadores de pago opcionales (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Fotos de recibos opcionales adjuntas a los gastos (función de suscripción PRO)</li>
         <li>Imágenes de recibos escaneadas para dividir por artículos mediante Pick &amp; Pay (se envían a la API de Google Gemini para su procesamiento por IA; función de suscripción PRO)</li>
@@ -1425,6 +1506,7 @@
       <ul>
         <li>Análisis de uso (Firebase), vinculado a un identificador aleatorio que la app crea para usted, nunca a su nombre ni a su correo electrónico</li>
         <li>Identificador de dispositivo anónimo</li>
+        <li>En la versión web: el idioma de su navegador y el hecho de que usa el sitio web (los miembros de sus grupos ven la etiqueta <strong>Web</strong> junto a su nombre)</li>
         <li>Registros de fallos y diagnósticos</li>
         <li>Información de rendimiento del dispositivo y la app</li>
         <li>Tokens de notificaciones push (cuando están habilitados)</li>
@@ -1438,7 +1520,14 @@
   <p><strong>Acceso al grupo.</strong> Que pueda añadir gastos a un grupo depende de PRO, de la prueba gratuita o de un lugar cubierto por un miembro PRO, por lo que la app comparte su estado PRO con los grupos a los que pertenece. Cuando compra PRO, crea un grupo o abre la app, esta envía a nuestros servidores el registro firmado de su compra emitido por el App Store; allí comprobamos la firma de Apple y conservamos el identificador de transacción, el producto, la fecha de vencimiento y si se reembolsó, vinculados al identificador de la app de cada dispositivo que tiene la compra. Los dispositivos que tienen la misma compra cuentan como un solo miembro PRO. RevenueCat también avisa a nuestros servidores cuando una suscripción se renueva, termina o se reembolsa. Las fechas de fin de PRO y de la prueba gratuita de cada miembro se guardan en cada grupo al que pertenece, y los miembros ven una etiqueta PRO y quién está cubierto. Nunca recibimos su nombre, correo electrónico ni datos de pago (solo recibimos un identificador de su cuenta de Apple si usa Iniciar sesión con Apple, descrito más abajo), y los registros de compra nunca se muestran a otros miembros.</p>
 
   <h3>Sincronización de licencia entre dispositivos (Iniciar sesión con Apple)</h3>
-  <p>No se requiere cuenta ni inicio de sesión para usar Node Expense. Si tiene PRO en más de un dispositivo (iPhone, iPad o Mac) con la sesión iniciada en la misma cuenta de Apple, puede <strong>opcionalmente</strong> tocar <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO entre ellos. <strong>No solicitamos ni nombre ni correo electrónico</strong>: solo el identificador estable y específico de la app que proporciona Apple. Ese identificador se usa <strong>únicamente</strong> para asociar su licencia PRO (y cualquier código de oferta de la App Store que haya canjeado) al mismo perfil de suscriptor en cada dispositivo, a través de RevenueCat, y para que una compra que comparten sus dispositivos cuente como un solo miembro PRO en los grupos. Para ello, nuestros servidores comprueban el token de inicio de sesión de Apple y conservan solo un hash unidireccional del identificador, junto con los identificadores de la app de sus dispositivos con la sesión iniciada (hasta 10); al desconectar un dispositivo, se elimina de esa lista. <strong>Nunca</strong> se usa para publicidad, seguimiento ni elaboración de perfiles. Puede desconectar un dispositivo en cualquier momento desde la pantalla de Suscripción, y puede revocar el inicio de sesión por completo en Configuración de iOS/iPadOS (Ajustes del Sistema en Mac) → su cuenta de Apple → Iniciar sesión con Apple.</p>
+  <p>No se requiere cuenta ni inicio de sesión para usar la app Node Expense. Si tiene PRO en más de un dispositivo (iPhone, iPad o Mac) con la sesión iniciada en la misma cuenta de Apple, puede <strong>opcionalmente</strong> tocar <strong>Iniciar sesión con Apple</strong> en la pantalla de Suscripción para sincronizar su licencia PRO entre ellos. <strong>No solicitamos ni nombre ni correo electrónico</strong>: solo el identificador estable y específico de la app que proporciona Apple. Ese identificador se usa <strong>únicamente</strong> para asociar su licencia PRO (y cualquier código de oferta de la App Store que haya canjeado) al mismo perfil de suscriptor en cada dispositivo, a través de RevenueCat, y para que una compra que comparten sus dispositivos cuente como un solo miembro PRO en los grupos. Para ello, nuestros servidores comprueban el token de inicio de sesión de Apple y conservan solo un hash unidireccional del identificador, junto con los identificadores de la app de sus dispositivos con la sesión iniciada (hasta 10); al desconectar un dispositivo, se elimina de esa lista. <strong>Nunca</strong> se usa para publicidad, seguimiento ni elaboración de perfiles. Puede desconectar un dispositivo en cualquier momento desde la pantalla de Suscripción, y puede revocar el inicio de sesión por completo en Configuración de iOS/iPadOS (Ajustes del Sistema en Mac) → su cuenta de Apple → Iniciar sesión con Apple.</p>
+
+  <h3>Versión web (sitio web)</h3>
+  <p>La app no requiere cuenta ni inicio de sesión; la versión web sí: inicia sesión con una cuenta de Google o con un enlace de un solo uso enviado a su dirección de correo electrónico, a través de Firebase Authentication. Firebase guarda su dirección de correo electrónico (y, con Google, el nombre y la foto de perfil que proporciona Google) para que pueda volver a iniciar sesión; su correo electrónico nunca se muestra a otros miembros del grupo. El nombre que introduce al unirse es su nombre para mostrar en ese grupo, como en la app.</p>
+  <p>Cuando inicia sesión, el sitio web registra que se está usando un cliente web, junto con el idioma de su navegador, para que sigan funcionando las funciones de grupo que necesitan que los dispositivos de todos los miembros estén actualizados. Los miembros de sus grupos ven la etiqueta <strong>Web</strong> junto a su nombre. Actualmente, el sitio web le permite ver grupos, unirse a un grupo, ocupar un lugar que alguien añadió para usted por nombre, confirmar o rechazar un pago que alguien registró a su favor, votar sobre la eliminación de un grupo y salir de un grupo; para añadir gastos y registrar pagos se necesita la app.</p>
+  <p>Para proteger el servicio contra abusos, el sitio web usa Google reCAPTCHA Enterprise (a través de Firebase App Check), que examina información sobre su navegador y su dispositivo. Su uso está sujeto a la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad</a> y las <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Condiciones del Servicio</a> de Google. El sitio web no usa analítica ni establece cookies propias; el inicio de sesión de Google y reCAPTCHA pueden establecer sus propias cookies.</p>
+  <p>Si deja marcada la opción <strong>Keep me signed in on this computer</strong> (mantener la sesión iniciada en este equipo) al iniciar sesión, su navegador guarda una copia de los datos de grupo que puede ver, para que las páginas carguen cuando se corte la conexión, y su sesión, para que siga con la sesión iniciada. Si la desmarca (por ejemplo, en un equipo compartido), su sesión dura solo hasta que cierre esa pestaña del navegador y no se guarda ninguna copia de los datos de grupo; el navegador solo recuerda esa elección. Mientras inicia sesión con un enlace por correo electrónico, el navegador también guarda esa dirección de correo electrónico hasta que se usa el enlace, y la página a la que volver después. Al cerrar sesión se borran del navegador la copia de los datos de grupo y su sesión.</p>
+  <p><strong>Eliminar su inicio de sesión web.</strong> Una vez que haya salido de todos sus grupos, elija <strong>Delete My Web Sign-in</strong> (eliminar mi inicio de sesión web) en la página <strong>Your groups</strong> (sus grupos) del sitio web. Esto elimina su dirección de correo electrónico (y el nombre y la foto que proporcionó Google) de Firebase Authentication, junto con el registro del sitio web de que se usa un cliente web, y cierra su sesión. Su nombre permanece en los gastos y pagos de los grupos en los que estuvo, como el de un miembro que sale de un grupo en la app, y en su historial de actividad hasta que se elimina a los 90 días.</p>
 
   <h2><span class="section-number">3</span>Servicios de terceros</h2>
   <table class="service-table">
@@ -1449,16 +1538,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>Análisis de uso, vinculado a un identificador aleatorio generado por la app (sin nombre ni correo electrónico)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Sincronización de datos de grupo (gastos, miembros, liquidaciones, solicitudes de eliminación); números premiados públicos de la lotería de la factura unificada de Taiwán</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Almacenamiento de fotos de recibos para gastos de grupo, fotos de perfil de usuario y fotos de grupo (JPEG comprimido; quién puede ver cada una se indica en la sección 9.2)</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>Identificación anónima de usuario para mantener la continuidad de la suscripción sin requerir el inicio de sesión del usuario ni la creación de una cuenta</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Identificación anónima de usuario en la app, para que la suscripción continúe sin inicio de sesión ni cuenta; en la versión web, inicio de sesión con una cuenta de Google o un enlace por correo electrónico</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>Inicio de sesión opcional en la versión web con su cuenta de Google (dirección de correo electrónico, nombre y foto de perfil)</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tareas en segundo plano, incluida la eliminación de grupos, el envío de notificaciones push, añadir y reclamar personas añadidas por nombre, la comprobación de compras del App Store para el acceso al grupo y la vinculación de dispositivos con Iniciar sesión con Apple</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notificaciones push para actividad de grupo</td></tr>
       <tr><td><strong>Google Gemini API (a través de Firebase AI Logic)</strong></td><td>OCR con IA y extracción de líneas de artículos a partir de fotos de recibos escaneadas con Pick &amp; Pay (función de suscripción PRO)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuración remota de parámetros de funciones (por ejemplo, límites mensuales de escaneo por cuenta) sin necesidad de actualizar la app</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>Prevención de fraude y abuso para las llamadas a la API del backend</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Prevención de fraude y abuso para las llamadas a la API del backend; en la versión web usa Google reCAPTCHA Enterprise, que examina información sobre su navegador y su dispositivo</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Informes de fallos y diagnóstico de estabilidad</td></tr>
       <tr><td><strong>Mapas de Apple (MapKit)</strong></td><td>Sugiere lugares coincidentes mientras escribe una dirección o un nombre de lugar, convierte la posición de su dispositivo en una dirección, convierte una dirección o un nombre de lugar escrito en coordenadas del mapa, y encuentra el comercio de un recibo escaneado a partir de la dirección, el nombre o el teléfono impresos en él, cuando Seguimiento de ubicación está activado</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Tipos de cambio para la conversión de divisas; solo se envía un código de divisa</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>Aloja nuestro sitio web, incluida la página que abre un enlace de invitación a un grupo; el enlace lleva el código de invitación del grupo, y la página no usa cookies, analítica ni scripts de terceros</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>Aloja nuestro sitio web, incluida la página que abre un enlace de invitación a un grupo; el enlace lleva el código de invitación del grupo, y la página no usa cookies, analítica ni scripts de terceros; también enlaza con la versión web para quienes no tienen un dispositivo Apple</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>Aloja la versión web; un enlace de invitación abierto allí lleva el código de invitación del grupo en la parte de la dirección que nunca se envía a un servidor</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase se utiliza únicamente como capa de sincronización para las funciones relacionadas con grupos. Los datos de gastos personales (no de grupo) <strong>nunca</strong> se cargan en servicios en la nube. La única excepción son las búsquedas de ubicación descritas en la sección 7.</div>
@@ -1526,11 +1617,12 @@
     <li>Gastos de grupo en caché para visualización sin conexión</li>
   </ul>
   <p>Los datos de gastos e ingresos personales — incluidas las fotos de recibos adjuntas — nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. La única excepción son las búsquedas de ubicación descritas en la sección 7. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado" solo si quien eliminó el grupo optó por conservar los registros. Si optó por eliminarlos, esos gastos también se borran de su dispositivo.</p>
+  <p><strong>En la versión web</strong>, con <strong>Keep me signed in on this computer</strong> marcada, su navegador guarda una copia de los datos de grupo que puede ver (para verlos sin conexión) y su sesión; desmarcada, conserva su sesión solo hasta que se cierra la pestaña y ningún dato de grupo. También recuerda esa elección y, mientras inicia sesión con un enlace por correo electrónico, esa dirección de correo electrónico (hasta que se usa el enlace) y la página a la que volver. Al cerrar sesión se borran del navegador la copia de los datos de grupo y su sesión.</p>
 
   <h3>9.2 Almacenamiento en la nube para funciones de grupo</h3>
   <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore (y las fotos con Firebase Storage):</p>
   <ul>
-    <li>Documentos de grupo (nombre, descripción, icono, miembros, permisos, código de invitación, moneda de liquidación y sus tipos de cambio)</li>
+    <li>Documentos de grupo (nombre, descripción, icono, miembros —incluido si un miembro se unió desde la versión web—, permisos, código de invitación, moneda de liquidación y sus tipos de cambio)</li>
     <li>Personas añadidas a un grupo por nombre (el nombre y quién las añadió), y solicitudes para reclamar una (quién dice ser esa persona, quién puede aprobarlo y cuándo)</li>
     <li>Gastos de grupo (importe, categoría, nota, fecha, ubicación si está habilitada, identidad del pagador)</li>
     <li>Fotos de recibos de gastos de grupo (JPEG comprimido, almacenadas en Firebase Storage y visibles para todos los miembros del grupo; función de suscripción PRO)</li>
@@ -1540,7 +1632,7 @@
     <li>Solicitudes de eliminación de grupo y votos de miembros</li>
     <li>Fechas de inicio de prueba (para recuperación tras reinstalación)</li>
     <li>Acceso al grupo: las fechas de fin de PRO y de la prueba gratuita de cada miembro, guardadas en cada grupo al que pertenece; y los registros de compra del App Store (identificador de transacción, producto, fecha de vencimiento, si se reembolsó y los identificadores de la app de los dispositivos que tienen la compra), que nunca se muestran a otros miembros (véase la sección 2); y, solo si usa Iniciar sesión con Apple, un hash unidireccional del identificador de Apple con los identificadores de la app de sus dispositivos con la sesión iniciada</li>
-    <li>Tokens de notificaciones push (FCM), junto con su configuración de notificaciones (qué tipos de notificaciones desea recibir y qué grupos ha desactivado) y el número de la insignia de no leídos</li>
+    <li>Tokens de notificaciones push (FCM), junto con su configuración de notificaciones (qué tipos de notificaciones desea recibir y qué grupos ha desactivado) y el número de la insignia de no leídos; para la versión web, un registro de que se usa un cliente web y el idioma de su navegador (sin token de notificaciones)</li>
     <li>Identificadores de pago opcionales para enlaces directos de liquidación (nombres de usuario de Venmo, Cash App y PayPal.me; un número de teléfono de Apple Cash, que abre Mensajes en lugar de una app de pago; y un teléfono o correo de Zelle, un ID de LINE y un ID de WeChat, que no abren nada y solo se muestran a los miembros del grupo para copiarlos)</li>
     <li><strong>Seguimiento de escaneos de Pick &amp; Pay</strong> — un pequeño registro por cuenta del número de escaneos que ha realizado este mes y si se ha utilizado su prueba gratuita. Se usa para aplicar los límites mensuales por cuenta y para mostrarle los escaneos restantes en Ajustes. No contiene ninguna información sobre el contenido de ningún recibo.</li>
     <li><strong>Historial de actividad del grupo</strong> — un registro de todas las acciones realizadas en el grupo (gastos añadidos, editados, reembolsados o eliminados; miembros que se unieron, abandonaron o fueron eliminados). Estos datos se almacenan en Firebase Firestore y se <strong>eliminan automática y permanentemente después de 90 días</strong>. La actividad anterior a 90 días no puede recuperarse.</li>
@@ -1575,6 +1667,9 @@
     <li>Actualizar su foto de perfil sobrescribe la foto anterior en Firebase Storage. Al elegir «Eliminar foto», esta se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
     <li>Actualizar o eliminar la foto de grupo funciona de la misma manera: actualizar sobrescribe la foto existente en Firebase Storage, y elegir «Eliminar foto» la borra. Solo el administrador del grupo puede realizar estas acciones. La foto de grupo también se elimina de Firebase Storage cuando el propio grupo se elimina, independientemente de la opción de eliminación elegida.</li>
     <li>Los administradores de grupo pueden depurar grupos inactivos directamente desde Ajustes → Datos y privacidad → Grupos inactivos. Un grupo es elegible para su depuración tras 6 meses de inactividad con todas las deudas saldadas. Cuando un administrador inicia la eliminación, todos los miembros afectados del grupo reciben una notificación push con el nombre de quien eliminó el grupo. El administrador puede elegir exportar los gastos del grupo, conservarlos localmente o eliminarlos por completo antes de que el grupo se retire de Firebase.</li>
+    <li>En la versión web, abra la pestaña <strong>Members</strong> de un grupo y elija <strong>Leave Group</strong> para salir de él (una vez saldado su saldo, como en la app).</li>
+    <li>Una vez que haya salido de todos sus grupos, <strong>Delete My Web Sign-in</strong> en la página <strong>Your groups</strong> del sitio web elimina de Firebase Authentication la dirección de correo electrónico con la que inicia sesión y cierra su sesión (consulte la sección 2).</li>
+    <li>Cerrar sesión en la versión web borra la copia de los datos de grupo y la sesión guardadas en ese navegador.</li>
     <li>Desinstalar Node Expense elimina todos los datos almacenados localmente de su dispositivo</li>
   </ul>
   <p>Nota: Los datos de grupo de Firebase pueden persistir hasta que el grupo se elimine formalmente a través del proceso de eliminación en la app.</p>
@@ -1592,6 +1687,7 @@
     <li>Como administrador del grupo, depurar grupos inactivos (más de 6 meses inactivos, todas las deudas saldadas) desde Ajustes → Datos y privacidad → Grupos inactivos, con la opción de exportar, conservar localmente o eliminar todos los gastos del grupo</li>
     <li>Cancelar su suscripción en cualquier momento a través de los ajustes del App Store de Apple</li>
     <li>Dejar de usar copias de seguridad o exportaciones cifradas en cualquier momento</li>
+    <li>En la versión web, salir de un grupo desde su pestaña <strong>Members</strong>, eliminar su inicio de sesión web en la página <strong>Your groups</strong> y cerrar sesión en cualquier momento para borrar la copia de ese navegador</li>
   </ul>
 
   <h2><span class="section-number">14</span>Cambios en esta política</h2>
@@ -1604,10 +1700,10 @@
   </div>
 </div>
 <div class="lang-content" hidden id="lang-fr">
-  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-11-21 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>Dernière mise à jour :</strong> 2026-11-23 &nbsp;·&nbsp; <strong>Plateforme :</strong> iOS, iPadOS, macOS, web</div>
 
   <h2><span class="section-number">1</span>Aperçu</h2>
-  <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense.</p>
+  <p>Node Expense : Track Together (« nous », « notre ») respecte votre vie privée. Cette Politique de Confidentialité explique quelles données Node Expense collecte, comment elles sont utilisées et quels choix vous avez lors de l'utilisation de Node Expense. Cette politique couvre aussi le site web de Node Expense destiné aux membres des groupes (la version web, à l'adresse expense-tracker-70311.web.app), qui permet aux personnes sans iPhone, iPad ni Mac de rejoindre un groupe et d'en voir les dépenses et les soldes dans un navigateur web.</p>
 
   <h2><span class="section-number">2</span>Données que nous collectons</h2>
   <div class="data-grid">
@@ -1621,6 +1717,7 @@
         <li>Dépenses et remboursements de groupe</li>
         <li>Commentaires que vous publiez sur les dépenses de groupe</li>
         <li>Nom d'affichage</li>
+        <li>Connexion à la version web : l'adresse e-mail de votre compte Google ou l'adresse e-mail avec laquelle vous vous connectez (et, avec Google, le nom et la photo de profil fournis par Google). Utilisée uniquement pour vous connecter ; votre e-mail n'est jamais montré aux autres membres</li>
         <li>Identifiants de paiement optionnels (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>Photos de reçus optionnelles attachées aux dépenses (fonctionnalité d'abonnement PRO)</li>
         <li>Images de reçus scannées pour le partage par article via Pick &amp; Pay (envoyées à l'API Google Gemini pour traitement par IA ; fonctionnalité d'abonnement PRO)</li>
@@ -1637,6 +1734,7 @@
       <ul>
         <li>Analyses d'utilisation (Firebase), liées à un identifiant aléatoire que l'app crée pour vous, jamais à votre nom ni à votre adresse e-mail</li>
         <li>Identifiant d'appareil anonyme</li>
+        <li>Sur la version web : la langue de votre navigateur, et le fait que vous utilisez le site web (les membres de vos groupes voient la mention <strong>Web</strong> à côté de votre nom)</li>
         <li>Journaux de plantage et diagnostics</li>
         <li>Informations de performances de l'appareil et de l'app</li>
         <li>Jetons de notification push (lorsqu'activés)</li>
@@ -1650,7 +1748,14 @@
   <p><strong>Accès au groupe.</strong> Pouvoir ajouter des dépenses à un groupe dépend de PRO, de l'essai gratuit ou d'une place couverte par un membre PRO ; l'app partage donc votre statut PRO avec les groupes dont vous êtes membre. Lorsque vous achetez PRO, créez un groupe ou ouvrez l'app, celle-ci envoie à nos serveurs le reçu signé de votre achat fourni par l'App Store ; nous y vérifions la signature d'Apple et conservons l'identifiant de transaction, le produit, la date d'expiration et l'éventuel remboursement, associés à l'identifiant d'app de chaque appareil qui détient l'achat. Les appareils qui détiennent le même achat comptent comme un seul membre PRO. RevenueCat informe également nos serveurs lorsqu'un abonnement est renouvelé, prend fin ou est remboursé. Les dates de fin de PRO et d'essai gratuit de chaque membre sont ensuite enregistrées dans chaque groupe dont il fait partie, et les membres voient une mention PRO et qui est couvert. Nous ne recevons jamais votre nom, votre e-mail ni vos informations de paiement (nous ne recevons un identifiant de votre compte Apple que si vous utilisez Se connecter avec Apple, décrit ci-dessous), et les reçus d'achat ne sont jamais montrés aux autres membres.</p>
 
   <h3>Synchronisation de licence entre appareils (Se connecter avec Apple)</h3>
-  <p>Aucun compte ni aucune connexion n'est requis pour utiliser Node Expense. Si vous possédez PRO sur plusieurs appareils (iPhone, iPad ou Mac) connectés au même compte Apple, vous pouvez <strong>facultativement</strong> toucher <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre eux. Nous ne demandons <strong>ni nom ni e-mail</strong> — uniquement l'identifiant stable et propre à l'app fourni par Apple. Cet identifiant sert <strong>uniquement</strong> à associer votre licence PRO (ainsi que tout code promotionnel App Store que vous avez utilisé) au même profil d'abonné sur chaque appareil, via RevenueCat, et à faire compter un achat partagé par vos appareils comme un seul membre PRO dans les groupes. Pour cela, nos serveurs vérifient le jeton de connexion d'Apple et ne conservent qu'une empreinte à sens unique de l'identifiant, avec les identifiants d'app de vos appareils connectés (jusqu'à 10) ; déconnecter un appareil le retire de cette liste. Il n'est <strong>jamais</strong> utilisé à des fins de publicité, de suivi ou de profilage. Vous pouvez déconnecter un appareil à tout moment depuis l'écran Abonnement, et révoquer entièrement la connexion dans Réglages iOS/iPadOS (Réglages Système sur Mac) → votre compte Apple → Se connecter avec Apple.</p>
+  <p>Aucun compte ni aucune connexion n'est requis pour utiliser l'app Node Expense. Si vous possédez PRO sur plusieurs appareils (iPhone, iPad ou Mac) connectés au même compte Apple, vous pouvez <strong>facultativement</strong> toucher <strong>Se connecter avec Apple</strong> sur l'écran Abonnement pour synchroniser votre licence PRO entre eux. Nous ne demandons <strong>ni nom ni e-mail</strong> — uniquement l'identifiant stable et propre à l'app fourni par Apple. Cet identifiant sert <strong>uniquement</strong> à associer votre licence PRO (ainsi que tout code promotionnel App Store que vous avez utilisé) au même profil d'abonné sur chaque appareil, via RevenueCat, et à faire compter un achat partagé par vos appareils comme un seul membre PRO dans les groupes. Pour cela, nos serveurs vérifient le jeton de connexion d'Apple et ne conservent qu'une empreinte à sens unique de l'identifiant, avec les identifiants d'app de vos appareils connectés (jusqu'à 10) ; déconnecter un appareil le retire de cette liste. Il n'est <strong>jamais</strong> utilisé à des fins de publicité, de suivi ou de profilage. Vous pouvez déconnecter un appareil à tout moment depuis l'écran Abonnement, et révoquer entièrement la connexion dans Réglages iOS/iPadOS (Réglages Système sur Mac) → votre compte Apple → Se connecter avec Apple.</p>
+
+  <h3>Version web (site web)</h3>
+  <p>L'app ne demande ni compte ni connexion ; la version web, si : vous vous connectez avec un compte Google ou avec un lien à usage unique envoyé à votre adresse e-mail, via Firebase Authentication. Firebase conserve votre adresse e-mail (et, avec Google, le nom et la photo de profil fournis par Google) pour que vous puissiez vous reconnecter ; votre e-mail n'est jamais montré aux autres membres du groupe. Le nom que vous saisissez en rejoignant un groupe est votre nom d'affichage dans ce groupe, comme dans l'app.</p>
+  <p>Lorsque vous vous connectez, le site web enregistre qu'un client web est utilisé, avec la langue de votre navigateur, afin que les fonctions de groupe qui exigent que l'appareil de chaque membre soit à jour continuent de fonctionner. Les membres de vos groupes voient la mention <strong>Web</strong> à côté de votre nom. Le site web permet actuellement de consulter des groupes, de rejoindre un groupe, de reprendre une place que quelqu'un a ajoutée pour vous par votre nom, de confirmer ou de refuser un paiement que quelqu'un a enregistré en votre faveur, de voter sur la suppression d'un groupe et de quitter un groupe ; l'ajout de dépenses et l'enregistrement de paiements nécessitent l'app.</p>
+  <p>Pour protéger le service contre les abus, le site web utilise Google reCAPTCHA Enterprise (via Firebase App Check), qui examine des informations sur votre navigateur et votre appareil. Son utilisation est soumise aux <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité</a> et aux <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Conditions d'utilisation</a> de Google. Le site web n'utilise aucun outil d'analyse et ne dépose aucun cookie propre ; la connexion Google et reCAPTCHA peuvent déposer leurs propres cookies.</p>
+  <p>Si vous laissez <strong>Keep me signed in on this computer</strong> (rester connecté sur cet ordinateur) coché lors de la connexion, votre navigateur conserve une copie des données de groupe que vous pouvez voir, pour que les pages se chargent quand la connexion est coupée, ainsi que votre connexion, pour que vous restiez connecté. Si vous le décochez (par exemple sur un ordinateur partagé), votre connexion ne dure que jusqu'à la fermeture de cet onglet du navigateur et aucune copie des données de groupe n'est conservée ; le navigateur ne retient que ce choix. Pendant que vous vous connectez avec un lien envoyé par e-mail, le navigateur conserve aussi cette adresse e-mail jusqu'à l'utilisation du lien, ainsi que la page à laquelle revenir ensuite. La déconnexion supprime du navigateur la copie des données de groupe et votre connexion.</p>
+  <p><strong>Supprimer votre connexion web.</strong> Une fois que vous avez quitté tous vos groupes, choisissez <strong>Delete My Web Sign-in</strong> (supprimer ma connexion web) sur la page <strong>Your groups</strong> (vos groupes) du site web. Cela supprime votre adresse e-mail (ainsi que le nom et la photo fournis par Google) de Firebase Authentication, avec l'enregistrement du site web indiquant qu'un client web est utilisé, et vous déconnecte. Votre nom reste dans les dépenses et les paiements des groupes dont vous faisiez partie, comme celui d'un membre qui quitte un groupe dans l'app, et dans leur historique d'activité jusqu'à sa suppression au bout de 90 jours.</p>
 
   <h2><span class="section-number">3</span>Services tiers</h2>
   <table class="service-table">
@@ -1661,16 +1766,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>Analyses d'utilisation, liées à un identifiant aléatoire généré par l'app (sans nom ni adresse e-mail)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>Synchronisation des données de groupe (dépenses, membres, remboursements, demandes de suppression) ; numéros gagnants publics de la loterie de la facture unifiée de Taïwan</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>Stockage des photos de reçus pour les dépenses de groupe, des photos de profil utilisateur et des photos de groupe (JPEG compressé ; qui peut voir chacune est précisé à la section 9.2)</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>Connexion anonyme (Aucune inscription requise). Les données locales sont stockées en toute sécurité dans l'appareil. L'identifiant anonyme est uniquement utilisé pour garantir la continuité de l'abonnement</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>Identification anonyme de l'utilisateur dans l'app, pour que l'abonnement continue sans connexion ni compte ; sur la version web, connexion avec un compte Google ou un lien envoyé par e-mail</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>Connexion facultative à la version web avec votre compte Google (adresse e-mail, nom et photo de profil)</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>Tâches en arrière-plan incluant la suppression de groupe, la livraison de notifications push, l'ajout et la revendication des personnes ajoutées par leur nom, la vérification des achats App Store pour l'accès aux groupes et l'association des appareils connectés avec Apple</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Notifications push pour l'activité de groupe</td></tr>
       <tr><td><strong>API Google Gemini (via Firebase AI Logic)</strong></td><td>OCR alimenté par IA et extraction de lignes d'articles à partir de photos de reçus scannées via Pick &amp; Pay (fonctionnalité d'abonnement PRO)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>Configuration à distance de paramètres de fonctionnalités (par ex. plafonds mensuels de scans par compte) sans nécessiter de mise à jour de l'app</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>Prévention de la fraude et des abus pour les appels d'API backend</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>Prévention de la fraude et des abus pour les appels d'API backend ; sur la version web, elle utilise Google reCAPTCHA Enterprise, qui examine des informations sur votre navigateur et votre appareil</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>Rapports de plantage et diagnostics de stabilité</td></tr>
       <tr><td><strong>Plans d'Apple (MapKit)</strong></td><td>Suggère des lieux correspondants pendant que vous saisissez une adresse ou un nom de lieu, convertit la position de votre appareil en adresse, convertit une adresse ou un nom de lieu saisi en coordonnées sur la carte, et retrouve le commerce d'un reçu numérisé à partir de l'adresse, du nom ou du téléphone imprimés dessus, lorsque Suivi de localisation est activé</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>Taux de change pour la conversion des devises ; seul un code de devise est envoyé</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>Héberge notre site web, y compris la page qu'ouvre un lien d'invitation à un groupe ; le lien contient le code de partage du groupe, et la page n'utilise ni cookies, ni outils d'analyse, ni scripts tiers</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>Héberge notre site web, y compris la page qu'ouvre un lien d'invitation à un groupe ; le lien contient le code de partage du groupe, et la page n'utilise ni cookies, ni outils d'analyse, ni scripts tiers ; elle renvoie aussi vers la version web pour les personnes sans appareil Apple</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>Héberge la version web ; un lien d'invitation ouvert sur celle-ci contient le code de partage du groupe dans la partie de l'adresse qui n'est jamais envoyée à un serveur</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase est utilisé uniquement comme couche de synchronisation pour les fonctionnalités liées aux groupes. Les données de dépenses personnelles (hors groupe) ne sont <strong>jamais</strong> téléversées vers des services cloud. La seule exception concerne les recherches de lieux décrites à la section 7.</div>
@@ -1738,11 +1845,12 @@
     <li>Dépenses de groupe en cache pour une consultation hors ligne</li>
   </ul>
   <p>Les données de dépenses et de revenus personnels — y compris les photos de reçus jointes — ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. La seule exception concerne les recherches de lieux décrites à la section 7. Les dépenses des groupes supprimés ne sont conservées localement avec un marqueur « groupe supprimé » que si la personne ayant supprimé le groupe a choisi de conserver les enregistrements. Si elle a choisi de les supprimer, ces dépenses sont également effacées de votre appareil.</p>
+  <p><strong>Sur la version web</strong>, avec <strong>Keep me signed in on this computer</strong> coché, votre navigateur stocke une copie des données de groupe que vous pouvez voir (pour la consultation hors ligne) et votre connexion ; décoché, il ne conserve votre connexion que jusqu'à la fermeture de l'onglet, et aucune donnée de groupe. Il retient aussi ce choix et, pendant que vous vous connectez avec un lien envoyé par e-mail, cette adresse e-mail (jusqu'à l'utilisation du lien) et la page à laquelle revenir. La déconnexion supprime du navigateur la copie des données de groupe et votre connexion.</p>
 
   <h3>9.2 Stockage cloud pour les fonctionnalités de groupe</h3>
   <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore (et les photos avec Firebase Storage) :</p>
   <ul>
-    <li>Documents de groupe (nom, description, icône, membres, autorisations, code de partage, devise de règlement et ses taux de change)</li>
+    <li>Documents de groupe (nom, description, icône, membres — y compris si un membre a rejoint le groupe depuis la version web —, autorisations, code de partage, devise de règlement et ses taux de change)</li>
     <li>Personnes ajoutées à un groupe par leur nom (le nom et qui les a ajoutées), et demandes pour en revendiquer une (qui dit être cette personne, qui peut approuver, et quand)</li>
     <li>Dépenses de groupe (montant, catégorie, note, date, localisation si activée, identité du payeur)</li>
     <li>Photos de reçus des dépenses de groupe (JPEG compressé, stockées dans Firebase Storage et visibles par tous les membres du groupe ; fonctionnalité d'abonnement PRO)</li>
@@ -1752,7 +1860,7 @@
     <li>Demandes de suppression de groupe et votes des membres</li>
     <li>Dates de début d'essai (pour la récupération après réinstallation)</li>
     <li>Accès au groupe : les dates de fin de PRO et d'essai gratuit de chaque membre, enregistrées dans chaque groupe dont il fait partie ; et les reçus d'achat App Store (identifiant de transaction, produit, date d'expiration, remboursement éventuel et identifiants d'app des appareils qui détiennent l'achat), jamais montrés aux autres membres (voir section 2) ; et, uniquement si vous utilisez Se connecter avec Apple, une empreinte à sens unique de l'identifiant Apple avec les identifiants d'app de vos appareils connectés</li>
-    <li>Jetons de notification push (FCM), avec vos réglages de notification (les types de notifications que vous souhaitez recevoir et les groupes que vous avez désactivés) et le nombre affiché sur la pastille de non-lus</li>
+    <li>Jetons de notification push (FCM), avec vos réglages de notification (les types de notifications que vous souhaitez recevoir et les groupes que vous avez désactivés) et le nombre affiché sur la pastille de non-lus ; pour la version web, un enregistrement indiquant qu'un client web est utilisé et la langue de votre navigateur (sans jeton de notification)</li>
     <li>Identifiants de paiement optionnels pour les liens profonds de remboursement (noms d'utilisateur Venmo, Cash App et PayPal.me ; un numéro de téléphone Apple Cash, qui ouvre Messages et non une application de paiement ; ainsi qu'un numéro de téléphone ou e-mail Zelle, un identifiant LINE et un identifiant WeChat, qui n'ouvrent rien du tout et sont simplement affichés aux membres du groupe pour être copiés)</li>
     <li><strong>Suivi des scans Pick &amp; Pay</strong> — un petit enregistrement par compte du nombre de scans que vous avez effectués ce mois-ci et si votre essai gratuit a été utilisé. Sert à appliquer les plafonds mensuels par compte et à vous montrer vos scans restants dans les Réglages. Ne contient aucune information sur le contenu d'un reçu.</li>
     <li><strong>Historique des activités du groupe</strong> — un enregistrement de toutes les actions effectuées dans le groupe (dépenses ajoutées, modifiées, remboursées ou supprimées ; membres ayant rejoint, quitté ou été retirés). Ces données sont stockées dans Firebase Firestore et sont <strong>automatiquement et définitivement supprimées après 90 jours</strong>. Les activités antérieures à 90 jours ne peuvent pas être récupérées.</li>
@@ -1787,6 +1895,9 @@
     <li>La mise à jour de votre photo de profil écrase la photo précédente dans Firebase Storage. Choisir « Supprimer la photo » l'efface de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareil existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
     <li>La mise à jour ou la suppression d'une photo de groupe fonctionne de la même façon : la mise à jour écrase la photo existante dans Firebase Storage, et choisir « Supprimer la photo » la supprime. Seul l'admin du groupe peut effectuer ces actions. La photo de groupe est également supprimée de Firebase Storage lorsque le groupe lui-même est supprimé, quelle que soit l'option de suppression choisie.</li>
     <li>Les administrateurs de groupe peuvent supprimer les groupes inactifs directement depuis Réglages → Données et confidentialité → Groupes inactifs. Un groupe est éligible à la suppression après 6 mois d'inactivité avec toutes les dettes réglées. Lorsqu'un administrateur initie la suppression, tous les membres concernés reçoivent une notification push indiquant qui a supprimé le groupe. L'administrateur peut choisir d'exporter les dépenses du groupe, de les conserver localement ou de les supprimer entièrement avant que le groupe ne soit retiré de Firebase.</li>
+    <li>Sur la version web, ouvrez l'onglet <strong>Members</strong> d'un groupe et choisissez <strong>Leave Group</strong> pour le quitter (une fois votre solde réglé, comme dans l'app).</li>
+    <li>Une fois que vous avez quitté tous vos groupes, <strong>Delete My Web Sign-in</strong> sur la page <strong>Your groups</strong> du site web supprime votre adresse e-mail de connexion de Firebase Authentication et vous déconnecte (voir la section 2).</li>
+    <li>Se déconnecter de la version web supprime la copie des données de groupe et la connexion conservées dans ce navigateur.</li>
     <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre appareil</li>
   </ul>
   <p>Remarque : Les données de groupe Firebase peuvent persister jusqu'à ce que le groupe soit formellement supprimé via le processus de suppression intégré à l'app.</p>
@@ -1804,6 +1915,7 @@
     <li>En tant qu'administrateur de groupe, supprimer les groupes inactifs (plus de 6 mois d'inactivité, toutes les dettes réglées) depuis Réglages → Données et confidentialité → Groupes inactifs, avec le choix d'exporter, de conserver localement ou de supprimer toutes les dépenses du groupe</li>
     <li>Annuler votre abonnement à tout moment via les paramètres de l'App Store Apple</li>
     <li>Arrêter d'utiliser les sauvegardes ou les exportations chiffrées à tout moment</li>
+    <li>Sur la version web, quitter un groupe depuis son onglet <strong>Members</strong>, supprimer votre connexion web depuis la page <strong>Your groups</strong>, et vous déconnecter à tout moment pour effacer la copie de ce navigateur</li>
   </ul>
 
   <h2><span class="section-number">14</span>Modifications de cette politique</h2>
@@ -1817,10 +1929,10 @@
 </div>
 <!-- ========== KOREAN ========== -->
 <div class="lang-content" hidden id="lang-ko">
-  <div class="meta"><strong>최종 업데이트:</strong> 2026-11-21 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS</div>
+  <div class="meta"><strong>최종 업데이트:</strong> 2026-11-23 &nbsp;·&nbsp; <strong>플랫폼:</strong> iOS, iPadOS, macOS, 웹</div>
 
   <h2><span class="section-number">1</span>개요</h2>
-  <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다.</p>
+  <p>Node Expense: Track Together(이하 "당사")는 귀하의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 Node Expense가 수집하는 데이터, 사용 방법, 그리고 귀하의 선택권에 대해 설명합니다. 본 방침은 그룹 멤버를 위한 Node Expense 웹사이트(웹 버전, expense-tracker-70311.web.app)에도 적용됩니다. 웹 버전에서는 iPhone, iPad, Mac이 없는 사람도 웹 브라우저에서 그룹에 참가하고 그룹의 지출과 잔액을 확인할 수 있습니다.</p>
 
   <h2><span class="section-number">2</span>수집하는 데이터</h2>
   <div class="data-grid">
@@ -1834,6 +1946,7 @@
         <li>그룹 지출 및 정산 내역</li>
         <li>그룹 지출에 작성한 댓글</li>
         <li>표시 이름</li>
+        <li>웹 버전 로그인: Google 계정의 이메일 주소 또는 로그인에 사용하는 이메일 주소 (Google의 경우 Google이 제공하는 이름과 프로필 사진 포함). 로그인 용도로만 사용되며, 귀하의 이메일은 다른 멤버에게 절대 표시되지 않음</li>
         <li>선택적 결제 식별자 (Venmo, Cash App, PayPal.me, Apple Cash, Zelle, LINE, WeChat)</li>
         <li>지출에 첨부하는 선택적 영수증 사진 (PRO 구독 기능)</li>
         <li>Pick &amp; Pay 를 통한 항목별 분할용으로 스캔된 영수증 이미지 (AI 처리를 위해 Google Gemini API 로 전송됨; PRO 구독 기능)</li>
@@ -1850,6 +1963,7 @@
       <ul>
         <li>사용 분석 (Firebase), 앱이 생성한 무작위 식별자와 연결되며 이름이나 이메일은 포함되지 않음</li>
         <li>익명 기기 식별자</li>
+        <li>웹 버전: 브라우저 언어 및 웹사이트를 사용한다는 사실 (그룹 멤버에게는 귀하의 이름 옆에 <strong>웹</strong> 표시가 보임)</li>
         <li>충돌 로그 및 진단 정보</li>
         <li>기기 및 앱 성능 정보</li>
         <li>푸시 알림 토큰 (활성화 시)</li>
@@ -1863,7 +1977,14 @@
   <p><strong>그룹 이용 권한.</strong> 그룹에 지출을 추가할 수 있는지는 PRO, 무료 체험 또는 PRO 멤버가 제공하는 자리에 따라 달라지므로, 앱은 귀하의 PRO 상태를 귀하가 속한 그룹과 공유합니다. 귀하가 PRO를 구매하거나 그룹을 만들거나 앱을 열면, 앱은 App Store가 서명한 구매 기록을 당사 서버로 보냅니다. 당사는 Apple의 서명을 확인한 뒤 해당 구매의 거래 식별자, 상품, 만료일, 환불 여부를 구매를 보유한 각 기기의 앱 식별자와 연결하여 보관합니다. 같은 구매를 보유한 기기는 PRO 멤버 한 명으로 계산됩니다. 또한 RevenueCat은 구독이 갱신, 종료 또는 환불되면 당사 서버에 알립니다. 각 멤버의 PRO 및 무료 체험 종료일은 그 멤버가 속한 모든 그룹에 저장되며, 멤버들은 PRO 표시와 누가 누구의 자리를 이용하는지 볼 수 있습니다. 당사는 귀하의 이름, 이메일 또는 결제 정보를 절대 받지 않으며(Apple 계정의 식별자는 아래에 설명된 Apple로 로그인을 사용하는 경우에만 받습니다), 구매 기록은 다른 멤버에게 표시되지 않습니다.</p>
 
   <h3>기기 간 라이선스 동기화 (Apple로 로그인)</h3>
-  <p>Node Expense 사용에는 <strong>계정이나 로그인이 필요하지 않습니다</strong>. 동일한 Apple 계정으로 로그인한 여러 기기(iPhone, iPad, Mac)에서 PRO를 보유하고 있다면, 구독 화면에서 <strong>선택적으로</strong> <strong>Apple로 로그인</strong>을 탭하여 PRO 라이선스를 기기 간에 동기화할 수 있습니다. 당사는 <strong>이름이나 이메일을 요청하지 않으며</strong>, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 RevenueCat을 통해 각 기기에서 귀하의 PRO 라이선스(및 귀하가 사용한 App Store 오퍼 코드)를 동일한 구독자 프로필에 대조하고, 귀하의 기기들이 공유하는 구매를 그룹에서 PRO 멤버 한 명으로 계산하는 용도로만 사용되며, 광고·추적·프로파일링에는 <strong>절대</strong> 사용되지 않습니다. 이를 위해 당사 서버는 Apple의 로그인 토큰을 확인하고, 식별자의 단방향 해시와 로그인한 기기(최대 10대)의 앱 식별자만 보관합니다. 기기 연결을 해제하면 해당 목록에서 삭제됩니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있고, 「iOS/iPadOS 설정(Mac에서는 시스템 설정) → 귀하의 Apple 계정 → Apple로 로그인」에서 로그인을 완전히 취소할 수 있습니다.</p>
+  <p>Node Expense 앱 사용에는 <strong>계정이나 로그인이 필요하지 않습니다</strong>. 동일한 Apple 계정으로 로그인한 여러 기기(iPhone, iPad, Mac)에서 PRO를 보유하고 있다면, 구독 화면에서 <strong>선택적으로</strong> <strong>Apple로 로그인</strong>을 탭하여 PRO 라이선스를 기기 간에 동기화할 수 있습니다. 당사는 <strong>이름이나 이메일을 요청하지 않으며</strong>, Apple이 제공하는 안정적이고 앱에 한정된 식별자만 받습니다. 이 식별자는 RevenueCat을 통해 각 기기에서 귀하의 PRO 라이선스(및 귀하가 사용한 App Store 오퍼 코드)를 동일한 구독자 프로필에 대조하고, 귀하의 기기들이 공유하는 구매를 그룹에서 PRO 멤버 한 명으로 계산하는 용도로만 사용되며, 광고·추적·프로파일링에는 <strong>절대</strong> 사용되지 않습니다. 이를 위해 당사 서버는 Apple의 로그인 토큰을 확인하고, 식별자의 단방향 해시와 로그인한 기기(최대 10대)의 앱 식별자만 보관합니다. 기기 연결을 해제하면 해당 목록에서 삭제됩니다. 구독 화면에서 언제든지 기기 연결을 해제할 수 있고, 「iOS/iPadOS 설정(Mac에서는 시스템 설정) → 귀하의 Apple 계정 → Apple로 로그인」에서 로그인을 완전히 취소할 수 있습니다.</p>
+
+  <h3>웹 버전 (웹사이트)</h3>
+  <p>앱은 계정이나 로그인이 필요하지 않지만, 웹 버전은 필요합니다. Firebase Authentication을 통해 Google 계정 또는 귀하의 이메일 주소로 전송되는 일회용 링크로 로그인합니다. Firebase는 귀하가 다시 로그인할 수 있도록 이메일 주소(Google의 경우 Google이 제공하는 이름과 프로필 사진 포함)를 보관하며, 귀하의 이메일은 다른 그룹 멤버에게 절대 표시되지 않습니다. 참가할 때 입력한 이름은 앱과 마찬가지로 해당 그룹에서의 표시 이름이 됩니다.</p>
+  <p>로그인하면 웹사이트는 웹 클라이언트가 사용 중이라는 사실과 브라우저 언어를 기록합니다. 이를 통해 모든 멤버의 기기가 최신 상태여야 하는 그룹 기능이 계속 작동합니다. 그룹 멤버에게는 귀하의 이름 옆에 <strong>웹</strong> 표시가 보입니다. 현재 웹사이트에서는 그룹 보기, 그룹 참가, 누군가 이름으로 추가해 둔 귀하의 자리 이어받기, 귀하에게 기록된 결제 확인 또는 거절, 그룹 삭제 투표, 그룹 나가기를 할 수 있으며, 지출 추가와 결제 기록에는 앱이 필요합니다.</p>
+  <p>서비스를 남용으로부터 보호하기 위해 웹사이트는 (Firebase App Check를 통해) Google reCAPTCHA Enterprise를 사용하며, 이는 귀하의 브라우저와 기기에 관한 정보를 확인합니다. 그 사용에는 Google의 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a> 및 <a href="https://policies.google.com/terms" target="_blank" rel="noopener">서비스 약관</a>이 적용됩니다. 웹사이트는 분석 도구를 사용하지 않으며 자체 쿠키를 설정하지 않습니다. Google 로그인과 reCAPTCHA는 자체 쿠키를 설정할 수 있습니다.</p>
+  <p>로그인할 때 <strong>Keep me signed in on this computer</strong>(이 컴퓨터에서 로그인 유지)를 선택한 상태로 두면, 브라우저는 귀하가 볼 수 있는 그룹 데이터의 사본(연결이 끊겨도 페이지를 불러올 수 있도록)과 로그인 상태(로그인이 유지되도록)를 보관합니다. 선택을 해제하면(예: 공용 컴퓨터) 로그인은 해당 브라우저 탭을 닫을 때까지만 유지되며 그룹 데이터 사본은 보관되지 않고, 브라우저는 그 선택만 기억합니다. 이메일 링크로 로그인하는 동안에는 링크가 사용될 때까지 해당 이메일 주소와 로그인 후 돌아갈 페이지도 브라우저에 보관됩니다. 로그아웃하면 그룹 데이터 사본과 로그인 상태가 브라우저에서 삭제됩니다.</p>
+  <p><strong>웹 로그인 삭제.</strong> 모든 그룹에서 나간 후 웹사이트의 <strong>Your groups</strong>(내 그룹) 페이지에서 <strong>Delete My Web Sign-in</strong>(내 웹 로그인 삭제)을 선택하세요. 이렇게 하면 귀하의 이메일 주소(및 Google이 제공한 이름과 사진)가 웹 클라이언트 사용 기록과 함께 Firebase Authentication에서 삭제되고 로그아웃됩니다. 귀하의 이름은 앱에서 그룹을 나간 멤버와 마찬가지로 참여했던 그룹의 지출과 결제에 남으며, 해당 그룹의 활동 기록에도 90일 후 삭제될 때까지 남습니다.</p>
 
   <h2><span class="section-number">3</span>제3자 서비스</h2>
   <table class="service-table">
@@ -1874,16 +1995,18 @@
       <tr><td><strong>Firebase Analytics</strong></td><td>사용 분석, 앱이 생성한 무작위 식별자와 연결 (이름이나 이메일 없음)</td></tr>
       <tr><td><strong>Firebase Firestore</strong></td><td>그룹 데이터 동기화 (지출, 멤버, 정산, 삭제 요청); 공개된 대만 통일발표 복권 당첨 번호</td></tr>
       <tr><td><strong>Firebase Storage</strong></td><td>그룹 지출의 영수증 사진, 사용자 프로필 사진 및 그룹 사진 저장 (압축 JPEG, 각각을 볼 수 있는 사람은 제9.2조 참조)</td></tr>
-      <tr><td><strong>Firebase Authentication</strong></td><td>사용자의 로그인이나 계정 생성을 요구하지 않고 구독 연속성을 유지하기 위한 익명 사용자 식별</td></tr>
+      <tr><td><strong>Firebase Authentication</strong></td><td>앱에서는 로그인이나 계정 없이 구독을 유지하기 위한 익명 사용자 식별, 웹 버전에서는 Google 계정 또는 이메일 링크를 통한 로그인</td></tr>
+      <tr><td><strong>Google Sign-In</strong></td><td>Google 계정을 통한 웹 버전 선택적 로그인 (이메일 주소, 이름, 프로필 사진)</td></tr>
       <tr><td><strong>Firebase Cloud Functions</strong></td><td>그룹 삭제, 푸시 알림 발송, 이름으로 추가된 사람의 추가 및 본인 확인, 그룹 이용 권한을 위한 App Store 구매 확인, Apple로 로그인한 기기 연결 등 백그라운드 작업</td></tr>
       <tr><td><strong>Firebase Cloud Messaging</strong></td><td>그룹 활동에 대한 푸시 알림</td></tr>
       <tr><td><strong>Google Gemini API (Firebase AI Logic 경유)</strong></td><td>Pick &amp; Pay 로 스캔한 영수증 사진의 AI 기반 OCR 및 항목 추출 (PRO 구독 기능)</td></tr>
       <tr><td><strong>Firebase Remote Config</strong></td><td>앱 업데이트 없이 기능 매개변수를 원격으로 구성 (예: 계정당 월간 스캔 한도)</td></tr>
-      <tr><td><strong>Firebase App Check</strong></td><td>백엔드 API 호출에 대한 사기 및 남용 방지</td></tr>
+      <tr><td><strong>Firebase App Check</strong></td><td>백엔드 API 호출에 대한 사기 및 남용 방지 (웹 버전에서는 브라우저와 기기 정보를 확인하는 Google reCAPTCHA Enterprise 사용)</td></tr>
       <tr><td><strong>Firebase Crashlytics</strong></td><td>충돌 보고 및 안정성 진단</td></tr>
       <tr><td><strong>Apple 지도 (MapKit)</strong></td><td>위치 추적이 켜져 있을 때 주소나 장소 이름을 입력하는 동안 일치하는 장소를 제안하고, 기기의 위치를 주소로, 입력한 주소나 장소 이름을 지도 좌표로 변환하며, 스캔한 영수증에 인쇄된 주소·이름·전화번호로 매장을 찾음</td></tr>
       <tr><td><strong>open.er-api.com</strong></td><td>통화 환산을 위한 환율 (통화 코드만 전송)</td></tr>
-      <tr><td><strong>GitHub Pages</strong></td><td>그룹 초대 링크가 여는 페이지를 포함한 당사 웹사이트 호스팅 (링크에는 그룹의 공유 코드가 포함되며, 이 페이지는 쿠키, 분석 도구, 타사 스크립트를 사용하지 않음)</td></tr>
+      <tr><td><strong>GitHub Pages</strong></td><td>그룹 초대 링크가 여는 페이지를 포함한 당사 웹사이트 호스팅 (링크에는 그룹의 공유 코드가 포함되며, 이 페이지는 쿠키, 분석 도구, 타사 스크립트를 사용하지 않음, Apple 기기가 없는 사람을 위한 웹 버전 링크도 제공)</td></tr>
+      <tr><td><strong>Firebase Hosting</strong></td><td>웹 버전 호스팅 (웹 버전에서 여는 초대 링크는 그룹의 공유 코드를 서버로 절대 전송되지 않는 주소 부분에 담음)</td></tr>
     </tbody>
   </table>
   <div class="highlight-box">Firebase는 그룹 관련 기능의 동기화 레이어로만 사용됩니다. 개인(비그룹) 지출 데이터는 클라우드 서비스에 <strong>절대</strong> 업로드되지 않습니다. 유일한 예외는 제7조에 설명된 장소 검색입니다.</div>
@@ -1951,11 +2074,12 @@
     <li>오프라인 조회를 위해 캐시된 그룹 지출</li>
   </ul>
   <p>개인 지출 및 수입 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 유일한 예외는 제7조에 설명된 장소 검색입니다. 삭제된 그룹의 지출은 그룹을 삭제한 사람이 기록 보관을 선택한 경우에만 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다. 기록 삭제를 선택한 경우 해당 지출은 귀하의 기기에서도 삭제됩니다.</p>
+  <p><strong>웹 버전에서는</strong> <strong>Keep me signed in on this computer</strong>를 선택하면 브라우저가 귀하가 볼 수 있는 그룹 데이터의 사본(오프라인 보기용)과 로그인 상태를 저장하고, 선택을 해제하면 탭을 닫을 때까지 로그인 상태만 보관하며 그룹 데이터는 보관하지 않습니다. 브라우저는 그 선택도 기억하며, 이메일 링크로 로그인하는 동안에는 해당 이메일 주소(링크가 사용될 때까지)와 돌아갈 페이지도 보관합니다. 로그아웃하면 그룹 데이터 사본과 로그인 상태가 브라우저에서 삭제됩니다.</p>
 
   <h3>9.2 그룹 기능을 위한 클라우드 저장</h3>
   <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다(사진은 Firebase Storage):</p>
   <ul>
-    <li>그룹 문서 (이름, 설명, 아이콘, 멤버, 권한, 공유 코드, 정산 통화 및 환율)</li>
+    <li>그룹 문서 (이름, 설명, 아이콘, 멤버(웹 버전으로 참가했는지 여부 포함), 권한, 공유 코드, 정산 통화 및 환율)</li>
     <li>이름으로 그룹에 추가된 사람 (이름과 추가한 사람) 및 본인 확인 요청 (그 사람이라고 밝힌 사람, 승인할 수 있는 사람, 요청 시각)</li>
     <li>그룹 지출 (금액, 카테고리, 메모, 날짜, 활성화 시 위치, 결제자 신원)</li>
     <li>그룹 지출의 영수증 사진 (압축 JPEG, Firebase Storage에 저장되며 그룹의 모든 멤버가 볼 수 있음; PRO 구독 기능)</li>
@@ -1965,7 +2089,7 @@
     <li>그룹 삭제 요청 및 멤버 투표</li>
     <li>체험 시작일 (재설치 후 복구용)</li>
     <li>그룹 이용 권한: 각 멤버의 PRO 및 무료 체험 종료일 (속한 모든 그룹에 저장) 및 App Store 구매 기록 (거래 식별자, 상품, 만료일, 환불 여부, 구매를 보유한 기기의 앱 식별자). 구매 기록은 다른 멤버에게 표시되지 않습니다 (2항 참조). Apple로 로그인을 사용하는 경우에만, Apple 식별자의 단방향 해시와 로그인한 기기의 앱 식별자</li>
-    <li>푸시 알림 토큰 (FCM)과 알림 설정(받을 알림 유형, 알림을 끈 그룹) 및 읽지 않은 배지 수</li>
+    <li>푸시 알림 토큰 (FCM)과 알림 설정(받을 알림 유형, 알림을 끈 그룹) 및 읽지 않은 배지 수, 웹 버전의 경우 웹 클라이언트 사용 기록과 브라우저 언어 (알림 토큰 없음)</li>
     <li>정산 딥링크를 위한 선택적 결제 식별자 (Venmo, Cash App, PayPal.me 사용자명, 결제 앱이 아닌 메시지를 여는 Apple Cash 전화번호, 그리고 아무것도 열지 않고 그룹 멤버가 복사할 수 있도록 표시되기만 하는 Zelle 전화번호 또는 이메일, LINE ID, WeChat ID)</li>
     <li><strong>Pick &amp; Pay 스캔 추적</strong> — 이번 달 수행한 스캔 횟수와 체험 무료 사용 여부를 기록하는 계정별 소규모 기록입니다. 계정당 월간 한도를 적용하고 설정에 남은 스캔 횟수를 표시하는 데 사용됩니다. 영수증 내용에 관한 어떤 정보도 포함하지 않습니다.</li>
     <li><strong>그룹 활동 기록</strong> — 그룹에서 수행된 모든 작업의 기록 (지출 추가, 수정, 환불 또는 삭제; 멤버 가입, 탈퇴 또는 제거). 이 데이터는 Firebase Firestore에 저장되며 <strong>90일 후 자동으로 영구 삭제</strong>됩니다. 90일이 지난 활동은 복구할 수 없습니다.</li>
@@ -2000,6 +2124,9 @@
     <li>프로필 사진을 업데이트하면 Firebase Storage의 이전 사진이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
     <li>그룹 사진의 업데이트 또는 제거도 동일한 방식으로 작동합니다. 업데이트하면 Firebase Storage의 기존 사진이 덮어쓰기되고, "사진 제거"를 선택하면 삭제됩니다. 이 작업은 그룹 관리자만 수행할 수 있습니다. 그룹 자체가 삭제될 때에도 선택한 삭제 옵션에 관계없이 그룹 사진이 Firebase Storage에서 삭제됩니다.</li>
     <li>그룹 관리자는 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹을 직접 정리할 수 있습니다. 6개월 이상 활동이 없고 모든 채무가 정산된 그룹이 정리 대상입니다. 관리자가 삭제를 시작하면 영향을 받는 모든 그룹 멤버에게 그룹을 삭제한 관리자 이름이 포함된 푸시 알림이 전송됩니다. 관리자는 그룹을 Firebase에서 제거하기 전에 그룹 지출을 내보내거나, 로컬에 보관하거나, 전체 삭제 중에서 선택할 수 있습니다.</li>
+    <li>웹 버전에서 그룹의 <strong>Members</strong> 탭을 열고 <strong>Leave Group</strong>를 선택하면 그룹에서 나갈 수 있음 (앱과 마찬가지로 잔액 정산 후)</li>
+    <li>모든 그룹에서 나간 후 웹사이트의 <strong>Your groups</strong> 페이지에서 <strong>Delete My Web Sign-in</strong>을 선택하면 로그인 이메일 주소가 Firebase Authentication에서 삭제되고 로그아웃됨 (제2조 참조)</li>
+    <li>웹 버전에서 로그아웃하면 해당 브라우저에 보관된 그룹 데이터 사본과 로그인 상태가 삭제됨</li>
     <li>Node Expense 삭제 시 기기에 로컬로 저장된 모든 데이터가 제거됨</li>
   </ul>
   <p>참고: Firebase 그룹 데이터는 앱 내 삭제 프로세스를 통해 그룹이 공식적으로 삭제될 때까지 유지될 수 있습니다.</p>
@@ -2017,6 +2144,7 @@
     <li>그룹 관리자로서 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹(6개월 이상 비활성, 모든 채무 정산 완료)을 정리하고, 그룹 지출 내보내기, 로컬 보관, 또는 전체 삭제 중 선택 가능</li>
     <li>Apple App Store 설정을 통해 언제든지 구독 취소</li>
     <li>언제든지 암호화된 백업 또는 내보내기 중단</li>
+    <li>웹 버전에서 그룹의 <strong>Members</strong> 탭에서 그룹 나가기, <strong>Your groups</strong> 페이지에서 웹 로그인 삭제, 언제든지 로그아웃하여 해당 브라우저의 사본 삭제</li>
   </ul>
 
   <h2><span class="section-number">14</span>정책 변경</h2>
