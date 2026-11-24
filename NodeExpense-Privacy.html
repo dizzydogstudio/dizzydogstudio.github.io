@@ -614,8 +614,8 @@
   <p>App 無需帳戶或登入，網頁版則需要：您可以透過 Firebase Authentication，以 Google 帳戶或寄到您電子郵件地址的一次性連結登入。Firebase 會保存您的電子郵件地址（若使用 Google，另含 Google 提供的姓名與頭像），讓您日後可以再次登入；您的電子郵件絕不會顯示給其他群組成員。您加入群組時輸入的名稱，就是您在該群組中的顯示名稱，與 App 相同。</p>
   <p>登入時，網站會記錄有網頁用戶端正在使用，以及您瀏覽器的語言，讓需要每位成員的裝置都保持最新的群組功能能繼續運作。您所在群組的成員會在您的名稱旁看到<strong>網頁版</strong>標籤。網站目前可讓您查看群組、加入群組、接手他人以名字為您新增的位置、確認或拒絕他人記錄給您的付款、對刪除群組投票，以及離開群組；新增費用與記錄付款仍需使用 App。</p>
   <p>為防止濫用，網站透過 Firebase App Check 使用 Google reCAPTCHA Enterprise，它會檢查您瀏覽器與裝置的相關資訊。其使用受 Google 的<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隱私權政策</a>與<a href="https://policies.google.com/terms" target="_blank" rel="noopener">服務條款</a>約束。網站不使用分析工具，也不設定自己的 Cookie；Google 登入與 reCAPTCHA 可能會設定它們自己的 Cookie。</p>
-  <p>若您登入時保持勾選 <strong>Keep me signed in on this computer</strong>（在這台電腦上保持登入），瀏覽器會保留一份您可查看的群組資料副本，讓連線中斷時頁面仍可載入，並保留您的登入狀態，讓您維持登入。若取消勾選（例如在共用電腦上），您的登入只會持續到您關閉該瀏覽器分頁為止，也不會保留任何群組資料副本；瀏覽器只會記住這個選擇。使用電子郵件連結登入期間，瀏覽器也會保留該電子郵件地址直到連結被使用，以及登入後要返回的頁面。登出會從瀏覽器刪除群組資料副本與您的登入狀態。</p>
-  <p><strong>刪除您的網頁版登入。</strong>離開所有群組後，在網站的 <strong>Your groups</strong>（您的群組）頁面選擇 <strong>Delete My Web Sign-in</strong>（刪除我的網頁版登入）。這會從 Firebase Authentication 刪除您的電子郵件地址（以及 Google 提供的姓名與照片），連同網站記錄的網頁用戶端使用紀錄，並將您登出。您的名稱仍會保留在您曾加入的群組的費用與付款中（與在 App 中離開群組的成員相同），也會保留在這些群組的活動紀錄中，直到 90 天後被刪除為止。</p>
+  <p>若您登入時保持勾選<strong>在這台電腦上保持登入</strong>，瀏覽器會保留一份您可查看的群組資料副本，讓連線中斷時頁面仍可載入，並保留您的登入狀態，讓您維持登入。若取消勾選（例如在共用電腦上），您的登入只會持續到您關閉該瀏覽器分頁為止，也不會保留任何群組資料副本；瀏覽器只會記住這個選擇。使用電子郵件連結登入期間，瀏覽器也會保留該電子郵件地址直到連結被使用，以及登入後要返回的頁面。登出會從瀏覽器刪除群組資料副本與您的登入狀態。</p>
+  <p><strong>刪除您的網頁版登入。</strong>離開所有群組後，在網站的<strong>您的群組</strong>頁面選擇<strong>刪除我的網頁版登入</strong>。這會從 Firebase Authentication 刪除您的電子郵件地址（以及 Google 提供的姓名與照片），連同網站記錄的網頁用戶端使用紀錄，並將您登出。您的名稱仍會保留在您曾加入的群組的費用與付款中（與在 App 中離開群組的成員相同），也會保留在這些群組的活動紀錄中，直到 90 天後被刪除為止。</p>
 
   <h2><span class="section-number">3</span>第三方服務</h2>
   <table class="service-table">
@@ -705,7 +705,7 @@
     <li>群組費用的快取（供離線檢視）</li>
   </ul>
   <p>個人費用與收入資料——包括所附加的收據照片——不會離開您的裝置，除非您明確匯出或備份。唯一的例外是第 7 節所述的地點查詢。若刪除群組的人選擇保留記錄，已刪除群組的費用才會在您的裝置裡保留，並標示為「已刪除群組」；若選擇移除記錄，這些費用也會從您的裝置刪除。</p>
-  <p><strong>在網頁版中</strong>，若勾選 <strong>Keep me signed in on this computer</strong>，您的瀏覽器會儲存一份您可查看的群組資料副本（供離線查看）以及您的登入狀態；若取消勾選，只會保留您的登入狀態直到分頁關閉，且不保留任何群組資料。瀏覽器也會記住這個選擇；使用電子郵件連結登入期間，還會保留該電子郵件地址（直到連結被使用）以及要返回的頁面。登出會從瀏覽器刪除群組資料副本與您的登入狀態。</p>
+  <p><strong>在網頁版中</strong>，若勾選<strong>在這台電腦上保持登入</strong>，您的瀏覽器會儲存一份您可查看的群組資料副本（供離線查看）以及您的登入狀態；若取消勾選，只會保留您的登入狀態直到分頁關閉，且不保留任何群組資料。瀏覽器也會記住這個選擇；使用電子郵件連結登入期間，還會保留該電子郵件地址（直到連結被使用）以及要返回的頁面。登出會從瀏覽器刪除群組資料副本與您的登入狀態。</p>
 
   <h3>9.2 群組功能的雲端儲存</h3>
   <p>針對群組功能，所選資料將同步至 Firebase Firestore（照片則同步至 Firebase Storage）：</p>
@@ -755,8 +755,8 @@
     <li>更新個人頭像會覆寫 Firebase Storage 中的舊照片。選擇「移除照片」會將其從 Firebase Storage 中刪除。移除後，其他成員將無法再看到您的頭像，惟現有裝置可能在下次同步前仍保留快取副本。</li>
     <li>更新或移除群組頭像的運作方式相同：更新會覆寫 Firebase Storage 中的現有照片，選擇「移除照片」則會將其刪除。此操作僅限群組管理員執行。群組本身被刪除時，無論選擇哪種刪除選項，群組頭像也會一併從 Firebase Storage 中刪除。</li>
     <li>群組管理員可直接在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組。群組需在停止活動超過 6 個月且所有債務已結清後，方可進行清理。當管理員發起刪除請求時，所有受影響的群組成員將收到推播通知，通知內容包含刪除群組的管理員姓名。管理員可選擇在將群組從 Firebase 移除前，匯出群組費用、將其保留於本機，或全部刪除。</li>
-    <li>在網頁版中，開啟群組的 <strong>Members</strong> 分頁並選擇 <strong>Leave Group</strong> 即可離開群組（與 App 相同，需先結清餘額）。</li>
-    <li>離開所有群組後，在網站的 <strong>Your groups</strong> 頁面選擇 <strong>Delete My Web Sign-in</strong>，即可從 Firebase Authentication 刪除您的登入電子郵件地址並將您登出（見第 2 節）。</li>
+    <li>在網頁版中，開啟群組的<strong>成員</strong>分頁並選擇<strong>離開群組</strong>即可離開群組（與 App 相同，需先結清餘額）。</li>
+    <li>離開所有群組後，在網站的<strong>您的群組</strong>頁面選擇<strong>刪除我的網頁版登入</strong>，即可從 Firebase Authentication 刪除您的登入電子郵件地址並將您登出（見第 2 節）。</li>
     <li>登出網頁版會刪除該瀏覽器中保留的群組資料副本與您的登入狀態。</li>
     <li>解除安裝 Node Expense 將移除您裝置上所有本機儲存的資料</li>
   </ul>
@@ -775,7 +775,7 @@
     <li>作為群組管理員，可在「設定 → 資料與隱私 → 閒置群組」中清理閒置群組（停止活動超過 6 個月且所有債務已結清），並可選擇匯出、保留於本機或刪除所有群組費用</li>
     <li>隨時透過 Apple App Store 設定取消您的訂閱</li>
     <li>隨時停止使用備份或加密匯出功能</li>
-    <li>在網頁版中，從群組的 <strong>Members</strong> 分頁離開群組、在 <strong>Your groups</strong> 頁面刪除您的網頁版登入，並可隨時登出以清除該瀏覽器的副本</li>
+    <li>在網頁版中，從群組的<strong>成員</strong>分頁離開群組、在<strong>您的群組</strong>頁面刪除您的網頁版登入，並可隨時登出以清除該瀏覽器的副本</li>
   </ul>
 
   <h2><span class="section-number">14</span>本政策的變更</h2>
@@ -842,8 +842,8 @@
   <p>App 无需账户或登录，网页版则需要：您可以通过 Firebase Authentication，使用 Google 账户或发送到您电子邮件地址的一次性链接登录。Firebase 会保存您的电子邮件地址（若使用 Google，另含 Google 提供的姓名和头像），以便您日后再次登录；您的电子邮件绝不会显示给其他群组成员。您加入群组时输入的名称，就是您在该群组中的显示名称，与 App 相同。</p>
   <p>登录时，网站会记录有网页客户端正在使用，以及您浏览器的语言，使需要每位成员的设备都保持最新的群组功能能够继续运作。您所在群组的成员会在您的名称旁看到<strong>网页版</strong>标签。网站目前可让您查看群组、加入群组、接手他人按名字为您添加的位置、确认或拒绝他人记录给您的付款、对删除群组投票，以及离开群组；添加支出和记录付款仍需使用 App。</p>
   <p>为防止滥用，网站通过 Firebase App Check 使用 Google reCAPTCHA Enterprise，它会检查您浏览器和设备的相关信息。其使用受 Google 的<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隐私政策</a>和<a href="https://policies.google.com/terms" target="_blank" rel="noopener">服务条款</a>约束。网站不使用分析工具，也不设置自己的 Cookie；Google 登录和 reCAPTCHA 可能会设置它们自己的 Cookie。</p>
-  <p>若您登录时保持勾选 <strong>Keep me signed in on this computer</strong>（在这台电脑上保持登录），浏览器会保留一份您可查看的群组数据副本，以便连接中断时页面仍可加载，并保留您的登录状态，让您保持登录。若取消勾选（例如在共用电脑上），您的登录只会持续到您关闭该浏览器标签页为止，也不会保留任何群组数据副本；浏览器只会记住这一选择。使用电子邮件链接登录期间，浏览器还会保留该电子邮件地址直到链接被使用，以及登录后要返回的页面。退出登录会从浏览器删除群组数据副本和您的登录状态。</p>
-  <p><strong>删除您的网页版登录。</strong>离开所有群组后，在网站的 <strong>Your groups</strong>（您的群组）页面选择 <strong>Delete My Web Sign-in</strong>（删除我的网页版登录）。这会从 Firebase Authentication 删除您的电子邮件地址（以及 Google 提供的姓名和照片），连同网站记录的网页客户端使用记录，并让您退出登录。您的名称仍会保留在您曾加入的群组的支出和付款中（与在 App 中离开群组的成员相同），也会保留在这些群组的活动记录中，直到 90 天后被删除为止。</p>
+  <p>若您登录时保持勾选<strong>在这台电脑上保持登录</strong>，浏览器会保留一份您可查看的群组数据副本，以便连接中断时页面仍可加载，并保留您的登录状态，让您保持登录。若取消勾选（例如在共用电脑上），您的登录只会持续到您关闭该浏览器标签页为止，也不会保留任何群组数据副本；浏览器只会记住这一选择。使用电子邮件链接登录期间，浏览器还会保留该电子邮件地址直到链接被使用，以及登录后要返回的页面。退出登录会从浏览器删除群组数据副本和您的登录状态。</p>
+  <p><strong>删除您的网页版登录。</strong>离开所有群组后，在网站的<strong>您的群组</strong>页面选择<strong>删除我的网页版登录</strong>。这会从 Firebase Authentication 删除您的电子邮件地址（以及 Google 提供的姓名和照片），连同网站记录的网页客户端使用记录，并让您退出登录。您的名称仍会保留在您曾加入的群组的支出和付款中（与在 App 中离开群组的成员相同），也会保留在这些群组的活动记录中，直到 90 天后被删除为止。</p>
 
   <h2><span class="section-number">3</span>第三方服务</h2>
   <table class="service-table">
@@ -933,7 +933,7 @@
     <li>用于离线查看的缓存群组支出</li>
   </ul>
   <p>除非您明确导出或备份，否则个人支出和收入数据——包括所附加的收据照片——绝不会离开您的设备。唯一的例外是第 7 节所述的地点查询。只有当删除群组的人选择保留记录时，已删除群组的支出才会保留在您的设备里并带有"已删除群组"标记；若选择移除记录，这些支出也会从您的设备删除。</p>
-  <p><strong>在网页版中</strong>，若勾选 <strong>Keep me signed in on this computer</strong>，您的浏览器会存储一份您可查看的群组数据副本（供离线查看）以及您的登录状态；若取消勾选，只会保留您的登录状态直到标签页关闭，且不保留任何群组数据。浏览器还会记住这一选择；使用电子邮件链接登录期间，还会保留该电子邮件地址（直到链接被使用）以及要返回的页面。退出登录会从浏览器删除群组数据副本和您的登录状态。</p>
+  <p><strong>在网页版中</strong>，若勾选<strong>在这台电脑上保持登录</strong>，您的浏览器会存储一份您可查看的群组数据副本（供离线查看）以及您的登录状态；若取消勾选，只会保留您的登录状态直到标签页关闭，且不保留任何群组数据。浏览器还会记住这一选择；使用电子邮件链接登录期间，还会保留该电子邮件地址（直到链接被使用）以及要返回的页面。退出登录会从浏览器删除群组数据副本和您的登录状态。</p>
 
   <h3>9.2 群组功能的云存储</h3>
   <p>对于群组功能，选定的数据将同步到 Firebase Firestore（照片同步至 Firebase Storage）：</p>
@@ -983,8 +983,8 @@
     <li>更新个人头像会覆盖 Firebase Storage 中的旧照片。选择"移除照片"会将其从 Firebase Storage 中删除。移除后，其他成员将无法再看到您的头像，但现有设备可能在下次同步前仍保留缓存副本。</li>
     <li>更新或移除群组头像的方式相同：更新会覆盖 Firebase Storage 中的现有照片，选择"移除照片"则会将其删除。此操作仅限群组管理员执行。群组本身被删除时，无论选择哪种删除选项，群组头像也会一并从 Firebase Storage 中删除。</li>
     <li>群组管理员可直接在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组。群组需在停止活动超过 6 个月且所有债务已结清后，方可进行清理。管理员发起删除时，所有受影响的群组成员将收到推送通知，通知中包含删除群组的管理员姓名。管理员可在将群组从 Firebase 移除前，选择导出群组支出、保留至本地，或全部删除。</li>
-    <li>在网页版中，打开群组的 <strong>Members</strong> 标签页并选择 <strong>Leave Group</strong> 即可离开群组（与 App 相同，需先结清余额）。</li>
-    <li>离开所有群组后，在网站的 <strong>Your groups</strong> 页面选择 <strong>Delete My Web Sign-in</strong>，即可从 Firebase Authentication 删除您的登录电子邮件地址并让您退出登录（见第 2 节）。</li>
+    <li>在网页版中，打开群组的<strong>成员</strong>标签页并选择<strong>离开群组</strong>即可离开群组（与 App 相同，需先结清余额）。</li>
+    <li>离开所有群组后，在网站的<strong>您的群组</strong>页面选择<strong>删除我的网页版登录</strong>，即可从 Firebase Authentication 删除您的登录电子邮件地址并让您退出登录（见第 2 节）。</li>
     <li>退出网页版登录会删除该浏览器中保留的群组数据副本和您的登录状态。</li>
     <li>卸载 Node Expense 将删除设备上存储的所有本地数据</li>
   </ul>
@@ -1003,7 +1003,7 @@
     <li>作为群组管理员，可在"设置 → 数据与隐私 → 闲置群组"中清理闲置群组（停止活动超过 6 个月且所有债务已结清），并可选择导出、保留至本地或删除所有群组支出</li>
     <li>随时通过 Apple App Store 设置取消订阅</li>
     <li>随时停止使用备份或加密导出</li>
-    <li>在网页版中，从群组的 <strong>Members</strong> 标签页离开群组、在 <strong>Your groups</strong> 页面删除您的网页版登录，并可随时退出登录以清除该浏览器的副本</li>
+    <li>在网页版中，从群组的<strong>成员</strong>标签页离开群组、在<strong>您的群组</strong>页面删除您的网页版登录，并可随时退出登录以清除该浏览器的副本</li>
   </ul>
 
   <h2><span class="section-number">14</span>本政策的变更</h2>
@@ -1070,8 +1070,8 @@
   <p>アプリにはアカウントもサインインも不要ですが、Web 版では必要です。Firebase Authentication を通じて、Google アカウント、またはメールアドレスに送られるワンタイムリンクでサインインします。Firebase は、再びサインインできるようにメールアドレス（Google の場合は、Google が提供する氏名とプロフィール写真も）を保持します。メールアドレスが他のグループメンバーに表示されることはありません。参加時に入力した名前は、アプリと同様に、そのグループでの表示名になります。</p>
   <p>サインインすると、ウェブサイトは Web クライアントが使用されていることとブラウザの言語を記録します。これにより、すべてのメンバーのデバイスが最新であることを必要とするグループ機能が引き続き動作します。所属グループのメンバーには、お客様の名前の横に <strong>Web</strong> ラベルが表示されます。ウェブサイトでは現在、グループの閲覧、グループへの参加、名前だけで追加されたお客様の位置の引き継ぎ、お客様宛てに記録された支払いの確認または拒否、グループ削除への投票、グループからの退出ができます。支出の追加と支払いの記録にはアプリが必要です。</p>
   <p>不正利用からサービスを守るため、ウェブサイトは（Firebase App Check を通じて）Google reCAPTCHA Enterprise を使用し、お客様のブラウザとデバイスに関する情報を確認します。その利用には Google の<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" target="_blank" rel="noopener">利用規約</a>が適用されます。ウェブサイトはアナリティクスを使用せず、独自の Cookie も設定しません。Google のサインインと reCAPTCHA は独自の Cookie を設定する場合があります。</p>
-  <p>サインイン時に <strong>Keep me signed in on this computer</strong>（このコンピュータでサインインしたままにする）をオンのままにすると、ブラウザは閲覧可能なグループデータのコピーを保持し（接続が切れてもページを読み込めるように）、サインイン状態も保持します（サインインしたままになります）。オフにすると（共用のコンピュータなど）、サインインはそのブラウザのタブを閉じるまでしか続かず、グループデータのコピーも保持されません。ブラウザが記憶するのはその選択だけです。メールのリンクでサインインする間は、リンクが使用されるまでそのメールアドレスと、サインイン後に戻るページもブラウザに保持されます。サインアウトすると、グループデータのコピーとサインイン状態がブラウザから削除されます。</p>
-  <p><strong>Web 版のサインインを削除する。</strong>すべてのグループから退出したら、ウェブサイトの <strong>Your groups</strong>（グループ一覧）ページで <strong>Delete My Web Sign-in</strong>（Web 版のサインインを削除）を選びます。これにより、メールアドレス（および Google が提供した氏名と写真）が Firebase Authentication から削除され、Web クライアントの使用記録も削除されて、サインアウトします。お客様の名前は、アプリで退出したメンバーと同様に、参加していたグループの支出と支払いに残り、各グループのアクティビティ履歴にも 90 日後に削除されるまで残ります。</p>
+  <p>サインイン時に<strong>このコンピュータでサインインしたままにする</strong>をオンのままにすると、ブラウザは閲覧可能なグループデータのコピーを保持し（接続が切れてもページを読み込めるように）、サインイン状態も保持します（サインインしたままになります）。オフにすると（共用のコンピュータなど）、サインインはそのブラウザのタブを閉じるまでしか続かず、グループデータのコピーも保持されません。ブラウザが記憶するのはその選択だけです。メールのリンクでサインインする間は、リンクが使用されるまでそのメールアドレスと、サインイン後に戻るページもブラウザに保持されます。サインアウトすると、グループデータのコピーとサインイン状態がブラウザから削除されます。</p>
+  <p><strong>Web 版のサインインを削除する。</strong>すべてのグループから退出したら、ウェブサイトの<strong>あなたのグループ</strong>ページで<strong>Web 版のサインインを削除</strong>を選びます。これにより、メールアドレス（および Google が提供した氏名と写真）が Firebase Authentication から削除され、Web クライアントの使用記録も削除されて、サインアウトします。お客様の名前は、アプリで退出したメンバーと同様に、参加していたグループの支出と支払いに残り、各グループのアクティビティ履歴にも 90 日後に削除されるまで残ります。</p>
 
   <h2><span class="section-number">3</span>サードパーティサービス</h2>
   <table class="service-table">
@@ -1161,7 +1161,7 @@
     <li>オフライン表示用のグループ支出のキャッシュ</li>
   </ul>
   <p>個人の支出データと収入データは — 添付されたレシート写真を含めて — 明示的にエクスポートまたはバックアップしない限り、デバイスの外に出ることはありません。唯一の例外は、第 7 条に記載の場所の検索です。削除されたグループからの支出は、グループを削除した人が記録の保持を選択した場合にのみ、「削除済みグループ」のマーク付きでデバイスのローカルに保持されます。記録の削除を選択した場合、これらの支出はお客様のデバイスからも削除されます。</p>
-  <p><strong>Web 版では</strong>、<strong>Keep me signed in on this computer</strong> をオンにすると、ブラウザは閲覧可能なグループデータのコピー（オフライン表示用）とサインイン状態を保存します。オフにすると、サインイン状態をタブを閉じるまでだけ保持し、グループデータは保持しません。ブラウザはその選択も記憶し、メールのリンクでサインインする間は、そのメールアドレス（リンクが使用されるまで）と戻るページも保持します。サインアウトすると、グループデータのコピーとサインイン状態がブラウザから削除されます。</p>
+  <p><strong>Web 版では</strong>、<strong>このコンピュータでサインインしたままにする</strong>をオンにすると、ブラウザは閲覧可能なグループデータのコピー（オフライン表示用）とサインイン状態を保存します。オフにすると、サインイン状態をタブを閉じるまでだけ保持し、グループデータは保持しません。ブラウザはその選択も記憶し、メールのリンクでサインインする間は、そのメールアドレス（リンクが使用されるまで）と戻るページも保持します。サインアウトすると、グループデータのコピーとサインイン状態がブラウザから削除されます。</p>
 
   <h3>9.2 グループ機能のクラウドストレージ</h3>
   <p>グループ機能では、選択されたデータが Firebase Firestore（写真は Firebase Storage）に同期されます：</p>
@@ -1211,8 +1211,8 @@
     <li>プロフィール写真を更新すると、Firebase Storage 内の以前の写真が上書きされます。「写真を削除」を選択すると、Firebase Storage から削除されます。削除後は他のメンバーにあなたの写真は表示されなくなりますが、既存のデバイスでは次回の同期までキャッシュが残る場合があります。</li>
     <li>グループ写真の更新・削除も同様の動作となります。更新すると Firebase Storage 内の既存の写真が上書きされ、「写真を削除」を選択するとファイルが削除されます。この操作はグループ管理者のみが行えます。グループ自体が削除された場合、どの削除オプションを選択したかにかかわらず、グループ写真も Firebase Storage から削除されます。</li>
     <li>グループ管理者は「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループを直接整理できます。対象グループは、6ヶ月以上活動がなく、すべての債務が精算済みである必要があります。管理者が削除を開始すると、影響を受けるすべてのグループメンバーに、グループを削除した管理者名を含むプッシュ通知が送信されます。管理者はグループを Firebase から削除する前に、グループ支出をエクスポート、ローカルに保持、または全削除を選択できます。</li>
-    <li>Web 版では、グループの <strong>Members</strong> タブを開いて <strong>Leave Group</strong> を選ぶとグループから退出できます（アプリと同様、残高の精算後）。</li>
-    <li>すべてのグループから退出した後、ウェブサイトの <strong>Your groups</strong> ページで <strong>Delete My Web Sign-in</strong> を選ぶと、サインイン用のメールアドレスが Firebase Authentication から削除され、サインアウトします（第 2 条を参照）。</li>
+    <li>Web 版では、グループの<strong>メンバー</strong>タブを開いて<strong>グループを退出</strong>を選ぶとグループから退出できます（アプリと同様、残高の精算後）。</li>
+    <li>すべてのグループから退出した後、ウェブサイトの<strong>あなたのグループ</strong>ページで<strong>Web 版のサインインを削除</strong>を選ぶと、サインイン用のメールアドレスが Firebase Authentication から削除され、サインアウトします（第 2 条を参照）。</li>
     <li>Web 版からサインアウトすると、そのブラウザに保持されているグループデータのコピーとサインイン状態が削除されます。</li>
     <li>Node Expense をアンインストールすると、デバイスに保存されているすべてのローカルデータが削除されます</li>
   </ul>
@@ -1231,7 +1231,7 @@
     <li>グループ管理者として、「設定 → データとプライバシー → 非アクティブなグループ」から非アクティブなグループ（6ヶ月以上非アクティブかつ全債務精算済み）を整理し、グループ支出をエクスポート、ローカル保持、または全削除を選択できます</li>
     <li>Apple App Store の設定からいつでもサブスクリプションをキャンセルする</li>
     <li>バックアップや暗号化エクスポートの使用をいつでも停止する</li>
-    <li>Web 版では、グループの <strong>Members</strong> タブからグループを退出し、<strong>Your groups</strong> ページで Web 版のサインインを削除し、いつでもサインアウトしてそのブラウザのコピーを消去する</li>
+    <li>Web 版では、グループの<strong>メンバー</strong>タブからグループを退出し、<strong>あなたのグループ</strong>ページで Web 版のサインインを削除し、いつでもサインアウトしてそのブラウザのコピーを消去する</li>
   </ul>
 
   <h2><span class="section-number">14</span>本ポリシーの変更</h2>
@@ -1298,8 +1298,8 @@
   <p>Die App benötigt kein Konto und keine Anmeldung, die Web-Version schon: Sie melden sich über Firebase Authentication mit einem Google-Konto oder mit einem einmaligen Link an, der an Ihre E-Mail-Adresse gesendet wird. Firebase speichert Ihre E-Mail-Adresse (bei Google zusätzlich den Namen und das Profilfoto, die Google bereitstellt), damit Sie sich erneut anmelden können; Ihre E-Mail-Adresse wird anderen Gruppenmitgliedern nie angezeigt. Der Name, den Sie beim Beitritt eingeben, ist wie in der App Ihr Anzeigename in dieser Gruppe.</p>
   <p>Wenn Sie sich anmelden, vermerkt die Website, dass ein Web-Client genutzt wird, zusammen mit der Sprache Ihres Browsers, damit Gruppenfunktionen weiter funktionieren, die voraussetzen, dass die Geräte aller Mitglieder auf dem neuesten Stand sind. Mitglieder Ihrer Gruppen sehen neben Ihrem Namen die Kennzeichnung <strong>Web</strong>. Auf der Website können Sie derzeit Gruppen ansehen, einer Gruppe beitreten, einen Platz übernehmen, den jemand per Name für Sie angelegt hat, eine für Sie erfasste Zahlung bestätigen oder ablehnen, über das Löschen einer Gruppe abstimmen und eine Gruppe verlassen; zum Hinzufügen von Ausgaben und Erfassen von Zahlungen ist die App erforderlich.</p>
   <p>Zum Schutz des Dienstes vor Missbrauch verwendet die Website Google reCAPTCHA Enterprise (über Firebase App Check), das Informationen über Ihren Browser und Ihr Gerät prüft. Die Nutzung unterliegt der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung</a> und den <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Nutzungsbedingungen</a> von Google. Die Website verwendet keine Analyse und setzt keine eigenen Cookies; die Google-Anmeldung und reCAPTCHA können eigene Cookies setzen.</p>
-  <p>Wenn Sie bei der Anmeldung <strong>Keep me signed in on this computer</strong> (auf diesem Computer angemeldet bleiben) aktiviert lassen, speichert Ihr Browser eine Kopie der Gruppendaten, die Sie sehen können, damit Seiten auch bei unterbrochener Verbindung laden, sowie Ihre Anmeldung, damit Sie angemeldet bleiben. Wenn Sie die Option deaktivieren (zum Beispiel auf einem gemeinsam genutzten Computer), gilt Ihre Anmeldung nur, bis Sie diesen Browser-Tab schließen, und es wird keine Kopie der Gruppendaten gespeichert; der Browser merkt sich nur diese Auswahl. Während Sie sich mit einem E-Mail-Link anmelden, speichert der Browser außerdem diese E-Mail-Adresse, bis der Link verwendet wird, sowie die Seite, zu der Sie danach zurückkehren. Beim Abmelden werden die Kopie der Gruppendaten und Ihre Anmeldung aus dem Browser gelöscht.</p>
-  <p><strong>Ihre Web-Anmeldung löschen.</strong> Sobald Sie alle Ihre Gruppen verlassen haben, wählen Sie auf der Seite <strong>Your groups</strong> (Ihre Gruppen) der Website <strong>Delete My Web Sign-in</strong> (Meine Web-Anmeldung löschen). Dadurch werden Ihre E-Mail-Adresse (sowie der von Google bereitgestellte Name und das Bild) zusammen mit dem Vermerk der Website, dass ein Web-Client genutzt wird, aus Firebase Authentication gelöscht, und Sie werden abgemeldet. Ihr Name bleibt wie bei einem Mitglied, das eine Gruppe in der App verlässt, in den Ausgaben und Zahlungen der Gruppen erhalten, in denen Sie waren, und in deren Aktivitätsverlauf, bis dieser nach 90 Tagen gelöscht wird.</p>
+  <p>Wenn Sie bei der Anmeldung <strong>Auf diesem Computer angemeldet bleiben</strong> aktiviert lassen, speichert Ihr Browser eine Kopie der Gruppendaten, die Sie sehen können, damit Seiten auch bei unterbrochener Verbindung laden, sowie Ihre Anmeldung, damit Sie angemeldet bleiben. Wenn Sie die Option deaktivieren (zum Beispiel auf einem gemeinsam genutzten Computer), gilt Ihre Anmeldung nur, bis Sie diesen Browser-Tab schließen, und es wird keine Kopie der Gruppendaten gespeichert; der Browser merkt sich nur diese Auswahl. Während Sie sich mit einem E-Mail-Link anmelden, speichert der Browser außerdem diese E-Mail-Adresse, bis der Link verwendet wird, sowie die Seite, zu der Sie danach zurückkehren. Beim Abmelden werden die Kopie der Gruppendaten und Ihre Anmeldung aus dem Browser gelöscht.</p>
+  <p><strong>Ihre Web-Anmeldung löschen.</strong> Sobald Sie alle Ihre Gruppen verlassen haben, wählen Sie auf der Seite <strong>Deine Gruppen</strong> der Website <strong>Meine Web-Anmeldung löschen</strong>. Dadurch werden Ihre E-Mail-Adresse (sowie der von Google bereitgestellte Name und das Bild) zusammen mit dem Vermerk der Website, dass ein Web-Client genutzt wird, aus Firebase Authentication gelöscht, und Sie werden abgemeldet. Ihr Name bleibt wie bei einem Mitglied, das eine Gruppe in der App verlässt, in den Ausgaben und Zahlungen der Gruppen erhalten, in denen Sie waren, und in deren Aktivitätsverlauf, bis dieser nach 90 Tagen gelöscht wird.</p>
 
   <h2><span class="section-number">3</span>Drittanbieterdienste</h2>
   <table class="service-table">
@@ -1389,7 +1389,7 @@
     <li>Zwischengespeicherte Gruppenausgaben zur Offline-Ansicht</li>
   </ul>
   <p>Persönliche Ausgaben- und Einnahmendaten — einschließlich angehängter Belegfotos — verlassen Ihr Gerät nicht, es sei denn, Sie exportieren oder sichern diese explizit. Die einzige Ausnahme sind die in Abschnitt 7 beschriebenen Ortsabfragen. Ausgaben aus gelöschten Gruppen werden nur dann lokal mit einem „Gelöschte Gruppe"-Marker aufbewahrt, wenn die Person, die die Gruppe gelöscht hat, sich für das Behalten der Datensätze entschieden hat. Wurde das Entfernen gewählt, werden diese Ausgaben auch von Ihrem Gerät gelöscht.</p>
-  <p><strong>In der Web-Version</strong> speichert Ihr Browser bei aktiviertem <strong>Keep me signed in on this computer</strong> eine Kopie der Gruppendaten, die Sie sehen können (für die Offline-Ansicht), sowie Ihre Anmeldung; bei deaktivierter Option behält er Ihre Anmeldung nur, bis der Tab geschlossen wird, und keine Gruppendaten. Er merkt sich außerdem diese Auswahl und, während Sie sich mit einem E-Mail-Link anmelden, diese E-Mail-Adresse (bis der Link verwendet wird) und die Seite, zu der Sie zurückkehren. Beim Abmelden werden die Kopie der Gruppendaten und Ihre Anmeldung aus dem Browser gelöscht.</p>
+  <p><strong>In der Web-Version</strong> speichert Ihr Browser bei aktiviertem <strong>Auf diesem Computer angemeldet bleiben</strong> eine Kopie der Gruppendaten, die Sie sehen können (für die Offline-Ansicht), sowie Ihre Anmeldung; bei deaktivierter Option behält er Ihre Anmeldung nur, bis der Tab geschlossen wird, und keine Gruppendaten. Er merkt sich außerdem diese Auswahl und, während Sie sich mit einem E-Mail-Link anmelden, diese E-Mail-Adresse (bis der Link verwendet wird) und die Seite, zu der Sie zurückkehren. Beim Abmelden werden die Kopie der Gruppendaten und Ihre Anmeldung aus dem Browser gelöscht.</p>
 
   <h3>9.2 Cloud-Speicher für Gruppenfunktionen</h3>
   <p>Für Gruppenfunktionen werden ausgewählte Daten mit Firebase Firestore (und Fotos mit Firebase Storage) synchronisiert:</p>
@@ -1439,8 +1439,8 @@
     <li>Beim Aktualisieren Ihres Profilfotos wird das vorherige Foto in Firebase Storage überschrieben. Bei „Foto entfernen" wird es aus Firebase Storage gelöscht. Nach dem Entfernen ist Ihr Foto für andere Mitglieder nicht mehr sichtbar; bestehende Geräte können jedoch eine zwischengespeicherte Kopie behalten, bis sie das nächste Mal synchronisieren.</li>
     <li>Das Aktualisieren oder Entfernen eines Gruppenfotos funktioniert auf dieselbe Weise: Beim Aktualisieren wird das vorhandene Foto in Firebase Storage überschrieben, bei „Foto entfernen" wird es gelöscht. Nur der Gruppen-Administrator kann diese Aktionen ausführen. Das Gruppenfoto wird auch dann aus Firebase Storage gelöscht, wenn die Gruppe selbst gelöscht wird – unabhängig davon, welche Löschoption gewählt wurde.</li>
     <li>Gruppen-Administratoren können inaktive Gruppen direkt unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen. Eine Gruppe kommt für die Bereinigung in Frage, wenn sie seit über 6 Monaten inaktiv ist und alle Schulden beglichen wurden. Wenn ein Administrator die Löschung einleitet, erhalten alle betroffenen Gruppenmitglieder eine Push-Benachrichtigung mit dem Namen des Administrators. Der Administrator kann wählen, ob er die Gruppenausgaben exportieren, lokal behalten oder vollständig löschen möchte, bevor die Gruppe aus Firebase entfernt wird.</li>
-    <li>In der Web-Version öffnen Sie den Tab <strong>Members</strong> einer Gruppe und wählen <strong>Leave Group</strong>, um sie zu verlassen (sobald Ihr Saldo ausgeglichen ist, wie in der App).</li>
-    <li>Sobald Sie alle Ihre Gruppen verlassen haben, löscht <strong>Delete My Web Sign-in</strong> auf der Seite <strong>Your groups</strong> der Website Ihre Anmelde-E-Mail-Adresse aus Firebase Authentication und meldet Sie ab (siehe Abschnitt 2).</li>
+    <li>In der Web-Version öffnen Sie den Tab <strong>Mitglieder</strong> einer Gruppe und wählen <strong>Gruppe verlassen</strong>, um sie zu verlassen (sobald Ihr Saldo ausgeglichen ist, wie in der App).</li>
+    <li>Sobald Sie alle Ihre Gruppen verlassen haben, löscht <strong>Meine Web-Anmeldung löschen</strong> auf der Seite <strong>Deine Gruppen</strong> der Website Ihre Anmelde-E-Mail-Adresse aus Firebase Authentication und meldet Sie ab (siehe Abschnitt 2).</li>
     <li>Das Abmelden von der Web-Version löscht die in diesem Browser gespeicherte Kopie der Gruppendaten und Ihre Anmeldung.</li>
     <li>Die Deinstallation von Node Expense entfernt alle lokal gespeicherten Daten von Ihrem Gerät</li>
   </ul>
@@ -1459,7 +1459,7 @@
     <li>Als Gruppen-Administrator inaktive Gruppen (über 6 Monate inaktiv, alle Schulden beglichen) unter Einstellungen → Daten &amp; Datenschutz → Inaktive Gruppen bereinigen, mit der Wahl zwischen Exportieren, lokal Behalten oder vollständigem Löschen aller Gruppenausgaben</li>
     <li>Ihr Abonnement jederzeit über die Apple App Store-Einstellungen kündigen</li>
     <li>Die Nutzung von Backups oder verschlüsselten Exporten jederzeit beenden</li>
-    <li>In der Web-Version eine Gruppe über ihren Tab <strong>Members</strong> verlassen, Ihre Web-Anmeldung auf der Seite <strong>Your groups</strong> löschen und sich jederzeit abmelden, um die Kopie in diesem Browser zu entfernen</li>
+    <li>In der Web-Version eine Gruppe über ihren Tab <strong>Mitglieder</strong> verlassen, Ihre Web-Anmeldung auf der Seite <strong>Deine Gruppen</strong> löschen und sich jederzeit abmelden, um die Kopie in diesem Browser zu entfernen</li>
   </ul>
 
   <h2><span class="section-number">14</span>Änderungen dieser Richtlinie</h2>
@@ -1526,8 +1526,8 @@
   <p>La app no requiere cuenta ni inicio de sesión; la versión web sí: inicia sesión con una cuenta de Google o con un enlace de un solo uso enviado a su dirección de correo electrónico, a través de Firebase Authentication. Firebase guarda su dirección de correo electrónico (y, con Google, el nombre y la foto de perfil que proporciona Google) para que pueda volver a iniciar sesión; su correo electrónico nunca se muestra a otros miembros del grupo. El nombre que introduce al unirse es su nombre para mostrar en ese grupo, como en la app.</p>
   <p>Cuando inicia sesión, el sitio web registra que se está usando un cliente web, junto con el idioma de su navegador, para que sigan funcionando las funciones de grupo que necesitan que los dispositivos de todos los miembros estén actualizados. Los miembros de sus grupos ven la etiqueta <strong>Web</strong> junto a su nombre. Actualmente, el sitio web le permite ver grupos, unirse a un grupo, ocupar un lugar que alguien añadió para usted por nombre, confirmar o rechazar un pago que alguien registró a su favor, votar sobre la eliminación de un grupo y salir de un grupo; para añadir gastos y registrar pagos se necesita la app.</p>
   <p>Para proteger el servicio contra abusos, el sitio web usa Google reCAPTCHA Enterprise (a través de Firebase App Check), que examina información sobre su navegador y su dispositivo. Su uso está sujeto a la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad</a> y las <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Condiciones del Servicio</a> de Google. El sitio web no usa analítica ni establece cookies propias; el inicio de sesión de Google y reCAPTCHA pueden establecer sus propias cookies.</p>
-  <p>Si deja marcada la opción <strong>Keep me signed in on this computer</strong> (mantener la sesión iniciada en este equipo) al iniciar sesión, su navegador guarda una copia de los datos de grupo que puede ver, para que las páginas carguen cuando se corte la conexión, y su sesión, para que siga con la sesión iniciada. Si la desmarca (por ejemplo, en un equipo compartido), su sesión dura solo hasta que cierre esa pestaña del navegador y no se guarda ninguna copia de los datos de grupo; el navegador solo recuerda esa elección. Mientras inicia sesión con un enlace por correo electrónico, el navegador también guarda esa dirección de correo electrónico hasta que se usa el enlace, y la página a la que volver después. Al cerrar sesión se borran del navegador la copia de los datos de grupo y su sesión.</p>
-  <p><strong>Eliminar su inicio de sesión web.</strong> Una vez que haya salido de todos sus grupos, elija <strong>Delete My Web Sign-in</strong> (eliminar mi inicio de sesión web) en la página <strong>Your groups</strong> (sus grupos) del sitio web. Esto elimina su dirección de correo electrónico (y el nombre y la foto que proporcionó Google) de Firebase Authentication, junto con el registro del sitio web de que se usa un cliente web, y cierra su sesión. Su nombre permanece en los gastos y pagos de los grupos en los que estuvo, como el de un miembro que sale de un grupo en la app, y en su historial de actividad hasta que se elimina a los 90 días.</p>
+  <p>Si deja marcada la opción <strong>Mantener la sesión iniciada en este equipo</strong> al iniciar sesión, su navegador guarda una copia de los datos de grupo que puede ver, para que las páginas carguen cuando se corte la conexión, y su sesión, para que siga con la sesión iniciada. Si la desmarca (por ejemplo, en un equipo compartido), su sesión dura solo hasta que cierre esa pestaña del navegador y no se guarda ninguna copia de los datos de grupo; el navegador solo recuerda esa elección. Mientras inicia sesión con un enlace por correo electrónico, el navegador también guarda esa dirección de correo electrónico hasta que se usa el enlace, y la página a la que volver después. Al cerrar sesión se borran del navegador la copia de los datos de grupo y su sesión.</p>
+  <p><strong>Eliminar su inicio de sesión web.</strong> Una vez que haya salido de todos sus grupos, elija <strong>Eliminar mi inicio de sesión web</strong> en la página <strong>Tus grupos</strong> del sitio web. Esto elimina su dirección de correo electrónico (y el nombre y la foto que proporcionó Google) de Firebase Authentication, junto con el registro del sitio web de que se usa un cliente web, y cierra su sesión. Su nombre permanece en los gastos y pagos de los grupos en los que estuvo, como el de un miembro que sale de un grupo en la app, y en su historial de actividad hasta que se elimina a los 90 días.</p>
 
   <h2><span class="section-number">3</span>Servicios de terceros</h2>
   <table class="service-table">
@@ -1617,7 +1617,7 @@
     <li>Gastos de grupo en caché para visualización sin conexión</li>
   </ul>
   <p>Los datos de gastos e ingresos personales — incluidas las fotos de recibos adjuntas — nunca salen de su dispositivo a menos que los exporte o respalde explícitamente. La única excepción son las búsquedas de ubicación descritas en la sección 7. Los gastos de grupos eliminados se conservan localmente con un marcador de "grupo eliminado" solo si quien eliminó el grupo optó por conservar los registros. Si optó por eliminarlos, esos gastos también se borran de su dispositivo.</p>
-  <p><strong>En la versión web</strong>, con <strong>Keep me signed in on this computer</strong> marcada, su navegador guarda una copia de los datos de grupo que puede ver (para verlos sin conexión) y su sesión; desmarcada, conserva su sesión solo hasta que se cierra la pestaña y ningún dato de grupo. También recuerda esa elección y, mientras inicia sesión con un enlace por correo electrónico, esa dirección de correo electrónico (hasta que se usa el enlace) y la página a la que volver. Al cerrar sesión se borran del navegador la copia de los datos de grupo y su sesión.</p>
+  <p><strong>En la versión web</strong>, con <strong>Mantener la sesión iniciada en este equipo</strong> marcada, su navegador guarda una copia de los datos de grupo que puede ver (para verlos sin conexión) y su sesión; desmarcada, conserva su sesión solo hasta que se cierra la pestaña y ningún dato de grupo. También recuerda esa elección y, mientras inicia sesión con un enlace por correo electrónico, esa dirección de correo electrónico (hasta que se usa el enlace) y la página a la que volver. Al cerrar sesión se borran del navegador la copia de los datos de grupo y su sesión.</p>
 
   <h3>9.2 Almacenamiento en la nube para funciones de grupo</h3>
   <p>Para las funciones de grupo, los datos seleccionados se sincronizan con Firebase Firestore (y las fotos con Firebase Storage):</p>
@@ -1667,8 +1667,8 @@
     <li>Actualizar su foto de perfil sobrescribe la foto anterior en Firebase Storage. Al elegir «Eliminar foto», esta se borra de Firebase Storage. Una vez eliminada, su foto deja de ser visible para los demás miembros, aunque los dispositivos existentes pueden conservar una copia en caché hasta la próxima sincronización.</li>
     <li>Actualizar o eliminar la foto de grupo funciona de la misma manera: actualizar sobrescribe la foto existente en Firebase Storage, y elegir «Eliminar foto» la borra. Solo el administrador del grupo puede realizar estas acciones. La foto de grupo también se elimina de Firebase Storage cuando el propio grupo se elimina, independientemente de la opción de eliminación elegida.</li>
     <li>Los administradores de grupo pueden depurar grupos inactivos directamente desde Ajustes → Datos y privacidad → Grupos inactivos. Un grupo es elegible para su depuración tras 6 meses de inactividad con todas las deudas saldadas. Cuando un administrador inicia la eliminación, todos los miembros afectados del grupo reciben una notificación push con el nombre de quien eliminó el grupo. El administrador puede elegir exportar los gastos del grupo, conservarlos localmente o eliminarlos por completo antes de que el grupo se retire de Firebase.</li>
-    <li>En la versión web, abra la pestaña <strong>Members</strong> de un grupo y elija <strong>Leave Group</strong> para salir de él (una vez saldado su saldo, como en la app).</li>
-    <li>Una vez que haya salido de todos sus grupos, <strong>Delete My Web Sign-in</strong> en la página <strong>Your groups</strong> del sitio web elimina de Firebase Authentication la dirección de correo electrónico con la que inicia sesión y cierra su sesión (consulte la sección 2).</li>
+    <li>En la versión web, abra la pestaña <strong>Miembros</strong> de un grupo y elija <strong>Salir del grupo</strong> para salir de él (una vez saldado su saldo, como en la app).</li>
+    <li>Una vez que haya salido de todos sus grupos, <strong>Eliminar mi inicio de sesión web</strong> en la página <strong>Tus grupos</strong> del sitio web elimina de Firebase Authentication la dirección de correo electrónico con la que inicia sesión y cierra su sesión (consulte la sección 2).</li>
     <li>Cerrar sesión en la versión web borra la copia de los datos de grupo y la sesión guardadas en ese navegador.</li>
     <li>Desinstalar Node Expense elimina todos los datos almacenados localmente de su dispositivo</li>
   </ul>
@@ -1687,7 +1687,7 @@
     <li>Como administrador del grupo, depurar grupos inactivos (más de 6 meses inactivos, todas las deudas saldadas) desde Ajustes → Datos y privacidad → Grupos inactivos, con la opción de exportar, conservar localmente o eliminar todos los gastos del grupo</li>
     <li>Cancelar su suscripción en cualquier momento a través de los ajustes del App Store de Apple</li>
     <li>Dejar de usar copias de seguridad o exportaciones cifradas en cualquier momento</li>
-    <li>En la versión web, salir de un grupo desde su pestaña <strong>Members</strong>, eliminar su inicio de sesión web en la página <strong>Your groups</strong> y cerrar sesión en cualquier momento para borrar la copia de ese navegador</li>
+    <li>En la versión web, salir de un grupo desde su pestaña <strong>Miembros</strong>, eliminar su inicio de sesión web en la página <strong>Tus grupos</strong> y cerrar sesión en cualquier momento para borrar la copia de ese navegador</li>
   </ul>
 
   <h2><span class="section-number">14</span>Cambios en esta política</h2>
@@ -1754,8 +1754,8 @@
   <p>L'app ne demande ni compte ni connexion ; la version web, si : vous vous connectez avec un compte Google ou avec un lien à usage unique envoyé à votre adresse e-mail, via Firebase Authentication. Firebase conserve votre adresse e-mail (et, avec Google, le nom et la photo de profil fournis par Google) pour que vous puissiez vous reconnecter ; votre e-mail n'est jamais montré aux autres membres du groupe. Le nom que vous saisissez en rejoignant un groupe est votre nom d'affichage dans ce groupe, comme dans l'app.</p>
   <p>Lorsque vous vous connectez, le site web enregistre qu'un client web est utilisé, avec la langue de votre navigateur, afin que les fonctions de groupe qui exigent que l'appareil de chaque membre soit à jour continuent de fonctionner. Les membres de vos groupes voient la mention <strong>Web</strong> à côté de votre nom. Le site web permet actuellement de consulter des groupes, de rejoindre un groupe, de reprendre une place que quelqu'un a ajoutée pour vous par votre nom, de confirmer ou de refuser un paiement que quelqu'un a enregistré en votre faveur, de voter sur la suppression d'un groupe et de quitter un groupe ; l'ajout de dépenses et l'enregistrement de paiements nécessitent l'app.</p>
   <p>Pour protéger le service contre les abus, le site web utilise Google reCAPTCHA Enterprise (via Firebase App Check), qui examine des informations sur votre navigateur et votre appareil. Son utilisation est soumise aux <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité</a> et aux <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Conditions d'utilisation</a> de Google. Le site web n'utilise aucun outil d'analyse et ne dépose aucun cookie propre ; la connexion Google et reCAPTCHA peuvent déposer leurs propres cookies.</p>
-  <p>Si vous laissez <strong>Keep me signed in on this computer</strong> (rester connecté sur cet ordinateur) coché lors de la connexion, votre navigateur conserve une copie des données de groupe que vous pouvez voir, pour que les pages se chargent quand la connexion est coupée, ainsi que votre connexion, pour que vous restiez connecté. Si vous le décochez (par exemple sur un ordinateur partagé), votre connexion ne dure que jusqu'à la fermeture de cet onglet du navigateur et aucune copie des données de groupe n'est conservée ; le navigateur ne retient que ce choix. Pendant que vous vous connectez avec un lien envoyé par e-mail, le navigateur conserve aussi cette adresse e-mail jusqu'à l'utilisation du lien, ainsi que la page à laquelle revenir ensuite. La déconnexion supprime du navigateur la copie des données de groupe et votre connexion.</p>
-  <p><strong>Supprimer votre connexion web.</strong> Une fois que vous avez quitté tous vos groupes, choisissez <strong>Delete My Web Sign-in</strong> (supprimer ma connexion web) sur la page <strong>Your groups</strong> (vos groupes) du site web. Cela supprime votre adresse e-mail (ainsi que le nom et la photo fournis par Google) de Firebase Authentication, avec l'enregistrement du site web indiquant qu'un client web est utilisé, et vous déconnecte. Votre nom reste dans les dépenses et les paiements des groupes dont vous faisiez partie, comme celui d'un membre qui quitte un groupe dans l'app, et dans leur historique d'activité jusqu'à sa suppression au bout de 90 jours.</p>
+  <p>Si vous laissez <strong>Rester connecté sur cet ordinateur</strong> coché lors de la connexion, votre navigateur conserve une copie des données de groupe que vous pouvez voir, pour que les pages se chargent quand la connexion est coupée, ainsi que votre connexion, pour que vous restiez connecté. Si vous le décochez (par exemple sur un ordinateur partagé), votre connexion ne dure que jusqu'à la fermeture de cet onglet du navigateur et aucune copie des données de groupe n'est conservée ; le navigateur ne retient que ce choix. Pendant que vous vous connectez avec un lien envoyé par e-mail, le navigateur conserve aussi cette adresse e-mail jusqu'à l'utilisation du lien, ainsi que la page à laquelle revenir ensuite. La déconnexion supprime du navigateur la copie des données de groupe et votre connexion.</p>
+  <p><strong>Supprimer votre connexion web.</strong> Une fois que vous avez quitté tous vos groupes, choisissez <strong>Supprimer ma connexion web</strong> sur la page <strong>Vos groupes</strong> du site web. Cela supprime votre adresse e-mail (ainsi que le nom et la photo fournis par Google) de Firebase Authentication, avec l'enregistrement du site web indiquant qu'un client web est utilisé, et vous déconnecte. Votre nom reste dans les dépenses et les paiements des groupes dont vous faisiez partie, comme celui d'un membre qui quitte un groupe dans l'app, et dans leur historique d'activité jusqu'à sa suppression au bout de 90 jours.</p>
 
   <h2><span class="section-number">3</span>Services tiers</h2>
   <table class="service-table">
@@ -1845,7 +1845,7 @@
     <li>Dépenses de groupe en cache pour une consultation hors ligne</li>
   </ul>
   <p>Les données de dépenses et de revenus personnels — y compris les photos de reçus jointes — ne quittent jamais votre appareil à moins que vous ne les exportiez ou sauvegardiez explicitement. La seule exception concerne les recherches de lieux décrites à la section 7. Les dépenses des groupes supprimés ne sont conservées localement avec un marqueur « groupe supprimé » que si la personne ayant supprimé le groupe a choisi de conserver les enregistrements. Si elle a choisi de les supprimer, ces dépenses sont également effacées de votre appareil.</p>
-  <p><strong>Sur la version web</strong>, avec <strong>Keep me signed in on this computer</strong> coché, votre navigateur stocke une copie des données de groupe que vous pouvez voir (pour la consultation hors ligne) et votre connexion ; décoché, il ne conserve votre connexion que jusqu'à la fermeture de l'onglet, et aucune donnée de groupe. Il retient aussi ce choix et, pendant que vous vous connectez avec un lien envoyé par e-mail, cette adresse e-mail (jusqu'à l'utilisation du lien) et la page à laquelle revenir. La déconnexion supprime du navigateur la copie des données de groupe et votre connexion.</p>
+  <p><strong>Sur la version web</strong>, avec <strong>Rester connecté sur cet ordinateur</strong> coché, votre navigateur stocke une copie des données de groupe que vous pouvez voir (pour la consultation hors ligne) et votre connexion ; décoché, il ne conserve votre connexion que jusqu'à la fermeture de l'onglet, et aucune donnée de groupe. Il retient aussi ce choix et, pendant que vous vous connectez avec un lien envoyé par e-mail, cette adresse e-mail (jusqu'à l'utilisation du lien) et la page à laquelle revenir. La déconnexion supprime du navigateur la copie des données de groupe et votre connexion.</p>
 
   <h3>9.2 Stockage cloud pour les fonctionnalités de groupe</h3>
   <p>Pour les fonctionnalités de groupe, certaines données sont synchronisées avec Firebase Firestore (et les photos avec Firebase Storage) :</p>
@@ -1895,8 +1895,8 @@
     <li>La mise à jour de votre photo de profil écrase la photo précédente dans Firebase Storage. Choisir « Supprimer la photo » l'efface de Firebase Storage. Une fois supprimée, votre photo n'est plus visible par les autres membres, bien que les appareil existants puissent conserver une copie en cache jusqu'à la prochaine synchronisation.</li>
     <li>La mise à jour ou la suppression d'une photo de groupe fonctionne de la même façon : la mise à jour écrase la photo existante dans Firebase Storage, et choisir « Supprimer la photo » la supprime. Seul l'admin du groupe peut effectuer ces actions. La photo de groupe est également supprimée de Firebase Storage lorsque le groupe lui-même est supprimé, quelle que soit l'option de suppression choisie.</li>
     <li>Les administrateurs de groupe peuvent supprimer les groupes inactifs directement depuis Réglages → Données et confidentialité → Groupes inactifs. Un groupe est éligible à la suppression après 6 mois d'inactivité avec toutes les dettes réglées. Lorsqu'un administrateur initie la suppression, tous les membres concernés reçoivent une notification push indiquant qui a supprimé le groupe. L'administrateur peut choisir d'exporter les dépenses du groupe, de les conserver localement ou de les supprimer entièrement avant que le groupe ne soit retiré de Firebase.</li>
-    <li>Sur la version web, ouvrez l'onglet <strong>Members</strong> d'un groupe et choisissez <strong>Leave Group</strong> pour le quitter (une fois votre solde réglé, comme dans l'app).</li>
-    <li>Une fois que vous avez quitté tous vos groupes, <strong>Delete My Web Sign-in</strong> sur la page <strong>Your groups</strong> du site web supprime votre adresse e-mail de connexion de Firebase Authentication et vous déconnecte (voir la section 2).</li>
+    <li>Sur la version web, ouvrez l'onglet <strong>Membres</strong> d'un groupe et choisissez <strong>Quitter le groupe</strong> pour le quitter (une fois votre solde réglé, comme dans l'app).</li>
+    <li>Une fois que vous avez quitté tous vos groupes, <strong>Supprimer ma connexion web</strong> sur la page <strong>Vos groupes</strong> du site web supprime votre adresse e-mail de connexion de Firebase Authentication et vous déconnecte (voir la section 2).</li>
     <li>Se déconnecter de la version web supprime la copie des données de groupe et la connexion conservées dans ce navigateur.</li>
     <li>La désinstallation de Node Expense supprime toutes les données stockées localement de votre appareil</li>
   </ul>
@@ -1915,7 +1915,7 @@
     <li>En tant qu'administrateur de groupe, supprimer les groupes inactifs (plus de 6 mois d'inactivité, toutes les dettes réglées) depuis Réglages → Données et confidentialité → Groupes inactifs, avec le choix d'exporter, de conserver localement ou de supprimer toutes les dépenses du groupe</li>
     <li>Annuler votre abonnement à tout moment via les paramètres de l'App Store Apple</li>
     <li>Arrêter d'utiliser les sauvegardes ou les exportations chiffrées à tout moment</li>
-    <li>Sur la version web, quitter un groupe depuis son onglet <strong>Members</strong>, supprimer votre connexion web depuis la page <strong>Your groups</strong>, et vous déconnecter à tout moment pour effacer la copie de ce navigateur</li>
+    <li>Sur la version web, quitter un groupe depuis son onglet <strong>Membres</strong>, supprimer votre connexion web depuis la page <strong>Vos groupes</strong>, et vous déconnecter à tout moment pour effacer la copie de ce navigateur</li>
   </ul>
 
   <h2><span class="section-number">14</span>Modifications de cette politique</h2>
@@ -1983,8 +1983,8 @@
   <p>앱은 계정이나 로그인이 필요하지 않지만, 웹 버전은 필요합니다. Firebase Authentication을 통해 Google 계정 또는 귀하의 이메일 주소로 전송되는 일회용 링크로 로그인합니다. Firebase는 귀하가 다시 로그인할 수 있도록 이메일 주소(Google의 경우 Google이 제공하는 이름과 프로필 사진 포함)를 보관하며, 귀하의 이메일은 다른 그룹 멤버에게 절대 표시되지 않습니다. 참가할 때 입력한 이름은 앱과 마찬가지로 해당 그룹에서의 표시 이름이 됩니다.</p>
   <p>로그인하면 웹사이트는 웹 클라이언트가 사용 중이라는 사실과 브라우저 언어를 기록합니다. 이를 통해 모든 멤버의 기기가 최신 상태여야 하는 그룹 기능이 계속 작동합니다. 그룹 멤버에게는 귀하의 이름 옆에 <strong>웹</strong> 표시가 보입니다. 현재 웹사이트에서는 그룹 보기, 그룹 참가, 누군가 이름으로 추가해 둔 귀하의 자리 이어받기, 귀하에게 기록된 결제 확인 또는 거절, 그룹 삭제 투표, 그룹 나가기를 할 수 있으며, 지출 추가와 결제 기록에는 앱이 필요합니다.</p>
   <p>서비스를 남용으로부터 보호하기 위해 웹사이트는 (Firebase App Check를 통해) Google reCAPTCHA Enterprise를 사용하며, 이는 귀하의 브라우저와 기기에 관한 정보를 확인합니다. 그 사용에는 Google의 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a> 및 <a href="https://policies.google.com/terms" target="_blank" rel="noopener">서비스 약관</a>이 적용됩니다. 웹사이트는 분석 도구를 사용하지 않으며 자체 쿠키를 설정하지 않습니다. Google 로그인과 reCAPTCHA는 자체 쿠키를 설정할 수 있습니다.</p>
-  <p>로그인할 때 <strong>Keep me signed in on this computer</strong>(이 컴퓨터에서 로그인 유지)를 선택한 상태로 두면, 브라우저는 귀하가 볼 수 있는 그룹 데이터의 사본(연결이 끊겨도 페이지를 불러올 수 있도록)과 로그인 상태(로그인이 유지되도록)를 보관합니다. 선택을 해제하면(예: 공용 컴퓨터) 로그인은 해당 브라우저 탭을 닫을 때까지만 유지되며 그룹 데이터 사본은 보관되지 않고, 브라우저는 그 선택만 기억합니다. 이메일 링크로 로그인하는 동안에는 링크가 사용될 때까지 해당 이메일 주소와 로그인 후 돌아갈 페이지도 브라우저에 보관됩니다. 로그아웃하면 그룹 데이터 사본과 로그인 상태가 브라우저에서 삭제됩니다.</p>
-  <p><strong>웹 로그인 삭제.</strong> 모든 그룹에서 나간 후 웹사이트의 <strong>Your groups</strong>(내 그룹) 페이지에서 <strong>Delete My Web Sign-in</strong>(내 웹 로그인 삭제)을 선택하세요. 이렇게 하면 귀하의 이메일 주소(및 Google이 제공한 이름과 사진)가 웹 클라이언트 사용 기록과 함께 Firebase Authentication에서 삭제되고 로그아웃됩니다. 귀하의 이름은 앱에서 그룹을 나간 멤버와 마찬가지로 참여했던 그룹의 지출과 결제에 남으며, 해당 그룹의 활동 기록에도 90일 후 삭제될 때까지 남습니다.</p>
+  <p>로그인할 때 <strong>이 컴퓨터에서 로그인 유지</strong>를 선택한 상태로 두면, 브라우저는 귀하가 볼 수 있는 그룹 데이터의 사본(연결이 끊겨도 페이지를 불러올 수 있도록)과 로그인 상태(로그인이 유지되도록)를 보관합니다. 선택을 해제하면(예: 공용 컴퓨터) 로그인은 해당 브라우저 탭을 닫을 때까지만 유지되며 그룹 데이터 사본은 보관되지 않고, 브라우저는 그 선택만 기억합니다. 이메일 링크로 로그인하는 동안에는 링크가 사용될 때까지 해당 이메일 주소와 로그인 후 돌아갈 페이지도 브라우저에 보관됩니다. 로그아웃하면 그룹 데이터 사본과 로그인 상태가 브라우저에서 삭제됩니다.</p>
+  <p><strong>웹 로그인 삭제.</strong> 모든 그룹에서 나간 후 웹사이트의 <strong>내 그룹</strong> 페이지에서 <strong>내 웹 로그인 삭제</strong>를 선택하세요. 이렇게 하면 귀하의 이메일 주소(및 Google이 제공한 이름과 사진)가 웹 클라이언트 사용 기록과 함께 Firebase Authentication에서 삭제되고 로그아웃됩니다. 귀하의 이름은 앱에서 그룹을 나간 멤버와 마찬가지로 참여했던 그룹의 지출과 결제에 남으며, 해당 그룹의 활동 기록에도 90일 후 삭제될 때까지 남습니다.</p>
 
   <h2><span class="section-number">3</span>제3자 서비스</h2>
   <table class="service-table">
@@ -2074,7 +2074,7 @@
     <li>오프라인 조회를 위해 캐시된 그룹 지출</li>
   </ul>
   <p>개인 지출 및 수입 데이터는 — 첨부된 영수증 사진을 포함하여 — 귀하가 명시적으로 내보내거나 백업하지 않는 한 기기를 절대 벗어나지 않습니다. 유일한 예외는 제7조에 설명된 장소 검색입니다. 삭제된 그룹의 지출은 그룹을 삭제한 사람이 기록 보관을 선택한 경우에만 '그룹 삭제됨' 표시와 함께 로컬에 보관됩니다. 기록 삭제를 선택한 경우 해당 지출은 귀하의 기기에서도 삭제됩니다.</p>
-  <p><strong>웹 버전에서는</strong> <strong>Keep me signed in on this computer</strong>를 선택하면 브라우저가 귀하가 볼 수 있는 그룹 데이터의 사본(오프라인 보기용)과 로그인 상태를 저장하고, 선택을 해제하면 탭을 닫을 때까지 로그인 상태만 보관하며 그룹 데이터는 보관하지 않습니다. 브라우저는 그 선택도 기억하며, 이메일 링크로 로그인하는 동안에는 해당 이메일 주소(링크가 사용될 때까지)와 돌아갈 페이지도 보관합니다. 로그아웃하면 그룹 데이터 사본과 로그인 상태가 브라우저에서 삭제됩니다.</p>
+  <p><strong>웹 버전에서는</strong> <strong>이 컴퓨터에서 로그인 유지</strong>를 선택하면 브라우저가 귀하가 볼 수 있는 그룹 데이터의 사본(오프라인 보기용)과 로그인 상태를 저장하고, 선택을 해제하면 탭을 닫을 때까지 로그인 상태만 보관하며 그룹 데이터는 보관하지 않습니다. 브라우저는 그 선택도 기억하며, 이메일 링크로 로그인하는 동안에는 해당 이메일 주소(링크가 사용될 때까지)와 돌아갈 페이지도 보관합니다. 로그아웃하면 그룹 데이터 사본과 로그인 상태가 브라우저에서 삭제됩니다.</p>
 
   <h3>9.2 그룹 기능을 위한 클라우드 저장</h3>
   <p>그룹 기능의 경우 일부 데이터가 Firebase Firestore와 동기화됩니다(사진은 Firebase Storage):</p>
@@ -2124,8 +2124,8 @@
     <li>프로필 사진을 업데이트하면 Firebase Storage의 이전 사진이 덮어쓰기됩니다. "사진 제거"를 선택하면 Firebase Storage에서 삭제됩니다. 제거 후에는 다른 멤버에게 사진이 더 이상 표시되지 않지만, 기존 기기는 다음 동기화 전까지 캐시 사본을 유지할 수 있습니다.</li>
     <li>그룹 사진의 업데이트 또는 제거도 동일한 방식으로 작동합니다. 업데이트하면 Firebase Storage의 기존 사진이 덮어쓰기되고, "사진 제거"를 선택하면 삭제됩니다. 이 작업은 그룹 관리자만 수행할 수 있습니다. 그룹 자체가 삭제될 때에도 선택한 삭제 옵션에 관계없이 그룹 사진이 Firebase Storage에서 삭제됩니다.</li>
     <li>그룹 관리자는 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹을 직접 정리할 수 있습니다. 6개월 이상 활동이 없고 모든 채무가 정산된 그룹이 정리 대상입니다. 관리자가 삭제를 시작하면 영향을 받는 모든 그룹 멤버에게 그룹을 삭제한 관리자 이름이 포함된 푸시 알림이 전송됩니다. 관리자는 그룹을 Firebase에서 제거하기 전에 그룹 지출을 내보내거나, 로컬에 보관하거나, 전체 삭제 중에서 선택할 수 있습니다.</li>
-    <li>웹 버전에서 그룹의 <strong>Members</strong> 탭을 열고 <strong>Leave Group</strong>를 선택하면 그룹에서 나갈 수 있음 (앱과 마찬가지로 잔액 정산 후)</li>
-    <li>모든 그룹에서 나간 후 웹사이트의 <strong>Your groups</strong> 페이지에서 <strong>Delete My Web Sign-in</strong>을 선택하면 로그인 이메일 주소가 Firebase Authentication에서 삭제되고 로그아웃됨 (제2조 참조)</li>
+    <li>웹 버전에서 그룹의 <strong>멤버</strong> 탭을 열고 <strong>그룹 나가기</strong>를 선택하면 그룹에서 나갈 수 있음 (앱과 마찬가지로 잔액 정산 후)</li>
+    <li>모든 그룹에서 나간 후 웹사이트의 <strong>내 그룹</strong> 페이지에서 <strong>내 웹 로그인 삭제</strong>를 선택하면 로그인 이메일 주소가 Firebase Authentication에서 삭제되고 로그아웃됨 (제2조 참조)</li>
     <li>웹 버전에서 로그아웃하면 해당 브라우저에 보관된 그룹 데이터 사본과 로그인 상태가 삭제됨</li>
     <li>Node Expense 삭제 시 기기에 로컬로 저장된 모든 데이터가 제거됨</li>
   </ul>
@@ -2144,7 +2144,7 @@
     <li>그룹 관리자로서 설정 → 데이터 및 개인정보 → 비활성 그룹에서 비활성 그룹(6개월 이상 비활성, 모든 채무 정산 완료)을 정리하고, 그룹 지출 내보내기, 로컬 보관, 또는 전체 삭제 중 선택 가능</li>
     <li>Apple App Store 설정을 통해 언제든지 구독 취소</li>
     <li>언제든지 암호화된 백업 또는 내보내기 중단</li>
-    <li>웹 버전에서 그룹의 <strong>Members</strong> 탭에서 그룹 나가기, <strong>Your groups</strong> 페이지에서 웹 로그인 삭제, 언제든지 로그아웃하여 해당 브라우저의 사본 삭제</li>
+    <li>웹 버전에서 그룹의 <strong>멤버</strong> 탭에서 그룹 나가기, <strong>내 그룹</strong> 페이지에서 웹 로그인 삭제, 언제든지 로그아웃하여 해당 브라우저의 사본 삭제</li>
   </ul>
 
   <h2><span class="section-number">14</span>정책 변경</h2>
