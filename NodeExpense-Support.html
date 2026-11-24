@@ -875,7 +875,7 @@
           <li>使用 Google 登入，或使用寄到您電子郵件的登入連結。</li>
           <li>輸入群組成員會看到的名稱，然後選擇<strong>加入群組</strong>。</li>
         </ol>
-        在網頁版中，您可以查看群組的費用、餘額、動態與成員，確認或拒絕他人記錄給您的付款（<strong>餘額</strong>分頁），在有人要求刪除群組時投票，以及離開群組（<strong>成員</strong>分頁 <span class="arrow">→</span> <strong>離開群組</strong>，需先結清餘額）。目前新增費用與記錄付款仍需使用 Node Expense App：您付款給某人時，請對方在 App 中記錄（<strong>記錄付款</strong> <span class="arrow">→</span> <strong>我收到了</strong>）。群組成員會在您的名稱旁看到<strong>網頁版</strong>標籤。在共用電腦上，登入時請取消勾選<strong>在這台電腦上保持登入</strong>。若要刪除您的網頁版登入，請先離開您的群組，再到<strong>您的群組</strong>頁面選擇<strong>刪除我的網頁版登入</strong>。<br><br>若<strong>加入群組</strong>顯示<strong>無法加入群組</strong>，可能是阻擋指令碼的擴充功能（例如 NoScript）擋住了請求：請允許此網站使用來自 google.com, gstatic.com, cloudfunctions.net 的指令碼，然後再試一次。
+        在網頁版中，您可以查看群組的支出、餘額、動態與成員，確認或拒絕他人記錄給您的付款（<strong>餘額</strong>分頁），在有人要求刪除群組時投票，以及離開群組（<strong>成員</strong>分頁 <span class="arrow">→</span> <strong>離開群組</strong>，需先結清餘額）。目前新增支出與記錄付款仍需使用 Node Expense App：您付款給某人時，請對方在 App 中記錄（<strong>記錄付款</strong> <span class="arrow">→</span> <strong>我收到了</strong>）。群組成員會在您的名稱旁看到<strong>網頁版</strong>標籤。在共用電腦上，登入時請取消勾選<strong>在這台電腦上保持登入</strong>。若要刪除您的網頁版登入，請先離開您的群組，再到<strong>您的群組</strong>頁面選擇<strong>刪除我的網頁版登入</strong>。<br><br>若<strong>加入群組</strong>顯示<strong>無法加入群組</strong>，可能是阻擋指令碼的擴充功能（例如 NoScript）擋住了請求：請允許此網站使用來自 google.com, gstatic.com, cloudfunctions.net 的指令碼，然後再試一次。
       </div>
     </div>
     <div class="faq-item">
@@ -996,16 +996,16 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何為新群組費用設定預設分攤比例？
+        如何為新群組支出設定預設分攤比例？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
         開啟群組 <span class="arrow">→</span> 點選<strong>設定</strong>分頁 <span class="arrow">→</span> 點選<strong>預設分攤</strong>（僅限管理員）<span class="arrow">→</span> 開啟<strong>使用固定分攤比例</strong> <span class="arrow">→</span> 以滑桿調整每位成員的百分比 <span class="arrow">→</span> 點選<strong>儲存</strong>。
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li>設定後，群組中新增的任何費用都會以那些百分比預填分攤選擇器，以<strong>紫色滑桿</strong>顯示。</li>
-          <li>若有人在儲存前調整了分攤比例，滑桿會變為<strong>藍色</strong>，表示該費用使用的是自訂分攤而非群組預設。</li>
-          <li>若有新成員加入群組，且尚未為其設定預設百分比，他們新增的費用將預設採用所有參與者<strong>平均分攤</strong>。</li>
-          <li>只有群組管理員可設定預設分攤。設定後，任何成員都可以在群組的<strong>支出</strong>分頁點按紫色的<strong>預設拆分已啟用</strong>標籤來變更。現有費用不受影響，不會被回溯修改。</li>
+          <li>設定後，群組中新增的任何支出都會以那些百分比預填分攤選擇器，以<strong>紫色滑桿</strong>顯示。</li>
+          <li>若有人在儲存前調整了分攤比例，滑桿會變為<strong>藍色</strong>，表示該支出使用的是自訂分攤而非群組預設。</li>
+          <li>若有新成員加入群組，且尚未為其設定預設百分比，他們新增的支出將預設採用所有參與者<strong>平均分攤</strong>。</li>
+          <li>只有群組管理員可設定預設分攤。設定後，任何成員都可以在群組的<strong>支出</strong>分頁點按紫色的<strong>預設拆分已啟用</strong>標籤來變更。現有支出不受影響，不會被回溯修改。</li>
         </ul>
       </div>
     </div>
@@ -1032,7 +1032,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        封存會在這台裝置上隱藏群組，不會刪除任何資料。<br><br>在群組卡片上<strong>向右滑動</strong> <span class="arrow">→</span> 點按<strong>封存</strong>。在 Mac 上，請改為在群組上按右鍵。您也可以從<strong>設定</strong> <span class="arrow">→</span> <strong>資料與隱私</strong> <span class="arrow">→</span> <strong>非活躍群組</strong>進行封存。<br><br>若要取回，請在「群組」畫面點按篩選圖示 <span class="arrow">→</span> 開啟<strong>顯示已封存群組</strong>。已封存的群組會以淡色顯示並帶有<strong>已封存</strong>標記；再次向右滑動並點按<strong>取消封存</strong>即可。<br><br>三點提醒：<br>• 封存<strong>僅影響這台裝置</strong>。其他成員不會看到任何變化，在 iPhone 上封存也不會封存 iPad 上的群組。<br>• 尚有未結清款項的群組無法封存——請先結清，這樣隱藏群組就不會連帶隱藏仍欠著的金額。<br>• 只要有人新增費用或記錄付款，該群組就會自動重新出現。
+        封存會在這台裝置上隱藏群組，不會刪除任何資料。<br><br>在群組卡片上<strong>向右滑動</strong> <span class="arrow">→</span> 點按<strong>封存</strong>。在 Mac 上，請改為在群組上按右鍵。您也可以從<strong>設定</strong> <span class="arrow">→</span> <strong>資料與隱私</strong> <span class="arrow">→</span> <strong>非活躍群組</strong>進行封存。<br><br>若要取回，請在「群組」畫面點按篩選圖示 <span class="arrow">→</span> 開啟<strong>顯示已封存群組</strong>。已封存的群組會以淡色顯示並帶有<strong>已封存</strong>標記；再次向右滑動並點按<strong>取消封存</strong>即可。<br><br>三點提醒：<br>• 封存<strong>僅影響這台裝置</strong>。其他成員不會看到任何變化，在 iPhone 上封存也不會封存 iPad 上的群組。<br>• 尚有未結清款項的群組無法封存——請先結清，這樣隱藏群組就不會連帶隱藏仍欠著的金額。<br>• 只要有人新增支出或記錄付款，該群組就會自動重新出現。
       </div>
     </div>
     <div class="faq-item">
@@ -1078,12 +1078,12 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        編輯方式取決於退款關聯的是<strong>個人費用</strong>還是<strong>群組費用</strong>。
+        編輯方式取決於退款關聯的是<strong>個人支出</strong>還是<strong>群組支出</strong>。
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>個人費用退款</strong> — 點選退款 <span class="arrow">→</span> 您可以編輯<strong>金額</strong>、<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。新金額上限為原費用的剩餘可退款金額（金額欄位下方的提示會顯示可輸入的最大值）。</li>
-          <li><strong>群組費用退款</strong> — 僅可編輯<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。金額、貨幣和分攤已鎖定，因為變更這些項目需要為每位參與者重新計算按比例的分攤份額。若要變更金額，請<strong>刪除該退款並重新記錄一筆</strong>。</li>
+          <li><strong>個人支出退款</strong> — 點選退款 <span class="arrow">→</span> 您可以編輯<strong>金額</strong>、<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。新金額上限為原支出的剩餘可退款金額（金額欄位下方的提示會顯示可輸入的最大值）。</li>
+          <li><strong>群組支出退款</strong> — 僅可編輯<strong>日期</strong>、<strong>備註</strong>和<strong>類別</strong>。金額、貨幣和分攤已鎖定，因為變更這些項目需要為每位參與者重新計算按比例的分攤份額。若要變更金額，請<strong>刪除該退款並重新記錄一筆</strong>。</li>
         </ul>
-        所有退款的貨幣始終鎖定 — 使用與原費用不同貨幣的退款在語義上沒有意義。
+        所有退款的貨幣始終鎖定 — 使用與原支出不同貨幣的退款在語義上沒有意義。
       </div>
     </div>
     <div class="faq-item">
@@ -1092,7 +1092,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選<strong>設定</strong> <span class="arrow">→</span> <strong>貨幣與分類</strong> <span class="arrow">→</span> <strong>預設貨幣</strong>。所選貨幣將在新增費用時作為預設貨幣使用。
+        點選<strong>設定</strong> <span class="arrow">→</span> <strong>貨幣與分類</strong> <span class="arrow">→</span> <strong>預設貨幣</strong>。所選貨幣將在新增支出時作為預設貨幣使用。
       </div>
     </div>
     <div class="faq-item">
@@ -1137,7 +1137,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        點選 <strong>+</strong> 按鈕新增費用 <span class="arrow">→</span> 點選金額欄位旁的<strong>相機圖示</strong> <span class="arrow">→</span> 將相機對準收據並保持穩定，系統會自動拍攝。在<strong>確認收據</strong>畫面中，最可能的總金額會標示為<strong>建議</strong>，點選所需金額旁的<strong>使用</strong>即可。商家名稱會加入備註；若能辨識，日期與貨幣也會自動填入。在 Mac 上，金額旁的按鈕會改為開啟照片：選擇收據的照片，或將收據圖片拖放到<strong>新增支出</strong>視窗中。
+        點選 <strong>+</strong> 按鈕新增支出 <span class="arrow">→</span> 點選金額欄位旁的<strong>相機圖示</strong> <span class="arrow">→</span> 將相機對準收據並保持穩定，系統會自動拍攝。在<strong>確認收據</strong>畫面中，最可能的總金額會標示為<strong>建議</strong>，點選所需金額旁的<strong>使用</strong>即可。商家名稱會加入備註；若能辨識，日期與貨幣也會自動填入。在 Mac 上，金額旁的按鈕會改為開啟照片：選擇收據的照片，或將收據圖片拖放到<strong>新增支出</strong>視窗中。
       </div>
     </div>
     <div class="faq-item">
@@ -1147,7 +1147,7 @@
       </button>
       <div class="faq-answer">
         Pick &amp; Pay 會逐行讀取群組收據，讓每個人只為自己點的東西付錢。點選 <strong>+</strong> 新增支出 <span class="arrow">→</span> 選擇群組 <span class="arrow">→</span> 在<strong>分帳</strong>中選擇 <strong>Pick &amp; Pay</strong> <span class="arrow">→</span> 選擇<strong>拍照</strong>或<strong>照片圖庫</strong>（在 Mac 上僅能使用照片圖庫）。接著在<strong>選擇項目</strong>畫面中：
-        <ul style="margin:8px 0 8px 18px; padding:0;"><li>點選上方的某位成員，再點選此人點的每個項目。一個項目最多可由 4 人共享，費用會平均分攤。</li><li>對於有數量的項目（例如 3 杯飲料），點選<strong>分配精確數量</strong>即可為每個人指定各自的數量。</li><li>點選<strong>訪客</strong>可新增沒有安裝 App 的人。</li><li>掃描有誤的項目，向右滑動後點選<strong>編輯</strong>即可修正；掃描漏掉的項目，可點選清單最下方的<strong>新增項目</strong>。數量為 3 的項目，可在編輯時點選<strong>分成 3 行</strong>，讓每一份各自成為一行。</li><li>稅金取自收據。選擇小費後，點選底部的<strong>分攤</strong>。</li><li>若新增了訪客，會開啟<strong>分享帳單</strong>，讓您透過<strong>訊息</strong>或 <strong>QR 碼</strong>將每位訪客應付的金額傳給對方。</li></ul>
+        <ul style="margin:8px 0 8px 18px; padding:0;"><li>點選上方的某位成員，再點選此人點的每個項目。一個項目最多可由 4 人共享，支出會平均分攤。</li><li>對於有數量的項目（例如 3 杯飲料），點選<strong>分配精確數量</strong>即可為每個人指定各自的數量。</li><li>點選<strong>訪客</strong>可新增沒有安裝 App 的人。</li><li>掃描有誤的項目，向右滑動後點選<strong>編輯</strong>即可修正；掃描漏掉的項目，可點選清單最下方的<strong>新增項目</strong>。數量為 3 的項目，可在編輯時點選<strong>分成 3 行</strong>，讓每一份各自成為一行。</li><li>稅金取自收據。選擇小費後，點選底部的<strong>分攤</strong>。</li><li>若新增了訪客，會開啟<strong>分享帳單</strong>，讓您透過<strong>訊息</strong>或 <strong>QR 碼</strong>將每位訪客應付的金額傳給對方。</li></ul>
         <div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">Pick &amp; Pay 為 <strong>PRO</strong> 功能，每月可掃描一定次數；免費試用期間可掃描 1 次。</div>
       </div>
     </div>
@@ -1162,7 +1162,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何匯出費用記錄？
+        如何匯出支出記錄？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
@@ -1177,8 +1177,8 @@
       <div class="faq-answer">
         <strong>照片儲存位置：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
-          <li><strong>個人費用照片</strong>僅儲存在本裝置上，並包含在標準裝置備份（iCloud 備份）中。</li>
-          <li><strong>群組費用照片</strong>儲存於雲端，群組所有成員皆可存取。</li>
+          <li><strong>個人支出照片</strong>僅儲存在本裝置上，並包含在標準裝置備份（iCloud 備份）中。</li>
+          <li><strong>群組支出照片</strong>儲存於雲端，群組所有成員皆可存取。</li>
         </ul>
         <strong>匯出格式：</strong>
         <ul style="margin:8px 0 8px 18px; padding:0;">
@@ -1236,7 +1236,7 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        篩選圖示（三條橫線的漏斗符號）上的小紅色數字，代表您目前已啟用的<strong>篩選條件</strong>數量。此徽章會出現在任何可篩選費用的地方——<strong>費用</strong>分頁、<strong>群組</strong>列表，以及<strong>群組</strong>的費用列表中。每項啟用的篩選條件都會計入數字：每個已選取的<strong>分類</strong>各自計算，而<strong>時間範圍</strong>、<strong>幣別</strong>以及每個開關（例如僅限退款、僅限定期、僅限有地點或僅限有收據）各加 <strong>1</strong>。<strong>排序方式</strong>不計入，因為它只是重新排列而非篩選。例如，徽章顯示 <strong>2</strong> 可能表示已選取兩個分類，或一個分類加上一個時間範圍。若要全部清除，請點選篩選圖示 <span class="arrow">→</span> 點選<strong>重設</strong> <span class="arrow">→</span> 點選<strong>完成</strong>。
+        篩選圖示（三條橫線的漏斗符號）上的小紅色數字，代表您目前已啟用的<strong>篩選條件</strong>數量。此徽章會出現在任何可篩選支出的地方——<strong>支出</strong>分頁、<strong>群組</strong>列表，以及<strong>群組</strong>的支出列表中。每項啟用的篩選條件都會計入數字：每個已選取的<strong>分類</strong>各自計算，而<strong>時間範圍</strong>、<strong>幣別</strong>以及每個開關（例如僅限退款、僅限定期、僅限有地點或僅限有收據）各加 <strong>1</strong>。<strong>排序方式</strong>不計入，因為它只是重新排列而非篩選。例如，徽章顯示 <strong>2</strong> 可能表示已選取兩個分類，或一個分類加上一個時間範圍。若要全部清除，請點選篩選圖示 <span class="arrow">→</span> 點選<strong>重設</strong> <span class="arrow">→</span> 點選<strong>完成</strong>。
       </div>
     </div>
     <div class="faq-item">
@@ -1304,25 +1304,25 @@
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        <strong>台灣統一發票對獎</strong>開關只會在您已儲存至少一筆附有台灣電子發票（電子發票）號碼的費用後才會出現。若要擷取號碼，請新增一筆費用，並使用裝置相機掃描台灣電子發票收據——當其 <strong>QR 碼</strong>被讀取時，發票號碼會自動儲存。儲存該筆費用後，開啟<strong>設定</strong> <span class="arrow">→</span> <strong>通知</strong>，即可看到<strong>台灣統一發票對獎</strong>卡片；開啟它即可開始對獎（預設為關閉）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">您在舊版本（此功能尚未推出前）掃描的收據不算在內，因為當時並未擷取發票號碼。請掃描一張新的台灣電子發票（或重新掃描舊的），開關就會出現。</div>
+        <strong>台灣統一發票對獎</strong>開關只會在您已儲存至少一筆附有台灣電子發票（電子發票）號碼的支出後才會出現。若要擷取號碼，請新增一筆支出，並使用裝置相機掃描台灣電子發票收據——當其 <strong>QR 碼</strong>被讀取時，發票號碼會自動儲存。儲存該筆支出後，開啟<strong>設定</strong> <span class="arrow">→</span> <strong>通知</strong>，即可看到<strong>台灣統一發票對獎</strong>卡片；開啟它即可開始對獎（預設為關閉）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">您在舊版本（此功能尚未推出前）掃描的收據不算在內，因為當時並未擷取發票號碼。請掃描一張新的台灣電子發票（或重新掃描舊的），開關就會出現。</div>
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何查看我的哪些費用中了統一發票對獎？
+        如何查看我的哪些支出中了統一發票對獎？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        開啟<strong>費用</strong>分頁 <span class="arrow">→</span> 點選<strong>篩選圖示</strong>（漏斗）<span class="arrow">→</span> 開啟<strong>僅中獎發票</strong> <span class="arrow">→</span> 點選<strong>完成</strong>。清單只會顯示發票號碼與中獎號碼相符的費用，每筆都會標示 <strong>🏆 獎盃</strong>。每次開獎後，應用程式會自動比對您已儲存的發票號碼（中獎號碼每兩個月公布一次，於次月 25 日）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">在您向財政部核對之前，可能中獎均非正式結果——請保留紙本發票才能兌獎。<strong>僅中獎發票</strong>篩選只會在您已有至少一筆台灣發票記錄後才會出現。</div>
+        開啟<strong>支出</strong>分頁 <span class="arrow">→</span> 點選<strong>篩選圖示</strong>（漏斗）<span class="arrow">→</span> 開啟<strong>僅中獎發票</strong> <span class="arrow">→</span> 點選<strong>完成</strong>。清單只會顯示發票號碼與中獎號碼相符的支出，每筆都會標示 <strong>🏆 獎盃</strong>。每次開獎後，應用程式會自動比對您已儲存的發票號碼（中獎號碼每兩個月公布一次，於次月 25 日）。<div style="margin-top:10px; padding:10px 12px; background:var(--accent-light); border-radius:8px; font-size:13px;">在您向財政部核對之前，可能中獎均非正式結果——請保留紙本發票才能兌獎。<strong>僅中獎發票</strong>篩選只會在您已有至少一筆台灣發票記錄後才會出現。</div>
       </div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">
-        如何在群組費用中新增留言？
+        如何在群組支出中新增留言？
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq-answer">
-        開啟群組 <span class="arrow">→</span> 點選費用以開啟詳情 <span class="arrow">→</span> 向下捲動至<strong>留言</strong>區域 <span class="arrow">→</span> 點選文字欄位，輸入訊息，然後點選<strong>傳送</strong>。
+        開啟群組 <span class="arrow">→</span> 點選支出以開啟詳情 <span class="arrow">→</span> 向下捲動至<strong>留言</strong>區域 <span class="arrow">→</span> 點選文字欄位，輸入訊息，然後點選<strong>傳送</strong>。
         <ul style="margin:8px 0 8px 18px; padding:0;">
           <li>向右滑動留言以<strong>編輯</strong>。發布後 15 分鐘內可進行編輯。</li>
           <li>向左滑動留言以<strong>刪除</strong>。</li>
